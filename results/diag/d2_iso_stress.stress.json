@@ -1,0 +1,25 @@
+{
+ "name": "d2_iso_stress",
+ "mode": "stress",
+ "runs": 50,
+ "num_tests": 1,
+ "runs_with_failure": 1,
+ "avg_run_seconds": 1.31,
+ "num_flaky": 1,
+ "num_always_fail": 0,
+ "flaky_tests": [
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test"
+ ],
+ "tests": {
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test": {
+   "counts": {
+    "pass": 49,
+    "fail": 1
+   },
+   "kind": "flaky",
+   "messages": [
+    "assert 0.009948968887329102 >= 0.01"
+   ]
+  }
+ }
+}

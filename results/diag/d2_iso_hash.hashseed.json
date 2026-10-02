@@ -1,0 +1,27 @@
+{
+ "name": "d2_iso_hash",
+ "mode": "hashseed",
+ "runs": 50,
+ "num_tests": 1,
+ "runs_with_failure": 7,
+ "avg_run_seconds": 0.58,
+ "num_flaky": 1,
+ "num_always_fail": 0,
+ "flaky_tests": [
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test"
+ ],
+ "tests": {
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test": {
+   "counts": {
+    "pass": 43,
+    "fail": 7
+   },
+   "kind": "flaky",
+   "messages": [
+    "assert 0.008080244064331055 >= 0.01",
+    "assert 0.008601188659667969 >= 0.01",
+    "assert 0.003016948699951172 >= 0.01"
+   ]
+  }
+ }
+}

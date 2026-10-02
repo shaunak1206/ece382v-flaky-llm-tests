@@ -132,11 +132,39 @@ Separately, one one shot Haiku test (`test_zero_interval` in schedule) hangs for
 
 ### 4.5 Coverage
 
-(see `results/coverage/summary.json`, filled in below)
+Line coverage of each library, one shot suites measured on the tests a pipeline would keep.
+
+| Library | Human | Agentic Sonnet | One shot Sonnet | One shot Haiku |
+|---|---|---|---|---|
+| cachetools | 99.5 | 72.4 | 88.2 | 62.7 |
+| schedule | 99.2 | 93.0 | 93.2 | 90.1 |
+| tinydb | 95.1 | 81.9 | 94.0 | 86.6 |
+| humanize | 98.6 | 82.5 | 93.9 | 83.2 |
+| toolz | 99.4 | 69.5 | 78.6 | 72.4 |
+| tabulate | 90.8 | 67.7 | 73.3 | 65.1 |
+| tenacity | 91.3 | 76.9 | 88.3 | 64.7 |
+| filelock | 41.9 | 40.9 | 40.9 | 40.7 |
+| boltons (8 modules) | 72.0 | 77.9 | 77.1 | 43.5 |
+| more-itertools | 100.0 | 33.8 | 38.1 | 31.9 |
+| arrow | 99.9 | 81.2 | 87.5 | 72.6 |
+| pybreaker | 92.6 | 78.1 | 78.8 | 72.3 |
+| **Mean** | **90.0** | **71.3** | **77.7** | **65.5** |
+
+The human suites cover the most code, which is expected since they are much larger. More useful is the comparison between LLM conditions. One shot Sonnet covers more than agentic Sonnet on 10 of 12 libraries, partly because the agent deleted or trimmed tests to reach the requested count and to make failing tests go away. So the agentic pipeline paid for its clean run with coverage. Haiku wrote the most tests and still covered the least. The filelock number is low for every suite because coverage on macOS does not reach the Windows lock module or some async paths, so that row is not comparable to the others.
 
 ### 4.6 Targeted diagnosis
 
-(see `results/diagnosis.json`, filled in below)
+Failures out of 50 runs for each flaky LLM test in each configuration.
+
+| Test | Alone, fixed seed | Alone, varying hash seed | Alone, varying time zone | Alone, CPU stress | Whole suite, random order |
+|---|---|---|---|---|---|
+| schedule `test_until_with_string_time_format` | 0 | 0 | 5 | 0 | 19 |
+| tenacity `test_wait_random_exponential_in_timing_test` | 7 | 7 | 2 | 1 | 3 |
+| tenacity `test_stop_before_delay_prevents_exceeding_limit` | 0 | 0 | 0 | 0 | 0 |
+
+- The schedule test fails only when the local clock is past 22:00. In the time zone runs that happens in 1 of the 10 zones, so 5 of 50. The whole suite run happened to be done after 22:00 Central time, so it failed whenever the run landed after that point. Test order has nothing to do with it. This is a time of day bug that a developer working late would hit.
+- The jitter test fails about 14% of the time on its own, so its flakiness is intrinsic to the test. Order and hash seed do not matter.
+- The deadline test never failed in 250 targeted runs. Its one failure in the main study happened while two stress jobs overlapped and the load average was near 100. This matches what Rahman et al. (ICST 2024) report about timing failures being very hard to reproduce by plain rerunning, and it is a good candidate for their FlakeRake style delay injection.
 
 ### 4.7 Takeaways so far
 
@@ -144,6 +172,14 @@ Separately, one one shot Haiku test (`test_zero_interval` in schedule) hangs for
 2. LLM flakiness looks different from human flakiness. It comes from real time inside the test, while human flakiness comes from shared state between tests.
 3. LLM tests carry about twice the latent timing and randomness risk, which a fast laptop mostly hides.
 4. A one run filter catches broken tests and misses flaky ones. A cheap static risk scan flagged all three flaky LLM tests, though it also flags hundreds that never flipped.
+
+## 4.8 Next steps (for the proposal and progress reports)
+
+1. **More reruns on the risky tests.** Rerun the 452 scanner flagged test functions 1,000 times each instead of rerunning whole suites, since that is where the LLM flakiness lives.
+2. **A slower machine.** Repeat the reruns on a Linux VM with 2 cores (a free Colab runtime works) to see whether the latent timing risk turns into real flips on hardware closer to CI.
+3. **More generators.** Add a non Claude model (GPT class) and a plain Copilot style prompt that does not name the time features, to separate model effects from prompt effects.
+4. **Mitigation.** Regenerate the one shot suites with a short prompt that warns about real sleeps, unfrozen clocks, and timing asserts, and compare a 5 run filter with the 1 run filter on cost and on flaky tests kept.
+5. **Order dependence check.** Run iDFlakies style polluter and victim search on all generated suites, since the per test scan cannot see shared state.
 
 ## 5. Threats to validity
 

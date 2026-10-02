@@ -1,0 +1,681 @@
+{
+ "name": "d2_suite_order",
+ "mode": "order",
+ "runs": 50,
+ "num_tests": 93,
+ "runs_with_failure": 50,
+ "avg_run_seconds": 4.38,
+ "num_flaky": 1,
+ "num_always_fail": 3,
+ "flaky_tests": [
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test"
+ ],
+ "tests": {
+  "::gen_oneshot_haiku.tenacity.test_osh_async_retry": {
+   "counts": {
+    "error": 50
+   },
+   "kind": "always-fail",
+   "messages": [
+    "collection failure"
+   ]
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopCombinations::test_stop_with_retrying_object": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopCombinations::test_stop_complex_or_and_combination": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestTimingWithStopStrategies::test_stop_after_delay_timing_accuracy": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopBeforeDelay::test_stop_before_delay_prevents_exceeding_limit": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopWhenEventSet::test_stop_when_event_set": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopWhenEventSet::test_stop_when_event_already_set": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAfterAttempt::test_stop_after_attempt_stops_at_limit": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAfterAttempt::test_stop_after_attempt_large_number": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAfterAttempt::test_stop_after_attempt_single_attempt": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAny::test_stop_any_with_or_operator": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAny::test_stop_any_second_condition_matches": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAny::test_stop_any_first_condition_matches": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopNever::test_stop_never_with_other_stop_condition": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopNever::test_stop_never_never_stops_alone": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAfterDelay::test_stop_after_delay_with_short_timeout": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAfterDelay::test_stop_after_delay_stops_after_time": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAll::test_stop_all_with_and_operator": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAll::test_stop_all_both_conditions_must_match": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopAttemptNumber::test_attempt_number_increments": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitFixed::test_wait_fixed_timing": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitFixed::test_wait_fixed_constant_delay": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandom::test_wait_random_has_jitter": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandom::test_wait_random_range": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandom::test_wait_random_default_range": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test": {
+   "counts": {
+    "pass": 47,
+    "fail": 3
+   },
+   "kind": "flaky",
+   "messages": [
+    "assert 0.006174802780151367 >= 0.01",
+    "assert 0.00997614860534668 >= 0.01",
+    "assert 0.009831905364990234 >= 0.01"
+   ]
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_range": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_has_jitter": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitChain::test_wait_chain_requires_at_least_one_strategy": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitChain::test_wait_chain_sequences_strategies": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitWithRetrying::test_multiple_wait_strategies_in_retry": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitWithRetrying::test_wait_with_retrying_object": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitIncrementing::test_wait_incrementing_increases": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitIncrementing::test_wait_incrementing_max_limit": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitCombine::test_wait_combine_sums_strategies": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitCombine::test_wait_combine_multiple_strategies": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitCombine::test_wait_combine_with_plus_operator": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitNone::test_wait_none_timing": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitNone::test_wait_none_zero_delay": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitExponential::test_wait_exponential_increases": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitExponential::test_wait_exponential_with_custom_base": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitExponential::test_wait_exponential_max_limit": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitExponentialJitter::test_wait_exponential_jitter_range": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_with_no_parameters": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_try_again_exception": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_with_specific_exception_type": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_statistics": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_preserves_function_metadata": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_succeeds_after_retries": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_exhausts_attempts": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_reraise_true": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_success_on_first_attempt": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_reraise_false": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_enabled_false": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryDecorator::test_retry_error_contains_last_attempt": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestBeforeAfterCallbacks::test_before_callback": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestBeforeAfterCallbacks::test_after_callback": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestWaitStrategies::test_wait_strategy_types": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestWaitStrategies::test_wait_fixed": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryingClass::test_retrying_copy": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryingClass::test_retrying_basic_usage": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryingClass::test_retrying_with_arguments": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryingClass::test_retrying_wraps": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryingClass::test_retrying_with_kwargs": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryingClass::test_retrying_statistics": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryConditions::test_retry_if_exception_type_no_match": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryConditions::test_retry_if_exception_type_matches": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestRetryConditions::test_retry_if_exception_type_multiple_types": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestStopConditions::test_stop_never": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestStopConditions::test_stop_after_delay": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_basic.TestStopConditions::test_stop_after_attempt": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfResult::test_retry_if_result_with_predicate": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfResult::test_retry_if_result_false_condition": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryAlwaysNever::test_retry_never": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryAlwaysNever::test_retry_always": {
+   "counts": {
+    "fail": 50
+   },
+   "kind": "always-fail",
+   "messages": [
+    "tenacity.RetryError: RetryError[<Future at 0x106bfce60 state=finished returned str>]",
+    "tenacity.RetryError: RetryError[<Future at 0x104469370 state=finished returned str>]",
+    "tenacity.RetryError: RetryError[<Future at 0x106a3d2b0 state=finished returned str>]"
+   ]
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryAnyAll::test_retry_or_operator": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryAnyAll::test_retry_any_second_matches": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryAnyAll::test_retry_all_all_match": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryAnyAll::test_retry_any_first_matches": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryAnyAll::test_retry_and_operator": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfNotResult::test_retry_if_not_result_immediate_match": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfNotResult::test_retry_if_not_result": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfNotExceptionType::test_retry_if_not_exception_type": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfNotExceptionType::test_retry_if_not_exception_type_no_retry_on_match": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfExceptionMessage::test_retry_if_exception_message_exact": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfExceptionMessage::test_retry_if_exception_message_no_match": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfExceptionMessage::test_retry_if_exception_message_pattern": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestComplexRetryLogic::test_complex_retry_combination": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfException::test_retry_if_exception_with_predicate": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfException::test_retry_if_exception_non_matching_predicate": {
+   "counts": {
+    "fail": 50
+   },
+   "kind": "always-fail",
+   "messages": [
+    "tenacity.RetryError: RetryError[<Future at 0x106c02cc0 state=finished raised ValueError>]",
+    "tenacity.RetryError: RetryError[<Future at 0x104469d00 state=finished raised ValueError>]",
+    "tenacity.RetryError: RetryError[<Future at 0x105203ef0 state=finished raised ValueError>]"
+   ]
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfExceptionType::test_retry_if_exception_type_single_type": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfExceptionType::test_retry_if_exception_type_tuple": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.tenacity.test_osh_retry_conditions.TestRetryIfExceptionType::test_retry_if_exception_type_no_retry_on_mismatch": {
+   "counts": {
+    "pass": 50
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

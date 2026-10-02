@@ -1,0 +1,26 @@
+{
+ "name": "d2_iso_tz",
+ "mode": "tz",
+ "runs": 50,
+ "num_tests": 1,
+ "runs_with_failure": 2,
+ "avg_run_seconds": 0.58,
+ "num_flaky": 1,
+ "num_always_fail": 0,
+ "flaky_tests": [
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test"
+ ],
+ "tests": {
+  "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test": {
+   "counts": {
+    "pass": 48,
+    "fail": 2
+   },
+   "kind": "flaky",
+   "messages": [
+    "assert 0.006076812744140625 >= 0.01",
+    "assert 0.009886980056762695 >= 0.01"
+   ]
+  }
+ }
+}
