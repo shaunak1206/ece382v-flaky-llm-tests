@@ -1,0 +1,6 @@
+| Condition | Suites | Test functions | Any smell % | SLEEP | WALLCLOCK | TIMING_ASSERT | RANDOM | CONCURRENCY | FIXED_PATH | SUBPROCESS | UNORDERED |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Human | 12 | 3077 | 3.9 | 0.7 | 1.9 | 0.1 | 0.8 | 0.6 | 0.0 | 0.0 | 0.0 |
+| AG-S | 12 | 1074 | 8.4 | 2.4 | 4.0 | 0.7 | 1.2 | 1.5 | 0.0 | 0.0 | 0.0 |
+| OS-S | 12 | 907 | 8.5 | 1.4 | 4.1 | 1.3 | 2.1 | 1.2 | 0.0 | 0.0 | 0.4 |
+| OS-H | 12 | 1750 | 9.4 | 2.6 | 3.4 | 1.0 | 1.6 | 1.1 | 0.0 | 1.5 | 0.0 |

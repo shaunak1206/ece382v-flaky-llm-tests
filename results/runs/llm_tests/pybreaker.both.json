@@ -1,0 +1,580 @@
+{
+ "name": "llm_tests-pybreaker",
+ "mode": "both",
+ "runs": 30,
+ "num_tests": 81,
+ "runs_with_failure": 0,
+ "avg_run_seconds": 3.9,
+ "num_flaky": 0,
+ "num_always_fail": 0,
+ "flaky_tests": [],
+ "tests": {
+  "llm_tests.pybreaker.test_llm_breaker_states::test_reset_timeout_can_be_changed_at_runtime": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_circuit_closes_after_timeout_and_successful_call": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_circuit_reopens_if_trial_call_fails": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_manual_half_open_then_success_closes": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_manual_open_blocks_calls": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_state_becomes_half_open_when_trial_call_is_running": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_manual_half_open_then_failure_opens": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_successful_call_returns_value": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_failed_call_reraises_original_exception": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_circuit_opens_after_fail_max_failures": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_open_circuit_rejects_calls_without_running_function": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_success_resets_fail_counter": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_trial_call_failure_with_no_new_error_raises_original": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_manual_close_after_trip": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_circuit_stays_open_before_timeout": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_default_parameters": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_unknown_state_raises_value_error": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_fail_max_setter_changes_threshold": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_breaker_states::test_throw_new_error_on_trip_false_raises_original": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_remove_excluded_exception": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_exclude_predicate": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_decorator_with_parentheses": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_add_excluded_exception": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_decorator_without_parentheses": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_decorator_trips_circuit": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_decorator_preserves_function_metadata": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_calling_context_manager_success": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_calling_context_manager_counts_failure_and_reraises": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_non_excluded_exception_still_counts": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_excluded_exception_resets_fail_counter": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_excluded_exceptions_property_returns_tuple": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_is_system_error": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_exclude_predicate_false_counts_failure": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_excluded_exception_does_not_count_as_failure": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_excluded_exception_subclass_is_excluded": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_two_functions_share_the_same_breaker": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_excluded_exception_in_half_open_counts_as_success": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_decorator_recovers_after_timeout": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_exclude_decorator::test_calling_context_manager_trips_circuit": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_success_counter_resets_when_opened": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_fail_counter_tracks_consecutive_failures[3]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_success_threshold_failure_in_half_open_reopens": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_fail_counter_tracks_consecutive_failures[2]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_breaker_open_records_opened_at": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_breaker_state_follows_shared_storage": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_fail_counter_tracks_consecutive_failures[1]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_success_threshold_requires_multiple_successes": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_fail_counter_tracks_consecutive_failures[4]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_breaker_uses_provided_storage_for_counters": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_success_counter_reset_after_closing": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_success_threshold_setter_affects_closing": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_breaker_opens_exactly_at_fail_max[1]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_fail_counter_resets_after_recovery": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_success_counter_resets_on_entering_half_open": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_memory_storage_counters": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_breaker_opens_exactly_at_fail_max[2]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_memory_storage_initial_values": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_breaker_opens_exactly_at_fail_max[3]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_open_storage_without_opened_at_allows_trial_call": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_memory_storage_opened_at_roundtrip": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_success_threshold_counters::test_breaker_opens_exactly_at_fail_max[5]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_listener_failure_called_with_exception": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_remove_listener": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_listener_success_called_on_success": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_call_async_notifies_listeners": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_call_async_half_open_success_closes": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_async_decorator_via_call_async_flag": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_call_async_with_tornado_coroutine": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_listener_sees_full_recovery_cycle": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_listener_state_change_on_trip": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_listener_notified_on_failed_trial_call": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_listener_state_change_for_manual_transitions": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_call_async_failure_counts_and_reraises": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_add_listener": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_call_async_excluded_exception": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_call_async_success": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_excluded_exception_triggers_success_not_failure": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_async_decorator_trips_circuit": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_call_async_half_open_failure_opens": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_listener_before_call_receives_arguments": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.pybreaker.test_llm_listeners_async::test_call_async_opens_circuit": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

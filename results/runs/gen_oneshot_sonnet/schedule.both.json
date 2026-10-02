@@ -1,0 +1,881 @@
+{
+ "name": "gen_oneshot_sonnet-schedule",
+ "mode": "both",
+ "runs": 30,
+ "num_tests": 124,
+ "runs_with_failure": 0,
+ "avg_run_seconds": 1.1,
+ "num_flaky": 0,
+ "num_always_fail": 0,
+ "flaky_tests": [],
+ "tests": {
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_missed_runs_are_not_replayed": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_job_runs_when_due": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_run_all_sleeps_between_jobs": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_clear_with_tag_removes_only_tagged": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_cancel_job_removes_it_and_it_no_longer_runs": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_run_passes_args_and_kwargs": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_only_due_jobs_run": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_new_scheduler_has_no_jobs": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_job_runs_repeatedly_on_its_interval": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_get_jobs_filters_by_tag": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_cancel_job_not_scheduled_does_not_raise": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_exception_in_job_propagates_from_run_pending": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_next_run_is_earliest_job": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_get_jobs_returns_copy_of_all_jobs": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_next_run_and_idle_seconds_are_none_without_jobs": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_job_returning_cancel_job_is_removed": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_idle_seconds_counts_down_to_next_run": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_run_updates_last_run_and_next_run": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_run_all_runs_every_job_regardless_of_schedule": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_job_run_returns_job_func_result_and_stays_scheduled": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_job_does_not_run_before_it_is_due": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_get_next_run_filters_by_tag": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_clear_removes_all_jobs": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_should_run_false_then_true": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_scheduler::test_due_jobs_run_in_next_run_order": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_string_formats[2024-01-02 08:15:30-expected0]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_hourly_with_minutes_and_seconds": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_job_whose_deadline_passed_before_running_is_cancelled_without_running": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_minutely_format_raises[30]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_string_formats[2024-01-02-expected2]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_minutely_format_raises[::30]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_wrong_type_raises_type_error[123]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_datetime_sets_cancel_after_and_returns_job": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_minutely_format_raises[:5]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_wrong_type_raises_type_error[4.5]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_minutely_seconds_format": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_job_runs_until_deadline_then_cancels_itself": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_job_run_returns_cancel_job_when_overdue": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_daily_format_raises[10-30]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_on_unsupported_unit_raises[weeks]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_string_formats[14:20:10-expected3]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_hourly_format_raises[abc]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_string_formats[2024-01-02 08:15-expected1]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_hourly_minute_only_format": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_wrong_type_raises_type_error[bad4]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_string_formats[14:20-expected4]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_hourly_format_raises[1:30]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_invalid_string_raises": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_daily_format_raises[10:60]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_daily_time_in_future_runs_today": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_daily_at_job_runs_when_clock_reaches_time": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_daily_format_raises[1:30]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_daily_format_raises[abc]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_timedelta_is_relative_to_now": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_on_unsupported_unit_raises[seconds]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_hourly_format_raises[10:30:15]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_requires_string": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_daily_format_raises[30:00:00:00]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_in_the_past_raises": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_daily_format_raises[]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_returns_job": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_wrong_type_raises_type_error[bad3]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_until_wrong_type_raises_type_error[None]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_with_timezone_sets_pytz_zone": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_daily_format_raises[25:00]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_daily_time_in_past_runs_tomorrow": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_daily_format_raises[10:30:75]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_minutely_format_raises[10:30]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_at_until::test_at_invalid_hourly_format_raises[::30]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_tag_rejects_unhashable": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_next_run_lands_on_that_weekday[thursday-3]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_singular_unit_runs_one_unit_from_now[hour-delta2]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_singular_unit_runs_one_unit_from_now[minute-delta1]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_next_run_lands_on_that_weekday[saturday-5]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_n_units_sets_next_run_n_units_ahead[hours-delta2]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_next_run_lands_on_that_weekday[monday-7]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_do_without_unit_raises_value_error": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_next_run_lands_on_that_weekday[tuesday-1]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_do_without_scheduler_raises_schedule_error": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_str_describes_job": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_with_interval_other_than_one_raises[saturday]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_with_interval_other_than_one_raises[sunday]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_singular_unit_with_interval_other_than_one_raises[minute-minutes]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_singular_unit_with_interval_other_than_one_raises[day-days]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_to_uses_random_randint_between_bounds": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_next_run_lands_on_that_weekday[wednesday-2]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_n_units_sets_next_run_n_units_ahead[minutes-delta1]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_n_units_sets_next_run_n_units_ahead[days-delta3]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_n_units_sets_next_run_n_units_ahead[weeks-delta4]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_to_picks_interval_inside_inclusive_range": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_singular_unit_with_interval_other_than_one_raises[hour-hours]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_singular_unit_runs_one_unit_from_now[day-delta3]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_singular_unit_with_interval_other_than_one_raises[week-weeks]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_do_registers_job_and_preserves_function_details": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_to_with_latest_below_interval_raises": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_next_run_lands_on_that_weekday[friday-4]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_tag_collects_unique_hashable_tags_and_returns_job": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_with_interval_other_than_one_raises[tuesday]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_repr_variants": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_with_interval_other_than_one_raises[thursday]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_next_run_lands_on_that_weekday[sunday-6]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_with_interval_other_than_one_raises[wednesday]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_singular_unit_with_interval_other_than_one_raises[second-seconds]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_singular_unit_runs_one_unit_from_now[second-delta0]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_with_interval_other_than_one_raises[monday]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_with_interval_other_than_one_raises[friday]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_weekday_with_at_time_sets_time_component": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_n_units_sets_next_run_n_units_ahead[seconds-delta0]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_job_building::test_every_singular_unit_runs_one_unit_from_now[week-delta4]": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_every_binds_job_to_default_scheduler": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_idle_seconds_default_scheduler": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_schedule_value_error_for_missing_unit": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_repeat_decorator_schedules_function_and_returns_it": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_get_jobs_by_tag": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_clear_all_and_by_tag": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_run_pending_runs_due_default_jobs": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_exception_hierarchy": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_do_registers_on_default_scheduler": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_cancel_job": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_interval_error_raised_and_caught_as_schedule_error": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_schedule_error_for_job_without_scheduler": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_next_run_default_scheduler": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_run_all_runs_default_jobs_immediately": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.schedule.test_oss_module_level::test_default_scheduler_removes_job_returning_cancel_job": {
+   "counts": {
+    "pass": 30
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

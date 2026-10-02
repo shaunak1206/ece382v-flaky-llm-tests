@@ -1,0 +1,78 @@
+{
+ "suites": 48,
+ "tests_total": 10200,
+ "executions": 714000,
+ "flaky_total": 9,
+ "llm_flaky": 3,
+ "human_flaky": 6,
+ "pooled": {
+  "Human": {
+   "suites": 12,
+   "tests": 5587,
+   "flaky": 6,
+   "always_fail": 3,
+   "ci": [
+    0.04922712047542261,
+    0.23412199104295775
+   ]
+  },
+  "Agentic Sonnet": {
+   "suites": 12,
+   "tests": 1511,
+   "flaky": 0,
+   "always_fail": 0,
+   "ci": [
+    0,
+    0.2535974718412803
+   ]
+  },
+  "One shot Sonnet": {
+   "suites": 12,
+   "tests": 1406,
+   "flaky": 0,
+   "always_fail": 0,
+   "ci": [
+    0,
+    0.272484511735219
+   ]
+  },
+  "One shot Haiku": {
+   "suites": 12,
+   "tests": 1595,
+   "flaky": 3,
+   "always_fail": 0,
+   "ci": [
+    0.06398582157888626,
+    0.551559833475373
+   ]
+  }
+ },
+ "smell_any_pct": {
+  "Human": 3.9,
+  "Agentic Sonnet": 8.4,
+  "One shot Sonnet": 8.5,
+  "One shot Haiku": 9.4
+ },
+ "filter": {
+  "One shot Sonnet": {
+   "generated": 1406,
+   "collection_error_files": 0,
+   "lost_functions": 0,
+   "accepted": 1406,
+   "rejected": 0,
+   "rejected_flaky": 0,
+   "accepted_flaky": 0,
+   "accepted_always_fail": 0
+  },
+  "One shot Haiku": {
+   "generated": 1696,
+   "collection_error_files": 2,
+   "lost_functions": 54,
+   "accepted": 1595,
+   "rejected": 101,
+   "rejected_flaky": 0,
+   "accepted_flaky": 3,
+   "accepted_always_fail": 0
+  }
+ }
+}

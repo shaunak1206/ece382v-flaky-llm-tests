@@ -1,0 +1,25 @@
+{
+ "name": "d0_iso_tz",
+ "mode": "tz",
+ "runs": 50,
+ "num_tests": 1,
+ "runs_with_failure": 5,
+ "avg_run_seconds": 0.6,
+ "num_flaky": 1,
+ "num_always_fail": 0,
+ "flaky_tests": [
+  "gen_oneshot_haiku.schedule.test_osh_job_configuration.TestUntilConfiguration::test_until_with_string_time_format"
+ ],
+ "tests": {
+  "gen_oneshot_haiku.schedule.test_osh_job_configuration.TestUntilConfiguration::test_until_with_string_time_format": {
+   "counts": {
+    "pass": 45,
+    "fail": 5
+   },
+   "kind": "flaky",
+   "messages": [
+    "schedule.ScheduleValueError: Cannot schedule a job to run until a time in the past"
+   ]
+  }
+ }
+}

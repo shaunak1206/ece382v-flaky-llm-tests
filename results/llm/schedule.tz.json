@@ -1,0 +1,804 @@
+{
+ "name": "llm-schedule",
+ "mode": "tz",
+ "runs": 20,
+ "num_tests": 113,
+ "runs_with_failure": 0,
+ "avg_run_seconds": 4.83,
+ "num_flaky": 0,
+ "num_always_fail": 0,
+ "flaky_tests": [],
+ "tests": {
+  "llm_tests.schedule.test_llm_scheduler::test_do_appends_multiple_jobs_to_jobs_list": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_run_all_with_delay_waits_between_jobs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_get_next_run_with_tag_filter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_module_run_pending_executes_due_job": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_module_every_and_get_jobs_use_default_scheduler": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_cancel_job_removes_it_and_is_idempotent": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_run_all_runs_every_job_once_regardless_of_due_time": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_repeat_decorator_schedules_and_passes_args": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_get_jobs_returns_copy_and_filters_by_tag": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_new_scheduler_has_no_jobs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_clear_removes_all_jobs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_clear_by_tag_removes_only_matching": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_run_pending_runs_only_due_jobs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_module_run_all_executes_job_and_jobs_alias_stays_in_sync": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_next_run_returns_the_earliest_job": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_module_next_run_and_idle_seconds": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_module_clear_and_cancel_job": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_idle_seconds_none_when_empty_positive_and_negative": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_scheduler_instances_are_independent": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_scheduler::test_run_pending_removes_job_that_returns_cancel": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_until_cancels_job_run_after_deadline_passed": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_to_latest_smaller_than_interval_raises_on_schedule": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_jobs_sort_by_next_run": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_until_cancels_when_next_scheduled_run_exceeds_deadline": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_job_returning_cancel_job_is_removed_by_scheduler": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_job_actually_runs_after_waiting_for_real_time_to_pass": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_job_runs_repeatedly_over_real_time": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_weekday_next_run_lands_on_requested_weekday_within_a_week": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_to_next_run_within_randomized_bounds": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_job_does_not_run_before_its_interval_elapses": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_run_executes_job_func_updates_last_run_and_reschedules": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_should_run_raises_assertion_if_next_run_unset": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_run_pending_runs_due_jobs_in_next_run_order": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_next_run_scales_with_interval_and_unit[1-seconds-0.5-1.5]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_next_run_for_days_with_at_time": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_until_does_not_affect_job_before_deadline": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_next_run_scales_with_interval_and_unit[2-minutes-110-130]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_should_run_reflects_next_run_relative_to_now": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_next_run_scales_with_interval_and_unit[5-seconds-4.0-6.0]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_run_timing::test_job_not_returning_cancel_job_stays_scheduled": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[sunday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[hours-hours]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_job_str_contains_unit_and_interval": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_do_sets_job_func_and_registers_with_scheduler": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_until_with_datetime": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_job_repr_unconfigured_job_shows_never": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_until_with_valid_date_strings[%Y-%m-%d %H:%M]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_minutes_colon_ss": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_to_sets_latest_and_returns_job_for_chaining": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[thursday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_tag_multiple_and_duplicates_discarded": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_on_weekday_job_uses_daily_format": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[tuesday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_singular_unit_property_works_for_interval_one[minute-minutes]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[weeks-weeks]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_daily_formats[10:30:15-expected1]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_daily_invalid_format_raises[abc]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_tag_unhashable_raises_typeerror": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_hourly_formats[30:15-expected0]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[seconds-seconds]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_non_string_raises_typeerror": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_until_with_valid_date_strings[%Y-%m-%d]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_job_repr_contains_function_name_and_next_run": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_daily_invalid_format_raises[10:30:99]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_daily_invalid_format_raises[10-30]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_tag_returns_job_and_accepts_mixed_hashables": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_hourly_invalid_format_raises": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_singular_unit_property_works_for_interval_one[week-weeks]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[monday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_until_with_valid_date_strings[%Y-%m-%d %H:%M:%S]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_singular_unit_property_works_for_interval_one[hour-hours]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[friday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_hourly_formats[:45-expected1]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_every_default_interval_is_one": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_minutes_invalid_format_raises": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[saturday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_daily_formats[10:30-expected0]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_singular_unit_property_works_for_interval_one[day-days]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_singular_unit_property_works_for_interval_one[second-seconds]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_every_with_custom_interval": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_until_with_timedelta": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_do_without_scheduler_raises_schedule_error": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_until_with_time_object": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[days-days]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_do_with_args_and_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_at_daily_invalid_format_raises[25:00]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[minutes-minutes]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[wednesday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[thursday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_type_error_from_at_non_string_argument": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_type_error_from_until_with_unsupported_type": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_can_be_caught_as_schedule_error_or_value_error": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_type_error_from_tag_with_unhashable_argument": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_value_error_from_at_on_unsupported_unit": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[sunday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[second]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_exception_hierarchy": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[wednesday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_message_mentions_plural_form": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_value_error_from_until_bad_string_or_past_time": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_value_error_from_bad_at_time_format": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_schedule_error_when_latest_less_than_interval": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[tuesday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_value_error_from_invalid_start_day": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[day]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[friday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_schedule_error_from_do_with_no_scheduler": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[minute]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[monday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_value_error_from_do_with_no_unit_set": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[hour]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[saturday]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "llm_tests.schedule.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[week]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

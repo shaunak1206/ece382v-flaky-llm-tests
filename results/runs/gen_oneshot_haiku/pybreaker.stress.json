@@ -1,0 +1,1093 @@
+{
+ "name": "gen_oneshot_haiku-pybreaker",
+ "mode": "stress",
+ "runs": 20,
+ "num_tests": 150,
+ "runs_with_failure": 20,
+ "avg_run_seconds": 5.17,
+ "num_flaky": 0,
+ "num_always_fail": 14,
+ "flaky_tests": [],
+ "tests": {
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestResetTimeoutConfiguration::test_reset_timeout_custom_value": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestResetTimeoutConfiguration::test_reset_timeout_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestResetTimeoutConfiguration::test_reset_timeout_zero": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestResetTimeoutConfiguration::test_reset_timeout_default_is_60": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestResetTimeoutConfiguration::test_reset_timeout_affects_recovery": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestResetTimeoutConfiguration::test_reset_timeout_small_value": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestThrowNewErrorConfiguration::test_throw_new_error_on_trip_false": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestThrowNewErrorConfiguration::test_throw_new_error_on_trip_true": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "pybreaker.CircuitBreakerError: Failures threshold reached, circuit breaker opened"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestExcludeConfiguration::test_exclude_predicate_function": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "Exception: Request timeout"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestExcludeConfiguration::test_remove_excluded_exception": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "pybreaker.CircuitBreakerError: Failures threshold reached, circuit breaker opened"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestExcludeConfiguration::test_exclude_exception_type": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "ValueError: ignored"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestExcludeConfiguration::test_add_excluded_exception": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "ValueError: ignored"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestExcludeConfiguration::test_exclude_mixed_types_and_predicates": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "KeyError: 'ignored'"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestExcludeConfiguration::test_add_multiple_excluded_exceptions": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "ValueError: ignored"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestExcludeConfiguration::test_excluded_exceptions_property": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestExcludeConfiguration::test_exclude_multiple_exception_types": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "ValueError: ignored"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestSuccessThresholdConfiguration::test_success_threshold_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestSuccessThresholdConfiguration::test_success_threshold_default_is_1": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestSuccessThresholdConfiguration::test_success_threshold_1_closes_after_one_success": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestSuccessThresholdConfiguration::test_success_threshold_custom_value": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestSuccessThresholdConfiguration::test_success_threshold_greater_than_1": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "NameError: name 'STATE_HALF_OPEN' is not defined"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestFailMaxConfiguration::test_fail_max_affects_open_transition": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestFailMaxConfiguration::test_fail_max_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestFailMaxConfiguration::test_fail_max_custom_value": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestFailMaxConfiguration::test_fail_max_one": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestFailMaxConfiguration::test_fail_max_default_is_5": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_configuration.TestFailMaxConfiguration::test_fail_max_large_value": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestHalfOpenState::test_half_open_success_counter_increments": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestHalfOpenState::test_half_open_successful_call_closes_circuit": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestHalfOpenState::test_half_open_failed_call_reopens_circuit": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestHalfOpenState::test_half_open_state_after_timeout": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestManualStateManagement::test_close_method": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestManualStateManagement::test_open_method": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestManualStateManagement::test_half_open_method": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestManualStateManagement::test_close_resets_success_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestOpenState::test_open_state_rejects_calls": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestOpenState::test_open_state_transitions_to_half_open_after_timeout": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestOpenState::test_open_state_raises_circuit_breaker_error": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestOpenState::test_open_state_stays_open_until_timeout": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestClosedState::test_closed_state_with_failures": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestClosedState::test_closed_state_resets_on_success": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestClosedState::test_closed_state_allows_calls": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestClosedState::test_closed_state_transitions_to_open": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestClosedState::test_start_in_closed_state": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestStateTransitionSequence::test_full_cycle_with_reopening": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestStateTransitionSequence::test_multiple_failures_before_open": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_state_transitions.TestStateTransitionSequence::test_full_cycle_closed_open_half_open_closed": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestListenerSequence::test_callback_order_on_success": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestListenerSequence::test_callback_order_on_failure": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCallVariations::test_call_method_with_args": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCallVariations::test_decorator_style_with_function_arg": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCallVariations::test_decorator_style_call": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCallVariations::test_call_method_with_mixed_args": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCallVariations::test_call_method_with_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_listeners_property": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_remove_listener": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_multiple_listeners": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_listener_before_call": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_add_multiple_listeners": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_add_listener": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_listener_state_change_callback": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_listener_failure_callback": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestCircuitBreakerListener::test_listener_success_callback": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestDecoratorUsage::test_decorator_on_function_with_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestDecoratorUsage::test_decorator_on_function_with_args": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestDecoratorUsage::test_decorator_on_simple_function": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestDecoratorUsage::test_decorator_with_mixed_args": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestDecoratorUsage::test_multiple_decorators": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestDecoratorUsage::test_decorator_with_failing_function": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "pybreaker.CircuitBreakerError: Failures threshold reached, circuit breaker opened"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestDecoratorUsage::test_decorator_call_tracking": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_listeners_and_decorators.TestDecoratorUsage::test_decorator_preserves_function_metadata": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerDecorator::test_decorator_basic": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerDecorator::test_decorator_preserves_function_name": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerDecorator::test_decorator_with_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerDecorator::test_decorator_with_failure": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerDecorator::test_decorator_with_arguments": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCreation::test_create_circuit_breaker_default": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCreation::test_create_circuit_breaker_with_custom_fail_max": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCreation::test_circuit_breaker_initial_state_closed": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCreation::test_circuit_breaker_initial_fail_counter_zero": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCreation::test_circuit_breaker_initial_success_counter_zero": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCreation::test_create_circuit_breaker_with_custom_success_threshold": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCreation::test_create_circuit_breaker_with_name": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCreation::test_create_circuit_breaker_with_custom_reset_timeout": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerContext::test_calling_context_manager": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_fail_max_property_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_reset_timeout_property_getter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_name_property_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_state_property": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_success_threshold_property_getter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_fail_max_property_getter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_fail_counter_property": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_current_state_property": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_reset_timeout_property_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_name_property_getter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_success_counter_property": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerProperties::test_success_threshold_property_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCall::test_call_failing_function": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCall::test_call_with_keyword_arguments": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCall::test_call_resets_fail_counter_on_success": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCall::test_call_successful_function": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCall::test_call_increments_fail_counter_on_error": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCall::test_call_with_arguments": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerCall::test_call_returns_function_value": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_increment_success_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_state_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_success_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_reset_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_custom_storage_with_circuit_breaker": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_increment_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_state_getter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_reset_success_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_basic_circuit_breaker.TestCircuitBreakerMemoryStorage::test_memory_storage_creation": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageState::test_state_getter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageState::test_state_transitions": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageState::test_state_initialization": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageState::test_storage_name": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageState::test_state_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCounterBehavior::test_fail_counter_increments_on_system_error": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "ValueError: excluded"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCounterBehavior::test_success_counter_increments_in_half_open": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert 0 == 2\n +  where 0 = <pybreaker.CircuitBreaker object at 0x1054d8fb0>.success_counter",
+    "assert 0 == 2\n +  where 0 = <pybreaker.CircuitBreaker object at 0x102576780>.success_counter",
+    "assert 0 == 2\n +  where 0 = <pybreaker.CircuitBreaker object at 0x102bd64e0>.success_counter"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCounterBehavior::test_fail_counter_resets_on_success": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCounterBehavior::test_success_counter_resets_on_failure_in_half_open": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageOpenedAt::test_opened_at_initially_none": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageOpenedAt::test_opened_at_tracks_open_time": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: can't compare offset-naive and offset-aware datetimes"
+   ]
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageOpenedAt::test_opened_at_setter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageCounter::test_increment_counter_single": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageCounter::test_success_counter_initialization": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageCounter::test_increment_success_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageCounter::test_reset_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageCounter::test_reset_success_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageCounter::test_counter_initialization": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestMemoryStorageCounter::test_increment_counter_multiple": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestEdgeCases::test_function_raises_immediately": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestEdgeCases::test_function_returns_none": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestEdgeCases::test_very_high_fail_max": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestEdgeCases::test_function_returns_empty_string": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestEdgeCases::test_zero_reset_timeout": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestEdgeCases::test_function_returns_false": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestEdgeCases::test_function_returns_zero": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestEdgeCases::test_many_state_changes": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestErrorPropagation::test_exception_with_args": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestErrorPropagation::test_custom_exception": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestErrorPropagation::test_different_exception_types": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestErrorPropagation::test_exception_preserved_in_closed_state": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCircuitBreakerError::test_circuit_breaker_error_raised_when_open": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCircuitBreakerError::test_circuit_breaker_error_message": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCircuitBreakerError::test_circuit_breaker_error_is_exception": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCircuitBreakerError::test_circuit_breaker_error_exists": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.pybreaker.test_osh_storage_and_error_handling.TestCircuitBreakerError::test_circuit_breaker_error_in_open_state": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "pybreaker.CircuitBreakerError: Failures threshold reached, circuit breaker opened"
+   ]
+  }
+ }
+}

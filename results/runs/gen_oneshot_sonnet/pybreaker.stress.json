@@ -1,0 +1,531 @@
+{
+ "name": "gen_oneshot_sonnet-pybreaker",
+ "mode": "stress",
+ "runs": 20,
+ "num_tests": 74,
+ "runs_with_failure": 0,
+ "avg_run_seconds": 2.59,
+ "num_flaky": 0,
+ "num_always_fail": 0,
+ "flaky_tests": [],
+ "tests": {
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_decorator_wraps_function_and_preserves_metadata": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_async_decorator_without_tornado_raises_import_error": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_concurrent_failures_are_counted_exactly": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_calling_context_manager_counts_failures_and_trips": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_decorated_function_trips_the_breaker_and_is_then_skipped": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_calling_context_manager_rejects_when_open": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_call_returns_none_and_falsy_results_unchanged": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_breaker_shared_by_two_functions_shares_failure_count": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_circuit_breaker_error_is_a_plain_exception": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_call_async_returns_result_and_trips": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_throw_new_error_on_trip_false_open_returns_false": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_call_passes_args_and_kwargs_and_returns_result": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_decorated_function_recovers_after_reset_timeout": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_calling_context_manager_success_keeps_circuit_closed": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_decorator_with_parentheses": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_calls::test_throw_new_error_on_trip_false_raises_original_exception": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_listener_sees_state_change_when_circuit_trips": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_redis_storage_requires_redis_package": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_excluded_exception_notifies_success_not_failure": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_breaker_counters_reflect_storage": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_base_storage_exposes_name": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_add_remove_and_list_listeners": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_listener_sees_failure": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_breakers_sharing_storage_share_state": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_all_registered_listeners_are_notified_and_removed_ones_are_not": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_base_listener_callbacks_are_noops": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_opening_records_opened_at_in_storage": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_memory_storage_counters_increment_and_reset": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_listener_sees_manual_state_changes": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_listener_sees_before_call_and_success": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_listener_sees_full_recovery_lifecycle": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_breaker_can_start_from_half_open_storage": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_memory_storage_state_and_opened_at_setters": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_listener_overriding_only_one_callback_works": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_creating_a_breaker_does_not_notify_listeners": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_listeners_storage::test_memory_storage_initial_values": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_remove_unknown_excluded_exception_raises_value_error": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_excluded_exception_during_trial_call_closes_circuit": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_excluded_exception_is_reraised_unchanged": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_add_and_remove_excluded_exceptions": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_classes_and_predicates_can_be_mixed": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_unlisted_exceptions_still_count_as_failures": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_excluded_exception_does_not_trip_the_circuit": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_subclasses_of_excluded_exception_are_excluded": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_excluded_exception_resets_failure_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_exclusions::test_exclusion_predicate_decides_per_exception_instance": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_failure_below_threshold_reraises_original_and_counts": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_state_object_exposes_name": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_changing_reset_timeout_applies_to_already_open_circuit": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_trial_call_runs_while_circuit_is_half_open": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_success_threshold_requires_multiple_trial_successes": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_property_setters": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_circuit_stays_open_until_reset_timeout_elapses": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_open_circuit_rejects_calls_without_running_function": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_constructor_parameters_are_stored": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_state_constants": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_default_configuration": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_manual_close_resets_failures_and_allows_calls": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_manual_half_open_then_success_closes": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_unknown_state_in_storage_raises_value_error": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_manual_open_then_timeout_allows_recovery": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_fail_max_setter_takes_effect_immediately": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_success_resets_consecutive_failure_count": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_successful_calls_keep_circuit_closed": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_fail_max_of_one_trips_on_first_failure": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_failure_while_half_open_resets_success_counter": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_failed_trial_call_reopens_circuit_and_restarts_timeout": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_manual_half_open_then_failure_opens": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_public_exports": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_circuit_opens_when_fail_max_reached": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_breaker_built_on_open_storage_without_opened_at_half_opens_on_call": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_state_still_reports_open_after_timeout_until_next_call": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_manual_open_rejects_calls_and_returns_true": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_sonnet.pybreaker.test_oss_breaker_states::test_call_after_reset_timeout_closes_circuit_on_success": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

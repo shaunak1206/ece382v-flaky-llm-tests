@@ -1,0 +1,1117 @@
+{
+ "name": "human-filelock",
+ "mode": "tz",
+ "runs": 20,
+ "num_tests": 155,
+ "runs_with_failure": 20,
+ "avg_run_seconds": 20.37,
+ "num_flaky": 2,
+ "num_always_fail": 3,
+ "flaky_tests": [
+  "tests.test_filelock::test_singleton_locks_are_deleted_when_no_external_references_exist[SoftFileLock]",
+  "tests.test_filelock::test_singleton_locks_are_deleted_when_no_external_references_exist[UnixFileLock]"
+ ],
+ "tests": {
+  "tests.test_filelock::test_nested_forced_release[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_and_non_singleton_locks_are_distinct[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[a-PurePath-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_threaded_lock_different_lock_obj[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_lock_can_be_non_thread_local[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_*-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_non_blocking[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_\\x07-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[a-Path-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_|-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[permission_/-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[blank_filename-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_are_deleted_when_no_external_references_exist[UnixFileLock]": {
+   "counts": {
+    "pass": 16,
+    "fail": 4
+   },
+   "kind": "flaky",
+   "messages": [
+    "AssertionError: assert <WeakValueDic...t 0x105a032f0> == {'/private/va... 0x10634c050>}\n  \n  Omitting 1 identical items, use -vv to show\n  Left contains 1 more item:\n  {'/private/var/folders/fz/jqs38pys1sx842f5xr07p3240000gn/T/pytest-of-shaunkapoor/pytest-140/test_singleton_locks_must_be_i1/a': <fil",
+    "AssertionError: assert <WeakValueDic...t 0x103d9cdd0> == {'/private/va... 0x104a9eed0>}\n  \n  Omitting 1 identical items, use -vv to show\n  Left contains 1 more item:\n  {'/private/var/folders/fz/jqs38pys1sx842f5xr07p3240000gn/T/pytest-of-shaunkapoor/pytest-146/test_singleton_locks_must_be_i0/a': <fil",
+    "AssertionError: assert <WeakValueDic...t 0x101d7fda0> == {'/private/va... 0x102231d00>}\n  \n  Omitting 1 identical items, use -vv to show\n  Left contains 1 more item:\n  {'/private/var/folders/fz/jqs38pys1sx842f5xr07p3240000gn/T/pytest-of-shaunkapoor/pytest-147/test_singleton_locks_must_be_i0/a': <fil"
+   ]
+  },
+  "tests.test_filelock::test_thrashing_with_thread_pool_global_lock[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_acquire_release_on_exc[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_threaded_shared_lock_obj[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_are_the_same[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[a-str-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_context_release_on_exc[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_ro_folder[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_instance_tracking_is_unique_per_subclass[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_timeout[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_umask_soft": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_ro_file[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new/b-PurePath-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new2/new3/c-str-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_:-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_poll_intervall_deprecated[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_flock_not_implemented_unix": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "Failed: DID NOT RAISE NotImplementedError"
+   ]
+  },
+  "tests.test_filelock::test_simple[new2/new3/c-Path-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[permission_\\\\-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_del[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_context_decorator[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_are_distinct_per_lock_file[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new2/new3/c-PurePath-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_lock_mode": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new/b-Path-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_<-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_nested_acquire[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_nested_context_manager[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[current_directory-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_soft_errors": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[null_byte-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new/b-str-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_must_be_initialized_with_the_same_args[UnixFileLock]": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: Regex pattern did not match.\n  Expected regex: 'Singleton lock instances cannot be initialized with differing arguments'\n  Actual message: 'mode=0o0 must grant the owner read and write for UnixFileLock'"
+   ]
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_?-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_nested_contruct[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_umask": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_thrashing_with_thread_pool_passing_lock_to_threads[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_default_timeout[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_thrashing_with_thread_pool_lock_recreated_in_each_thread[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_when_inheriting_init_is_called_once": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_\"-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_>-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_file_lock_positional_argument": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_timeout[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_lock_mode_soft": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_context_release_on_exc[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_instance_tracking_is_unique_per_subclass[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_ro_folder[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_ro_file[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new/b-PurePath-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new2/new3/c-str-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_are_deleted_when_no_external_references_exist[SoftFileLock]": {
+   "counts": {
+    "pass": 17,
+    "fail": 3
+   },
+   "kind": "flaky",
+   "messages": [
+    "AssertionError: assert <WeakValueDic...t 0x101d205c0> == {'/private/va... 0x102173d10>}\n  \n  Omitting 1 identical items, use -vv to show\n  Left contains 1 more item:\n  {'/private/var/folders/fz/jqs38pys1sx842f5xr07p3240000gn/T/pytest-of-shaunkapoor/pytest-144/test_singleton_locks_must_be_i0/a': <fil",
+    "AssertionError: assert <WeakValueDic...t 0x101c84680> == {'/private/va... 0x1020d95b0>}\n  \n  Omitting 1 identical items, use -vv to show\n  Left contains 1 more item:\n  {'/private/var/folders/fz/jqs38pys1sx842f5xr07p3240000gn/T/pytest-of-shaunkapoor/pytest-150/test_singleton_locks_must_be_i1/a': <fil",
+    "AssertionError: assert <WeakValueDic...t 0x102354560> == {'/private/va... 0x1027abaa0>}\n  \n  Omitting 1 identical items, use -vv to show\n  Left contains 1 more item:\n  {'/private/var/folders/fz/jqs38pys1sx842f5xr07p3240000gn/T/pytest-of-shaunkapoor/pytest-157/test_singleton_locks_must_be_i0/a': <fil"
+   ]
+  },
+  "tests.test_filelock::test_thrashing_with_thread_pool_global_lock[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_threaded_shared_lock_obj[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_acquire_release_on_exc[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_are_the_same[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[a-str-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[a-Path-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[permission_/-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_|-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[blank_filename-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_nested_forced_release[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_and_non_singleton_locks_are_distinct[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[a-PurePath-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_*-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_cleanup_soft_lock": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_threaded_lock_different_lock_obj[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_lock_can_be_non_thread_local[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_\\x07-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_non_blocking[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_default_timeout[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_wrong_platform": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_?-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_nested_contruct[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_must_be_initialized_with_the_same_args[SoftFileLock]": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: Regex pattern did not match.\n  Expected regex: 'Singleton lock instances cannot be initialized with differing arguments'\n  Actual message: 'mode=0o0 must grant the owner read and write for SoftFileLock'"
+   ]
+  },
+  "tests.test_filelock::test_thrashing_with_thread_pool_passing_lock_to_threads[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_thrashing_with_thread_pool_lock_recreated_in_each_thread[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_\"-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_>-UnixFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_nested_acquire[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new/b-Path-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_<-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_nested_context_manager[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[current_directory-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[null_byte-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new/b-str-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_subclass_compatibility": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_del[SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new2/new3/c-PurePath-UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_context_decorator[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_singleton_locks_are_distinct_per_lock_file[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[invalid_:-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_filelock::test_poll_intervall_deprecated[UnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_simple[new2/new3/c-Path-SoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_filelock::test_bad_lock_file[permission_\\\\-SoftFileLock]": {
+   "counts": {
+    "skip": 20
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "tests.test_error::test_timeout_str": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_error::test_timeout_pickle": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_error::test_timeout_lock_file": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_error::test_timeout_repr": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new/b-Path-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[a-Path-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new/b-str-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[a-str-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[a-Path-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_non_executor[True-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new2/new3/c-PurePath-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_non_executor[False-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new2/new3/c-Path-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[a-PurePath-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new/b-str-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new/b-PurePath-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[a-str-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new2/new3/c-PurePath-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new2/new3/c-str-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new2/new3/c-Path-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new/b-Path-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_non_blocking[AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new/b-PurePath-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[a-PurePath-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new2/new3/c-str-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new2/new3/c-Path-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_non_executor[False-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[a-PurePath-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new/b-PurePath-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new/b-str-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_non_executor[True-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[a-str-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[a-Path-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new2/new3/c-PurePath-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new/b-Path-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new/b-str-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[a-Path-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[a-PurePath-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new2/new3/c-str-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new/b-PurePath-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new2/new3/c-str-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new2/new3/c-Path-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[new/b-Path-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_coroutine_function": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_non_blocking[AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_acquire[a-str-AsyncUnixFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_async_filelock::test_simple[new2/new3/c-PurePath-AsyncSoftFileLock]": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "tests.test_virtualenv::test_virtualenv": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}
