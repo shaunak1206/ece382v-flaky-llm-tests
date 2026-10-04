@@ -1,0 +1,42 @@
+{
+ "chunks": 360,
+ "tests": 450,
+ "executions": 303420,
+ "flaky": 2,
+ "always_fail": 26,
+ "flaky_by_condition": {
+  "gen_oneshot_haiku": 2
+ },
+ "flaky_tests": {
+  "gen_oneshot_haiku__schedule::test_osh_job_configuration.TestUntilConfiguration::test_until_with_string_time_format": {
+   "pass": 900,
+   "fail": 100,
+   "tz_fail": {
+    "UTC": 100
+   },
+   "messages": [
+    "schedule.ScheduleValueError: Cannot schedule a job to run until a time in the past"
+   ]
+  },
+  "gen_oneshot_haiku__tenacity::test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test": {
+   "pass": 762,
+   "fail": 238,
+   "tz_fail": {
+    "UTC": 31,
+    "America/Chicago": 22,
+    "Asia/Kolkata": 21,
+    "Pacific/Kiritimati": 19,
+    "Pacific/Pago_Pago": 25,
+    "Australia/Lord_Howe": 19,
+    "Europe/London": 27,
+    "Asia/Kathmandu": 23,
+    "America/St_Johns": 33,
+    "Etc/GMT-14": 18
+   },
+   "messages": [
+    "assert 0.009539604187011719 >= 0.01",
+    "assert 0.009424924850463867 >= 0.01"
+   ]
+  }
+ }
+}
