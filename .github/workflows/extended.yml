@@ -1,0 +1,79 @@
+name: extended-rerun
+
+# Reruns every test the static scan flagged as risky, COUNT times in each of 10 time zones,
+# one job per suite, on GitHub's Linux runners. Start it from the Actions tab or with
+#   gh workflow run extended-rerun -f count=100
+# and download the "extended-results" artifact when it finishes.
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "repeats per test per time zone (10 zones)"
+        default: "100"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      suites: ${{ steps.p.outputs.suites }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json
+          sm = json.load(open("results/smells.json"))
+          print("suites=" + json.dumps(sorted(k for k, v in sm.items() if v["any"] > 0)))
+          EOF
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        suite: ${{ fromJson(needs.plan.outputs.suites) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: install test tools
+        run: python -m pip install -q -r colab/requirements.txt
+      - name: fetch and install the library under test
+        run: |
+          SUITE="${{ matrix.suite }}"
+          bash scripts/fetch_subject.sh "${SUITE##*/}"
+      - name: rerun flagged tests
+        run: |
+          SUITE="${{ matrix.suite }}"
+          echo "$(nproc) cpus on $(uname -sr)"
+          python scripts/extended.py --root "$PWD" --subjects "$PWD/subjects" --out out \
+            --count "${{ inputs.count }}" --workers "$(nproc)" --conds "${SUITE%%/*}" --only "${SUITE##*/}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ext-${{ strategy.job-index }}
+          path: out/*__tz*.json
+          if-no-files-found: warn
+
+  collect:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: ext-*
+          merge-multiple: true
+          path: out
+      - name: summarize
+        run: python3 scripts/extended.py --summarize --out out | tee out/summary.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extended-results
+          path: out/
