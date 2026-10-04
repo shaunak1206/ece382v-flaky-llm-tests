@@ -173,7 +173,7 @@ Failures out of 50 runs for each flaky LLM test in each configuration.
 3. LLM tests carry about twice the latent timing and randomness risk, which a fast laptop mostly hides.
 4. A one run filter catches broken tests and misses flaky ones. A cheap static risk scan flagged all three flaky LLM tests, though it also flags hundreds that never flipped.
 
-### 4.9 Extended run on a slower Linux machine (GitHub Actions, October 4)
+### 4.8 Extended run on a slower Linux machine (GitHub Actions, October 4)
 
 Every test the scanner flagged (450 tests across 36 suites, human and LLM) was rerun 1,000 times on GitHub hosted Linux runners with 2 vCPUs, 100 runs in each of 10 time zones with random order and a new hash seed per chunk. That is 303,420 more test executions. The run took 29 minutes of wall time and about 180 runner minutes.
 
@@ -191,10 +191,10 @@ Every test the scanner flagged (450 tests across 36 suites, human and LLM) was r
 
 So 1,000 targeted reruns on a slower machine found no new flaky tests, and every risky test that never flipped in 70 runs also held up for 1,000. This makes the RQ1 result stronger. It also supports the RQ3 point that the risk patterns mostly stay latent. A test needs a specific trigger, like the wrong hour, a busy CPU, or an unlucky random draw, before it fails.
 
-## 4.8 Next steps (for the proposal and progress reports)
+### 4.9 Next steps (for the proposal and progress reports)
 
-1. **Done October 4.** 1,000 reruns of every flagged test on a 2 vCPU Linux runner (section 4.9).
-2. **Add stress to the slow machine.** Repeat 4.9 with CPU stress on the Linux runner, since stress was the only mode that exposed the pybreaker race and the deadline test.
+1. **Done October 4.** 1,000 reruns of every flagged test on a 2 vCPU Linux runner (section 4.8).
+2. **Add stress to the slow machine.** Repeat 4.8 with CPU stress on the Linux runner, since stress was the only mode that exposed the pybreaker race and the deadline test.
 3. **More generators.** Add a non Claude model (GPT class) and a plain Copilot style prompt that does not name the time features, to separate model effects from prompt effects.
 4. **Mitigation.** Regenerate the one shot suites with a short prompt that warns about real sleeps, unfrozen clocks, and timing asserts, and compare a 5 run filter with the 1 run filter on cost and on flaky tests kept.
 5. **Order dependence check.** Run iDFlakies style polluter and victim search on all generated suites, since the per test scan cannot see shared state.
