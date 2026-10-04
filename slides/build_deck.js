@@ -181,7 +181,7 @@ const fmt = (n) => n.toLocaleString("en-US");
   s.addText("Next steps and open questions", { placeholder: "title" });
   const cols = [
     [fa.FaChartBar, "How I will evaluate", ["Flaky rate per suite with confidence intervals", "Root cause of every flaky test", "Risk patterns and coverage per suite", "What a one run filter keeps and throws away"]],
-    [fa.FaCalendarAlt, "Timeline", ["Oct 9 proposal", "Oct 24 more models and reruns", "Nov 7 slower CI machine runs", "Nov 21 mitigation prompt", "Dec 12 final report"]],
+    [fa.FaCalendarAlt, "Timeline", ["Oct 9 proposal", "Oct 23 more models and reruns", "Nov 6 slower CI machine runs", "Nov 20 mitigation prompt", "Dec 12 final report"]],
     [fa.FaQuestion, "What I am unsure about", ["Flips are rare, so do I need 1000 reruns", "Do risk patterns predict real flips", "Is a laptop too fast to show timing bugs", "Ideas for other perturbations welcome"]],
   ];
   for (let i = 0; i < cols.length; i++) {
