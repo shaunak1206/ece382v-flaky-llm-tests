@@ -6,6 +6,9 @@ name: extended-rerun
 # and download the "extended-results" artifact when it finishes.
 
 on:
+  push:
+    paths:
+      - ".github/workflows/extended.yml"   # editing this file starts a run; other pushes do not
   workflow_dispatch:
     inputs:
       count:
@@ -52,7 +55,7 @@ jobs:
           SUITE="${{ matrix.suite }}"
           echo "$(nproc) cpus on $(uname -sr)"
           python scripts/extended.py --root "$PWD" --subjects "$PWD/subjects" --out out \
-            --count "${{ inputs.count }}" --workers "$(nproc)" --conds "${SUITE%%/*}" --only "${SUITE##*/}"
+            --count "${{ inputs.count || '100' }}" --workers "$(nproc)" --conds "${SUITE%%/*}" --only "${SUITE##*/}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
