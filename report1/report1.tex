@@ -79,7 +79,7 @@ They are sometimes. Three one shot Haiku tests flip, and both of the tests from 
 %%RESULTS%%
 
 \section{Scripts, code, and data}
-Everything is in the private GitHub repository \url{https://github.com/shaunak1206/ece382v-flaky-llm-tests}, which we will share with the instructor. The main pieces are below.
+Everything is in the public GitHub repository \url{https://github.com/shaunak1206/ece382v-flaky-llm-tests}. The main pieces are below.
 \begin{itemize}
 \item \texttt{scripts/rerun.py}: reruns a suite $N$ times in one mode (\texttt{both}, \texttt{tz}, \texttt{stress}, \texttt{stressng}) and records every test outcome from JUnit XML.
 \item \texttt{scripts/filter\_oneshot.py}: the one run generate and filter step.
@@ -107,7 +107,7 @@ Everything is in the private GitHub repository \url{https://github.com/shaunak12
 \end{enumerate}
 
 \subsection*{Division of work}
-%%DIVISION%%
+So far Manas did the literature review and labeled the root cause of every flaky test, and Shaunak wrote the scripts, generated the suites, and ran the experiments and analysis. For the next milestone Manas will label the root causes of any new flaky tests and of the failures we trigger with stress-ng and delay injection, and write the related work section. Shaunak will add the second model family and the new subjects, run the Shaker configuration step and the mitigation experiments, and keep the analysis up to date.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
