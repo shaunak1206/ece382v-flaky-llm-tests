@@ -1,0 +1,115 @@
+\documentclass[sigconf,nonacm]{acmart}
+\settopmatter{printacmref=false, printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+\usepackage{booktabs}
+
+\begin{document}
+
+\title{Are LLM Written Unit Tests Flaky?}
+\subtitle{Progress Report 1, ECE 382V Software Testing in the Era of Nondeterminism, Fall 2026}
+
+\author{Shaunak Kapur (sk62288)}
+\affiliation{\institution{The University of Texas at Austin}\city{Austin}\state{Texas}\country{USA}}
+\author{Manas Pathak (map7848)}
+\affiliation{\institution{The University of Texas at Austin}\city{Austin}\state{Texas}\country{USA}}
+
+\maketitle
+
+\section{Summary}
+We finished everything we planned for this milestone and moved two items from the second milestone forward. We now have 72 LLM written test suites for 12 Python libraries, made with three models or setups and three prompt styles, plus the 12 human written suites as the baseline. Every suite has been rerun under random test order and hash seed, ten time zones, and two kinds of machine load, and every flaky test has a labeled root cause. After the proposal feedback we changed the method in five places. Subjects now come from a written selection funnel, two new prompt styles are based on prior work and on how developers actually ask for tests, generated tests are also run inside the human suites, machine load now follows Shaker~\cite{silva2020}, and every scanner rule is tied to a root cause category and checked against flaky tests labeled by Gruber et al.~\cite{gruber2021}.
+
+%%RESULTS_SUMMARY%%
+
+\section{Goals for this milestone}
+Table~\ref{tab:goals} lists the goals from our proposal and where each one stands.
+
+\begin{table}[h]
+\caption{Proposal goals for Intermediate Steps 1 (by October 23)}
+\label{tab:goals}
+\small
+\begin{tabular}{p{4.1cm}p{3.6cm}}
+\toprule
+Goal & Status \\
+\midrule
+Finish the subject list & Done. Now backed by a written funnel (Section~\ref{sec:subjects}) \\
+Generate agentic and both one shot suites & Done October 1 (36 suites). 24 more added October 22 with two new prompt styles \\
+Full rerun experiment, all three changes & Done for all 84 suites, %%RUNS%% test executions \\
+RQ1 flaky rates & Done, Table~\ref{tab:rq1} \\
+RQ2 root cause of every flaky test & Done, Section~\ref{sec:rq2} \\
+First version of the static scanner & Done, and validated on outside labels (Section~\ref{sec:rq3}) \\
+\midrule
+\multicolumn{2}{l}{\emph{Moved forward from Intermediate Steps 2}} \\
+1,000 reruns of flagged tests on a slow Linux runner & Done October 4 (303,420 executions) and again with stress-ng %%EXT_STRESS_SHORT%% \\
+Plain prompt that does not name time features & Done October 22 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We met every goal. The one thing that did not go as hoped is the number of flaky tests. Flakiness is rare in all suites, so the confidence intervals for RQ1 overlap and the comparison between human and LLM tests is weak if it only counts flips. This is why we added the risk measures, the mixed suites, and the stronger machine load described below, and why the mitigation will not be measured only on observed flips.
+
+\section{What we changed after the proposal feedback}
+\label{sec:feedback}
+
+\subsection{How subjects are chosen}
+\label{sec:subjects}
+\texttt{scripts/select\_subjects.py} applies fixed rules and logs the count after each one. It starts from the 5,000 most downloaded PyPI packages over the last 30 days and keeps packages that are libraries (no typing stubs or pytest plugins), link a GitHub repository, ship a pure Python wheel, have at most three required dependencies and run on Python 3.12, and have test files in their repository. The counts are 5,000, 4,701, 4,131, 3,296, 2,188, and 1,959. The survivors are split into two strata by whether the library source imports a module tied to nondeterminism (time, datetime, random, threading, asyncio, concurrent, multiprocessing, tempfile, socket). 1,135 do and 824 do not. We oversample the first stratum on purpose, since that is where flaky tests come from, and we say so. The last rule is that the suite passes offline (pytest-socket) in under 60 seconds at a pinned commit. It needs a clone and a run, so it is applied to a seeded random sample. In a sample of 6 per stratum, 5 of 12 passed. These 5 are the pool we will draw new subjects from. All 12 of our current subjects pass every rule. 10 are in the nondeterminism stratum and 2 (tinydb and tabulate) are not. Their download ranks run from 44 (filelock) to 2,167 (tinydb). The same script can be rerun with a different seed to add subjects in the same way.
+
+\subsection{Which prompts, and why}
+Our original prompt names the time, random, thread, and file features of each library so that the model tests them. That makes risky tests more likely, so we now treat it as an upper bound and call it the \emph{feature prompt}. We added two styles, both run one shot with Claude Sonnet so they compare directly with the feature prompt suites (OS-S). \textbf{TP-S} follows TestPilot~\cite{schafer2024}. The model sees only the signatures, docstrings, and README usage examples of the public API (built by \texttt{scripts/build\_testpilot\_context.py}), never the implementation. \textbf{PL-S} is a plain developer prompt, ``write unit tests for this library using pytest'', with the source files and no hints about what to test. All styles keep the same practical limits (50 to 80 tests, pytest only, no reading of the existing tests, no running). The exact prompt texts are in \texttt{prompts/README.md}.
+
+\subsection{Running generated tests with the existing ones}
+So far each generated suite ran as a whole in random order, which can expose order dependence inside that suite, and each flaky test was then rerun alone only to diagnose it. We now also run a \emph{mixed} condition (\texttt{scripts/mixed.py}). The generated tests a pipeline would keep are copied into the library's own test folder and pytest runs both in one session in random order, which is how a developer would add them. Either side can now pollute the other. The human suite is run alone on the same machine as the baseline.
+
+\subsection{Machine load}
+The original stress mode starts one Python busy loop per core, which only loads the CPU and was not based on prior work. We added a \texttt{stressng} mode that follows Shaker~\cite{silva2020}. It uses the same four stress-ng options as Shaker (\texttt{--cpu}, \texttt{--cpu-load}, \texttt{--vm}, \texttt{--vm-bytes}) and Shaker's first step, a uniform random sample of ten configurations over those domains. Run $i$ uses configuration $i \bmod 10$ and the configuration of every run is saved, so once we have enough flaky tests we can build Shaker's configuration by test matrix and pick the configurations that expose the most. The limits are that we load only CPU and memory, not disk, network, or garbage collection, and that we use two machine types (an 8 core Apple M3 and 2 vCPU Linux runners).
+
+\subsection{The static scanner}
+\label{sec:rq3}
+Each rule now names the root cause category it is meant to catch. Real sleeps map to async wait and time~\cite{luo2014}, unfrozen clock reads and elapsed time asserts to time, unseeded randomness to randomness~\cite{gruber2021}, threads and async tasks to concurrency, fixed file paths and subprocesses to IO and resource leaks, and asserting the order of a set or dict view to unordered collections~\cite{luo2014,gyori2016}. We checked the scanner against outside labels. Gruber et al.\ published a hand labeled sample of 100 non order dependent flaky tests from 100 PyPI projects. We checked out 96 of them at the recorded commit (\texttt{scripts/validate\_scanner.py}). The scanner flagged 10 of 96. It caught all 3 async wait tests and some of the time and concurrency tests, but only 2 of 35 randomness tests and 1 of 41 network tests. In most misses the nondeterminism is inside the code under test and not in the test body, for example a test that trains a model that seeds itself. Of 714 other tests in the same files that were never reported flaky, 35 were flagged (4.9\%). So the scanner is a fair warning for timing problems written directly in the test, which is what the LLM tests have, and it is blind to nondeterminism that lives in the library. A network rule we added after this check raises recall to 13 of 96.
+
+\subsection{The human baseline}
+Human tests are flaky, but rarely. 6 of 5,587 flipped, 4 order dependent (global registries in filelock and arrow) and 2 thread races in pybreaker that only show under CPU stress. Since flip counts are small everywhere we now also compare the failure rate of each flaky test, the share of tests with risky patterns, and the results of the mixed suites, not just how many tests flipped.
+
+\subsection{If generated tests are never flaky}
+They are sometimes. Three one shot Haiku tests flip, and both of the tests from our pilot were LLM written. The mitigation step (Intermediate Steps 3) would still have very little to count if it only used observed flips, so it will also be measured on the scanner risk rate, on failures we can trigger on purpose with stress-ng and FlakeRake style delays~\cite{rahman2024}, and on line coverage. We have already drafted the mitigation prompt (\texttt{prompts/mitigation\_prompt.md}) so that it does not depend on the final list of flaky tests.
+
+\section{Preliminary results}
+
+%%RESULTS%%
+
+\section{Scripts, code, and data}
+Everything is in the private GitHub repository \url{https://github.com/shaunak1206/ece382v-flaky-llm-tests}, which we will share with the instructor. The main pieces are below.
+\begin{itemize}
+\item \texttt{scripts/rerun.py}: reruns a suite $N$ times in one mode (\texttt{both}, \texttt{tz}, \texttt{stress}, \texttt{stressng}) and records every test outcome from JUnit XML.
+\item \texttt{scripts/filter\_oneshot.py}: the one run generate and filter step.
+\item \texttt{scripts/diagnose.py}: targeted reruns of each flaky test alone and in the suite under each change.
+\item \texttt{scripts/smells.py}, \texttt{run\_smells.py}, \texttt{validate\_scanner.py}: the static risk scanner and its validation.
+\item \texttt{scripts/select\_subjects.py}: the subject selection funnel.
+\item \texttt{scripts/build\_testpilot\_context.py}: the TestPilot style prompt context.
+\item \texttt{scripts/mixed.py} and \texttt{.github/workflows/mixed.yml}: mixed suites on GitHub Actions.
+\item \texttt{scripts/extended.py} and \texttt{.github/workflows/extended.yml}: 1,000 reruns of flagged tests on Linux runners, with optional stress-ng.
+\item \texttt{scripts/coverage.py} and \texttt{analyze.py}: coverage and the tables in this report.
+\item Generated suites in \texttt{llm\_tests/}, \texttt{gen\_oneshot\_sonnet/}, \texttt{gen\_oneshot\_haiku/}, \texttt{gen\_tp\_sonnet/}, \texttt{gen\_plain\_sonnet/}. Raw rerun results in \texttt{results/}, prompts in \texttt{prompts/}, the running write up in \texttt{REPORT.md}.
+\end{itemize}
+
+\section{Challenges}
+\begin{itemize}
+\item \textbf{Flakiness is rare.} Under 0.2\% of tests flip in any condition, so most comparisons need risk measures, failure rates, or much longer runs.
+\item \textbf{Generators do not always follow instructions.} Several one shot agents ran small shell commands (\texttt{mkdir}, \texttt{grep}, a syntax check) even though they were told not to run anything. None ran a test, so no suite got execution feedback, and every case is logged in \texttt{prompts/README.md}. One TestPilot style agent only read the first half of a long API file for more-itertools.
+\item \textbf{Rate limits.} The subject funnel first used the GitHub API and hit the hourly limit, so it now lists repository files with blobless git clones.
+\item \textbf{Two operating systems.} Coverage of filelock is low everywhere because the Windows module never runs on macOS or Linux, and timing behaves differently on the laptop and the runners. We report each machine separately.
+\end{itemize}
+
+\section{Next steps (Intermediate Steps 2, by November 6)}
+\begin{enumerate}
+%%NEXT%%
+\end{enumerate}
+
+\subsection*{Division of work}
+%%DIVISION%%
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{refs}
+
+\end{document}

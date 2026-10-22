@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Line coverage of the library under test for each suite (human, agentic, one-shot accepted-only)."""
 import json, os, subprocess, sys
-R = "/Users/shaunkapoor/ece382v-flaky-llm-tests"
-PY = f"{R}/.venv/bin/python"
+R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PY = sys.executable
 SUBJ = {  # proj: (subject dir, human target, coverage package, extra args, module filter)
  "cachetools": ("cachetools", "tests", "cachetools", [], None),
  "schedule": ("schedule", "test_schedule.py", "schedule", [], None),
@@ -39,13 +39,19 @@ def nodeid(suite, junit_id):
         if os.path.exists(f"{suite}/{parts[i]}.py"):
             return f"{suite}/{parts[i]}.py::" + "::".join(parts[i + 1:] + [name])
     return f"{suite}/{parts[-1]}.py::{name}"
-res = {}
+# COV_CONDS limits which generated conditions run, SKIP_HUMAN=1 reuses the human numbers, results merge into summary.json
+CONDS = os.environ.get("COV_CONDS", "llm_tests,gen_oneshot_sonnet,gen_oneshot_haiku,gen_tp_sonnet,gen_plain_sonnet").split(",")
+SUMMARY = f"{R}/results/coverage/summary.json"
+res = json.load(open(SUMMARY)) if os.path.exists(SUMMARY) else {}
 os.makedirs(f"{R}/results/coverage", exist_ok=True)
+PROJS = os.environ.get("COV_PROJS", ",".join(SUBJ)).split(",")
 for proj, (sd, tgt, pkg, extra, mf) in SUBJ.items():
-    row = {}
+    if proj not in PROJS: continue
+    row = res.get(proj, {})
     o = f"{R}/results/coverage/human_{proj}.json"
-    run(f"{R}/subjects/{sd}", tgt, pkg, extra, o, {"PYTHONPATH": "."} if proj == "filelock" else None); row["human"] = pct(o, mf)
-    for cond in ("llm_tests", "gen_oneshot_sonnet", "gen_oneshot_haiku"):
+    if os.environ.get("SKIP_HUMAN") != "1" or "human" not in row:
+        run(f"{R}/subjects/{sd}", tgt, pkg, extra, o, {"PYTHONPATH": "."} if proj == "filelock" else None); row["human"] = pct(o, mf)
+    for cond in CONDS:
         suite = f"{R}/{cond}/{proj}"
         if not os.path.isdir(suite): continue
         des = []
@@ -56,4 +62,4 @@ for proj, (sd, tgt, pkg, extra, mf) in SUBJ.items():
         work = f"{R}/results/work/{cond}/{proj}/cov"; os.makedirs(work, exist_ok=True)
         o = f"{R}/results/coverage/{cond}_{proj}.json"; run(work, suite, pkg, des, o); row[cond] = pct(o, mf)
     res[proj] = row; print(proj, row, flush=True)
-json.dump(res, open(f"{R}/results/coverage/summary.json", "w"), indent=1)
+json.dump(res, open(SUMMARY, "w"), indent=1)

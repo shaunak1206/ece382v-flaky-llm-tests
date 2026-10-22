@@ -6,7 +6,7 @@ work dir and records which tests a TestPilot style pipeline would keep (passed) 
 (failed, errored, or in a file that does not even import). Writes results/filter/<cond>/<proj>.json
 """
 import json, os, subprocess, sys, tempfile, xml.etree.ElementTree as ET
-ROOT = "/Users/shaunkapoor/ece382v-flaky-llm-tests"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def main(cond, proj):
     suite = f"{ROOT}/{cond}/{proj}"

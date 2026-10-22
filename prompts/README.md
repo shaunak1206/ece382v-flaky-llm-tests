@@ -53,3 +53,11 @@ TP-S prompt (verbatim, `{...}` filled per library):
 PL-S prompt (verbatim):
 
 > You are generating a unit test suite for a research experiment. Do not run any commands (no pytest, no python, no shell). Only read files and write files. Write unit tests for the Python library {lib} using pytest. The library source is at {module paths}. Do not look at the library's existing tests (any tests/ or test/ folder or test_*.py file). Write between 50 and 80 test functions, in one or more files named test_pls_<topic>.py in {out dir} (create it). Do not create __init__.py or conftest.py files. Only pytest, pytest-asyncio, freezegun and the Python standard library are installed. When done, reply with just the file names and the number of test functions per file.
+
+## Deviations recorded during generation (October 22, 2026)
+All 24 TP-S and PL-S agents were told to run no commands. None ran pytest or imported the library, so no suite got execution feedback. What they did run, from their own reports:
+- TP-S toolz: mkdir and a grep count, then trimmed from 96 to 78 tests. TP-S filelock: wrote and trimmed files with shell commands, a grep count, and a Python syntax parse. TP-S schedule: a small script to trim 93 to 78 tests and an ast.parse syntax check. TP-S tinydb, tenacity: mkdir only.
+- TP-S more-itertools: the Read tool showed only the first 1,753 of 3,456 lines of the context file and the agent did not read the rest, so its tests cover the first half of the API listing.
+- TP-S pybreaker left out Redis storage and the Tornado path, since neither is installed. TP-S boltons has parametrized tests that collect to about 81 cases.
+- PL-S filelock: cat, mkdir, heredocs. PL-S schedule: mkdir. PL-S toolz: one ls. PL-S cachetools, humanize: one ls and wc. PL-S tinydb: mkdir and one python string replace on its own file. PL-S tabulate: one grep. PL-S more-itertools: wc and grep on the source. PL-S boltons: mkdir, ls, grep count. PL-S arrow: sed, grep, cat on the source and a grep count.
+- Plain prompt agents read the module source with shell tools in a few cases, which matches what the prompt allows (reading the source), so it does not change the condition.

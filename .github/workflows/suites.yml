@@ -1,0 +1,105 @@
+name: suites
+
+# Moves the October 22 rerun queue to GitHub Actions so it does not need a laptop.
+#  newsuite jobs: TP-S and PL-S suites, one run filter, then both/tz/stress reruns (skipped if already
+#                 done locally), then the mixed suite run and coverage for that suite.
+#  stressng jobs: one per library, stress-ng (Shaker style) reruns of all five generated suites and the
+#                 human suite, so every condition gets this mode on the same machine type.
+#   gh workflow run suites
+on:
+  workflow_dispatch:
+    inputs:
+      kinds:
+        description: "newsuite,stressng"
+        default: "newsuite,stressng"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - id: p
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          kinds = "${{ inputs.kinds }}".split(",")
+          projs = "cachetools schedule tinydb humanize toolz tabulate tenacity filelock boltons more_itertools arrow pybreaker".split()
+          inc = []
+          if "newsuite" in kinds:
+              inc += [{"kind": "newsuite", "cond": c, "proj": p} for c in ("gen_tp_sonnet", "gen_plain_sonnet") for p in projs]
+          if "stressng" in kinds:
+              inc += [{"kind": "stressng", "cond": "all", "proj": p} for p in projs]
+          print("matrix=" + json.dumps({"include": inc}))
+          PY
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: install tools
+        run: |
+          sudo apt-get install -y -qq stress-ng > /dev/null
+          python -m pip install -q -r colab/requirements-mixed.txt pytest-cov==7.1.0
+      - name: fetch and install the library under test
+        run: PYTHON=python bash scripts/fetch_subject.sh "${{ matrix.proj }}"
+      - name: new suite (filter, reruns, mixed, coverage)
+        if: ${{ matrix.kind == 'newsuite' }}
+        run: |
+          C="${{ matrix.cond }}"; P="${{ matrix.proj }}"
+          echo "$(nproc) cpus on $(uname -sr)"
+          if [ ! -f "results/runs/$C/$P.stress.json" ]; then
+            python scripts/filter_oneshot.py "$C" "$P"
+            bash scripts/llm_suite_reruns.sh "$C" "$P"
+          else
+            echo "reruns already done locally"
+          fi
+          python scripts/mixed.py "$C" "$P" --runs 30 --out "results/mixed/${C}__${P}.json" 2>&1 | grep -E "DONE|FLAKY|rc=[^01]|no results" || true
+          SKIP_HUMAN=1 COV_CONDS="$C" COV_PROJS="$P" python scripts/coverage.py || true
+      - name: stress-ng reruns of every suite of this library
+        if: ${{ matrix.kind == 'stressng' }}
+        run: |
+          P="${{ matrix.proj }}"
+          case $P in tabulate) H=python-tabulate;; more_itertools) H=more-itertools;; *) H=$P;; esac
+          for C in llm_tests gen_oneshot_sonnet gen_oneshot_haiku gen_tp_sonnet gen_plain_sonnet; do
+            mkdir -p "results/work/$C/$P/stressng"
+            python scripts/rerun.py --name "$C-$P" --cwd "$PWD/results/work/$C/$P/stressng" --target "$PWD/$C/$P" --runs 20 \
+              --mode stressng --out "results/runs/$C/$P.stressng.json" -- --continue-on-collection-errors --timeout=15 2>&1 \
+              | grep -E "DONE|FLAKY|rc=[^01]|no results" || true
+          done
+          python scripts/mixed.py human "$P" --mode stressng --runs 20 --out "results/human/$H.stressng.json" 2>&1 \
+            | grep -E "DONE|FLAKY|rc=[^01]|no results" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: suites-${{ matrix.kind }}-${{ matrix.cond }}-${{ matrix.proj }}
+          path: |
+            results/runs/
+            results/filter/
+            results/mixed/
+            results/human/*.stressng.json
+            results/coverage/*.json
+          if-no-files-found: warn
+
+  collect:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: suites-*
+          path: parts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: suites-results
+          path: parts/
