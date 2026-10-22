@@ -1,6 +1,6 @@
 # Are LLM-Generated Unit Tests Flaky? An Empirical Study for ECE 382V
 
-Shaunak Kapur — ECE 382V (Software Testing in the Era of Nondeterminism), Fall 2026
+Shaunak Kapur & Manas Pathak — ECE 382V (Software Testing in the Era of Nondeterminism), Fall 2026
 
 ## Initial project idea (for the Oct 5 submission)
 

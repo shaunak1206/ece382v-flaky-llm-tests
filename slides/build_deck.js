@@ -32,7 +32,7 @@ const fmt = (n) => n.toLocaleString("en-US");
 (async () => {
   const pres = new pptxgen();
   pres.layout = "LAYOUT_16x9"; // 10 x 5.625 in
-  pres.author = "Shaunak Kapur";
+  pres.author = "Shaunak Kapur & Manas Pathak";
   pres.title = "Are LLM Written Unit Tests Flaky";
   pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
   const C = pres.SchemeColor;
