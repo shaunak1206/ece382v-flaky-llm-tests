@@ -1,6 +1,6 @@
 # Are LLM generated unit tests flaky?
 
-ECE 382V (Fall 2026) course project, Shaunak Kapur. Rerun study of LLM generated pytest suites against the human suites of 12 Python libraries.
+ECE 382V (Fall 2026) course project, Shaunak Kapur & Manas Pathak. Rerun study of LLM generated pytest suites against the human suites of 12 Python libraries.
 
 - `REPORT.md` the write up
 - `scripts/` rerun harness and analysis (`rerun.py`, `analyze.py`, `smells.py`, `extended.py`)
