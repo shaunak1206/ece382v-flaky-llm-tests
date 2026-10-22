@@ -33,3 +33,23 @@ For one-shot suites the harness applies a single-run generate-and-filter step af
 - Per test timeout: the first 9 generated suites were rerun with a 60 second pytest-timeout. One-shot Haiku schedule contains `test_zero_interval`, which hangs forever (every(0) never finds a next run), and under random order the leftover job in the global default scheduler also hangs later module level tests, so one run took about 5 minutes. From that suite on, all reruns use a 15 second timeout. No passing test in any suite takes more than about 1 second, so this changes run time and not outcomes.
 - Execution: suites were rerun one at a time until 18:45 on October 1. From then on two queue workers ran suites in parallel (plus the long one-shot Haiku schedule job and the human baseline job), so the machine was busier during the later suites. Extra load can only make timing problems more likely to show, so this does not hide flakiness.
 - Stress lock: from 20:25 on October 1, stress runs take a machine wide file lock so only one stress run burns the CPUs at a time. Before that, up to two stress runs could overlap (16 burners on 8 cores), which only made the stress harder. Each run also has a 900 second wall clock cap.
+
+## Prompt styles added October 22, 2026 (proposal feedback)
+
+The original prompt above names the time, random, thread, and file features of each library. That makes risky tests more likely, so it is now treated as the **feature prompt** (an upper bound). Two more prompt styles were added, both run one shot with Claude Sonnet and no execution, so they compare directly with OS-S.
+
+| Condition | Prompt style | Based on | Model sees | Output dir | File prefix |
+|---|---|---|---|---|---|
+| OS-S (existing) | feature prompt | ours | module source plus a list of APIs and their time/random features | gen_oneshot_sonnet/<proj> | test_oss_ |
+| TP-S | TestPilot style | Schäfer et al., TSE 2024 | only signatures, docstrings, and README usage examples (`prompts/context_testpilot/<proj>.md`, built by `scripts/build_testpilot_context.py`), never the implementation | gen_tp_sonnet/<proj> | test_tps_ |
+| PL-S | plain developer prompt | how a developer asks a chat assistant | the module source files, with no hints about what to test | gen_plain_sonnet/<proj> | test_pls_ |
+
+All three keep the same practical constraints so the suites are comparable. 50 to 80 test functions, pytest only (plus pytest-asyncio, freezegun, stdlib), no reading of the existing tests, no `__init__.py` or `conftest.py`, and no execution. The TestPilot style prompt is our module level adaptation, since TestPilot itself prompts one function at a time for JavaScript.
+
+TP-S prompt (verbatim, `{...}` filled per library):
+
+> You are generating a unit test suite for a research experiment. Do not run any commands (no pytest, no python, no shell). Only read the one file named below and write files. Library: {lib} (Python). Its public API, with signatures, documentation, and usage examples, is in {context file}. Read that file. Do not open any other file of the library, its source code, or its existing tests. Write pytest unit tests for this API. Write between 50 and 80 test functions in total, split over one or more files named test_tps_<topic>.py in the directory {out dir} (create it). Do not create __init__.py or conftest.py files. Import the library the normal way (import {import name}). Only pytest, pytest-asyncio, freezegun and the Python standard library are available. When done, reply with just the file names and the number of test functions per file.
+
+PL-S prompt (verbatim):
+
+> You are generating a unit test suite for a research experiment. Do not run any commands (no pytest, no python, no shell). Only read files and write files. Write unit tests for the Python library {lib} using pytest. The library source is at {module paths}. Do not look at the library's existing tests (any tests/ or test/ folder or test_*.py file). Write between 50 and 80 test functions, in one or more files named test_pls_<topic>.py in {out dir} (create it). Do not create __init__.py or conftest.py files. Only pytest, pytest-asyncio, freezegun and the Python standard library are installed. When done, reply with just the file names and the number of test functions per file.
