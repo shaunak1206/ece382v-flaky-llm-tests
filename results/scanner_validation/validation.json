@@ -1,0 +1,750 @@
+{
+ "rule_sources": {
+  "SLEEP": "async wait, time (Luo et al. 2014; Gruber et al. 2021)",
+  "WALLCLOCK": "time (Luo et al. 2014)",
+  "TIMING_ASSERT": "time, async wait (Luo et al. 2014)",
+  "RANDOM": "randomness (Gruber et al. 2021 add it as a category)",
+  "CONCURRENCY": "concurrency, async wait (Luo et al. 2014)",
+  "FIXED_PATH": "IO, test order dependency through shared files (Luo et al. 2014)",
+  "SUBPROCESS": "IO, resource leak (Luo et al. 2014)",
+  "UNORDERED": "unordered collections (Luo et al. 2014; NonDex, Gyori et al. 2016)",
+  "NETWORK": "network (Luo et al. 2014; largest NOD category in Gruber et al. 2021)"
+ },
+ "n_ground_truth": 100,
+ "n_scanned": 96,
+ "missing": [
+  "blindpie",
+  "capsicum",
+  "helpers",
+  "jgutils"
+ ],
+ "flaky_8_rules": {
+  "n": 96,
+  "flagged": 10
+ },
+ "flaky_with_network": {
+  "n": 96,
+  "flagged": 13
+ },
+ "controls_8_rules": {
+  "n": 714,
+  "flagged": 35
+ },
+ "controls_with_network": {
+  "n": 714,
+  "flagged": 51
+ },
+ "per_category": {
+  "network": {
+   "n": 41,
+   "flagged_8": 1,
+   "flagged_9": 3,
+   "rules": [
+    [
+     "NETWORK",
+     2
+    ],
+    [
+     "SLEEP",
+     1
+    ]
+   ]
+  },
+  "random": {
+   "n": 35,
+   "flagged_8": 2,
+   "flagged_9": 2,
+   "rules": [
+    [
+     "RANDOM",
+     2
+    ]
+   ]
+  },
+  "IO": {
+   "n": 7,
+   "flagged_8": 0,
+   "flagged_9": 1,
+   "rules": [
+    [
+     "NETWORK",
+     1
+    ]
+   ]
+  },
+  "time": {
+   "n": 4,
+   "flagged_8": 1,
+   "flagged_9": 1,
+   "rules": [
+    [
+     "SLEEP",
+     1
+    ],
+    [
+     "WALLCLOCK",
+     1
+    ]
+   ]
+  },
+  "async wait": {
+   "n": 3,
+   "flagged_8": 3,
+   "flagged_9": 3,
+   "rules": [
+    [
+     "SLEEP",
+     2
+    ],
+    [
+     "CONCURRENCY",
+     1
+    ]
+   ]
+  },
+  "concurrency": {
+   "n": 2,
+   "flagged_8": 1,
+   "flagged_9": 1,
+   "rules": [
+    [
+     "CONCURRENCY",
+     1
+    ]
+   ]
+  },
+  "resource leak": {
+   "n": 2,
+   "flagged_8": 1,
+   "flagged_9": 1,
+   "rules": [
+    [
+     "SLEEP",
+     1
+    ]
+   ]
+  },
+  "unordered collection": {
+   "n": 1,
+   "flagged_8": 0,
+   "flagged_9": 0,
+   "rules": []
+  },
+  "Test Case Timeout": {
+   "n": 1,
+   "flagged_8": 1,
+   "flagged_9": 1,
+   "rules": [
+    [
+     "RANDOM",
+     1
+    ]
+   ]
+  }
+ },
+ "flaky": [
+  {
+   "project": "BeautifulSauce",
+   "test": "test_from_url",
+   "category": "network",
+   "tags": [
+    "NETWORK"
+   ]
+  },
+  {
+   "project": "CHESS",
+   "test": "test_contains",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "CmdKit",
+   "test": "test_app_invalid_options",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "DESlib",
+   "test": "test_check_estimator_DESKL",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "GDAX-Python",
+   "test": "test_get_historic_rates",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "GoogleFreeTrans",
+   "test": "test_translation",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "Intervallum",
+   "test": "test_base",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "JavPy",
+   "test": "test_search_by_actress",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "Neuraxle",
+   "test": "test_automl_sequential_wrapper",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "PyXenaValkyrie",
+   "test": "test_build_config",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "RanCat",
+   "test": "test_load_url",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "SSLyze",
+   "test": "test",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "Verifone",
+   "test": "test_023_get_endpoint",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "WattTime",
+   "test": "test_get_detailed_grid_data",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "acl-anthology",
+   "test": "test_retrieve_from_element",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "amplimap",
+   "test": "test_config_umi_error",
+   "category": "IO",
+   "tags": []
+  },
+  {
+   "project": "analytic_shrinkage",
+   "test": "test_demean",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "arlib",
+   "test": "test_arlib_read",
+   "category": "unordered collection",
+   "tags": []
+  },
+  {
+   "project": "ashpool",
+   "test": "test_differ",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "beem",
+   "test": "test_masterpwd",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "cenpy",
+   "test": "test_pysal_holed_polygon",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "crfmnes",
+   "test": "test_run_d80_ellipsoid",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_insert_filter_full",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "cronjob",
+   "test": "test_cronrule",
+   "category": "time",
+   "tags": []
+  },
+  {
+   "project": "cvbase",
+   "test": "test_track_parallel_progress_list",
+   "category": "concurrency",
+   "tags": []
+  },
+  {
+   "project": "data-genie.git",
+   "test": "test_has_columns",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "data-partitioner",
+   "test": "test_training_percent",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "dcard-spider",
+   "test": "test_valid_api_forum",
+   "category": "network",
+   "tags": [
+    "NETWORK"
+   ]
+  },
+  {
+   "project": "devtracker",
+   "test": "test_end_time_total",
+   "category": "time",
+   "tags": [
+    "SLEEP",
+    "WALLCLOCK"
+   ]
+  },
+  {
+   "project": "dicom-standard",
+   "test": "test_valid_references",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "dict",
+   "test": "test_e2c_sentences",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "discovery-client",
+   "test": "test_crontab",
+   "category": "async wait",
+   "tags": [
+    "SLEEP"
+   ]
+  },
+  {
+   "project": "domain-validation",
+   "test": "test_WHOIS_utf_encoding",
+   "category": "network",
+   "tags": [
+    "SLEEP"
+   ]
+  },
+  {
+   "project": "ebook_homebrew",
+   "test": "test_convert_image_to_pdf",
+   "category": "IO",
+   "tags": [
+    "NETWORK"
+   ]
+  },
+  {
+   "project": "filtered-intervaltree",
+   "test": "test_compare_addition",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "fontMath",
+   "test": "test_wrapUnWrapPrecision",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "forkliftpy",
+   "test": "test_download_WOA",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "fuzzylogic",
+   "test": "test_eq",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "gamble.git",
+   "test": "test_deck_init",
+   "category": "random",
+   "tags": [
+    "RANDOM"
+   ]
+  },
+  {
+   "project": "geocoder",
+   "test": "test_komoot_multi_result",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "gwosc",
+   "test": "test_fetch_event_json_version",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "hotwing-core",
+   "test": "test_load_dat_file",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "humansort",
+   "test": "test_sort_property",
+   "category": "Test Case Timeout",
+   "tags": [
+    "RANDOM"
+   ]
+  },
+  {
+   "project": "langsplit",
+   "test": "test_partial_autodetect",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "lineflow",
+   "test": "test_loads_each_split",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "msp2db",
+   "test": "test_mona_files",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "music-dl",
+   "test": "test_baidu",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "mxnet-octave-conv",
+   "test": "test_fit_residual",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "nba_scraper",
+   "test": "test_scrape_date_range",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "ndradex",
+   "test": "test_radex_single_run",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "noipy",
+   "test": "test_noip_plugin",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "noisyopt",
+   "test": "test_AveragedFunction",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "ontobio",
+   "test": "test_wd_sparql_ptsd",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "orderly-web-deploy",
+   "test": "test_secret_reading",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "packeteer",
+   "test": "test_variable_string",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "pipm",
+   "test": "test_append_last_line",
+   "category": "IO",
+   "tags": []
+  },
+  {
+   "project": "piripherals",
+   "test": "test_mpr121_irq",
+   "category": "async wait",
+   "tags": [
+    "SLEEP"
+   ]
+  },
+  {
+   "project": "ploceidae",
+   "test": "test_session_locator_does_not_get_deleted_from_cache",
+   "category": "resource leak",
+   "tags": [
+    "SLEEP"
+   ]
+  },
+  {
+   "project": "py-finstmt",
+   "test": "test_annual_change_make_forecast_and_plug",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "py_ev",
+   "test": "test_equity",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "pyais",
+   "test": "test_tcp_stream",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "pyblnet",
+   "test": "test_blnet_web_log_in",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "pykew",
+   "test": "test_lookup",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "pylabeledrf",
+   "test": "test_computeLRF1",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "pympesa",
+   "test": "test_get_balance",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "python-cuckoo",
+   "test": "test_unserialize_with_reading_in_utf8",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "python-matlab-functions",
+   "test": "test_sub2ind",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "python_filmaffinity",
+   "test": "test_recommend_movistar",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "pytsmp",
+   "test": "test_calculate_distance_profile_constant_sequence",
+   "category": "random",
+   "tags": [
+    "RANDOM"
+   ]
+  },
+  {
+   "project": "pyupload",
+   "test": "test_fileio",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "pyvesync",
+   "test": "test_login",
+   "category": "time",
+   "tags": []
+  },
+  {
+   "project": "pywsl",
+   "test": "test_cv",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "ruTS",
+   "test": "test_download_file",
+   "category": "resource leak",
+   "tags": []
+  },
+  {
+   "project": "schemas",
+   "test": "test_generate_empty_template",
+   "category": "IO",
+   "tags": []
+  },
+  {
+   "project": "scikit-procrustes",
+   "test": "test_gbb_solver_known_solution_problem_1",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "selenium-wire",
+   "test": "test_get_response_body_json",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "service-manager",
+   "test": "test_reporthook10percent",
+   "category": "time",
+   "tags": []
+  },
+  {
+   "project": "sf-sdk",
+   "test": "test_2_get_order",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "sida",
+   "test": "test_send",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "solver",
+   "test": "test_get_package_metadata",
+   "category": "IO",
+   "tags": []
+  },
+  {
+   "project": "sports.py",
+   "test": "test_sport",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "spreading_dye_sampler",
+   "test": "test_for_each_cell",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "svp",
+   "test": "test_data",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "threadedprocess",
+   "test": "test_futures_run_in_different_processes_and_threads",
+   "category": "concurrency",
+   "tags": [
+    "CONCURRENCY"
+   ]
+  },
+  {
+   "project": "token-io",
+   "test": "test_add_and_get_address",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "torch-layer-normalization",
+   "test": "test_fit",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "torchgan",
+   "test": "test_inception_score",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "trainline-python",
+   "test": "test_basic_search_with_bicyle",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "truffleHog",
+   "test": "test_exit_if_invalid_commit",
+   "category": "IO",
+   "tags": []
+  },
+  {
+   "project": "vault-dev",
+   "test": "test_cleanup_on_gc",
+   "category": "async wait",
+   "tags": [
+    "CONCURRENCY"
+   ]
+  },
+  {
+   "project": "vimms",
+   "test": "test_TopN_controller_with_simulated_chems",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "wellpathpy",
+   "test": "test_resample_onto_unchanged_md",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "wiki-futures",
+   "test": "test_content_size",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "words-to-regular-expression",
+   "test": "test_generates_correct_regexp_from_iterable_of_strings",
+   "category": "random",
+   "tags": []
+  },
+  {
+   "project": "xenavalkyrie",
+   "test": "test_inventory",
+   "category": "network",
+   "tags": []
+  },
+  {
+   "project": "xphyle",
+   "test": "test_fastq",
+   "category": "IO",
+   "tags": []
+  }
+ ]
+}

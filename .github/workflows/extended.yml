@@ -6,14 +6,14 @@ name: extended-rerun
 # and download the "extended-results" artifact when it finishes.
 
 on:
-  push:
-    paths:
-      - ".github/workflows/extended.yml"   # editing this file starts a run; other pushes do not
   workflow_dispatch:
     inputs:
       count:
         description: "repeats per test per time zone (10 zones)"
         default: "100"
+      stress:
+        description: "run stress-ng CPU and memory noise during the whole job (Shaker style)"
+        default: "false"
 
 jobs:
   plan:
@@ -50,6 +50,12 @@ jobs:
         run: |
           SUITE="${{ matrix.suite }}"
           bash scripts/fetch_subject.sh "${SUITE##*/}"
+      - name: start stress-ng noise
+        if: ${{ inputs.stress == 'true' }}
+        run: |
+          sudo apt-get install -y -qq stress-ng > /dev/null
+          nohup stress-ng --quiet --cpu "$(nproc)" --cpu-load 80 --vm 1 --vm-bytes 30% --timeout 5h > /dev/null 2>&1 &
+          sleep 2; pgrep -c stress-ng
       - name: rerun flagged tests
         run: |
           SUITE="${{ matrix.suite }}"

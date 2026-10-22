@@ -13,7 +13,8 @@ HUMAN = {
  "boltons": "subjects/boltons/tests/*.py", "more_itertools": "subjects/more-itertools/tests/*.py",
  "arrow": "subjects/arrow/tests/*.py", "pybreaker": "subjects/pybreaker/tests/pybreaker_test.py",
 }
-CONDS = {"human": None, "llm_tests": "AG-S", "gen_oneshot_sonnet": "OS-S", "gen_oneshot_haiku": "OS-H"}
+CONDS = {"human": None, "llm_tests": "AG-S", "gen_oneshot_sonnet": "OS-S", "gen_oneshot_haiku": "OS-H",
+         "gen_tp_sonnet": "TP-S", "gen_plain_sonnet": "PL-S"}
 
 
 def files(cond, proj):
