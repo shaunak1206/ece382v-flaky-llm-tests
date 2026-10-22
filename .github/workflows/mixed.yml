@@ -1,0 +1,73 @@
+name: mixed-suites
+
+# Runs generated tests INSIDE each library's own test suite (one pytest session, random order,
+# new hash seed per run), plus the human suite alone as a same machine baseline.
+#   gh workflow run mixed-suites -f conds=human,llm_tests,gen_oneshot_haiku -f runs=30
+on:
+  workflow_dispatch:
+    inputs:
+      conds:
+        description: "comma separated: human and/or generated suite dirs"
+        default: "human,llm_tests,gen_oneshot_haiku"
+      runs:
+        description: "reruns per suite"
+        default: "30"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - id: p
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          conds = "${{ inputs.conds }}".split(",")
+          projs = "cachetools schedule tinydb humanize toolz tabulate tenacity filelock boltons more_itertools arrow pybreaker".split()
+          print("matrix=" + json.dumps({"include": [{"cond": c.strip(), "proj": p} for c in conds for p in projs]}))
+          PY
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: install test tools
+        run: python -m pip install -q -r colab/requirements-mixed.txt
+      - name: fetch and install the library under test
+        run: PYTHON=python bash scripts/fetch_subject.sh "${{ matrix.proj }}"
+      - name: run mixed suite
+        run: |
+          echo "$(nproc) cpus on $(uname -sr)"
+          python scripts/mixed.py "${{ matrix.cond }}" "${{ matrix.proj }}" --runs "${{ inputs.runs }}" \
+            --out "out/${{ matrix.cond }}__${{ matrix.proj }}.json" 2>&1 | grep -E "DONE|FLAKY|rc=[^01]|no results" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mixed-${{ matrix.cond }}-${{ matrix.proj }}
+          path: out/*.json
+          if-no-files-found: warn
+
+  collect:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: mixed-*
+          merge-multiple: true
+          path: out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mixed-results
+          path: out/
