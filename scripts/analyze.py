@@ -16,8 +16,10 @@ PROJECTS = ["cachetools", "schedule", "tinydb", "humanize", "toolz", "tabulate",
             "tenacity", "filelock", "boltons", "more_itertools", "arrow", "pybreaker"]
 PILOT = set(PROJECTS[:6])
 HUMAN_NAME = {"tabulate": "python-tabulate", "more_itertools": "more-itertools"}
-MODES = ["both", "tz", "stress"]
-COND_LABEL = {"human": "Human", "llm_tests": "AG-S", "gen_oneshot_sonnet": "OS-S", "gen_oneshot_haiku": "OS-H"}
+MODES = ["both", "tz", "stress", "stressng"]
+COND_LABEL = {"human": "Human", "llm_tests": "AG-S", "gen_oneshot_sonnet": "OS-S", "gen_oneshot_haiku": "OS-H",
+              "gen_tp_sonnet": "TP-S", "gen_plain_sonnet": "PL-S"}
+ONE_SHOT = ("gen_oneshot_sonnet", "gen_oneshot_haiku", "gen_tp_sonnet", "gen_plain_sonnet")
 
 
 def run_files(cond, proj):
@@ -105,23 +107,36 @@ def main():
         print("| " + " | ".join(row) + " |")
     # Table 2: pooled by condition
     print("\n## Table B. Pooled flaky rate by condition (one-shot: accepted tests only)\n")
-    print("| Condition | Suites | Tests | Flaky | Flaky % | 95% CI | Always fail |")
-    print("|---|---|---|---|---|---|---|")
+    print("| Condition | Suites | Tests | Flaky | Flaky % | 95% CI | Always fail | Median flaky failure rate % |")
+    print("|---|---|---|---|---|---|---|---|")
     pooled = {}
     for c in COND_LABEL:
         ms = [S[k] for k in S if k[0] == c]
         ts = [t for m in ms for t in m["tests"].values() if (not m["filter"] or t["filter"] == "accepted")]
         k = sum(t["kind"] == "flaky" for t in ts); n = len(ts); af = sum(t["kind"] == "always-fail" for t in ts)
         lo, hi = wilson(k, n)
-        pooled[c] = {"suites": len(ms), "tests": n, "flaky": k, "always_fail": af, "ci": [lo, hi]}
-        print(f"| {COND_LABEL[c]} | {len(ms)} | {n} | {k} | {100*k/max(n,1):.2f} | {lo:.2f} to {hi:.2f} | {af} |")
+        rates = sorted(100 * t["fail"] / (t["pass"] + t["fail"]) for t in ts if t["kind"] == "flaky")
+        med = rates[len(rates) // 2] if rates else None
+        pooled[c] = {"suites": len(ms), "tests": n, "flaky": k, "always_fail": af, "ci": [lo, hi],
+                     "flaky_failure_rates": rates}
+        print(f"| {COND_LABEL[c]} | {len(ms)} | {n} | {k} | {100*k/max(n,1):.2f} | {lo:.2f} to {hi:.2f} | {af} | "
+              f"{'-' if med is None else f'{med:.1f}'} |")
+    # Table B2: which modes have run for each condition (the pooled numbers above depend on it)
+    print("\n## Table B2. Runs per mode present, by condition\n")
+    print("| Condition | " + " | ".join(MODES) + " |")
+    print("|---|" + "---|" * len(MODES))
+    for c in COND_LABEL:
+        ms = [S[k] for k in S if k[0] == c]
+        print(f"| {COND_LABEL[c]} | " + " | ".join(str(sum(1 for m in ms if mo in m["runs_per_mode"])) + " suites" for mo in MODES) + " |")
     # Table 3: what the single-run filter did, one-shot conditions
     print("\n## Table C. Single-run generate-and-filter on one-shot suites\n")
     print("| Condition | Collected tests | Files that do not import (test functions lost) | Accepted | Rejected | Rejected but flaky | Accepted but flaky | Accepted then always fail |")
     print("|---|---|---|---|---|---|---|---|")
     filt_tab = {}
-    for c in ("gen_oneshot_sonnet", "gen_oneshot_haiku"):
+    for c in ONE_SHOT:
         ms = [S[k] for k in S if k[0] == c and S[k]["filter"]]
+        if not ms:
+            continue
         cef = sum(len(m["filter"]["collection_error_files"]) for m in ms)
         lost = 0  # test functions inside files that never import
         for (cc, proj), m in S.items():
@@ -147,6 +162,7 @@ def main():
         for tid, t in m["tests"].items():
             if t["kind"] == "flaky":
                 flaky_list.append({"cond": c, "proj": proj, "test": tid, "pass": t["pass"], "fail": t["fail"],
+                                   "failure_rate": round(t["fail"] / (t["pass"] + t["fail"]), 4),
                                    "modes": t["modes_flaky"], "modes_fail": t["modes_fail"], "filter": t["filter"],
                                    "messages": t["messages"]})
                 print(f"- {COND_LABEL[c]} / {proj} / `{tid}` pass={t['pass']} fail={t['fail']} "

@@ -1,0 +1,21 @@
+  ND azure-batch                  rank=1025 fail install failed:     exec(code, locals())  # noqa: S102 # exec is intentional here
+             ^^^^^^^^^^^^^^^^^^^^
+           File "<string>", line 35, in <module>
+         ValueError: list.remove(x): x not in list
+ 
+  ND deepdiff                     rank=402 fail failing or erroring tests 1 error in 0.66s
+  ND python-oxmsg                 rank=1972 PASS  68 passed in 0.88s
+  ND kafka-python                 rank=859 fail failing or erroring tests 203 passed, 218 warnings, 1 error in 13.69s
+  ND gviz-api                     rank=4471 PASS  14 passed in 0.08s
+  ND luqum                        rank=3922 fail pytest rc 4   rootdir: /private/var/folders/fz/jqs38pys1sx842f5xr07p3240000gn/T/funnel_vl45c29h/luqum
+  D oyaml                        rank=2753 PASS  18 passed, 2 skipped in 0.54s
+  D cons                         rank=3804 PASS  8 passed in 0.30s
+  D protobuf-py                  rank=2180 fail pytest rc 4 E   ModuleNotFoundError: No module named 'xdist'
+  D uhashring                    rank=4875 fail failing or erroring tests 1 failed, 28 passed in 0.38s
+  D pytzdata                     rank=1170 fail install failed:  line 11, in <module>
+         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'
+
+hint: Build failures usually indicate a problem with the package or the build environment
+ 
+  D wcmatch                      rank=499 PASS  1474 passed, 154 skipped, 37 subtests passed in 24.22s
+S6 pass: 5 of 12
