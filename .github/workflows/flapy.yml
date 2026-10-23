@@ -1,0 +1,64 @@
+name: flapy
+
+# Runs FlaPy (Gruber et al., ICST 2021), an existing flaky test detector for Python, on suites with
+# known flaky tests, to check our rerun harness against an independent tool.
+#   gh workflow run flapy -f iterations=10
+on:
+  workflow_dispatch:
+    inputs:
+      iterations:
+        description: "FlaPy iterations (each line of the input CSV is run this many times)"
+        default: "10"
+
+jobs:
+  flapy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: get FlaPy
+        run: git clone -q https://github.com/se2p/flapy /tmp/flapy
+      - name: build FlaPy inputs
+        run: |
+          set -e
+          mkdir -p flapy_in
+          # 1) one shot Haiku tenacity suite (known flaky: two timing tests), library pinned to our commit
+          mkdir -p flapy_in/osh_tenacity
+          cp gen_oneshot_haiku/tenacity/test_*.py flapy_in/osh_tenacity/
+          sha=$(grep -E "^tenacity " SUBJECTS.txt | awk '{print $3}')
+          printf "tenacity @ git+https://github.com/jd/tenacity@%s\nfreezegun==1.5.5\npytest-asyncio==1.4.0\n" "$sha" > flapy_in/osh_tenacity/requirements.txt
+          # 2) human arrow suite at our pinned commit (known flaky: two order dependent locale tests)
+          sha=$(grep -E "^arrow " SUBJECTS.txt | awk '{print $3}')
+          git init -q flapy_in/human_arrow && git -C flapy_in/human_arrow remote add origin https://github.com/arrow-py/arrow.git
+          git -C flapy_in/human_arrow fetch -q --depth 1 origin "$sha" && git -C flapy_in/human_arrow checkout -q FETCH_HEAD
+          rm -rf flapy_in/human_arrow/.git
+          printf -- "-e .\npytz==2026.4\nsimplejson==4.1.2\npython-dateutil==2.9.0.post0\npytest-mock==3.16.0\n" > flapy_in/human_arrow/requirements.txt
+          echo "PROJECT_NAME,PROJECT_URL,PROJECT_HASH,PYPI_TAG,FUNCS_TO_TRACE,TESTS_TO_BE_RUN" > flapy_in/input.csv
+          echo "osh_tenacity,$PWD/flapy_in/osh_tenacity,local,,," >> flapy_in/input.csv
+          echo "human_arrow,$PWD/flapy_in/human_arrow,local,,,tests" >> flapy_in/input.csv
+          cat flapy_in/input.csv
+      - name: run FlaPy
+        run: |
+          cd /tmp/flapy
+          ./flapy.sh run --out-dir "$GITHUB_WORKSPACE/flapy_out" --plus-random-runs "$GITHUB_WORKSPACE/flapy_in/input.csv" "${{ inputs.iterations }}" 2>&1 | tail -40
+      - name: parse FlaPy results
+        if: always()
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          /tmp/flapy/flapy.sh parse ResultsDirCollection --path flapy_out get_tests_overview _df to_csv --index=False flapy_out/tests_overview.csv 2>&1 | tail -20 || true
+          ls -la flapy_out | head
+          python3 - <<'PY' || true
+          import csv
+          rows = list(csv.DictReader(open("flapy_out/tests_overview.csv")))
+          print(len(rows), "rows; columns:", list(rows[0].keys()) if rows else None)
+          for r in rows:
+              v = " ".join(f"{k}={r[k]}" for k in r if "Verdict" in k or "Flaky" in k)
+              if "Flaky" in v or "flaky" in v:
+                  print(r.get("Project_Name"), r.get("Test_classname"), r.get("Test_funcname"), v)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: flapy-results
+          path: flapy_out/
+          if-no-files-found: warn
