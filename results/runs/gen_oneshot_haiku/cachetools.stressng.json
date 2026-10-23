@@ -1,0 +1,845 @@
+{
+ "name": "gen_oneshot_haiku-cachetools",
+ "mode": "stressng",
+ "runs": 20,
+ "num_tests": 100,
+ "runs_with_failure": 20,
+ "avg_run_seconds": 4.8,
+ "num_flaky": 0,
+ "num_always_fail": 5,
+ "flaky_tests": [],
+ "tests": {
+  "::gen_oneshot_haiku.cachetools.test_osh_func": {
+   "counts": {
+    "error": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "collection failure"
+   ]
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestMethodKey::test_methodkey_ignores_self": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestMethodKey::test_methodkey_with_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestMethodKey::test_methodkey_with_args": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedMethodDecorator::test_cachedmethod_with_cache_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedMethodDecorator::test_cachedmethod_basic_caching": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedMethodDecorator::test_cachedmethod_separate_caches_per_instance": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_with_lock": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_with_multiple_arguments": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_handles_exceptions": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_clear_resets_stats": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_with_condition": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "RuntimeError: cannot notify on un-acquired lock"
+   ]
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_info_enabled": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_with_custom_key_function": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_with_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_value_too_large_silently_ignored": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_with_ttl_cache": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_basic_caching": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_has_cache_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_with_none_cache": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_function_metadata_preserved": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_with_dict_cache": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestCachedDecorator::test_cached_info_basic_dict": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestTypedCacheKey::test_typedkey_distinguishes_types": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestTypedCacheKey::test_cached_with_typed_key": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestTypedCacheKey::test_typedkey_with_strings_and_ints": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestTypedCacheKey::test_typedkey_with_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestHashKey::test_hashkey_with_args_and_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestHashKey::test_hashkey_with_kwargs": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestHashKey::test_hashkey_basic": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cached_decorator.TestHashKey::test_hashkey_kwargs_order_independent": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestFIFOCache::test_fifo_evicts_oldest_item": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestFIFOCache::test_fifo_basic_operations": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestFIFOCache::test_fifo_ignores_access_order": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestFIFOCache::test_fifo_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestFIFOCache::test_fifo_popitem_removes_first_inserted": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLRUCache::test_lru_popitem_removes_lru": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLRUCache::test_lru_empty_popitem_raises_keyerror": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLRUCache::test_lru_with_getsizeof": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLRUCache::test_lru_evicts_least_recently_used": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLRUCache::test_lru_basic_operations": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLRUCache::test_lru_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLRUCache::test_lru_access_updates_order": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestTTLCache::test_ttl_item_expiration": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestTTLCache::test_ttl_get_with_expired_item": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestTTLCache::test_ttl_len_with_expired_items": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestTTLCache::test_ttl_basic_operations": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestTTLCache::test_ttl_custom_timer": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestTTLCache::test_ttl_contains_with_expired_item": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestTTLCache::test_ttl_expire_method": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestTTLCache::test_ttl_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestRRCache::test_rr_with_deterministic_choice": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestRRCache::test_rr_evicts_random_item": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestRRCache::test_rr_popitem_removes_random": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestRRCache::test_rr_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestRRCache::test_rr_basic_operations": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLFUCache::test_lfu_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLFUCache::test_lfu_evicts_least_frequently_used": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLFUCache::test_lfu_frequency_tracking": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert 'b' not in LFUCache({'a': 1, 'b': 2, 'd': 4}, maxsize=3, currsize=3)"
+   ]
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLFUCache::test_lfu_basic_operations": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestLFUCache::test_lfu_popitem_removes_lfu": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_setitem_and_getitem": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_eviction_on_overflow": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_currsize_tracking": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_get_default": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_value_too_large": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "Failed: DID NOT RAISE ValueError"
+   ]
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_iteration": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_setdefault_existing": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_delitem_nonexistent_raises_keyerror": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_pop_existing": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_creation_with_negative_maxsize_raises_error": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_pop_nonexistent_raises_keyerror": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_creation_with_valid_maxsize": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_setdefault_nonexistent": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_pop_nonexistent_with_default": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_repr": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_get_existing": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_delitem": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_cache_classes.TestCache::test_cache_with_getsizeof": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_get_with_expired_item": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_basic_operations": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_repr": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_heap_cleanup": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_popitem": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_ttu_per_item": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_len_with_expired_items": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_clear": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_lru_eviction_when_full": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_delitem_expired_raises_keyerror": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_update_expired_item": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_setitem_updates_ttu": {
+   "counts": {
+    "fail": 20
+   },
+   "kind": "always-fail",
+   "messages": [
+    "KeyError: 'a'"
+   ]
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_delitem": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_item_expiration": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_with_getsizeof": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_expire_method": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_iteration_with_expired_items": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_iteration": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_contains_with_expired_item": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_oneshot_haiku.cachetools.test_osh_tlru_cache.TestTLRUCache::test_tlru_custom_timer": {
+   "counts": {
+    "pass": 20
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ },
+ "noise_per_run": [
+  {
+   "cpu": 1,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 4,
+   "cpu_load": 100,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 4,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 1,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 4,
+   "cpu_load": 10,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 70,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 3,
+   "cpu_load": 70,
+   "vm": 0,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 1,
+   "cpu_load": 90,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 4,
+   "cpu_load": 30,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 3,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 1,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 4,
+   "cpu_load": 100,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 4,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 1,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 4,
+   "cpu_load": 10,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 70,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 3,
+   "cpu_load": 70,
+   "vm": 0,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 1,
+   "cpu_load": 90,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 4,
+   "cpu_load": 30,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 3,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 40
+  }
+ ]
+}

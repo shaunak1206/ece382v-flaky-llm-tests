@@ -22,17 +22,27 @@ COND_LABEL = {"human": "Human", "llm_tests": "AG-S", "gen_oneshot_sonnet": "OS-S
 ONE_SHOT = ("gen_oneshot_sonnet", "gen_oneshot_haiku", "gen_tp_sonnet", "gen_plain_sonnet")
 
 
+# Which machine produced each run. stressng always ran on GitHub Actions (2 vCPU Ubuntu). The other modes
+# ran on the M3 laptop except for the suites below, which were moved to GitHub Actions on October 22.
+GHA_SUITES = {("gen_plain_sonnet", p) for p in PROJECTS} | {("gen_tp_sonnet", p) for p in ("arrow", "boltons", "more_itertools", "pybreaker")}
+
+def machine(cond, proj, mode):
+    return "linux" if mode == "stressng" or (cond, proj) in GHA_SUITES else "mac"
+
+
 def run_files(cond, proj):
     out = {}
     for m in MODES:
+        cands = []
         if cond == "human":
-            p = f"{R}/human/{HUMAN_NAME.get(proj, proj)}.{m}.json"
+            cands = [f"{R}/human/{HUMAN_NAME.get(proj, proj)}.{m}.json"]
         elif cond == "llm_tests" and proj in PILOT:
-            p = f"{R}/llm/{proj}.{m}.json"
+            cands = [f"{R}/llm/{proj}.{m}.json", f"{R}/runs/{cond}/{proj}.{m}.json"]
         else:
-            p = f"{R}/runs/{cond}/{proj}.{m}.json"
-        if os.path.exists(p):
-            out[m] = json.load(open(p))
+            cands = [f"{R}/runs/{cond}/{proj}.{m}.json"]
+        for p in cands:
+            if os.path.exists(p):
+                out[m] = json.load(open(p)); break
     return out
 
 
@@ -46,8 +56,10 @@ def merge(cond, proj):
     runs = run_files(cond, proj)
     if not runs:
         return None
-    tests = collections.defaultdict(lambda: {"pass": 0, "fail": 0, "skip": 0, "modes_flaky": [], "modes_fail": [], "messages": []})
+    tests = collections.defaultdict(lambda: {"pass": 0, "fail": 0, "skip": 0, "modes_flaky": [], "modes_fail": [], "messages": [],
+                                             "by_machine": collections.defaultdict(lambda: [0, 0])})
     for m, d in runs.items():
+        mach = machine(cond, proj, m)
         for tid, v in d["tests"].items():
             if is_pseudo(tid):
                 continue
@@ -55,6 +67,7 @@ def merge(cond, proj):
             t = tests[tid]
             p, f = c.get("pass", 0), c.get("fail", 0) + c.get("error", 0)
             t["pass"] += p; t["fail"] += f; t["skip"] += c.get("skip", 0)
+            t["by_machine"][mach][0] += p; t["by_machine"][mach][1] += f
             if p and f: t["modes_flaky"].append(m)
             if f: t["modes_fail"].append(m)
             for msg in v.get("messages", []):
@@ -66,8 +79,13 @@ def merge(cond, proj):
         filt = json.load(open(fp))
     acc = set(filt["accepted_ids"]) if filt else None
     for tid, t in tests.items():
-        t["kind"] = ("flaky" if t["pass"] and t["fail"] else "always-fail" if t["fail"] else
-                     "always-skip" if not t["pass"] else "stable")
+        # flaky only if it both passed and failed on the SAME machine; passing on one machine and always
+        # failing on the other is an environment difference, reported as machine-dependent
+        same = any(pp and ff for pp, ff in t["by_machine"].values())
+        t["kind"] = ("flaky" if same else
+                     "machine-dependent" if t["pass"] and t["fail"] else
+                     "always-fail" if t["fail"] else "always-skip" if not t["pass"] else "stable")
+        t["by_machine"] = {k: v for k, v in t["by_machine"].items()}
         t["filter"] = None if acc is None else ("accepted" if tid in acc else "rejected")
     return {"modes_run": sorted(runs), "runs_per_mode": {m: d["runs"] for m, d in runs.items()},
             "tests": dict(tests), "filter": filt}
@@ -114,10 +132,11 @@ def main():
         ms = [S[k] for k in S if k[0] == c]
         ts = [t for m in ms for t in m["tests"].values() if (not m["filter"] or t["filter"] == "accepted")]
         k = sum(t["kind"] == "flaky" for t in ts); n = len(ts); af = sum(t["kind"] == "always-fail" for t in ts)
+        md = sum(t["kind"] == "machine-dependent" for t in ts)
         lo, hi = wilson(k, n)
         rates = sorted(100 * t["fail"] / (t["pass"] + t["fail"]) for t in ts if t["kind"] == "flaky")
         med = rates[len(rates) // 2] if rates else None
-        pooled[c] = {"suites": len(ms), "tests": n, "flaky": k, "always_fail": af, "ci": [lo, hi],
+        pooled[c] = {"suites": len(ms), "tests": n, "flaky": k, "always_fail": af, "machine_dependent": md, "ci": [lo, hi],
                      "flaky_failure_rates": rates}
         print(f"| {COND_LABEL[c]} | {len(ms)} | {n} | {k} | {100*k/max(n,1):.2f} | {lo:.2f} to {hi:.2f} | {af} | "
               f"{'-' if med is None else f'{med:.1f}'} |")
@@ -162,13 +181,18 @@ def main():
         for tid, t in m["tests"].items():
             if t["kind"] == "flaky":
                 flaky_list.append({"cond": c, "proj": proj, "test": tid, "pass": t["pass"], "fail": t["fail"],
-                                   "failure_rate": round(t["fail"] / (t["pass"] + t["fail"]), 4),
+                                   "failure_rate": round(t["fail"] / (t["pass"] + t["fail"]), 4), "by_machine": t["by_machine"],
                                    "modes": t["modes_flaky"], "modes_fail": t["modes_fail"], "filter": t["filter"],
                                    "messages": t["messages"]})
                 print(f"- {COND_LABEL[c]} / {proj} / `{tid}` pass={t['pass']} fail={t['fail']} "
-                      f"flipped in {t['modes_flaky'] or t['modes_fail']} filter={t['filter']} :: {(t['messages'] or [''])[0][:140]}")
+                      f"flipped in {t['modes_flaky'] or t['modes_fail']} machines={t['by_machine']} filter={t['filter']} :: {(t['messages'] or [''])[0][:140]}")
     if not flaky_list:
         print("(none)")
+    print("\n## Table E. Machine dependent tests (pass on one machine, always fail on the other)\n")
+    for (c, proj), m in sorted(S.items()):
+        for tid, t in m["tests"].items():
+            if t["kind"] == "machine-dependent":
+                print(f"- {COND_LABEL[c]} / {proj} / `{tid}` machines={t['by_machine']} :: {(t['messages'] or [''])[0][:100]}")
     json.dump({"pooled": pooled, "filter": filt_tab, "flaky": flaky_list,
                "suites": {f"{c}/{p}": {"tests": len(m["tests"]), "runs_per_mode": m["runs_per_mode"]} for (c, p), m in S.items()}},
               open(f"{R}/summary.json", "w"), indent=1)

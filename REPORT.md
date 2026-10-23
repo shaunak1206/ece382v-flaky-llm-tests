@@ -216,3 +216,13 @@ So 1,000 targeted reruns on a slower machine found no new flaky tests, and every
 - Rahman, Massey, Lam, Shi, Bell. Automatically Reproducing Timing Dependent Flaky Test Failures. ICST 2024. Why rare timing failures need more than reruns.
 - Dutta, Shi, Misailovic. FLEX. FSE 2021. Flaky assertions on random values in ML projects.
 - Parry, Kapfhammer, Hilton, McMinn. A Survey of Flaky Tests. TOSEM 2021.
+
+### 4.10 October 22 additions (proposal feedback, see report1/report1.pdf)
+
+- Two new prompt styles, TP-S (TestPilot style, API docs only) and PL-S (plain prompt), 12 suites each, one shot Sonnet. 0 flaky in 2,104 kept tests. Risky pattern rate 1.4% and 1.5%, against 8.5% for the feature prompt (OS-S) and 3.9% for human tests. Coverage without filelock: PL-S 82.6, OS-S 81.0, AG-S 74.1, TP-S 70.7, OS-H 67.7, human 94.4.
+- Flakiness is now judged per machine. Four human tests pass on one machine and always fail on the other and are reported as machine dependent, not flaky.
+- stress-ng mode (Shaker style, 20 runs per suite on GitHub Actions) found one new flaky human test, tenacity `tests.test_asyncio.TestContextManager::test_sleeps` (1 of 20). Human flaky is now 7 of 5,589.
+- Mixed suites (generated tests inside the human suite, 30 runs): no human test became flaky. Three AG-S schedule tests that never failed alone failed in up to 22 of 30 mixed runs because the human tests leave jobs in the module level default scheduler. One AG-S tenacity test failed 2 of 30 mixed runs (cause still being labeled). Details in results/mixed_summary.json.
+- Extended stressed run on 2 vCPU Linux: 474 flagged tests, 164,420 executions, no new flaky tests, 27 always failing tests that were all already rejected by the one run filter.
+- Scanner validation on Gruber et al. labels: 10 of 96 flaky tests flagged (13 with a new NETWORK rule), 35 of 714 controls flagged.
+- Subject funnel: 5,000 top PyPI packages to 1,959 after the static rules, all 12 current subjects pass, 5 of a 12 package runtime sample pass offline in under 60 s.

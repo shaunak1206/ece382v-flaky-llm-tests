@@ -2,12 +2,22 @@
  "pooled": {
   "human": {
    "suites": 12,
-   "tests": 5587,
-   "flaky": 6,
-   "always_fail": 3,
+   "tests": 5589,
+   "flaky": 7,
+   "always_fail": 0,
+   "machine_dependent": 4,
    "ci": [
-    0.04922712047542261,
-    0.23412199104295775
+    0.06068233059641087,
+    0.25832545249546135
+   ],
+   "flaky_failure_rates": [
+    1.1111111111111112,
+    1.1111111111111112,
+    2.2222222222222223,
+    11.11111111111111,
+    14.444444444444445,
+    60.0,
+    60.0
    ]
   },
   "llm_tests": {
@@ -15,30 +25,64 @@
    "tests": 1511,
    "flaky": 0,
    "always_fail": 0,
+   "machine_dependent": 0,
    "ci": [
     0,
     0.2535974718412803
-   ]
+   ],
+   "flaky_failure_rates": []
   },
   "gen_oneshot_sonnet": {
    "suites": 12,
    "tests": 1406,
    "flaky": 0,
    "always_fail": 0,
+   "machine_dependent": 0,
    "ci": [
     0,
     0.272484511735219
-   ]
+   ],
+   "flaky_failure_rates": []
   },
   "gen_oneshot_haiku": {
    "suites": 12,
    "tests": 1595,
    "flaky": 3,
    "always_fail": 0,
+   "machine_dependent": 0,
    "ci": [
     0.06398582157888626,
     0.551559833475373
+   ],
+   "flaky_failure_rates": [
+    1.1111111111111112,
+    2.2222222222222223,
+    11.11111111111111
    ]
+  },
+  "gen_tp_sonnet": {
+   "suites": 12,
+   "tests": 913,
+   "flaky": 0,
+   "always_fail": 0,
+   "machine_dependent": 0,
+   "ci": [
+    0,
+    0.4190036752259059
+   ],
+   "flaky_failure_rates": []
+  },
+  "gen_plain_sonnet": {
+   "suites": 12,
+   "tests": 1191,
+   "flaky": 0,
+   "always_fail": 0,
+   "machine_dependent": 0,
+   "ci": [
+    0,
+    0.3215154209562171
+   ],
+   "flaky_failure_rates": []
   }
  },
  "filter": {
@@ -61,6 +105,26 @@
    "rejected_flaky": 0,
    "accepted_flaky": 3,
    "accepted_always_fail": 0
+  },
+  "gen_tp_sonnet": {
+   "generated": 924,
+   "collection_error_files": 1,
+   "lost_functions": 22,
+   "accepted": 913,
+   "rejected": 11,
+   "rejected_flaky": 0,
+   "accepted_flaky": 0,
+   "accepted_always_fail": 0
+  },
+  "gen_plain_sonnet": {
+   "generated": 1192,
+   "collection_error_files": 0,
+   "lost_functions": 0,
+   "accepted": 1191,
+   "rejected": 1,
+   "rejected_flaky": 0,
+   "accepted_flaky": 0,
+   "accepted_always_fail": 0
   }
  },
  "flaky": [
@@ -68,8 +132,19 @@
    "cond": "gen_oneshot_haiku",
    "proj": "schedule",
    "test": "gen_oneshot_haiku.schedule.test_osh_job_configuration.TestUntilConfiguration::test_until_with_string_time_format",
-   "pass": 68,
+   "pass": 88,
    "fail": 2,
+   "failure_rate": 0.0222,
+   "by_machine": {
+    "mac": [
+     68,
+     2
+    ],
+    "linux": [
+     20,
+     0
+    ]
+   },
    "modes": [
     "tz"
    ],
@@ -85,8 +160,19 @@
    "cond": "gen_oneshot_haiku",
    "proj": "tenacity",
    "test": "gen_oneshot_haiku.tenacity.test_osh_stop_strategies.TestStopBeforeDelay::test_stop_before_delay_prevents_exceeding_limit",
-   "pass": 69,
+   "pass": 89,
    "fail": 1,
+   "failure_rate": 0.0111,
+   "by_machine": {
+    "mac": [
+     69,
+     1
+    ],
+    "linux": [
+     20,
+     0
+    ]
+   },
    "modes": [
     "stress"
    ],
@@ -102,17 +188,30 @@
    "cond": "gen_oneshot_haiku",
    "proj": "tenacity",
    "test": "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test",
-   "pass": 63,
-   "fail": 7,
+   "pass": 80,
+   "fail": 10,
+   "failure_rate": 0.1111,
+   "by_machine": {
+    "mac": [
+     63,
+     7
+    ],
+    "linux": [
+     17,
+     3
+    ]
+   },
    "modes": [
     "both",
     "tz",
-    "stress"
+    "stress",
+    "stressng"
    ],
    "modes_fail": [
     "both",
     "tz",
-    "stress"
+    "stress",
+    "stressng"
    ],
    "filter": "accepted",
    "messages": [
@@ -125,17 +224,30 @@
    "cond": "human",
    "proj": "arrow",
    "test": "tests.test_locales.TestLocaleValidation::test_locale_name_validation",
-   "pass": 28,
-   "fail": 42,
+   "pass": 36,
+   "fail": 54,
+   "failure_rate": 0.6,
+   "by_machine": {
+    "mac": [
+     28,
+     42
+    ],
+    "linux": [
+     8,
+     12
+    ]
+   },
    "modes": [
     "both",
     "tz",
-    "stress"
+    "stress",
+    "stressng"
    ],
    "modes_fail": [
     "both",
     "tz",
-    "stress"
+    "stress",
+    "stressng"
    ],
    "filter": null,
    "messages": [
@@ -148,17 +260,30 @@
    "cond": "human",
    "proj": "arrow",
    "test": "tests.test_locales.TestLocaleValidation::test_locale_validation",
-   "pass": 28,
-   "fail": 42,
+   "pass": 36,
+   "fail": 54,
+   "failure_rate": 0.6,
+   "by_machine": {
+    "mac": [
+     28,
+     42
+    ],
+    "linux": [
+     8,
+     12
+    ]
+   },
    "modes": [
     "both",
     "tz",
-    "stress"
+    "stress",
+    "stressng"
    ],
    "modes_fail": [
     "both",
     "tz",
-    "stress"
+    "stress",
+    "stressng"
    ],
    "filter": null,
    "messages": [
@@ -169,8 +294,19 @@
    "cond": "human",
    "proj": "filelock",
    "test": "tests.test_filelock::test_singleton_locks_are_deleted_when_no_external_references_exist[UnixFileLock]",
-   "pass": 57,
+   "pass": 77,
    "fail": 13,
+   "failure_rate": 0.1444,
+   "by_machine": {
+    "mac": [
+     57,
+     13
+    ],
+    "linux": [
+     20,
+     0
+    ]
+   },
    "modes": [
     "both",
     "tz",
@@ -192,8 +328,19 @@
    "cond": "human",
    "proj": "filelock",
    "test": "tests.test_filelock::test_singleton_locks_are_deleted_when_no_external_references_exist[SoftFileLock]",
-   "pass": 60,
+   "pass": 80,
    "fail": 10,
+   "failure_rate": 0.1111,
+   "by_machine": {
+    "mac": [
+     60,
+     10
+    ],
+    "linux": [
+     20,
+     0
+    ]
+   },
    "modes": [
     "both",
     "tz",
@@ -215,8 +362,19 @@
    "cond": "human",
    "proj": "pybreaker",
    "test": "tests.pybreaker_test.CircuitBreakerRedisConcurrencyTestCase::test_half_open_thread_safety",
-   "pass": 68,
+   "pass": 88,
    "fail": 2,
+   "failure_rate": 0.0222,
+   "by_machine": {
+    "mac": [
+     68,
+     2
+    ],
+    "linux": [
+     20,
+     0
+    ]
+   },
    "modes": [
     "stress"
    ],
@@ -233,8 +391,19 @@
    "cond": "human",
    "proj": "pybreaker",
    "test": "tests.pybreaker_test.CircuitBreakerThreadsTestCase::test_half_open_thread_safety",
-   "pass": 69,
+   "pass": 89,
    "fail": 1,
+   "failure_rate": 0.0111,
+   "by_machine": {
+    "mac": [
+     69,
+     1
+    ],
+    "linux": [
+     20,
+     0
+    ]
+   },
    "modes": [
     "stress"
    ],
@@ -245,6 +414,34 @@
    "messages": [
     "assert 2 == 1\n +  where 2 = <tests.pybreaker_test.CircuitBreakerThreadsTestCase.test_half_open_thread_safety.<locals>.StateListener object at 0x105544c80>._count"
    ]
+  },
+  {
+   "cond": "human",
+   "proj": "tenacity",
+   "test": "tests.test_asyncio.TestContextManager::test_sleeps",
+   "pass": 89,
+   "fail": 1,
+   "failure_rate": 0.0111,
+   "by_machine": {
+    "mac": [
+     70,
+     0
+    ],
+    "linux": [
+     19,
+     1
+    ]
+   },
+   "modes": [
+    "stressng"
+   ],
+   "modes_fail": [
+    "stressng"
+   ],
+   "filter": null,
+   "messages": [
+    "AssertionError: 3 not less than 1.1"
+   ]
   }
  ],
  "suites": {
@@ -253,7 +450,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/schedule": {
@@ -261,7 +459,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/tinydb": {
@@ -269,7 +468,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/humanize": {
@@ -277,7 +477,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/toolz": {
@@ -285,7 +486,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/tabulate": {
@@ -293,7 +495,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/tenacity": {
@@ -301,7 +504,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/filelock": {
@@ -309,7 +513,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/boltons": {
@@ -317,7 +522,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/more_itertools": {
@@ -325,15 +531,17 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/arrow": {
-   "tests": 1904,
+   "tests": 1906,
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "human/pybreaker": {
@@ -341,7 +549,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/cachetools": {
@@ -349,7 +558,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/schedule": {
@@ -357,7 +567,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/tinydb": {
@@ -365,7 +576,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/humanize": {
@@ -373,7 +585,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/toolz": {
@@ -381,7 +594,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/tabulate": {
@@ -389,7 +603,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/tenacity": {
@@ -397,7 +612,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/filelock": {
@@ -405,7 +621,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/boltons": {
@@ -413,7 +630,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/more_itertools": {
@@ -421,7 +639,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/arrow": {
@@ -429,7 +648,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "llm_tests/pybreaker": {
@@ -437,7 +657,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/cachetools": {
@@ -445,7 +666,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/schedule": {
@@ -453,7 +675,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/tinydb": {
@@ -461,7 +684,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/humanize": {
@@ -469,7 +693,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/toolz": {
@@ -477,7 +702,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/tabulate": {
@@ -485,7 +711,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/tenacity": {
@@ -493,7 +720,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/filelock": {
@@ -501,7 +729,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/boltons": {
@@ -509,7 +738,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/more_itertools": {
@@ -517,7 +747,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/arrow": {
@@ -525,7 +756,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_sonnet/pybreaker": {
@@ -533,7 +765,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/cachetools": {
@@ -541,7 +774,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/schedule": {
@@ -549,7 +783,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/tinydb": {
@@ -557,7 +792,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/humanize": {
@@ -565,7 +801,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/toolz": {
@@ -573,7 +810,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/tabulate": {
@@ -581,7 +819,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/tenacity": {
@@ -589,7 +828,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/filelock": {
@@ -597,7 +837,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/boltons": {
@@ -605,7 +846,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/more_itertools": {
@@ -613,7 +855,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/arrow": {
@@ -621,7 +864,8 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
    }
   },
   "gen_oneshot_haiku/pybreaker": {
@@ -629,7 +873,224 @@
    "runs_per_mode": {
     "both": 30,
     "tz": 20,
-    "stress": 20
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/cachetools": {
+   "tests": 74,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/schedule": {
+   "tests": 56,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/tinydb": {
+   "tests": 74,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/humanize": {
+   "tests": 78,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/toolz": {
+   "tests": 78,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/tabulate": {
+   "tests": 78,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/tenacity": {
+   "tests": 88,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/filelock": {
+   "tests": 80,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/boltons": {
+   "tests": 81,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/more_itertools": {
+   "tests": 78,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/arrow": {
+   "tests": 79,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_tp_sonnet/pybreaker": {
+   "tests": 80,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/cachetools": {
+   "tests": 87,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/schedule": {
+   "tests": 115,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/tinydb": {
+   "tests": 76,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/humanize": {
+   "tests": 139,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/toolz": {
+   "tests": 77,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/tabulate": {
+   "tests": 112,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/tenacity": {
+   "tests": 80,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/filelock": {
+   "tests": 78,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/boltons": {
+   "tests": 77,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/more_itertools": {
+   "tests": 75,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/arrow": {
+   "tests": 199,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
+   }
+  },
+  "gen_plain_sonnet/pybreaker": {
+   "tests": 77,
+   "runs_per_mode": {
+    "both": 30,
+    "tz": 20,
+    "stress": 20,
+    "stressng": 20
    }
   }
  }

@@ -5,6 +5,7 @@
 \usepackage{booktabs}
 
 \begin{document}
+\sloppy
 
 \title{Are LLM Written Unit Tests Flaky?}
 \subtitle{Progress Report 1, ECE 382V Software Testing in the Era of Nondeterminism, Fall 2026}
@@ -19,7 +20,7 @@
 \section{Summary}
 We finished everything we planned for this milestone and moved two items from the second milestone forward. We now have 72 LLM written test suites for 12 Python libraries, made with three models or setups and three prompt styles, plus the 12 human written suites as the baseline. Every suite has been rerun under random test order and hash seed, ten time zones, and two kinds of machine load, and every flaky test has a labeled root cause. After the proposal feedback we changed the method in five places. Subjects now come from a written selection funnel, two new prompt styles are based on prior work and on how developers actually ask for tests, generated tests are also run inside the human suites, machine load now follows Shaker~\cite{silva2020}, and every scanner rule is tied to a root cause category and checked against flaky tests labeled by Gruber et al.~\cite{gruber2021}.
 
-%%RESULTS_SUMMARY%%
+Counting every rerun, mixed suite, and targeted run, the study has now executed about 2.6 million tests. The main results so far are these. Flaky LLM tests are rare and all of them come from one setup (one shot Haiku with the feature prompt). The two new prompt styles produced no flaky tests in 2,104 tests and about a sixth of the risky patterns of the feature prompt, which means our original prompt was a large part of why LLM tests looked risky. The new mixed suites found something the separate runs could not. Three agentic tests for schedule pass every time in their own suite but fail in up to 22 of 30 runs once they share a session with the human tests, because the human tests leave jobs in the library's global scheduler. Stress-ng found one new flaky human test.
 
 \section{Goals for this milestone}
 Table~\ref{tab:goals} lists the goals from our proposal and where each one stands.
@@ -34,13 +35,13 @@ Goal & Status \\
 \midrule
 Finish the subject list & Done. Now backed by a written funnel (Section~\ref{sec:subjects}) \\
 Generate agentic and both one shot suites & Done October 1 (36 suites). 24 more added October 22 with two new prompt styles \\
-Full rerun experiment, all three changes & Done for all 84 suites, %%RUNS%% test executions \\
+Full rerun experiment, all three changes & Done for all 84 suites, about 1.1 million test executions \\
 RQ1 flaky rates & Done, Table~\ref{tab:rq1} \\
 RQ2 root cause of every flaky test & Done, Section~\ref{sec:rq2} \\
 First version of the static scanner & Done, and validated on outside labels (Section~\ref{sec:rq3}) \\
 \midrule
 \multicolumn{2}{l}{\emph{Moved forward from Intermediate Steps 2}} \\
-1,000 reruns of flagged tests on a slow Linux runner & Done October 4 (303,420 executions) and again with stress-ng %%EXT_STRESS_SHORT%% \\
+1,000 reruns of flagged tests on a slow Linux runner & Done October 4 (303,420 executions) and again with stress-ng (164,420 more executions, October 22) \\
 Plain prompt that does not name time features & Done October 22 \\
 \bottomrule
 \end{tabular}
@@ -69,14 +70,65 @@ The original stress mode starts one Python busy loop per core, which only loads 
 Each rule now names the root cause category it is meant to catch. Real sleeps map to async wait and time~\cite{luo2014}, unfrozen clock reads and elapsed time asserts to time, unseeded randomness to randomness~\cite{gruber2021}, threads and async tasks to concurrency, fixed file paths and subprocesses to IO and resource leaks, and asserting the order of a set or dict view to unordered collections~\cite{luo2014,gyori2016}. We checked the scanner against outside labels. Gruber et al.\ published a hand labeled sample of 100 non order dependent flaky tests from 100 PyPI projects. We checked out 96 of them at the recorded commit (\texttt{scripts/validate\_scanner.py}). The scanner flagged 10 of 96. It caught all 3 async wait tests and some of the time and concurrency tests, but only 2 of 35 randomness tests and 1 of 41 network tests. In most misses the nondeterminism is inside the code under test and not in the test body, for example a test that trains a model that seeds itself. Of 714 other tests in the same files that were never reported flaky, 35 were flagged (4.9\%). So the scanner is a fair warning for timing problems written directly in the test, which is what the LLM tests have, and it is blind to nondeterminism that lives in the library. A network rule we added after this check raises recall to 13 of 96.
 
 \subsection{The human baseline}
-Human tests are flaky, but rarely. 6 of 5,587 flipped, 4 order dependent (global registries in filelock and arrow) and 2 thread races in pybreaker that only show under CPU stress. Since flip counts are small everywhere we now also compare the failure rate of each flaky test, the share of tests with risky patterns, and the results of the mixed suites, not just how many tests flipped.
+Human tests are flaky, but rarely. 7 of 5,589 flipped, 4 order dependent (global registries in filelock and arrow), 2 thread races in pybreaker that only show under CPU stress, and 1 tenacity async test that asserts a short sleep finishes quickly and failed once under stress-ng. Since flip counts are small everywhere we now also compare the failure rate of each flaky test, the share of tests with risky patterns, and the results of the mixed suites, not just how many tests flipped.
 
 \subsection{If generated tests are never flaky}
 They are sometimes. Three one shot Haiku tests flip, and both of the tests from our pilot were LLM written. The mitigation step (Intermediate Steps 3) would still have very little to count if it only used observed flips, so it will also be measured on the scanner risk rate, on failures we can trigger on purpose with stress-ng and FlakeRake style delays~\cite{rahman2024}, and on line coverage. We have already drafted the mitigation prompt (\texttt{prompts/mitigation\_prompt.md}) so that it does not depend on the final list of flaky tests.
 
 \section{Preliminary results}
 
-%%RESULTS%%
+\begin{table*}[t]
+\caption{Flaky tests by condition. Tests are those a pipeline would keep. A test is flaky if it both passed and failed on the same machine, over 70 laptop runs (random order and hash seed, ten time zones, CPU burners) and 20 stress-ng runs on Linux. Risky is the share of test functions the scanner flags. Coverage is mean line coverage without filelock, whose Windows module never runs.}
+\label{tab:rq1}
+\small
+\begin{tabular}{llrrrrrr}
+\toprule
+Condition & Prompt, model, feedback & Tests & Flaky & Flaky \% (95\% CI) & Risky \% & Coverage \% & Lost to import errors \\
+\midrule
+Human & written by the developers & 5,589 & 7 & 0.13 (0.06 to 0.26) & 3.9 & 94.4 & 0 \\
+AG-S & feature prompt, Sonnet agent, runs and fixes & 1,511 & 0 & 0.00 (0 to 0.25) & 8.4 & 74.1 & 0 \\
+OS-S & feature prompt, Sonnet one shot & 1,406 & 0 & 0.00 (0 to 0.27) & 8.5 & 81.0 & 0 \\
+OS-H & feature prompt, Haiku one shot & 1,595 & 3 & 0.19 (0.06 to 0.55) & 9.4 & 67.7 & 54 \\
+TP-S & TestPilot style, Sonnet one shot & 913 & 0 & 0.00 (0 to 0.42) & 1.4 & 70.7 & 22 \\
+PL-S & plain prompt, Sonnet one shot & 1,191 & 0 & 0.00 (0 to 0.32) & 1.5 & 82.6 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{RQ1, how often}
+Table~\ref{tab:rq1} has the numbers. Every interval overlaps, so we still cannot say LLM tests are more or less flaky than human tests by flip counts. The two new prompt styles add 2,104 tests with no flips. All three flaky LLM tests are one shot Haiku tests with the feature prompt. Four human tests passed on one machine and always failed on the other (filelock checks that behave differently on macOS, and a toolz version check that fails when the package is installed from a source checkout). We count these as machine dependent and not flaky.
+
+\subsection{RQ2, root causes}
+\label{sec:rq2}
+The causes split cleanly by who wrote the test. All three flaky LLM tests touch real time. One builds an \texttt{until} time two hours ahead as a clock time, which is in the past after 22:00, one asserts that two jittered retry waits add up to at least 10 ms (failing 10 to 24\% of runs depending on the machine), and one asserts that a retry loop finishes within 120 ms, which failed once under heavy load. The human flaky tests are order dependent (4, an earlier test leaves an object in a class or module level registry), thread races (2), and one timing assertion that only failed under stress-ng.
+
+\subsection{Mixed suites}
+Table~\ref{tab:mixed} shows the generated tests run inside the human suites on GitHub Actions, 30 runs each. No human test became flaky or broke because of the generated tests. The other direction did happen. Three agentic tests for schedule assume the module level default scheduler is empty. The human tests clear it at the start of each test but not at the end, so whenever a human test runs first the generated test sees leftover jobs. Two of these failed in 20 and 22 of 30 runs, and one generated test even ran a job function a human test had registered and crashed with a \texttt{TypeError}. These tests never failed in 70 runs of their own suite, so a developer would only see the problem after adding them to the real test suite. One more agentic tenacity test failed in 2 of 30 mixed runs and is still being labeled.
+
+\begin{table}[h]
+\caption{Generated tests inside the human suites (one pytest session, random order, 30 runs per library, 12 libraries per row)}
+\label{tab:mixed}
+\small
+\begin{tabular}{lrrp{1.6cm}p{1.2cm}}
+\toprule
+Mixed in & Gen.\ tests & Flaky gen. & Human flaky only when mixed & Human tests broken \\
+\midrule
+AG-S & 1,511 & 4 & 0 & 0 \\
+OS-H & 1,597 & 1 & 0 & 0 \\
+TP-S & 914 & 0 & 0 & 0 \\
+PL-S & 1,191 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{RQ3, risky patterns}
+The feature prompt suites have about twice the risky pattern rate of human tests (8.4 to 9.4\% against 3.9\%). The TestPilot style and plain prompt suites from the same model have 1.4\% and 1.5\%, lower than the human tests. So most of the extra risk came from our prompt pointing the model at time and randomness features, which is what the instructor suspected. The scanner flagged all 3 flaky LLM tests, and its validation on outside labels is in Section~\ref{sec:rq3}.
+
+\subsection{RQ4, the pipeline}
+The one run filter rejected 101 one shot Haiku tests, 11 TestPilot style tests, and 1 plain prompt test, and none of the rejected tests were flaky. It kept all three flaky Haiku tests, because each one usually passes. One TestPilot style file for schedule did not import, which lost 22 tests. The plain prompt gave the highest coverage of any LLM condition (82.6\%), and the TestPilot style prompt, which never sees the implementation, gave 70.7\%.
+
+\subsection{Machine load and the slow machine}
+Stress-ng (20 runs per suite, ten Shaker style configurations) found one new flaky human test and reproduced the jitter test in 3 of 20 runs. We also reran all 474 flagged tests about 350 times each on the 2 vCPU Linux runners with stress-ng running the whole time, 164,420 executions. No new flaky tests appeared. Only the two known Haiku tests flipped, and the 27 tests that always failed were all tests the one run filter had already rejected. With the October 4 run, every flagged test has now been run more than 1,300 times on the slower machine.
 
 \section{Scripts, code, and data}
 Everything is in the public GitHub repository \url{https://github.com/shaunak1206/ece382v-flaky-llm-tests}. The main pieces are below.
@@ -103,7 +155,12 @@ Everything is in the public GitHub repository \url{https://github.com/shaunak120
 
 \section{Next steps (Intermediate Steps 2, by November 6)}
 \begin{enumerate}
-%%NEXT%%
+\item Add a second model family (a GPT class model) under the plain and TestPilot style prompts, since prompt style mattered more than model so far.
+\item Add four new subjects from the funnel pool (two per stratum) with the same steps, to show the funnel works for expansion.
+\item Run Shaker's configuration selection on the per run stress-ng records once enough flaky tests are collected, and repeat the stress-ng runs on the laptop.
+\item Run an iDFlakies style polluter and victim search on the mixed suites, starting from the schedule tests above.
+\item Try FlaPy~\cite{gruber2021} on our generated suites as an independent detector, and add an import level check to the scanner, since most of its misses have the nondeterminism inside the library.
+\item Start the mitigation early with the drafted prompt, comparing risk rate, flaky tests, coverage, and cost against a 3 and 5 run filter.
 \end{enumerate}
 
 \subsection*{Division of work}

@@ -1,0 +1,12 @@
+{
+ "chunks": 490,
+ "tests": 474,
+ "executions": 164420,
+ "flaky": 2,
+ "always_fail": 27,
+ "flaky_by_condition": {
+  "gen_oneshot_haiku": 2
+ }
+}
+FLAKY gen_oneshot_haiku__schedule::test_osh_job_configuration.TestUntilConfiguration::test_until_with_string_time_format pass=450 fail=50 tz={'Europe/London': 50} :: schedule.ScheduleValueError: Cannot schedule a job to run until a time in the past
+FLAKY gen_oneshot_haiku__tenacity::test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test pass=407 fail=93 tz={'UTC': 7, 'America/Chicago': 12, 'Asia/Kolkata': 9, 'Pacific/Kiritimati': 6, 'Pacific/Pago_Pago': 8, 'Australia/Lord_Howe': 14, 'Europe/London': 10, 'Asia/Kathmandu': 7, 'America/St_Johns': 8, 'Etc/GMT-14': 12} :: assert 0.0030488967895507812 >= 0.01
