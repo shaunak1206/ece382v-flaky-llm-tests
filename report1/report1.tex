@@ -172,7 +172,7 @@ Everything is in the public GitHub repository \url{https://github.com/shaunak120
 \item Add four new subjects from the funnel pool (two per stratum) with the same steps, to show the funnel works for expansion.
 \item Run Shaker's configuration selection on the per run stress-ng records once enough flaky tests are collected, and repeat the stress-ng runs on the laptop.
 \item Run an iDFlakies style polluter and victim search on the mixed suites, starting from the schedule tests above.
-\item Try FlaPy~\cite{gruber2021} on our generated suites as an independent detector, and add an import level check to the scanner, since most of its misses have the nondeterminism inside the library.
+\item Run FlaPy on every suite (so far it has run on two), and add an import level check to the scanner, since most of its misses have the nondeterminism inside the library.
 \item Start the mitigation early with the drafted prompt, comparing risk rate, flaky tests, coverage, and cost against a 3 and 5 run filter.
 \end{enumerate}
 
