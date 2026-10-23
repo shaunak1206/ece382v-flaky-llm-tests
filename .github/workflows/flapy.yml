@@ -26,7 +26,7 @@ jobs:
           mkdir -p flapy_in/osh_tenacity
           cp gen_oneshot_haiku/tenacity/test_*.py flapy_in/osh_tenacity/
           sha=$(grep -E "^tenacity " SUBJECTS.txt | awk '{print $3}')
-          printf "tenacity @ git+https://github.com/jd/tenacity@%s\nfreezegun==1.5.5\npytest-asyncio==1.4.0\n" "$sha" > flapy_in/osh_tenacity/requirements.txt
+          printf "tenacity @ git+https://github.com/jd/tenacity@%s\nfreezegun==1.5.5\npytest-asyncio==0.21.1\n" "$sha" > flapy_in/osh_tenacity/requirements.txt
           # 2) human arrow suite at our pinned commit (known flaky: two order dependent locale tests)
           sha=$(grep -E "^arrow " SUBJECTS.txt | awk '{print $3}')
           git init -q flapy_in/human_arrow && git -C flapy_in/human_arrow remote add origin https://github.com/arrow-py/arrow.git
