@@ -40,7 +40,8 @@ jobs:
       - name: run FlaPy
         run: |
           cd /tmp/flapy
-          ./flapy.sh run --out-dir "$GITHUB_WORKSPACE/flapy_out" --plus-random-runs "$GITHUB_WORKSPACE/flapy_in/input.csv" "${{ inputs.iterations }}" 2>&1 | tail -40
+          # flapy.sh uses docker run -it, so give it a pseudo terminal
+          script -qec "./flapy.sh run --out-dir $GITHUB_WORKSPACE/flapy_out --plus-random-runs $GITHUB_WORKSPACE/flapy_in/input.csv ${{ inputs.iterations }}" /dev/null | tail -60
       - name: parse FlaPy results
         if: always()
         run: |
