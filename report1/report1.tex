@@ -75,6 +75,19 @@ Human tests are flaky, but rarely. 7 of 5,589 flipped, 4 order dependent (global
 \subsection{If generated tests are never flaky}
 They are sometimes. Three one shot Haiku tests flip, and both of the tests from our pilot were LLM written. The mitigation step (Intermediate Steps 3) would still have very little to count if it only used observed flips, so it will also be measured on the scanner risk rate, on failures we can trigger on purpose with stress-ng and FlakeRake style delays~\cite{rahman2024}, and on line coverage. We have already drafted the mitigation prompt (\texttt{prompts/mitigation\_prompt.md}) so that it does not depend on the final list of flaky tests.
 
+
+\subsection{Earlier feedback on the project plan (October 11)}
+\label{sec:oct11}
+\textbf{Generate tests early.} All 72 LLM suites exist (36 on October 1 and 24 on October 22), so test generation will not hold up later steps.
+
+\textbf{Basic or fancy prompting.} Generation is basic on purpose. Each suite comes from one prompt per library with no retrieval, no few shot examples, and no extra context collection. The only differences are what each prompt style hands the model (the module source, or only the API docs for TestPilot style) and whether the agentic setup can run its tests and fix them for up to three rounds. A richer context collection pipeline is out of scope.
+
+\textbf{Root causing and existing tools.} Every flaky test is first rerun on its own and inside its suite under each change separately (\texttt{scripts/diagnose.py}), and then labeled by hand with the categories of Luo et al.~\cite{luo2014}. We also ran FlaPy~\cite{gruber2021}, an existing flaky test detector for Python, on two suites with known flaky tests so we know how to use it and can check our harness against it (\texttt{.github/workflows/flapy.yml}, 10 same order and 10 random order runs each). On the human arrow suite it reported exactly the two order dependent locale tests we found and nothing else among 1,904 tests. On the one shot Haiku tenacity suite it found the jitter test (6 failures in 20 runs) and missed the deadline test, which has failed only once in all our runs, under CPU stress. So FlaPy agrees with our harness on every test it can see, and it does not replace the load and time zone changes for rare timing failures. Getting it to run took three attempts, since its container needs a terminal and ships pytest 6.2.5, which forces older plugin versions.
+
+\textbf{Metrics.} Per test we record the outcome of every run in every mode and on each machine, whether it is flaky (passed and failed on the same machine), its flaky failure rate (failures over runs), always fail and machine dependent tests, which change exposed it, which runs failed, and the stress-ng configuration of each run. The median failure rate of a flaky test is 11.1\% for human tests and 2.2\% for LLM tests. Per suite and condition we report the flaky rate with a 95\% Wilson interval, the risky pattern rate, the scanner's recall and flag rate, what the one run filter accepted and rejected and how many tests were lost to files that do not import, line coverage, and run time per suite run. For mixed suites we count flaky generated tests, human tests that flip only when mixed, and human tests that break.
+
+\textbf{The other three points.} The stress-ng mode is described in Section~3.4. The plan if generated tests are never flaky, and the mitigation prompt we drafted up front (\texttt{prompts/mitigation\_prompt.md}), are in Section~3.7.
+
 \section{Preliminary results}
 
 \begin{table*}[t]
