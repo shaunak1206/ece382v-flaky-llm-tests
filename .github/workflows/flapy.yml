@@ -25,6 +25,10 @@ jobs:
           # 1) one shot Haiku tenacity suite (known flaky: two timing tests), library pinned to our commit
           mkdir -p flapy_in/osh_tenacity
           cp gen_oneshot_haiku/tenacity/test_*.py flapy_in/osh_tenacity/
+          # drop files that do not import, as the one run filter does (FlaPy's pytest stops on collection errors)
+          python3 -c "import json; print('\n'.join(json.load(open('results/filter/gen_oneshot_haiku/tenacity.json'))['collection_error_files']))" \
+            | xargs -I{} sh -c 'rm -f flapy_in/osh_tenacity/$(basename {})'
+          ls flapy_in/osh_tenacity
           sha=$(grep -E "^tenacity " SUBJECTS.txt | awk '{print $3}')
           printf "tenacity @ git+https://github.com/jd/tenacity@%s\nfreezegun==1.5.5\npytest-asyncio==0.16.0\n" "$sha" > flapy_in/osh_tenacity/requirements.txt
           # 2) human arrow suite at our pinned commit (known flaky: two order dependent locale tests)
