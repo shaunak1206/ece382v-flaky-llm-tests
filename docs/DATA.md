@@ -130,6 +130,13 @@ mitigation trial, run separately on November 2). `scripts/analyze_matched.py` re
 `results/matched_summary.json` (`models` per model and prompt, `projects` with the human control, `flaky` list)
 and `results/matched_analysis.md`.
 
+## Root causes: `results/root_causes/labels.json`
+
+One record per flaky test found in November (E1 campaign, E2 plain prompt, E2 guard prompt), with category
+(Luo et al. and Gruber et al. categories), order dependence, whether it flips for the same reason as the known
+flaky human test, the mechanism, quoted evidence, and a second independent check. Field list and counts in
+`results/root_causes/README.md`.
+
 ## Test characteristics: `results/why_analysis.md`, `results/characterize.json`
 
 `scripts/characterize.py` scans every test function for shared state, isolation helpers, clock and sleep use,

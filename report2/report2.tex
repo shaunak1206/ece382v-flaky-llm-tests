@@ -23,7 +23,7 @@ The main problem after Progress Report 1 was that we had only 3 flaky LLM tests 
 \item \textbf{A second model family.} We added two OpenAI models, GPT~5.4 mini and GPT~4.1 mini.
 \item \textbf{Why (E3).} We measured how each condition builds its tests, to explain which tests flip and why (Section~\ref{sec:why}).
 \end{enumerate}
-We now have 66 flaky LLM test cases instead of 3 (Table~\ref{tab:count}). The main result is that flakiness depends strongly on the model. On code that is known to cause flaky tests, Claude Sonnet and GPT~5.4 mini wrote no flaky test that a one run filter would keep (0 of 1,218), while GPT~4.1 mini wrote 12 (2.2\%). The difference is significant (Fisher's exact test, $p < 0.001$). We also found the first order dependent LLM tests, and a first mitigation trial showed that a warning prompt alone does not fix them.
+We now have 52 flaky LLM test cases instead of 3 (Table~\ref{tab:count}), and we labeled the root cause of each one. The main result is that flakiness depends strongly on the model. On code that is known to cause flaky tests, Claude Sonnet and GPT~5.4 mini wrote no flaky test that a one run filter would keep (0 of 1,218), while GPT~4.1 mini wrote 12 (2.2\%). The difference is significant (Fisher's exact test, $p < 0.001$). We also found the first order dependent LLM tests. A first mitigation trial showed that adding a warning to the prompt does not remove the flaky tests of GPT~4.1 mini.
 
 \begin{table}[h]
 \caption{Flaky LLM test cases we can now study. ``Kept'' means a one run generate and filter step would keep the test.}
@@ -39,9 +39,9 @@ E1, large rerun campaign, kept & 15 \\
 E2, matched study, plain prompt, kept & 15 \\
 E2, matched study, plain prompt, rejected by the filter & 10 \\
 E2, mitigation trial (guard prompt), kept & 9 \\
-E2, mitigation trial (guard prompt), rejected by the filter & 17 \\
+E2, mitigation trial (guard prompt), rejected by the filter & 3 \\
 \midrule
-Total now & 66 \\
+Total now & 52 \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -60,7 +60,7 @@ Comment & What we did \\
 The subject filter numbers were packed into one sentence. What does ``and we say so'' mean? & The funnel is now a table (Table~\ref{tab:funnel}). The phrase meant that we oversample the first stratum on purpose. We now say that directly and give the reason below the table. \\
 Why randomly sample, and why not run more? & The random sample was only used for the costly install and run check of new candidate subjects, not for the study itself. We now run far more. Every generated test ran 600 times instead of 70 to 90, and every human test 200 times (Section~\ref{sec:scale}). \\
 Why not use Python flaky tests that prior datasets already found? & We now do. We reproduced 21 of the 58 hand labeled flaky tests from Gruber et al.\ that are not order dependent and not caused by the network, and used 17 of them for the matched study (Section~\ref{sec:matched}). \\
-Can a study rest on three flaky tests? & No, so we built E2 to find more. We now have 66 flaky LLM test cases (Table~\ref{tab:count}) and a model difference that is statistically significant. \\
+Can a study rest on three flaky tests? & No, so we built E2 to find more. We now have 52 flaky LLM test cases (Table~\ref{tab:count}), each with a labeled root cause, and a model difference that is statistically significant. \\
 Are LLMs just good at avoiding flakiness, and why? & Some are and some are not. Sonnet and GPT~5.4 mini wrote no kept flaky test even for flaky code, and GPT~4.1 mini did. Section~\ref{sec:why} shows why. The careful models seed or avoid randomness and never touch shared library state. GPT~4.1 mini rarely seeds and reaches into private state without resetting it. \\
 Why only one shot Haiku? & Haiku was only the first model where we saw flips. We now compare four models from two families under the same plain prompt. Haiku is in the middle (3 kept flaky tests of 806 in E2). \\
 72 LLM suites does not equal 36 plus 24. & This was our error. There were 60 LLM suites (36 on October 1 and 24 on October 22) plus 12 human suites, so 72 suites in all. With the 24 OpenAI suites added since, E1 has 84 LLM suites and 96 suites in all. \\
@@ -155,7 +155,7 @@ Three results stand out.
 \begin{itemize}
 \item \textbf{Most conditions are as stable as the human tests.} Without PL-G4, 5 of 7,468 LLM tests flipped, against 5 of 5,587 human tests ($p = 0.75$).
 \item \textbf{PL-G4 is the outlier.} Its 10 flaky tests are all in humanize and fail in about 47\% of runs each. They are order dependent (Section~\ref{sec:why}). PL-G4 against PL-S, same prompt, gives $p < 0.001$.
-\item \textbf{The new flaky tests from the other models are rare timing flips.} The AG-S and PL-G5 tests are tenacity stop after delay tests (6 and 2 failures in 600 runs), and the new OS-H test is a schedule test that failed once in the time zone mode.
+\item \textbf{The other new flaky tests are rare.} The AG-S and PL-G5 tests are tenacity tests that compare clock arithmetic with exact floating point equality (6 and 2 failures in 600 runs). The new OS-H test is a schedule test that failed once, in the time zone mode (Section~\ref{sec:rootcause}).
 \end{itemize}
 The human flaky tests are two arrow locale tests that depend on test order and three pybreaker thread tests that flipped only under stress-ng. PL-G4 also lost 2 of its 12 suites (167 test functions) to files that do not import, because it imported names that do not exist (\texttt{QueryInstance} from tinydb and \texttt{CircuitBreakersState} from pybreaker).
 
@@ -207,7 +207,37 @@ This comparison is about tests for the same code, not about rates. The human tes
 
 \subsection{Root causes}
 \label{sec:rootcause}
-%%ROOTCAUSE%%
+Manas labeled the root cause of every new flaky test with the categories of Luo et al.~\cite{luo2014} and Gruber et al.~\cite{gruber2021}, reading the test and the code it calls and reproducing the failure where possible. Table~\ref{tab:rc} has the counts, and \texttt{results/root\_causes/} has every label with its evidence.
+
+\begin{table}[h]
+\caption{Root causes of the 52 flaky LLM test cases. Kept and rejected refer to the one run filter.}
+\label{tab:rc}
+\small
+\begin{tabularx}{\columnwidth}{Xrrrrr}
+\toprule
+ & E1 & \multicolumn{2}{c}{E2 plain} & \multicolumn{2}{c}{E2 guard} \\
+Root cause & kept & kept & rej. & kept & rej. \\
+\midrule
+Randomness, unseeded generator in the code & 0 & 10 & 9 & 4 & 2 \\
+Randomness, salted \texttt{hash()} & 0 & 3 & 1 & 5 & 1 \\
+Test order dependency & 10 & 2 & 0 & 0 & 0 \\
+Time & 3 & 0 & 0 & 0 & 0 \\
+Floating point on a real clock value & 2 & 0 & 0 & 0 & 0 \\
+\midrule
+Total & 15 & 15 & 10 & 9 & 3 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{E2 tests inherit the nondeterminism of the code.} Every randomness case in E2 calls code that draws from an unseeded global generator (NumPy, \texttt{random}, or PyTorch) and then asserts one particular outcome. In all but one of them (a gamble deck shuffle test), this is the same cause that makes the human flaky test of that project flip. In cuckoopy the source is less obvious. The filter places items by Python's built in \texttt{hash()} of a string, which changes with \texttt{PYTHONHASHSEED} in every process, and the tests insert keys that share a fingerprint. Seeding \texttt{random} cannot fix this, which is why the guard prompt did not help there.
+
+\textbf{Two new order dependent patterns.} Besides the PL-G4 humanize tests (Section~\ref{sec:why}), two GPT~4.1 mini tests in pylabeledrf are order dependent. Another generated test replaces a module level function with a fake and fails before its line that restores it, so the fake stays for the rest of the process. The two victims fail whenever they run after it.
+
+\textbf{E1 timing tests.} The AG-S and PL-G5 tenacity tests build a fake timestamp as \texttt{start + 5.0} (or \texttt{+ 1}) from a real \texttt{time.monotonic()} reading and assert exact equality with the elapsed time. For some values of \texttt{start}, \texttt{(start + 5.0) - start} rounds to 4.999999999999999, so the result depends on how long the machine has been up. The OS-H \texttt{test\_until\_with\_time\_object} builds a clock time one hour ahead, which wraps past midnight when the run starts between 23:00 and 24:00 local time. That is why it failed only in the time zone mode. The other two OS-H tests are the Progress Report 1 cases (a time of day string from the real clock, and a jittered wait under a lower time bound).
+
+\textbf{One plugin interaction.} One guard prompt test in pylabeledrf seeds \texttt{random} in a fixture, but pytest-randomly seeds it again just before the test body, so the fixture seed has no effect in the shuffled runs. The test is still wrong for most seeds, so we count it as randomness.
+
+The five human flaky tests in E1 are two order dependent arrow locale tests, two pybreaker thread races, and one pybreaker test whose Redis storage keeps only whole seconds, so a one second timeout can already be over when it is checked.
 
 \subsection{E3, why most LLM tests do not flip}
 \label{sec:why}
@@ -235,7 +265,7 @@ Builds a fresh library object & 18.5 & 48.1 & 34.0 & 46.2 \\
 
 \textbf{Why GPT~4.1 mini does flip.} The GPT suites reach into private state as often as human suites do. In humanize, PL-S resets the translation state after all 78 of its tests, and PL-G4 after none of its 65. Nine PL-G4 tests call \texttt{monkeypatch.setattr(i18n.\_CURRENT, "locale", ...)}. \texttt{\_CURRENT} is a \texttt{threading.local}, and its \texttt{locale} attribute exists only after some test has called \texttt{activate} or \texttt{deactivate}. So these tests pass after such a test and fail with an \texttt{AttributeError} when they run first. The one run filter ran the file in order, where they always pass, so it kept them. This is the same habit that makes human tests order dependent.
 
-\textbf{Randomness in E2.} In E2 the code under test draws random numbers itself. Sonnet seeds a generator in 14 of its 34 suites, Haiku in 13, GPT~5.4 mini in 5, and GPT~4.1 mini in 3. GPT~5.4 mini seeds rarely but still wrote no flaky test, so seeding is not the whole answer. %%WHYE2%%
+\textbf{Randomness in E2.} In E2 the code under test draws random numbers itself. Sonnet seeds a generator in 14 of its 34 suites, Haiku in 13, GPT~5.4 mini in 5, and GPT~4.1 mini in 3. GPT~5.4 mini seeds rarely but still wrote no flaky test, so seeding is not the whole answer. In spreading\_dye\_sampler, for example, Sonnet seeds NumPy and passes \texttt{squeeze=True}, which avoids the random path that returns \texttt{None}. GPT~5.4 mini replaces the random draws with fakes through \texttt{monkeypatch}. GPT~4.1 mini does neither and asserts that a random walk always returns a blot.
 
 \textbf{Why Haiku flipped in Progress Report 1.} With the same prompt as one shot Sonnet, Haiku wrote twice as many tests, never froze the clock in schedule (0 of 182 tests, against 62 of 78 for Sonnet), never injected a fake sleep in tenacity, and wrote one sided timing bounds with less headroom. Its flaky tests came from those timing habits.
 
@@ -262,7 +292,7 @@ Rerun every flagged test at least 1,000 times on the GitHub runners, with and wi
 Add a non Claude model & Done & GPT~5.4 mini and GPT~4.1 mini with the plain prompt, in E1 and E2. We did not run them with the TestPilot style prompt, and spent that budget on E2 instead. \\
 Add the plain prompt & Done & Added October 22 (PL-S), now also used for every E2 model. \\
 Measure scanner precision and recall & Done & Done for Progress Report 1 on 96 Gruber et al.\ tests (recall 10 of 96, flag rate 4.9\% on non flaky tests). \\
-Measure coverage of every suite & Done & Mean line coverage without filelock is 94.4\% for human suites, 82.6\% for PL-S, 75.6\% for PL-G5, and 67.0\% for PL-G4 (\texttt{results/coverage/}). \\
+Measure coverage of every suite & Done & Mean line coverage without filelock is 94.4\% for human suites, 82.6\% for PL-S, 75.6\% for PL-G5, and 67.0\% for PL-G4, two of whose suites did not import (\texttt{results/coverage/}). \\
 Search the generated suites for order dependent tests (iDFlakies style~\cite{lam2019}) & Partly & Every run shuffles the order, and the mixed suites ran 30 shuffled orders. This found the PL-G4 humanize victims and their polluter. We have not yet run a systematic polluter and victim search over every suite. \\
 Add four new subjects from the funnel & Replaced & The matched study adds 17 projects with known flaky code, which attacks the shortage of flaky tests more directly. \\
 Run Shaker's configuration selection & Not done & Only three human tests flip only under stress-ng, too few to choose configurations from. \\
