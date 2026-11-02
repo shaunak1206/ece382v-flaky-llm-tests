@@ -1,0 +1,25 @@
+{
+ "project": "vimms",
+ "url": "https://github.com/sdrogers/vimms",
+ "sha": "fcae1a81b4fa4c4913fd0bd3af9b79be8122feaa",
+ "category": "random",
+ "gruber_fail_rate": 0.2833333333333333,
+ "test_file": "tests/integration/test_controllers.py",
+ "test_func": "test_TopN_controller_with_simulated_chems",
+ "install_ok": true,
+ "install_log_tail": " Python (NumPy) is not installed.\n         scikit-learn requires NumPy >= 1.11.0.\n         Installation instructions are available on the scikit-learn website: http://scikit-learn.org/stable/install.html\n\nhint: `scikit-learn` (v0.21.3) was included because `vimms` (v1.1.0) depends on `scikit-learn`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 \", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpMJE8UY/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 290, in <module>\n           File \"<string>\", line 278, in setup_package\n         ImportError: Numerical Python (NumPy) is not installed.\n         scikit-learn requires NumPy >= 1.11.0.\n         Installation instructions are available on the scikit-learn website: http://scikit-learn.org/stable/install.html\n\nhint: `scikit-learn` (v0.21.3) was included because `vimms` (v1.1.0) depends on `scikit-learn`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto numpy] rc=0 \n[auto scipy] rc=0 \n[auto loguru] rc=0 \n[auto requests] rc=0 \n[auto tqdm] rc=0 \n[auto pylab] rc=1 error: No solution found when resolving dependencies\n  cause: Because there are no versions of pylab and you require pylab, we can conclude that your requirements are unsatisfiable.\n",
+ "test": "test_TopN_controller_with_simulated_chems",
+ "collect_tail": "kage, level)\ntests/integration/test_controllers.py:9: in <module>\n    from vimms.Controller import TopNController, PurityController, TopN_RoiController, AIF, \\\nvimms/Controller/__init__.py:1: in <module>\n    from vimms.Controller.base import *\nvimms/Controller/base.py:3: in <module>\n    import pylab as plt\nE   ModuleNotFoundError: No module named 'pylab'\n=========================== short test summary info ============================\nERROR tests/integration/test_controllers.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.55s\n",
+ "first_run_tail": "/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/integration/test_controllers.py:9: in <module>\n    from vimms.Controller import TopNController, PurityController, TopN_RoiController, AIF, \\\nvimms/Controller/__init__.py:1: in <module>\n    from vimms.Controller.base import *\nvimms/Controller/base.py:3: in <module>\n    import pylab as plt\nE   ModuleNotFoundError: No module named 'pylab'\n------------------- generated xml file: /tmp/tmpbk9mdylv.xml -------------------\n=========================== short test summary info ============================\nERROR tests/integration/test_controllers.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.51s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 20.6,
+ "reproduced": false
+}

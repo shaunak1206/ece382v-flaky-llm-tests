@@ -1,0 +1,27 @@
+{
+ "project": "filtered-intervaltree",
+ "url": "https://github.com/lostinplace/filtered-intervaltree",
+ "sha": "37da431ed36dc9e7936ebd330869f142538ef79d",
+ "category": "random",
+ "gruber_fail_rate": 0.0375,
+ "test_file": "test/test_interval.py",
+ "test_func": "test_compare_addition",
+ "install_ok": true,
+ "install_log_tail": "build_version as get_build_msvc_version\n         ModuleNotFoundError: No module named 'distutils.msvccompiler'\n\nhint: `numpy` (v1.11.0) was included because `filtered-intervaltree` (v0.0.6) depends on `numpy`\n\nhint: This error likely indicates that `numpy@1.11.0` depends on `distutils.msvccompiler`, but doesn't declare it as a build dependency. If `numpy` is a first-party package, consider adding `distutils.msvccompiler` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:\n\n[tool.uv.extra-build-dependencies]\nnumpy = [\"distutils.msvccompiler\"]\n\nor `uv pip install distutils.msvccompiler` into the environment and re-run with `--no-build-isolation`.\n\n[.] rc=1 umpy/distutils/mingw32ccompiler.py\", line 34, in <module>\n             from distutils.msvccompiler import get_build_version as get_build_msvc_version\n         ModuleNotFoundError: No module named 'distutils.msvccompiler'\n\nhint: `numpy` (v1.11.0) was included because `filtered-intervaltree` (v0.0.6) depends on `numpy`\n\nhint: This error likely indicates that `numpy@1.11.0` depends on `distutils.msvccompiler`, but doesn't declare it as a build dependency. If `numpy` is a first-party package, consider adding `distutils.msvccompiler` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:\n\n[tool.uv.extra-build-dependencies]\nnumpy = [\"distutils.msvccompiler\"]\n\nor `uv pip install distutils.msvccompiler` into the environment and re-run with `--no-build-isolation`.\n",
+ "test": "test_compare_addition",
+ "collect_tail": "test/test_interval.py::test_basic\ntest/test_interval.py::test_removal_no_overlap\ntest/test_interval.py::test_removal_whole_contains\ntest/test_interval.py::test_removal_reduction\ntest/test_interval.py::test_removal_overlap\ntest/test_interval.py::test_removal_edge_cases\ntest/test_interval.py::test_compare_addition\n\n7 tests collected in 0.01s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmpsvaj5t2_.xml -------------------\n1 passed, 6 deselected in 0.86s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 92,
+ "failed": 58,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert 0.1286725180000019 > 0.13223564300000135",
+  "assert 0.12988021800001093 > 0.1319900880000091",
+  "assert 0.12891588899998396 > 0.12917359600001532"
+ ],
+ "seconds": 167.2,
+ "reproduced": true
+}

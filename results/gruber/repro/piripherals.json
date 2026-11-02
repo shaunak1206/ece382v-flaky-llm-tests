@@ -1,0 +1,25 @@
+{
+ "project": "piripherals",
+ "url": "https://github.com/quantenschaum/piripherals",
+ "sha": "74e4807a64363e3c95a03222fa250a1073387eaf",
+ "category": "async wait",
+ "gruber_fail_rate": 0.022222222222222223,
+ "test_file": "tests/test_mpr121.py",
+ "test_func": "test_mpr121_irq",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_mpr121_irq",
+ "collect_tail": "sts/test_mpr121.py::test_mpr121_debounce\ntests/test_mpr121.py::test_mpr121_gpio_setup\ntests/test_mpr121.py::test_mpr121_gpio_status\ntests/test_mpr121.py::test_mpr121_gpio_set\ntests/test_mpr121.py::test_mpr121_touched\ntests/test_mpr121.py::test_mpr121_overcurrent\ntests/test_mpr121.py::test_mpr121_out_of_range\ntests/test_mpr121.py::test_mpr121_autoconf_failed\ntests/test_mpr121.py::test_mpr121_autoreconf_failed\ntests/test_mpr121.py::test_mpr121_setup\ntests/test_mpr121.py::test_mpr121_polling\ntests/test_mpr121.py::test_mpr121_irq\ntests/test_mpr121.py::test_mpr121_dump\n\n23 tests collected in 0.04s\n",
+ "first_run_tail": "inux-x86_64-gnu/lib/python3.8/threading.py\", line 932, in _bootstrap_inner\n      self.run()\n    File \"/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/threading.py\", line 870, in run\n      self._target(*self._args, **self._kwargs)\n    File \"/tmp/gw/piripherals/repo/piripherals/util.py\", line 115, in loop\n      if is_reset():\n    File \"/tmp/gw/piripherals/repo/piripherals/util.py\", line 104, in is_reset\n      def is_reset(): return GPIO.input(pin) == reset\n  NameError: name 'GPIO' is not defined\n  \n    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpb7hgcgor.xml -------------------\n1 passed, 22 deselected, 1 warning in 0.46s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 149,
+ "failed": 1,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: expected call not found.\nExpected: mock(False, 8)\nActual: mock(True, 8)"
+ ],
+ "seconds": 105.9,
+ "reproduced": true
+}

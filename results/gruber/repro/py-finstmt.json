@@ -1,0 +1,25 @@
+{
+ "project": "py-finstmt",
+ "url": "https://github.com/whoopnip/py-finstmt",
+ "sha": "820407a87f03377072b545923febd1086def1bec",
+ "category": "random",
+ "gruber_fail_rate": 0.0875,
+ "test_file": "tests/test_forecast.py",
+ "test_func": "test_annual_change_make_forecast_and_plug",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_annual_change_make_forecast_and_plug",
+ "collect_tail": "CAT::test_annual\ntests/test_forecast.py::TestForecastStockrowCAT::test_annual_no_balance\ntests/test_forecast.py::TestForecastStockrowCAT::test_annual_change_bs_diff\ntests/test_forecast.py::TestForecastStockrowCAT::test_annual_change_make_forecast_and_plug\ntests/test_forecast.py::TestForecastStockrowCAT::test_quarterly\ntests/test_forecast.py::TestForecastStockrowMAR::test_annual\ntests/test_forecast.py::TestForecastStockrowMAR::test_quarterly\ntests/test_forecast.py::TestForecastCapitalIQCAT::test_annual\ntests/test_forecast.py::TestForecastCapitalIQCAT::test_quarterly\n\n9 tests collected in 0.30s\n",
+ "first_run_tail": "ngs summary ===============================\ntests/test_forecast.py::TestForecastStockrowCAT::test_annual_change_make_forecast_and_plug\n  /tmp/gw/py-finstmt/repo/finstmt/findata/database.py:78: UserWarning: Previously had ebit extracted from \"Operating Income\". Replacing with value from \"EBIT\"\n    warnings.warn(f'Previously had {item_config.key} '\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpxgypk_ub.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_forecast.py::TestForecastStockrowCAT::test_annual_change_make_forecast_and_plug - TypeError: _generate_range() got an unexpected keyword argument 'closed'\n1 failed, 8 deselected, 1 warning in 3.34s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "TypeError: _generate_range() got an unexpected keyword argument 'closed'"
+ ],
+ "seconds": 746.6,
+ "reproduced": false
+}

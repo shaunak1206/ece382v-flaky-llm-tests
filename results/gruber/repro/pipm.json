@@ -1,0 +1,25 @@
+{
+ "project": "pipm",
+ "url": "https://github.com/jnoortheen/pipm",
+ "sha": "a9e0f89e80addea18fd3efdc7b4f6eabd6b6988a",
+ "category": "IO",
+ "gruber_fail_rate": 0.006756756756756757,
+ "test_file": "tests/test_file_functions.py",
+ "test_func": "test_append_last_line",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[dev-requirements.txt] rc=2 error: Couldn't parse requirement in `dev-requirements.txt` at position 616\n  cause: Expected path (`git+git@github.com:jnoortheen/pipm.git@504fdcaab54179c2f013832f9d4f93a1550596d8#egg=pipm`) to end in a supported file extension: `.whl`, `.tar.gz`, `.zip`, `.tar.bz2`, `.tar.lz`, `.tar.lzma`, `.tar.xz`, `.tar.zst`, `.tar`, `.tbz`, `.tgz`, `.tlz`, or `.txz`\n         git+git@github.com:jnoortheen/pipm.git@504fdcaab54179c2f013832f9d4f93a1550596d8#egg=pipm\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n[test-requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_append_last_line",
+ "collect_tail": "gw/pipm/venv/lib/python3.8/site-packages/pytest.py\", line 14, in <module>\n    from _pytest.debugging import pytestPDB as __pytestPDB\n  File \"/tmp/gw/pipm/venv/lib/python3.8/site-packages/_pytest/debugging.py\", line 8, in <module>\n    import pdb\n  File \"/tmp/gw/pipm/venv/lib/python3.8/site-packages/_pdbpp_path_hack/pdb.py\", line 5, in <module>\n    exec(compile(f.read(), pdb_path, 'exec'))\n  File \"/tmp/gw/pipm/venv/lib/python3.8/site-packages/pdb.py\", line 28, in <module>\n    __version__ = fancycompleter.LazyVersion('pdbpp')\nAttributeError: module 'fancycompleter' has no attribute 'LazyVersion'\n",
+ "first_run_tail": "rn _run_code(code, main_globals, None,\n  File \"/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/tmp/gw/pipm/venv/lib/python3.8/site-packages/pytest.py\", line 14, in <module>\n    from _pytest.debugging import pytestPDB as __pytestPDB\n  File \"/tmp/gw/pipm/venv/lib/python3.8/site-packages/_pytest/debugging.py\", line 8, in <module>\n    import pdb\n  File \"/tmp/gw/pipm/venv/lib/python3.8/site-packages/_pdbpp_path_hack/pdb.py\", line 5, in <module>\n    exec(compile(f.read(), pdb_path, 'exec'))\n  File \"/tmp/gw/pipm/venv/lib/python3.8/site-packages/pdb.py\", line 28, in <module>\n    __version__ = fancycompleter.LazyVersion('pdbpp')\nAttributeError: module 'fancycompleter' has no attribute 'LazyVersion'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "tmp/gw/pipm/venv/lib/python3.8/site-packages/pdb.py\", line 28, in <module>\n    __version__ = fancycompleter.LazyVersion('pdbpp')\nAttributeError: module 'fancycompleter' has no attribute 'LazyVersion'\n"
+ ],
+ "seconds": 6.1,
+ "reproduced": false
+}

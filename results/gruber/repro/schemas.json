@@ -1,0 +1,25 @@
+{
+ "project": "schemas",
+ "url": "https://github.com/CIMAC-CIDC/schemas",
+ "sha": "c2b011f49361e01a2816076b9436ae46d71ba0db",
+ "category": "IO",
+ "gruber_fail_rate": 0.07222222222222222,
+ "test_file": "tests/test_template.py",
+ "test_func": "test_generate_empty_template",
+ "install_ok": true,
+ "install_log_tail": "                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n         <string>:12: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: `pandas` (v0.25.1) was included because `cidc-schemas` (v0.18.9) depends on `pandas`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 _5numpy_float64_t (*)(char const *, char **, char, char, char, int, int *, int *), int, int, int, int, kh_str_starts_t *, int, kh_float64_t const *, __pyx_t_5numpy_float64_t, __pyx_t_5numpy_float64_t *, int *); /*proto*/\n               |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n         <string>:12: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: `pandas` (v0.25.1) was included because `cidc-schemas` (v0.18.9) depends on `pandas`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto jsonschema] rc=0 \n[auto dateparser] rc=0 \n[auto pyyaml] rc=0 \n[auto openpyxl] rc=0 \n[auto jinja2] rc=0 \n[auto deepdiff] rc=0 ",
+ "test": "test_generate_empty_template",
+ "collect_tail": "ig = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest '/tmp/gw/schemas/repo/tests/conftest.py'.\ntests/conftest.py:11: in <module>\n    from cidc_schemas.template import Template\ncidc_schemas/template.py:15: in <module>\n    from .json_validation import _load_dont_validate_schema\ncidc_schemas/json_validation.py:367: in <module>\n    load_and_validate_schema(\"clinical_trial.json\", return_validator=True)\ncidc_schemas/json_validation.py:362: in load_and_validate_schema\n    validator.resolver = _build_ref_resolver(schema_root, schema)\nE   AttributeError: can't set attribute\n",
+ "first_run_tail": "teError: can't set attribute (from /tmp/gw/schemas/repo/tests/conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest '/tmp/gw/schemas/repo/tests/conftest.py'.\ntests/conftest.py:11: in <module>\n    from cidc_schemas.template import Template\ncidc_schemas/template.py:15: in <module>\n    from .json_validation import _load_dont_validate_schema\ncidc_schemas/json_validation.py:367: in <module>\n    load_and_validate_schema(\"clinical_trial.json\", return_validator=True)\ncidc_schemas/json_validation.py:362: in load_and_validate_schema\n    validator.resolver = _build_ref_resolver(schema_root, schema)\nE   AttributeError: can't set attribute\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "son\", return_validator=True)\ncidc_schemas/json_validation.py:362: in load_and_validate_schema\n    validator.resolver = _build_ref_resolver(schema_root, schema)\nE   AttributeError: can't set attribute\n"
+ ],
+ "seconds": 341.5,
+ "reproduced": false
+}

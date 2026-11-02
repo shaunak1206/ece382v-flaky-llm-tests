@@ -1,0 +1,27 @@
+{
+ "project": "data-partitioner",
+ "url": "https://github.com/brahle/data_partitioner",
+ "sha": "c37bca05576648c3f69f8694951bb2ae9ea9ed21",
+ "category": "random",
+ "gruber_fail_rate": 0.01,
+ "test_file": "tests/data_suplier_test.py",
+ "test_func": "test_training_percent",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_training_percent",
+ "collect_tail": "tests/data_suplier_test.py::DataSuplierTest::test_iteration\ntests/data_suplier_test.py::DataSuplierTest::test_partitioner\ntests/data_suplier_test.py::DataSuplierTest::test_stability\ntests/data_suplier_test.py::DataSuplierTest::test_training_percent\n\n4 tests collected in 0.01s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmpji_58ajh.xml -------------------\n1 passed, 3 deselected in 0.03s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 147,
+ "failed": 3,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: 0.2147 != 0.2 within 0.010735000000000001 delta (0.01469999999999999 difference)",
+  "AssertionError: 0.1878 != 0.2 within 0.00939 delta (0.012200000000000016 difference)",
+  "AssertionError: 0.1903 != 0.2 within 0.009515000000000001 delta (0.009700000000000014 difference)"
+ ],
+ "seconds": 33.5,
+ "reproduced": true
+}

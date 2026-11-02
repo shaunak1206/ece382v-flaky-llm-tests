@@ -1,0 +1,25 @@
+{
+ "project": "ploceidae",
+ "url": "https://github.com/MATTHEWFRAZER/ploceidae",
+ "sha": "dad989756318127dc70d05b4ccdd1a3d8142dab1",
+ "category": "resource leak",
+ "gruber_fail_rate": 0.02,
+ "test_file": "ploceidae/unit_tests/test_garbage_collection.py",
+ "test_func": "test_session_locator_does_not_get_deleted_from_cache",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of trochilidae==1.0.9 and you require trochilidae==1.0.9, we can conclude that your requirements are unsatisfiable.\n\n[-e .[test,tests,testing,dev]] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of trochilidae==1.0.9 and ploceidae==1.0.17 depends on trochilidae==1.0.9, we can conclude that ploceidae==1.0.17 cannot be used.\n         And because only ploceidae[test]==1.0.17 is available and you require ploceidae[test], we can conclude that your requirements are unsatisfiable.\n\n[-e .] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of trochilidae==1.0.9 and ploceidae==1.0.17 depends on trochilidae==1.0.9, we can conclude that ploceidae==1.0.17 cannot be used.\n         And because only ploceidae==1.0.17 is available and you require ploceidae, we can conclude that your requirements are unsatisfiable.\n\n[.] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of trochilidae==1.0.9 and ploceidae==1.0.17 depends on trochilidae==1.0.9, we can conclude that ploceidae==1.0.17 cannot be used.\n         And because only ploceidae==1.0.17 is available and you require ploceidae, we can conclude that your requirements are unsatisfiable.\n\n[auto attrs] rc=0 \n[auto pymonad] rc=0 ",
+ "test": "test_session_locator_does_not_get_deleted_from_cache",
+ "collect_tail": "loceidae/dependency_management/__init__.py:1: in <module>\n    from ploceidae.dependency_management.dependency_graph_manager import DependencyGraphManager\nploceidae/dependency_management/dependency_graph_manager.py:3: in <module>\n    from ploceidae.dependency_management.dependency_graph_cycle_check_methods import DependencyGraphCycleCheckMethods\nploceidae/dependency_management/dependency_graph_cycle_check_methods.py:3: in <module>\n    from pymonad import Functor\nE   ImportError: cannot import name 'Functor' from 'pymonad' (/tmp/gw/ploceidae/venv/lib/python3.8/site-packages/pymonad/__init__.py)\n",
+ "first_run_tail": "ile loading conftest '/tmp/gw/ploceidae/repo/ploceidae/unit_tests/conftest.py'.\nploceidae/unit_tests/conftest.py:7: in <module>\n    from ploceidae.dependency_management import DependencyGraphManager\nploceidae/dependency_management/__init__.py:1: in <module>\n    from ploceidae.dependency_management.dependency_graph_manager import DependencyGraphManager\nploceidae/dependency_management/dependency_graph_manager.py:3: in <module>\n    from ploceidae.dependency_management.dependency_graph_cycle_check_methods import DependencyGraphCycleCheckMethods\nploceidae/dependency_management/dependency_graph_cycle_check_methods.py:3: in <module>\n    from pymonad import Functor\nE   ImportError: cannot import name 'Functor' from 'pymonad' (/tmp/gw/ploceidae/venv/lib/python3.8/site-packages/pymonad/__init__.py)\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "e_check_methods.py:3: in <module>\n    from pymonad import Functor\nE   ImportError: cannot import name 'Functor' from 'pymonad' (/tmp/gw/ploceidae/venv/lib/python3.8/site-packages/pymonad/__init__.py)\n"
+ ],
+ "seconds": 4.6,
+ "reproduced": false
+}

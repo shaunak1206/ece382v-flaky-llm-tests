@@ -1,0 +1,25 @@
+{
+ "project": "CmdKit",
+ "url": "https://github.com/glentner/CmdKit",
+ "sha": "b8d4572612667080807b2b26d47c624a330c2872",
+ "category": "random",
+ "gruber_fail_rate": 0.005681818181818182,
+ "test_file": "tests/test_app.py",
+ "test_func": "test_app_invalid_options",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto hypothesis] rc=0 \n[auto logalpha] rc=0 \n[auto logalpha] rc=0 \n[auto logalpha] rc=0 \n[auto logalpha] rc=0 \n[auto logalpha] rc=0 \n[auto logalpha] rc=0 \n[auto logalpha] rc=0 ",
+ "test": "test_app_invalid_options",
+ "collect_tail": ": in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_app.py:22: in <module>\n    from cmdkit.app import Application, ApplicationGroup, exit_status\ncmdkit/app.py:25: in <module>\n    from .logging import log\ncmdkit/logging.py:33: in <module>\n    from logalpha.colors import Color\nE   ModuleNotFoundError: No module named 'logalpha.colors'\n=========================== short test summary info ============================\nERROR tests/test_app.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.15s\n",
+ "first_run_tail": "ave valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_app.py:22: in <module>\n    from cmdkit.app import Application, ApplicationGroup, exit_status\ncmdkit/app.py:25: in <module>\n    from .logging import log\ncmdkit/logging.py:33: in <module>\n    from logalpha.colors import Color\nE   ModuleNotFoundError: No module named 'logalpha.colors'\n------------------- generated xml file: /tmp/tmp3o3f07n4.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_app.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.16s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 7.4,
+ "reproduced": false
+}

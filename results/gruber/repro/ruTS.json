@@ -1,0 +1,25 @@
+{
+ "project": "ruTS",
+ "url": "https://github.com/SergeyShk/ruTS",
+ "sha": "af02f627d9022f0f4825d9bed4ffc97d3d329f2d",
+ "category": "resource leak",
+ "gruber_fail_rate": 0.115,
+ "test_file": "tests/test_utils.py",
+ "test_func": "test_download_file",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_download_file",
+ "collect_tail": "tests/test_utils.py::test_to_path_is_str\ntests/test_utils.py::test_to_path_is_path\ntests/test_utils.py::test_to_path_type_error\ntests/test_utils.py::test_download_file\ntests/test_utils.py::test_download_file_runtime_error\ntests/test_utils.py::test_extract_archive\ntests/test_utils.py::test_safe_divide\n\n7 tests collected in 2.57s\n",
+ "first_run_tail": "..                                                                       [100%]\n------------------- generated xml file: /tmp/tmp7j8c3cbd.xml -------------------\n2 passed, 5 deselected in 1.50s\n",
+ "collected": 2,
+ "runs": 150,
+ "passed": 1,
+ "failed": 149,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert None == '/tmp/ruts_download/stopwords.zip'\n +  where None = download_file('https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/stopwords.zip', dirpath='/t"
+ ],
+ "seconds": 294.1,
+ "reproduced": true
+}

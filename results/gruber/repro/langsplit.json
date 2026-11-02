@@ -1,0 +1,26 @@
+{
+ "project": "langsplit",
+ "url": "https://github.com/mindey/langsplit",
+ "sha": "d30d47bd6f73852dc716f1e79225d8d49dc39daa",
+ "category": "random",
+ "gruber_fail_rate": 0.13,
+ "test_file": "tests/test_split.py",
+ "test_func": "test_partial_autodetect",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_partial_autodetect",
+ "collect_tail": "tests/test_split.py::test_none\ntests/test_split.py::test_title\ntests/test_split.py::test_body\ntests/test_split.py::test_partial_autodetect\ntests/test_split.py::test_autodetect\ntests/test_split.py::test_markdown\ntests/test_split.py::test_markdown_title\ntests/test_split.py::test_convert\ntests/test_split.py::test_title_convert\ntests/test_split.py::test_get_one\ntests/test_split.py::test_empty\n\n11 tests collected in 0.01s\n",
+ "first_run_tail": "\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\nE         ?                ^^\n\ntests/test_split.py:66: AssertionError\n------------------- generated xml file: /tmp/tmphxi_zf4b.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_split.py::test_partial_autodetect - AssertionError: assert OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')]) == OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  Omitting 2 identical items, use -vv to show\n  Left contains 1 more item:\n  {'sw': 'amazing world'}\n  Right contains 1 more item:\n  {'en': 'amazing world'}\n  Full diff:\n  - OrderedDict([('en', 'amazing world'), ('lt', 'smart world'), ('ja', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  ?                ^^\n  + OrderedDict([('sw', 'amazing world'), ('lt', 'smart world'), ('ja', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  ?                ^^\n1 failed, 10 deselected in 0.19s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 125,
+ "failed": 25,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')]) == OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  Omitting 2 identical items, use -vv to show\n  Left contains 1 more item:\n  {'sw': 'amazing world'}\n  Right con",
+  "AssertionError: assert OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')]) == OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  Omitting 2 identical items, use -vv to show\n  Left contains 1 more item:\n  {'pl': 'amazing world'}\n  Right con"
+ ],
+ "seconds": 74.1,
+ "reproduced": true
+}

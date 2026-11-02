@@ -61,3 +61,15 @@ All 24 TP-S and PL-S agents were told to run no commands. None ran pytest or imp
 - TP-S pybreaker left out Redis storage and the Tornado path, since neither is installed. TP-S boltons has parametrized tests that collect to about 81 cases.
 - PL-S filelock: cat, mkdir, heredocs. PL-S schedule: mkdir. PL-S toolz: one ls. PL-S cachetools, humanize: one ls and wc. PL-S tinydb: mkdir and one python string replace on its own file. PL-S tabulate: one grep. PL-S more-itertools: wc and grep on the source. PL-S boltons: mkdir, ls, grep count. PL-S arrow: sed, grep, cat on the source and a grep count.
 - Plain prompt agents read the module source with shell tools in a few cases, which matches what the prompt allows (reading the source), so it does not change the condition.
+
+## Matched study prompts (November 2026)
+
+For each known flaky human test from Gruber et al. that we could reproduce, the generators are pointed at the
+same code under test (found by `scripts/matched_targets.py` from the names the flaky test uses) and are not
+allowed to read any test file of the project, so they cannot copy the flaky test. Two models (Claude Sonnet
+and Claude Haiku 4.5), the plain prompt, two independent samples each, one shot with no execution.
+Suite ids are `<model>_plain_<sample>`.
+
+Plain matched prompt (verbatim, `{...}` filled per project):
+
+> You are generating a unit test suite for a research experiment. Do not run any commands (no pytest, no python, no shell). Only read files and write files. Write pytest unit tests for the Python project {project}. Focus on this code: {target names} in {target files}. The project source is in {repo}; you may read any non test source file there to understand the code, but do not open any test file (anything under a tests/, test/ or testing/ folder, or named test_*.py, *_test.py or conftest.py). Write between 10 and 25 test functions in one file named test_gen.py in {out dir} (create it). The tests will run with Python 3.8 and pytest 7, with the project and its own dependencies installed; do not use other third party packages. Do not create __init__.py or conftest.py files. When done, reply with just the number of test functions.

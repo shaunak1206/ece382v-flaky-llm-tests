@@ -1,0 +1,23 @@
+{
+ "project": "cvbase",
+ "url": "https://github.com/hellock/cvbase",
+ "sha": "e48d2f76aaeea6472b2175c37780f7b90ae7f1b6",
+ "category": "concurrency",
+ "gruber_fail_rate": 0.0125,
+ "test_file": "tests/test_progress.py",
+ "test_func": "test_track_parallel_progress_list",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_track_parallel_progress_list",
+ "collect_tail": "tests/test_progress.py::TestProgressBar::test_start\ntests/test_progress.py::TestProgressBar::test_update\ntests/test_progress.py::test_track_progress_list\ntests/test_progress.py::test_track_progress_iterator\ntests/test_progress.py::test_track_parallel_progress_list\ntests/test_progress.py::test_track_parallel_progress_iterator\n\n6 tests collected in 0.31s\n",
+ "first_run_tail": ".                                                                        [100%]\n=============================== warnings summary ===============================\ntests/test_progress.py::test_track_parallel_progress_list\n  /tmp/gw/cvbase/repo/cvbase/progress.py:140: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    elif isinstance(tasks, collections.Iterable):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpnhxy7z_o.xml -------------------\n1 passed, 5 deselected, 1 warning in 2.13s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 150,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 349.6,
+ "reproduced": false
+}

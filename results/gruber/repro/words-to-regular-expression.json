@@ -1,0 +1,27 @@
+{
+ "project": "words-to-regular-expression",
+ "url": "https://github.com/radeklat/words-to-regular-expression",
+ "sha": "6be1a3846f4bc07a2264b72d1e1ee031c605bac7",
+ "category": "random",
+ "gruber_fail_rate": 0.2833333333333333,
+ "test_file": "tests/unit/test_utils.py",
+ "test_func": "test_generates_correct_regexp_from_iterable_of_strings",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements-test.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_generates_correct_regexp_from_iterable_of_strings",
+ "collect_tail": "tests/unit/test_utils.py::IterableToRegexp::test_generates_correct_regexp_from_iterable_of_strings\ntests/unit/test_utils.py::IterableToRegexp::test_it_defaults_to_python_formatter\ntests/unit/test_utils.py::IterableToRegexp::test_it_ignores_empty_strings\n\n3 tests collected in 0.33s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmprtc4b4p5.xml -------------------\n1 passed, 2 deselected in 0.27s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 14,
+ "failed": 136,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'^', '_'}\nMatched: {'^', ' '}\nRegexp: [^_]\nFalsifying example: test_generates",
+  "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'_', '^'}\nMatched: {'^', ' '}\nRegexp: [^_]\nFalsifying example: test_generates",
+  "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'_', '^'}\nMatched: {' ', '^'}\nRegexp: [^_]\nFalsifying example: test_generates"
+ ],
+ "seconds": 63.4,
+ "reproduced": true
+}

@@ -1,0 +1,27 @@
+{
+ "project": "torch-layer-normalization",
+ "url": "https://github.com/CyberZHG/torch-layer-normalization",
+ "sha": "89f405b60f53f85da6f03fe685c190ef394ce50c",
+ "category": "random",
+ "gruber_fail_rate": 0.06111111111111111,
+ "test_file": "tests/test_layer_normalization.py",
+ "test_func": "test_fit",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_fit",
+ "collect_tail": "tests/test_layer_normalization.py::TestLayerNormalization::test_all_zeros\ntests/test_layer_normalization.py::TestLayerNormalization::test_first_step\ntests/test_layer_normalization.py::TestLayerNormalization::test_first_step_without_param\ntests/test_layer_normalization.py::TestLayerNormalization::test_fit\ntests/test_layer_normalization.py::TestLayerNormalization::test_save_load\n\n5 tests collected in 1.28s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmpyb4vkyty.xml -------------------\n1 passed, 4 deselected in 2.28s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 139,
+ "failed": 11,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: False is not true : (0, tensor([[-0.0061,  0.1120, -0.3032, -1.0027],\n        [-1.0139, -0.2462, -0.0691,  0.1292]]), tensor([[-0.0055,  0.1124, -0.3032, -1.0035],\n        [-1.0150, -0",
+  "AssertionError: False is not true : (0, tensor([[-0.1074,  0.0108, -1.0465, -0.0569],\n        [ 0.0245, -1.0188, -0.2615,  0.0558]]), tensor([[-0.1070,  0.0111, -1.0479, -0.0565],\n        [ 0.0251, -1",
+  "AssertionError: False is not true : (3, tensor([[-0.5749, -0.5864,  0.4469, -0.4856],\n        [-0.1376, -0.8117, -0.5731,  0.3223]]), tensor([[-0.5752, -0.5868,  0.4480, -0.4858],\n        [-0.1375, -0"
+ ],
+ "seconds": 309.9,
+ "reproduced": true
+}

@@ -1,0 +1,25 @@
+{
+ "project": "amplimap",
+ "url": "https://github.com/koelling/amplimap",
+ "sha": "47a65e624e4a7f7ed62b029e6ed65dc78cf34ac7",
+ "category": "IO",
+ "gruber_fail_rate": 0.5222222222222223,
+ "test_file": "tests/run_test.py",
+ "test_func": "test_config_umi_error",
+ "install_ok": true,
+ "install_log_tail": "ations]\n         25732 |   __pyx_type_5_yaml_CEmitter.tp_print = 0;\n               |   ^~~~~~~~~~~~~~~~~~~~~~~~~~\n         /home/runner/.local/share/uv/python/cpython-3.8.20-linux-x86_64-gnu/include/python3.8/cpython/object.h:260:30: note: declared here\n           260 |     Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);\n               |                              ^~~~~~~~\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: `pyyaml` (v3.13) was included because `amplimap` (v0.4.12) depends on `pyyaml`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 int)(PyObject *, FILE *, int);\n               |                              ^~~~~~~~\n         ext/_yaml.c:25732:3: warning: \u2018tp_print\u2019 is deprecated [-Wdeprecated-declarations]\n         25732 |   __pyx_type_5_yaml_CEmitter.tp_print = 0;\n               |   ^~~~~~~~~~~~~~~~~~~~~~~~~~\n         /home/runner/.local/share/uv/python/cpython-3.8.20-linux-x86_64-gnu/include/python3.8/cpython/object.h:260:30: note: declared here\n           260 |     Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);\n               |                              ^~~~~~~~\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: `pyyaml` (v3.13) was included because `amplimap` (v0.4.12) depends on `pyyaml`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto pandas] rc=0 \n[auto snakemake] rc=0 \n[auto Bio] rc=0 ",
+ "test": "test_config_umi_error",
+ "collect_tail": "_test.py::test_config\ntests/run_test.py::test_config_env\ntests/run_test.py::test_config_env_invalid\ntests/run_test.py::test_multiple_input_dirs\ntests/run_test.py::test_naive_pileups\ntests/run_test.py::test_mipgen\ntests/run_test.py::test_config_umi_error\ntests/run_test.py::test_variants\ntests/run_test.py::test_naive_pileups_notrim\ntests/run_test.py::test_bwa_pileups\ntests/run_test.py::test_bwa_pileups_notrim\ntests/run_test.py::test_raw_read_pileups\ntests/run_test.py::test_umi_pileups\ntests/run_test.py::test_umi_dedup\ntests/run_test.py::test_naive_pileups_simulation\n\n16 tests collected in 0.26s\n",
+ "first_run_tail": "locally with 1 cores\\n\\nERROR: snakemake() got an unexpected keyword argument 'configfile'\\n\\namplimap 0.4.12 failed!\" = <built-in method strip of str object at 0x748f1d1ec100>()\n +    where <built-in method strip of str object at 0x748f1d1ec100> = \"Checking input files...\\nRunning locally with 1 cores\\n\\nERROR: snakemake() got an unexpected keyword argument 'configfile'\\n\\namplimap 0.4.12 failed!\\n\".strip\n +      where \"Checking input files...\\nRunning locally with 1 cores\\n\\nERROR: snakemake() got an unexpected keyword argument 'configfile'\\n\\namplimap 0.4.12 failed!\\n\" = CaptureResult(out='', err=\"Checking input files...\\nRunning locally with 1 cores\\n\\nERROR: snakemake() got an unexpected keyword argument 'configfile'\\n\\namplimap 0.4.12 failed!\\n\").err\n1 failed, 15 deselected in 0.29s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert 'amplimap 0.4.12 dry run successful.' in \"Checking input files...\\nRunning locally with 1 cores\\n\\nERROR: snakemake() got an unexpected keyword argument 'configfile'\\n\\namplimap 0.4.12 failed!\""
+ ],
+ "seconds": 107.8,
+ "reproduced": false
+}

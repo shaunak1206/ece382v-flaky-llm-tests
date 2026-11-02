@@ -1,0 +1,25 @@
+{
+ "project": "cronjob",
+ "url": "https://github.com/havefun-plus/cronjob",
+ "sha": "a2fd9289f44696c5c06ece9cec8dc5315300eecf",
+ "category": "time",
+ "gruber_fail_rate": 0.01,
+ "test_file": "tests/test_utils.py",
+ "test_func": "test_cronrule",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because fakeredis==0.16.0 depends on redis<3 and you require redis==3.0.1, we can conclude that your requirements and fakeredis==0.16.0 are incompatible.\n         And because you require fakeredis==0.16.0, we can conclude that your requirements are unsatisfiable.\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto fakeredis] rc=0 ",
+ "test": "test_cronrule",
+ "collect_tail": "tests/test_utils.py::test_agent\ntests/test_utils.py::test_cronrule\n\n2 tests collected in 0.03s\n",
+ "first_run_tail": "e 14\n  def test_cronrule():\nfile /tmp/gw/cronjob/repo/tests/conftest.py, line 6\n  @pytest.fixture(autouse=True)\n  def connection(mocker):\nE       fixture 'mocker' not found\n>       available fixtures: capfd, capfdbinary, caplog, capsys, capsysbinary, connection, doctest_namespace, monkeypatch, pytestconfig, queue, record_property, record_testsuite_property, record_xml_attribute, recwarn, registry, scheduler, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\n/tmp/gw/cronjob/repo/tests/conftest.py:6\n------------------- generated xml file: /tmp/tmpribkcn0u.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_utils.py::test_cronrule\n1 deselected, 1 error in 0.02s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "failed on setup with \"file /tmp/gw/cronjob/repo/tests/test_utils.py, line 14\n  def test_cronrule():\nfile /tmp/gw/cronjob/repo/tests/conftest.py, line 6\n  @pytest.fixture(autouse=True)\n  def connection"
+ ],
+ "seconds": 74.0,
+ "reproduced": false
+}

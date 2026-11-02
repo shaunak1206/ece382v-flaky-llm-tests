@@ -1,0 +1,27 @@
+{
+ "project": "pytsmp",
+ "url": "https://github.com/kithomak/pytsmp",
+ "sha": "15d58a39e016100fb44cdcc9f6115fa7736eb2bb",
+ "category": "random",
+ "gruber_fail_rate": 0.03,
+ "test_file": "tests/test_utils.py",
+ "test_func": "test_calculate_distance_profile_constant_sequence",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 t_text, cyan_text,\n           File \"/home/runner/work/_temp/setup-uv-cache/sdists-v10/pypi/numpy/1.15.0/KE5fEP7G1rAmEDHf/src/numpy/distutils/misc_util.py\", line 16, in <module>\n             from distutils.msvccompiler import get_build_architecture\n         ModuleNotFoundError: No module named 'distutils.msvccompiler'\n\nhint: This error likely indicates that `numpy@1.15.0` depends on `distutils.msvccompiler`, but doesn't declare it as a build dependency. If `numpy` is a first-party package, consider adding `distutils.msvccompiler` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:\n\n[tool.uv.extra-build-dependencies]\nnumpy = [\"distutils.msvccompiler\"]\n\nor `uv pip install distutils.msvccompiler` into the environment and re-run with `--no-build-isolation`.\n\n[requirements-dev.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of codecov==2.0.15 and you require codecov==2.0.15, we can conclude that your requirements are unsatisfiable.\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_calculate_distance_profile_constant_sequence",
+ "collect_tail": "teDistanceProfile::test_calculate_distance_profile_constant_query\ntests/test_utils.py::TestCalculateDistanceProfile::test_calculate_distance_profile_constant_sequence\ntests/test_utils.py::TestCalculateDistanceProfile::test_calculate_distance_profile_constant_sequence_and_query\ntests/test_utils.py::TestCalculateDistanceProfile::test_calculate_distance_profile_data1\ntests/test_utils.py::TestMASS::test_mass_query_too_long\ntests/test_utils.py::TestMASS::test_mass_sanity\ntests/test_utils.py::TestMASS::test_mass_data1\ntests/test_utils.py::TestMASS::test_mass_random_data\n\n27 tests collected in 0.27s\n",
+ "first_run_tail": "..                                                                       [100%]\n------------------- generated xml file: /tmp/tmp87py3vmg.xml -------------------\n2 passed, 25 deselected in 0.09s\n",
+ "collected": 2,
+ "runs": 150,
+ "passed": 145,
+ "failed": 5,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: calculate_distance_profile_constant_sequence: distance of nonconstant query to constant sequence is sqrt(m) by definition.\nassert False\n +  where False = <function allclose at 0x787b4f",
+  "AssertionError: calculate_distance_profile_constant_sequence_and_query: distance of constant query to constant sequence is ero by definition.\nassert False\n +  where False = <function allclose at 0x700",
+  "AssertionError: calculate_distance_profile_constant_sequence: distance of nonconstant query to constant sequence is sqrt(m) by definition.\nassert False\n +  where False = <function allclose at 0x74961a"
+ ],
+ "seconds": 44.3,
+ "reproduced": true
+}

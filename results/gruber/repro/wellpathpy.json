@@ -1,0 +1,25 @@
+{
+ "project": "wellpathpy",
+ "url": "https://github.com/Zabamund/wellpathpy",
+ "sha": "f29b14a9a1c46e77ea98b141e3cdc43674654ea2",
+ "category": "random",
+ "gruber_fail_rate": 0.00625,
+ "test_file": "wellpathpy/test/test_position_log.py",
+ "test_func": "test_resample_onto_unchanged_md",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_resample_onto_unchanged_md",
+ "collect_tail": "og.py::test_copy\n\n=============================== warnings summary ===============================\nwellpathpy/__init__.py:2\n  /tmp/gw/wellpathpy/repo/wellpathpy/__init__.py:2: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n    import pkg_resources\n\nwellpathpy/mincurve.py:65\n  /tmp/gw/wellpathpy/repo/wellpathpy/mincurve.py:65: DeprecationWarning: invalid escape sequence \\c\n    \"\"\"Calculate TVD using minimum curvature method.\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n2 tests collected in 1.24s\n",
+ "first_run_tail": "xisting code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\nFalsifying example: test_resample_onto_unchanged_md(\n    survey=(array([4.49024254e-33, 9.00719925e+15]),\n     array([2.00001000e+00, 1.17549435e-38]),\n     array([1.00e-05, 1.28e+02])),\n)\n\nYou can reproduce this example by temporarily adding @reproduce_failure('6.113.0', b'AAI2AwIAACAAAAAAAAAuEgAAxrBGtKOnEK4HBgCAFOI1o+UAABMFAMfdnGUAAAAADgMAwQjxbHEa0fIJBwEAv/////////8=') as a decorator on your test case\n1 failed, 1 deselected, 1 warning in 14.09s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AttributeError: module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not mod"
+ ],
+ "seconds": 1045.0,
+ "reproduced": false
+}
