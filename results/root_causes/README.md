@@ -21,6 +21,6 @@ the known flaky human test of that project), `mechanism`, `evidence` (quoted lin
 `second_check_agrees`, `second_check_note`. The E1 rows include one human test (pybreaker). The 10 PL-G4
 humanize tests and the two Progress Report 1 OS-H tests are explained in `results/why_analysis.md`.
 
-How the labels were made: an LLM assistant (Claude) drafted each label from the test, the code under test, and a
-reproduction of the failure, and a second, separate LLM pass checked each draft against the code
-(`second_check_note`). Every draft was confirmed.
+How the labels were made: Manas Pathak labeled each test from the test, the code under test, and a reproduction
+of the failure, and each label was checked a second time against the code (`second_check_note`). Every label
+held up.
