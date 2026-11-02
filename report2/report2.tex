@@ -1,0 +1,122 @@
+\documentclass[sigconf,nonacm]{acmart}
+\settopmatter{printacmref=false, printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\begin{document}
+\sloppy
+
+\title{Are LLM Written Unit Tests Flaky?}
+\subtitle{Progress Report 2, ECE 382V Software Testing in the Era of Nondeterminism, Fall 2026}
+\author{Shaunak Kapur (sk62288)}
+\affiliation{\institution{The University of Texas at Austin}\city{Austin}\state{Texas}\country{USA}}
+\author{Manas Pathak (map7848)}
+\affiliation{\institution{The University of Texas at Austin}\city{Austin}\state{Texas}\country{USA}}
+\maketitle
+
+\section{Summary}
+The main concern after Progress Report 1 was that we had too few flaky LLM tests to study (3). We changed the plan to attack that directly, with three changes.
+\begin{enumerate}
+\item \textbf{Known flaky code.} We now also test code that is already known to cause flaky tests. We took the hand labeled flaky tests of Gruber et al.~\cite{gruber2021}, reproduced %%REPRO%% of them on our own runner, and asked four LLMs to write tests for the same code. This is the \emph{matched study} (Section~\ref{sec:matched}).
+\item \textbf{More runs.} We reran every suite of the 12 library study far more often (Section~\ref{sec:scale}).
+\item \textbf{Why.} We measured how LLM tests are built differently from developer tests, which explains why they rarely flip and why one model produced all the flaky ones (Section~\ref{sec:why}).
+\end{enumerate}
+We also added the second model family promised in the proposal (OpenAI GPT~5.4 mini and GPT~4.1 mini). %%HEADLINE%%
+
+\section{Response to the Progress Report 1 feedback}
+Table~\ref{tab:response} answers each comment.
+
+\begin{table*}[t]
+\caption{Each comment on Progress Report 1 and what we changed}
+\label{tab:response}
+\small
+\begin{tabularx}{\textwidth}{p{5.2cm}X}
+\toprule
+Comment & What we did \\
+\midrule
+The subject filter numbers were packed into one sentence. What does ``and we say so'' mean? & The funnel is now a table (Table~\ref{tab:funnel}). The phrase meant that the second stratum is oversampled on purpose. We now state that directly and give the reason. \\
+Why randomly sample, and why not run more? & The random sample was only for the expensive install and run check of new subjects. Since then we reran every suite of the 12 library study %%SCALE_RUNS%% times instead of 70 (Section~\ref{sec:scale}). \\
+Why not use Python flaky tests that prior datasets already identified? & We now do. We reproduced %%REPRO%% of the 58 non network flaky tests that Gruber et al.\ labeled by hand, and generated LLM tests for the same code (Section~\ref{sec:matched}). \\
+Can a study rest on three flaky tests? Are LLMs just good at avoiding flakiness, and why? Why only one shot Haiku? & The matched study raises the base rate by targeting flaky code, and adds %%MATCHED_TESTS%% generated tests from four models. Section~\ref{sec:why} shows why LLM tests rarely flip (they almost never share state between tests) and why Haiku did (tighter timing bounds, no frozen clock). \\
+72 LLM suites does not equal 36 plus 24. & This was our error. The count was 60 LLM suites (36 on October 1 and 24 on October 22) plus 12 human suites, 72 suites in all. With the 24 OpenAI suites added since, there are now 84 LLM suites for the 12 libraries. \\
+What are AG-S, OS-S, OS-H? & Every condition is now defined in Table~\ref{tab:conds} before it is used. \\
+The next steps did not address the shortage of flaky tests. & The plan for the rest of the semester is rebuilt around that shortage (Section~\ref{sec:next}). \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{Study design}
+\label{sec:design}
+Table~\ref{tab:conds} defines every condition. The \emph{feature prompt} names the time, randomness, thread, and file features of each library so the model tests them. The \emph{TestPilot style} prompt shows only signatures, docstrings, and README examples~\cite{schafer2024}. The \emph{plain} prompt only says ``write pytest unit tests for this library'' and gives the source. Exact prompts are in \texttt{prompts/README.md}.
+
+\begin{table}[h]
+\caption{Conditions. All generation is one shot with no test execution, except AG-S.}
+\label{tab:conds}
+\small
+\begin{tabular}{lll}
+\toprule
+Code & Model & Prompt \\
+\midrule
+Human & library developers & none \\
+AG-S & Claude Sonnet, agent that runs and fixes its tests & feature \\
+OS-S & Claude Sonnet & feature \\
+OS-H & Claude Haiku 4.5 & feature \\
+TP-S & Claude Sonnet & TestPilot style \\
+PL-S & Claude Sonnet & plain \\
+PL-G5 & GPT 5.4 mini (OpenAI) & plain \\
+PL-G4 & GPT 4.1 mini (OpenAI) & plain \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A test is \emph{flaky} if it both passed and failed on the same machine. Every run changes the test order (pytest-randomly) and the hash seed, and some runs also change the time zone or add CPU and memory load with stress-ng in the style of Shaker~\cite{silva2020}. Generated tests are counted only if a one run generate and filter step would keep them, as in TestPilot~\cite{schafer2024}.
+
+The study now has three parts.
+\begin{description}
+\item[E1, 12 libraries.] Twelve Python libraries picked by the funnel in Table~\ref{tab:funnel}, with the human suite and one suite per condition (96 suites).
+\item[E2, matched study.] Projects where Gruber et al.\ found a flaky test. We reproduce that test, then ask each model to test the same code without showing it the test (Section~\ref{sec:matched}).
+\item[E3, why.] A static comparison of how LLM and human tests are built (Section~\ref{sec:why}).
+\end{description}
+
+\begin{table}[h]
+\caption{Subject funnel for E1 (top 5,000 PyPI packages)}
+\label{tab:funnel}
+\small
+\begin{tabular}{lr}
+\toprule
+Rule & Packages left \\
+\midrule
+Top 5,000 by downloads (last 30 days) & 5,000 \\
+Is a library (no stubs, pytest plugins) & 4,701 \\
+Links a GitHub repository & 4,131 \\
+Ships a pure Python wheel & 3,296 \\
+At most 3 required dependencies, runs on Python 3.12 & 2,188 \\
+Repository has test files & 1,959 \\
+\quad imports time, random, threading, asyncio, \dots & 1,135 \\
+\quad imports none of them & 824 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We draw more subjects from the first stratum on purpose, because nondeterminism enters through those modules. Ten of our 12 libraries are in it (two, tinydb and tabulate, are in the second as controls).
+
+%%RESULTS%%
+
+\section{Code, data, and documentation}
+Everything is in the public repository \url{https://github.com/shaunak1206/ece382v-flaky-llm-tests}. The \texttt{README.md} explains how to set up and run every experiment, and \texttt{docs/DATA.md} documents every result file and field (for example the per test \texttt{counts} and \texttt{kind} in each rerun file, and the columns of \texttt{results/gruber/candidates.csv}). Raw data is under \texttt{results/}, generated suites under \texttt{gen\_*}, \texttt{llm\_tests/}, and \texttt{matched/}, and every prompt is in \texttt{prompts/README.md}. New since Progress Report 1:
+\begin{itemize}
+\item \texttt{scripts/gruber\_reproduce.py} and the \texttt{gruber-reproduce} workflow reproduce a known flaky test in a fresh Python 3.8 environment at the original commit.
+\item \texttt{scripts/matched\_targets.py} finds the code a flaky test exercises, \texttt{scripts/matched\_run.py} and the \texttt{matched-study} workflow rerun generated suites next to the human flaky test, and \texttt{scripts/analyze\_matched.py} makes the tables.
+\item \texttt{scripts/gen\_openai.py} generates the OpenAI suites and logs every call.
+\item \texttt{scripts/scale\_reruns.sh} and the \texttt{scale-reruns} workflow run the large rerun campaign.
+\item \texttt{scripts/characterize.py} measures how each test is built (results in \texttt{results/why\_analysis.md}).
+\end{itemize}
+
+%%CHALLENGES%%
+
+%%NEXT%%
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{refs}
+\end{document}

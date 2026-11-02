@@ -1,10 +1,59 @@
 # Are LLM generated unit tests flaky?
 
-ECE 382V (Fall 2026) course project, Shaunak Kapur & Manas Pathak. Rerun study of LLM generated pytest suites against the human suites of 12 Python libraries.
+ECE 382V (Fall 2026) course project, Shaunak Kapur & Manas Pathak. We generate pytest suites with LLMs,
+rerun them many times under controlled nondeterminism (test order, hash seed, time zone, machine load), and
+compare their flakiness with developer written tests, both on 12 libraries we chose and on code that is
+already known to cause flaky tests (the Gruber et al. ICST 2021 dataset).
 
-- `REPORT.md` the write up
-- `scripts/` rerun harness and analysis (`rerun.py`, `analyze.py`, `smells.py`, `extended.py`)
-- `llm_tests/`, `gen_oneshot_sonnet/`, `gen_oneshot_haiku/` generated suites
-- `results/` raw rerun data and tables
-- `.github/workflows/extended.yml` the extended rerun experiment on GitHub Actions
-- `SUBJECTS.txt` exact commits of the libraries under test
+- `REPORT.md` the running write up, `report1/` and `report2/` the progress reports (LaTeX and PDF)
+- `docs/DATA.md` what every result file contains and how to read it (start here for the data)
+- `prompts/README.md` every generation prompt, verbatim, and every deviation during generation
+- `SUBJECTS.txt` exact commits of the 12 libraries under test
+
+## Layout
+
+| Path | Content |
+|---|---|
+| `llm_tests/`, `gen_oneshot_sonnet/`, `gen_oneshot_haiku/`, `gen_tp_sonnet/`, `gen_plain_sonnet/`, `gen_plain_gpt54mini/`, `gen_plain_gpt41mini/` | generated suites for the 12 libraries, one folder per condition (codes in `docs/DATA.md`) |
+| `matched/<project>/<model>_plain_<k>/test_gen.py` | generated suites for the matched study, `matched/targets.json` lists the code under test per project |
+| `scripts/` | everything that generates, runs, and analyzes (table below) |
+| `results/` | raw results and tables (see `docs/DATA.md`) |
+| `.github/workflows/` | the experiments that run on GitHub Actions |
+
+## Setup
+
+Python 3.12 for the 12 library study, Python 3.8 (installed automatically by `uv`) for the matched study.
+
+```bash
+python3.12 -m venv .venv && . .venv/bin/activate
+pip install -r colab/requirements-mixed.txt pytest-cov
+for lib in cachetools schedule tinydb humanize toolz tabulate tenacity filelock boltons more_itertools arrow pybreaker; do
+  bash scripts/fetch_subject.sh $lib        # clones the pinned commit into subjects/ and installs it
+done
+brew install stress-ng uv                   # or apt-get install stress-ng; pip install uv
+```
+
+## Running the experiments
+
+| What | Command | Output |
+|---|---|---|
+| Rerun one suite in one mode | `python scripts/rerun.py --name X --cwd <empty dir> --target <suite dir> --runs 30 --mode both --out out.json -- --timeout=15` | rerun JSON |
+| One run generate and filter step | `python scripts/filter_oneshot.py <cond> <lib>` | `results/filter/<cond>/<lib>.json` |
+| All three laptop modes for one generated suite | `bash scripts/llm_suite_reruns.sh <cond> <lib>` | `results/runs/<cond>/<lib>.{both,tz,stress}.json` |
+| Large rerun campaign (GitHub Actions) | `gh workflow run scale-reruns` (`-f conds=...` to pick conditions) | artifact `scale-results`, copied to `results/runs_scale/` |
+| Generated tests inside the human suite | `python scripts/mixed.py <cond> <lib> --runs 30 --out out.json`, or `gh workflow run mixed-suites` | `results/mixed/` |
+| 1,000 reruns of scanner flagged tests | `gh workflow run extended-rerun -f count=100` (`-f stress=true` for stress-ng) | `results/extended_gha*/` |
+| Reproduce a known flaky test from Gruber et al. | `python scripts/gruber_reproduce.py <Project_Name> --runs 150 --out out.json`, or `gh workflow run gruber-reproduce` | `results/gruber/repro/` |
+| Find the code under test of a known flaky test | `python scripts/matched_targets.py <Project_Name> --repo <checkout>` | JSON on stdout |
+| Generate OpenAI suites | `python scripts/gen_openai.py matched <Project_Name> gpt-5.4-mini 1` or `... library <lib> gpt-4.1-mini 1` | `matched/...`, `gen_plain_<model>/...` |
+| Run matched suites next to the known flaky test | `python scripts/matched_run.py <Project_Name> --runs 150 --out out.json`, or `gh workflow run matched-study` | `results/matched/` |
+| Static risk scan | `python scripts/run_smells.py > results/smells.md` | `results/smells.json` |
+| Scanner check against Gruber et al. labels | `python scripts/validate_scanner.py` | `results/scanner_validation/validation.json` |
+| Test characteristics (why LLM tests rarely flip) | `python scripts/characterize.py` | `results/why_analysis.md`, `results/characterize.json` |
+| Coverage | `python scripts/coverage.py` | `results/coverage/summary.json` |
+| Study tables | `python scripts/analyze.py > results/analysis.md`, `python scripts/analyze_mixed.py`, `python scripts/analyze_matched.py` | `results/summary.json`, `results/mixed_summary.json`, `results/matched_summary.json` |
+| Subject selection funnel | `python scripts/select_subjects.py --top 5000 --static` then `--run-sample 6` | `results/subject_funnel/` |
+
+Claude suites were generated by Claude Code subagents (no API key), with the prompts in `prompts/README.md`.
+OpenAI suites were generated through the API by `scripts/gen_openai.py`; every call is logged in
+`results/openai_calls.jsonl` (token counts only).
