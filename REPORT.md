@@ -226,3 +226,19 @@ So 1,000 targeted reruns on a slower machine found no new flaky tests, and every
 - Extended stressed run on 2 vCPU Linux: 474 flagged tests, 164,420 executions, no new flaky tests, 27 always failing tests that were all already rejected by the one run filter.
 - Scanner validation on Gruber et al. labels: 10 of 96 flaky tests flagged (13 with a new NETWORK rule), 35 of 714 controls flagged.
 - Subject funnel: 5,000 top PyPI packages to 1,959 after the static rules, all 12 current subjects pass, 5 of a 12 package runtime sample pass offline in under 60 s.
+
+### 4.11 November additions (Progress Report 2, see report2/report2.pdf)
+
+- **E1 large rerun campaign** (`results/scale_analysis.md`). All 96 suites on GitHub Actions, 600 runs per
+  generated test and 200 per human test, 6,301,400 test executions. Flaky kept tests: Human 5 of 5,587, AG-S 1
+  of 1,511, OS-S 0 of 1,406, OS-H 3 of 1,595, TP-S 0 of 913, PL-S 0 of 1,191, PL-G5 1 of 852, PL-G4 10 of 900.
+  All 10 PL-G4 tests are humanize tests that monkeypatch `i18n._CURRENT.locale`, an attribute that only exists
+  after another test called `activate()` or `deactivate()` (order dependent).
+- **E2 matched study** (`results/matched_analysis.md`). 21 of 58 Gruber et al. hand labeled non order dependent,
+  non network flaky tests reproduced, 17 used. Kept flaky tests per model: Sonnet 0 of 789, Haiku 3 of 806,
+  GPT 5.4 mini 0 of 429, GPT 4.1 mini 12 of 558 (Fisher p < 0.001 against Sonnet).
+- **Mitigation trial.** Guard prompt on GPT 4.1 mini: 9 of 550 kept tests flaky (p = 0.66 against the plain
+  prompt). The cuckoopy failures come from the salted builtin `hash()` (PYTHONHASHSEED), which seeding `random`
+  cannot fix.
+- **Why** (`results/why_analysis.md`, last section). GPT suites touch private attributes in 14 to 16% of tests
+  (Claude 0 to 0.9%, human 12.3%), and PL-G4 never resets library state after a test.
