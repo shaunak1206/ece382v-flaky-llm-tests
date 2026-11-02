@@ -12,6 +12,9 @@ on:
       only:
         description: "optional comma separated project names"
         default: ""
+      suites:
+        description: "glob over suite ids to run (e.g. *_guard_*)"
+        default: "*"
 
 jobs:
   plan:
@@ -45,7 +48,7 @@ jobs:
         run: |
           mkdir -p out
           python3 scripts/matched_run.py "${{ matrix.project }}" --work /tmp/mw --runs "${{ inputs.runs }}" \
-            --out "out/${{ matrix.project }}.json" || true
+            --suites "${{ inputs.suites }}" --out "out/${{ matrix.project }}.json" || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -6,6 +6,9 @@ prompt from prompts/README.md with the source files pasted in, one shot, no exec
 from OPENAI_API_KEY or ~/Library/Application Support/PageCatcher/openai-key.txt and never written anywhere.
 
   python scripts/gen_openai.py matched <Project_Name> <model> <sample>     -> matched/<project>/<tag>_plain_<k>/test_gen.py
+  python scripts/gen_openai.py matched <Project_Name> <model> <sample> guard
+                                                                          -> matched/<project>/<tag>_guard_<k>/test_gen.py
+     (plain prompt plus the GUARD list of flakiness pitfalls, the mitigation prompt of RQ4)
   python scripts/gen_openai.py library <lib> <model> <sample>              -> gen_plain_<tag>/<lib>/test_p<tag>_<lib>.py
 Every call is logged to results/openai_calls.jsonl (model, target, tokens, seconds), without the key.
 """
@@ -14,6 +17,14 @@ import json, os, re, sys, time, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, f"{ROOT}/scripts")
 TAGS = {"gpt-5.4-mini": "gpt54mini", "gpt-4.1-mini": "gpt41mini"}
+
+
+GUARD = ("These tests must not be flaky: every test must give the same result in every run, in any order, on any "
+         "machine. In particular: if the code under test uses random numbers (random, numpy, torch), seed every "
+         "generator in the test or assert only properties that hold for every possible random outcome; do not depend on "
+         "the wall clock, sleep, or how long something takes; do not depend on the order tests run in, and undo any "
+         "change to module level or global state; do not depend on the order of sets or dict keys unless the code "
+         "guarantees it; compare floating point results with a tolerance. ")
 
 
 def key():
@@ -54,6 +65,7 @@ def files_block(base, rels):
 
 def main():
     mode, target, model, sample = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4])
+    variant = sys.argv[5] if len(sys.argv) > 5 else "plain"
     tag = TAGS[model]
     if mode == "matched":
         T = json.load(open(f"{ROOT}/matched/targets.json"))[target]
@@ -62,8 +74,11 @@ def main():
                   f"{', '.join(T['files'])}. The source of those files is below. Write between 10 and 25 test functions in "
                   f"one file. The tests will run with Python 3.8 and pytest 7, with the project and its own dependencies "
                   f"installed, from the project root; do not use other third party packages. Reply with only the test file "
-                  f"in one python code block.\n\n" + files_block(base, T["files"]))
-        out = f"{ROOT}/matched/{target}/{tag}_plain_{sample}/test_gen.py"
+                  f"in one python code block.\n\n")
+        if variant == "guard":
+            prompt = prompt.replace("Reply with only", GUARD + "Reply with only")
+        prompt += files_block(base, T["files"])
+        out = f"{ROOT}/matched/{target}/{tag}_{variant}_{sample}/test_gen.py"
     else:
         from build_testpilot_context import MODULES
         sub, rels = MODULES[target]
@@ -77,7 +92,7 @@ def main():
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, "w").write(extract_code(text))
     with open(f"{ROOT}/results/openai_calls.jsonl", "a") as f:
-        f.write(json.dumps({"mode": mode, "target": target, "model": model, "sample": sample, "out": os.path.relpath(out, ROOT),
+        f.write(json.dumps({"mode": mode, "target": target, "model": model, "sample": sample, "variant": variant, "out": os.path.relpath(out, ROOT),
                             "prompt_chars": len(prompt), "usage": usage, "seconds": secs}) + "\n")
     n = len(re.findall(r"^\s*(?:async )?def test_", open(out).read(), re.M))
     print(f"{mode} {target} {model} #{sample}: {n} tests, {usage.get('prompt_tokens')}+{usage.get('completion_tokens')} tokens, {secs}s")

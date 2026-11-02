@@ -66,10 +66,29 @@ All 24 TP-S and PL-S agents were told to run no commands. None ran pytest or imp
 
 For each known flaky human test from Gruber et al. that we could reproduce, the generators are pointed at the
 same code under test (found by `scripts/matched_targets.py` from the names the flaky test uses) and are not
-allowed to read any test file of the project, so they cannot copy the flaky test. Two models (Claude Sonnet
-and Claude Haiku 4.5), the plain prompt, two independent samples each, one shot with no execution.
-Suite ids are `<model>_plain_<sample>`.
+allowed to read any test file of the project, so they cannot copy the flaky test. Four models (Claude Sonnet,
+Claude Haiku 4.5, GPT 5.4 mini, GPT 4.1 mini), the plain prompt, two independent samples each, one shot with
+no execution. Suite ids are `<model>_plain_<sample>`.
 
 Plain matched prompt (verbatim, `{...}` filled per project):
 
 > You are generating a unit test suite for a research experiment. Do not run any commands (no pytest, no python, no shell). Only read files and write files. Write pytest unit tests for the Python project {project}. Focus on this code: {target names} in {target files}. The project source is in {repo}; you may read any non test source file there to understand the code, but do not open any test file (anything under a tests/, test/ or testing/ folder, or named test_*.py, *_test.py or conftest.py). Write between 10 and 25 test functions in one file named test_gen.py in {out dir} (create it). The tests will run with Python 3.8 and pytest 7, with the project and its own dependencies installed; do not use other third party packages. Do not create __init__.py or conftest.py files. When done, reply with just the number of test functions.
+
+OpenAI matched prompt (verbatim, `scripts/gen_openai.py matched`). The API models cannot open files, so the
+source of the target files is pasted after the prompt as `### File: <path>` headers with a python code block
+each. GPT 5.4 mini runs with `reasoning_effort: low`. The longest python code block of the reply is saved.
+
+> Write pytest unit tests for the Python project {project}. Focus on this code: {target names} in {target files}. The source of those files is below. Write between 10 and 25 test functions in one file. The tests will run with Python 3.8 and pytest 7, with the project and its own dependencies installed, from the project root; do not use other third party packages. Reply with only the test file in one python code block.
+
+OpenAI library prompt for PL-G5 and PL-G4 (verbatim, `scripts/gen_openai.py library`, sources pasted the same
+way, the same module files the TestPilot style context covers):
+
+> Write unit tests for the Python library {lib} using pytest. The library source is below. Write between 50 and 80 test functions in one file. Only pytest, pytest-asyncio, freezegun and the Python standard library are installed besides the library itself. Reply with only the test file in one python code block.
+
+## Mitigation prompt, first trial (November 2, 2026)
+
+The guard prompt is the OpenAI matched prompt with this paragraph inserted before "Reply with only". It was
+tried first on GPT 4.1 mini, the model whose matched suites had flaky tests, two samples per project, suite ids
+`gpt41mini_guard_<sample>` (`scripts/gen_openai.py matched <project> gpt-4.1-mini <k> guard`).
+
+> These tests must not be flaky: every test must give the same result in every run, in any order, on any machine. In particular: if the code under test uses random numbers (random, numpy, torch), seed every generator in the test or assert only properties that hold for every possible random outcome; do not depend on the wall clock, sleep, or how long something takes; do not depend on the order tests run in, and undo any change to module level or global state; do not depend on the order of sets or dict keys unless the code guarantees it; compare floating point results with a tolerance.

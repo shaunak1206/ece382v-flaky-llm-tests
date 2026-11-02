@@ -54,6 +54,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("project")
     ap.add_argument("--work", default="/tmp/matched_work"); ap.add_argument("--runs", type=int, default=150)
     ap.add_argument("--timeout", type=int, default=60); ap.add_argument("--out", required=True)
+    ap.add_argument("--suites", default="*", help="glob over suite ids, e.g. '*_guard_*'")
     a = ap.parse_args()
     r = gr.row_for(a.project); t0 = time.time()
     d = f"{a.work}/{a.project}"; repo = f"{d}/repo"; venv = f"{d}/venv"
@@ -79,7 +80,7 @@ def main():
         if i == 0 and (not out_res or all(s == "error" for s in sts)): break
     res["human"] = {"runs": sum(hc.values()), "passed": hc["pass"], "failed": hc["fail"], "errors": hc["error"],
                     "reproduced": hc["pass"] > 0 and hc["fail"] + hc["error"] > 0, "messages": hm}
-    for sdir in sorted(glob.glob(f"{ROOT}/matched/{a.project}/*/")):
+    for sdir in sorted(glob.glob(f"{ROOT}/matched/{a.project}/{a.suites}/")):
         sid = os.path.basename(sdir.rstrip("/"))
         model, prompt, sample = (sid.split("_") + ["", "", ""])[:3]
         dst = f"{repo}/zz_{sid}"; shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst)
