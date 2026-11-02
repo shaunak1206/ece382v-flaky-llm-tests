@@ -11,6 +11,13 @@ Condition names used everywhere:
 | OS-H | `gen_oneshot_haiku/<lib>` | Claude Haiku 4.5, one shot | feature prompt | none |
 | TP-S | `gen_tp_sonnet/<lib>` | Claude Sonnet, one shot | TestPilot style (API docs only) | none |
 | PL-S | `gen_plain_sonnet/<lib>` | Claude Sonnet, one shot | plain "write pytest tests" | none |
+| PL-G5 | `gen_plain_gpt54mini/<lib>` | GPT 5.4 mini (OpenAI API, reasoning effort low), one shot | plain, source pasted into the prompt | none |
+| PL-G4 | `gen_plain_gpt41mini/<lib>` | GPT 4.1 mini (OpenAI API), one shot | plain, source pasted into the prompt | none |
+
+Claude suites were written by Claude Code subagents that read the source files themselves and were told not to
+open any test file. OpenAI suites were generated through the API with the source pasted into the prompt, so they
+cannot see test files. A *test* in the result tables is one pytest test case (each parametrized case counts); a
+*test function* in `results/why_analysis.md` is one function in the source.
 
 The **feature prompt** names the time, randomness, thread, and file features of each library so the model
 tests them. The exact prompt texts are in `prompts/README.md`. In the matched study (below) suite ids have

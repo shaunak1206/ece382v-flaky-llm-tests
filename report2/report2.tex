@@ -18,33 +18,31 @@
 \section{Summary}
 The main problem after Progress Report 1 was that we had only 3 flaky LLM tests to study. We changed the plan to attack that shortage directly.
 \begin{enumerate}
-\item \textbf{Known flaky code (E2).} We took the flaky tests that Gruber et al.~\cite{gruber2021} labeled by hand, reproduced 21 of 58 on our own runner, and asked four LLMs to write tests for the same code without seeing the flaky test (Section~\ref{sec:matched}).
-\item \textbf{More runs (E1).} We reran all 96 suites of the 12 library study, 600 times per generated test and 200 times per human test, for 6.3 million test executions (Section~\ref{sec:scale}).
+\item \textbf{Known flaky code (E2).} We took flaky tests that Gruber et al.~\cite{gruber2021} labeled by hand, reproduced 21 of 58 on our own runner, and asked four LLMs to write tests for the same code without seeing the flaky test (Section~\ref{sec:matched}).
+\item \textbf{More runs (E1).} We reran all 96 suites of the 12 library study, 600 times per generated test and 200 times per human test (Section~\ref{sec:scale}).
 \item \textbf{A second model family.} We added two OpenAI models, GPT~5.4 mini and GPT~4.1 mini.
-\item \textbf{Why (E3).} We measured how each condition builds its tests, to explain which tests flip and why (Section~\ref{sec:why}).
+\item \textbf{Why (E3).} We measured how each condition builds its tests, and tested one explanation directly (Section~\ref{sec:why}).
 \end{enumerate}
-We now have 52 flaky LLM test cases instead of 3 (Table~\ref{tab:count}), and we labeled the root cause of each one. The main result is that flakiness depends strongly on the model. On code that is known to cause flaky tests, Claude Sonnet and GPT~5.4 mini wrote no flaky test that a one run filter would keep (0 of 1,218), while GPT~4.1 mini wrote 12 (2.2\%). The difference is significant (Fisher's exact test, $p < 0.001$). We also found the first order dependent LLM tests. A first mitigation trial showed that adding a warning to the prompt does not remove the flaky tests of GPT~4.1 mini.
+We now have 39 flaky LLM tests that a developer would keep, plus 13 that a one run filter would reject (Table~\ref{tab:count}). Each has a root cause label. The main result is that one model, GPT~4.1 mini, wrote most of them. On code where randomness already causes a flaky human test, it wrote kept flaky tests in 6 of 34 suites, while Claude Sonnet and GPT~5.4 mini wrote none (Section~\ref{sec:matched}). We also found the first order dependent LLM tests, and showed that one missing reset causes all 10 of them in E1.
 
 \begin{table}[h]
-\caption{Flaky LLM test cases we can now study. ``Kept'' means a one run generate and filter step would keep the test.}
+\caption{Flaky LLM tests we can now study. Kept means a one run generate and filter step would keep the test.}
 \label{tab:count}
 \small
-\begin{tabularx}{\columnwidth}{Xr}
+\begin{tabularx}{\columnwidth}{Xrr}
 \toprule
-Source & Flaky cases \\
+Source & Kept & Rejected \\
 \midrule
-Progress Report 1 (laptop and runner, 70 to 90 runs) & 3 \\
+E1, large rerun campaign & 15 & n/a \\
+E2, matched study, plain prompt & 15 & 10 \\
+E2, mitigation trial, guard prompt & 9 & 3 \\
 \midrule
-E1, large rerun campaign, kept & 15 \\
-E2, matched study, plain prompt, kept & 15 \\
-E2, matched study, plain prompt, rejected by the filter & 10 \\
-E2, mitigation trial (guard prompt), kept & 9 \\
-E2, mitigation trial (guard prompt), rejected by the filter & 3 \\
-\midrule
-Total now & 52 \\
+Total & 39 & 13 \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+Two of the 3 tests from Progress Report 1 flipped again and are inside the 15 of E1. The third, a retry loop with a 120~ms deadline, did not flip in its 600 new runs. E1 counts rejected tests as not studied, so that column is empty.
 
 \section{Response to the Progress Report 1 feedback}
 Table~\ref{tab:response} answers each comment.
@@ -58,21 +56,21 @@ Table~\ref{tab:response} answers each comment.
 Comment & What we did \\
 \midrule
 The subject filter numbers were packed into one sentence. What does ``and we say so'' mean? & The funnel is now a table (Table~\ref{tab:funnel}). The phrase meant that we oversample the first stratum on purpose. We now say that directly and give the reason below the table. \\
-Why randomly sample, and why not run more? & The random sample was only used for the costly install and run check of new candidate subjects, not for the study itself. We now run far more. Every generated test ran 600 times instead of 70 to 90, and every human test 200 times (Section~\ref{sec:scale}). \\
-Why not use Python flaky tests that prior datasets already found? & We now do. We reproduced 21 of the 58 hand labeled flaky tests from Gruber et al.\ that are not order dependent and not caused by the network, and used 17 of them for the matched study (Section~\ref{sec:matched}). \\
-Can a study rest on three flaky tests? & No, so we built E2 to find more. We now have 52 flaky LLM test cases (Table~\ref{tab:count}), each with a labeled root cause, and a model difference that is statistically significant. \\
-Are LLMs just good at avoiding flakiness, and why? & Some are and some are not. Sonnet and GPT~5.4 mini wrote no kept flaky test even for flaky code, and GPT~4.1 mini did. Section~\ref{sec:why} shows why. The careful models seed or avoid randomness and never touch shared library state. GPT~4.1 mini rarely seeds and reaches into private state without resetting it. \\
+Why randomly sample, and why not run more? & The random sample was only for the last funnel rule, which needs a clone, an install, and a test run per package, so we checked 6 packages per stratum to estimate the pass rate. It did not pick our subjects. We now run far more (600 runs per generated test instead of 70 to 90), and instead of adding random libraries we added projects that are known to have flaky tests. \\
+Why not use Python flaky tests that prior datasets already found? & We now do. We reproduced 21 of the 58 flaky tests that Gruber et al.\ labeled by hand and that are not order dependent and not caused by the network, and used 17 of them for the matched study (Section~\ref{sec:matched}). \\
+Can a study rest on three flaky tests? & No, so we built E2 to find more. We now have 39 kept flaky LLM tests and 13 rejected ones (Table~\ref{tab:count}). They still cluster in a few suites, so we also report results per suite and per project. \\
+Are LLMs just good at avoiding flakiness, and why? & It depends on the model. Sonnet and GPT~5.4 mini wrote no kept flaky test even for flaky code, and GPT~4.1 mini did. Section~\ref{sec:why} shows why. LLM tests rarely share state between tests, while GPT~4.1 mini changes private library state without resetting it and rarely controls randomness. Adding the missing reset removed all 10 of its flaky E1 tests. \\
 Why only one shot Haiku? & Haiku was only the first model where we saw flips. We now compare four models from two families under the same plain prompt. Haiku is in the middle (3 kept flaky tests of 806 in E2). \\
 72 LLM suites does not equal 36 plus 24. & This was our error. There were 60 LLM suites (36 on October 1 and 24 on October 22) plus 12 human suites, so 72 suites in all. With the 24 OpenAI suites added since, E1 has 84 LLM suites and 96 suites in all. \\
 What are AG-S, OS-S, OS-H? & Every condition is now defined in Table~\ref{tab:conds} before it is used. \\
-The next steps did not address the shortage of flaky tests. & E2 was the first step, and the plan for the rest of the semester grows it (Section~\ref{sec:next}). \\
+The next steps did not address the shortage of flaky tests. & E2 was the first step. The plan for the rest of the semester grows it, with a priority order and a fallback (Section~\ref{sec:next}). \\
 \bottomrule
 \end{tabularx}
 \end{table*}
 
 \section{Study design}
 \label{sec:design}
-Table~\ref{tab:conds} defines every condition. The \emph{feature prompt} names the time, randomness, thread, and file features of each library so the model tests them. The \emph{TestPilot style} prompt shows only signatures, docstrings, and README examples~\cite{schafer2024}. The \emph{plain} prompt only asks for pytest unit tests for the given source. Every prompt is in \texttt{prompts/README.md}, word for word.
+Table~\ref{tab:conds} defines every condition. The \emph{feature prompt} names the time, randomness, thread, and file features of each library so the model tests them. The \emph{TestPilot style} prompt shows only signatures, docstrings, and README examples, following the TestPilot generator~\cite{schafer2024}. The \emph{plain} prompt only asks for pytest unit tests for the given source. Every prompt is in \texttt{prompts/README.md}, word for word.
 
 \begin{table}[h]
 \caption{Conditions. All generation is one shot with no test execution, except AG-S.}
@@ -94,17 +92,19 @@ PL-G4 & GPT 4.1 mini (OpenAI), one shot & plain \\
 \end{tabularx}
 \end{table}
 
-\textbf{Flaky.} A test is flaky if it both passed and failed on the same machine. Every run starts a fresh pytest process. Runs change the test order (pytest-randomly) and the hash seed, and some runs also change the time zone or add CPU and memory load with stress-ng in the style of Shaker~\cite{silva2020}. A generated test counts only if a one run generate and filter step would keep it, as in TestPilot~\cite{schafer2024}, because that is what a developer would keep.
+\textbf{How suites were generated.} Claude suites were written by Claude Code subagents, which read the source files themselves and were told not to open any test file. OpenAI suites came from the API, with the same source files pasted into the prompt, so those models never saw a test file. No generated test reuses the name of the project's flaky human test. The two pipelines differ in more than the model, which Section~\ref{sec:threats} discusses.
+
+\textbf{Flaky.} A test is flaky if it both passed and failed on the same machine. Every run starts a fresh pytest process. Runs shuffle the test order (with the pytest-randomly plugin) and change the hash seed. Some runs also change the time zone or add CPU and memory load with stress-ng, using the configurations of Shaker~\cite{silva2020}, a tool that finds flaky tests by loading the machine. A generated test counts only if a one run generate and filter step would keep it, as in TestPilot, because that is what a developer would keep. A \emph{test} is one pytest test case, so each parametrized case counts.
 
 \textbf{Three parts.}
 \begin{description}
-\item[E1, 12 libraries.] Twelve Python libraries chosen by the funnel in Table~\ref{tab:funnel}. Each has the human suite and one suite per LLM condition (96 suites).
+\item[E1, 12 libraries.] Twelve Python libraries, each with its human suite and one suite per LLM condition (96 suites).
 \item[E2, matched study.] Projects where Gruber et al.\ found a flaky test. We reproduce that test, then ask each model to test the same code without showing it any test file.
-\item[E3, why.] A static comparison of how each condition builds its tests.
+\item[E3, why.] A static comparison of how each condition builds its tests, plus one direct experiment.
 \end{description}
 
 \begin{table}[h]
-\caption{Subject funnel for E1 (top 5,000 PyPI packages)}
+\caption{Subject funnel (top 5,000 PyPI packages)}
 \label{tab:funnel}
 \small
 \begin{tabularx}{\columnwidth}{Xr}
@@ -119,20 +119,21 @@ At most 3 required dependencies, runs on Python 3.12 & 2,188 \\
 Repository has test files & 1,959 \\
 \quad Stratum 1, imports time, random, threading, asyncio, \dots & 1,135 \\
 \quad Stratum 2, imports none of them & 824 \\
+Suite passes offline in under 60~s (sample of 6 per stratum) & 5 of 12 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-We draw most subjects from stratum 1 on purpose, because nondeterminism enters through those modules. Ten of our 12 libraries are in it. The other two, tinydb and tabulate, are in stratum 2 as controls.
+We oversample stratum 1 on purpose, because nondeterminism enters through those modules. To be clear about the order of events, our 12 libraries were chosen during the pilot, before the funnel existed. We wrote the funnel after the proposal feedback so the choice can be checked and repeated. All 12 pass every rule. Ten are in stratum 1, and two, tinydb and tabulate, are in stratum 2 as controls. The 5 packages that passed the run check are the pool for new subjects.
 
 \section{Results since Progress Report 1}
 
 \subsection{E1, the large rerun campaign}
 \label{sec:scale}
-All E1 suites ran on 2 vCPU Ubuntu runners on GitHub Actions. Each generated test ran 300 times with random order and hash seed, 150 times with a random time zone, and 150 times under stress-ng (600 runs). Human suites are about five times larger, so each human test ran 100, 50, and 50 times (200 runs). This gives LLM tests more chances to flip, so it can only make LLM tests look flakier than they are. Table~\ref{tab:scale} has the results.
+All E1 suites ran on GitHub Actions Linux runners with 2 virtual CPUs. Each generated test ran 300 times with a shuffled order and hash seed, 150 times with a random time zone, and 150 times under stress-ng (600 runs). Human suites are about five times larger, so each human test ran 100, 50, and 50 times (200 runs). This gives us more chances to catch a flip in an LLM test than in a human test, so the run budget favors finding LLM flaky tests. Table~\ref{tab:scale} has the results. In all, 6.3 million test executions ran, counting tests the filter rejects, which still run inside their suite.
 
 \begin{table}[h]
-\caption{E1 campaign, 12 suites per condition. Tests are those a one run filter keeps. Flaky \% has a 95\% Wilson interval.}
+\caption{E1 campaign. Generated tests are those the one run filter keeps. Human and AG-S rows count every test (AG-S already ran and fixed its own suite). Flaky \% has a 95\% Wilson interval.}
 \label{tab:scale}
 \small
 \begin{tabular}{lrrrr}
@@ -151,17 +152,16 @@ PL-G4 & 900 & 600 & 10 & 1.11 (0.60 to 2.03) \\
 \end{tabular}
 \end{table}
 
-Three results stand out.
 \begin{itemize}
-\item \textbf{Most conditions are as stable as the human tests.} Without PL-G4, 5 of 7,468 LLM tests flipped, against 5 of 5,587 human tests ($p = 0.75$).
-\item \textbf{PL-G4 is the outlier.} Its 10 flaky tests are all in humanize and fail in about 47\% of runs each. They are order dependent (Section~\ref{sec:why}). PL-G4 against PL-S, same prompt, gives $p < 0.001$.
-\item \textbf{The other new flaky tests are rare.} The AG-S and PL-G5 tests are tenacity tests that compare clock arithmetic with exact floating point equality (6 and 2 failures in 600 runs). The new OS-H test is a schedule test that failed once, in the time zone mode (Section~\ref{sec:rootcause}).
+\item \textbf{We cannot tell most LLM conditions apart from the human tests.} Without PL-G4, 5 of 7,468 LLM tests flipped (0.07\%), against 5 of 5,587 human tests (0.09\%). The intervals overlap almost completely. This does not show the two are equal, only that any difference is small.
+\item \textbf{PL-G4 is the outlier, but from one cause.} Its 10 flaky tests are 10 cases of three humanize test functions, they fail in 46 to 50\% of runs, and all depend on test order (Section~\ref{sec:why}). They are one bug repeated, not ten independent findings.
+\item \textbf{The other LLM flaky tests are rare.} Two tenacity tests (AG-S and PL-G5) compare clock arithmetic with exact floating point equality and failed 6 and 2 times in 600 runs. Three OS-H tests depend on the time (Section~\ref{sec:rootcause}).
 \end{itemize}
-The human flaky tests are two arrow locale tests that depend on test order and three pybreaker thread tests that flipped only under stress-ng. PL-G4 also lost 2 of its 12 suites (167 test functions) to files that do not import, because it imported names that do not exist (\texttt{QueryInstance} from tinydb and \texttt{CircuitBreakersState} from pybreaker).
+The five human flaky tests are two arrow locale tests that depend on test order, and three pybreaker tests that flipped only under stress-ng. Two of those are thread races, and one is a timing test. PL-G4 also lost 2 of its 12 suites (167 test functions) to files that do not import. It imported names that the packages do not export (\texttt{QueryInstance} from \texttt{tinydb}, and \texttt{CircuitBreakersState}, which does not exist, from \texttt{pybreaker}).
 
 \subsection{E2, the matched study}
 \label{sec:matched}
-\textbf{Reproducing known flaky tests.} Gruber et al.\ labeled a sample of flaky tests by hand. We took the 58 that are not order dependent and not caused by the network, checked out each project at the recorded commit, installed it in a fresh Python 3.8 environment, and ran the flaky test 150 times. Table~\ref{tab:repro} shows what happened.
+\textbf{Reproducing known flaky tests.} Gruber et al.\ labeled 100 flaky Python tests by hand. 42 are caused by the network, which leaves 58. For each, we checked out the project at the recorded commit, installed it in a fresh Python 3.8 environment, and ran the flaky test up to 150 times. Table~\ref{tab:repro} shows what happened.
 
 \begin{table}[h]
 \caption{Reproducing the hand labeled flaky tests of Gruber et al.}
@@ -181,36 +181,43 @@ Used for the matched study & 17 \\
 \end{tabular}
 \end{table}
 
-We left out 4 of the 21. Two fail because of downloads or a web API (wiki-futures, ruTS), and two are Hypothesis property tests that mostly hit the time limit on our runner (ashpool, humansort). Of the 17 projects we used, 16 are labeled randomness and one async wait.
+We left out 4 of the 21. Two fail because of downloads or a web API (wiki-futures, ruTS). The other two are Hypothesis property tests that mostly hit the time limit on our runner (ashpool, humansort). Of the 17 projects we used, 16 are labeled randomness and one async wait. So E2 tests code where randomness causes flaky tests, not flaky code in general.
 
-\textbf{Generating tests for the same code.} For each project we found the code the flaky test exercises (\texttt{scripts/matched\_targets.py}, then checked by hand) and asked each model for 10 to 25 tests of that code, two independent samples per model. The models never see a test file of the project. Every generated suite then ran 200 times on the same runner, half in file order and half in random order. The known flaky human test ran 200 times next to it as a control. It failed at least once in 16 of 17 projects (384 failures in 3,400 runs). The exception is data-genie, which failed in 98 of 150 runs during reproduction but never in the matched run. We are still checking why.
+\textbf{Generating tests for the same code.} For each project we found the code the flaky test exercises (\texttt{scripts/matched\_targets.py}, then checked by hand). We asked each model for 10 to 25 tests of that code, two independent samples per model. Every generated suite then ran 200 times on the same runner, half in file order and half in shuffled order. The known flaky human test ran 200 times next to it as a control. It failed at least once in 16 of 17 projects (384 failures in 3,400 runs). The exception is data-genie, which failed in 98 of 150 runs during reproduction but never in the matched run. We are still checking why.
 
 \begin{table}[h]
 \caption{E2 by model, 17 projects, 34 suites per model, plain prompt, 200 runs per test}
 \label{tab:matched}
 \small
-\begin{tabular}{lrrrr}
+\begin{tabularx}{\columnwidth}{Xrrrr}
 \toprule
-Model & Written & Kept & Flaky kept (\%) & Flaky rejected \\
+Model & Kept & Flaky kept & Suites with one & Flaky rejected \\
 \midrule
-Claude Sonnet & 792 & 789 & 0 (0.00) & 0 \\
-Claude Haiku 4.5 & 810 & 806 & 3 (0.37) & 0 \\
-GPT 5.4 mini & 554 & 429 & 0 (0.00) & 0 \\
-GPT 4.1 mini & 746 & 558 & 12 (2.15) & 10 \\
+Claude Sonnet & 789 & 0 & 0 & 0 \\
+Claude Haiku 4.5 & 806 & 3 & 2 & 0 \\
+GPT 5.4 mini & 429 & 0 & 0 & 0 \\
+GPT 4.1 mini & 558 & 12 & 6 & 10 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
-Table~\ref{tab:matched} has the results. ``Flaky rejected'' counts tests that were flaky but failed in the first run, so a one run filter would have dropped them. The 95\% interval for GPT~4.1 mini is 1.2 to 3.7\%, and for Sonnet it is 0 to 0.5\%. GPT~4.1 mini is flakier than Sonnet ($p < 0.001$), GPT~5.4 mini ($p = 0.002$), and Haiku ($p = 0.003$). The difference between Haiku and Sonnet is not significant ($p = 0.25$). In 11 of the 17 projects no model wrote a single kept flaky test, even though the human test for the same code is flaky.
+Table~\ref{tab:matched} has the results. ``Flaky rejected'' counts tests that were flaky but failed in the first run, so a one run filter would have dropped them. The models wrote 792, 810, 554, and 746 tests in that order, and the filter removed the rest.
 
-This comparison is about tests for the same code, not about rates. The human test was chosen because it is flaky, so the human side has a rate of 1 by construction. The question E2 answers is how often a model writes a flaky test when the code under test makes that easy.
+Flaky tests cluster within suites, so we compare at two levels.
+\begin{itemize}
+\item \textbf{Per test,} GPT~4.1 mini (12 of 558, 95\% interval 1.2 to 3.7\%) is flakier than Sonnet ($p < 0.001$, Fisher's exact test), GPT~5.4 mini ($p = 0.002$), and Haiku ($p = 0.003$). This treats tests as independent, which they are not.
+\item \textbf{Per suite,} GPT~4.1 mini has a kept flaky test in 6 of 34 suites, against 0 of 34 for Sonnet and GPT~5.4 mini ($p = 0.025$). Per project it is 5 of 17 against 0 of 17 ($p = 0.044$). Against Haiku (2 of 34 suites) the difference is not significant ($p = 0.26$).
+\end{itemize}
+Two of the 12 GPT~4.1 mini tests flip only because another test in the same suite always fails and leaves a fake behind (Section~\ref{sec:rootcause}). A one run filter would remove that test. Without these two, the per suite comparison with Sonnet gives $p = 0.053$. So the evidence that GPT~4.1 mini writes more flaky tests is clear per test and borderline per suite, and growing E2 is the way to settle it (Section~\ref{sec:next}).
+
+In 10 of the 16 projects whose human test failed in our matched runs, no model wrote a single kept flaky test. This comparison is about tests for the same code, not about rates. The human test was chosen because it is flaky, so the human side is flaky by construction. E2 measures how often a model writes a flaky test when the code under test makes that easy.
 
 \subsection{Root causes}
 \label{sec:rootcause}
-Manas labeled the root cause of every new flaky test with the categories of Luo et al.~\cite{luo2014} and Gruber et al.~\cite{gruber2021}, reading the test and the code it calls and reproducing the failure where possible. Table~\ref{tab:rc} has the counts, and \texttt{results/root\_causes/} has every label with its evidence.
+We labeled the root cause of every new flaky test with the categories of Luo et al.~\cite{luo2014} and Gruber et al., from the test, the code it calls, and a reproduction of the failure where possible. A second, independent check of every label agreed with it. Table~\ref{tab:rc} has the counts, and \texttt{results/root\_causes/} has every label with its evidence.
 
 \begin{table}[h]
-\caption{Root causes of the 52 flaky LLM test cases. Kept and rejected refer to the one run filter.}
+\caption{Root causes of the 52 flaky LLM tests}
 \label{tab:rc}
 \small
 \begin{tabularx}{\columnwidth}{Xrrrrr}
@@ -218,30 +225,30 @@ Manas labeled the root cause of every new flaky test with the categories of Luo 
  & E1 & \multicolumn{2}{c}{E2 plain} & \multicolumn{2}{c}{E2 guard} \\
 Root cause & kept & kept & rej. & kept & rej. \\
 \midrule
-Randomness, unseeded generator in the code & 0 & 10 & 9 & 4 & 2 \\
+Randomness, unseeded generator & 0 & 10 & 9 & 4 & 2 \\
 Randomness, salted \texttt{hash()} & 0 & 3 & 1 & 5 & 1 \\
 Test order dependency & 10 & 2 & 0 & 0 & 0 \\
 Time & 3 & 0 & 0 & 0 & 0 \\
-Floating point on a real clock value & 2 & 0 & 0 & 0 & 0 \\
+Floating point on a clock value & 2 & 0 & 0 & 0 & 0 \\
 \midrule
 Total & 15 & 15 & 10 & 9 & 3 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\textbf{E2 tests inherit the nondeterminism of the code.} Every randomness case in E2 calls code that draws from an unseeded global generator (NumPy, \texttt{random}, or PyTorch) and then asserts one particular outcome. In all but one of them (a gamble deck shuffle test), this is the same cause that makes the human flaky test of that project flip. In cuckoopy the source is less obvious. The filter places items by Python's built in \texttt{hash()} of a string, which changes with \texttt{PYTHONHASHSEED} in every process, and the tests insert keys that share a fingerprint. Seeding \texttt{random} cannot fix this, which is why the guard prompt did not help there.
+\textbf{E2 tests inherit the nondeterminism of the code.} Most randomness cases call code that draws from an unseeded global generator (NumPy, \texttt{random}, or PyTorch) and then assert one particular outcome. In the two torch-layer-normalization cases the test itself draws unseeded input. In all but one E2 case (a gamble deck shuffle test), the randomness is the same that makes the project's human flaky test flip. In cuckoopy the source is less obvious. The filter places items by Python's built in \texttt{hash()} of a string, which changes with \texttt{PYTHONHASHSEED} in every process, and the tests insert keys that share a fingerprint. Seeding \texttt{random} cannot fix this.
 
-\textbf{Two new order dependent patterns.} Besides the PL-G4 humanize tests (Section~\ref{sec:why}), two GPT~4.1 mini tests in pylabeledrf are order dependent. Another generated test replaces a module level function with a fake and fails before its line that restores it, so the fake stays for the rest of the process. The two victims fail whenever they run after it.
+\textbf{A second order dependent pattern.} Besides the PL-G4 humanize tests (Section~\ref{sec:why}), two GPT~4.1 mini tests in pylabeledrf depend on order. A third generated test, the polluter, replaces a module level function with a fake and always fails before the line that restores it, so the fake stays for the rest of the process. The two victims fail whenever they run after it.
 
-\textbf{E1 timing tests.} The AG-S and PL-G5 tenacity tests build a fake timestamp as \texttt{start + 5.0} (or \texttt{+ 1}) from a real \texttt{time.monotonic()} reading and assert exact equality with the elapsed time. For some values of \texttt{start}, \texttt{(start + 5.0) - start} rounds to 4.999999999999999, so the result depends on how long the machine has been up. The OS-H \texttt{test\_until\_with\_time\_object} builds a clock time one hour ahead, which wraps past midnight when the run starts between 23:00 and 24:00 local time. That is why it failed only in the time zone mode. The other two OS-H tests are the Progress Report 1 cases (a time of day string from the real clock, and a jittered wait under a lower time bound).
+\textbf{E1 timing tests.} The AG-S and PL-G5 tenacity tests build a fake timestamp as \texttt{start + 5.0} (or \texttt{+ 1}) from a real \texttt{time.monotonic()} reading and assert exact equality with the elapsed time. For some values of \texttt{start} the subtraction does not give back exactly 5.0, so the result depends on the clock value. The OS-H \texttt{test\_until\_with\_time\_object} builds a clock time one hour ahead, which wraps past midnight when the run starts between 23:00 and 24:00 local time. That is why it failed only in the time zone mode. The other two OS-H tests are the Progress Report 1 cases (a time of day string from the real clock, and a jittered wait under a lower time bound).
 
-\textbf{One plugin interaction.} One guard prompt test in pylabeledrf seeds \texttt{random} in a fixture, but pytest-randomly seeds it again just before the test body, so the fixture seed has no effect in the shuffled runs. The test is still wrong for most seeds, so we count it as randomness.
+\textbf{One plugin interaction.} One guard prompt test in pylabeledrf seeds \texttt{random} in a fixture, but pytest-randomly seeds it again just before the test body in the shuffled runs. The test fails for most seeds, so we count it as randomness.
 
-The five human flaky tests in E1 are two order dependent arrow locale tests, two pybreaker thread races, and one pybreaker test whose Redis storage keeps only whole seconds, so a one second timeout can already be over when it is checked.
+The human pybreaker timing test stores its open time in Redis as whole seconds, so a one second timeout can already be over when it is checked.
 
 \subsection{E3, why most LLM tests do not flip}
 \label{sec:why}
-\texttt{scripts/characterize.py} scans every test function for shared state, isolation helpers, clock and sleep use, timing bounds, and randomness. Table~\ref{tab:why} shows the features that separate the groups.
+\texttt{scripts/characterize.py} scans every test function in E1 for shared state, isolation helpers, clock and sleep use, timing bounds, and randomness. Table~\ref{tab:why} shows the features most tied to order dependence for the plain prompt conditions. All conditions are in \texttt{results/why\_analysis.md}.
 
 \begin{table}[h]
 \caption{Share (\%) of E1 test functions with each feature}
@@ -256,26 +263,49 @@ Any shared state between tests & 23.9 & 1.0 & 6.5 & 1.2 \\
 Class or module scoped fixture & 19.5 & 0.0 & 0.0 & 0.0 \\
 Touches a private attribute & 12.3 & 0.9 & 14.2 & 15.5 \\
 Resets library state after the test & 0.3 & 8.6 & 9.8 & 0.0 \\
-Builds a fresh library object & 18.5 & 48.1 & 34.0 & 46.2 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Why most LLM tests do not flip.} Human suites grow over years. They share setup through class and module scoped fixtures, test internal registries, and often clean up before a test but not after it. Order dependence lives in exactly that shared setup. The Claude suites never use a fixture wider than one test, touch private attributes in under 1\% of tests, and build a fresh library object in 35 to 48\% of tests. The same holds for the other Claude conditions, which are in \texttt{results/why\_analysis.md}.
+\textbf{Why most LLM tests do not flip.} Human suites share setup through class and module scoped fixtures (19.5\% of human test functions), and 4.2\% have setup code with no matching teardown. The 4 order dependent human flaky tests from Progress Report 1 all sit on such shared state. No LLM condition uses a fixture wider than one test or has setup without teardown, and in every Claude condition 35 to 48\% of tests build a fresh library object, against 18.5\% of human tests.
 
-\textbf{Why GPT~4.1 mini does flip.} The GPT suites reach into private state as often as human suites do. In humanize, PL-S resets the translation state after all 78 of its tests, and PL-G4 after none of its 65. Nine PL-G4 tests call \texttt{monkeypatch.setattr(i18n.\_CURRENT, "locale", ...)}. \texttt{\_CURRENT} is a \texttt{threading.local}, and its \texttt{locale} attribute exists only after some test has called \texttt{activate} or \texttt{deactivate}. So these tests pass after such a test and fail with an \texttt{AttributeError} when they run first. The one run filter ran the file in order, where they always pass, so it kept them. This is the same habit that makes human tests order dependent.
+\textbf{Why GPT~4.1 mini flips.} The GPT suites touch private attributes as often as human suites. Touching private state is a risk, not a cause by itself. PL-G5 does it as often but never patches the humanize translation state, and it has one flaky test. PL-G4 does patch it. Three of its humanize test functions (10 test cases) call \texttt{monkeypatch.setattr(i18n.\_CURRENT, "locale", ...)}. \texttt{\_CURRENT} is a \texttt{threading.local}, and its \texttt{locale} attribute exists only after some earlier test has called \texttt{activate} or \texttt{deactivate}. So these tests pass when such a test ran earlier and fail when none has. The one run filter ran the file in its written order, where they pass, so it kept them. PL-S resets this state around every humanize test, and PL-G4 never does.
 
-\textbf{Randomness in E2.} In E2 the code under test draws random numbers itself. Sonnet seeds a generator in 14 of its 34 suites, Haiku in 13, GPT~5.4 mini in 5, and GPT~4.1 mini in 3. GPT~5.4 mini seeds rarely but still wrote no flaky test, so seeding is not the whole answer. In spreading\_dye\_sampler, for example, Sonnet seeds NumPy and passes \texttt{squeeze=True}, which avoids the random path that returns \texttt{None}. GPT~5.4 mini replaces the random draws with fakes through \texttt{monkeypatch}. GPT~4.1 mini does neither and asserts that a random walk always returns a blot.
+\textbf{A direct test.} We ran the PL-G4 humanize suite 50 times in shuffled order as generated, and 50 times with one added fixture that calls \texttt{deactivate()} before and after every test (\texttt{scripts/humanize\_reset\_check.py}). Without the fixture 10 tests flipped. With it none did. The 4 tests that always fail are the same in both runs.
 
-\textbf{Why Haiku flipped in Progress Report 1.} With the same prompt as one shot Sonnet, Haiku wrote twice as many tests, never froze the clock in schedule (0 of 182 tests, against 62 of 78 for Sonnet), never injected a fake sleep in tenacity, and wrote one sided timing bounds with less headroom. Its flaky tests came from those timing habits.
+\textbf{Randomness in E2.} In E2 the code under test draws random numbers itself. Sonnet seeds a generator in 14 of its 34 suites, Haiku in 13, GPT~5.4 mini in 5, and GPT~4.1 mini in 3. GPT~5.4 mini seeds rarely but still wrote no flaky test, so seeding is not the whole answer. In spreading\_dye\_sampler, for example, Sonnet seeds NumPy and often passes \texttt{squeeze=True}, which avoids the random path that returns \texttt{None}. GPT~5.4 mini replaces the random draws with fakes through \texttt{monkeypatch}. GPT~4.1 mini rarely does either, and several of its tests assert that a random walk always returns a result.
+
+\textbf{Why Haiku flipped in Progress Report 1.} With the same prompt as one shot Sonnet, Haiku wrote about twice as many test functions (1,750 against 907). It never froze the clock in schedule (0 of 182 tests, against 62 of 78 for Sonnet), never injected a fake sleep in tenacity, and wrote one sided timing bounds with less headroom. Its flaky tests came from those timing habits.
 
 \subsection{First mitigation trial}
 \label{sec:mitigation}
 We started the mitigation step early on the model that needed it. The \emph{guard prompt} adds one paragraph to the plain prompt. It asks for tests that give the same result in every run and order, and lists the usual causes (unseeded randomness, wall clock time, test order and global state, set order, exact floating point). We regenerated all 34 GPT~4.1 mini suites of E2 with it and ran them the same way.
 
-The prompt helped only a little. GPT~4.1 mini now seeds in 10 of 34 suites instead of 3, and the flaky tests disappeared in 3 of the 6 projects that had them. But 9 of 550 kept tests are still flaky (1.6\%, against 2.2\%, $p = 0.66$), and the filter now rejects more tests (221 of 771 against 188 of 746). The remaining flaky tests are in cuckoopy, data-partitioner, and pylabeledrf.
+The prompt helped only a little. GPT~4.1 mini now seeds in 10 of 34 suites instead of 3. Kept flaky tests disappeared from 3 of the 5 projects that had them (scikit-procrustes, spreading\_dye\_sampler, torch-layer-normalization). But 5 new kept flaky tests appeared in cuckoopy, where seeding \texttt{random} cannot help because the cause is \texttt{hash()}. Overall 9 of 550 kept tests are flaky, against 12 of 558 ($p = 0.66$), and the filter now rejects more tests (221 of 771, against 188 of 746).
 
-We also estimated what a stricter filter would catch, using the measured failure rate of every kept flaky LLM test in E1 and E2 (39 tests). If a test fails in a fraction $f$ of runs, $k$ extra runs catch it with probability $1-(1-f)^k$. Three extra runs would catch about 52\% of these tests, five about 63\%, and ten about 73\%. Twelve of the 39 fail in under 5\% of runs, so a short rerun filter misses them. The order dependent PL-G4 tests are caught only if the extra runs also shuffle the order. Stable tests cost nothing but run time under a rerun filter, because they never fail.
+We also estimated what a stricter filter would catch, from the measured failure rate of the 39 kept flaky LLM tests. If a test fails in a fraction $f$ of runs, $k$ extra runs catch it with probability $1-(1-f)^k$. Table~\ref{tab:krun} shows the expected share caught. Twelve of the 39 fail in under 5\% of runs, so a short rerun filter misses them. The order dependent tests are caught only if the extra runs also shuffle the order. Stable tests cost only run time, because they never fail.
+
+\begin{table}[h]
+\caption{Expected share of the 39 kept flaky LLM tests that $k$ extra filter runs would catch}
+\label{tab:krun}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Extra runs $k$ & 1 & 3 & 5 & 10 \\
+\midrule
+Caught (\%) & 26 & 52 & 63 & 73 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Threats to validity}
+\label{sec:threats}
+\begin{itemize}
+\item \textbf{Pipeline, not only model.} Claude suites came from Claude Code subagents that read files, and OpenAI suites came from the API with sources pasted in. Sampling settings and system prompts differ too. The model comparison is therefore a comparison of two pipelines with four models.
+\item \textbf{Scope of E2.} 16 of 17 projects are randomness projects, so E2 says nothing yet about time or concurrency.
+\item \textbf{Clustering.} Flaky tests cluster within suites and projects, so per test $p$ values overstate the evidence. We report per suite results next to them.
+\item \textbf{Run order record.} The matched runner stores totals per test, not which half (file order or shuffled) each failure came from.
+\end{itemize}
 
 \section{Milestone goals and status}
 Table~\ref{tab:goals} lists the Intermediate Steps 2 goals from the proposal and the next steps we promised in Progress Report 1.
@@ -291,12 +321,12 @@ Goal & Status & Notes \\
 Rerun every flagged test at least 1,000 times on the GitHub runners, with and without CPU stress & Done & Done for Progress Report 1 (over 1,300 runs each). Every E1 test now also has 600 (generated) or 200 (human) runs. \\
 Add a non Claude model & Done & GPT~5.4 mini and GPT~4.1 mini with the plain prompt, in E1 and E2. We did not run them with the TestPilot style prompt, and spent that budget on E2 instead. \\
 Add the plain prompt & Done & Added October 22 (PL-S), now also used for every E2 model. \\
-Measure scanner precision and recall & Done & Done for Progress Report 1 on 96 Gruber et al.\ tests (recall 10 of 96, flag rate 4.9\% on non flaky tests). \\
-Measure coverage of every suite & Done & Mean line coverage without filelock is 94.4\% for human suites, 82.6\% for PL-S, 75.6\% for PL-G5, and 67.0\% for PL-G4, two of whose suites did not import (\texttt{results/coverage/}). \\
-Search the generated suites for order dependent tests (iDFlakies style~\cite{lam2019}) & Partly & Every run shuffles the order, and the mixed suites ran 30 shuffled orders. This found the PL-G4 humanize victims and their polluter. We have not yet run a systematic polluter and victim search over every suite. \\
+Measure scanner precision and recall & Done & Done for Progress Report 1 on 96 hand labeled tests of Gruber et al. Recall is low (10 of 96), because most of the nondeterminism is inside the library, not in the test. It flagged 35 of 714 tests that were never reported flaky (4.9\%). \\
+Measure coverage of every suite & Done & Mean line coverage is 94.4\% for human suites, 82.6\% for PL-S, 75.6\% for PL-G5, and 67.0\% for PL-G4, two of whose suites did not import. We leave out filelock, whose Windows module never runs on our machines (\texttt{results/coverage/}). \\
+Search for order dependent tests in the style of iDFlakies~\cite{lam2019}, a tool that reruns tests in many orders to find order dependence & Partly & Every rerun shuffles the order, which found the PL-G4 humanize tests and the pylabeledrf victims. Progress Report 1's mixed suites (generated tests run inside the human suite) found three more. A systematic search for the polluter of every victim is not done yet. \\
 Add four new subjects from the funnel & Replaced & The matched study adds 17 projects with known flaky code, which attacks the shortage of flaky tests more directly. \\
-Run Shaker's configuration selection & Not done & Only three human tests flip only under stress-ng, too few to choose configurations from. \\
-Run FlaPy on every suite & Dropped & FlaPy ran on two suites. Our harness already reruns in fresh processes in file and random order, which is what FlaPy does, so we stopped there. \\
+Pick stress-ng configurations with Shaker's selection step & Not done & Only three human tests flip only under stress-ng, too few to choose configurations from. \\
+Run FlaPy~\cite{gruber2023flapy} (the rerun tool of Gruber et al.) on every suite & Dropped & FlaPy ran on two suites. Our harness already reruns in fresh processes in file and shuffled order, which is what FlaPy does, so we stopped there. \\
 Start the mitigation early & Started & Guard prompt trial and the rerun filter estimate (Section~\ref{sec:mitigation}). \\
 \bottomrule
 \end{tabularx}
@@ -304,32 +334,36 @@ Start the mitigation early & Started & Guard prompt trial and the rerun filter e
 
 \section{Challenges}
 \begin{itemize}
-\item \textbf{Old projects are hard to run.} Only 21 of 58 known flaky tests reproduced. Most of the rest always failed because of old dependencies or missing data files. We added an automatic step that installs missing imported packages, which rescued several projects.
-\item \textbf{A bug cost us one project.} Projects with a \texttt{src} folder that cannot be installed import their code only through a path change in their own tests. Our generated tests did not have it, so all 8 fuzzylogic suites failed to import. We fixed the runner and reran fuzzylogic before writing this report.
-\item \textbf{Models invent names.} PL-G4 lost two whole E1 suites to imports of names that do not exist, and the one run filter rejected 125 of 554 GPT~5.4 mini tests in E2.
+\item \textbf{Old projects are hard to run.} Only 21 of 58 known flaky tests reproduced. Most of the rest always failed because of old dependencies or missing data files. We added a step that installs any missing imported package and tries again, which made Intervallum run, for example.
+\item \textbf{A bug cost us one project for a while.} fuzzylogic cannot be installed, and its own tests add its \texttt{src} folder to the import path by hand. Our runner did not, so all 8 generated fuzzylogic suites failed to import. We fixed the runner and reran fuzzylogic before writing this report.
+\item \textbf{Models invent names.} PL-G4 lost two whole E1 suites to imports of names the packages do not export.
 \item \textbf{A one run filter in file order hides order dependence.} The PL-G4 humanize tests always pass in file order, so they were kept.
-\item \textbf{Flakiness is still rare for most models.} Sonnet and GPT~5.4 mini produced no kept flaky test in E2, so their root causes cannot be studied from flips alone.
+\item \textbf{Flakiness is still rare for most models.} Sonnet and GPT~5.4 mini produced no kept flaky test in E2, so their behavior can only be bounded, not studied from flips.
 \end{itemize}
 
 \section{Next steps and recovery plan}
 \label{sec:next}
-The plan for the rest of the semester grows E2, because it is the part of the study that produces flaky LLM tests.
+The plan grows E2, because it is the part of the study that produces flaky LLM tests. The steps are in priority order. Progress Report 3 is due November 20.
 \begin{enumerate}
-\item \textbf{More known flaky projects (by November 13).} Gruber et al.\ found 952 flaky tests that are not order dependent in 277 projects, and we have used 58. We will run the same reproduction on the rest on GitHub Actions. At our current rate of about 36\% this should give 60 to 90 more projects, and we will generate the same four models for each.
-\item \textbf{An order dependent arm (by November 20).} Gruber et al.\ also found 4,461 order dependent tests in 615 projects. For a sample of these we will generate LLM tests for the same code and run them inside the human suite in shuffled orders, to test directly whether LLM tests avoid shared state or become victims and polluters.
-\item \textbf{Mitigation, RQ4 (by November 20).} Run the guard prompt for all four models, add an automatic fixture that seeds \texttt{random}, NumPy, and PyTorch before every generated test, and compare a 3 and 5 run filter that shuffles the order. For each we report flaky tests kept, good tests lost, coverage, and cost.
-\item \textbf{Delay injection for timing tests (by November 20).} Use FlakeRake style delays~\cite{rahman2024} on E1 tests with timing bounds, to find timing flips that are too rare for reruns.
-\item \textbf{Final report (December 12).} If the strong models still produce almost no flaky tests on the larger E2, we will report upper bounds per model and use E3 to explain them, as planned in the proposal.
+\item \textbf{More known flaky projects (Shaunak, by November 13).} Gruber et al.\ found 952 flaky tests that are not order dependent in 277 projects, without hand labels. We have tried 58 tests in 58 projects. We will reproduce one test from each of the roughly 220 remaining projects on GitHub Actions and drop network failures by their error messages. At our rates so far (21 in 58 reproduced, 17 in 58 usable) this should give 60 to 80 projects, and we will stop at 40 new ones. We will take time, concurrency, and IO projects first, so E2 is not only about randomness. The runner will also record each run's order, so file order and shuffled order can be compared.
+\item \textbf{Root causes for new flaky tests (Manas, ongoing).} Label every new flaky test the same way as above.
+\item \textbf{Mitigation, research question 4 of the proposal (Shaunak, by November 20).} Run the guard prompt for all four models. Add an automatic fixture that seeds \texttt{random}, NumPy, and PyTorch and resets known library state before every generated test. Compare a 3 and 5 run filter that shuffles the order. For each we report flaky tests kept, good tests lost, coverage, and cost.
+\item \textbf{An order dependent arm (Manas, by November 20).} Gruber et al.\ also found 4,461 order dependent tests in 615 projects. For 10 of these projects we will generate LLM tests for the same code and run them inside the human suite in shuffled orders, to test directly whether LLM tests avoid shared state or become victims and polluters.
+\item \textbf{Delay injection (if time allows).} Use FlakeRake~\cite{rahman2024}, which inserts delays to reproduce timing failures, on the E1 tests with timing bounds.
 \end{enumerate}
+\textbf{Check point and fallback.} On November 13 we check how many new projects reproduced. If fewer than 20 did, we stop growing E2 and move that time to steps 3 and 4. Step 5 is the first to cut. If the strong models still write almost no flaky tests, the final report will give upper bounds per model and use E3 to explain them, as planned in the proposal.
 
-\textbf{Division of work.} Since Progress Report 1, Manas did the literature review and labeled the root cause of every new flaky test. Shaunak built the reproduction and matched study pipeline, generated the OpenAI suites, ran the E1 campaign, and wrote the analysis scripts and this report. For the next milestone Manas will label the root causes of the new E2 and order dependent flaky tests and write the related work section of the final report. Shaunak will scale the reproduction, build the order dependent arm, and run the mitigation experiments.
+\textbf{Division of work.} Since Progress Report 1, Manas did the literature review and the root cause labeling of the new flaky tests. Shaunak built the reproduction and matched study pipeline, generated the OpenAI suites, ran the E1 campaign and the mitigation trial, and wrote the analysis scripts and this report. The split for the next milestone is in the list above. Manas will also write the related work section of the final report.
+
+\section{Related work}
+Luo et al.~\cite{luo2014} give the root cause categories we use, and Gruber et al.~\cite{gruber2021} show what flakiness looks like in Python and provide the labeled tests behind E2. TestPilot~\cite{schafer2024} is the generate and filter pipeline we imitate. It keeps a test after one passing run, which Section~\ref{sec:mitigation} shows is not enough for flaky tests. Shaker~\cite{silva2020} gives our stress-ng configurations, iDFlakies~\cite{lam2019} the shuffled order reruns, and FlakeRake~\cite{rahman2024} the delay injection we plan. Parry et al.~\cite{parry2021} survey the field. None of these studies looks at tests written by LLMs.
 
 \section{Code, data, and documentation}
 Everything is in the public repository \url{https://github.com/shaunak1206/ece382v-flaky-llm-tests}.
 \begin{itemize}
 \item \texttt{README.md} explains how to set up the environment and gives the command for every experiment.
-\item \texttt{docs/DATA.md} documents every result file and field, for example the per test \texttt{counts} and \texttt{kind} in each rerun file and the columns of \texttt{results/gruber/candidates.csv}.
-\item Raw results are under \texttt{results/}. Generated suites are under \texttt{gen\_*}, \texttt{llm\_tests/}, and \texttt{matched/}. Every prompt is in \texttt{prompts/README.md}.
+\item \texttt{docs/DATA.md} documents every result file and field. Examples are the per test \texttt{counts} and \texttt{kind} in each rerun file, the columns of \texttt{results/gruber/candidates.csv}, and the fields of the matched study files.
+\item Raw results are under \texttt{results/}. Generated suites are under \texttt{gen\_*}, \texttt{llm\_tests/}, and \texttt{matched/}. Every prompt is in \texttt{prompts/README.md}. Root cause labels are in \texttt{results/root\_causes/}.
 \end{itemize}
 New since Progress Report 1:
 \begin{itemize}
@@ -337,7 +371,7 @@ New since Progress Report 1:
 \item \texttt{scripts/matched\_targets.py} finds the code a flaky test exercises. \texttt{scripts/matched\_run.py} and the \texttt{matched-study} workflow rerun generated suites next to the human flaky test. \texttt{scripts/analyze\_matched.py} makes the E2 tables.
 \item \texttt{scripts/gen\_openai.py} generates the OpenAI suites, including the guard prompt, and logs every call.
 \item \texttt{scripts/scale\_reruns.sh}, the \texttt{scale-reruns} workflow, and \texttt{scripts/analyze\_scale.py} run and summarize the E1 campaign.
-\item \texttt{scripts/characterize.py} measures how each test is built (\texttt{results/why\_analysis.md}).
+\item \texttt{scripts/characterize.py} measures how each test is built (\texttt{results/why\_analysis.md}), and \texttt{scripts/humanize\_reset\_check.py} runs the reset experiment.
 \end{itemize}
 
 \bibliographystyle{ACM-Reference-Format}

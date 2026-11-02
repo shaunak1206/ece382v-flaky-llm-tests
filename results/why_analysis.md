@@ -209,8 +209,11 @@ So two of the three Haiku flaky tests follow from habits that Sonnet does not ha
 
 The GPT suites reach into private state about as often as the human suites do, unlike every Claude suite (0
 to 0.9%). In humanize, PL-S resets the translation state after all 78 tests, PL-G5 after 2 of 78, and PL-G4
-after none of 65, while 9 PL-G4 humanize tests monkeypatch `i18n._CURRENT.locale`. That attribute of a
+after none of 65. Three PL-G4 humanize test functions (10 test cases, one function is parametrized 8 ways) monkeypatch `i18n._CURRENT.locale` (9 PL-G4 humanize functions use monkeypatch at all). That attribute of a
 `threading.local` only exists after `activate()` or `deactivate()` has run in the process, so these tests pass
 when an earlier test has activated a locale and fail when they run first. All 10 flaky PL-G4 tests in the
 large rerun campaign are this case. It is the first order dependence we have seen in an LLM suite, and it comes
 from the same habit (private module state, no reset) that makes the human suites order dependent.
+`scripts/humanize_reset_check.py` confirms it: in 50 shuffled runs the 10 tests flip as generated and none flips
+with one added autouse fixture that calls `humanize.i18n.deactivate()` before and after each test
+(`results/humanize_reset_check.json`).
