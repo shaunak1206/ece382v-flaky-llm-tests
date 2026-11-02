@@ -1,0 +1,73 @@
+name: scale-reruns
+
+# Many more reruns of every existing suite (72 suites: 60 LLM, 12 human) on 2 vCPU Linux runners.
+#   gh workflow run scale-reruns
+on:
+  workflow_dispatch:
+    inputs:
+      gen_runs:
+        description: "both,tz,stressng runs for generated suites"
+        default: "300,150,150"
+      human_runs:
+        description: "both,tz,stressng runs for human suites"
+        default: "100,50,50"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - id: p
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          projs = "cachetools schedule tinydb humanize toolz tabulate tenacity filelock boltons more_itertools arrow pybreaker".split()
+          conds = ["human", "llm_tests", "gen_oneshot_sonnet", "gen_oneshot_haiku", "gen_tp_sonnet", "gen_plain_sonnet"]
+          print("matrix=" + json.dumps({"include": [{"cond": c, "proj": p} for c in conds for p in projs]}))
+          PY
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: install tools
+        run: |
+          sudo apt-get install -y -qq stress-ng > /dev/null
+          python -m pip install -q -r colab/requirements-mixed.txt
+      - name: fetch and install the library under test
+        run: PYTHON=python bash scripts/fetch_subject.sh "${{ matrix.proj }}"
+      - name: reruns
+        run: |
+          if [ "${{ matrix.cond }}" = "human" ]; then IFS=, read b t s <<< "${{ inputs.human_runs }}"; else IFS=, read b t s <<< "${{ inputs.gen_runs }}"; fi
+          bash scripts/scale_reruns.sh "${{ matrix.cond }}" "${{ matrix.proj }}" "$b" "$t" "$s"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scale-${{ matrix.cond }}-${{ matrix.proj }}
+          path: results/runs_scale/
+          if-no-files-found: warn
+
+  collect:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: scale-*
+          merge-multiple: true
+          path: runs_scale
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scale-results
+          path: runs_scale/
