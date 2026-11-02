@@ -13,7 +13,8 @@ Output JSON fields
   project, sha, category (Gruber label of the human flaky test), install_ok,
   human: {runs, passed, failed, errors, reproduced, messages}
   suites: {suite_id: {model, prompt, sample, n_tests, first_run_failed (ids failing in run 1, what a one run
-           filter would reject), tests: {test_id: {pass, fail, error, skip, kind}}, flaky (ids),
+           filter would reject), tests: {test_id: {pass, fail, error, skip, kind, fails_file_order,
+           fails_shuffled}}, flaky (ids),
            always_fail (ids), runs}}
   kind is flaky (passed and failed), always-fail, stable, or always-skip.
 """
@@ -90,17 +91,21 @@ def main():
             if os.path.basename(f) == "__init__.py" or (os.path.basename(f) == "conftest.py" and prompt != "plainseed"): continue
             shutil.copy(f, dst)
         hist = collections.defaultdict(collections.Counter); first_fail = []
+        fails_by_order = collections.defaultdict(collections.Counter)
         for i in range(a.runs):
             seed = 7000 + i
             out_res, tail = run_suite(py, repo, f"zz_{sid}", a.timeout, seed, randomize=(i % 2 == 1))
             if i == 0:
                 first_fail = sorted(t for t, s in out_res.items() if s in ("fail", "error"))
-            for t, s in out_res.items(): hist[t][s] += 1
+            for t, s in out_res.items():
+                hist[t][s] += 1
+                if s in ("fail", "error"): fails_by_order[t]["shuffled" if i % 2 else "file"] += 1
         tests = {}
         for t, c in hist.items():
             p, f = c["pass"], c["fail"] + c["error"]
             kind = "flaky" if p and f else "always-fail" if f else "always-skip" if not p else "stable"
-            tests[t] = {"pass": p, "fail": c["fail"], "error": c["error"], "skip": c["skip"], "kind": kind}
+            tests[t] = {"pass": p, "fail": c["fail"], "error": c["error"], "skip": c["skip"], "kind": kind,
+                        "fails_file_order": fails_by_order[t]["file"], "fails_shuffled": fails_by_order[t]["shuffled"]}
         res["suites"][sid] = {"model": model, "prompt": prompt, "sample": sample, "runs": a.runs, "n_tests": len(tests),
                               "first_run_failed": first_fail, "tests": tests,
                               "flaky": sorted(t for t, v in tests.items() if v["kind"] == "flaky"),

@@ -15,9 +15,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def row_for(name):
-    for r in csv.DictReader(open(f"{ROOT}/results/gruber/candidates.csv")):
-        if r["Project_Name"] == name:
-            return r
+    for f in ("candidates.csv", "candidates_ext.csv"):
+        for r in csv.DictReader(open(f"{ROOT}/results/gruber/{f}")):
+            if r["Project_Name"] == name:
+                return r
     raise SystemExit(f"unknown project {name}")
 
 
