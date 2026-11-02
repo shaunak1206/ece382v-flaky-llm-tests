@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Tables for the matched study: LLM tests written for code that is known to cause a flaky human test.
 
-Reads results/matched/<project>.json and the mitigation trial results/matched_guard/<project>.json (both from
-scripts/matched_run.py), writes results/matched_summary.json and
+Reads results/matched/<project>.json and the mitigation trials results/matched_guard/<project>.json (guard
+prompt) and results/matched_mitig/<project>.json (M1 seeding conftest on every plain suite, and the guard2
+prompt), all from scripts/matched_run.py, writes results/matched_summary.json and
 prints markdown tables. A generated test is counted only if a one run filter would keep it (it passed in the
 first run), the same rule as the 12 library study; always failing tests are reported separately.
 """
@@ -15,7 +16,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NEEDS_REJECTED_POLLUTER = {("pylabeledrf", "gpt41mini_plain_1", "test_computeLRF_identical_simple_tree"),
                            ("pylabeledrf", "gpt41mini_plain_1", "test_computeLRF_simple_flip_label")}
 MODEL = {"sonnet": "Claude Sonnet", "haiku": "Claude Haiku 4.5", "gpt54mini": "GPT 5.4 mini", "gpt41mini": "GPT 4.1 mini",
-         "gpt41mini+guard": "GPT 4.1 mini, guard prompt"}
+         "gpt41mini+guard": "GPT 4.1 mini, guard prompt", "gpt41mini+guard2": "GPT 4.1 mini, guard prompt v2",
+         "sonnet+plainseed": "Claude Sonnet + seeding conftest", "haiku+plainseed": "Claude Haiku 4.5 + seeding conftest",
+         "gpt54mini+plainseed": "GPT 5.4 mini + seeding conftest", "gpt41mini+plainseed": "GPT 4.1 mini + seeding conftest"}
 
 
 def wilson(k, n, z=1.96):
@@ -27,7 +30,7 @@ def wilson(k, n, z=1.96):
 
 def main():
     files = sorted(glob.glob(f"{ROOT}/results/matched/*.json"))
-    guard = sorted(glob.glob(f"{ROOT}/results/matched_guard/*.json"))
+    guard = sorted(glob.glob(f"{ROOT}/results/matched_guard/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_mitig/*.json"))
     per_model = collections.defaultdict(lambda: collections.Counter())
     per_project = []
     flaky_list = []
@@ -38,7 +41,7 @@ def main():
         row = {"project": j["project"], "category": j["category"], "human_runs": h.get("runs", 0),
                "human_failures": h.get("failed", 0) + h.get("errors", 0), "human_reproduced": h.get("reproduced", False)}
         for sid, s in j["suites"].items():
-            m = s["model"] + ("+guard" if s.get("prompt") == "guard" else "")
+            m = s["model"] + ("" if s.get("prompt") == "plain" else "+" + s.get("prompt", ""))
             # a module level id (classname::file) means the file did not import, so no test ran
             if all(t.startswith("::") for t in s["tests"]):
                 per_model[m]["suites_not_collected"] += 1

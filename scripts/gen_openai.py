@@ -8,7 +8,8 @@ from OPENAI_API_KEY or ~/Library/Application Support/PageCatcher/openai-key.txt 
   python scripts/gen_openai.py matched <Project_Name> <model> <sample>     -> matched/<project>/<tag>_plain_<k>/test_gen.py
   python scripts/gen_openai.py matched <Project_Name> <model> <sample> guard
                                                                           -> matched/<project>/<tag>_guard_<k>/test_gen.py
-     (plain prompt plus the GUARD list of flakiness pitfalls, the mitigation prompt of RQ4)
+     (plain prompt plus the GUARD list of flakiness pitfalls, the mitigation prompt of RQ4; variant guard2
+      adds GUARD2, the three mechanisms found in the guard trial)
   python scripts/gen_openai.py library <lib> <model> <sample>              -> gen_plain_<tag>/<lib>/test_p<tag>_<lib>.py
 Every call is logged to results/openai_calls.jsonl (model, target, tokens, seconds), without the key.
 """
@@ -25,6 +26,17 @@ GUARD = ("These tests must not be flaky: every test must give the same result in
          "the wall clock, sleep, or how long something takes; do not depend on the order tests run in, and undo any "
          "change to module level or global state; do not depend on the order of sets or dict keys unless the code "
          "guarantees it; compare floating point results with a tolerance. ")
+
+
+# Guard prompt v2 (Nov 3): GUARD plus the three mechanisms behind the guard trial's flaky tests
+# (results/root_causes/labels.json): the salted builtin hash(), seeding in a fixture that pytest-randomly
+# later overrides, and a module attribute replaced by hand and never restored.
+GUARD2 = GUARD + ("Three cases need extra care. First, seed random, numpy.random and torch at the start of the test "
+                  "function body itself, not in a fixture, whenever the code under test might draw random numbers, even "
+                  "if the test does not call them directly. Second, Python's builtin hash() of str and bytes changes in "
+                  "every run, so if the code uses hash(), for example to pick buckets or slots, assert only results that "
+                  "hold for every hash value, or use int keys, whose hash is fixed. Third, replace module attributes "
+                  "only with pytest's monkeypatch fixture, so they are restored even when the test fails. ")
 
 
 def key():
@@ -75,8 +87,8 @@ def main():
                   f"one file. The tests will run with Python 3.8 and pytest 7, with the project and its own dependencies "
                   f"installed, from the project root; do not use other third party packages. Reply with only the test file "
                   f"in one python code block.\n\n")
-        if variant == "guard":
-            prompt = prompt.replace("Reply with only", GUARD + "Reply with only")
+        if variant in ("guard", "guard2"):
+            prompt = prompt.replace("Reply with only", (GUARD if variant == "guard" else GUARD2) + "Reply with only")
         prompt += files_block(base, T["files"])
         out = f"{ROOT}/matched/{target}/{tag}_{variant}_{sample}/test_gen.py"
     else:
