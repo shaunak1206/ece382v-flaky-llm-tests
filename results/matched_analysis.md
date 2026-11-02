@@ -1,12 +1,12 @@
 ## Matched study, by model (tests a one run filter keeps)
 
-| Model | Suites | Tests generated | Kept after one run | Flaky kept tests | Flaky % (95% CI) | Suites with a flaky test | Rejected by the filter | Rejected but flaky | Suites that did not import |
-|---|---|---|---|---|---|---|---|---|---|
-| GPT 4.1 mini | 34 | 746 | 558 | 12 | 2.15 (1.23 to 3.72) | 6 | 188 | 10 | 0 |
-| GPT 5.4 mini | 34 | 554 | 429 | 0 | 0.00 (0.00 to 0.89) | 0 | 125 | 0 | 0 |
-| Claude Haiku 4.5 | 34 | 810 | 806 | 3 | 0.37 (0.13 to 1.09) | 2 | 4 | 0 | 0 |
-| Claude Sonnet | 34 | 792 | 789 | 0 | 0.00 (0.00 to 0.48) | 0 | 3 | 0 | 0 |
-| GPT 4.1 mini, guard prompt | 34 | 771 | 550 | 9 | 1.64 (0.86 to 3.08) | 4 | 221 | 3 | 0 |
+| Model | Suites | Tests generated | Kept after one run | Flaky kept tests | Flaky % (95% CI) | Suites with a flaky test | Rejected by the filter | Rejected but flaky | Flaky only after a rejected polluter | Suites that did not import |
+|---|---|---|---|---|---|---|---|---|---|---|
+| GPT 4.1 mini | 34 | 746 | 558 | 10 | 1.79 (0.98 to 3.27) | 5 | 188 | 10 | 2 | 0 |
+| GPT 5.4 mini | 34 | 554 | 429 | 0 | 0.00 (0.00 to 0.89) | 0 | 125 | 0 | 0 | 0 |
+| Claude Haiku 4.5 | 34 | 810 | 806 | 3 | 0.37 (0.13 to 1.09) | 2 | 4 | 0 | 0 | 0 |
+| Claude Sonnet | 34 | 792 | 789 | 0 | 0.00 (0.00 to 0.48) | 0 | 3 | 0 | 0 | 0 |
+| GPT 4.1 mini, guard prompt | 34 | 771 | 550 | 9 | 1.64 (0.86 to 3.08) | 4 | 221 | 3 | 0 | 0 |
 
 ## Human control per project (the known flaky test, same runner, same number of runs)
 
@@ -36,8 +36,6 @@
 - cuckoopy / haiku_plain_1 / `zz_haiku_plain_1.test_gen::test_len_tracks_mixed_inserts_and_deletes` pass=194 fail=6
 - cuckoopy / haiku_plain_2 / `zz_haiku_plain_2.test_gen::test_many_inserts_remain_findable` pass=154 fail=46
 - data-partitioner / gpt41mini_plain_1 / `zz_gpt41mini_plain_1.test_gen::test_internal_state_advance_after_yielding` pass=142 fail=58
-- pylabeledrf / gpt41mini_plain_1 / `zz_gpt41mini_plain_1.test_gen::test_computeLRF_identical_simple_tree` pass=148 fail=52
-- pylabeledrf / gpt41mini_plain_1 / `zz_gpt41mini_plain_1.test_gen::test_computeLRF_simple_flip_label` pass=158 fail=42
 - scikit-procrustes / gpt41mini_plain_1 / `zz_gpt41mini_plain_1.test_gen::test_gbb_solver_invH_branch` pass=163 fail=37
 - spreading_dye_sampler / gpt41mini_plain_1 / `zz_gpt41mini_plain_1.test_gen::test_make_blot_without_permitted_returns_blot` pass=137 fail=63
 - spreading_dye_sampler / gpt41mini_plain_1 / `zz_gpt41mini_plain_1.test_gen::test_make_blot_returns_exact_requested_cells_if_possible` pass=118 fail=82

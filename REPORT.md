@@ -236,9 +236,10 @@ So 1,000 targeted reruns on a slower machine found no new flaky tests, and every
   after another test called `activate()` or `deactivate()` (order dependent).
 - **E2 matched study** (`results/matched_analysis.md`). 21 of 58 Gruber et al. hand labeled non order dependent,
   non network flaky tests reproduced, 17 used. Kept flaky tests per model: Sonnet 0 of 789, Haiku 3 of 806,
-  GPT 5.4 mini 0 of 429, GPT 4.1 mini 12 of 558 (Fisher p < 0.001 against Sonnet).
-- **Mitigation trial.** Guard prompt on GPT 4.1 mini: 9 of 550 kept tests flaky (p = 0.66 against the plain
-  prompt). The cuckoopy failures come from the salted builtin `hash()` (PYTHONHASHSEED), which seeding `random`
+  GPT 5.4 mini 0 of 429, GPT 4.1 mini 10 of 558 plus 2 that flip only after a rejected polluter (per suite 5 of 34
+  against 0 of 34 for Sonnet and GPT 5.4 mini, Fisher p = 0.053; per test p < 0.001). Suggestive, not established.
+- **Mitigation trial.** Guard prompt on GPT 4.1 mini: 9 of 550 kept tests flaky (10 of 558 with the plain prompt,
+  p = 1.0). A reset fixture removes all 10 PL-G4 humanize flips (`results/humanize_reset_check.json`). The cuckoopy failures come from the salted builtin `hash()` (PYTHONHASHSEED), which seeding `random`
   cannot fix.
 - **Why** (`results/why_analysis.md`, last section). GPT suites touch private attributes in 14 to 16% of tests
   (Claude 0 to 0.9%, human 12.3%), and PL-G4 never resets library state after a test.
