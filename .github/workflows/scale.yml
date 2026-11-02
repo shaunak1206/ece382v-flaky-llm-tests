@@ -11,6 +11,9 @@ on:
       human_runs:
         description: "both,tz,stressng runs for human suites"
         default: "100,50,50"
+      conds:
+        description: "comma separated conditions"
+        default: "human,llm_tests,gen_oneshot_sonnet,gen_oneshot_haiku,gen_tp_sonnet,gen_plain_sonnet"
 
 jobs:
   plan:
@@ -23,7 +26,7 @@ jobs:
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           projs = "cachetools schedule tinydb humanize toolz tabulate tenacity filelock boltons more_itertools arrow pybreaker".split()
-          conds = ["human", "llm_tests", "gen_oneshot_sonnet", "gen_oneshot_haiku", "gen_tp_sonnet", "gen_plain_sonnet"]
+          conds = "${{ inputs.conds }}".split(",")
           print("matrix=" + json.dumps({"include": [{"cond": c, "proj": p} for c in conds for p in projs]}))
           PY
 
@@ -46,6 +49,9 @@ jobs:
           python -m pip install -q -r colab/requirements-mixed.txt
       - name: fetch and install the library under test
         run: PYTHON=python bash scripts/fetch_subject.sh "${{ matrix.proj }}"
+      - name: one run filter (generated suites)
+        if: ${{ matrix.cond != 'human' }}
+        run: python scripts/filter_oneshot.py "${{ matrix.cond }}" "${{ matrix.proj }}" || true
       - name: reruns
         run: |
           if [ "${{ matrix.cond }}" = "human" ]; then IFS=, read b t s <<< "${{ inputs.human_runs }}"; else IFS=, read b t s <<< "${{ inputs.gen_runs }}"; fi
@@ -54,7 +60,9 @@ jobs:
         if: always()
         with:
           name: scale-${{ matrix.cond }}-${{ matrix.proj }}
-          path: results/runs_scale/
+          path: |
+            results/runs_scale/
+            results/filter/
           if-no-files-found: warn
 
   collect:
