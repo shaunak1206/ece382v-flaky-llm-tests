@@ -1,11 +1,12 @@
 ## Matched study, by model (tests a one run filter keeps)
 
-| Model | Suites | Tests generated | Kept after one run | Flaky kept tests | Flaky % (95% CI) | Suites with a flaky test | Rejected by the filter | Rejected but flaky |
-|---|---|---|---|---|---|---|---|---|
-| GPT 4.1 mini | 34 | 683 | 506 | 12 | 2.37 (1.36 to 4.10) | 6 | 177 | 10 |
-| GPT 5.4 mini | 34 | 521 | 406 | 0 | 0.00 (0.00 to 0.94) | 0 | 115 | 0 |
-| Claude Haiku 4.5 | 34 | 765 | 759 | 3 | 0.40 (0.13 to 1.16) | 2 | 6 | 0 |
-| Claude Sonnet | 34 | 745 | 740 | 0 | 0.00 (0.00 to 0.52) | 0 | 5 | 0 |
+| Model | Suites | Tests generated | Kept after one run | Flaky kept tests | Flaky % (95% CI) | Suites with a flaky test | Rejected by the filter | Rejected but flaky | Suites that did not import |
+|---|---|---|---|---|---|---|---|---|---|
+| GPT 4.1 mini | 34 | 746 | 558 | 12 | 2.15 (1.23 to 3.72) | 6 | 188 | 10 | 0 |
+| GPT 5.4 mini | 34 | 554 | 429 | 0 | 0.00 (0.00 to 0.89) | 0 | 125 | 0 | 0 |
+| Claude Haiku 4.5 | 34 | 810 | 806 | 3 | 0.37 (0.13 to 1.09) | 2 | 4 | 0 | 0 |
+| Claude Sonnet | 34 | 792 | 789 | 0 | 0.00 (0.00 to 0.48) | 0 | 3 | 0 | 0 |
+| GPT 4.1 mini, guard prompt | 34 | 771 | 550 | 9 | 1.64 (0.86 to 3.08) | 4 | 221 | 3 | 0 |
 
 ## Human control per project (the known flaky test, same runner, same number of runs)
 
@@ -17,7 +18,7 @@
 | data-genie.git | random | 200 | 0 | no |
 | data-partitioner | random | 200 | 4 | yes |
 | filtered-intervaltree | random | 200 | 48 | yes |
-| fuzzylogic | random | 200 | 19 | yes |
+| fuzzylogic | random | 200 | 18 | yes |
 | gamble.git | random | 200 | 3 | yes |
 | langsplit | random | 200 | 26 | yes |
 | piripherals | async wait | 200 | 2 | yes |
@@ -46,3 +47,12 @@
 - spreading_dye_sampler / gpt41mini_plain_2 / `zz_gpt41mini_plain_2.test_gen::test_make_blot_with_non_standard_cell_dims` pass=128 fail=72
 - spreading_dye_sampler / gpt41mini_plain_2 / `zz_gpt41mini_plain_2.test_gen::test_internal_neighbour_sharing_edges_accumulate` pass=129 fail=71
 - torch-layer-normalization / gpt41mini_plain_2 / `zz_gpt41mini_plain_2.test_gen::test_layernorm_with_tuple_normalized_shape` pass=196 fail=4
+- cuckoopy / gpt41mini_guard_1 / `zz_gpt41mini_guard_1.test_gen::test_delete_only_affects_existing_items` pass=193 fail=7
+- cuckoopy / gpt41mini_guard_1 / `zz_gpt41mini_guard_1.test_gen::test_size_updating_after_insert_and_delete` pass=180 fail=20
+- cuckoopy / gpt41mini_guard_2 / `zz_gpt41mini_guard_2.test_gen::test_insert_raises_when_full` pass=110 fail=90
+- cuckoopy / gpt41mini_guard_2 / `zz_gpt41mini_guard_2.test_gen::test_insert_eviction_path` pass=107 fail=93
+- cuckoopy / gpt41mini_guard_2 / `zz_gpt41mini_guard_2.test_gen::test_delete_does_not_affect_other_fingerprints` pass=127 fail=73
+- data-partitioner / gpt41mini_guard_1 / `zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.1]` pass=192 fail=8
+- data-partitioner / gpt41mini_guard_1 / `zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.5]` pass=137 fail=63
+- data-partitioner / gpt41mini_guard_1 / `zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.8]` pass=165 fail=35
+- pylabeledrf / gpt41mini_guard_1 / `zz_gpt41mini_guard_1.test_gen::test_mutateLabeledTree_flips_nodes_correctly` pass=117 fail=83

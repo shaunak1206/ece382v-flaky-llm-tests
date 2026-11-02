@@ -1,0 +1,466 @@
+{
+ "project": "Intervallum",
+ "sha": "e314ee624f09b09913475b02470103095fc076ff",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 34,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_abs[0.5-expected2]",
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_cos[0.5-expected2]",
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_exp[1.0]",
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_sin[0.5-expected2]",
+    "zz_gpt41mini_guard_1.test_gen::test_interval_width_middle_try_to_reduce_and_equality"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_box_new_and_str_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_box_eq_and_ne": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_box_copy_and_try_to_reduce": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_box_properties_lb_ub_middle_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_init_and_wrong_bounds_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_str_repr_and_copy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_width_middle_try_to_reduce_and_equality": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_arithmetic_operations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_pow_and_invert": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_rs_subinclusion_function_evaluates_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_sin[input_val0-expected0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_sin[input_val1-expected1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_sin[0.5-expected2]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_cos[input_val0-expected0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_cos[input_val1-expected1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_cos[0.5-expected2]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_abs[input_val0-expected0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_abs[input_val1-expected1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_abs[0.5-expected2]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_exp[input_val0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_exp[1.0]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_sqrt_valid_and_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_log_valid_and_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split[i_val0-ratios0-3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split[5.0-ratios1-2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_bisect_splits_interval_equally": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_constrain[i_val0-0-5-0-5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_constrain[i_val1-1-3-1-3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_constrain[5-1-10-5-5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_constrain[-1-0-10-0-0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_shrink[i_val0-0.5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_shrink[5.0-0.5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_hausdorff_distance_zero_and_nonzero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_hausdorff_distance_with_float_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_abs[0.5-expected2]",
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_cos[0.5-expected2]",
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_exp[1.0]",
+    "zz_gpt41mini_guard_1.test_gen::test_interval_functions_sin[0.5-expected2]",
+    "zz_gpt41mini_guard_1.test_gen::test_interval_width_middle_try_to_reduce_and_equality"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_box_copy_and_try_to_reduce",
+    "zz_gpt41mini_guard_2.test_gen::test_interval_comparison_operators",
+    "zz_gpt41mini_guard_2.test_gen::test_interval_str_repr_eq_ne",
+    "zz_gpt41mini_guard_2.test_gen::test_rs_subinclusion_function_returns_correct_interval"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_interval_init_and_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_interval_wrong_bounds_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_interval_str_repr_eq_ne": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_interval_setters_enforce_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_interval_try_to_reduce_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_interval_add_sub_mul_neg_div_pow": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_interval_invert_and_inner_subtraction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_interval_eq_not_implemented": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_interval_comparison_operators": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_box_creation_and_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_box_str_and_repr_and_eq_ne": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_box_copy_and_try_to_reduce": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_box_with_non_interval_elements": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_rs_subinclusion_function_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_rs_subinclusion_function_returns_correct_interval": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_trig_functions_basic_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_trig_functions_reduce_for_wide_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_abs_exp_functions_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_sqrt_log_behavior_and_exceptions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_and_bisect_functions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_constrain_function_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_shrink_function_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_hausdorff_distance_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_box_copy_and_try_to_reduce",
+    "zz_gpt41mini_guard_2.test_gen::test_interval_comparison_operators",
+    "zz_gpt41mini_guard_2.test_gen::test_interval_str_repr_eq_ne",
+    "zz_gpt41mini_guard_2.test_gen::test_rs_subinclusion_function_returns_correct_interval"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 184,
+  "failed": 16,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "assert 0.005827701219617176 > 0.031137576967644076",
+   "assert 0.009308618446276729 > 0.04536675375731436",
+   "assert 0.03193869738075006 > 0.06575359756475263"
+  ]
+ },
+ "seconds": 215.6
+}

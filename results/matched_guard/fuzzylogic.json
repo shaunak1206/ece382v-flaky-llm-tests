@@ -1,0 +1,482 @@
+{
+ "project": "fuzzylogic",
+ "sha": "58bd23aeb4b6bf39bd950bcf468b0c2f5c649e69",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 37,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_domain_call_warns_outside_domain",
+    "zz_gpt41mini_guard_1.test_gen::test_set_concentrated_and_dilated",
+    "zz_gpt41mini_guard_1.test_gen::test_set_eq_le_lt_ge_gt",
+    "zz_gpt41mini_guard_1.test_gen::test_set_intensified_behavior",
+    "zz_gpt41mini_guard_1.test_gen::test_set_operators",
+    "zz_gpt41mini_guard_1.test_gen::test_set_plot_no_domain_warns"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_domain_basic_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_domain_set_assignment_and_access": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_domain_call_memberships": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_domain_call_warns_outside_domain": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_domain_range_includes_high": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_domain_min_max": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_call_and_invert_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_operators": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_eq_le_lt_ge_gt": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_len_cardinalities": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_len_cardinality_no_domain": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_relative_cardinality_empty_domain": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_concentrated_and_dilated": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_intensified_behavior": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_multiplied": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_plot_no_domain_warns": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_array_and_repr_str": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_set_normalized": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_inv_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_noop_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_constant_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_alpha_function_clipping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_normalize_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_moderate_function_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_singleton_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_linear_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_bounded_linear_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_R_and_S_functions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_rectangular_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_triangular_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_trapezoid_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_sigmoid_function_ranges": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_bounded_sigmoid_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_bounded_exponential_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_simple_sigmoid_extremes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_triangular_sigmoid_peak": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gauss_function_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_domain_call_warns_outside_domain",
+    "zz_gpt41mini_guard_1.test_gen::test_set_concentrated_and_dilated",
+    "zz_gpt41mini_guard_1.test_gen::test_set_eq_le_lt_ge_gt",
+    "zz_gpt41mini_guard_1.test_gen::test_set_intensified_behavior",
+    "zz_gpt41mini_guard_1.test_gen::test_set_operators",
+    "zz_gpt41mini_guard_1.test_gen::test_set_plot_no_domain_warns"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_comparison_subsets_and_supersets",
+    "zz_gpt41mini_guard_2.test_gen::test_domain_call_membership_warning_and_values",
+    "zz_gpt41mini_guard_2.test_gen::test_set_len_cardinality_relative_cardinality",
+    "zz_gpt41mini_guard_2.test_gen::test_set_operations_and_power"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_domain_init_and_str_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_domain_call_membership_warning_and_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_domain_getattr_setattr_delattr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_domain_range_inclusive_and_min_max": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_set_call_and_invert": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_set_eq_and_domain_required_methods": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_comparison_subsets_and_supersets": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_set_len_cardinality_relative_cardinality": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_set_concentrated_and_normalized": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_set_operations_and_power": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_set_str_and_repr_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_set_plot_without_domain_warns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_inv_function_correctness": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_membership_functions_return_expected[f-0-0.5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_membership_functions_return_expected[f-1-0.5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_membership_functions_return_expected[f-0.5-0.50]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_membership_functions_return_expected[f-0.5-0.51]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_membership_functions_return_expected[f-0.5-0.52]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_membership_functions_return_expected[f-0.5-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_sigmoid_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_bounded_sigmoid_monotonicity_and_limits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gauss_monotonic_center": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_comparison_subsets_and_supersets",
+    "zz_gpt41mini_guard_2.test_gen::test_domain_call_membership_warning_and_values",
+    "zz_gpt41mini_guard_2.test_gen::test_set_len_cardinality_relative_cardinality",
+    "zz_gpt41mini_guard_2.test_gen::test_set_operations_and_power"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 179,
+  "failed": 21,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 7 good ones. This will make your tests much slower, an",
+   "hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 9 good ones. This will make your tests much slower, an",
+   "hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 8 good ones. This will make your tests much slower, an"
+  ]
+ },
+ "seconds": 641.1
+}

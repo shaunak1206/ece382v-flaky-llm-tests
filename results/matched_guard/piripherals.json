@@ -1,0 +1,634 @@
+{
+ "project": "piripherals",
+ "sha": "74e4807a64363e3c95a03222fa250a1073387eaf",
+ "category": "async wait",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 44,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_auto_config_writes_expected_values",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_uses_MHDX_for_prox_true",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_0_1[0]",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_0_1[1]",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_2_or_3[2]",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_2_or_3[3]",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_returns_values_when_no_args",
+    "zz_gpt41mini_guard_1.test_gen::test_charge_writes_bytes_and_reads_byte",
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[0-0-0]",
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[1-1-1]",
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[2-2-12]",
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[3-3-5]",
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[0-0]",
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[3--1]",
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[5-2]",
+    "zz_gpt41mini_guard_1.test_gen::test_dump_method_runs_without_error",
+    "zz_gpt41mini_guard_1.test_gen::test_electrode_data_returns_correct_values",
+    "zz_gpt41mini_guard_1.test_gen::test_filter_writes_correct_word",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_raises_on_invalid_channel",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[11-True]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[4-True]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[5-False]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_raises_on_invalid_channel",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[11-True-2-True]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[4-True-0-True]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[5-False-3-False]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[0]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[240]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[255]",
+    "zz_gpt41mini_guard_1.test_gen::test_is_touched_returns_correct_boolean",
+    "zz_gpt41mini_guard_1.test_gen::test_on_touch_registers_and_removes_handlers",
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_raises_on_failure[16384-auto reconfig failed]",
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_raises_on_failure[32768-auto config failed]",
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_returns_masked_value",
+    "zz_gpt41mini_guard_1.test_gen::test_reset_writes_expected_byte",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_default_release_calculation",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[100-40--1]",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[200-150-5]",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[30--1-12]",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[50--1--1]",
+    "zz_gpt41mini_guard_1.test_gen::test_touched_raises_on_out_of_range",
+    "zz_gpt41mini_guard_1.test_gen::test_touched_raises_on_overcurrent",
+    "zz_gpt41mini_guard_1.test_gen::test_touched_reads_word_and_returns_bits",
+    "zz_gpt41mini_guard_1.test_gen::test_update_touch_state_calls_handle_touch_and_handlers"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_reset_writes_expected_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[0-0-0]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[1-1-1]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[2-2-12]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[3-3-5]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_touched_reads_word_and_returns_bits": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_touched_raises_on_overcurrent": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_touched_raises_on_out_of_range": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_electrode_data_returns_correct_values": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_returns_values_when_no_args": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_0_1[0]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_0_1[1]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_2_or_3[2]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_2_or_3[3]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_uses_MHDX_for_prox_true": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[50--1--1]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[100-40--1]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[200-150-5]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[30--1-12]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[3--1]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[5-2]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[0-0]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_filter_writes_correct_word": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_charge_writes_bytes_and_reads_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_auto_config_writes_expected_values": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_raises_on_failure[32768-auto config failed]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_raises_on_failure[16384-auto reconfig failed]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_returns_masked_value": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[4-True-0-True]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[5-False-3-False]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[11-True-2-True]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_raises_on_invalid_channel": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[0]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[240]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[255]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[4-True]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[5-False]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[11-True]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_raises_on_invalid_channel": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_update_touch_state_calls_handle_touch_and_handlers": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_on_touch_registers_and_removes_handlers": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_is_touched_returns_correct_boolean": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_default_release_calculation": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_dump_method_runs_without_error": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_auto_config_writes_expected_values",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_uses_MHDX_for_prox_true",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_0_1[0]",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_0_1[1]",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_2_or_3[2]",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_configure_writes_block_for_rft_2_or_3[3]",
+    "zz_gpt41mini_guard_1.test_gen::test_baseline_returns_values_when_no_args",
+    "zz_gpt41mini_guard_1.test_gen::test_charge_writes_bytes_and_reads_byte",
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[0-0-0]",
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[1-1-1]",
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[2-2-12]",
+    "zz_gpt41mini_guard_1.test_gen::test_configure_writes_correct_byte[3-3-5]",
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[0-0]",
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[3--1]",
+    "zz_gpt41mini_guard_1.test_gen::test_debounce_writes_correct_byte[5-2]",
+    "zz_gpt41mini_guard_1.test_gen::test_dump_method_runs_without_error",
+    "zz_gpt41mini_guard_1.test_gen::test_electrode_data_returns_correct_values",
+    "zz_gpt41mini_guard_1.test_gen::test_filter_writes_correct_word",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_raises_on_invalid_channel",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[11-True]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[4-True]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_set_writes_correct_register[5-False]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_raises_on_invalid_channel",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[11-True-2-True]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[4-True-0-True]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_setup_writes_correct_bits[5-False-3-False]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[0]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[240]",
+    "zz_gpt41mini_guard_1.test_gen::test_gpio_status_reads_byte[255]",
+    "zz_gpt41mini_guard_1.test_gen::test_is_touched_returns_correct_boolean",
+    "zz_gpt41mini_guard_1.test_gen::test_on_touch_registers_and_removes_handlers",
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_raises_on_failure[16384-auto reconfig failed]",
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_raises_on_failure[32768-auto config failed]",
+    "zz_gpt41mini_guard_1.test_gen::test_out_of_range_returns_masked_value",
+    "zz_gpt41mini_guard_1.test_gen::test_reset_writes_expected_byte",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_default_release_calculation",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[100-40--1]",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[200-150-5]",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[30--1-12]",
+    "zz_gpt41mini_guard_1.test_gen::test_threshold_writes_correct_bytes[50--1--1]",
+    "zz_gpt41mini_guard_1.test_gen::test_touched_raises_on_out_of_range",
+    "zz_gpt41mini_guard_1.test_gen::test_touched_raises_on_overcurrent",
+    "zz_gpt41mini_guard_1.test_gen::test_touched_reads_word_and_returns_bits",
+    "zz_gpt41mini_guard_1.test_gen::test_update_touch_state_calls_handle_touch_and_handlers"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 27,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_threshold_sets_specific_channel"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_reset_writes_correct_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_configure_writes_correct_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_touched_returns_correct_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_touched_raises_on_overcurrent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_touched_raises_on_out_of_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_electrode_data_returns_correct_format": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_baseline_reads_when_rft_negative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_baseline_write_calls_write_block_4vals[0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_baseline_write_calls_write_block_4vals[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_baseline_write_calls_write_block_3vals_prox": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_threshold_sets_all_channels_by_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_threshold_sets_specific_channel": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_debounce_writes_combined_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_filter_writes_word_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_charge_writes_bytes_properly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_auto_config_writes_regs_and_bytes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_out_of_range_behavior[True-auto config failed-15]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_out_of_range_behavior[True-auto reconfig failed-14]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_out_of_range_behavior[False-None-15]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gpio_setup_calls_set_bit": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gpio_setup_mode_1_maps_to_0": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gpio_status_reads_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gpio_set_writes_set_and_clear_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_on_touch_assigns_and_removes_handlers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_handle_touch_calls_handler_with_correct_args": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_update_touch_state_triggers_handle_touch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_is_touched_returns_correct_boolean": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_threshold_sets_specific_channel"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 198,
+  "failed": 2,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: expected call not found.\nExpected: mock(False, 6)\nActual: mock(True, 6)\n\npytest introspection follows:\n\nArgs:\nassert (True, 6) == (False, 6)\n  At index 0 diff: True != False\n  Full dif"
+  ]
+ },
+ "seconds": 328.5
+}

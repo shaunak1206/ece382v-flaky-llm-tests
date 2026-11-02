@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Tables for the matched study: LLM tests written for code that is known to cause a flaky human test.
 
-Reads results/matched/<project>.json (from scripts/matched_run.py), writes results/matched_summary.json and
+Reads results/matched/<project>.json and the mitigation trial results/matched_guard/<project>.json (both from
+scripts/matched_run.py), writes results/matched_summary.json and
 prints markdown tables. A generated test is counted only if a one run filter would keep it (it passed in the
 first run), the same rule as the 12 library study; always failing tests are reported separately.
 """
 import collections, glob, json, math, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL = {"sonnet": "Claude Sonnet", "haiku": "Claude Haiku 4.5", "gpt54mini": "GPT 5.4 mini", "gpt41mini": "GPT 4.1 mini"}
+MODEL = {"sonnet": "Claude Sonnet", "haiku": "Claude Haiku 4.5", "gpt54mini": "GPT 5.4 mini", "gpt41mini": "GPT 4.1 mini",
+         "gpt41mini+guard": "GPT 4.1 mini, guard prompt"}
 
 
 def wilson(k, n, z=1.96):
@@ -20,16 +22,18 @@ def wilson(k, n, z=1.96):
 
 def main():
     files = sorted(glob.glob(f"{ROOT}/results/matched/*.json"))
+    guard = sorted(glob.glob(f"{ROOT}/results/matched_guard/*.json"))
     per_model = collections.defaultdict(lambda: collections.Counter())
     per_project = []
     flaky_list = []
-    for f in files:
+    for f in files + guard:
         j = json.load(open(f))
+        is_guard = f in guard
         h = j.get("human", {})
         row = {"project": j["project"], "category": j["category"], "human_runs": h.get("runs", 0),
                "human_failures": h.get("failed", 0) + h.get("errors", 0), "human_reproduced": h.get("reproduced", False)}
         for sid, s in j["suites"].items():
-            m = s["model"]
+            m = s["model"] + ("+guard" if s.get("prompt") == "guard" else "")
             # a module level id (classname::file) means the file did not import, so no test ran
             if all(t.startswith("::") for t in s["tests"]):
                 per_model[m]["suites_not_collected"] += 1
@@ -44,9 +48,10 @@ def main():
             row[f"{sid}_flaky"] = len(fl)
             for t in fl:
                 v = kept[t]
-                flaky_list.append({"project": j["project"], "suite": sid, "test": t, "pass": v["pass"],
+                flaky_list.append({"project": j["project"], "suite": sid, "model": m, "test": t, "pass": v["pass"],
                                    "fail": v["fail"] + v["error"], "category": j["category"]})
-        per_project.append(row)
+        if not is_guard:
+            per_project.append(row)
     print("## Matched study, by model (tests a one run filter keeps)\n")
     print("| Model | Suites | Tests generated | Kept after one run | Flaky kept tests | Flaky % (95% CI) | Suites with a flaky test | Rejected by the filter | Rejected but flaky | Suites that did not import |")
     print("|---|---|---|---|---|---|---|---|---|---|")

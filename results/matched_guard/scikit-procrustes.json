@@ -1,0 +1,499 @@
+{
+ "project": "scikit-procrustes",
+ "sha": "05b6fd4fcc6cb0d7b8d1115dc562a0f8f7e227b2",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 28,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_open_file_invalid_filename",
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_runs_with_full_results",
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_solve_integrity_with_basic_run",
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_solve_returns_expected_keys",
+    "zz_gpt41mini_guard_1.test_gen::test_procrustesproblem_problemnumber3_valid_and_invalid"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_procrustesproblem_valid_init_with_predefined_problem": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_procrustesproblem_invalid_size_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_procrustesproblem_invalid_matrices_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_procrustesproblem_user_supplied_matrices_and_xsol": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_default_options_and_setoptions_validation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_open_close_file_stdout": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_open_close_file_with_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_open_file_invalid_filename": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_solve_returns_expected_keys": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt0-xtol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt1-gtol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt2-ftol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt3-zeta must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt4-kappa must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt5-eta must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt6-etavar must be a boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt7-tau must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt8-projected_gradient must be 1 or 2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt9-maxiter must be an integer]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt10-verbose must be 0, or 1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt11-filename must be string]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_invalid_option_types[invalid_opt12-timer must be boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_runs_with_full_results": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_procrustesproblem_problemnumber3_valid_and_invalid": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_procrustesproblem_known_solution_orthogonality_and_solution_b_relation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_solve_integrity_with_basic_run": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_optimize_result_attr_access_and_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_solve_error_when_full_results_but_stats_missing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_open_file_invalid_filename",
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_runs_with_full_results",
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_solve_integrity_with_basic_run",
+    "zz_gpt41mini_guard_1.test_gen::test_gbbsovler_solve_returns_expected_keys",
+    "zz_gpt41mini_guard_1.test_gen::test_procrustesproblem_problemnumber3_valid_and_invalid"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 34,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_solve_runs_and_returns",
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_default_problem_1_fixed_seed",
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_default_problem_2_fixed_seed"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_invalid_sizes_non_square": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_invalid_sizes_not_divisible": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_default_problem_1_fixed_seed": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_default_problem_2_fixed_seed": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_default_problem_3_fixed_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_user_defined_matrices_valid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_user_defined_matrices_invalid_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_default_options_and_setoptions_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts0-full_results must be a boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts1-xtol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts2-gtol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts3-ftol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts4-zeta must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts5-kappa must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts6-eta must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts7-etavar must be a boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts8-tau must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts9-projected_gradient must be 1 or 2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts10-maxiter must be an integer]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts11-verbose must be 0, or 1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts12-filename must be string]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_setoptions_invalid_types[invalid_opts13-timer must be boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_open_close_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_solve_runs_and_returns": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_solve_without_xsol_sets_error_inf": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_problemnumber_none_and_no_matrices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_with_full_results_requires_stats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_optimizresult_dict_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_user_matrices_not_list_or_tuple": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_projected_gradient_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_verbose_levels[0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_verbose_levels[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_invalid_verbose[-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_invalid_verbose[2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_gbbsolver_solve_runs_and_returns",
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_default_problem_1_fixed_seed",
+    "zz_gpt41mini_guard_2.test_gen::test_procrustesproblem_default_problem_2_fixed_seed"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 188,
+  "failed": 12,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=0.01\n\nMismatched elements: 1 / 1 (100%)\nMax absolute difference: 399.98755128\nMax relative difference: 3.99987551e+08\n x: array(399.987552)\n y:",
+   "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=0.01\n\nMismatched elements: 1 / 1 (100%)\nMax absolute difference: 264.50886998\nMax relative difference: 2.6450887e+08\n x: array(264.508871)\n y: ",
+   "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=0.01\n\nMismatched elements: 1 / 1 (100%)\nMax absolute difference: 31.29647364\nMax relative difference: 31296473.637377\n x: array(31.296475)\n y: "
+  ]
+ },
+ "seconds": 517.3
+}

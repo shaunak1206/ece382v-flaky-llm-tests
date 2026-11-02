@@ -54,6 +54,16 @@ Written by `scripts/analyze.py`. `pooled[cond]` has `tests`, `flaky`, `always_fa
 `ci` (95% Wilson interval for the flaky rate, in percent) and `flaky_failure_rates` (failures over runs for each
 flaky test, in percent). `flaky` lists every flaky test with its counts per machine and the modes where it flipped.
 
+## Large rerun campaign tables: `results/scale_summary.json`, `results/scale_analysis.md`
+
+Written by `scripts/analyze_scale.py` from `results/runs_scale/`. Generated suites ran 300 times in `both` mode
+and 150 times each in `tz` and `stressng` (600 runs per test), human suites 100, 50, 50 (200 runs per test).
+All modes of one suite are pooled, which is safe because every run was on the same runner type.
+`pooled[cond]` has `suites`, `tests` (generated tests only if the one run filter kept them), `flaky`,
+`always_fail`, and `ci` (95% Wilson interval in percent). `flaky[]` has `cond`, `proj`, `test`, `pass`, `fail`
+(fail plus error), `rate` (fail over runs), `modes` (the modes in which the test both passed and failed), and
+`runs` (runs per mode). `executions` is runs times tests per condition.
+
 ## Static risk scan: `results/smells.json`, `results/smells.md`
 
 Written by `scripts/run_smells.py` using `scripts/smells.py`. Per suite: `n_tests`, `any` (tests with at least
@@ -104,4 +114,24 @@ FlaPy's own per test overview (columns documented in the FlaPy README). `flaky?`
 ## Matched study: `matched/<project>/<suite_id>/`, `results/matched/<project>.json`
 
 Generated suites that target the same code as the known flaky human test, and their rerun results from
-`scripts/matched_run.py` (fields documented at the top of that script).
+`scripts/matched_run.py` (fields documented at the top of that script). `matched/targets.json` names the code
+under test per project. Suite ids are `<model>_<prompt>_<sample>`: model `sonnet`, `haiku`, `gpt54mini`,
+`gpt41mini`, prompt `plain` or `guard` (the mitigation prompt in `prompts/README.md`).
+
+Per project file: `project`, `sha`, `category` (Gruber et al. label), `install_ok`, `seconds`, `human` (the known
+flaky test as a control: `runs`, `passed`, `failed`, `errors`, `reproduced`, `messages`), and `suites[suite_id]`
+with `model`, `prompt`, `sample`, `runs`, `n_tests`, `first_run_failed` (ids that failed in run 1, which a one run
+filter rejects), `tests[id]` = {`pass`, `fail`, `error`, `skip`, `kind`: stable, flaky, always-fail,
+always-skip}, and the `flaky` and `always_fail` id lists. Even runs keep file order, odd runs use
+pytest-randomly with seed 7000 plus the run index. An id of the form `::module` means the file did not import.
+
+`results/matched_guard/<project>.json` has the same format for the `gpt41mini_guard_*` suites only (the first
+mitigation trial, run separately on November 2). `scripts/analyze_matched.py` reads both folders and writes
+`results/matched_summary.json` (`models` per model and prompt, `projects` with the human control, `flaky` list)
+and `results/matched_analysis.md`.
+
+## Test characteristics: `results/why_analysis.md`, `results/characterize.json`
+
+`scripts/characterize.py` scans every test function for shared state, isolation helpers, clock and sleep use,
+timing bounds, randomness, and concurrency. The field table is at the top of `results/why_analysis.md`.
+`characterize.json` is about 14 MB and is not committed; rerun the script to rebuild it (about 2 minutes).

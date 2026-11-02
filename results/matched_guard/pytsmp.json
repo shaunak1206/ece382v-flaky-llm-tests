@@ -1,0 +1,338 @@
+{
+ "project": "pytsmp",
+ "sha": "15d58a39e016100fb44cdcc9f6115fa7736eb2bb",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_identical_series",
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_values_basic"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_values_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_length_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_identical_series": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_output_type_and_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_zero_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_rolling_avg_sd_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_rolling_avg_sd_window_too_big": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_rolling_avg_sd_constant_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_rolling_avg_sd_output_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_calculate_distance_profile_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_calculate_distance_profile_sigma_q_zero_const_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_calculate_distance_profile_sigma_t_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_calculate_distance_profile_dimension_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_calculate_distance_profile_meanQ_sigmaQ_array_length_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_calculate_distance_profile_values_positive_definite_inside_sqrt": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_mass_algorithm_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_mass_raises_on_short_T": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_mass_with_constant_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_rolling_avg_sd_matches_rolling_sum": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_rolling_avg_sd_sd_non_negative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_padding_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_constant_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_calculate_distance_profile_zero_std_dev_T": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_identical_series",
+    "zz_gpt41mini_guard_1.test_gen::test_sliding_dot_product_values_basic"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_sliding_dot_product_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_sliding_dot_product_non_overlapping_lengths": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_sliding_dot_product_all_zeros": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_sliding_dot_product_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_rolling_avg_sd_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_rolling_avg_sd_short_series_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_rolling_avg_sd_constant_series_sd_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_calculate_distance_profile_basic_usage": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_calculate_distance_profile_sigmaQ_zero_sigmT_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_calculate_distance_profile_sigmaT_zero_sigmaQ_nonzero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_calculate_distance_profile_dimension_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_calculate_distance_profile_numpy_array_mean_sigmaQ": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_calculate_distance_profile_numpy_array_length_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_sliding_dot_product_q_length_equals_t_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_sliding_dot_product_with_negative_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_mass_basic_distance_profile": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_mass_length_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_rolling_avg_sd_vs_manual_computation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 193,
+  "failed": 7,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: calculate_distance_profile_constant_sequence_and_query: distance of constant query to constant sequence is ero by definition.\nassert False\n +  where False = <function allclose at 0x73b",
+   "AssertionError: calculate_distance_profile_constant_sequence: distance of nonconstant query to constant sequence is sqrt(m) by definition.\nassert False\n +  where False = <function allclose at 0x7712a6",
+   "AssertionError: calculate_distance_profile_constant_sequence: distance of nonconstant query to constant sequence is sqrt(m) by definition.\nassert False\n +  where False = <function allclose at 0x7ee1f9"
+  ]
+ },
+ "seconds": 205.4
+}

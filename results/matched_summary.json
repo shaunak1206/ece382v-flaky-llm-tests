@@ -2,54 +2,67 @@
  "models": {
   "gpt41mini": {
    "suites": 34,
-   "generated": 683,
-   "kept": 506,
+   "generated": 746,
+   "kept": 558,
    "flaky": 12,
-   "rejected": 177,
+   "rejected": 188,
    "rejected_but_flaky": 10,
    "suites_with_flaky": 6,
    "ci": [
-    1.3617151432932504,
-    4.099118182194508
+    1.2343860171559735,
+    3.7210320223768774
    ]
   },
   "gpt54mini": {
    "suites": 34,
-   "generated": 521,
-   "kept": 406,
+   "generated": 554,
+   "kept": 429,
    "flaky": 0,
-   "rejected": 115,
-   "rejected_but_flaky": 0,
-   "suites_with_flaky": 0,
-   "ci": [
-    8.673617379884035e-17,
-    0.9373377421911293
-   ]
-  },
-  "haiku": {
-   "suites": 34,
-   "generated": 765,
-   "kept": 759,
-   "flaky": 3,
-   "rejected": 6,
-   "rejected_but_flaky": 0,
-   "suites_with_flaky": 2,
-   "ci": [
-    0.13450969301047896,
-    1.1556139709323368
-   ]
-  },
-  "sonnet": {
-   "suites": 34,
-   "generated": 745,
-   "kept": 740,
-   "flaky": 0,
-   "rejected": 5,
+   "rejected": 125,
    "rejected_but_flaky": 0,
    "suites_with_flaky": 0,
    "ci": [
     0,
-    0.5164540407527624
+    0.8875302189068703
+   ]
+  },
+  "haiku": {
+   "suites": 34,
+   "generated": 810,
+   "kept": 806,
+   "flaky": 3,
+   "rejected": 4,
+   "rejected_but_flaky": 0,
+   "suites_with_flaky": 2,
+   "ci": [
+    0.126661176212005,
+    1.0885888183548336
+   ]
+  },
+  "sonnet": {
+   "suites": 34,
+   "generated": 792,
+   "kept": 789,
+   "flaky": 0,
+   "rejected": 3,
+   "rejected_but_flaky": 0,
+   "suites_with_flaky": 0,
+   "ci": [
+    0,
+    0.484535624770446
+   ]
+  },
+  "gpt41mini+guard": {
+   "suites": 34,
+   "generated": 771,
+   "kept": 550,
+   "flaky": 9,
+   "rejected": 221,
+   "rejected_but_flaky": 3,
+   "suites_with_flaky": 4,
+   "ci": [
+    0.8632290096332906,
+    3.080425638193814
    ]
   }
  },
@@ -148,7 +161,7 @@
    "project": "fuzzylogic",
    "category": "random",
    "human_runs": 200,
-   "human_failures": 19,
+   "human_failures": 18,
    "human_reproduced": true,
    "gpt41mini_plain_1_flaky": 0,
    "gpt41mini_plain_2_flaky": 0,
@@ -314,6 +327,7 @@
   {
    "project": "cuckoopy",
    "suite": "haiku_plain_1",
+   "model": "haiku",
    "test": "zz_haiku_plain_1.test_gen::test_delete_keeps_other_items_findable",
    "pass": 197,
    "fail": 3,
@@ -322,6 +336,7 @@
   {
    "project": "cuckoopy",
    "suite": "haiku_plain_1",
+   "model": "haiku",
    "test": "zz_haiku_plain_1.test_gen::test_len_tracks_mixed_inserts_and_deletes",
    "pass": 194,
    "fail": 6,
@@ -330,6 +345,7 @@
   {
    "project": "cuckoopy",
    "suite": "haiku_plain_2",
+   "model": "haiku",
    "test": "zz_haiku_plain_2.test_gen::test_many_inserts_remain_findable",
    "pass": 154,
    "fail": 46,
@@ -338,6 +354,7 @@
   {
    "project": "data-partitioner",
    "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_1.test_gen::test_internal_state_advance_after_yielding",
    "pass": 142,
    "fail": 58,
@@ -346,6 +363,7 @@
   {
    "project": "pylabeledrf",
    "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_1.test_gen::test_computeLRF_identical_simple_tree",
    "pass": 148,
    "fail": 52,
@@ -354,6 +372,7 @@
   {
    "project": "pylabeledrf",
    "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_1.test_gen::test_computeLRF_simple_flip_label",
    "pass": 158,
    "fail": 42,
@@ -362,6 +381,7 @@
   {
    "project": "scikit-procrustes",
    "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_1.test_gen::test_gbb_solver_invH_branch",
    "pass": 163,
    "fail": 37,
@@ -370,6 +390,7 @@
   {
    "project": "spreading_dye_sampler",
    "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_1.test_gen::test_make_blot_without_permitted_returns_blot",
    "pass": 137,
    "fail": 63,
@@ -378,6 +399,7 @@
   {
    "project": "spreading_dye_sampler",
    "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_1.test_gen::test_make_blot_returns_exact_requested_cells_if_possible",
    "pass": 118,
    "fail": 82,
@@ -386,6 +408,7 @@
   {
    "project": "spreading_dye_sampler",
    "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_squeeze_true_skips_forbidden_cells",
    "pass": 193,
    "fail": 7,
@@ -394,6 +417,7 @@
   {
    "project": "spreading_dye_sampler",
    "suite": "gpt41mini_plain_2",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_2.test_gen::test_make_blot_allows_squeeze_to_skip_nonpermitted_cells",
    "pass": 193,
    "fail": 7,
@@ -402,6 +426,7 @@
   {
    "project": "spreading_dye_sampler",
    "suite": "gpt41mini_plain_2",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_2.test_gen::test_make_blot_returns_none_if_nonpermitted_cell_found_and_squeeze_false",
    "pass": 194,
    "fail": 6,
@@ -410,6 +435,7 @@
   {
    "project": "spreading_dye_sampler",
    "suite": "gpt41mini_plain_2",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_2.test_gen::test_make_blot_with_non_standard_cell_dims",
    "pass": 128,
    "fail": 72,
@@ -418,6 +444,7 @@
   {
    "project": "spreading_dye_sampler",
    "suite": "gpt41mini_plain_2",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_2.test_gen::test_internal_neighbour_sharing_edges_accumulate",
    "pass": 129,
    "fail": 71,
@@ -426,9 +453,91 @@
   {
    "project": "torch-layer-normalization",
    "suite": "gpt41mini_plain_2",
+   "model": "gpt41mini",
    "test": "zz_gpt41mini_plain_2.test_gen::test_layernorm_with_tuple_normalized_shape",
    "pass": 196,
    "fail": 4,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "gpt41mini_guard_1",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_1.test_gen::test_delete_only_affects_existing_items",
+   "pass": 193,
+   "fail": 7,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "gpt41mini_guard_1",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_1.test_gen::test_size_updating_after_insert_and_delete",
+   "pass": 180,
+   "fail": 20,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "gpt41mini_guard_2",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_2.test_gen::test_insert_raises_when_full",
+   "pass": 110,
+   "fail": 90,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "gpt41mini_guard_2",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_2.test_gen::test_insert_eviction_path",
+   "pass": 107,
+   "fail": 93,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "gpt41mini_guard_2",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_2.test_gen::test_delete_does_not_affect_other_fingerprints",
+   "pass": 127,
+   "fail": 73,
+   "category": "random"
+  },
+  {
+   "project": "data-partitioner",
+   "suite": "gpt41mini_guard_1",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.1]",
+   "pass": 192,
+   "fail": 8,
+   "category": "random"
+  },
+  {
+   "project": "data-partitioner",
+   "suite": "gpt41mini_guard_1",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.5]",
+   "pass": 137,
+   "fail": 63,
+   "category": "random"
+  },
+  {
+   "project": "data-partitioner",
+   "suite": "gpt41mini_guard_1",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.8]",
+   "pass": 165,
+   "fail": 35,
+   "category": "random"
+  },
+  {
+   "project": "pylabeledrf",
+   "suite": "gpt41mini_guard_1",
+   "model": "gpt41mini+guard",
+   "test": "zz_gpt41mini_guard_1.test_gen::test_mutateLabeledTree_flips_nodes_correctly",
+   "pass": 117,
+   "fail": 83,
    "category": "random"
   }
  ]

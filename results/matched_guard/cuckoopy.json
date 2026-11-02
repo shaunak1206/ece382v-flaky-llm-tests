@@ -1,0 +1,286 @@
+{
+ "project": "cuckoopy",
+ "sha": "e5fab0c4826387f99ddafb0365759cb7111cfd64",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 15,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_insert_fingerprints_consistency",
+    "zz_gpt41mini_guard_1.test_gen::test_insert_handles_eviction_path"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_init_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_repr_contains_expected_info": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_len_returns_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_contains_and_insert_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_delete_after_insert": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_delete_only_affects_existing_items": {
+     "pass": 193,
+     "fail": 7,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_insert_returns_true_or_raises_on_full": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_alternate_index_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_insert_and_delete_cross_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_insert_handles_eviction_path": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_insert_fingerprints_consistency": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_size_updating_after_insert_and_delete": {
+     "pass": 180,
+     "fail": 20,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_insert_duplicate_items": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_delete_nonexistent_returns_false_and_size_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_insert_raises_for_full_filter_random_deterministic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_guard_1.test_gen::test_delete_only_affects_existing_items",
+    "zz_gpt41mini_guard_1.test_gen::test_size_updating_after_insert_and_delete"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_insert_fingerprints_consistency",
+    "zz_gpt41mini_guard_1.test_gen::test_insert_handles_eviction_path"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_contains_works_for_hash_collision_cases",
+    "zz_gpt41mini_guard_2.test_gen::test_multiple_inserts_and_deletes_consistency"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_init_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_repr_contains_len": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_insert_simple_and_contains": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_delete_existing_and_nonexisting_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_contains_returns_false_for_uninserted_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_insert_raises_when_full": {
+     "pass": 110,
+     "fail": 90,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_insert_eviction_path": {
+     "pass": 107,
+     "fail": 93,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_delete_does_not_affect_other_fingerprints": {
+     "pass": 127,
+     "fail": 73,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_insert_same_item_multiple_times_increments_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_contains_works_for_hash_collision_cases": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_insert_returns_bool_and_size_is_correct": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_delete_non_existing_item_returns_false_and_size_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_contains_operator_and_contains_method_equivalent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_repr_contains_expected_info": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_len_returns_size_and_updates_after_ops": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_multiple_inserts_and_deletes_consistency": {
+     "pass": 4,
+     "fail": 196,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_bucket_size_attribute_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_guard_2.test_gen::test_delete_does_not_affect_other_fingerprints",
+    "zz_gpt41mini_guard_2.test_gen::test_insert_eviction_path",
+    "zz_gpt41mini_guard_2.test_gen::test_insert_raises_when_full",
+    "zz_gpt41mini_guard_2.test_gen::test_multiple_inserts_and_deletes_consistency"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_contains_works_for_hash_collision_cases"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 154,
+  "failed": 46,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "Failed: DID NOT RAISE <class 'cuckoopy.exceptions.CuckooFilterFullException'>"
+  ]
+ },
+ "seconds": 166.9
+}

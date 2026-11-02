@@ -1,0 +1,375 @@
+{
+ "project": "words-to-regular-expression",
+ "sha": "6be1a3846f4bc07a2264b72d1e1ee031c605bac7",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_empty_iterable_returns_empty_regexp",
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_returns_same_as_prefix_tree_to_regexp_direct",
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_with_custom_formatter_class",
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_default_repr_no_modification",
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_formatting_string_literal_properties",
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_inherits_baseformatter"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_returns_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_matches_single_word_exactly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_matches_all_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_excludes_non_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_empty_iterable_returns_empty_regexp": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_with_overlapping_prefixes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_with_special_characters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_with_prefix_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_default_repr_no_modification": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_inherits_baseformatter": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_with_custom_formatter_class": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_returns_same_as_prefix_tree_to_regexp_direct": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_prefix_tree_to_regexp_output_matches_all_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_is_stable_and_deterministic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_handles_words_with_unicode": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_does_not_modify_input_iterable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_formatting_string_literal_properties": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_parametrized[words0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_parametrized[words1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_parametrized[words2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_parametrized[words3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_empty_iterable_returns_empty_regexp",
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_returns_same_as_prefix_tree_to_regexp_direct",
+    "zz_gpt41mini_guard_1.test_gen::test_iterable_to_regexp_with_custom_formatter_class",
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_default_repr_no_modification",
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_formatting_string_literal_properties",
+    "zz_gpt41mini_guard_1.test_gen::test_python_formatter_inherits_baseformatter"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_allows_custom_formatter",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_basic_strings",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_can_handle_large_input",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_empty_iterable",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_escape_special_regex_chars",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_handles_generator_correctly",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_single_word",
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_does_not_mutate_tree",
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_method_behavior",
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_returns_string"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_basic_strings": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_empty_iterable": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_single_word": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_nontrivial_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_all_prefixes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_with_repeated_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_uses_python_formatter_by_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_method_behavior": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_utils_iterable_to_regexp_same_as_imported": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_init_module_contains_version_and_constants": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_allows_custom_formatter": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_input_not_modified": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_handles_iterable_of_iterables_gracefully": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_handles_generator_correctly": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_integration_with_prefix_tree_to_regexp": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_returns_string": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_does_not_mutate_tree": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_unicode_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_escape_special_regex_chars": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_non_string_elements_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_can_handle_large_input": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_allows_custom_formatter",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_basic_strings",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_can_handle_large_input",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_empty_iterable",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_escape_special_regex_chars",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_handles_generator_correctly",
+    "zz_gpt41mini_guard_2.test_gen::test_iterable_to_regexp_single_word",
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_does_not_mutate_tree",
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_method_behavior",
+    "zz_gpt41mini_guard_2.test_gen::test_pythonformatter_format_returns_string"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 3,
+  "failed": 197,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'^', '_'}\nMatched: {' ', '^'}\nRegexp: [^_]\nFalsifying example: test_generates",
+   "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'_', '^'}\nMatched: {'^', ' '}\nRegexp: [^_]\nFalsifying example: test_generates",
+   "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'_', '^'}\nMatched: {' ', '^'}\nRegexp: [^_]\nFalsifying example: test_generates"
+  ]
+ },
+ "seconds": 253.3
+}

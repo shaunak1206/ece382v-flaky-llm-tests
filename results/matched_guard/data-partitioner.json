@@ -1,0 +1,344 @@
+{
+ "project": "data-partitioner",
+ "sha": "c37bca05576648c3f69f8694951bb2ae9ea9ed21",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_index_increments_correctly_when_iterating",
+    "zz_gpt41mini_guard_1.test_gen::test_yield_set_does_not_yield_after_all_data"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_init_sets_attributes_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_index_partition_counts_sum_to_dataset_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_and_test_indexes_are_disjoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_and_test_indexes_cover_all_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.1]": {
+     "pass": 192,
+     "fail": 8,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.5]": {
+     "pass": 137,
+     "fail": 63,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.8]": {
+     "pass": 165,
+     "fail": 35,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[1.0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_set_generator_yields_correct_elements": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_test_set_generator_yields_correct_elements": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_yield_set_does_not_yield_after_all_data": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_index_increments_correctly_when_iterating": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_partitioning_function_is_used": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_set_and_test_set_iterators_are_independent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_set_iterates_all_training_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_test_set_iterates_all_test_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_yield_set_returns_empty_for_empty_dataset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_percent_1_results_all_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_percent_0_results_all_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_len_dataset_zero_init": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_consecutive_calls_to_training_set_produce_same_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_consecutive_calls_to_test_set_produce_same_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_partial_iteration_then_full_iteration_training_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_partial_iteration_then_full_iteration_test_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.1]",
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.5]",
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.8]"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_index_increments_correctly_when_iterating",
+    "zz_gpt41mini_guard_1.test_gen::test_yield_set_does_not_yield_after_all_data"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_pseudorandom_partition_consistency_for_fixed_seed"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_init_stores_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_partition_lengths_sum_to_dataset_len": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_training_and_test_indexes_disjoint_and_cover_all": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_test_set_generator_yields_test_data_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_training_set_generator_yields_training_data_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_generators_yield_same_elements_each_call": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_empty_dataset_results_in_empty_sets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_training_percent_zero_results_all_in_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_training_percent_one_results_all_in_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_partitioning_function_is_used": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_index_advances_properly_after_next_calls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test__yield_set_yields_no_elements_when_no_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test__yield_set_yields_elements_correctly_after_partial_partition": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test__yield_set_waits_for_more_indexes_until_complete": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_pseudorandom_partition_consistency_for_fixed_seed": {
+     "pass": 1,
+     "fail": 199,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_raises_stopiteration_if_next_called_after_all_partitions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_guard_2.test_gen::test_pseudorandom_partition_consistency_for_fixed_seed"
+   ],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 199,
+  "failed": 1,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: 0.1897 != 0.2 within 0.009485 delta (0.010300000000000004 difference)"
+  ]
+ },
+ "seconds": 143.1
+}

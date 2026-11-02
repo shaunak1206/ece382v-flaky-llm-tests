@@ -1,0 +1,347 @@
+{
+ "project": "spreading_dye_sampler",
+ "sha": "4282f7609959a31d1b2a4832f3ed643b15c46cb6",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_are_adjacent",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_are_unique",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_consistent_with_cell_dims_and_grid_dims",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_empty_cells_if_req_num_zero",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_neighbours_sum_of_edge_lengths",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_no_permitted_argument_creates_all_permitted",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_num_cells_equals_req_num_if_possible",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_succeeds_with_squeeze_true_ignoring_non_permitted_neighbors",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_with_nonboolean_permitted_array"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_dyeblot_init_and_num_cells_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_dyeblot_for_each_cell_calls_function_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_returns_none_if_start_cell_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_returns_none_if_non_permitted_cell_used_and_squeeze_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_succeeds_with_squeeze_true_ignoring_non_permitted_neighbors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_are_adjacent": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_num_cells_equals_req_num_if_possible": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_no_permitted_argument_creates_all_permitted": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_consistent_with_cell_dims_and_grid_dims": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_empty_cells_if_req_num_zero": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_start_cell_at_grid_edge_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_neighbours_sum_of_edge_lengths": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_returns_none_if_initial_cell_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_are_unique": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_with_nonboolean_permitted_array": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_permitted_mask_smaller_than_grid_dims_raises_index_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_dyeblot_for_each_cell_with_side_effects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_for_each_cell_empty_cells_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_rejects_cell_outside_grid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_are_adjacent",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_are_unique",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_cells_consistent_with_cell_dims_and_grid_dims",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_empty_cells_if_req_num_zero",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_neighbours_sum_of_edge_lengths",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_no_permitted_argument_creates_all_permitted",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_num_cells_equals_req_num_if_possible",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_succeeds_with_squeeze_true_ignoring_non_permitted_neighbors",
+    "zz_gpt41mini_guard_1.test_gen::test_make_blot_with_nonboolean_permitted_array"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_add_neighbour_accumulates_edge_lengths",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_basic_properties",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_cells_are_contiguous",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_handles_non_square_grid",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_large_cell_dims_does_not_crash",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_probability_distribution_consistency",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_req_num_cells_equals_num_cells",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_zero_cells_requested_returns_empty_blot"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_dyeblot_initial_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_for_each_cell_calls_function_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_basic_properties": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_req_num_cells_equals_num_cells": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_req_num_cells_one_returns_single_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_permitted_none_defaults_to_all_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_with_permitted_mask_blocks_disallowed_start": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_squeeze_false_blocks_on_permitted_false_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_squeeze_true_skips_disallowed_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_cells_are_contiguous": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_returns_none_if_start_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_add_neighbour_accumulates_edge_lengths": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_for_each_cell_does_not_modify_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_grid_and_cell_dims_not_mutated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_large_cell_dims_does_not_crash": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_zero_cells_requested_returns_empty_blot": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_handles_non_square_grid": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_probability_distribution_consistency": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_start_cell_permitted_and_in_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_add_neighbour_accumulates_edge_lengths",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_basic_properties",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_cells_are_contiguous",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_handles_non_square_grid",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_large_cell_dims_does_not_crash",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_probability_distribution_consistency",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_req_num_cells_equals_num_cells",
+    "zz_gpt41mini_guard_2.test_gen::test_make_blot_zero_cells_requested_returns_empty_blot"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 197,
+  "failed": 3,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: False\nassert 0"
+  ]
+ },
+ "seconds": 219.5
+}

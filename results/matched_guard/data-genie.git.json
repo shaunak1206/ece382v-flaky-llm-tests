@@ -1,0 +1,328 @@
+{
+ "project": "data-genie.git",
+ "sha": "cde77b7bdb445557f78d834d72d51bb62ad9e668",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_apply_check_various_checks",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_has_columns_ignore_case_various",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_has_one_of_ignore_case_flag",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_predicates_code_block_and_exception",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_quantile_basic",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_value_length_basic_ignore_nulls",
+    "zz_gpt41mini_guard_1.test_gen::test_parse_spec_and_validate_spec_valid_and_invalid",
+    "zz_gpt41mini_guard_1.test_gen::test_run_with_ignore_column_case_changes_columns",
+    "zz_gpt41mini_guard_1.test_gen::test_run_with_single_predicate_children"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_validate_raises_on_empty_dataframe": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_comparator_to_fn": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_treat_column_name_respects_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_quantile_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_date_validation_valid_and_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_has_one_of_ignore_case_flag": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_value_length_basic_ignore_nulls": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_percent_value_length_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_has_columns_ignore_case_various": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_check_row_count_and_keyerror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_check_various_checks": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_apply_predicates_code_block_and_exception": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_run_with_single_predicate_children": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_parse_spec_and_validate_spec_valid_and_invalid": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_run_with_ignore_column_case_changes_columns": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_run_raises_on_invalid_spec": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_apply_check_various_checks",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_has_columns_ignore_case_various",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_has_one_of_ignore_case_flag",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_predicates_code_block_and_exception",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_quantile_basic",
+    "zz_gpt41mini_guard_1.test_gen::test_apply_value_length_basic_ignore_nulls",
+    "zz_gpt41mini_guard_1.test_gen::test_parse_spec_and_validate_spec_valid_and_invalid",
+    "zz_gpt41mini_guard_1.test_gen::test_run_with_ignore_column_case_changes_columns",
+    "zz_gpt41mini_guard_1.test_gen::test_run_with_single_predicate_children"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_apply_check_various_valid_and_invalid",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_has_columns_exact_and_ignore_case",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_predicates_code_block_and_unknown_instruction",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_quantile_true_and_false",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_value_length_edge_cases_with_empty_string_and_whitespace",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_value_length_ignore_nulls_and_comparator",
+    "zz_gpt41mini_guard_2.test_gen::test_percent_value_length_with_all_nulls",
+    "zz_gpt41mini_guard_2.test_gen::test_run_ignores_column_case_and_transforms_columns",
+    "zz_gpt41mini_guard_2.test_gen::test_validate_spec_and_parse_spec_success_and_failure"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_init_validates_non_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_comparator_to_fn": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_treat_column_name_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_quantile_true_and_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_date_validation_valid_and_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_has_one_of_with_and_without_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_value_length_ignore_nulls_and_comparator": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_percent_value_length_basic_and_ignore_nulls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_has_columns_exact_and_ignore_case": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_check_various_valid_and_invalid": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_predicates_code_block_and_unknown_instruction": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test__run_accepts_predicates_and_rejects_other": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_validate_spec_and_parse_spec_success_and_failure": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_run_ignores_column_case_and_transforms_columns": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test__comparator_to_fn_returns_false_for_unknown_comparator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_value_length_edge_cases_with_empty_string_and_whitespace": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_percent_value_length_with_all_nulls": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_apply_check_keyerror_on_nonexistent_column": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_run_with_realistic_spec": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_apply_check_various_valid_and_invalid",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_has_columns_exact_and_ignore_case",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_predicates_code_block_and_unknown_instruction",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_quantile_true_and_false",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_value_length_edge_cases_with_empty_string_and_whitespace",
+    "zz_gpt41mini_guard_2.test_gen::test_apply_value_length_ignore_nulls_and_comparator",
+    "zz_gpt41mini_guard_2.test_gen::test_percent_value_length_with_all_nulls",
+    "zz_gpt41mini_guard_2.test_gen::test_run_ignores_column_case_and_transforms_columns",
+    "zz_gpt41mini_guard_2.test_gen::test_validate_spec_and_parse_spec_success_and_failure"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 54,
+  "failed": 146,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)"
+  ]
+ },
+ "seconds": 1256.9
+}

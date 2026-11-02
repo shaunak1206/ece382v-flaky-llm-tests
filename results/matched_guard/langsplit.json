@@ -1,0 +1,359 @@
+{
+ "project": "langsplit",
+ "sha": "d30d47bd6f73852dc716f1e79225d8d49dc39daa",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_convert_basic_dict_without_title",
+    "zz_gpt41mini_guard_1.test_gen::test_convert_with_title_true_ends_last_used",
+    "zz_gpt41mini_guard_1.test_gen::test_split_assigns_unknown_language_when_key_len_out_of_range",
+    "zz_gpt41mini_guard_1.test_gen::test_split_multiple_tokens_with_same_lang_combined",
+    "zz_gpt41mini_guard_1.test_gen::test_split_text_without_sep_autodetect_false_assigns_unknown",
+    "zz_gpt41mini_guard_1.test_gen::test_split_unknown_language_key_not_detected",
+    "zz_gpt41mini_guard_1.test_gen::test_split_with_paragraph_separator_and_autodetect"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_detect_language_known_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_detect_language_shorter_code_conversion": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_detect_language_default_no_conversion": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_convert_returns_str_for_non_dict_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_convert_basic_dict_without_title": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_convert_with_title_true_ends_last_used": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_convert_removes_leading_end_codes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_empty_input_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_single_line_sep_starts_short_text": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_assigns_unknown_language_when_key_len_out_of_range": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_assigns_known_language_within_key_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_multiple_languages_and_order_preserved": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_text_without_sep_autodetect_true_detects_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_text_without_sep_autodetect_false_assigns_unknown": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_markdown_true_returns_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_markdown_title_true_ends_is_colon": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_with_paragraph_separator_and_autodetect": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_with_exception_in_detect_logging": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_multiple_tokens_with_same_lang_combined": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_unknown_language_key_not_detected": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_split_leading_sep_skipped_and_order_preserved": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_convert_basic_dict_without_title",
+    "zz_gpt41mini_guard_1.test_gen::test_convert_with_title_true_ends_last_used",
+    "zz_gpt41mini_guard_1.test_gen::test_split_assigns_unknown_language_when_key_len_out_of_range",
+    "zz_gpt41mini_guard_1.test_gen::test_split_multiple_tokens_with_same_lang_combined",
+    "zz_gpt41mini_guard_1.test_gen::test_split_text_without_sep_autodetect_false_assigns_unknown",
+    "zz_gpt41mini_guard_1.test_gen::test_split_unknown_language_key_not_detected",
+    "zz_gpt41mini_guard_1.test_gen::test_split_with_paragraph_separator_and_autodetect"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_split_handles_empty_tokens_and_whitespace",
+    "zz_gpt41mini_guard_2.test_gen::test_split_no_end_symbol_fallback",
+    "zz_gpt41mini_guard_2.test_gen::test_split_respects_min_and_max_key_length",
+    "zz_gpt41mini_guard_2.test_gen::test_split_respects_pargraph_sep_parameter",
+    "zz_gpt41mini_guard_2.test_gen::test_split_with_autodetect_off_assigns_unknown_language"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_detect_language_returns_known_code_or_shorter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_convert_with_dict_and_default_ends_and_sep": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_convert_with_title_true_uses_last_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_convert_with_non_dict_returns_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_empty_or_none_returns_same": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_single_line_no_end_symbol_returns_ordered_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_simple_marked_text": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_with_autodetect_off_assigns_unknown_language": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_with_autodetect_true_detects_paragraphs_and_assigns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_respects_min_and_max_key_length": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_returns_markdown_when_markdown_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_with_title_true_uses_title_ends_in_markdown": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_handles_empty_tokens_and_whitespace": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_detect_language_exception_handled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_keeps_order_of_languages": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_handles_consecutive_sep_tokens": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_no_end_symbol_fallback": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_convert_removes_leading_ends_in_text_md": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_respects_pargraph_sep_parameter": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_split_non_dict_returned_unchanged_by_convert_markdown": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard_2.test_gen::test_split_handles_empty_tokens_and_whitespace",
+    "zz_gpt41mini_guard_2.test_gen::test_split_no_end_symbol_fallback",
+    "zz_gpt41mini_guard_2.test_gen::test_split_respects_min_and_max_key_length",
+    "zz_gpt41mini_guard_2.test_gen::test_split_respects_pargraph_sep_parameter",
+    "zz_gpt41mini_guard_2.test_gen::test_split_with_autodetect_off_assigns_unknown_language"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 173,
+  "failed": 27,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: assert OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')]) == OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  Omitting 2 identical items, use -vv to show\n  Left contains 1 more item:\n  {'sw': 'amazing world'}\n  Right con",
+   "AssertionError: assert OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')]) == OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  Omitting 2 identical items, use -vv to show\n  Left contains 1 more item:\n  {'pl': 'amazing world'}\n  Right con"
+  ]
+ },
+ "seconds": 454.9
+}
