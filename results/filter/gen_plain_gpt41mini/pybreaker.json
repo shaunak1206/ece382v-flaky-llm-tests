@@ -1,0 +1,15 @@
+{
+ "cond": "gen_plain_gpt41mini",
+ "proj": "pybreaker",
+ "collected": 1,
+ "accepted": 0,
+ "rejected": 1,
+ "collection_error_files": [
+  "../../../../../gen_plain_gpt41mini/pybreaker/test_pgpt41mini_pybreaker.py"
+ ],
+ "accepted_ids": [],
+ "rejected_ids": [
+  "::gen_plain_gpt41mini.pybreaker.test_pgpt41mini_pybreaker"
+ ],
+ "tail": "\n==================================== ERRORS ====================================\n_ ERROR collecting gen_plain_gpt41mini/pybreaker/test_pgpt41mini_pybreaker.py __\nImportError while importing test module '/home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/gen_plain_gpt41mini/pybreaker/test_pgpt41mini_pybreaker.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../../../gen_plain_gpt41mini/pybreaker/test_pgpt41mini_pybreaker.py:7: in <module>\n    from pybreaker import (\nE   ImportError: cannot import name 'CircuitBreakersState' from 'pybreaker' (/home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/pybreaker/src/pybreaker/__init__.py). Did you mean: 'CircuitBreakerState'?\n=========================== short test summary info ============================\nERROR ../../../../../gen_plain_gpt41mini/pybreaker/test_pgpt41mini_pybreaker.py\n1 error in 0.33s\n"
+}

@@ -1,0 +1,15 @@
+{
+ "cond": "gen_plain_gpt41mini",
+ "proj": "tinydb",
+ "collected": 1,
+ "accepted": 0,
+ "rejected": 1,
+ "collection_error_files": [
+  "../../../../../gen_plain_gpt41mini/tinydb/test_pgpt41mini_tinydb.py"
+ ],
+ "accepted_ids": [],
+ "rejected_ids": [
+  "::gen_plain_gpt41mini.tinydb.test_pgpt41mini_tinydb"
+ ],
+ "tail": "\n==================================== ERRORS ====================================\n____ ERROR collecting gen_plain_gpt41mini/tinydb/test_pgpt41mini_tinydb.py _____\nImportError while importing test module '/home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/gen_plain_gpt41mini/tinydb/test_pgpt41mini_tinydb.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../../../gen_plain_gpt41mini/tinydb/test_pgpt41mini_tinydb.py:13: in <module>\n    from tinydb import TinyDB, where, Query, QueryInstance\nE   ImportError: cannot import name 'QueryInstance' from 'tinydb' (/home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/tinydb/tinydb/__init__.py)\n=========================== short test summary info ============================\nERROR ../../../../../gen_plain_gpt41mini/tinydb/test_pgpt41mini_tinydb.py\n1 error in 0.19s\n"
+}

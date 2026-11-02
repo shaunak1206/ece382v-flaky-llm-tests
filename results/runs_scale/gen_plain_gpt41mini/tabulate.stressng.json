@@ -1,0 +1,2510 @@
+{
+ "name": "gen_plain_gpt41mini-tabulate",
+ "mode": "stressng",
+ "runs": 150,
+ "num_tests": 217,
+ "runs_with_failure": 150,
+ "avg_run_seconds": 1.59,
+ "num_flaky": 0,
+ "num_always_fail": 29,
+ "flaky_tests": [],
+ "tests": {
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_build_line_with_callable_format": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_is_separating_line_with_strings_and_lists": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert True is False\n +  where True = _is_separating_line('\\x01x')\n +    where '\\x01x' = <built-in method join of str object at 0x70bc49a2f5d0>(['\\x01', 'x'])\n +      where <built-in method join of str object at 0x70bc49a2f5d0> = ''.join",
+    "AssertionError: assert True is False\n +  where True = _is_separating_line('\\x01x')\n +    where '\\x01x' = <built-in method join of str object at 0x73154ee2f5d0>(['\\x01', 'x'])\n +      where <built-in method join of str object at 0x73154ee2f5d0> = ''.join",
+    "AssertionError: assert True is False\n +  where True = _is_separating_line('\\x01x')\n +    where '\\x01x' = <built-in method join of str object at 0x77a5dca2f5d0>(['\\x01', 'x'])\n +      where <built-in method join of str object at 0x77a5dca2f5d0> = ''.join"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__align_header_with_multiline_header": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber[spam-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_align_column_choose_padfn_decimal_alignment": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert 6 == 9\n +  where 6 = len('1.2   ')"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_expand_numparse_bool_and_iterable": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_multiline_formatting": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert 'multi\\nline' in 'multi  test\\nline'"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_grid_segment_with_colons_various": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "NameError: name '_grid_segment_with_colons' is not defined"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[foo-str]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[pipe]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__is_separating_line_value_rejects_nonstring": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_build_row_with_callable_and_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[tsv]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[github]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_afterpoint[12345-0]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert -1 == 0\n +  where -1 = <function _afterpoint at 0x70bc4720ac00>('12345')\n +    where <function _afterpoint at 0x70bc4720ac00> = tabulate._afterpoint",
+    "AssertionError: assert -1 == 0\n +  where -1 = <function _afterpoint at 0x73154c45ec00>('12345')\n +    where <function _afterpoint at 0x73154c45ec00> = tabulate._afterpoint",
+    "AssertionError: assert -1 == 0\n +  where -1 = <function _afterpoint at 0x77a5da212c00>('12345')\n +    where <function _afterpoint at 0x77a5da212c00> = tabulate._afterpoint"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[outline]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_formatting_missing_values": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_freeze_time": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_JupyterHTMLStr_properties": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isconvertible_handles_exceptions": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__format_table_returns_empty_when_no_rows_or_header": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_more_generic_type_ordering": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert <class 'str'> is bool\n +  where <class 'str'> = <function _more_generic at 0x70bc4720b560>(None, bool)\n +    where <function _more_generic at 0x70bc4720b560> = tabulate._more_generic",
+    "AssertionError: assert <class 'str'> is bool\n +  where <class 'str'> = <function _more_generic at 0x73154c45f560>(None, bool)\n +    where <function _more_generic at 0x73154c45f560> = tabulate._more_generic",
+    "AssertionError: assert <class 'str'> is bool\n +  where <class 'str'> = <function _more_generic at 0x77a5da213560>(None, bool)\n +    where <function _more_generic at 0x77a5da213560> = tabulate._more_generic"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_segment_with_colons[center-4-:--:]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__strip_ansi_removes_osc_links": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[rst]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_rowalign_parameter_vertical_align": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__expand_iterable_with_string_and_other_types": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__format_table_returns_empty_for_empty_input": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[fancy_outline]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__format_table_respects_with_header_hide": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__append_multiline_row_returns_lines": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber_with_thousands_separator[1,000.123-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tablefmt_members_presence": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_index_always": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber[123e45-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isint[123-True0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isbool_various[True1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_afterpoint[12e03-2]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[pretty]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__strip_ansi_bytes": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: sequence item 0: expected a bytes-like object, str found"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isconvertible[int-a-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pad_functions[abc-3-_padleft-abc]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[latex_booktabs]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_segment_with_colons[-5------]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[rounded_outline]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_rst_escape_first_column_nonempty_and_empty": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_preserve_whitespace_break_long_words_false": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[simple]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber[123e45678-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__build_line_with_string_format": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_build_line_and_append_line": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: cannot unpack non-iterable DataRow object"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[html]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isconvertible[int-3-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isint[123-True1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isbool_various[True0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[-NoneType]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_disable_numparse_parameter_effect": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '-----  ---\\n1,234  abc\\n5,678  def\\n-----  ---' != '-----  ---\\n1,234  abc\\n5,678  def\\n-----  ---'"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_calling_tabulate_with_empty_data": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[jira]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isbool_various[0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_expand_iterable_various": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_segment_with_colons[None-3----]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_preserves_whitespace": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: 'NoneType' object is not iterable"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_segment_with_colons[left-3-:--]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_build_simple_row_and_row_building": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[heavy_grid]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[simple_grid]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_prepend_row_index_with_separating_lines_preserved": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "ValueError: index must be as long as the number of data rows: len(index)=2 len(rows)=3"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber[123.45-True1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_formats_various": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[colon_grid]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isconvertible[int-None-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_strip_ansi_removes_codes": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[grid]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber[123.45-True0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[plain]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__format_table_returns_html_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_values[-str-.2f-d-?-]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[asciidoc]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_is_separating_line_and_value[val4-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isnumber_false_on_inval_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__format_with_colored_numeric_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_column_type[colvals5-int]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isbool_various[1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__pad_row_with_separating_line_and_normal_cells": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_multiline_cells_and_multiline_format": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[True-bool0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_build_line_returns_none_with_none_format": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_latex_line_begin_tabular[True-True-None-result3]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x70bc49a39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x70bc49a39680> = '\\\\'.startswith",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x73154ee39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x73154ee39680> = '\\\\'.startswith",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x77a5dca39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x77a5dca39680> = '\\\\'.startswith"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_is_separating_line_and_value[notseparating-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_formats_list_includes_known": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_values[3.14159-float-.2f-d-?-3.14_0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__expand_iterable_with_short_input": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_latex_line_begin_tabular[True-False-True-result1]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x70bc49a39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x70bc49a39680> = '\\\\'.startswith",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x73154ee39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x73154ee39680> = '\\\\'.startswith",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x77a5dca39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x77a5dca39680> = '\\\\'.startswith"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isbool[False-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[double_grid]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_mediawiki_row_with_attrs_basic": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_colglobalalign_and_colalign": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[textile]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_latex_line_begin_tabular[False-False-None-result0]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x70bc49a39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x70bc49a39680> = '\\\\'.startswith",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x73154ee39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x73154ee39680> = '\\\\'.startswith",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x77a5dca39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x77a5dca39680> = '\\\\'.startswith"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pad_functions[abc-6-_padboth- abc  ]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_column_type[colvals2-float]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_prepend_row_index_raises_on_length_mismatch": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[True-bool1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[latex_raw]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_visible_width_simple_and_ansi": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_values[test-str-.2f-d-?-test]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_choose_width_fn_various": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_values[3.14159-float-.2f-d-?-3.14_1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[unsafehtml]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_align_column_multiline_width": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__expand_numparse_with_bool_disabling": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[None-NoneType]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_asciidoc_row_header_and_data": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__bool_handles_numpy_arrays": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "ModuleNotFoundError: No module named 'numpy'"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_is_separating_line_and_value[val5-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[123-int1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[latex_longtable]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_values[notnum-float-.2f-d-?-notnum]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[double_outline]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pad_functions[abc-6-_padright-abc   ]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_align_column_returns_padded_strings": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__remove_separating_lines_and_reinsert": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '\\x01' in [['\\x01'], ['a']]"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[123-int0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_maxcolwidths_wrap": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_bool_wrapper": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "ModuleNotFoundError: No module named 'numpy'"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isbool[1-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_simple_separated_format_outputs_expected": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber_with_thousands_separator[.1-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__build_simple_row_with_escape_map_changes_chars": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_is_separating_line_and_value[val3-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_values[None-str-.2f-d-?-]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_append_multiline_row_basic": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__afterpoint_with_non_numeric_strings": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "NameError: name '_afterpoint' is not defined"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_is_separating_line_and_value[\\x01-True1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_flat_list_flattens_nested": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isbool[true-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_prepend_row_index_basic_and_separating_lines": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_segment_with_colons[right-5-----:]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_stralign_and_numalign": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__align_header_left_right_center_none_alignment": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[latex]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_line_with_colons_example": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '|:--|:--:|----:|' == '|:--|:--:|----:'\n  \n  - |:--|:--:|----:\n  + |:--|:--:|----:|\n  ?                +"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[presto]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_multiple_formats_do_not_raise": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_segment_with_colons[unknown-2---]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__padnone_returns_input": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber_with_thousands_separator[1.-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_values[bytes-bytes-.2f-d-?-bytes]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_simple_separated_format_usage": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_index_never": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert ('0' not in '-  -\\na  1\\nb  2\\n-  -'\n  \n  '0' is contained here:\n    -  -\n    a  1\n    b  2\n    -  - and '1' not in '-  -\\na  1\\nb  2\\n-  -'\n  \n  '1' is contained here:\n    -  -\n    a  1\n  ?    +\n    b  2\n    -  -)"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_preserves_row_align_default_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_calling_tabulate_with_none_data": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: 'NoneType' object is not iterable"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber_with_thousands_separator[1,0000-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_is_separating_line_and_value[\\x01-True0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[heavy_outline]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[simple_outline]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isbool[True-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[moinmoin]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__strip_ansi_on_bytestring_removes_ansi_codes": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: sequence item 0: expected a bytes-like object, str found"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_afterpoint[1234,567.89-2]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert -1 == 2\n +  where -1 = <function _afterpoint at 0x70bc4720ac00>('1234,567.89')\n +    where <function _afterpoint at 0x70bc4720ac00> = tabulate._afterpoint",
+    "AssertionError: assert -1 == 2\n +  where -1 = <function _afterpoint at 0x73154c45ec00>('1234,567.89')\n +    where <function _afterpoint at 0x73154c45ec00> = tabulate._afterpoint",
+    "AssertionError: assert -1 == 2\n +  where -1 = <function _afterpoint at 0x77a5da212c00>('1234,567.89')\n +    where <function _afterpoint at 0x77a5da212c00> = tabulate._afterpoint"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[123.4-float]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__padboth_unicode_padding": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_values[42-int-.2f-d-?-42]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber_with_thousands_separator[notnumber-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_column_type[colvals1-int]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_append_basic_row_returns_lines": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isconvertible[float-bad-False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber_with_thousands_separator[1,000-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isbool_various[False0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[12.345-float]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isconvertible[float-3.14-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_afterpoint[12.345-3]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[mixed_outline]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_latex_line_begin_tabular[False-True-True-result2]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x70bc49a39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x70bc49a39680> = '\\\\'.startswith",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x73154ee39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x73154ee39680> = '\\\\'.startswith",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x77a5dca39680>('\\\\begin')\n +    where <built-in method startswith of str object at 0x77a5dca39680> = '\\\\'.startswith"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isbool_various[False1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_textile_row_with_attrs_basic": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[mixed_grid]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_column_type[colvals0-bool]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_grid_line_with_colons_empty_aligns": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "NameError: name '_grid_line_with_colons' is not defined"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_html_row_with_attrs_escape_and_unsafe": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__expand_iterable_with_empty_list": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__flat_list_flatten_with_empty_and_non_empty_lists": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_grid_line_with_colons_example": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "NameError: name '_grid_line_with_colons' is not defined"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__is_number_with_thousands_separator_bytes": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_datarow_partial_call": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__format_with_invalid_float_string_returns_str": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__format_table_with_no_headers_and_rows": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_with_custom_index": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__isint_with_numpy_int": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_type_func[12,345-int]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_line_with_colons_empty_aligns": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber_with_thousands_separator[1-True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[psql]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_align_cell_vertically_various": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber[123-True0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_column_type[colvals4-str]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_basic_table_and_headers": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_is_separating_line_and_value[\\x01foo-False]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert True == False\n +  where True = _is_separating_line('\\x01foo')"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_headers_maxwidths_wrap": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isint[123.45-False1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[orgtbl]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_format_table_simple_vs_html": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_build_simple_row_with_escape_map": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__format_with_decimal_and_int": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isint[123.45-False0]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_column_type[colvals3-str]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pad_functions[abc-6-_padleft-   abc]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_afterpoint[foo--1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[rounded_grid]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_pipe_segment_with_colons[decimal-4----:]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_simple_separated_format_functionality": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test__strip_ansi_with_non_str_bytes": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: sequence item 0: expected a bytes-like object, str found"
+   ]
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[mediawiki]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_tabulate_roundtrip_rows_keep[fancy_grid]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_isnumber[123-True1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.tabulate.test_pgpt41mini_tabulate::test_moin_row_with_attrs_basic": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert False\n +  where False = <built-in method startswith of str object at 0x70bc469f04b0>(\"||''foo\")\n +    where <built-in method startswith of str object at 0x70bc469f04b0> = '||<style=\"text-align: left;\"> \\'\\'foo\\'\\' ||<style=\"text-align: right;\"> \\'\\'bar\\'\\' ||'.startswith",
+    "assert False\n +  where False = <built-in method startswith of str object at 0x73154bdc1c30>(\"||''foo\")\n +    where <built-in method startswith of str object at 0x73154bdc1c30> = '||<style=\"text-align: left;\"> \\'\\'foo\\'\\' ||<style=\"text-align: right;\"> \\'\\'bar\\'\\' ||'.startswith",
+    "assert False\n +  where False = <built-in method startswith of str object at 0x77a5d9a44eb0>(\"||''foo\")\n +    where <built-in method startswith of str object at 0x77a5d9a44eb0> = '||<style=\"text-align: left;\"> \\'\\'foo\\'\\' ||<style=\"text-align: right;\"> \\'\\'bar\\'\\' ||'.startswith"
+   ]
+  }
+ },
+ "noise_per_run": [
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  }
+ ]
+}

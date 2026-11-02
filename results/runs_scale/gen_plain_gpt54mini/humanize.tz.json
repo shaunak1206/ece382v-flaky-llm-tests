@@ -1,0 +1,577 @@
+{
+ "name": "gen_plain_gpt54mini-humanize",
+ "mode": "tz",
+ "runs": 150,
+ "num_tests": 78,
+ "runs_with_failure": 150,
+ "avg_run_seconds": 0.49,
+ "num_flaky": 0,
+ "num_always_fail": 9,
+ "flaky_tests": [],
+ "tests": {
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_non_numeric_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intcomma_none_passthrough_as_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_none_passthrough": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert 'None' is None\n +  where 'None' = precisedelta(None)"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_natural_list_uses_str_on_items": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_activate_deactivate_and_separators_default_locale": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_simple_and_compound": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '2 days, 1 ho... 0.12 seconds' == '2 days, 1 ho...33.12 seconds'\n  \n  - 2 days, 1 hour and 33.12 seconds\n  ?                    ^^\n  + 2 days, 1 hour, 33 minutes and 0.12 seconds\n  ?               ++++++++++++     ^"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_ordinal_basic_cases": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturalsize_negative_and_large_suffix": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_all_exports_include_expected_names": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_natural_list_three_items": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_metric_decimal_prefix": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_format_not_finite_helper": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_scientific_simple_cases": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturalday_non_date_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaldelta_non_numeric_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_natural_list_empty": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaltime_timezone_aware_datetime": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_gettext_helpers_use_active_translation": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intword_thousand_and_million": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaldelta_minimum_unit_microseconds_and_milliseconds": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_fractional_simple_cases": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_clamp_no_clamping_returns_formatted_value": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaldelta_invalid_minimum_unit_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_ordinal_handles_infinite_and_nan": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_clamp_callable_format_and_custom_tokens": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_ordinal_teens_use_th": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaldelta_years_and_composite": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_scientific_handles_infinite_and_nan": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intcomma_float_and_rounding_digits": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intword_custom_format": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_scientific_string_and_non_numeric_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaltime_now_for_moment": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_apnumber_outside_range_returns_string_number": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaltime_datetime_past_and_future": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_clamp_floor_and_ceil": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_fractional_negative_and_repeating": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_ordinal_non_numeric_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_apnumber_non_numeric_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intcomma_string_input_with_decimal_and_thousands": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_suitable_minimum_unit_and_suppressed_units_helpers": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_fractional_non_numeric_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturalday_today_tomorrow_yesterday": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaldate_today_and_far_away": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_activate_english_locale_disables_translation": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturalday_formats_other_dates": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_minimum_unit_more_coarse_than_value": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intcomma_basic_integers": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaltime_past_and_future_with_numbers": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert 'a second ago' == '1 second ago'\n  \n  - 1 second ago\n  ? ^\n  + a second ago\n  ? ^"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturalsize_rounding_bumps_suffix": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_metric_zero_and_negative": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturalsize_bytes_and_units": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_version_is_exposed": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '0.0.0' == '0.1.dev1'\n  \n  - 0.1.dev1\n  + 0.0.0"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intcomma_handles_infinite_and_nan": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_microseconds_minimum_unit": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '2 days, 1 ho... milliseconds' == '2 days, 1 ho... milliseconds'\n  \n  - 2 days, 1 hour, 33 seconds and 123 milliseconds\n  ?                     ------\n  + 2 days, 1 hour, 33 minutes and 123 milliseconds\n  ?                    ++++++"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_metric_scientific_fallback": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intcomma_with_locale_separators": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "FileNotFoundError: [Errno 2] No translation file found for domain: 'humanize'"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_activate_unknown_locale_raises_file_not_found_when_no_path": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_suppress_seconds_and_smaller": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturalsize_binary_and_gnu": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_gettext_noop_helpers_are_identity": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_metric_large_and_micro_prefixes": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_rounding_by_fmt_int_and_float": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_natural_list_single": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaldelta_hours_days_and_months": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intword_handles_infinite_and_nan": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_natural_list_two_items": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_ordinal_handles_negative_numbers": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '-1th' == '-1st'\n  \n  - -1st\n  ?   -\n  + -1th\n  ?    +"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_clamp_none_and_nonfinite": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_suppress_days": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '49 hours, 33... 0.12 seconds' == '49 hours and 33.12 seconds'\n  \n  - 49 hours and 33.12 seconds\n  ?              ^^\n  + 49 hours, 33 minutes and 0.12 seconds\n  ?         ++++++++++++     ^"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intword_small_number_returns_original": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaldelta_basic_seconds_and_minutes": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_custom_format": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '2 days, 1 ho....1230 seconds' == '2 days, 1 ho....1230 seconds'\n  \n  - 2 days, 1 hour and 33.1230 seconds\n  ?                    ^^\n  + 2 days, 1 hour, 33 minutes and 0.1230 seconds\n  ?               ++++++++++++     ^"
+   ]
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaltime_timedelta_uses_its_own_tense": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_precisedelta_tiny_value_with_coarse_minimum_unit": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_naturaldate_non_date_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_apnumber_single_digits_are_words": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_clamp_invalid_format_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.humanize.test_pgpt54mini_humanize::test_intword_large_numbers_and_negative": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

@@ -1,0 +1,442 @@
+{
+ "pooled": {
+  "human": {
+   "suites": 12,
+   "tests": 5587,
+   "flaky": 5,
+   "always_fail": 1,
+   "ci": [
+    0.038231563357195956,
+    0.2093447586047784
+   ]
+  },
+  "llm_tests": {
+   "suites": 12,
+   "tests": 1511,
+   "flaky": 1,
+   "always_fail": 0,
+   "ci": [
+    0.011683285927627674,
+    0.3739411912454311
+   ]
+  },
+  "gen_oneshot_sonnet": {
+   "suites": 12,
+   "tests": 1406,
+   "flaky": 0,
+   "always_fail": 0,
+   "ci": [
+    0,
+    0.272484511735219
+   ]
+  },
+  "gen_oneshot_haiku": {
+   "suites": 12,
+   "tests": 1595,
+   "flaky": 3,
+   "always_fail": 0,
+   "ci": [
+    0.06398582157888626,
+    0.551559833475373
+   ]
+  },
+  "gen_tp_sonnet": {
+   "suites": 12,
+   "tests": 913,
+   "flaky": 0,
+   "always_fail": 0,
+   "ci": [
+    0,
+    0.4190036752259059
+   ]
+  },
+  "gen_plain_sonnet": {
+   "suites": 12,
+   "tests": 1191,
+   "flaky": 0,
+   "always_fail": 0,
+   "ci": [
+    0,
+    0.3215154209562171
+   ]
+  },
+  "gen_plain_gpt54mini": {
+   "suites": 12,
+   "tests": 852,
+   "flaky": 1,
+   "always_fail": 0,
+   "ci": [
+    0.020721316853888415,
+    0.661834894482415
+   ]
+  },
+  "gen_plain_gpt41mini": {
+   "suites": 12,
+   "tests": 900,
+   "flaky": 10,
+   "always_fail": 1,
+   "ci": [
+    0.6046304227161615,
+    2.0331769098961017
+   ]
+  }
+ },
+ "flaky": [
+  {
+   "cond": "human",
+   "proj": "arrow",
+   "test": "tests.test_locales.TestLocaleValidation::test_locale_name_validation",
+   "pass": 99,
+   "fail": 101,
+   "rate": 0.505,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 100,
+    "tz": 50,
+    "stressng": 50
+   }
+  },
+  {
+   "cond": "human",
+   "proj": "arrow",
+   "test": "tests.test_locales.TestLocaleValidation::test_locale_validation",
+   "pass": 99,
+   "fail": 101,
+   "rate": 0.505,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 100,
+    "tz": 50,
+    "stressng": 50
+   }
+  },
+  {
+   "cond": "human",
+   "proj": "pybreaker",
+   "test": "tests.pybreaker_test.CircuitBreakerRedisConcurrencyTestCase::test_half_open_thread_safety",
+   "pass": 198,
+   "fail": 2,
+   "rate": 0.01,
+   "modes": [
+    "stressng"
+   ],
+   "runs": {
+    "both": 100,
+    "tz": 50,
+    "stressng": 50
+   }
+  },
+  {
+   "cond": "human",
+   "proj": "pybreaker",
+   "test": "tests.pybreaker_test.CircuitBreakerRedisTestCase::test_successful_after_timeout",
+   "pass": 199,
+   "fail": 1,
+   "rate": 0.005,
+   "modes": [
+    "stressng"
+   ],
+   "runs": {
+    "both": 100,
+    "tz": 50,
+    "stressng": 50
+   }
+  },
+  {
+   "cond": "human",
+   "proj": "pybreaker",
+   "test": "tests.pybreaker_test.CircuitBreakerThreadsTestCase::test_half_open_thread_safety",
+   "pass": 193,
+   "fail": 7,
+   "rate": 0.035,
+   "modes": [
+    "stressng"
+   ],
+   "runs": {
+    "both": 100,
+    "tz": 50,
+    "stressng": 50
+   }
+  },
+  {
+   "cond": "llm_tests",
+   "proj": "tenacity",
+   "test": "llm_tests.tenacity.test_llm_stop_wait::test_stop_after_delay_threshold[5.0-True]",
+   "pass": 594,
+   "fail": 6,
+   "rate": 0.01,
+   "modes": [
+    "both"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_oneshot_haiku",
+   "proj": "schedule",
+   "test": "gen_oneshot_haiku.schedule.test_osh_job_configuration.TestUntilConfiguration::test_until_with_time_object",
+   "pass": 599,
+   "fail": 1,
+   "rate": 0.0017,
+   "modes": [
+    "tz"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_oneshot_haiku",
+   "proj": "schedule",
+   "test": "gen_oneshot_haiku.schedule.test_osh_job_configuration.TestUntilConfiguration::test_until_with_string_time_format",
+   "pass": 585,
+   "fail": 15,
+   "rate": 0.025,
+   "modes": [
+    "tz"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_oneshot_haiku",
+   "proj": "tenacity",
+   "test": "gen_oneshot_haiku.tenacity.test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test",
+   "pass": 470,
+   "fail": 130,
+   "rate": 0.2167,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt54mini",
+   "proj": "tenacity",
+   "test": "gen_plain_gpt54mini.tenacity.test_pgpt54mini_tenacity::test_run_stop_sets_delay_since_first_attempt_and_result",
+   "pass": 598,
+   "fail": 2,
+   "rate": 0.0033,
+   "modes": [
+    "both"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intcomma_custom_separators",
+   "pass": 327,
+   "fail": 273,
+   "rate": 0.455,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[hu_HU- -,]",
+   "pass": 306,
+   "fail": 294,
+   "rate": 0.49,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[fr_FR- -.]",
+   "pass": 304,
+   "fail": 296,
+   "rate": 0.4933,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[None-,-.]",
+   "pass": 314,
+   "fail": 286,
+   "rate": 0.4767,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[pt_BR-.-,]",
+   "pass": 311,
+   "fail": 289,
+   "rate": 0.4817,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[en_US-,-.]",
+   "pass": 320,
+   "fail": 280,
+   "rate": 0.4667,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[it_IT-.-,]",
+   "pass": 319,
+   "fail": 281,
+   "rate": 0.4683,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[lv- -,]",
+   "pass": 303,
+   "fail": 297,
+   "rate": 0.495,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[de_DE-.-,]",
+   "pass": 313,
+   "fail": 287,
+   "rate": 0.4783,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  },
+  {
+   "cond": "gen_plain_gpt41mini",
+   "proj": "humanize",
+   "test": "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_gettext_functions_basic",
+   "pass": 313,
+   "fail": 287,
+   "rate": 0.4783,
+   "modes": [
+    "both",
+    "tz",
+    "stressng"
+   ],
+   "runs": {
+    "both": 300,
+    "tz": 150,
+    "stressng": 150
+   }
+  }
+ ],
+ "executions": {
+  "human": 1117400,
+  "llm_tests": 906600,
+  "gen_oneshot_sonnet": 843600,
+  "gen_oneshot_haiku": 1018800,
+  "gen_tp_sonnet": 555000,
+  "gen_plain_sonnet": 715200,
+  "gen_plain_gpt54mini": 538200,
+  "gen_plain_gpt41mini": 606600
+ }
+}

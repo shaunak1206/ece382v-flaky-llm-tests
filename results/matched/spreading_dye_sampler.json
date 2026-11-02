@@ -1,0 +1,1298 @@
+{
+ "project": "spreading_dye_sampler",
+ "sha": "4282f7609959a31d1b2a4832f3ed643b15c46cb6",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_cell_neighbors_addition",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_cells_adjacent",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_permitted_none_defaults_to_all_true",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_starts_within_grid_bounds",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_req_num_cells_greater_than_grid_cells"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_dyeblot_init_empty_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_dyeblot_num_cells_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_dyeblot_num_cells_after_append": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_for_each_cell_calls_function_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_returns_None_if_start_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_without_permitted_returns_blot": {
+     "pass": 137,
+     "fail": 63,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_returns_exact_requested_cells_if_possible": {
+     "pass": 118,
+     "fail": 82,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_permitted_mask_excludes_forbidden_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_permitted_mask_and_squeeze_false_returns_none_if_invalid_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_squeeze_true_skips_forbidden_cells": {
+     "pass": 193,
+     "fail": 7,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_starts_within_grid_bounds": {
+     "pass": 135,
+     "fail": 65,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_cell_neighbors_addition": {
+     "pass": 102,
+     "fail": 98,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_returns_none_if_start_not_permitted_and_squeeze_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_minimal_grid_single_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_req_num_cells_greater_than_grid_cells": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_for_each_cell_called_with_correct_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_cells_adjacent": {
+     "pass": 93,
+     "fail": 107,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_permitted_none_defaults_to_all_true": {
+     "pass": 65,
+     "fail": 135,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_cell_neighbors_addition",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_cells_adjacent",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_permitted_none_defaults_to_all_true",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_returns_exact_requested_cells_if_possible",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_starts_within_grid_bounds",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_squeeze_true_skips_forbidden_cells",
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_without_permitted_returns_blot"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plain_1.test_gen::test_make_blot_with_req_num_cells_greater_than_grid_cells"
+   ]
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_basic_properties",
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_cells_are_connected",
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_cells_are_unique"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_dyeblot_initialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_num_cells_with_appended_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_for_each_cell_calls_function_for_all_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_basic_properties": {
+     "pass": 134,
+     "fail": 66,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_cells_are_connected": {
+     "pass": 49,
+     "fail": 151,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_respects_permitted_mask": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_returns_none_if_start_cell_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_allows_squeeze_to_skip_nonpermitted_cells": {
+     "pass": 193,
+     "fail": 7,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_returns_none_if_nonpermitted_cell_found_and_squeeze_false": {
+     "pass": 194,
+     "fail": 6,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_with_req_num_cells_one_returns_single_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_permitted_mask_partial": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_returns_none_if_start_cell_not_permitted_and_permitted_given": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_selection_probability_weights": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_dyeblot_for_each_cell_with_no_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_cells_are_unique": {
+     "pass": 121,
+     "fail": 79,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_with_non_standard_cell_dims": {
+     "pass": 128,
+     "fail": 72,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_internal_neighbour_sharing_edges_accumulate": {
+     "pass": 129,
+     "fail": 71,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_handles_large_req_num_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_start_cell_randomness": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plain_2.test_gen::test_internal_neighbour_sharing_edges_accumulate",
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_allows_squeeze_to_skip_nonpermitted_cells",
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_basic_properties",
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_cells_are_connected",
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_cells_are_unique",
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_returns_none_if_nonpermitted_cell_found_and_squeeze_false",
+    "zz_gpt41mini_plain_2.test_gen::test_make_blot_with_non_standard_cell_dims"
+   ],
+   "always_fail": []
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_squeeze_skips_unpermitted_neighbour_and_continues"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_dye_blot_initialization_stores_dimensions_and_starts_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_num_cells_reflects_internal_cell_list_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_for_each_cell_calls_function_for_each_cell_in_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_for_each_cell_on_empty_blot_does_not_call_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_returns_none_when_start_cell_is_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_single_cell_without_permitted_uses_default_all_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_stops_after_required_number_of_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_can_extend_to_adjacent_neighbour": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_returns_none_when_unpermitted_neighbour_encountered_and_not_squeeze": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_squeeze_skips_unpermitted_neighbour_and_continues": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_chooses_start_cell_from_random_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_uses_cell_dimensions_when_creating_neighbour_weights": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_returns_blot_object_with_expected_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_for_each_cell_propagates_callback_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_1.test_gen::test_make_blot_squeeze_skips_unpermitted_neighbour_and_continues"
+   ]
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_can_return_large_blot_without_duplicates",
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_chooses_neighbor_by_edge_length_weights",
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_constructs_multiple_cells_with_choice",
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_respects_grid_boundaries"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_dyeblot_initial_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_for_each_cell_calls_function_for_all_cells_in_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_for_each_cell_with_no_cells_does_not_call_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_single_cell_without_permitted_mask": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_returns_none_when_start_cell_is_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_constructs_multiple_cells_with_choice": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_chooses_neighbor_by_edge_length_weights": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_rejects_permitted_masked_neighbor_when_squeeze_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_squeeze_true_skips_masked_neighbor_and_continues": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_with_req_num_cells_one_never_draws_neighbors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_respects_grid_boundaries": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_returns_none_when_start_outside_permitted_mask_due_to_mask_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_can_return_large_blot_without_duplicates": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_can_return_large_blot_without_duplicates",
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_chooses_neighbor_by_edge_length_weights",
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_constructs_multiple_cells_with_choice",
+    "zz_gpt54mini_plain_2.test_gen::test_make_blot_respects_grid_boundaries"
+   ]
+  },
+  "haiku_plain_1": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_new_blot_is_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_for_each_cell_on_empty_blot_calls_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_for_each_cell_passes_two_ints": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_for_each_cell_visits_each_cell_once": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_for_each_cell_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_for_each_cell_propagates_exceptions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_start_on_masked_cell_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_start_on_masked_cell_returns_none_when_squeezing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_single_required_cell_is_the_start": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_zero_required_cells_still_yields_start_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_growth_order_with_fixed_choice": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_grows_to_requested_size_in_open_grid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_cells_are_unique_and_in_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_no_squeeze_returns_none_at_grid_edge": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_squeeze_discards_out_of_bounds_neighbours": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_no_squeeze_rejects_masked_neighbour": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_squeeze_grows_around_blocked_column": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_loop_stops_when_region_exhausted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_edge_weights_follow_cell_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_shared_neighbour_weight_accumulates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_explicit_all_true_mask_matches_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_integer_mask_matches_boolean_mask": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plain_2": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_new_dye_blot_has_no_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_for_each_cell_on_empty_blot_never_calls_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_for_each_cell_passes_x_then_y_in_insertion_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_for_each_cell_visits_each_cell_of_a_built_blot_once": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_for_each_cell_propagates_callback_errors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_for_each_cell_leaves_blot_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_make_blot_returns_dye_blot_instance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_returns_none_when_start_cell_is_masked[False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_returns_none_when_start_cell_is_masked[True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_start_cell_is_floor_of_random_fraction_times_grid_dims": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_single_cell_request_never_draws_a_neighbour": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_one_by_one_grid_needs_squeeze_to_return_a_blot": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_squeeze_false_returns_none_when_first_draw_leaves_grid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_squeeze_true_reaches_requested_size_on_open_grid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_squeeze_true_saturates_at_grid_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_cells_are_unique_and_inside_grid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_cells_form_a_four_connected_region": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_squeeze_false_returns_none_when_start_is_isolated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_squeeze_true_returns_single_cell_when_start_is_isolated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_squeeze_true_fills_only_the_permitted_component": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_permitted_mask_is_indexed_as_x_then_y": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_neighbour_draw_probabilities_follow_shared_edge_lengths": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_neighbour_weight_accumulates_over_adjacent_blot_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_1": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 27,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_new_dyeblot_is_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_for_each_cell_on_empty_blot_never_calls_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_for_each_cell_calls_in_insertion_order_with_coordinates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_for_each_cell_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_for_each_cell_propagates_exceptions_from_callback": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_single_cell_grid_one_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_single_cell_grid_without_squeeze_returns_none_when_too_big": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_single_cell_grid_with_squeeze_stops_at_one_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_squeeze_fills_whole_grid_when_requested": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_squeeze_caps_at_grid_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[4]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[6]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[7]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[8]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_cells_unique_in_bounds_and_connected[9]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_zero_requested_cells_still_places_start_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_fully_masked_grid_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_single_permitted_cell_with_squeeze": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_respects_mask_with_squeeze": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_without_squeeze_never_includes_masked_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_is_reproducible_with_same_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_make_blot_accepts_tuple_dims": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_2": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 27,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_dyeblot_new_is_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_dyeblot_stores_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_for_each_cell_visits_in_insertion_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_for_each_cell_passes_x_then_y_as_positional_args": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_for_each_cell_on_empty_blot_never_calls_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_for_each_cell_can_be_called_repeatedly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_for_each_cell_propagates_exceptions_from_callback": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_single_cell_grid_single_cell_request": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_zero_requested_cells_still_has_start_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_start_cell_from_random": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_records_dims_on_blot": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_non_squeeze_hits_grid_edge_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_stops_when_grid_exhausted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_first_choice_deterministic_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_non_squeeze_first_choice_hits_out_of_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_start_not_permitted_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_nothing_permitted_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_edge_length_weights_use_cell_dims": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_produces_connected_unique_in_bounds_cells[0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_produces_connected_unique_in_bounds_cells[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_produces_connected_unique_in_bounds_cells[2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_produces_connected_unique_in_bounds_cells[3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_produces_connected_unique_in_bounds_cells[4]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_respects_mask[0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_respects_mask[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_respects_mask[2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_make_blot_squeeze_respects_mask[3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 198,
+  "failed": 2,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: False\nassert 0"
+  ]
+ },
+ "seconds": 552.6
+}

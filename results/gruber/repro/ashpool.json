@@ -1,0 +1,27 @@
+{
+ "project": "ashpool",
+ "url": "https://github.com/cktc/ashpool",
+ "sha": "3a35638ecff85da94952cebf7f8684ed564693bc",
+ "category": "random",
+ "gruber_fail_rate": 0.135,
+ "test_file": "ashpool/tests/test_ashpool.py",
+ "test_func": "test_differ",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_differ",
+ "collect_tail": "))\n\nashpool/tests/test_ashpool.py:140\nashpool/tests/test_ashpool.py:140\n  /tmp/gw/ashpool/repo/ashpool/tests/test_ashpool.py:140: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: series(dtype=bool))\n    @example(series(dtype=bool).example(), series(dtype=bool).example())\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n21 tests collected in 6.41s\n",
+ "first_run_tail": "mple()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: series(dtype=bool))\n    @example(series(dtype=bool).example(), series(dtype=bool).example())\n\nashpool/tests/test_ashpool.py::test_differ\nashpool/tests/test_ashpool.py::test_differ\n  /tmp/gw/ashpool/venv/lib/python3.8/site-packages/numpy/core/numeric.py:2361: RuntimeWarning: overflow encountered in subtract\n    return less_equal(abs(x-y), atol + rtol * abs(y))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmp0bo0rjzh.xml -------------------\n1 passed, 20 deselected, 17 warnings in 10.04s\n",
+ "collected": 1,
+ "runs": 92,
+ "passed": 19,
+ "failed": 73,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "hypothesis.errors.FlakyStrategyDefinition: Inconsistent data generation! Data generation behaved differently between different runs. Is your data generation depending on external state?",
+  "Failed: Timeout (>120.0s) from pytest-timeout.",
+  "exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)"
+ ],
+ "seconds": 10916.7,
+ "reproduced": true
+}

@@ -30,6 +30,10 @@ def main():
                "human_failures": h.get("failed", 0) + h.get("errors", 0), "human_reproduced": h.get("reproduced", False)}
         for sid, s in j["suites"].items():
             m = s["model"]
+            # a module level id (classname::file) means the file did not import, so no test ran
+            if all(t.startswith("::") for t in s["tests"]):
+                per_model[m]["suites_not_collected"] += 1
+                continue
             kept = {t: v for t, v in s["tests"].items() if t not in set(s["first_run_failed"])}
             fl = [t for t, v in kept.items() if v["kind"] == "flaky"]
             pm = per_model[m]
@@ -44,14 +48,14 @@ def main():
                                    "fail": v["fail"] + v["error"], "category": j["category"]})
         per_project.append(row)
     print("## Matched study, by model (tests a one run filter keeps)\n")
-    print("| Model | Suites | Tests generated | Kept after one run | Flaky kept tests | Flaky % (95% CI) | Suites with a flaky test | Rejected by the filter | Rejected but flaky |")
-    print("|---|---|---|---|---|---|---|---|---|")
+    print("| Model | Suites | Tests generated | Kept after one run | Flaky kept tests | Flaky % (95% CI) | Suites with a flaky test | Rejected by the filter | Rejected but flaky | Suites that did not import |")
+    print("|---|---|---|---|---|---|---|---|---|---|")
     out_models = {}
     for m, c in per_model.items():
         lo, hi = wilson(c["flaky"], c["kept"])
         out_models[m] = dict(c, ci=[lo, hi])
         print(f"| {MODEL.get(m, m)} | {c['suites']} | {c['generated']} | {c['kept']} | {c['flaky']} | "
-              f"{100 * c['flaky'] / max(c['kept'], 1):.2f} ({lo:.2f} to {hi:.2f}) | {c['suites_with_flaky']} | {c['rejected']} | {c['rejected_but_flaky']} |")
+              f"{100 * c['flaky'] / max(c['kept'], 1):.2f} ({lo:.2f} to {hi:.2f}) | {c['suites_with_flaky']} | {c['rejected']} | {c['rejected_but_flaky']} | {c['suites_not_collected']} |")
     print("\n## Human control per project (the known flaky test, same runner, same number of runs)\n")
     print("| Project | Gruber category | Runs | Failures | Reproduced |")
     print("|---|---|---|---|---|")

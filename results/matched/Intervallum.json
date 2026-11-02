@@ -1,0 +1,1445 @@
+{
+ "project": "Intervallum",
+ "sha": "e314ee624f09b09913475b02470103095fc076ff",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 33,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_comparison_operators",
+    "zz_gpt41mini_plain_1.test_gen.TestRS_SubinclusionFunction::test_call_returns_interval_enclosing_values"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen.TestBox::test_box_creation_and_str_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestBox::test_box_equality_and_inequality": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestBox::test_box_copy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestBox::test_box_properties_lb_ub_middle": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestBox::test_box_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestBox::test_box_try_to_reduce_returns_middle_if_width_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestBox::test_box_try_to_reduce_returns_copy_if_width_nonzero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_interval_init_valid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_interval_init_invalid_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_interval_init_invalid_fix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_interval_str_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_interval_property_lb_ub_setters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_interval_middle_and_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_interval_copy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_try_to_reduce_returns_float_when_small_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_try_to_reduce_returns_interval_when_width_large": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_inner_subtraction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_eq_and_ne_and_not_implemented": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_comparison_operators": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_add_neg_sub_mul_operations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_invert_and_division": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_power_even_and_odd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestRS_SubinclusionFunction::test_call_returns_interval_enclosing_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_sin_with_float_and_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_cos_with_float_and_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_abs_with_float_and_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_exp_with_float_and_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_sqrt_with_float_and_interval_and_errors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_log_with_float_and_interval_and_errors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_split_and_bisect_intervals_and_floats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_constrain_intervals_and_floats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_shrink_interval_and_float": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen.TestIntervalFunctions::test_hausdorff_distance_part_and_hausdorff_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_1.test_gen.TestInterval::test_comparison_operators",
+    "zz_gpt41mini_plain_1.test_gen.TestRS_SubinclusionFunction::test_call_returns_interval_enclosing_values"
+   ]
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_2.test_gen::test_interval_arithmetic_operations"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_interval_creation_and_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_interval_wrong_bounds_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_lb_ub_setters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_try_to_reduce_reduces_small_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_inner_subtraction_and_lshift_operator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_interval_equality_and_inequality": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_interval_comparisons": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_interval_arithmetic_operations": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_interval_power_operations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_reduce_result_decorator_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_monotonic_decorator_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_box_creation_and_str_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_box_eq_and_ne": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_box_copy_and_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_box_width_and_try_to_reduce": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_rs_subinclusion_function_calls_and_returns_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_trig_exp_abs_functions_on_float_and_interval[sin]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_trig_exp_abs_functions_on_float_and_interval[cos]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_trig_exp_abs_functions_on_float_and_interval[abs]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_trig_exp_abs_functions_on_float_and_interval[exp]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_sqrt_log_operations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_split_and_bisect": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_constrain_shrink": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_hausdorff_distance_calculation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_2.test_gen::test_interval_arithmetic_operations"
+   ]
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_1.test_gen::test_interval_equality_and_comparison_with_float_and_interval",
+    "zz_gpt54mini_plain_1.test_gen::test_split_and_bisect_interval_and_number"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_interval_str_repr_and_from_point": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_interval_wrong_bounds_raises_and_fix_swaps": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_interval_property_setters_validate_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_interval_equality_and_comparison_with_float_and_interval": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_interval_add_sub_mul_neg_and_r_operations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_interval_division_and_inversion": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_interval_power_even_and_odd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_interval_reduction_to_number_toggle": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_box_properties_str_repr_equality_and_copy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_box_width_and_try_to_reduce": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_rs_subinclusion_function_uses_sampled_points": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_split_and_bisect_interval_and_number": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_constrain_and_shrink": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_trigonometric_functions_cover_extrema": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_abs_exp_sqrt_log_on_intervals_and_numbers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_sqrt_and_log_raise_for_invalid_domains": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_hausdorff_distance_for_intervals_and_numbers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_1.test_gen::test_interval_equality_and_comparison_with_float_and_interval",
+    "zz_gpt54mini_plain_1.test_gen::test_split_and_bisect_interval_and_number"
+   ]
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_2.test_gen::test_random_subinclusion_function_uses_samples_and_bounds",
+    "zz_gpt54mini_plain_2.test_gen::test_split_bisect_constrain_shrink_and_hausdorff_distance"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_interval_from_point_and_str": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_interval_wrong_bounds_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_interval_fix_swaps_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_interval_equality_within_admissible_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_interval_comparison_operators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_interval_add_sub_mul_div_with_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_interval_neg_and_inverse": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_interval_power_even_and_odd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_interval_copy_and_reduction_to_number": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_box_basic_properties_and_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_box_width_and_try_to_reduce": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_box_copy_and_equality": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_random_subinclusion_function_uses_samples_and_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_trigonometric_functions_on_intervals_and_floats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_exp_abs_sqrt_log_functions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_sqrt_and_log_invalid_domains_raise": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_split_bisect_constrain_shrink_and_hausdorff_distance": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_2.test_gen::test_random_subinclusion_function_uses_samples_and_bounds",
+    "zz_gpt54mini_plain_2.test_gen::test_split_bisect_constrain_shrink_and_hausdorff_distance"
+   ]
+  },
+  "haiku_plain_1": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_box_of_floats_exposes_bounds_and_middle": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_box_str_joins_components_with_x": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_box_eq_compares_values_and_rejects_other_types": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_box_width_reports_widest_components": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_box_try_to_reduce_collapses_degenerate_box": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_reversed_bounds_raise_unless_fixed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_from_point_str_and_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_middle_width_and_setters_enforce_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_add_neg_sub_and_inner_subtraction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_multiplication_takes_extreme_products": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_inversion_cases": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_division_and_reverse_division": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_power_even_and_odd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_degenerate_results_reduce_to_float": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_equality_uses_admissible_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_ordering_compares_lower_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_sin_and_cos_extrema": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_abs_exp_sqrt_log_ranges": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_sqrt_and_log_raise_outside_domain": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_bisect_and_split_pieces": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_constrain_and_shrink": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_rs_subinclusion_degenerate_box_is_exact": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_rs_samples_stay_inside_box": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_hausdorff_distance_cases": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plain_2": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_box_str_and_repr_join_components": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_box_lb_ub_middle_for_mixed_components": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_box_width_reports_widest_component_indices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_box_eq_and_ne_against_arrays_and_boxes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_box_eq_rejects_plain_lists": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_box_try_to_reduce_and_copy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_interval_reversed_bounds_raise_unless_fixed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_interval_from_point_str_middle_and_setters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_interval_addition_and_subtraction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_interval_multiplication_division_and_inversion": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_interval_even_and_odd_powers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_interval_equality_uses_tolerance_and_rejects_ints": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_interval_comparisons_use_lower_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_reduction_flag_turns_point_results_into_floats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_inner_subtraction_orders_reversed_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_rs_subinclusion_fixed_sampler_gives_exact_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_rs_subinclusion_stays_inside_true_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_sin_and_cos_enclosures_cover_extrema": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_abs_and_exp_enclosures": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_sqrt_and_log_enclosures_and_domain_errors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_split_and_bisect_two_ratios": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_split_three_ratios_gives_equal_pieces": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    },
+    "zz_haiku_plain_2.test_gen::test_constrain_and_shrink": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_hausdorff_distance_intervals_points_and_symmetry": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_1": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [
+    "zz_sonnet_plain_1.test_gen::test_split_bisect_constrain_shrink"
+   ],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_interval_construction_and_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_wrong_bounds_and_fix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_from_point_and_setters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_copy_is_independent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_addition_and_subtraction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_multiplication": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_inversion_and_division": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_power": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_degenerate_result_reduces_to_number": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_reduction_can_be_disabled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_comparisons_use_lower_bound": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_interval_equality_and_inner_subtraction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_box_bounds_middle_and_strings": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_box_width_reports_widest_components": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_box_equality_and_inequality": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_box_copy_creates_new_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_box_try_to_reduce": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_trig_functions_on_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_abs_exp_sqrt_log": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_sqrt_and_log_undefined_domains_raise": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_split_bisect_constrain_shrink": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_sonnet_plain_1.test_gen::test_hausdorff_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_rs_subinclusion_samples_stay_inside_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_rs_subinclusion_constant_function_and_point_box": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_sonnet_plain_1.test_gen::test_split_bisect_constrain_shrink"
+   ]
+  },
+  "sonnet_plain_2": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_interval_construction_and_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_wrong_bounds_and_fix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_bound_setters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_from_point_and_string_forms": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_copy_is_independent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_addition_subtraction_and_reflected_ops": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_multiplication": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_inversion_and_division": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_power_even_and_odd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_ordering_compares_lower_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_equality_uses_tolerance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_interval_reduction_to_number_toggle": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_box_bounds_middle_and_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_box_string_equality_and_copy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_box_try_to_reduce": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_rs_subinclusion_degenerate_box_is_exact": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_rs_subinclusion_samples_stay_inside_range_and_count_calls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_hausdorff_distance_intervals_and_numbers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_split_bisect_and_numbers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_constrain_and_shrink": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_sin_and_cos_ranges": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_abs_and_exp": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_sqrt_and_log_domains": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 188,
+  "failed": 12,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "assert 0.0011674113899753369 < 0.001",
+   "assert 0.01403787483331842 > 0.017281810717250767",
+   "assert 0.015238613351377588 > 0.019051686962229586"
+  ]
+ },
+ "seconds": 574.8
+}

@@ -1,0 +1,1308 @@
+{
+ "project": "pylabeledrf",
+ "sha": "23e2c2b2c73d35b6c87dd332b45da8d31c0ea63f",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 15,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_different_topology",
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_islands_mismatch_valueerror",
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_raises_for_unprocessed_islands_t2",
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_with_single_island",
+    "zz_gpt41mini_plain_1.test_gen::test_mutateLabeledTree_flips_and_collapses",
+    "zz_gpt41mini_plain_1.test_gen::test_mutateLabeledTree_returns_different_tree",
+    "zz_gpt41mini_plain_1.test_gen::test_parseEnsemblLabels_assigns_correct_labels"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_identical_simple_tree": {
+     "pass": 148,
+     "fail": 52,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_simple_flip_label": {
+     "pass": 158,
+     "fail": 42,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_different_topology": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_islands_mismatch_valueerror": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_mutateLabeledTree_flips_and_collapses": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_flip_node_changes_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_flip_node_invalid_label_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_collapse_node_LRF_does_not_raise": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_collapse_node_ELRF_valid_and_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_extend_node_raises_for_low_degree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_extend_node_runs_for_high_degree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_parseEnsemblLabels_assigns_correct_labels": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_mutateLabeledTree_returns_different_tree": {
+     "pass": 30,
+     "fail": 170,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_with_single_island": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_raises_for_unprocessed_islands_t2": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_identical_simple_tree",
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_simple_flip_label",
+    "zz_gpt41mini_plain_1.test_gen::test_mutateLabeledTree_returns_different_tree"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_different_topology",
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_islands_mismatch_valueerror",
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_raises_for_unprocessed_islands_t2",
+    "zz_gpt41mini_plain_1.test_gen::test_computeLRF_with_single_island",
+    "zz_gpt41mini_plain_1.test_gen::test_mutateLabeledTree_flips_and_collapses",
+    "zz_gpt41mini_plain_1.test_gen::test_parseEnsemblLabels_assigns_correct_labels"
+   ]
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_2.test_gen::test_collapse_node_LRF_no_error",
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_raise_error_unequal_islands",
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_simple_flip_label",
+    "zz_gpt41mini_plain_2.test_gen::test_extend_node_invalid_model",
+    "zz_gpt41mini_plain_2.test_gen::test_mutateLabeledTree_flip_probability_zero_no_flips",
+    "zz_gpt41mini_plain_2.test_gen::test_mutateLabeledTree_invalid_model_raises"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_identical_small_trees": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_simple_flip_label": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_completely_different_topologies": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_unrooted_two_star": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_raise_error_unequal_islands": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_substitution_count": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_mutateLabeledTree_returns_new_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_mutateLabeledTree_zero_edits_returns_clone": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_mutateLabeledTree_flip_probability_zero_no_flips": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_mutateLabeledTree_invalid_model_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_flip_node_speciation_to_duplication": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_flip_node_duplication_to_speciation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_flip_node_invalid_label_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_collapse_node_LRF_no_error": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_collapse_node_ELRF_valid": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_collapse_node_ELRF_invalid_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_extend_node_success": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_extend_node_fails_insufficient_degree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_extend_node_invalid_model": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_2.test_gen::test_collapse_node_LRF_no_error",
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_raise_error_unequal_islands",
+    "zz_gpt41mini_plain_2.test_gen::test_computeLRF_simple_flip_label",
+    "zz_gpt41mini_plain_2.test_gen::test_extend_node_invalid_model",
+    "zz_gpt41mini_plain_2.test_gen::test_mutateLabeledTree_flip_probability_zero_no_flips",
+    "zz_gpt41mini_plain_2.test_gen::test_mutateLabeledTree_invalid_model_raises"
+   ]
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_different_topology_positive_distance",
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_raises_on_different_taxa_sets",
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_single_leaf_trees_zero",
+    "zz_gpt54mini_plain_1.test_gen::test_extend_node_elrf_preserves_label",
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_elrf_allows_only_same_label_collapse",
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_extend_only"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_identical_trees_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_same_topology_different_labels_counts_substitution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_different_topology_positive_distance": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_does_not_mutate_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_single_leaf_trees_zero": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_raises_on_different_taxa_sets": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_flip_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_collapse_only_lrf": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_extend_only": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_elrf_allows_only_same_label_collapse": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_unsupported_model_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_collapse_node_lrf_always_collapses": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_collapse_node_elrf_requires_matching_labels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_flip_node_toggles_labels_and_rejects_other_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_extend_node_lrf_raises_on_insufficient_degree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_extend_node_elrf_preserves_label": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_with_unlabeled_internal_nodes_still_works": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_different_topology_positive_distance",
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_raises_on_different_taxa_sets",
+    "zz_gpt54mini_plain_1.test_gen::test_compute_lrf_single_leaf_trees_zero",
+    "zz_gpt54mini_plain_1.test_gen::test_extend_node_elrf_preserves_label",
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_elrf_allows_only_same_label_collapse",
+    "zz_gpt54mini_plain_1.test_gen::test_mutate_labeled_tree_extend_only"
+   ]
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_2.test_gen::test_extend_node_lrf_increases_internal_nodes",
+    "zz_gpt54mini_plain_2.test_gen::test_identify_labelled_bipartitions_returns_expected_internal_bipartition_count",
+    "zz_gpt54mini_plain_2.test_gen::test_mutateLabeledTree_flip_only_when_probability_one",
+    "zz_gpt54mini_plain_2.test_gen::test_parseEnsemblLabels_uses_annotation_fields"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_computeLRF_identical_trees_zero_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_computeLRF_is_symmetric_for_simple_pair": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_computeLRF_returns_positive_distance_for_label_swaps": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_computeLRF_returns_positive_distance_for_topology_change": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_computeLRF_handles_rotations_as_zero_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_computeLRF_star_trees_with_same_taxa_have_zero_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identify_labelled_bipartitions_returns_expected_internal_bipartition_count": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_cloneAndReroot_preserves_taxa_and_returns_new_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_randomLabels_assigns_internal_labels_and_root_is_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_parseEnsemblLabels_uses_annotation_fields": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_flip_node_swaps_speciation_and_duplication": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_flip_node_raises_on_missing_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_collapse_node_lrf_collapses_edge": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_collapse_node_elrf_requires_same_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_extend_node_lrf_increases_internal_nodes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_mutateLabeledTree_flip_only_when_probability_one": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_mutateLabeledTree_rejects_invalid_model": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_2.test_gen::test_extend_node_lrf_increases_internal_nodes",
+    "zz_gpt54mini_plain_2.test_gen::test_identify_labelled_bipartitions_returns_expected_internal_bipartition_count",
+    "zz_gpt54mini_plain_2.test_gen::test_mutateLabeledTree_flip_only_when_probability_one",
+    "zz_gpt54mini_plain_2.test_gen::test_parseEnsemblLabels_uses_annotation_fields"
+   ]
+  },
+  "haiku_plain_1": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_lrf_identical_trees_distance_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_leaf_order_does_not_matter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_single_label_flip_costs_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_two_label_flips_cost_two": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_root_label_mismatch_costs_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_rearranged_topology_costs_four": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_star_versus_binary_costs_two": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_larger_identical_tree_distance_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_flip_deep_in_larger_tree_costs_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_lrf_does_not_modify_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_elrf_identical_trees_distance_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_elrf_single_label_flip_costs_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_mutate_zero_edits_returns_equal_copy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_mutate_returns_new_tree_and_leaves_input_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_mutate_single_flip_changes_exactly_one_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_mutate_collapse_removes_one_internal_node": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_mutate_preserves_leaf_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_mutate_same_seed_gives_same_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_mutate_unknown_model_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_collapse_node_elrf_rejects_label_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_collapse_node_elrf_allows_matching_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_flip_node_swaps_labels_and_rejects_unlabelled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_extend_node_rejects_low_degree_node": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_extend_node_splits_star_keeping_leaves": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plain_2": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_lrf_identical_trees_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_lrf_reordered_children_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_lrf_single_label_flip_is_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_lrf_two_label_flips_is_two": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_lrf_topology_swap_is_four_both_ways": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_lrf_star_vs_resolved_is_three_both_ways": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_lrf_does_not_modify_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_lrf_equals_label_mismatches_after_mutation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_zero_edits_keeps_clades_and_labels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_does_not_modify_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_flip_only_changes_exactly_one_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_flip_only_keeps_topology": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_structural_edit_changes_size_by_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_elrf_extends_when_no_matching_labels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_preserves_leaves_and_min_degree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_same_seed_is_reproducible": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_mutate_unknown_model_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_collapse_node_lrf_removes_clade": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_collapse_node_elrf_checks_parent_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_flip_node_swaps_speciation_and_duplication": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_flip_node_rejects_unlabeled_node": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_extend_node_rejects_bad_model_and_low_degree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_extend_root_adds_one_node_and_keeps_leaves": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_1": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_lrf_identical_balanced_trees_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_identical_mixed_labels_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_single_label_difference_is_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_all_internal_labels_flipped_counts_each_node": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_child_order_does_not_matter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_no_common_edges_uses_single_island": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_star_vs_resolved_tree_counts_collapsed_edges": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_one_collapsed_edge_costs_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_collapse_plus_substitution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_does_not_modify_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_lrf_returns_nonnegative_int": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_zero_edits_gives_equivalent_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_does_not_modify_input_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_single_flip_changes_exactly_one_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_flips_keep_topology_and_valid_labels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_collapse_removes_one_internal_node_per_edit": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_two_collapses_on_larger_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_collapse_and_expand_preserve_leaves": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_elrf_only_collapses_edges_between_same_labels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_elrf_without_candidates_raises_value_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_mutate_unsupported_model_raises_value_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_2": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_lrf_identical_rooted_trees_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_tree_against_its_clone_is_zero_and_int": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_single_internal_label_difference_is_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_root_label_difference_is_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_collapse_to_star_with_same_labels_is_two": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_collapse_to_star_with_different_label_adds_substitution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_topology_difference_counts_collapse_and_expansion": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_topology_difference_with_island_substitution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_does_not_modify_input_trees": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_lrf_identical_unrooted_trees_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_zero_edits_returns_equal_independent_copy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_does_not_change_input_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_flip_only_changes_exactly_one_label_for_one_edit": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_flip_only_keeps_topology_and_valid_labels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_single_collapse_removes_one_internal_node": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_single_expansion_of_star_adds_internal_node": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_elrf_collapses_nodes_with_matching_parent_label": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_elrf_with_no_possible_edit_raises_value_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_flip_on_unlabelled_tree_raises_value_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_unsupported_model_raises_value_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_same_seed_gives_same_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_lrf_preserves_leaves_and_labels_over_many_seeds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutate_single_flip_is_lrf_distance_one_from_original": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 190,
+  "failed": 10,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: 4 != 5",
+   "AssertionError: 3 != 5",
+   "AssertionError: 2 != 3"
+  ]
+ },
+ "seconds": 610.1
+}

@@ -1,0 +1,573 @@
+{
+ "name": "gen_plain_gpt41mini-filelock",
+ "mode": "tz",
+ "runs": 150,
+ "num_tests": 76,
+ "runs_with_failure": 150,
+ "avg_run_seconds": 0.66,
+ "num_flaky": 0,
+ "num_always_fail": 14,
+ "flaky_tests": [],
+ "tests": {
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_timeout_and_blocking_behavior[False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_async_acquire_and_release": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_windowsfilelock_acquire_and_release": {
+   "counts": {
+    "skip": 150
+   },
+   "kind": "always-skip",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_async_release_handles_force_correctly": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: object NoneType can't be used in 'await' expression"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_acquire_with_default_lock": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_enter_exit_context_manager": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_with_none_timeout_uses_default": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_async_filelock_run_in_executor_and_loop": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "OSError: [Errno 9] Bad file descriptor"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_aenter_aexit": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_lock_counter_increments_and_decrements[UnixFileLock]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_timeout_and_blocking_behavior[True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_threadlocal_context_has_attributes": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_basefilelock_subclass_instances_are_weakvaluedict": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_filelockmeta_preserves_signature_and_creation": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_with_deprecated_poll_intervall_uses_poll_interval": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_run_in_executor_true_uses_loop_executor": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "OSError: [Errno 9] Bad file descriptor"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_error_timeout_message_and_pickle": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_release_force_releases_even_if_counter_zero": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_return_proxy_context_behavior": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_softfilelock_release_deletes_lockfile": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_lockfile_mode_property": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_softfilelock_ensure_directory": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_async_release_force": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: object NoneType can't be used in 'await' expression"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_softfilelock_release_without_acquire": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncacquire_return_proxy_usage": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_lockfile_str_path_conversion[SoftFileLock]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_async_filelock_run_in_executor_false": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "OSError: [Errno 9] Bad file descriptor"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_softfilelock_acquire_eexist_and_eacces_handling": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AttributeError: module 'os' has no attribute 'errno'. Did you mean: 'error'?"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_init_attributes_default[SoftFileLock]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AttributeError: type object 'SoftFileLock' has no attribute '_context'"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_executor_setter_and_getter": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_filelock_singleton_behavior": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_with_nonblocking_returns_proxy": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_deprecated_poll_intervall_warns": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_async_context_manager": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_and_release_with_thread_local_lock_counter[SoftFileLock]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_issubclass_and_subclass_behavior": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_filelock_context_repr_and_str": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_release_behavior[False]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_async_acquire_with_blocking_false_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_filelock_is_thread_local_property": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_run_in_executor_false_calls_method_directly": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "OSError: [Errno 9] Bad file descriptor"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_lock_counter_increments_and_decrements[SoftFileLock]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_and_release_with_thread_local_lock_counter[WindowsFileLock]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "NotImplementedError"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncacquire_return_proxy_context_manager": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_is_singleton_property": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_threadlocalfilecontext_is_thread_local_flag": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: FileLockContext.__init__() got multiple values for argument 'blocking'"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_enter_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_unixfilelock_acquire_and_release": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_with_freeze_time_and_timeout": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_del_calls_release": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: object NoneType can't be used in 'await' expression"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_softfilelock_warning_on_no_fcntl": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "KeyError: 'filelock.__init__'"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_releases_lock_counter_on_failure": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_timeout_property_set_and_get": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_release_no_lock": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_softfilelock_acquire_and_release": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_immediate_failure_with_blocking_false": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_del_calls_release": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_release_on_unlocked_lock_does_not_error": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_release_decrements_counter": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: object NoneType can't be used in 'await' expression"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_release_behavior[True]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_returns_proxy_and_releases_on_exit": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_softfilelock_release_handles_missing_file": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_filelock_singleton_different_args_fails": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_multiple_times_adjusts_lock_counter": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_init_attributes_default[UnixFileLock]": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AttributeError: type object 'UnixFileLock' has no attribute '_context'"
+   ]
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_async_acquire_releases_lock_counter_on_error": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_acquire_and_release_with_thread_local_lock_counter[UnixFileLock]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_filelock_version_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_filelock___all___contains_expected_names": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_basefilelock_is_locked_and_lock_counter_properties": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_softfilelock_cannot_acquire_non_writable": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_release_without_acquire": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_lockfile_str_path_conversion[UnixFileLock]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_thread_local_and_run_in_executor_conflict": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_asyncfilelock_loop_property": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.filelock.test_pgpt41mini_filelock::test_blocking_property_set_and_get": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

@@ -1,0 +1,205 @@
+{
+ "project": "fuzzylogic",
+ "sha": "58bd23aeb4b6bf39bd950bcf468b0c2f5c649e69",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_plain_1.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_plain_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_plain_1.test_gen"
+   ]
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_plain_2.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_plain_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_plain_2.test_gen"
+   ]
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt54mini_plain_1.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt54mini_plain_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt54mini_plain_1.test_gen"
+   ]
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt54mini_plain_2.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt54mini_plain_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt54mini_plain_2.test_gen"
+   ]
+  },
+  "haiku_plain_1": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_haiku_plain_1.test_gen"
+   ],
+   "tests": {
+    "::zz_haiku_plain_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_haiku_plain_1.test_gen"
+   ]
+  },
+  "haiku_plain_2": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_haiku_plain_2.test_gen"
+   ],
+   "tests": {
+    "::zz_haiku_plain_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_haiku_plain_2.test_gen"
+   ]
+  },
+  "sonnet_plain_1": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_sonnet_plain_1.test_gen"
+   ],
+   "tests": {
+    "::zz_sonnet_plain_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_sonnet_plain_1.test_gen"
+   ]
+  },
+  "sonnet_plain_2": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_sonnet_plain_2.test_gen"
+   ],
+   "tests": {
+    "::zz_sonnet_plain_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_sonnet_plain_2.test_gen"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 181,
+  "failed": 19,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 4 good ones. This will make your tests much slower, an",
+   "hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 9 good ones. This will make your tests much slower, an",
+   "hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 7 good ones. This will make your tests much slower, an"
+  ]
+ },
+ "seconds": 707.3
+}

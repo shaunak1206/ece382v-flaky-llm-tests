@@ -1,0 +1,1521 @@
+{
+ "name": "gen_plain_gpt41mini-schedule",
+ "mode": "stressng",
+ "runs": 150,
+ "num_tests": 82,
+ "runs_with_failure": 150,
+ "avg_run_seconds": 1.51,
+ "num_flaky": 0,
+ "num_always_fail": 15,
+ "flaky_tests": [],
+ "tests": {
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_next_run_with_tag_filters_jobs": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_time_unit_singular_raises_interval_error": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_run_all_handles_empty_job_list": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_run_skips_and_returns_canceljob_if_overdue": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_with_timezone": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_get_next_run_with_no_jobs_for_tag_returns_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_until_string_invalid_format_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_repeat_decorator_schedules_job": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AttributeError: module 'types' has no attribute 'PartialType'"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_run_updates_last_run_and_next_run": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_to_returns_self_and_sets_latest": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_weekday_properties_with_interval_1": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_nonstring_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_time_with_invalid_hour_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_weekday_index_valid_and_invalid": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_time_validation_for_hours_and_minutes": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_clear_removes_only_tagged_jobs": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_every_adds_job": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert False is True\n +  where False = Every 1 second do dummy_job() (last run: [never], next run: 2024-01-01 00:00:01).should_run"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_repeat_decorator_returns_function_and_schedules_job": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_time_unit_properties[1-weeks]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_get_next_run_with_no_jobs_returns_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_lt_comparison": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_weekday_properties_with_interval_gt_1_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_do_associates_with_scheduler_and_appends_job": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_schedule_next_run_invalid_unit_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_repr_with_no_job_func": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_time_with_invalid_minute_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test__correct_utc_offset_no_timezone_returns_same": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_str_with_at_time_and_interval_gt_1": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "schedule.ScheduleError: Unable to a add job to schedule. Job is not associated with an scheduler"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_until_with_past_time_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_clear_jobs_removes_all_or_tagged": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_cancel_job_removes_job": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test__weekday_index_case_sensitive": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_accepts_valid_formats[minutes-:59]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_until_accepts_timedelta": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_tag_accepts_hashable_and_disallows_nonhashable": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "Failed: DID NOT RAISE TypeError"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_time_accepts_seconds_for_minutes": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_to_latest_less_than_interval_raises": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "NameError: name 'ScheduleError' is not defined"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_run_pending_runs_sorted_order": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert ['b', 'a'] == ['a', 'b']\n  \n  At index 0 diff: 'b' != 'a'\n  \n  Full diff:\n    [\n  +     'b',\n        'a',\n  -     'b',\n    ]"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_accepts_valid_formats[days-23:59:59]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_time_accepts_seconds_for_days": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_run_returns_canceljob_if_next_run_overdue_after_run": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert ((), {}) == CancelJob"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_schedule_next_run_with_start_day_and_at_time": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_time_accepts_minutes_seconds_for_hours": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_repeat_decorator_with_async_function": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "RuntimeError: asyncio.run() cannot be called from a running event loop"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_cancel_job_not_in_jobs_does_not_error": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert False\n +  where False = any(<generator object test_cancel_job_not_in_jobs_does_not_error.<locals>.<genexpr> at 0x7cb7f50fca00>)",
+    "assert False\n +  where False = any(<generator object test_cancel_job_not_in_jobs_does_not_error.<locals>.<genexpr> at 0x7307843f7d30>)",
+    "assert False\n +  where False = any(<generator object test_cancel_job_not_in_jobs_does_not_error.<locals>.<genexpr> at 0x758c5c049080>)"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_accepts_valid_formats[hours-59:59]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_move_to_at_time_sets_correct_time": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_next_run_and_idle_seconds": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_invalid_formats_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_move_to_at_time_returns_same_if_at_time_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_str_with_at_time_and_interval_1": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "schedule.ScheduleError: Unable to a add job to schedule. Job is not associated with an scheduler"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_until_with_wrong_type_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_default_scheduler_functions_affect_default_scheduler": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_correct_utc_offset_with_timezone": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_accepts_valid_formats[days-23:59]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_to_sets_latest": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_every_returns_job_with_interval_and_scheduler": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_run_pending_runs_due_jobs": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_string_methods_variations": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "schedule.ScheduleError: Unable to a add job to schedule. Job is not associated with an scheduler"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_invalid_unit_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_schedule_next_run_with_latest": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_str_and_repr_outputs": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "schedule.ScheduleError: Unable to a add job to schedule. Job is not associated with an scheduler"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_time_unit_properties[1-hours]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_get_jobs_filters_by_tag": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_run_and_reschedule": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_time_unit_properties[1-days]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_time_unit_properties[1-minutes]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_time_unit_properties[1-seconds]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_run_all_runs_all_jobs_in_order": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_runs_only_jobs_that_should_run": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_move_to_next_weekday_basic": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_should_run_property_true_and_false": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_at_accepts_valid_formats[hours-:59]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_scheduler_idle_seconds_none_when_no_jobs": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_do_without_scheduler_raises": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "NameError: name 'ScheduleError' is not defined"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_until_accepts_string_valid_formats": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_run_returns_canceljob_removes_job": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert Every 1 second do returns_canceljob() (last run: 2024-01-01 00:00:00, next run: 2024-01-01 00:00:01) not in [Every 1 second do returns_canceljob() (last run: 2024-01-01 00:00:00, next run: 2024-01-01 00:00:01)]\n +  where [Every 1 second do returns_canceljob() (last run: 2024-01-01 00:00:00, n"
+   ]
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test__is_overdue_true_false": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_until_accepts_time": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_job_until_returns_self": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_until_accepts_datetime": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.schedule.test_pgpt41mini_schedule::test_async_job_runs_within_schedule_loop": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "RuntimeError: asyncio.run() cannot be called from a running event loop"
+   ]
+  }
+ },
+ "noise_per_run": [
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 40,
+   "vm": 2,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 7,
+   "cpu_load": 100,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 40,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 20,
+   "vm": 1,
+   "vm_bytes": 10
+  },
+  {
+   "cpu": 8,
+   "cpu_load": 10,
+   "vm": 2,
+   "vm_bytes": 40
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 40,
+   "vm": 1,
+   "vm_bytes": 30
+  },
+  {
+   "cpu": 6,
+   "cpu_load": 60,
+   "vm": 1,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 2,
+   "cpu_load": 60,
+   "vm": 0,
+   "vm_bytes": 50
+  },
+  {
+   "cpu": 5,
+   "cpu_load": 50,
+   "vm": 1,
+   "vm_bytes": 20
+  }
+ ]
+}

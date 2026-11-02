@@ -1,0 +1,1652 @@
+{
+ "name": "gen_plain_gpt41mini-humanize",
+ "mode": "tz",
+ "runs": 150,
+ "num_tests": 124,
+ "runs_with_failure": 150,
+ "avg_run_seconds": 0.62,
+ "num_flaky": 10,
+ "num_always_fail": 4,
+ "flaky_tests": [
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_gettext_functions_basic",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intcomma_custom_separators",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[None-,-.]",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[de_DE-.-,]",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[en_US-,-.]",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[fr_FR- -.]",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[hu_HU- -,]",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[it_IT-.-,]",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[lv- -,]",
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[pt_BR-.-,]"
+ ],
+ "tests": {
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_basic[None-None]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_precisedelta_basic_units": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaltime_future_flag_with_seconds": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_basic[nan-NaN]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[22-22nd]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[23-23rd]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_clamp_nonfinite": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intcomma_invalid_string_returns_str": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_basic[0.3-3/10]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_out_of_range_returns_str": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_activate_invalid_path": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[3-3rd]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_precisedelta_remainder_behavior": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[99-2-9.90 x 10\\xb9]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_natural_list_with_non_string_items": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaldate_with_aware_datetime": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x7939b9e076f0>('Nov')\n +    where <built-in method startswith of str object at 0x7939b9e076f0> = 'today'.startswith\n +    and   'Nov' = <built-in method strftime of datetime.datetime object at 0x7939b88f0c90",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x715ee2b83420>('Nov')\n +    where <built-in method startswith of str object at 0x715ee2b83420> = 'today'.startswith\n +    and   'Nov' = <built-in method strftime of datetime.datetime object at 0x715ee15905a0",
+    "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x738d64237720>('Nov')\n +    where <built-in method startswith of str object at 0x738d64237720> = 'today'.startswith\n +    and   'Nov' = <built-in method strftime of datetime.datetime object at 0x738d62bb73c0"
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_with_zero_precision": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_gender_is_ignored": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_clamp_with_callable_format": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intcomma_custom_separators": {
+   "counts": {
+    "fail": 63,
+    "pass": 87
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x715ee18c73d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    17,
+    28,
+    29,
+    34,
+    35,
+    38,
+    39,
+    48,
+    49,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    74,
+    75,
+    76,
+    77,
+    80,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    110,
+    111,
+    132,
+    133,
+    138,
+    139,
+    149
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[None-2-None]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_with_large_negative_exponent": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_metric_basic[0.00022-F-3-\\u03bcF]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[hu_HU- -,]": {
+   "counts": {
+    "fail": 69,
+    "pass": 81
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x79681cec33d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    13,
+    18,
+    23,
+    28,
+    30,
+    32,
+    34,
+    35,
+    37,
+    39,
+    41,
+    43,
+    44,
+    48,
+    50,
+    52,
+    53,
+    54,
+    55,
+    57,
+    58,
+    59,
+    60,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    73,
+    74,
+    78,
+    80,
+    81,
+    82,
+    83,
+    84,
+    86,
+    87,
+    88,
+    90,
+    95,
+    97,
+    101,
+    103,
+    104,
+    106,
+    107,
+    108,
+    110,
+    120,
+    131,
+    133,
+    134,
+    136,
+    137,
+    138,
+    140,
+    142,
+    147
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_basic[1.3-1 3/10]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[fr_FR- -.]": {
+   "counts": {
+    "fail": 70,
+    "pass": 80
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x79681cec33d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    13,
+    18,
+    23,
+    24,
+    28,
+    30,
+    32,
+    34,
+    35,
+    37,
+    39,
+    41,
+    43,
+    44,
+    48,
+    50,
+    52,
+    53,
+    54,
+    55,
+    57,
+    58,
+    59,
+    60,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    73,
+    74,
+    78,
+    80,
+    81,
+    82,
+    83,
+    84,
+    86,
+    87,
+    88,
+    90,
+    95,
+    97,
+    101,
+    103,
+    104,
+    106,
+    108,
+    110,
+    120,
+    131,
+    133,
+    134,
+    136,
+    137,
+    138,
+    140,
+    142,
+    147,
+    149
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaldate_behavior": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intword_rounded_up_to_next_power": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_non_integer_like_raises_returns_str": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_activate_retuns_translation": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "FileNotFoundError: [Errno 2] No translation file found for domain: 'humanize'"
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[4-4th]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_metric_nonfinite": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_various[-4096-True-False-%.1f--4.0 KiB]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[111-111th]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_precisedelta_invalid_value": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaltime_past_and_future": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[5-5th]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[1002-1002nd]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[500-2-5.00 x 10\\xb2]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_clamp_with_floor_and_ceil": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_metric_basic[1500-V-3-kV]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[None-,-.]": {
+   "counts": {
+    "fail": 68,
+    "pass": 82
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x715ee18c73d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    2,
+    5,
+    6,
+    7,
+    9,
+    18,
+    20,
+    27,
+    31,
+    32,
+    33,
+    34,
+    36,
+    38,
+    39,
+    41,
+    44,
+    46,
+    50,
+    52,
+    53,
+    54,
+    55,
+    57,
+    58,
+    59,
+    60,
+    61,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    72,
+    75,
+    79,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    88,
+    89,
+    90,
+    92,
+    97,
+    99,
+    101,
+    103,
+    104,
+    106,
+    108,
+    117,
+    124,
+    130,
+    132,
+    135,
+    136,
+    137,
+    139,
+    140,
+    142,
+    145,
+    149
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[11-11th]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_various[3000-False-True-%.3f-2.930K]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[pt_BR-.-,]": {
+   "counts": {
+    "fail": 69,
+    "pass": 81
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x715ee18c73d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    2,
+    5,
+    6,
+    7,
+    9,
+    21,
+    26,
+    30,
+    32,
+    35,
+    37,
+    39,
+    41,
+    44,
+    46,
+    50,
+    51,
+    52,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    65,
+    66,
+    67,
+    68,
+    69,
+    71,
+    74,
+    76,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    88,
+    89,
+    90,
+    92,
+    95,
+    99,
+    101,
+    103,
+    104,
+    106,
+    108,
+    112,
+    115,
+    119,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    138,
+    139,
+    142,
+    145,
+    147,
+    149
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[1000-1-1.0 x 10\\xb3]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[en_US-,-.]": {
+   "counts": {
+    "fail": 67,
+    "pass": 83
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x715ee18c73d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    2,
+    5,
+    6,
+    7,
+    9,
+    21,
+    26,
+    30,
+    32,
+    35,
+    37,
+    39,
+    41,
+    44,
+    46,
+    50,
+    51,
+    52,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    65,
+    66,
+    67,
+    68,
+    69,
+    71,
+    76,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    88,
+    89,
+    90,
+    92,
+    95,
+    97,
+    99,
+    101,
+    103,
+    104,
+    106,
+    108,
+    115,
+    119,
+    131,
+    132,
+    133,
+    134,
+    136,
+    138,
+    139,
+    142,
+    145,
+    147,
+    149
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_natural_list_various[input_list1-one and two]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_natural_list_various[input_list3-a, b, c and d]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[it_IT-.-,]": {
+   "counts": {
+    "fail": 67,
+    "pass": 83
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x715ee18c73d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    2,
+    5,
+    6,
+    7,
+    9,
+    21,
+    26,
+    30,
+    32,
+    35,
+    37,
+    39,
+    41,
+    44,
+    46,
+    50,
+    51,
+    52,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    65,
+    66,
+    67,
+    68,
+    69,
+    71,
+    76,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    88,
+    89,
+    90,
+    92,
+    95,
+    97,
+    99,
+    101,
+    103,
+    104,
+    106,
+    108,
+    115,
+    119,
+    131,
+    132,
+    133,
+    134,
+    136,
+    138,
+    139,
+    142,
+    145,
+    147,
+    149
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_non_numeric_string_returns_str": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[lv- -,]": {
+   "counts": {
+    "fail": 71,
+    "pass": 79
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x715ee18c73d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    8,
+    9,
+    18,
+    22,
+    26,
+    32,
+    33,
+    36,
+    37,
+    38,
+    42,
+    43,
+    46,
+    47,
+    51,
+    52,
+    53,
+    55,
+    56,
+    57,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    71,
+    75,
+    79,
+    80,
+    81,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    91,
+    94,
+    95,
+    98,
+    99,
+    102,
+    103,
+    106,
+    107,
+    112,
+    116,
+    130,
+    131,
+    132,
+    134,
+    135,
+    136,
+    138,
+    139,
+    141,
+    145,
+    149
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_various[10000000000000000000000000000-False-False-%.1f-10.0 RB]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaltime_with_aware_datetime": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_value_that_forms_whole_number": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intword_custom_format": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[13-13th]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[12-12th]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[2-2nd]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intcomma_nonfinite_values": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[something else-something else]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[foo-2-foo]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[inf-2-+Inf]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[21-21st]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[-1000-2--1.00 x 10\\xb3]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_negative_and_zero": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_basic[0-zero]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[nan-2-NaN]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_clamp_basic_and_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_various[300-False-True-%.1f-300B]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[1000-3-1.000 x 10\\xb3]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_various[3000-False-True-%.1f-2.9K]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaltime_none_value": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_basic[ten-ten]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_natural_list_empty": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_natural_list_various[input_list2-one, two and three]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaldelta_with_months_false": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalday_with_aware_datetime": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_basic[None-None]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_various[3000-True-False-%.1f-2.9 KiB]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_basic[nan-NaN]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_various[30000000000000000000000000000000000-False-False-%.1f-30000.0 QB]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_basic[foo-foo]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_basic[0.3333333333333333-1/3]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_precisedelta_suppression_and_minimum_unit": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_metric_basic[200000000.0-W-3-MW]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaldelta_seconds_and_moments": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert 'months' in 'a month'\n +  where 'a month' = naturaldelta(datetime.timedelta(days=40))\n +    where datetime.timedelta(days=40) = <class 'datetime.timedelta'>(days=40)\n +      where <class 'datetime.timedelta'> = dt.timedelta"
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalday_today_tomorrow_yesterday": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_various[3000000-False-False-%.1f-3.0 MB]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaltime_datetime_and_timedelta_future_calculation": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_thousands_and_decimal_separators[de_DE-.-,]": {
+   "counts": {
+    "fail": 68,
+    "pass": 82
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x7939b8c173d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x715ee18c73d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x7a09dfcc73d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    7,
+    8,
+    10,
+    20,
+    31,
+    33,
+    34,
+    36,
+    37,
+    38,
+    40,
+    42,
+    47,
+    49,
+    50,
+    51,
+    53,
+    54,
+    56,
+    57,
+    58,
+    60,
+    61,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    77,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    87,
+    88,
+    89,
+    93,
+    94,
+    96,
+    98,
+    100,
+    102,
+    104,
+    105,
+    107,
+    109,
+    113,
+    118,
+    130,
+    132,
+    134,
+    135,
+    137,
+    139,
+    141,
+    143,
+    144,
+    148
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_default_decimal_thousands_separator_and_deactivate": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_basic[7-seven]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_precisedelta_with_zero_delta": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[1-1st]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_basic[5-five]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_metric_basic[0--3-]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaltime_str_input_returns_itself": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_metric_basic[1e+40--3-x 10\\u2074\\u2070]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalday_invalid_types": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_clamp_with_floor_and_ceil_tokens": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_bytes_and_byte_singular": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intword_basic_and_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_rounding_by_fmt_behavior": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaldelta_zero_seconds_microseconds": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_gettext_functions_basic": {
+   "counts": {
+    "pass": 82,
+    "fail": 68
+   },
+   "kind": "flaky",
+   "messages": [
+    "AttributeError: <_thread._local object at 0x715ee18c73d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x738d630133d0> has no attribute 'locale'",
+    "AttributeError: <_thread._local object at 0x7a09dfcc73d0> has no attribute 'locale'"
+   ],
+   "fail_runs": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    22,
+    27,
+    30,
+    31,
+    33,
+    34,
+    35,
+    42,
+    43,
+    47,
+    49,
+    50,
+    51,
+    53,
+    54,
+    55,
+    56,
+    58,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    75,
+    80,
+    81,
+    82,
+    83,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    94,
+    100,
+    101,
+    104,
+    105,
+    108,
+    117,
+    119,
+    120,
+    131,
+    132,
+    133,
+    134,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    145
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_natural_list_various[input_list4-1, 2 and 3]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaldelta_nonfinite_values": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_fractional_basic[1-1]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[-inf-2--Inf]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_deactivate_resets_locale": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "FileNotFoundError: [Errno 2] No translation file found for domain: 'humanize'"
+   ]
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_clamp_invalid_format_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_natural_list_various[input_list0-one]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturalsize_rounding_and_expansion": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_metric_units_with_symbols": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_scientific_basic[0.3-2-3.00 x 10\\u207b\\xb9]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_ordinal_basic[value14-[1, 2, 3]]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intword_nonfinite": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_naturaldelta_minimum_unit_invalid_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_metric_basic[1e-14--4-f]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_get_default_locale_path_returns_path_or_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_version_format": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_apnumber_basic[10-10]": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt41mini.humanize.test_pgpt41mini_humanize::test_intcomma_basic": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

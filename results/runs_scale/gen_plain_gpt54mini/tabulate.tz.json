@@ -1,0 +1,603 @@
+{
+ "name": "gen_plain_gpt54mini-tabulate",
+ "mode": "tz",
+ "runs": 150,
+ "num_tests": 82,
+ "runs_with_failure": 150,
+ "avg_run_seconds": 0.5,
+ "num_flaky": 0,
+ "num_always_fail": 6,
+ "flaky_tests": [],
+ "tests": {
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_asciidoc_row_invalid_args_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_is_separating_line_detects_first_element": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert not True\n +  where True = <function _is_separating_line at 0x77c1fa3d9c60>(['x', '\\x01'])\n +    where <function _is_separating_line at 0x77c1fa3d9c60> = tb._is_separating_line",
+    "AssertionError: assert not True\n +  where True = <function _is_separating_line at 0x7eee297e9c60>(['x', '\\x01'])\n +    where <function _is_separating_line at 0x7eee297e9c60> = tb._is_separating_line",
+    "AssertionError: assert not True\n +  where True = <function _is_separating_line at 0x7121b4dddc60>(['x', '\\x01'])\n +    where <function _is_separating_line at 0x7121b4dddc60> = tb._is_separating_line"
+   ]
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_showindex_always": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_html_row_with_attrs_unsafe_allows_raw_html": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_missingval_replaces_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_choose_width_fn_multiline_wraps": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_align_header_left_center_right_and_none": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_is_separating_line_value_matches_exact_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_prepend_row_index_with_length_mismatch_raises": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_bool_wrapper_handles_value_error": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_type_bytes_and_datetime_like": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_mediawiki_row_with_attrs_escapes_alignment": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_maxcolwidths_wraps_text": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_html_header_row_starts_table_and_thead": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_latex_line_begin_tabular_defaults": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_colon_grid_has_colons_in_separator": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '+' in '| x   | y   |'"
+   ]
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_flat_list_flattens_single_level_lists": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_expand_iterable_scalar_and_list": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_disable_numparse_list": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_column_type_detects_common_types": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_simple_default_output": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_remove_and_reinsert_separating_lines": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_rst_escapes_empty_first_column": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_multiline_width_uses_longest_line": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_prepend_row_index_inserts_index_values": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_isnumber_detects_numeric_strings_and_values": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_latex_escapes_special_chars": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_format_none_and_empty_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_isint_detects_int_strings": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_expand_numparse_bool_and_list": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_grid_segment_with_colons_right": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_build_simple_row_uses_escape_map": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert '[a|b]' == '[a/b]'\n  \n  - [a/b]\n  ?   ^\n  + [a|b]\n  ?   ^"
+   ]
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_align_column_left_and_right": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_align_column_choose_padfn_right_strips_when_not_preserve": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_pad_row_and_separating_line_passthrough": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_normalize_tabular_data_list_of_dicts_keys": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_format_table_empty_returns_empty_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_type_numeric_string_and_ansi_stripped": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_pipe_segment_with_colons_right": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_headersalign_warns_on_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_afterpoint_for_decimal_and_exponent": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_is_multiline_str_and_bytes": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_build_line_from_tuple_and_callable": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_grid_segment_with_colons_center": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_simple_separated_format_returns_tableformat": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_build_row_accepts_callable_and_datrow": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "TypeError: sequence item 0: expected str instance, list found"
+   ]
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_normalize_tabular_data_showindex_always": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_format_table_returns_jupyter_html_str_for_html": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_grid_segment_with_colons_left": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_textile_row_with_attrs_includes_alignment": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert ('|=.a |>.b|' == '|=. a |> .b|'\n  \n  - |=. a |> .b|\n  ?    -    -\n  + |=.a |>.b| or False)\n +  where False = <built-in method startswith of str object at 0x77c1fa3a7270>('|=. a|')\n +    where <built-in method startswith of str object at 0x77c1fa3a7270> = '|=.a |>.b|'.startswit",
+    "AssertionError: assert ('|=.a |>.b|' == '|=. a |> .b|'\n  \n  - |=. a |> .b|\n  ?    -    -\n  + |=.a |>.b| or False)\n +  where False = <built-in method startswith of str object at 0x7eee296179b0>('|=. a|')\n +    where <built-in method startswith of str object at 0x7eee296179b0> = '|=.a |>.b|'.startswit",
+    "AssertionError: assert ('|=.a |>.b|' == '|=. a |> .b|'\n  \n  - |=. a |> .b|\n  ?    -    -\n  + |=.a |>.b| or False)\n +  where False = <built-in method startswith of str object at 0x7121b4c055b0>('|=. a|')\n +    where <built-in method startswith of str object at 0x7121b4c055b0> = '|=.a |>.b|'.startswit"
+   ]
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_is_file_detects_io_base": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_pipe_line_with_colons_uses_empty_aligns": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_colalign_warns_on_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_grid_segment_with_colons_default": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_html_returns_jupyter_html_str": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_normalize_tabular_data_list_of_lists_headers_firstrow": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_pipe_segment_with_colons_default": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_with_custom_tableformat_object": {
+   "counts": {
+    "fail": 150
+   },
+   "kind": "always-fail",
+   "messages": [
+    "AssertionError: assert 'a | b' in 'x   | y\\na   | b'"
+   ]
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_normalize_tabular_data_dataclass_keys": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_jupyter_html_str_repr_and_property": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_maxheadercolwidths_wraps_headers": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_isnumber_with_thousands_separator": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_format_int_float_bytes_str": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_strip_ansi_removes_csi_and_osc": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_isbool_detects_bool_and_bool_strings": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_unsafehtml_keeps_raw_markup": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_pad_functions_basic": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_align_column_choose_padfn_decimal_appends_spaces": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_html_row_with_attrs_escapes_by_default": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_tabular_data_none_becomes_empty_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_orgtbl_format_uses_plus_separator": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_pipe_format_has_alignment_colons": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_pretty_disables_numparse": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_latex_raw_preserves_special_chars": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_normalize_tabular_data_namedtuple_keys": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_normalize_tabular_data_keys_for_dict_of_lists": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_tabulate_with_headers_firstrow": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_visible_width_ignores_ansi": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_more_generic_ordering": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_type_none_and_empty_string": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_pipe_segment_with_colons_center": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.tabulate.test_pgpt54mini_tabulate::test_pipe_segment_with_colons_left": {
+   "counts": {
+    "pass": 150
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

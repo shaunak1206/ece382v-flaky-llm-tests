@@ -1,0 +1,451 @@
+{
+ "name": "gen_plain_gpt54mini-filelock",
+ "mode": "both",
+ "runs": 300,
+ "num_tests": 58,
+ "runs_with_failure": 300,
+ "avg_run_seconds": 15.46,
+ "num_flaky": 0,
+ "num_always_fail": 10,
+ "flaky_tests": [],
+ "tests": {
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_release_reduces_counter_only_when_locked": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_release_force": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_context_uses_threadlocal_by_default": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_properties_and_setters": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert -1 == 1.5\n +  where -1 = <test_pgpt54mini_filelock.DummyLock object at 0x763073c4cd40>.timeout",
+    "assert -1 == 1.5\n +  where -1 = <test_pgpt54mini_filelock.DummyLock object at 0x738e3bbb1b50>.timeout",
+    "assert -1 == 1.5\n +  where -1 = <test_pgpt54mini_filelock.DummyLock object at 0x740bcb2d4e00>.timeout"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_release_noop_when_unlocked": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_acquire_with_exception_decrements_counter": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_lock_properties": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert -1 == 3.0\n +  where -1 = <test_pgpt54mini_filelock.DummyAsyncLock object at 0x7630739f5730>.timeout",
+    "assert -1 == 3.0\n +  where -1 = <test_pgpt54mini_filelock.DummyAsyncLock object at 0x738e39b6dc70>.timeout",
+    "assert -1 == 3.0\n +  where -1 = <test_pgpt54mini_filelock.DummyAsyncLock object at 0x740bcb26f8f0>.timeout"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_acquire_returns_proxy_and_sets_counter": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_timeout_str_repr_and_property": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_del_on_unlocked_object_no_error": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_softfilelock_acquire_and_release": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_singleton_same_args_returns_same_instance": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_softfilelock_acquire_nonblocking_when_exists": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_acquire_polls_until_lock": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_softfilelock_release_force": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_enter_is_not_allowed": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_filelock_alias_matches_platform_choice": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_softfilelock_context_manager": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_acquire_timeout": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_softfilelock_reentrant_acquire_and_release": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_double_acquire_increments_counter": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_singleton_differing_mode_raises": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "Failed: DID NOT RAISE ValueError"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_aenter_aexit": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_util_raise_on_not_writable_file_writable_file_no_error": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_module_exports_contain_expected_symbols": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_release_only_finally_unlocks_nested_lock": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_util_raise_on_not_writable_file_directory_raises": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_run_internal_method_sync_method_inline": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_acquire_and_release": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_acquire_return_proxy_enters_and_exits": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert 0 == 1\n +  where 0 = <test_pgpt54mini_filelock.DummyAsyncLock object at 0x7630739f75c0>.release_calls",
+    "assert 0 == 1\n +  where 0 = <test_pgpt54mini_filelock.DummyAsyncLock object at 0x738e39b6ef00>.release_calls",
+    "assert 0 == 1\n +  where 0 = <test_pgpt54mini_filelock.DummyAsyncLock object at 0x740bcb26d7f0>.release_calls"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_acquire_nonblocking_timeout": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_util_ensure_directory_exists_creates_parent": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_release_without_lock_is_noop": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_thread_local_false_allowed": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_util_raise_on_not_writable_file_not_writable_raises": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_filelock_alias_exists": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_acquire_poll_intervall_deprecation": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_acquire_nonblocking_timeout": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_context_can_be_non_thread_local": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert not True\n +  where True = is_thread_local()\n +    where is_thread_local = <test_pgpt54mini_filelock.DummyLock object at 0x763073a3cc80>.is_thread_local",
+    "assert not True\n +  where True = is_thread_local()\n +    where is_thread_local = <test_pgpt54mini_filelock.DummyLock object at 0x738e39b00e30>.is_thread_local",
+    "assert not True\n +  where True = is_thread_local()\n +    where is_thread_local = <test_pgpt54mini_filelock.DummyLock object at 0x740bcb396210>.is_thread_local"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_thread_local_and_run_in_executor_incompatible": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_util_raise_on_not_writable_file_missing_file_no_error": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_softfilelock_is_locked_reflects_fd": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_del_on_unlocked_object_no_error": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_lock_file_pathlike_support": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_version_and_all_exports": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_del_force_release": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_singleton_differing_blocking_raises": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "Failed: DID NOT RAISE ValueError"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_enter_and_exit_release": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_singleton_differing_thread_local_raises": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "Failed: DID NOT RAISE ValueError"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_release_force_releases_when_locked": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_softfilelock_acquire_timeout_when_exists": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_async_softfilelock_inheritance": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_timeout_pickle_roundtrip": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_singleton_differing_timeout_raises": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert False\n +  where False = <test_pgpt54mini_filelock.DummyLock object at 0x763073a8c200>.is_singleton",
+    "assert False\n +  where False = <test_pgpt54mini_filelock.DummyLock object at 0x738e39b6cad0>.is_singleton",
+    "assert False\n +  where False = <test_pgpt54mini_filelock.DummyLock object at 0x740bcb26cfb0>.is_singleton"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_acquire_return_proxy_enters_and_exits": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "assert 0 == 1\n +  where 0 = <test_pgpt54mini_filelock.DummyLock object at 0x763073a8cad0>.release_calls",
+    "assert 0 == 1\n +  where 0 = <test_pgpt54mini_filelock.DummyLock object at 0x738e39b019a0>.release_calls",
+    "assert 0 == 1\n +  where 0 = <test_pgpt54mini_filelock.DummyLock object at 0x740bcb2b7c20>.release_calls"
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_acquire_uses_default_timeout_when_none": {
+   "counts": {
+    "fail": 300
+   },
+   "kind": "always-fail",
+   "messages": [
+    "Failed: Timeout (>15.0s) from pytest-timeout."
+   ]
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_baselock_acquire_poll_intervall_overrides_poll_interval": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "gen_plain_gpt54mini.filelock.test_pgpt54mini_filelock::test_lock_counter_never_negative_after_failed_acquire": {
+   "counts": {
+    "pass": 300
+   },
+   "kind": "stable",
+   "messages": []
+  }
+ }
+}

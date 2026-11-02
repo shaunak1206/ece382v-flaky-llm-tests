@@ -28,7 +28,9 @@ ROOT = gr.ROOT
 
 def run_suite(py, repo, target_dir, timeout_s, seed, randomize):
     fd, xml = tempfile.mkstemp(suffix=".xml"); os.close(fd)
-    env = dict(os.environ, PYTHONPATH=repo, PYTHONHASHSEED=str(seed))
+    # src layout projects that are not installable (fuzzylogic) put src/ on sys.path in their own tests
+    path = os.pathsep.join([repo] + ([f"{repo}/src"] if os.path.isdir(f"{repo}/src") else []))
+    env = dict(os.environ, PYTHONPATH=path, PYTHONHASHSEED=str(seed))
     cmd = [py, "-m", "pytest", "-q", "-p", "no:cacheprovider", "--continue-on-collection-errors", f"--timeout={timeout_s}",
            "--junitxml", xml]
     cmd += ["-p", "randomly", f"--randomly-seed={seed}"] if randomize else ["-p", "no:randomly"]

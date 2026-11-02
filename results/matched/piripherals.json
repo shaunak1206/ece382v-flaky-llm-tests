@@ -1,0 +1,1514 @@
+{
+ "project": "piripherals",
+ "sha": "74e4807a64363e3c95a03222fa250a1073387eaf",
+ "category": "async wait",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_1.test_gen::test_auto_config_writes_correct_data",
+    "zz_gpt41mini_plain_1.test_gen::test_baseline_configure_calls_write_block_with_correct_data",
+    "zz_gpt41mini_plain_1.test_gen::test_baseline_returns_list_of_ints_when_called_without_args",
+    "zz_gpt41mini_plain_1.test_gen::test_charge_writes_correct_bytes_and_modifies_cdt_correctly",
+    "zz_gpt41mini_plain_1.test_gen::test_configure_writes_correct_byte",
+    "zz_gpt41mini_plain_1.test_gen::test_debounce_defaults_release_to_touch_value",
+    "zz_gpt41mini_plain_1.test_gen::test_electrode_data_returns_correct_data",
+    "zz_gpt41mini_plain_1.test_gen::test_filter_write_word_constructed_correctly",
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_set_writes_correct_register",
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_setup_sets_bits_correctly",
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_status_reads_byte",
+    "zz_gpt41mini_plain_1.test_gen::test_handle_touch_calls_handlers_without_channel_arg",
+    "zz_gpt41mini_plain_1.test_gen::test_is_touched_returns_correct_value",
+    "zz_gpt41mini_plain_1.test_gen::test_on_touch_handler_receives_correct_invocation_args",
+    "zz_gpt41mini_plain_1.test_gen::test_on_touch_sets_handler_and_removes_handler",
+    "zz_gpt41mini_plain_1.test_gen::test_out_of_range_raises_on_auto_config_failure",
+    "zz_gpt41mini_plain_1.test_gen::test_out_of_range_returns_lower_13bits_when_no_failure",
+    "zz_gpt41mini_plain_1.test_gen::test_setup_invokes_expected_methods",
+    "zz_gpt41mini_plain_1.test_gen::test_soft_reset_calls_write_byte",
+    "zz_gpt41mini_plain_1.test_gen::test_threshold_sets_release_to_60_percent_touch_if_not_provided",
+    "zz_gpt41mini_plain_1.test_gen::test_touched_raises_on_overcurrent_and_out_of_range",
+    "zz_gpt41mini_plain_1.test_gen::test_touched_returns_lower_13bits_when_no_failure",
+    "zz_gpt41mini_plain_1.test_gen::test_update_touch_state_changes_state_and_calls_handlers",
+    "zz_gpt41mini_plain_1.test_gen::test_update_touch_state_when_no_change_does_not_call_handler"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_soft_reset_calls_write_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_update_touch_state_changes_state_and_calls_handlers": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_handle_touch_calls_handlers_without_channel_arg": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_is_touched_returns_correct_value": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_on_touch_sets_handler_and_removes_handler": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_configure_writes_correct_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_touched_raises_on_overcurrent_and_out_of_range": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_electrode_data_returns_correct_data": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_baseline_returns_list_of_ints_when_called_without_args": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_baseline_configure_calls_write_block_with_correct_data": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_threshold_sets_release_to_60_percent_touch_if_not_provided": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_debounce_defaults_release_to_touch_value": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_filter_write_word_constructed_correctly": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_charge_writes_correct_bytes_and_modifies_cdt_correctly": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_auto_config_writes_correct_data": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_out_of_range_raises_on_auto_config_failure": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_setup_sets_bits_correctly": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_status_reads_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_set_writes_correct_register": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setup_invokes_expected_methods": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_on_touch_handler_receives_correct_invocation_args": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_update_touch_state_when_no_change_does_not_call_handler": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_out_of_range_returns_lower_13bits_when_no_failure": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_touched_returns_lower_13bits_when_no_failure": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_1.test_gen::test_auto_config_writes_correct_data",
+    "zz_gpt41mini_plain_1.test_gen::test_baseline_configure_calls_write_block_with_correct_data",
+    "zz_gpt41mini_plain_1.test_gen::test_baseline_returns_list_of_ints_when_called_without_args",
+    "zz_gpt41mini_plain_1.test_gen::test_charge_writes_correct_bytes_and_modifies_cdt_correctly",
+    "zz_gpt41mini_plain_1.test_gen::test_configure_writes_correct_byte",
+    "zz_gpt41mini_plain_1.test_gen::test_debounce_defaults_release_to_touch_value",
+    "zz_gpt41mini_plain_1.test_gen::test_electrode_data_returns_correct_data",
+    "zz_gpt41mini_plain_1.test_gen::test_filter_write_word_constructed_correctly",
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_set_writes_correct_register",
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_setup_sets_bits_correctly",
+    "zz_gpt41mini_plain_1.test_gen::test_gpio_status_reads_byte",
+    "zz_gpt41mini_plain_1.test_gen::test_handle_touch_calls_handlers_without_channel_arg",
+    "zz_gpt41mini_plain_1.test_gen::test_is_touched_returns_correct_value",
+    "zz_gpt41mini_plain_1.test_gen::test_on_touch_handler_receives_correct_invocation_args",
+    "zz_gpt41mini_plain_1.test_gen::test_on_touch_sets_handler_and_removes_handler",
+    "zz_gpt41mini_plain_1.test_gen::test_out_of_range_raises_on_auto_config_failure",
+    "zz_gpt41mini_plain_1.test_gen::test_out_of_range_returns_lower_13bits_when_no_failure",
+    "zz_gpt41mini_plain_1.test_gen::test_setup_invokes_expected_methods",
+    "zz_gpt41mini_plain_1.test_gen::test_soft_reset_calls_write_byte",
+    "zz_gpt41mini_plain_1.test_gen::test_threshold_sets_release_to_60_percent_touch_if_not_provided",
+    "zz_gpt41mini_plain_1.test_gen::test_touched_raises_on_overcurrent_and_out_of_range",
+    "zz_gpt41mini_plain_1.test_gen::test_touched_returns_lower_13bits_when_no_failure",
+    "zz_gpt41mini_plain_1.test_gen::test_update_touch_state_changes_state_and_calls_handlers",
+    "zz_gpt41mini_plain_1.test_gen::test_update_touch_state_when_no_change_does_not_call_handler"
+   ]
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_2.test_gen::test_baseline_read_and_write_behavior",
+    "zz_gpt41mini_plain_2.test_gen::test_init_default",
+    "zz_gpt41mini_plain_2.test_gen::test_on_touch_and_handle_touch_invokes_handlers",
+    "zz_gpt41mini_plain_2.test_gen::test_threshold_sets_values_for_all_channels_and_specific_channel",
+    "zz_gpt41mini_plain_2.test_gen::test_update_touch_state_triggers_handler"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_init_default": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_reset_writes_reset_command": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_configure_writes_correct_ecr_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_touched_returns_lower_13_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_touched_raises_on_overcurrent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_touched_raises_on_out_of_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_electrode_data_returns_correct_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_baseline_read_and_write_behavior": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_threshold_sets_values_for_all_channels_and_specific_channel": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_debounce_writes_byte_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_filter_write_word_calls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_charge_writes_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_auto_config_writes_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_out_of_range_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_on_touch_and_handle_touch_invokes_handlers": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_is_touched_reflects_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_gpio_setup_calls_write_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_gpio_status_returns_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_gpio_set_writes_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_update_touch_state_triggers_handler": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_2.test_gen::test_baseline_read_and_write_behavior",
+    "zz_gpt41mini_plain_2.test_gen::test_init_default",
+    "zz_gpt41mini_plain_2.test_gen::test_on_touch_and_handle_touch_invokes_handlers",
+    "zz_gpt41mini_plain_2.test_gen::test_threshold_sets_values_for_all_channels_and_specific_channel",
+    "zz_gpt41mini_plain_2.test_gen::test_update_touch_state_triggers_handler"
+   ]
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_1.test_gen::test_gpio_setup_and_set_and_status",
+    "zz_gpt54mini_plain_1.test_gen::test_init_constructs_bus_when_needed",
+    "zz_gpt54mini_plain_1.test_gen::test_setup_calls_initial_configuration_sequence"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_init_uses_existing_bus_device_and_setup": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_init_constructs_bus_when_needed": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_init_registers_irq_handler_when_irq_enabled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_init_registers_poller_when_irq_disabled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_update_touch_state_calls_handlers_only_on_change": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_handle_touch_supports_handlers_with_and_without_channel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_is_touched_uses_internal_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_on_touch_wraps_handler_and_none_removes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_reset_writes_soft_reset_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_configure_writes_expected_ecr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_touched_masks_status_and_raises_on_overcurrent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_out_of_range_raises_for_autoconfig_and_reconfig_flags": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_electrode_data_reads_and_combines_bytes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_baseline_reads_and_scales_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_baseline_writes_correct_registers_for_touch_and_prox": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_threshold_defaults_release_and_applies_to_all_channels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_debounce_and_filter_and_auto_config_write_expected_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_charge_updates_cdc_and_cdt_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_gpio_setup_and_set_and_status": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_setup_calls_initial_configuration_sequence": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_1.test_gen::test_gpio_setup_and_set_and_status",
+    "zz_gpt54mini_plain_1.test_gen::test_init_constructs_bus_when_needed",
+    "zz_gpt54mini_plain_1.test_gen::test_setup_calls_initial_configuration_sequence"
+   ]
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_2.test_gen::test_auto_config_writes_expected_registers",
+    "zz_gpt54mini_plain_2.test_gen::test_baseline_reads_and_scales_values",
+    "zz_gpt54mini_plain_2.test_gen::test_baseline_writes_correct_registers_for_touch_and_prox",
+    "zz_gpt54mini_plain_2.test_gen::test_charge_updates_cdc_and_packed_cdt_bits",
+    "zz_gpt54mini_plain_2.test_gen::test_configure_writes_expected_ecr_value",
+    "zz_gpt54mini_plain_2.test_gen::test_debounce_defaults_release_to_touch",
+    "zz_gpt54mini_plain_2.test_gen::test_electrode_data_decodes_all_channels",
+    "zz_gpt54mini_plain_2.test_gen::test_filter_writes_combined_word",
+    "zz_gpt54mini_plain_2.test_gen::test_handle_touch_supports_one_and_two_arg_handlers",
+    "zz_gpt54mini_plain_2.test_gen::test_init_uses_bus_factory_when_bus_is_not_device",
+    "zz_gpt54mini_plain_2.test_gen::test_is_touched_reflects_cached_state",
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_raises_on_auto_config_failed",
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_raises_on_auto_reconfig_failed",
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_returns_mask",
+    "zz_gpt54mini_plain_2.test_gen::test_reset_writes_soft_reset_register",
+    "zz_gpt54mini_plain_2.test_gen::test_threshold_applies_to_all_channels_and_proximity",
+    "zz_gpt54mini_plain_2.test_gen::test_touched_raises_on_out_of_range",
+    "zz_gpt54mini_plain_2.test_gen::test_touched_raises_on_overcurrent",
+    "zz_gpt54mini_plain_2.test_gen::test_touched_returns_mask_and_checks_failure_bits",
+    "zz_gpt54mini_plain_2.test_gen::test_update_touch_state_calls_handler_only_when_state_changes"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_init_uses_bus_factory_when_bus_is_not_device": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_init_accepts_existing_bus_device": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_reset_writes_soft_reset_register": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_configure_writes_expected_ecr_value": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_touched_returns_mask_and_checks_failure_bits": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_touched_raises_on_overcurrent": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_touched_raises_on_out_of_range": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_returns_mask": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_raises_on_auto_config_failed": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_raises_on_auto_reconfig_failed": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_electrode_data_decodes_all_channels": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_baseline_reads_and_scales_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_baseline_writes_correct_registers_for_touch_and_prox": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_threshold_applies_to_all_channels_and_proximity": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_debounce_defaults_release_to_touch": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_filter_writes_combined_word": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_charge_updates_cdc_and_packed_cdt_bits": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_auto_config_writes_expected_registers": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_is_touched_reflects_cached_state": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_handle_touch_supports_one_and_two_arg_handlers": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_update_touch_state_calls_handler_only_when_state_changes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_2.test_gen::test_auto_config_writes_expected_registers",
+    "zz_gpt54mini_plain_2.test_gen::test_baseline_reads_and_scales_values",
+    "zz_gpt54mini_plain_2.test_gen::test_baseline_writes_correct_registers_for_touch_and_prox",
+    "zz_gpt54mini_plain_2.test_gen::test_charge_updates_cdc_and_packed_cdt_bits",
+    "zz_gpt54mini_plain_2.test_gen::test_configure_writes_expected_ecr_value",
+    "zz_gpt54mini_plain_2.test_gen::test_debounce_defaults_release_to_touch",
+    "zz_gpt54mini_plain_2.test_gen::test_electrode_data_decodes_all_channels",
+    "zz_gpt54mini_plain_2.test_gen::test_filter_writes_combined_word",
+    "zz_gpt54mini_plain_2.test_gen::test_handle_touch_supports_one_and_two_arg_handlers",
+    "zz_gpt54mini_plain_2.test_gen::test_init_uses_bus_factory_when_bus_is_not_device",
+    "zz_gpt54mini_plain_2.test_gen::test_is_touched_reflects_cached_state",
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_raises_on_auto_config_failed",
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_raises_on_auto_reconfig_failed",
+    "zz_gpt54mini_plain_2.test_gen::test_out_of_range_returns_mask",
+    "zz_gpt54mini_plain_2.test_gen::test_reset_writes_soft_reset_register",
+    "zz_gpt54mini_plain_2.test_gen::test_threshold_applies_to_all_channels_and_proximity",
+    "zz_gpt54mini_plain_2.test_gen::test_touched_raises_on_out_of_range",
+    "zz_gpt54mini_plain_2.test_gen::test_touched_raises_on_overcurrent",
+    "zz_gpt54mini_plain_2.test_gen::test_touched_returns_mask_and_checks_failure_bits",
+    "zz_gpt54mini_plain_2.test_gen::test_update_touch_state_calls_handler_only_when_state_changes"
+   ]
+  },
+  "haiku_plain_1": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [
+    "zz_haiku_plain_1.test_gen::test_setup_channels_prox_and_no_auto_config",
+    "zz_haiku_plain_1.test_gen::test_setup_defaults_run_mode_with_twelve_channels"
+   ],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_init_without_setup_or_reset_writes_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_init_binds_requested_address": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_init_reset_only_writes_soft_reset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_configure_packs_cl_prox_touch_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_touched_masks_to_twelve_channels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_touched_raises_on_overcurrent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_touched_raises_when_out_of_range_bits_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_out_of_range_reports_auto_config_failure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_electrode_data_combines_little_endian_pairs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_baseline_read_shifts_raw_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_baseline_write_uses_mhd_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_threshold_default_release_is_60_percent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_debounce_release_defaults_to_touch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_filter_packs_afe1_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_charge_preserves_neighbour_nibble": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_auto_config_default_register_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_gpio_setup_sets_direction_and_enable_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_gpio_setup_rejects_channels_outside_4_to_11[0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_gpio_setup_rejects_channels_outside_4_to_11[3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_gpio_setup_rejects_channels_outside_4_to_11[12]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_gpio_set_clear_and_status_use_channel_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_setup_defaults_run_mode_with_twelve_channels": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_haiku_plain_1.test_gen::test_setup_channels_prox_and_no_auto_config": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_haiku_plain_1.test_gen::test_update_calls_handler_only_on_change": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_1.test_gen::test_handler_exception_is_contained": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_haiku_plain_1.test_gen::test_setup_channels_prox_and_no_auto_config",
+    "zz_haiku_plain_1.test_gen::test_setup_defaults_run_mode_with_twelve_channels"
+   ]
+  },
+  "haiku_plain_2": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_constructor_binds_device_to_given_address": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_constructor_reset_only_sends_soft_reset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_default_constructor_configures_and_enables_all_electrodes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_irq_pin_registers_irq_handler": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_touched_returns_low_13_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_touched_raises_on_overcurrent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_out_of_range_failure_bits_raise": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_failure_checks_can_be_disabled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_on_touch_handler_receives_state_and_channel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_handler_fires_only_when_state_changes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_only_changed_channels_invoke_their_handlers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_handler_exceptions_do_not_escape_update": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_electrode_data_combines_little_endian_pairs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_baseline_read_scales_raw_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_baseline_writes_one_block_per_scenario": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_threshold_defaults_release_to_60_percent_on_all_channels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_debounce_packs_release_and_touch_nibbles": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_filter_packs_afe1_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_charge_updates_only_its_nibble": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_auto_config_default_word_layout": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_gpio_setup_sets_mode_and_direction_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_gpio_set_writes_set_or_clear_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plain_2.test_gen::test_setup_programs_proximity_threshold_and_baselines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_1": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_init_binds_device_at_address": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_init_without_setup_or_reset_writes_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_init_with_reset_only_sends_soft_reset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_is_touched_initially_false_for_all_channels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_update_touch_state_sets_touched_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_handler_called_on_touch_and_release": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_handler_not_called_without_change": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_handler_only_called_for_changed_channel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_handler_exception_is_swallowed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_touched_masks_to_13_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_touched_raises_on_overcurrent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_out_of_range_failure_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_touched_raises_when_out_of_range_reports_failure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_electrode_data_combines_low_and_high_bytes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_baseline_read_shifts_values_left_by_two": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_baseline_write_rising_and_touched_registers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_threshold_single_channel_and_default_release": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_threshold_all_channels_when_channel_omitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_debounce_defaults_release_to_touch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_configure_and_filter_register_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_auto_config_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_charge_updates_only_selected_nibble": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_gpio_set_and_status": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_gpio_setup_sets_bits_and_validates_channel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_1.test_gen::test_setup_resets_then_configures_and_starts_measurement": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_2": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_init_uses_device_address_and_does_not_touch_hardware": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_init_selects_poller_without_irq": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_init_selects_irq_handler_with_irq_pin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_reset_writes_soft_reset_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_configure_encodes_ecr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_touched_masks_status_to_13_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_touched_raises_on_overcurrent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_out_of_range_failure_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_update_touch_state_invokes_handler_with_state_and_channel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_handler_not_called_when_state_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_only_changed_channels_are_dispatched": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_raising_or_removed_handlers_do_not_propagate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_threshold_defaults_release_to_sixty_percent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_threshold_applies_to_all_channels_by_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_debounce_packs_release_and_touch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_filter_packs_afe_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_charge_updates_only_the_right_nibble": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_electrode_data_combines_little_endian_bytes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_baseline_read_shifts_to_ten_bit": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_baseline_write_selects_register_and_payload": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_auto_config_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_gpio_set_writes_set_or_clear_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_gpio_channel_range_is_asserted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_gpio_setup_sets_expected_register_bits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plain_2.test_gen::test_setup_programs_defaults_and_starts_measurement": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 198,
+  "failed": 2,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: Expected 'mock' to be called once. Called 0 times."
+  ]
+ },
+ "seconds": 576.5
+}
