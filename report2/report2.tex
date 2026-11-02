@@ -201,7 +201,7 @@ GPT 4.1 mini & 558 & 10 & 5 & 12 \\
 \end{tabularx}
 \end{table}
 
-Table~\ref{tab:matched} has the results. ``Flaky removed'' counts flaky tests that a one run filter would drop, either because they failed in the first run (10) or because they flip only after a test that failed in the first run (2, Section~\ref{sec:rootcause}). The models wrote 792, 810, 554, and 746 tests in that order, and the filter removed the rest.
+Table~\ref{tab:matched} has the results. ``Flaky removed'' counts flaky tests that a one run filter would drop, either because they failed in the first run (10) or because they flip only after a test that failed in the first run (2, Section~\ref{sec:rootcause}). The models wrote 792, 810, 554, and 746 tests in that order. ``Kept'' counts every test that passed its first run, so for GPT~4.1 mini it still includes the 2 tests that flip only after a rejected test.
 
 Flaky tests cluster within suites, so we compare at two levels.
 \begin{itemize}
