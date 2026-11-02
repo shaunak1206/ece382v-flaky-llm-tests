@@ -9,7 +9,7 @@ fails on our runner.
   python scripts/gruber_reproduce.py <Project_Name> --work /tmp/gr --runs 150 --out results/gruber/repro/<name>.json
 
 Output JSON fields
-  project, url, sha, test (pytest -k expression used), category (Gruber manual label),
+  project, url, sha, test (pytest -k expression used), category (Gruber manual label, or 'unlabeled' for candidates_ext.csv),
   gruber_fail_rate (failures / runs in the original study, same order mode),
   install_ok, install_log_tail, collected (number of test ids the -k expression selected),
   runs, passed, failed, errors (counts over the repeated runs), reproduced (passed > 0 and failed+errors > 0),
@@ -26,9 +26,11 @@ REQ_FILES = ["requirements.txt", "requirements-dev.txt", "requirements_dev.txt",
 
 
 def row_for(name):
-    for r in csv.DictReader(open(f"{ROOT}/results/gruber/candidates.csv")):
-        if r["Project_Name"] == name:
-            return r
+    # candidates.csv: the 58 hand labeled tests; candidates_ext.csv: one unlabeled flaky test per remaining project
+    for f in ("candidates.csv", "candidates_ext.csv"):
+        for r in csv.DictReader(open(f"{ROOT}/results/gruber/{f}")):
+            if r["Project_Name"] == name:
+                return r
     raise SystemExit(f"unknown project {name}")
 
 
@@ -105,6 +107,7 @@ def main():
     ap.add_argument("project"); ap.add_argument("--work", default="/tmp/gruber_work")
     ap.add_argument("--runs", type=int, default=150); ap.add_argument("--timeout", type=int, default=120)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--max-minutes", type=int, default=180, help="stop rerunning after this much wall time")
     a = ap.parse_args()
     r = row_for(a.project); t0 = time.time()
     d = f"{a.work}/{a.project}"; repo = f"{d}/repo"; venv = f"{d}/venv"
@@ -140,7 +143,7 @@ def main():
         counts[st] += 1
         for _, s, m in out_res:
             if s in ("fail", "error") and m and m not in msgs and len(msgs) < 3: msgs.append(m)
-        if time.time() - t0 > 3 * 3600: break
+        if time.time() - t0 > a.max_minutes * 60: break
     res.update(collected=collected, runs=runs, passed=counts["pass"], failed=counts["fail"], errors=counts["error"],
                skipped=counts["skip"], messages=msgs, seconds=round(time.time() - t0, 1),
                reproduced=counts["pass"] > 0 and (counts["fail"] + counts["error"]) > 0)

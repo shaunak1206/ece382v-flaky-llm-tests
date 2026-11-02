@@ -12,6 +12,12 @@ on:
       only:
         description: "optional comma separated project names"
         default: ""
+      list:
+        description: "candidate file in results/gruber/ (candidates.csv or candidates_ext.csv)"
+        default: "candidates.csv"
+      max_minutes:
+        description: "wall time cap per project"
+        default: "180"
 
 jobs:
   plan:
@@ -25,7 +31,7 @@ jobs:
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import csv, json
           only = [x for x in "${{ inputs.only }}".split(",") if x]
-          names = [r["Project_Name"] for r in csv.DictReader(open("results/gruber/candidates.csv"))]
+          names = [r["Project_Name"] for r in csv.DictReader(open("results/gruber/${{ inputs.list }}"))]
           names = [n for n in names if not only or n in only]
           print("matrix=" + json.dumps({"project": names}))
           PY
@@ -44,7 +50,7 @@ jobs:
       - name: reproduce
         run: |
           mkdir -p out
-          python3 scripts/gruber_reproduce.py "${{ matrix.project }}" --work /tmp/gw --runs "${{ inputs.runs }}" \
+          python3 scripts/gruber_reproduce.py "${{ matrix.project }}" --work /tmp/gw --runs "${{ inputs.runs }}" --max-minutes "${{ inputs.max_minutes }}" \
             --out "out/${{ matrix.project }}.json" || true
       - uses: actions/upload-artifact@v4
         if: always()
