@@ -1,0 +1,69 @@
+name: gruber-reproduce
+
+# Reproduce the known non order dependent flaky tests labeled by Gruber et al. (ICST 2021),
+# one job per project, Python 3.8 like FlaPy. See scripts/gruber_reproduce.py for the output format.
+#   gh workflow run gruber-reproduce -f runs=150
+on:
+  workflow_dispatch:
+    inputs:
+      runs:
+        description: "repeated runs of each known flaky test"
+        default: "150"
+      only:
+        description: "optional comma separated project names"
+        default: ""
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import csv, json
+          only = [x for x in "${{ inputs.only }}".split(",") if x]
+          names = [r["Project_Name"] for r in csv.DictReader(open("results/gruber/candidates.csv"))]
+          names = [n for n in names if not only or n in only]
+          print("matrix=" + json.dumps({"project": names}))
+          PY
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: reproduce
+        run: |
+          mkdir -p out
+          python3 scripts/gruber_reproduce.py "${{ matrix.project }}" --work /tmp/gw --runs "${{ inputs.runs }}" \
+            --out "out/${{ matrix.project }}.json" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gr-${{ strategy.job-index }}
+          path: out/*.json
+          if-no-files-found: warn
+
+  collect:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: gr-*
+          merge-multiple: true
+          path: out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gruber-results
+          path: out/
