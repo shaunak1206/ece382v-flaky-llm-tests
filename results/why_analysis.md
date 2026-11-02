@@ -191,3 +191,26 @@ So two of the three Haiku flaky tests follow from habits that Sonnet does not ha
 - Planned delays for timing assertions come from a model of tenacity, filelock, more-itertools, and schedule. 9 assertions use a hand derivation listed in `MANUAL_DELAY` in the script.
 - Human suites differ in size (49 to 763 test functions per suite). `per_condition_macro` and `per_condition_excluding_arrow` in the JSON show the shares without that weighting. The ordering of the shared state rows does not change.
 - 3 flaky LLM tests against 0 is too few for a significance claim (see REPORT.md section 4.1). The features explain how the flaky tests happened, not a measured rate difference between models.
+
+## Added November 2: the two OpenAI conditions (PL-G5, PL-G4)
+
+`scripts/characterize.py` now also scans `gen_plain_gpt54mini` (PL-G5, 897 test functions) and
+`gen_plain_gpt41mini` (PL-G4, 985). Same plain prompt as PL-S (927), different model. Shares in %.
+
+| Feature | Human | PL-S | PL-G5 | PL-G4 |
+|---|---|---|---|---|
+| any shared state | 23.9 | 1.0 | 6.5 | 1.2 |
+| touches a private attribute (`x._name`) | 12.3 | 0.9 | 14.2 | 15.5 |
+| resets library global after the test | 0.3 | 8.6 | 9.8 | 0.0 |
+| monkeypatch | 0.2 | 0.8 | 2.7 | 9.9 |
+| builds a fresh library object | 18.5 | 48.1 | 34.0 | 46.2 |
+| real clock read | 1.9 | 0.4 | 0.2 | 5.6 |
+| timing assertion | 0.1 | 0.3 | 0.0 | 0.1 |
+
+The GPT suites reach into private state about as often as the human suites do, unlike every Claude suite (0
+to 0.9%). In humanize, PL-S resets the translation state after all 78 tests, PL-G5 after 2 of 78, and PL-G4
+after none of 65, while 9 PL-G4 humanize tests monkeypatch `i18n._CURRENT.locale`. That attribute of a
+`threading.local` only exists after `activate()` or `deactivate()` has run in the process, so these tests pass
+when an earlier test has activated a locale and fail when they run first. All 10 flaky PL-G4 tests in the
+large rerun campaign are this case. It is the first order dependence we have seen in an LLM suite, and it comes
+from the same habit (private module state, no reset) that makes the human suites order dependent.

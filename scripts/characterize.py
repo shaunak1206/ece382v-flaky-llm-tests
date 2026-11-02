@@ -42,7 +42,8 @@ from run_smells import HUMAN, files as suite_files  # noqa: E402
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONDS = {"human": "Human", "llm_tests": "AG-S", "gen_oneshot_sonnet": "OS-S",
-         "gen_oneshot_haiku": "OS-H", "gen_tp_sonnet": "TP-S", "gen_plain_sonnet": "PL-S"}
+         "gen_oneshot_haiku": "OS-H", "gen_tp_sonnet": "TP-S", "gen_plain_sonnet": "PL-S",
+         "gen_plain_gpt54mini": "PL-G5", "gen_plain_gpt41mini": "PL-G4"}
 LIBS = list(HUMAN)  # import name == project key for all 12
 
 CLOCK = {"time.time", "time.monotonic", "time.perf_counter", "time.time_ns", "time.monotonic_ns",
@@ -1394,7 +1395,8 @@ def main():
             r.setdefault("flaky_ids", []).append(tid)
         matched[tid] = bool(exact)
     # filter results (one run filter, collection errors)
-    for cond in ("gen_oneshot_sonnet", "gen_oneshot_haiku", "gen_tp_sonnet", "gen_plain_sonnet"):
+    for cond in ("gen_oneshot_sonnet", "gen_oneshot_haiku", "gen_tp_sonnet", "gen_plain_sonnet",
+                 "gen_plain_gpt54mini", "gen_plain_gpt41mini"):
         for proj in LIBS:
             fp = f"{R}/results/filter/{cond}/{proj}.json"
             if os.path.exists(fp) and f"{cond}/{proj}" in suites:
@@ -1413,7 +1415,7 @@ def main():
             suites[k]["collected_in_reruns"] = v["tests"]
     out_cases = case_studies(all_recs)
     per_cond = {CONDS[c]: aggregate([r for r in all_recs if r["cond"] == c]) for c in CONDS}
-    per_cond["LLM (all 5)"] = aggregate([r for r in all_recs if r["cond"] != "human"])
+    per_cond["LLM (all)"] = aggregate([r for r in all_recs if r["cond"] != "human"])
     per_cond_lib = {f"{CONDS[c]}/{p}": aggregate([r for r in all_recs if r["cond"] == c and r["proj"] == p])
                     for c in CONDS for p in LIBS if any(r["cond"] == c and r["proj"] == p for r in all_recs)}
     per_cond_macro = {}
