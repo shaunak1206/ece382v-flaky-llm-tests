@@ -1,0 +1,1515 @@
+{
+ "project": "data-genie.git",
+ "sha": "cde77b7bdb445557f78d834d72d51bb62ad9e668",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard2_1": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard2_1.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard2_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard2_1.test_gen"
+   ]
+  },
+  "gpt41mini_guard2_2": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard2_2.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard2_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard2_2.test_gen"
+   ]
+  },
+  "gpt41mini_plainseed_1": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_is_positive_true_false",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_not_null_true_false",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_percent_value_length_ignore_nulls_true",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_predicates_runs_code_block_and_raises_on_unknown",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_quantile_correctly_evaluates",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_value_length_comparator_false_and_true",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_value_length_with_ignore_nulls",
+    "zz_gpt41mini_plainseed_1.test_gen::test_parse_spec_and_validate_spec_returns_expected",
+    "zz_gpt41mini_plainseed_1.test_gen::test_run_full_integration_row_count_and_has_columns",
+    "zz_gpt41mini_plainseed_1.test_gen::test_run_with_ignore_column_case_modifies_columns"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_1.test_gen::test_validate_raises_on_all_nan_columns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_validate_passes_non_empty_dataframe": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_comparator_to_fn_greater_equal_less": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_treat_column_name_ignore_case_flag": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_quantile_correctly_evaluates": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_date_validation_on_valid_and_invalid_dates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_has_one_of_without_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_has_one_of_with_ignore_case_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_value_length_comparator_false_and_true": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_value_length_with_ignore_nulls": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_percent_value_length_true_and_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_percent_value_length_ignore_nulls_true": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_has_columns_with_and_without_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_row_count_true_and_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_has_columns_used": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_is_unique_true_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_not_null_true_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_is_positive_true_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_unknown_raises_and_keyerror_caught": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_predicates_runs_code_block_and_raises_on_unknown": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_run_raises_for_multiple_children": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_run_raises_on_unknown_instruction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_parse_spec_and_validate_spec_returns_expected": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_run_with_ignore_column_case_modifies_columns": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_run_full_integration_row_count_and_has_columns": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_is_positive_true_false",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_check_not_null_true_false",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_percent_value_length_ignore_nulls_true",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_predicates_runs_code_block_and_raises_on_unknown",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_quantile_correctly_evaluates",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_value_length_comparator_false_and_true",
+    "zz_gpt41mini_plainseed_1.test_gen::test_apply_value_length_with_ignore_nulls",
+    "zz_gpt41mini_plainseed_1.test_gen::test_parse_spec_and_validate_spec_returns_expected",
+    "zz_gpt41mini_plainseed_1.test_gen::test_run_full_integration_row_count_and_has_columns",
+    "zz_gpt41mini_plainseed_1.test_gen::test_run_with_ignore_column_case_modifies_columns"
+   ]
+  },
+  "gpt41mini_plainseed_2": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 27,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_percent_value_length_ignore_nulls",
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_quantile_ignore_column_case",
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_value_length_ignore_nulls",
+    "zz_gpt41mini_plainseed_2.test_gen::test_comparator_to_fn",
+    "zz_gpt41mini_plainseed_2.test_gen::test_run_returns_list_and_ignore_column_case",
+    "zz_gpt41mini_plainseed_2.test_gen::test_validate_spec_return_values"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_2.test_gen::test_init_with_empty_dataframe_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_comparator_to_fn": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_treat_column_name_ignore_case_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_treat_column_name_ignore_case_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_quantile_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_quantile_ignore_column_case": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_date_validation_success": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_date_validation_failure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_has_one_of_default_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_has_one_of_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_value_length_strict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_value_length_ignore_nulls": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_value_length_unique_lengths_fail": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_percent_value_length_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_percent_value_length_ignore_nulls": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_has_columns_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_has_columns_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_check_row_count": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_check_is_unique": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_check_not_null": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_check_is_positive": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_check_unknown_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_check_keyerror_returns_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_predicates_inserts_at_start": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test__run_accepts_predicates_and_raises_on_bad_instruction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_validate_spec_return_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_run_returns_list_and_ignore_column_case": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_percent_value_length_ignore_nulls",
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_quantile_ignore_column_case",
+    "zz_gpt41mini_plainseed_2.test_gen::test_apply_value_length_ignore_nulls",
+    "zz_gpt41mini_plainseed_2.test_gen::test_comparator_to_fn",
+    "zz_gpt41mini_plainseed_2.test_gen::test_run_returns_list_and_ignore_column_case",
+    "zz_gpt41mini_plainseed_2.test_gen::test_validate_spec_return_values"
+   ]
+  },
+  "gpt54mini_plainseed_1": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_value_length_with_ignore_nulls_and_mixed_lengths"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_1.test_gen::test_validate_rejects_empty_dataframe": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_validate_allows_dataframe_with_non_empty_column": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_comparator_to_fn_gt_eq_lt_and_unknown": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_treat_column_name_respects_ignore_column_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_date_validation_success_and_failure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_has_one_of_without_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_has_one_of_with_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_has_one_of_detects_unexpected_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_value_length_without_ignore_nulls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_value_length_with_ignore_nulls_and_mixed_lengths": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_percent_value_length_without_ignore_nulls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_has_columns_case_sensitive_and_insensitive": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_check_row_count_and_not_null_and_is_positive": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_check_unknown_instruction_raises_genie_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_check_keyerror_returns_failure_message": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_predicates_inserts_results_in_reverse_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_run_with_invalid_parse_spec_returns_false_in_validate_spec": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_run_unknown_instruction_raises_genie_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_apply_value_length_with_ignore_nulls_and_mixed_lengths"
+   ]
+  },
+  "gpt54mini_plainseed_2": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_quantile_returns_false_for_non_matching_comparison",
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_quantile_returns_true_for_matching_comparison",
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_value_length_ignoring_nulls_false",
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_value_length_ignoring_nulls_true"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_2.test_gen::test_validate_raises_on_empty_dataframe_with_all_nan_columns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_validate_allows_dataframe_with_at_least_one_non_null_column": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_comparator_to_fn_gt_eq_lt_and_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_treat_column_name_respects_ignore_column_case_flag": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_quantile_returns_true_for_matching_comparison": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_quantile_returns_false_for_non_matching_comparison": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_date_validation_success_and_failure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_has_one_of_without_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_has_one_of_with_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_value_length_ignoring_nulls_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_value_length_ignoring_nulls_true": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_percent_value_length_without_ignoring_nulls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_has_columns_with_and_without_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_check_dispatches_row_count_and_handles_key_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_check_raises_genie_exception_for_unimplemented_check": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_predicates_inserts_results_in_reverse_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_quantile_returns_false_for_non_matching_comparison",
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_quantile_returns_true_for_matching_comparison",
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_value_length_ignoring_nulls_false",
+    "zz_gpt54mini_plainseed_2.test_gen::test_apply_value_length_ignoring_nulls_true"
+   ]
+  },
+  "haiku_plainseed_1": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 32,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_1.test_gen::test_empty_or_all_nan_dataframe_rejected": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_partially_null_column_is_accepted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_row_count_comparators[row_count > 2-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_row_count_comparators[row_count > 3-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_row_count_comparators[row_count == 3-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_row_count_comparators[row_count < 3-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_has_columns_present_and_missing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_has_columns_ignore_case_flag": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_is_unique_detects_duplicates[values0-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_is_unique_detects_duplicates[values1-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_not_null_and_is_positive_flag_bad_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_has_one_of_exact_and_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_quantile_median_comparisons[quantile(score,0.5) == 3-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_quantile_median_comparisons[quantile(score,0.5) > 3-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_quantile_median_comparisons[quantile(score,0.5) < 4-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_missing_column_reports_key_error[is_unique(missing)-is_unique]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_missing_column_reports_key_error[is_not_null(missing)-not_null]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_missing_column_reports_key_error[is_positive(missing)-is_positive]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_missing_column_reports_key_error[has_one_of(missing, [\"a\"])-has_one_of]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_missing_column_reports_key_error[quantile(missing,0.5) > 1-quantile]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_is_date_iso_valid_invalid_and_missing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_value_length_exact_match": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_value_length_null_and_blank_handling": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_percent_value_length_threshold_boundary": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_percent_value_length_ignore_nulls_drops_missing_rows": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_comparator_helper_unknown_operator_never_passes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_invalid_trees_and_unknown_checks_raise_genie_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_multiple_instructions_rejected_by_run": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_validate_spec_accepts_good_and_rejects_bad_specs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_run_raises_lark_error_for_unparseable_spec": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_ignore_column_case_matches_across_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_results_come_back_in_reverse_check_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainseed_2": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [
+    "zz_haiku_plainseed_2.test_gen::test_results_come_back_in_reverse_spec_order"
+   ],
+   "tests": {
+    "zz_haiku_plainseed_2.test_gen::test_constructor_rejects_all_nan_frame": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_constructor_rejects_empty_frame": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_constructor_keeps_frame_with_some_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_validate_spec_reports_good_and_bad_specs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_comparator_to_fn_operators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_row_count_comparisons": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_is_unique_detects_duplicates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_not_null_detects_missing_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_is_positive_requires_strictly_positive_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_has_one_of_membership_and_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_has_columns_requires_all_named_columns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_quantile_comparisons": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_is_date_accepts_parseable_dates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_is_date_reports_parse_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_value_length_requires_exact_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_value_length_ignore_nulls_skips_blank_strings": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_percent_value_length_threshold": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_percent_value_length_ignore_nulls_drops_blank_rows": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_results_come_back_in_reverse_spec_order": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_multiple_apply_blocks_raise_genie_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_unknown_column_reports_key_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_ignore_column_case_matches_mixed_case_columns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_dataframe_accessor_runs_spec": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_haiku_plainseed_2.test_gen::test_results_come_back_in_reverse_spec_order"
+   ]
+  },
+  "sonnet_plainseed_1": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_1.test_gen::test_empty_dataframe_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_all_nan_dataframe_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_comparator_to_fn_operators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_comparator_to_fn_unknown_comparator_is_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_treat_column_name_respects_flag": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_row_count_greater_than_passes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_row_count_equals_and_less_than": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_is_unique_true_and_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_not_null_checks": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_is_positive_checks": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_has_columns_present_and_missing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_has_columns_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_has_one_of_pass_and_fail": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_has_one_of_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_quantile_median_comparisons": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_is_date_valid_and_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_value_length_uniform_and_mixed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_value_length_ignore_nulls_skips_blank_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_percent_value_length_threshold": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_missing_column_reports_key_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_ignore_column_case_lowercases_columns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_multiple_checks_results_are_in_reverse_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_validate_spec_valid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_validate_spec_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_2": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_2.test_gen::test_empty_dataframe_rejected": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_all_null_dataframe_rejected": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_comparator_to_fn_operators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_comparator_to_fn_unknown_returns_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_validate_spec_valid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_validate_spec_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_row_count_comparators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_has_columns_present_and_missing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_has_columns_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_is_unique": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_not_null": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_is_positive": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_has_one_of": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_has_one_of_ignore_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_quantile": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_is_date": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_value_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_percent_value_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_missing_column_reports_key_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_multiple_checks_reported_in_reverse_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_dataframe_accessor_registered": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 200,
+  "failed": 0,
+  "errors": 0,
+  "reproduced": false,
+  "messages": []
+ },
+ "seconds": 2613.3
+}

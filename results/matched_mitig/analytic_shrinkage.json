@@ -1,0 +1,1613 @@
+{
+ "project": "analytic_shrinkage",
+ "sha": "752a0f90696b1ca27a8b84ada3616cdfc98004a9",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard2_1": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 29,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_1.test_gen::test_singular_matrix_raises_value_error"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_1.test_gen::test_output_shape_square": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_output_shape_wide": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_output_shape_equal_n_p": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_returned_matrix_positive_semidefinite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_effect_of_k_none_demeans_and_adjusts_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_k_zero_no_demeaning_and_effective_sample_nunchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_k_greater_than_zero_no_demeaning_and_adjusted_effective_sample": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_returns_finite_values[20-40]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_returns_finite_values[50-50]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_returns_finite_values[70-40]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_minimum_sample_size_requirement": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_singular_matrix_raises_value_error": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_different_data_gives_different_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_returns_positive_definite_when_p_less_than_n_by_large_margin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_returns_positive_definite_when_p_greater_than_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_result_close_to_sample_covariance_for_identity_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_no_side_effects_on_input_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_k_none_demeans_data_inside_function_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_edge_case_k_equal_n_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_edge_case_k_greater_than_n_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_output_is_real_valued": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_handles_rank_deficient_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_runs_for_various_k[None]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_runs_for_various_k[0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_runs_for_various_k[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_runs_for_various_k[5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_raises_assert_for_1d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_shrink_cov_raises_assert_for_3d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_1.test_gen::test_singular_matrix_raises_value_error"
+   ]
+  },
+  "gpt41mini_guard2_2": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_output_trace_less_than_sample_cov_trace"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_basic_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_none_k_demeans": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_k_zero_no_demean": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_k_greater_than_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_sample_size_check": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_invalid_input_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_singular_matrix_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_output_positive_semidefinite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_different_dimensions[25-30]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_different_dimensions[30-25]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_different_dimensions[30-30]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_results_finite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_reproducibility": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_output_trace_less_than_sample_cov_trace": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_no_panic_on_identity_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_large_p_small_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_with_k_equal_to_n_minus_12": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_with_k_causes_sample_size_too_small_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_2.test_gen::test_shrink_cov_output_trace_less_than_sample_cov_trace"
+   ]
+  },
+  "gpt41mini_plainseed_1": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_extreme_values",
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_p_greater_than_n_case",
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_sanity_check_low_rank_data",
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_singular_matrix_raises"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_basic_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_with_k_none_demeans": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_with_k_zero_no_demean": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_with_k_greater_than_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_raises_if_n_minus_k_less_than_12": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_raises_if_input_not_2d": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_singular_matrix_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_p_less_than_n_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_p_equal_n_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_p_greater_than_n_case": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_effective_sample_size_adjustment": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_output_symmetry": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_output_real_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_no_nan_or_inf": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_monotonic_eigenvalues": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_idempotency_of_demeaning": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_large_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_extreme_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_extreme_p_equals_n_and_k": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_effective_sample_size_exactly_12": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_sanity_check_low_rank_data": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_extreme_values",
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_p_greater_than_n_case",
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_sanity_check_low_rank_data",
+    "zz_gpt41mini_plainseed_1.test_gen::test_shrink_cov_singular_matrix_raises"
+   ]
+  },
+  "gpt41mini_plainseed_2": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_input_all_zeros",
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_with_small_eigenvalues_but_above_eps"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_basic_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_no_demean_k0": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_with_k_gt_1": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_raises_if_sample_size_eff_too_small": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_input_not_2d_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_singular_matrix_raises_valueerror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_p_less_than_n_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_p_equal_n_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_p_greater_than_n_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_output_positive_semidefinite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_no_change_k_equal_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_with_constant_columns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_non_integer_k_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_return_type_and_dtype": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_independence_from_mean_shift": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_effect_of_k_param": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_input_all_zeros": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_with_small_eigenvalues_but_above_eps": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_large_matrix_runtime": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_variance_preservation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_symmetry_and_real": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_input_all_zeros",
+    "zz_gpt41mini_plainseed_2.test_gen::test_shrink_cov_with_small_eigenvalues_but_above_eps"
+   ]
+  },
+  "gpt54mini_plainseed_1": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_returns_square_matrix_same_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_output_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_output_has_finite_entries": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_accepts_p_greater_than_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_accepts_square_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_raises_on_non_2d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_raises_when_effective_sample_size_too_small_with_default_k": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_raises_when_effective_sample_size_too_small_with_k": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_raises_on_singular_matrix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_is_invariant_to_constant_shift_when_k_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_k_none_matches_k_one_for_centered_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_k_zero_differs_from_default_on_centered_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_scales_quadratically_with_input_scaling": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_shrink_cov_returns_positive_diagonal_entries": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt54mini_plainseed_2": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 15,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_returns_square_matrix_same_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_output_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_dtype_is_float": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_is_positive_on_diagonal": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_with_k_none_matches_explicit_centered_k1": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_invariant_to_additive_constant_when_k_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_k0_differs_from_k_none_for_shifted_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_accepts_precentered_data_with_k1": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_high_dimensional_case_p_greater_than_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_raises_for_non_2d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_raises_when_effective_sample_size_too_small_due_to_k": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_raises_when_raw_sample_size_too_small_after_default_demeaning": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_raises_on_singular_matrix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_eps_constant_is_small_positive": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_shrink_cov_output_is_finite_for_random_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainseed_1": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_1.test_gen::test_p1_default_matches_closed_form": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_p1_k_zero_matches_closed_form": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_p1_k_positive_matches_closed_form": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_returns_p_by_p_ndarray": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_output_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_output_positive_definite_when_p_below_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_shares_eigenvectors_with_sample_covariance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_default_invariant_to_location_shift": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_default_equals_explicit_k1_on_demeaned_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_scale_equivariance_quadratic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_invariant_to_row_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_equivariant_to_column_permutation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_does_not_modify_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_rejects_non_2d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_default_requires_12_effective_observations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_default_accepts_13_observations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_k_zero_allows_12_observations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_k_reduces_effective_sample_size_below_threshold": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_duplicate_columns_raise_singular": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_constant_column_raises_singular": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_high_dimensional_output_finite_and_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_high_dimensional_output_positive_semidefinite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_repeated_calls_are_identical": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainseed_2": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_2.test_gen::test_output_shape_is_p_by_p": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_output_is_float_ndarray": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_output_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_output_is_positive_definite_when_p_le_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_rejects_one_dimensional_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_rejects_three_dimensional_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_default_k_needs_at_least_13_rows": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_k_zero_needs_at_least_12_rows": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_k_reduces_effective_sample_size_by_k": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_default_k_is_invariant_to_constant_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_k_zero_does_not_demean": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_k_one_on_centered_data_matches_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_scales_quadratically_with_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_invariant_to_row_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_column_permutation_permutes_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_shares_eigenvectors_with_sample_covariance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_recovers_identity_for_large_sample": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_p_greater_than_n_gives_full_rank_estimate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_constant_column_raises_singular_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_collinear_columns_raise_singular_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_does_not_modify_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_integer_input_matches_float_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_1": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_1.test_gen::test_package_exports_functions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_output_shape_low_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_output_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_output_is_positive_definite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_default_equals_prior_demeaned_with_k1": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_does_not_mutate_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_is_deterministic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_scale_equivariance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_close_to_sample_cov_when_n_much_larger_than_p": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_reduces_condition_number_for_identity_truth": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_high_dimensional_p_greater_than_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_minimum_sample_size_boundaries_accepted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_sample_size_too_small_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_large_k_reduces_effective_sample_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_requires_2d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_shrink_cov_singular_matrix_raises_value_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_loss_fr_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_loss_mv_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_fsopt_diagonal_returns_true_diagonal": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_prial_oracle_is_one_and_sample_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_2": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_2.test_gen::test_output_shape_p_less_than_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_output_shape_p_greater_than_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_output_is_finite_low_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_output_is_finite_high_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_output_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_output_is_symmetric_high_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_output_positive_definite_low_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_output_positive_definite_high_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_default_demeans_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_k_one_on_demeaned_data_matches_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_k_zero_does_not_demean": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_k_changes_effective_sample_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_scale_equivariance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_input_not_modified": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_deterministic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_one_dimensional_input_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_three_dimensional_input_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_too_few_samples_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_effective_sample_size_after_k_too_small_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_minimum_sample_size_accepted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_singular_matrix_raises_value_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_shrinkage_improves_conditioning": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_close_to_identity_with_many_samples": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_shares_eigenvectors_with_sample_covariance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 198,
+  "failed": 2,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "assert 1.3435549908949416 < 1",
+   "assert 1.343505038794714 < 1"
+  ]
+ },
+ "seconds": 758.3
+}

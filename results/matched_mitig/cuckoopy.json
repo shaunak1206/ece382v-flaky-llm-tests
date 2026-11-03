@@ -1,0 +1,1541 @@
+{
+ "project": "cuckoopy",
+ "sha": "e5fab0c4826387f99ddafb0365759cb7111cfd64",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard2_1": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_1.test_gen::test_contains_false_for_uninserted_items",
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_after_reinsertion",
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_nonexistent_returns_false",
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_success_and_failure",
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_and_contains_and_len",
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_and_delete_multiple",
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_eviction_path",
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_raises_when_full",
+    "zz_gpt41mini_guard2_1.test_gen::test_len_and_contains_synonym"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_1.test_gen::test_init_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_and_contains_and_len": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_contains_false_for_uninserted_items": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_success_and_failure": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_raises_when_full": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_eviction_path": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_len_and_contains_synonym": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_repr_and_str": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_nonexistent_returns_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_after_reinsertion": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_bucket_size_property_respected": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_multiple_configurations[10-1-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_multiple_configurations[50-4-2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_multiple_configurations[100-2-3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_and_delete_multiple": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_cuckoofilterfullexception_is_subclass_of_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_1.test_gen::test_contains_false_for_uninserted_items",
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_after_reinsertion",
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_nonexistent_returns_false",
+    "zz_gpt41mini_guard2_1.test_gen::test_delete_success_and_failure",
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_and_contains_and_len",
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_and_delete_multiple",
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_eviction_path",
+    "zz_gpt41mini_guard2_1.test_gen::test_insert_raises_when_full",
+    "zz_gpt41mini_guard2_1.test_gen::test_len_and_contains_synonym"
+   ]
+  },
+  "gpt41mini_guard2_2": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_and_delete_with_different_fingerprint_sizes",
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_returns_true_for_inserted_items_and_false_for_others",
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_uses_both_buckets",
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_correctly_updates_size_with_multiple_inserts",
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_removes_inserted_item_and_decreases_size",
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_returns_false_for_nonexistent_item",
+    "zz_gpt41mini_guard2_2.test_gen::test_get_index_and_alternate_index_consistency",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_deterministic_with_seeded_random",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_eviction_raises_correct_exception_with_monkeypatch",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_eviction_works_and_final_insert_increases_size",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_handles_fingerprint_as_bytes",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_raises_full_exception_when_no_space",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_returns_true_and_increases_size",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_uses_correct_indexes",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_when_bucket_accepts_without_eviction",
+    "zz_gpt41mini_guard2_2.test_gen::test_len_and_contains_work_together",
+    "zz_gpt41mini_guard2_2.test_gen::test_size_never_negative_after_deletes"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_2.test_gen::test_init_cuckoofilter_basic_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_repr_and_len_methods": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_get_index_and_alternate_index_consistency": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_returns_true_and_increases_size": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_returns_true_for_inserted_items_and_false_for_others": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_removes_inserted_item_and_decreases_size": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_returns_false_for_nonexistent_item": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_raises_full_exception_when_no_space": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_eviction_works_and_final_insert_increases_size": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_and_delete_with_different_fingerprint_sizes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_deterministic_with_seeded_random": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_uses_hashutils_fingerprint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_uses_correct_indexes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_handles_fingerprint_as_bytes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_correctly_updates_size_with_multiple_inserts": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_size_never_negative_after_deletes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_when_bucket_accepts_without_eviction": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_eviction_raises_correct_exception_with_monkeypatch": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_len_and_contains_work_together": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_uses_both_buckets": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_and_delete_with_different_fingerprint_sizes",
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_returns_true_for_inserted_items_and_false_for_others",
+    "zz_gpt41mini_guard2_2.test_gen::test_contains_uses_both_buckets",
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_correctly_updates_size_with_multiple_inserts",
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_removes_inserted_item_and_decreases_size",
+    "zz_gpt41mini_guard2_2.test_gen::test_delete_returns_false_for_nonexistent_item",
+    "zz_gpt41mini_guard2_2.test_gen::test_get_index_and_alternate_index_consistency",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_deterministic_with_seeded_random",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_eviction_raises_correct_exception_with_monkeypatch",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_eviction_works_and_final_insert_increases_size",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_handles_fingerprint_as_bytes",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_raises_full_exception_when_no_space",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_returns_true_and_increases_size",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_uses_correct_indexes",
+    "zz_gpt41mini_guard2_2.test_gen::test_insert_when_bucket_accepts_without_eviction",
+    "zz_gpt41mini_guard2_2.test_gen::test_len_and_contains_work_together",
+    "zz_gpt41mini_guard2_2.test_gen::test_size_never_negative_after_deletes"
+   ]
+  },
+  "gpt41mini_plainseed_1": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_contains_calls_bucket_contains",
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_raises_with_zero_capacity",
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_uses_both_buckets"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_and_contains_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_duplicate_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_delete_existing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_delete_non_existing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_bucket_size_property": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_until_full_and_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_repr_and_len": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_contains_after_multiple_inserts": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_delete_decrements_size_only_if_found": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_uses_both_buckets": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_contains_calls_bucket_contains": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_delete_calls_bucket_delete": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_raises_with_zero_capacity": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_returns_true_if_bucket_inserts_successfully": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_raises_when_max_displacements_exceeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_contains_returns_false_for_empty_filter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_delete_returns_false_if_fingerprint_absent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_mutual_exclusivity_of_insert_and_delete": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_bucket_size_do_not_affect_wrongly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_contains_calls_bucket_contains",
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_raises_with_zero_capacity",
+    "zz_gpt41mini_plainseed_1.test_gen::test_insert_uses_both_buckets"
+   ]
+  },
+  "gpt41mini_plainseed_2": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_and_delete_using_custom_items",
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_with_max_displacements_eventually_succeeds"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_and_contains_simple": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_returns_true_multiple_items": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_delete_existing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_delete_non_existing_item_returns_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_duplicate_items_increases_size_once": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_len_and_repr_methods": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_returns_false_for_not_inserted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_bucket_size_property_matches_init_arg": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_raises_full_exception_when_full": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_and_delete_using_custom_items": {
+     "pass": 76,
+     "fail": 124,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_delete_reduces_size_appropriately": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_with_max_displacements_eventually_succeeds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_and_delete_are_consistent_with_mutations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_with_different_fingerprint_sizes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_multiple_inserts_then_deletes_length_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_raise_exception_when_capacity_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_internal_indexes_are_consistent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_magic_method_behaves_like_contains": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_delete_magic_method_is_false_for_absent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_repr_contains_all_expected_info": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_and_delete_using_custom_items"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_insert_with_max_displacements_eventually_succeeds"
+   ]
+  },
+  "gpt54mini_plainseed_1": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_bucket_size_property_is_preserved_on_filter_instance",
+    "zz_gpt54mini_plainseed_1.test_gen::test_init_sets_capacity_bucket_size_and_creates_buckets"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_1.test_gen::test_exception_is_subclass_of_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_init_sets_capacity_bucket_size_and_creates_buckets": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_repr_includes_key_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_insert_returns_true_and_increments_size_when_primary_bucket_succeeds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_contains_uses_in_operator_alias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_contains_returns_false_for_missing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_insert_uses_alternate_bucket_when_primary_is_full": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_delete_returns_true_and_decrements_size_when_item_present": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_delete_returns_false_for_missing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_delete_finds_item_in_alternate_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_len_tracks_number_of_successful_operations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_bucket_size_property_is_preserved_on_filter_instance": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_insert_raises_full_exception_when_no_space_and_no_displacement_possible": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_insert_does_not_change_size_when_it_raises_full_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_bucket_size_property_is_preserved_on_filter_instance",
+    "zz_gpt54mini_plainseed_1.test_gen::test_init_sets_capacity_bucket_size_and_creates_buckets"
+   ]
+  },
+  "gpt54mini_plainseed_2": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_plainseed_2.test_gen::test_init_sets_bucket_size_and_length_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_repr_includes_capacity_size_and_fingerprint_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_insert_returns_true_and_increments_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_contains_true_after_insert_using_contains_method": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_contains_true_after_insert_using_in_operator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_contains_false_for_missing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_delete_returns_true_for_inserted_item_and_decrements_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_delete_returns_false_for_missing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_insert_allows_multiple_items_and_len_tracks_count": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_delete_only_removes_one_item_when_duplicates_inserted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_contains_uses_bucket_size_configuration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_full_exception_is_raised_when_insert_never_succeeds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_full_exception_string_representation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainseed_1": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_1.test_gen::test_default_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_constructor_stores_explicit_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_constructor_creates_one_empty_bucket_per_slot": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_bucket_size_is_applied_to_every_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_empty_filter_contains_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_insert_returns_true_and_adds_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_insert_several_distinct_items_are_all_found": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_duplicate_insert_is_counted_twice": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_delete_removes_one_copy_per_call": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_delete_single_item_makes_it_absent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_delete_on_empty_filter_returns_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_delete_keeps_other_items_findable": {
+     "pass": 197,
+     "fail": 3,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_len_tracks_mixed_inserts_and_deletes": {
+     "pass": 194,
+     "fail": 6,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_in_operator_matches_contains_method": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_insert_into_full_filter_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_failed_insert_leaves_size_and_existing_item_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_bucket_size_limits_entries_per_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_exception_is_an_exception_subclass": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_full_insert_error_message_mentions_full": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_repr_reports_capacity_size_and_fingerprint_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_empty_string_is_a_valid_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_unicode_item_round_trip": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_deleting_every_item_empties_filter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [
+    "zz_haiku_plainseed_1.test_gen::test_delete_keeps_other_items_findable",
+    "zz_haiku_plainseed_1.test_gen::test_len_tracks_mixed_inserts_and_deletes"
+   ],
+   "always_fail": []
+  },
+  "haiku_plainseed_2": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [
+    "zz_haiku_plainseed_2.test_gen::test_bulk_delete_keeps_other_items"
+   ],
+   "tests": {
+    "zz_haiku_plainseed_2.test_gen::test_default_bucket_size_is_four": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_bucket_size_is_applied_to_every_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_new_filter_is_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_repr_reports_capacity_size_and_fingerprint_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_insert_returns_true_and_increments_len": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_inserted_items_are_contained": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_in_operator_matches_contains": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_contains_does_not_modify_filter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_delete_removes_inserted_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_delete_missing_item_returns_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_delete_same_item_twice_succeeds_once": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_stored_fingerprint_matches_hashutils_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_fingerprint_size_one_stores_single_byte_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_insert_prefers_primary_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_insert_falls_back_to_alternate_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_delete_finds_item_in_alternate_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_bucket_size_caps_entries_per_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_insert_into_full_filter_raises_full_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_failed_insert_leaves_len_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_zero_max_displacements_gives_up_without_swapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_full_exception_is_an_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_many_inserts_remain_findable": {
+     "pass": 156,
+     "fail": 44,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_bulk_delete_keeps_other_items": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_insert_rejects_non_string_items": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [
+    "zz_haiku_plainseed_2.test_gen::test_many_inserts_remain_findable"
+   ],
+   "always_fail": [
+    "zz_haiku_plainseed_2.test_gen::test_bulk_delete_keeps_other_items"
+   ]
+  },
+  "sonnet_plainseed_1": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_1.test_gen::test_init_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_bucket_size_attribute_is_stored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_bucket_size_custom_large": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_insert_returns_true_and_increments_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_contains_after_insert": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_contains_on_empty_filter_is_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_no_false_negatives_for_many_items": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_delete_existing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_delete_missing_item_on_empty_filter_returns_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_delete_twice_second_returns_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_duplicate_insert_counts_twice_and_delete_removes_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_reinsert_after_delete": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_insert_raises_when_filter_is_full": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_fills_exactly_bucket_size_then_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_full_exception_message_and_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_exception_can_be_raised_and_caught_directly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_len_tracks_inserts_and_deletes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_repr_contains_capacity_size_and_fingerprint_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_unicode_items_roundtrip": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_2": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_2.test_gen::test_new_filter_is_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_bucket_size_default_is_four": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_bucket_size_custom_propagates_to_buckets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_insert_returns_true_and_updates_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_contains_after_insert": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_contains_returns_false_for_missing_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_insert_multiple_distinct_items_all_found": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_delete_existing_item_returns_true_and_removes_it": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_delete_missing_item_returns_false_and_keeps_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_delete_on_empty_filter_returns_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_delete_only_removes_one_copy_of_duplicate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_reinsert_after_delete": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_full_filter_raises_exception_on_single_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_bucket_size_controls_how_many_items_fit_in_single_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_bucket_size_one_single_bucket_full_after_one_insert": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_inserting_same_item_repeatedly_eventually_fills_filter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_delete_frees_space_in_full_single_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_full_exception_is_exception_subclass_with_message": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_exception_can_be_raised_and_caught_as_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_len_and_repr_reflect_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 141,
+  "failed": 59,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "Failed: DID NOT RAISE <class 'cuckoopy.exceptions.CuckooFilterFullException'>"
+  ]
+ },
+ "seconds": 632.1
+}

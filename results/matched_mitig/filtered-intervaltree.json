@@ -1,0 +1,1840 @@
+{
+ "project": "filtered-intervaltree",
+ "sha": "37da431ed36dc9e7936ebd330869f142538ef79d",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard2_1": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_1.test_gen::test_combine_three_intervals_basic",
+    "zz_gpt41mini_guard2_1.test_gen::test_combine_three_intervals_with_nested_intervals",
+    "zz_gpt41mini_guard2_1.test_gen::test_get_minimum_bounding_interval_basic"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_1.test_gen::test_interval_creation_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_interval_creation_specific_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_interval_len_zero_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_interval_comparison_lt_le_gt_ge": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_interval_contains_interval_inside": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_interval_overlaps_method_and_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_interval_touches": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_combine_intervals_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_combine_three_intervals_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_get_minimum_bounding_interval_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_add_operator_combines_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_get_overlap_function_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_remove_method_no_overlap_returns_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_remove_method_when_contained_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_remove_method_overlapping_splits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_remove_method_overlapping_touching_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_remove_method_exact_same_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_remove_method_overlap_at_beginning_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_remove_method_overlap_at_end_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_combine_intervals_with_equal_begin_and_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_minimum_bounding_interval_with_equal_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_combine_three_intervals_with_nested_intervals": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_1.test_gen::test_combine_three_intervals_basic",
+    "zz_gpt41mini_guard2_1.test_gen::test_combine_three_intervals_with_nested_intervals",
+    "zz_gpt41mini_guard2_1.test_gen::test_get_minimum_bounding_interval_basic"
+   ]
+  },
+  "gpt41mini_guard2_2": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 38,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_2.test_gen::test_combine_three_intervals_out_of_order",
+    "zz_gpt41mini_guard2_2.test_gen::test_get_minimum_bounding_interval_out_of_order"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_creation_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_creation_explicit_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_lt[a0-b0-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_lt[a1-b1-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_lt[a2-b2-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_le[a0-b0-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_le[a1-b1-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_le[a2-b2-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_gt[a0-b0-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_gt[a1-b1-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_gt[a2-b2-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_ge[a0-b0-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_ge[a1-b1-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_ge[a2-b2-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_len_correct": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_len_zero_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_contains_true_and_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_overlaps_method[a0-b0-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_overlaps_method[a1-b1-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_overlaps_method[a2-b2-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_overlaps_method[a3-b3-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_overlaps_method[a4-b4-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_overlaps_method[a5-b5-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_touches_true_and_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_combine_intervals_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_combine_intervals_non_overlapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_combine_three_intervals_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_combine_three_intervals_out_of_order": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_get_minimum_bounding_interval_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_get_minimum_bounding_interval_out_of_order": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_add_returns_combined": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_interval_add_non_overlapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_remove_interval_no_overlap_returns_self_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_remove_interval_contained_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_remove_interval_partial_overlap_left_side": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_remove_interval_partial_overlap_right_side": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_remove_interval_exact_overlap_no_segments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_remove_interval_overlap_both_sides": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_2.test_gen::test_combine_three_intervals_out_of_order",
+    "zz_gpt41mini_guard2_2.test_gen::test_get_minimum_bounding_interval_out_of_order"
+   ]
+  },
+  "gpt41mini_plainseed_1": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 32,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_creation_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_creation_custom": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_comparison_lt_le_gt_ge": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_contains_other_interval_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_contains_other_interval_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_add_combines_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_combine_intervals_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_combine_three_intervals_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_get_minimum_bounding_interval_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_overlaps_method_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_overlaps_method_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_touches_method_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_touches_method_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_get_overlap_method_full_containment": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_get_overlap_method_partial_left": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_get_overlap_method_partial_right": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_remove_no_overlap_returns_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_remove_other_contains_self_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_remove_partial_overlap_returns_segments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_remove_partial_overlap_result_no_zero_length_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_remove_partial_left_overlap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_remove_partial_right_overlap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_repr_and_str_behave_like_namedtuple": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_combine_intervals_various_orders[a0-b0-1-8]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_combine_intervals_various_orders[a1-b1-1-8]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_combine_intervals_various_orders[a2-b2-1-4]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_combine_intervals_various_orders[a3-b3-1-4]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_overlaps_functionality[a0-b0-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_overlaps_functionality[a1-b1-False]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_overlaps_functionality[a2-b2-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_interval_overlaps_functionality[a3-b3-True]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt41mini_plainseed_2": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_combine_three_intervals"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_2.test_gen::test_interval_creation_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_interval_creation_custom": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_interval_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_interval_lt_le_gt_ge": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_interval_contains": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_interval_add": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_combine_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_combine_three_intervals": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_get_minimum_bounding_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_overlaps_method_true_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_touches_method": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_remove_no_overlap_returns_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_remove_other_contains_self_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_remove_partial_overlap_left_side": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_remove_partial_overlap_right_side": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_remove_full_overlap_never_happens_with_current_logic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_remove_no_overlap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_add_with_equal_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_operator_equal": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_operator_partial_inside": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_contains_operator_outside": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_minimum_bounding_interval_same_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_combine_intervals_identical": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_combine_three_intervals"
+   ]
+  },
+  "gpt54mini_plainseed_1": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 15,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_combine_three_intervals_handles_unsorted_inputs",
+    "zz_gpt54mini_plainseed_1.test_gen::test_combine_three_intervals_uses_all_intervals_bounds",
+    "zz_gpt54mini_plainseed_1.test_gen::test_get_minimum_bounding_interval_uses_all_bounds",
+    "zz_gpt54mini_plainseed_1.test_gen::test_get_minimum_bounding_interval_with_negative_and_reversed_bounds"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_new_defaults_to_full_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_equality_and_tuple_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_len_returns_difference_between_end_and_begin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_ordering_compares_begin_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_contains_true_when_other_is_fully_inside": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_contains_false_when_other_is_not_fully_inside": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_overlaps_true_for_partial_overlap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_overlaps_false_for_touching_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_interval_touches_true_only_on_shared_endpoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_combine_intervals_returns_min_begin_and_max_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_combine_intervals_is_commutative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_get_minimum_bounding_interval_uses_all_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_get_minimum_bounding_interval_with_negative_and_reversed_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_combine_three_intervals_uses_all_intervals_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_combine_three_intervals_handles_unsorted_inputs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_combine_three_intervals_handles_unsorted_inputs",
+    "zz_gpt54mini_plainseed_1.test_gen::test_combine_three_intervals_uses_all_intervals_bounds",
+    "zz_gpt54mini_plainseed_1.test_gen::test_get_minimum_bounding_interval_uses_all_bounds",
+    "zz_gpt54mini_plainseed_1.test_gen::test_get_minimum_bounding_interval_with_negative_and_reversed_bounds"
+   ]
+  },
+  "gpt54mini_plainseed_2": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_combine_three_intervals_handles_unsorted_inputs",
+    "zz_gpt54mini_plainseed_2.test_gen::test_combine_three_intervals_returns_bounding_interval",
+    "zz_gpt54mini_plainseed_2.test_gen::test_get_minimum_bounding_interval_with_non_overlapping_intervals",
+    "zz_gpt54mini_plainseed_2.test_gen::test_get_minimum_bounding_interval_with_reversed_inputs",
+    "zz_gpt54mini_plainseed_2.test_gen::test_remove_interval_fully_contained_in_other_returns_empty_list"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_2.test_gen::test_interval_default_constructor_uses_full_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_interval_len_returns_difference_between_end_and_begin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_interval_ordering_is_based_on_begin_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_interval_contains_other_interval_when_fully_enclosed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_interval_add_returns_bounding_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_combine_intervals_returns_bounding_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_combine_intervals_is_commutative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_get_minimum_bounding_interval_with_non_overlapping_intervals": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_get_minimum_bounding_interval_with_reversed_inputs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_combine_three_intervals_returns_bounding_interval": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_combine_three_intervals_handles_unsorted_inputs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_touches_detects_adjacent_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_overlaps_detects_true_overlap_but_not_touching": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_remove_non_overlapping_interval_returns_original_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_remove_interval_fully_contained_in_other_returns_empty_list": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_remove_interval_produces_remaining_left_and_right_segments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_remove_overlapping_interval_at_left_edge_produces_right_segment_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_remove_overlapping_interval_at_right_edge_produces_left_segment_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_combine_three_intervals_handles_unsorted_inputs",
+    "zz_gpt54mini_plainseed_2.test_gen::test_combine_three_intervals_returns_bounding_interval",
+    "zz_gpt54mini_plainseed_2.test_gen::test_get_minimum_bounding_interval_with_non_overlapping_intervals",
+    "zz_gpt54mini_plainseed_2.test_gen::test_get_minimum_bounding_interval_with_reversed_inputs",
+    "zz_gpt54mini_plainseed_2.test_gen::test_remove_interval_fully_contained_in_other_returns_empty_list"
+   ]
+  },
+  "haiku_plainseed_1": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_1.test_gen::test_default_interval_spans_zero_to_maxsize": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_fields_and_tuple_equality": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_len_is_end_minus_begin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_ordering_compares_begin_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_contains_is_inclusive_on_both_ends": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_overlaps_partial_and_contained": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_overlaps_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_overlaps_false_when_touching_or_disjoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_touches_only_when_endpoints_meet": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_add_returns_hull_of_both": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_remove_non_overlapping_returns_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_remove_fully_covered_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_remove_middle_splits_into_two": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_remove_trims_left_side": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_remove_trims_right_side": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_get_overlap_returns_intersection_bounds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_combine_intervals_overlapping_and_disjoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_combine_intervals_containment_and_shared_endpoints": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_combine_intervals_matches_add_operator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_combine_three_intervals_ordered_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_combine_three_intervals_unordered_inputs": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_get_minimum_bounding_interval_ordered_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_get_minimum_bounding_interval_unordered_inputs": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainseed_2": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_2.test_gen::test_interval_default_arguments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_interval_fields_and_len": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_interval_ordering_compares_begin_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_interval_contains_is_inclusive": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_interval_add_spans_and_is_commutative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_overlaps_partial_and_nested": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_overlaps_false_for_touching_and_disjoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_touches": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_get_overlap_returns_inner_when_contained": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_get_overlap_partial_overlap_both_orders": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_remove_middle_splits_into_two_pieces": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_remove_disjoint_or_touching_returns_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_remove_fully_covered_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_remove_overlapping_left_edge_keeps_right_piece": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_remove_overlapping_right_edge_keeps_left_piece": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_combine_intervals_disjoint_spans_gap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_combine_intervals_nested_and_commutative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_combine_three_intervals_disjoint_in_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_combine_three_intervals_when_outer_ends_are_extremes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_combine_three_intervals_middle_interval_holds_extremes": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_get_minimum_bounding_interval_ordered_disjoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_get_minimum_bounding_interval_nested_returns_true_bounds": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_get_minimum_bounding_interval_is_argument_order_independent": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_1": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_1.test_gen::test_interval_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_len_is_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_equality_and_hash": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_ordering_by_begin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_contains": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_add_merges_overlapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_add_disjoint_spans_gap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_overlaps_and_touches": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_remove_middle_splits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_remove_disjoint_returns_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_interval_remove_fully_covered_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_combine_intervals_overlapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_combine_intervals_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_combine_intervals_nested_and_disjoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_combine_intervals_identical": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_combine_intervals_returns_interval_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_get_minimum_bounding_interval_ordered_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_get_minimum_bounding_interval_same_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_get_minimum_bounding_interval_default_intervals": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_combine_three_intervals_ordered_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_combine_three_intervals_identical": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_2": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_2.test_gen::test_interval_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_fields_and_unpacking": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_len_is_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_ordering_uses_begin_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_contains": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_add_merges_to_bounding_interval": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_overlaps": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_touches": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_remove_middle_splits_in_two": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_interval_remove_partial_overlap_and_disjoint_and_covered": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_combine_intervals_overlapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_combine_intervals_disjoint_spans_gap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_combine_intervals_nested_returns_outer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_combine_intervals_is_commutative_and_idempotent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_combine_intervals_floats_and_negatives": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_combine_intervals_matches_add_operator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_get_minimum_bounding_interval_overlapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_get_minimum_bounding_interval_disjoint_ordered": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_get_minimum_bounding_interval_identical": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_combine_three_intervals_ordered_chain": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_combine_three_intervals_overlapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 141,
+  "failed": 59,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "assert 0.13041069899999513 > 0.13174865200000596",
+   "assert 0.1302639960000036 > 0.1362592240000069",
+   "assert 0.14260670599999514 > 0.15063867100000294"
+  ]
+ },
+ "seconds": 727.3
+}

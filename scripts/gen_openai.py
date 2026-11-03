@@ -9,7 +9,8 @@ from OPENAI_API_KEY or ~/Library/Application Support/PageCatcher/openai-key.txt 
   python scripts/gen_openai.py matched <Project_Name> <model> <sample> guard
                                                                           -> matched/<project>/<tag>_guard_<k>/test_gen.py
      (plain prompt plus the GUARD list of flakiness pitfalls, the mitigation prompt of RQ4; variant guard2
-      adds GUARD2, the three mechanisms found in the guard trial)
+      adds GUARD2, the three mechanisms found in the guard trial; guard3 is GUARD2 with the
+      seeding sentence limited to generators the code under test imports)
   python scripts/gen_openai.py library <lib> <model> <sample>              -> gen_plain_<tag>/<lib>/test_p<tag>_<lib>.py
 Every call is logged to results/openai_calls.jsonl (model, target, tokens, seconds), without the key.
 """
@@ -37,6 +38,16 @@ GUARD2 = GUARD + ("Three cases need extra care. First, seed random, numpy.random
                   "every run, so if the code uses hash(), for example to pick buckets or slots, assert only results that "
                   "hold for every hash value, or use int keys, whose hash is fixed. Third, replace module attributes "
                   "only with pytest's monkeypatch fixture, so they are restored even when the test fails. ")
+
+# Guard prompt v3 (Nov 3): GUARD2 led GPT 4.1 mini to import numpy and torch in every file, so suites for
+# projects without them did not import. v3 asks it to seed only the generators the code under test imports.
+GUARD3 = GUARD2.replace("seed random, numpy.random and torch at the start of the test function body itself, not in a "
+                        "fixture, whenever the code under test might draw random numbers, even if the test does not "
+                        "call them directly",
+                        "seed the random number generators that the code under test imports (random, numpy.random or "
+                        "torch, only the ones it actually uses, and import nothing that the project does not already "
+                        "depend on) at the start of the test function body itself, not in a fixture, even if the test "
+                        "does not call them directly")
 
 
 def key():
@@ -87,8 +98,9 @@ def main():
                   f"one file. The tests will run with Python 3.8 and pytest 7, with the project and its own dependencies "
                   f"installed, from the project root; do not use other third party packages. Reply with only the test file "
                   f"in one python code block.\n\n")
-        if variant in ("guard", "guard2"):
-            prompt = prompt.replace("Reply with only", (GUARD if variant == "guard" else GUARD2) + "Reply with only")
+        if variant in ("guard", "guard2", "guard3"):
+            g = {"guard": GUARD, "guard2": GUARD2, "guard3": GUARD3}[variant]
+            prompt = prompt.replace("Reply with only", g + "Reply with only")
         prompt += files_block(base, T["files"])
         out = f"{ROOT}/matched/{target}/{tag}_{variant}_{sample}/test_gen.py"
     else:

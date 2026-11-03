@@ -1,0 +1,2286 @@
+{
+ "project": "scikit-procrustes",
+ "sha": "05b6fd4fcc6cb0d7b8d1115dc562a0f8f7e227b2",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard2_1": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 40,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_1.test_gen::test_compare_solvers_basic",
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsovler_projected_gradient_options_only_1_or_2_allowed",
+    "zz_gpt41mini_guard2_1.test_gen::test_optimality_and_compute_residual_consistency",
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_error_invalid_problemnumber_3_n_check"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_default_problemnumber_1_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_default_problemnumber_2_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_default_problemnumber_3_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_user_defined_matrices_correct_sizes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_user_defined_matrices_wrong_length_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_user_defined_matrices_shape_errors[badshape0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_user_defined_matrices_shape_errors[badshape1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_user_defined_matrices_shape_errors[badshape2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_user_defined_matrices_shape_errors[badshape3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_sizes_not_square_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_sizes_divisible_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_defaults_and_types": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[full_results-notbool-full_results must be a boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[xtol-notfloat-xtol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[gtol-notfloat-gtol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[ftol-notfloat-ftol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[zeta-notfloat-zeta must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[kappa-notfloat-kappa must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[eta-notfloat-eta must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[etavar-notbool-etavar must be a boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[tau-notfloat-tau must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[projected_gradient-3-projected_gradient must be 1 or 2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[maxiter-5.5-maxiter must be an integer]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[verbose-5-verbose must be 0, or 1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[filename-123-filename must be string]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_setoptions_invalid[timer-notbool-timer must be boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsovler_solve_invokes_gbb_solver": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_error_invalid_problemnumber": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_error_invalid_problemnumber_3_n_check": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_optimize_result_repr_and_attr_access": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsovler_open_close_file_and_filename": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_open_file_invalid[]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsolver_open_file_invalid[/does/not/exist/path/invalidfile]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_compare_solvers_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_optimality_and_compute_residual_consistency": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_polardecomp_ns_equivalence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_output_consistent_random_seeds": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsovler_projected_gradient_options_only_1_or_2_allowed": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_known_solution_none_when_not_given": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_given_solution_shape_check_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_1.test_gen::test_compare_solvers_basic",
+    "zz_gpt41mini_guard2_1.test_gen::test_gbbsovler_projected_gradient_options_only_1_or_2_allowed",
+    "zz_gpt41mini_guard2_1.test_gen::test_optimality_and_compute_residual_consistency",
+    "zz_gpt41mini_guard2_1.test_gen::test_procrustesproblem_error_invalid_problemnumber_3_n_check"
+   ]
+  },
+  "gpt41mini_guard2_2": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 42,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_2.test_gen::test_compare_solvers",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_open_close_file",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_open_file_stdout",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts1-filename must be a string]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts11-precond must be stupid or None]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts2-strategy not implemented]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts7-verbose must be 0, 1, 2 or 3]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts8-changevar must be True or False]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts9-polar must be ns or None]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_solve_runs_and_returns_result",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_solver_creates_solution_with_right_shape_and_properties"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_invalid_sizes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_default_problem1_fixed_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_default_problem2_fixed_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_default_problem3_fixed_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_user_matrices_correct_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_user_matrices_wrong_shapes[matrices0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_user_matrices_wrong_shapes[matrices1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_user_matrices_wrong_shapes[matrices2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_user_matrices_wrong_shapes[matrices3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts0-full_results must be a boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts1-filename must be a string]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts2-strategy not implemented]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts3-gtol must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts4-eta must be a float]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts5-etavar must be a boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts6-maxiter must be an integer]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts7-verbose must be 0, 1, 2 or 3]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts8-changevar must be True or False]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts9-polar must be ns or None]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts10-timer must be boolean]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts11-precond must be stupid or None]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_default_options_correct_types_and_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_solve_runs_and_returns_result": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_solve_error_without_full_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_projected_gradient_valid[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_projected_gradient_valid[2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_projected_gradient_invalid[0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_projected_gradient_invalid[3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_projected_gradient_invalid[-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_projected_gradient_invalid[one]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_open_close_file": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_open_file_stdout": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_optimizresult_repr_and_dir": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_optimizresult_show": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_compare_solvers": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_problem3_invalid_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_solver_creates_solution_with_right_shape_and_properties": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_solver_verbose_output_stdout_capture": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_spellings_and_constants": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_problemnumber_creates_A_B_C_X_sol[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_problemnumber_creates_A_B_C_X_sol[2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_procrustesproblem_problemnumber_creates_A_B_C_X_sol[3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_2.test_gen::test_compare_solvers",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_open_close_file",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_open_file_stdout",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts1-filename must be a string]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts11-precond must be stupid or None]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts2-strategy not implemented]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts7-verbose must be 0, 1, 2 or 3]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts8-changevar must be True or False]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_setoptions_invalid[invalid_opts9-polar must be ns or None]",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_solve_runs_and_returns_result",
+    "zz_gpt41mini_guard2_2.test_gen::test_gbbsovler_solver_creates_solution_with_right_shape_and_properties"
+   ]
+  },
+  "gpt41mini_plainseed_1": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_default_problem_3_invalid_n_raises"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_default_problem_1": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_default_problem_2": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_default_problem_3_valid_n50": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_default_problem_3_invalid_n_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_matrices_valid_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_matrices_invalid_less_than_3": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_matrices_invalid_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_invalid_squares_raises[sizes0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_invalid_squares_raises[sizes1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_invalid_squares_raises[sizes2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_gbbsolver_setoptions_default_and_custom": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_gbbsolver_open_close_file_stdout": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_gbbsolver_open_close_file_with_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_gbbsolver_open_file_invalid_filename": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_gbbsolver_solve_returns_optimize_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_optimize_result_set_and_get_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_optimize_result_attribute_error_on_missing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_compute_residual_and_optimality_basic_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_gbb_solver_invH_branch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_blockbidiag_shapes_and_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_bidiaggs_output_shapes_and_basic_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_polar_newton_schultz_returns_correct_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_invalid_divisible": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_gbbsolver_setoptions_projected_gradient_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_xsol_optional": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_procrustesproblem_default_problem_3_invalid_n_raises"
+   ]
+  },
+  "gpt41mini_plainseed_2": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_open_close_file_stdout",
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_set_via_kwargs",
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_verbose_print",
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_init_predefined_3_invalid_n"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_init_predefined_1": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_init_predefined_2": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_init_predefined_3_valid_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_init_predefined_3_invalid_n": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_init_invalid_sizes_non_square": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_init_invalid_sizes_not_divisible": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_user_supplied_matrices_correct_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_user_supplied_matrices_wrong_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_default_options": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_invalid_projected_gradient": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_invalid_verbose": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_invalid_full_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_invalid_filename_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_invalid_timer_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_open_close_file_stdout": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_open_file_invalid_filename": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_solve_returns_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_optimize_result_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_solve_error_when_full_results_but_missing_keys": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_solve_with_full_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_verbose_print": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_stats_initially_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_projected_gradient_valid_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_set_via_kwargs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_open_close_file_stdout",
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_options_set_via_kwargs",
+    "zz_gpt41mini_plainseed_2.test_gen::test_gbbsolver_verbose_print",
+    "zz_gpt41mini_plainseed_2.test_gen::test_procrustesproblem_init_predefined_3_invalid_n"
+   ]
+  },
+  "gpt54mini_plainseed_1": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_raises_when_full_results_missing_stats",
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_returns_optimize_result",
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_uses_inf_error_when_no_xsol"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_rejects_non_square_problem": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_rejects_incompatible_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_accepts_custom_matrices_and_sets_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_rejects_matrices_not_tuple_or_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_rejects_too_few_matrices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_rejects_invalid_a_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_rejects_invalid_b_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_rejects_invalid_c_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_rejects_invalid_xsol_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_problem_default_construction_with_monkeypatched_random": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_defaults_are_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_rejects_invalid_option_types_and_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_write_to_existing_filename_works": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_open_file_exits_on_invalid_filename": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_returns_optimize_result": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_uses_inf_error_when_no_xsol": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_raises_when_full_results_missing_stats": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_optimize_result_attribute_access_and_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_raises_when_full_results_missing_stats",
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_returns_optimize_result",
+    "zz_gpt54mini_plainseed_1.test_gen::test_gbbsolver_solve_uses_inf_error_when_no_xsol"
+   ]
+  },
+  "gpt54mini_plainseed_2": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_inner_solver_gbb_sets_related_defaults",
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_rejects_bad_filename_type_and_bad_inner_solver",
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_solve_uses_xsol_error",
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_solve_wires_result_from_backend"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_2.test_gen::test_problem_rejects_non_square_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_problem_rejects_incompatible_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_problem_with_user_matrices_sets_attributes_and_stats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_problem_with_user_matrices_validates_length_and_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_problem_with_user_matrices_validates_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_problemnumber_required_when_matrices_missing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_problemnumber_3_invalid_n_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_problem_default_generation_is_reproducible_with_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_optimize_result_attribute_access_and_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_defaults_are_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_rejects_invalid_option_types": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_inner_solver_spg_allows_changevar_and_polar": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_inner_solver_gbb_sets_related_defaults": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_rejects_bad_filename_type_and_bad_inner_solver": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_open_file_uses_stdout_when_filename_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_open_file_creates_and_closes_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_open_file_handles_oserror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_solve_wires_result_from_backend": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_solve_uses_xsol_error": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_inner_solver_gbb_sets_related_defaults",
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_rejects_bad_filename_type_and_bad_inner_solver",
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_solve_uses_xsol_error",
+    "zz_gpt54mini_plainseed_2.test_gen::test_gbbsolver_solve_wires_result_from_backend"
+   ]
+  },
+  "haiku_plainseed_1": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_1.test_gen::test_gbb_default_options": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_solvername_and_base_class": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_keeps_user_supplied_options": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_rejects_non_bool_flags": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_rejects_non_float_tolerances": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_rejects_bad_option_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_open_and_close_file_default_stdout": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_open_file_bad_path_exits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_solve_writes_log_to_filename": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_maxiter_zero_returns_initial_point": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_maxiter_one_runs_single_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_result_fields_and_status_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_solution_feasible_when_p_at_least_half_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_solution_feasible_when_p_below_half_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_error_is_inf_without_known_solution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_error_matches_known_solution_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_gbb_is_deterministic_under_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_problem_default_xsol_and_b_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_problem1_singular_values_lie_in_ten_to_twelve": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_problem3_singular_value_clusters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_problem_rejects_invalid_sizes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_problem_rejects_unknown_problemnumber": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_problem_user_matrices_are_stored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_problem_user_matrices_reject_wrong_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainseed_2": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_2.test_gen::test_gbb_default_options": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_explicit_options_are_kept": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_rejects_invalid_options": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_problem_stores_sizes_and_empty_stats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_problem1_singular_values_in_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_planted_problems_satisfy_B_equals_AXC": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_problem3_singular_value_clusters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_problem_rejects_bad_sizes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_problem_without_source_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_user_matrices_stored_by_reference": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_user_matrices_with_known_solution_sets_Xsol": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_user_matrices_bad_shapes_raise": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_maxiter_one_reports_maxiter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_maxiter_one_stats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_error_inf_without_known_solution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_error_matches_inf_norm_of_gap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_solution_feasible_dense_branch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_solution_feasible_thin_branch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_converges_planted_identity_small": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_converges_planted_identity_thin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_seeded_runs_reproducible": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_writes_log_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_gbb_result_fields_present": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_1": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 40,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_1.test_gen::test_problem_rejects_non_square_sizes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_rejects_m_not_divisible_by_p": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_requires_matrices_or_problem_number": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_three_requires_special_n": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_one_shapes_and_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_one_known_solution_is_exact_and_orthonormal": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_one_singular_values_in_expected_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_three_has_small_singular_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_user_matrices_without_solution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_user_matrices_with_solution_and_list_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_problem_rejects_bad_user_matrices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_default_options": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_custom_options_are_kept": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs0-full_results]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs1-xtol]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs2-gtol]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs3-ftol]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs4-zeta]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs5-kappa]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs6-eta]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs7-etavar]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs8-tau]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs9-projected_gradient]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs10-maxiter]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs11-verbose]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs12-filename]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_rejects_invalid_options[kwargs13-timer]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_solve_returns_expected_result_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_solution_stays_on_stiefel_manifold[sizes0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_solution_stays_on_stiefel_manifold[sizes1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_solution_stays_on_stiefel_manifold[sizes2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_reduces_the_residual_on_well_conditioned_problem": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_projected_gradient_two_and_etavar_run_cleanly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_maxiter_one_reports_maxiter_failure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_error_is_inf_without_known_solution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_full_results_requires_total_crit_in_stats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_verbose_prints_header_to_stdout": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_filename_writes_log_and_closes_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_invalid_filename_exits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_gbb_solver_function_returns_six_tuple_and_updates_stats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_2": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 42,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_2.test_gen::test_problem_rejects_non_square_sizes[sizes0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_rejects_non_square_sizes[sizes1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_rejects_m_not_divisible_by_p": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_requires_matrices_or_problemnumber": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_user_matrices_without_xsol": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_user_matrices_with_xsol": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_rejects_wrong_matrix_shapes[0-bad_shape0-A must be]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_rejects_wrong_matrix_shapes[1-bad_shape1-B must be]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_rejects_wrong_matrix_shapes[2-bad_shape2-C must be]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_rejects_wrong_matrix_shapes[3-bad_shape3-Xsol must be]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_rejects_too_few_matrices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_number_1_structure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_number_2_structure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_number_3_singular_value_blocks": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_problem_number_3_requires_supported_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_default_options": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_custom_options_are_kept": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs4]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs6]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs7]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs8]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs9]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs10]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs11]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs12]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_rejects_invalid_options[kwargs13]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_solve_identity_problem_reduces_residual": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_solve_generated_problem_is_feasible[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_solve_generated_problem_is_feasible[2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_solve_is_deterministic_for_fixed_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_maxiter_zero_returns_initial_orthonormal_point": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_maxiter_exceeded_reports_failure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_without_known_solution_reports_infinite_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_full_results_requires_total_crit_in_stats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_full_results_returns_recorded_function_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_writes_log_to_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_gbb_invalid_filename_exits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 185,
+  "failed": 15,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=0.01\n\nMismatched elements: 1 / 1 (100%)\nMax absolute difference: 405.98520692\nMax relative difference: 4.05985207e+08\n x: array(405.985208)\n y:",
+   "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=0.01\n\nMismatched elements: 1 / 1 (100%)\nMax absolute difference: 4.92187404\nMax relative difference: 4921874.0447747\n x: array(4.921875)\n y: ar",
+   "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=0.01\n\nMismatched elements: 1 / 1 (100%)\nMax absolute difference: 0.72459407\nMax relative difference: 724594.07233952\n x: array(0.724595)\n y: ar"
+  ]
+ },
+ "seconds": 1766.6
+}

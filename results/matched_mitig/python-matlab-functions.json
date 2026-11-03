@@ -1,0 +1,1610 @@
+{
+ "project": "python-matlab-functions",
+ "sha": "2860bf48f904d546af75143c531750c8857670bc",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard2_1": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_1d_case",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_3d_indices",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_array_indices_3d",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_empty_inputs",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_input_as_numpy_arrays",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_large_dimensions_int64",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_multidim_outputs_shape",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_multiple_indices_2d",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_non_1d_subscripts_raises",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_out_of_bounds_indices",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_output_for_single_element_tuple_siz",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_raises_error_on_dimension_mismatch",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_returns_numpy_array_for_iterables",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_scalar_and_list_mix",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_single_index_2d",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_with_numpy_broadcasting",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_with_size_tuple_and_list_inputs"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_single_index_2d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_multiple_indices_2d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_3d_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_array_indices_3d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_returns_numpy_array_for_iterables": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_raises_error_on_dimension_mismatch": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_raises_error_on_wrong_subscript_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_out_of_bounds_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_large_dimensions_int64": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_input_as_numpy_arrays": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_with_size_tuple_and_list_inputs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_scalar_and_list_mix": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_1d_case": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_empty_inputs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_non_integer_input_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_non_1d_subscripts_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_multidim_outputs_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_with_numpy_broadcasting": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_output_for_single_element_tuple_siz": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_boolean_casting_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_1d_case",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_3d_indices",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_array_indices_3d",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_empty_inputs",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_input_as_numpy_arrays",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_large_dimensions_int64",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_multidim_outputs_shape",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_multiple_indices_2d",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_non_1d_subscripts_raises",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_out_of_bounds_indices",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_output_for_single_element_tuple_siz",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_raises_error_on_dimension_mismatch",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_returns_numpy_array_for_iterables",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_scalar_and_list_mix",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_single_index_2d",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_with_numpy_broadcasting",
+    "zz_gpt41mini_guard2_1.test_gen::test_sub2ind_with_size_tuple_and_list_inputs"
+   ]
+  },
+  "gpt41mini_guard2_2": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_1d_array_subscript",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_1d_basic",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_2d_array_subscripts",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_2d_basic",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_3d_array_broadcasting",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_3d_basic",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_all_dims_too_few_subscripts",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_all_dims_too_many_subscripts",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_max_indices",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_multi_dim_subscripts_as_tuples_and_lists",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_negative_index_explicit_out_of_bounds",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_out_of_bounds_raises",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_single_dim_subscript_as_tuple",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_single_index_array_for_1_dim_shape",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_zero_indices"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_1d_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_1d_array_subscript": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_2d_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_2d_array_subscripts": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_3d_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_3d_array_broadcasting": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_out_of_bounds_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_all_dims_too_few_subscripts": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_all_dims_too_many_subscripts": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_single_dim_subscript_as_tuple": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_multi_dim_subscripts_as_tuples_and_lists": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_output_dtype_and_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_zero_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_max_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_broadcasting_mismatched_shapes_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_single_index_array_for_1_dim_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_negative_index_explicit_out_of_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_empty_array_subscripts": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_single_element_ndarray_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_1d_array_subscript",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_1d_basic",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_2d_array_subscripts",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_2d_basic",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_3d_array_broadcasting",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_3d_basic",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_all_dims_too_few_subscripts",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_all_dims_too_many_subscripts",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_max_indices",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_multi_dim_subscripts_as_tuples_and_lists",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_negative_index_explicit_out_of_bounds",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_out_of_bounds_raises",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_single_dim_subscript_as_tuple",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_single_index_array_for_1_dim_shape",
+    "zz_gpt41mini_guard2_2.test_gen::test_sub2ind_zero_indices"
+   ]
+  },
+  "gpt41mini_plainseed_1": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_1d_basic",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_2d_basic",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_3d_basic",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_first_and_last_elements_1d",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_first_and_last_elements_2d",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_large_dims",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_multi_dim_row_major_vs_column_major_match",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_scalar_input_dims_and_subs",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subs_all_ones",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subs_are_exactly_dims",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subscript_out_of_range_raises",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_dims_as_list",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_numpy_ints",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_one_dim_and_subs_as_tuple",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_subs_as_list"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_1d_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_2d_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_3d_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_raises_on_too_many_subs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_raises_on_too_few_subs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subscript_out_of_range_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_large_dims": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_first_and_last_elements_1d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_first_and_last_elements_2d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_scalar_input_dims_and_subs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_dims_as_list": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_subs_as_list": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_non_integer_subs_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_non_integer_dims_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_empty_dims": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_numpy_ints": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_one_dim_and_subs_as_tuple": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_multi_dim_row_major_vs_column_major_match": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subs_are_exactly_dims": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subs_all_ones": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_1d_basic",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_2d_basic",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_3d_basic",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_first_and_last_elements_1d",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_first_and_last_elements_2d",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_large_dims",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_multi_dim_row_major_vs_column_major_match",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_scalar_input_dims_and_subs",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subs_all_ones",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subs_are_exactly_dims",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_subscript_out_of_range_raises",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_dims_as_list",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_numpy_ints",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_one_dim_and_subs_as_tuple",
+    "zz_gpt41mini_plainseed_1.test_gen::test_sub2ind_with_subs_as_list"
+   ]
+  },
+  "gpt41mini_plainseed_2": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_3d_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_all_indices_are_one_should_return_zero",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_basic",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_empty_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_index_out_of_bounds_raises",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_indices_length_mismatch_raises",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_large_dimensions_and_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_multiple_points",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_element_dims_and_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_index",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_value_each_dim",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_with_dims_length_1_and_multiple_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_with_single_int_args"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_index": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_3d_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_multiple_points": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_value_each_dim": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_index_out_of_bounds_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_dims_length_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_indices_length_mismatch_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_non_integer_index_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_with_single_int_args": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_empty_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_non_tuple_dims_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_with_dims_length_1_and_multiple_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_large_dimensions_and_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_element_dims_and_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_all_indices_are_one_should_return_zero": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_3d_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_all_indices_are_one_should_return_zero",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_basic",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_empty_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_index_out_of_bounds_raises",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_indices_length_mismatch_raises",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_large_dimensions_and_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_multiple_points",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_element_dims_and_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_index",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_single_value_each_dim",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_with_dims_length_1_and_multiple_indices",
+    "zz_gpt41mini_plainseed_2.test_gen::test_sub2ind_with_single_int_args"
+   ]
+  },
+  "gpt54mini_plainseed_1": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_last_element",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_middle_element",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_scalar_basic_column_major_order",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_3d_scalar_basic",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_list_shape",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_numpy_integer_arguments_if_available",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_tuple_shape",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_3d_indices",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_indices_return_sequence",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_mixed_columns"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_scalar_basic_column_major_order": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_last_element": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_middle_element": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_3d_scalar_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_list_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_tuple_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_numpy_integer_arguments_if_available": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_indices_return_sequence": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_mixed_columns": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_3d_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_out_of_bounds_row_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_out_of_bounds_column_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_zero_index_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_negative_index_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_dimension_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_empty_shape_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_last_element",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_middle_element",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_2d_scalar_basic_column_major_order",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_3d_scalar_basic",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_list_shape",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_numpy_integer_arguments_if_available",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_accepts_tuple_shape",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_3d_indices",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_indices_return_sequence",
+    "zz_gpt54mini_plainseed_1.test_gen::test_sub2ind_vectorized_mixed_columns"
+   ]
+  },
+  "gpt54mini_plainseed_2": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_accepts_shape_as_list",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_column_major_order_2d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_moves_across_columns_after_rows",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_one_dimensional_shape",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_raises_for_out_of_bounds_index",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_raises_for_zero_index",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_roundtrip_single_scalar_index",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_roundtrip_with_ind2sub_3d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_first_element_2d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_last_element_2d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_middle_element_2d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_vectorized_3d_matches_expected_indices"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_first_element_2d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_middle_element_2d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_last_element_2d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_column_major_order_2d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_moves_across_columns_after_rows": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_accepts_shape_as_list": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_one_dimensional_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_vectorized_3d_matches_expected_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_roundtrip_with_ind2sub_3d": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_raises_for_zero_index": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_raises_for_out_of_bounds_index": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_raises_for_dimension_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_roundtrip_single_scalar_index": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_accepts_shape_as_list",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_column_major_order_2d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_moves_across_columns_after_rows",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_one_dimensional_shape",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_raises_for_out_of_bounds_index",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_raises_for_zero_index",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_roundtrip_single_scalar_index",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_roundtrip_with_ind2sub_3d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_first_element_2d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_last_element_2d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_single_middle_element_2d",
+    "zz_gpt54mini_plainseed_2.test_gen::test_sub2ind_vectorized_3d_matches_expected_indices"
+   ]
+  },
+  "haiku_plainseed_1": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_1.test_gen::test_docstring_example_zero_based": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_row_major_flat_index_for_every_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_matches_numpy_ravel_multi_index_on_random_in_bounds_coords": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_round_trip_with_unravel_index": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_top_left_and_bottom_right_corners": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_negative_row_gives_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_negative_col_in_first_row_gives_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_row_equal_to_num_rows_gives_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_upper_boundary_is_exclusive": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_mixed_valid_and_invalid_entries_are_masked_elementwise": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_uses_number_of_columns_as_stride_for_non_square": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_shape_as_tuple_list_or_ndarray_all_work": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_preserves_2d_input_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_broadcasts_column_array_against_row_vector": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_empty_index_arrays_return_empty_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_inputs_are_not_modified": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_integer_inputs_give_integer_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_every_output_is_minus_one_or_a_valid_flat_index": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_zero_sized_array_masks_everything": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_single_row_and_single_column_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_1.test_gen::test_large_shape_indices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainseed_2": {
+   "model": "haiku",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainseed_2.test_gen::test_docstring_example_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_result_is_ndarray_with_input_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_matches_ravel_multi_index_for_every_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_first_and_last_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_row_stride_is_column_count_for_wide_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_row_stride_is_column_count_for_tall_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_single_row_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_single_column_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_one_by_one_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_row_at_or_past_row_count_is_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_last_valid_cell_kept_and_next_flat_index_is_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_negative_row_is_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_negative_column_on_first_row_is_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_mixed_valid_and_invalid_entries": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_inputs_are_not_modified": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_integer_inputs_give_integer_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_float_inputs_keep_float_values_and_minus_one_sentinel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_empty_inputs_return_empty_array": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_two_dimensional_inputs_keep_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_broadcasting_column_and_row_vectors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_array_shape_given_as_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_zero_row_shape_marks_everything_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_large_shape_last_cell_and_overflow": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_haiku_plainseed_2.test_gen::test_round_trip_with_ind2sub": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_1": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_1.test_gen::test_docstring_example": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_matches_numpy_ravel_multi_index": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_flat_index_selects_correct_element": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_origin_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_last_element_is_valid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_returns_numpy_array_same_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_diagonal_of_square_matrix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_negative_row_gives_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_negative_result_gives_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_row_out_of_range_gives_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_large_row_out_of_range_gives_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_mixed_valid_and_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_single_row_matrix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_single_column_matrix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_empty_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_row_major_ordering_not_column_major": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_all_positions_enumerate_in_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_1.test_gen::test_scalar_inputs_raise_type_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainseed_2": {
+   "model": "sonnet",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainseed_2.test_gen::test_import_paths_are_same_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_docstring_example": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_matches_numpy_ravel_multi_index": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_indexing_flattened_array_gives_matrix_elements": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_origin_maps_to_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_last_element_maps_to_size_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_row_major_ordering": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_out_of_range_row_is_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_out_of_range_large_index_is_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_negative_result_is_minus_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_negative_row_gives_minus_one_when_total_negative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_mixed_valid_and_invalid": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_empty_arrays_return_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_two_dimensional_inputs_preserve_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_single_column_matrix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_single_row_matrix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_scalar_inputs_raise_type_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    },
+    "zz_sonnet_plainseed_2.test_gen::test_result_dtype_is_integer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable"
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 196,
+  "failed": 4,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "ValueError: high <= 0"
+  ]
+ },
+ "seconds": 1345.1
+}

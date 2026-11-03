@@ -13,10 +13,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Kept tests that flip only after a test the one run filter rejects (a polluter that always fails before it
 # restores a module level function, see results/root_causes/labels.json). In a filtered suite they never flip,
 # so they are counted with the removed tests.
-NEEDS_REJECTED_POLLUTER = {("pylabeledrf", "gpt41mini_plain_1", "test_computeLRF_identical_simple_tree"),
-                           ("pylabeledrf", "gpt41mini_plain_1", "test_computeLRF_simple_flip_label")}
+# The seeding conftest copy of the same suite (gpt41mini_plainseed_1) has the same polluter and victims.
+NEEDS_REJECTED_POLLUTER = {("pylabeledrf", sid, t) for sid in ("gpt41mini_plain_1", "gpt41mini_plainseed_1")
+                           for t in ("test_computeLRF_identical_simple_tree", "test_computeLRF_simple_flip_label")}
 MODEL = {"sonnet": "Claude Sonnet", "haiku": "Claude Haiku 4.5", "gpt54mini": "GPT 5.4 mini", "gpt41mini": "GPT 4.1 mini",
          "gpt41mini+guard": "GPT 4.1 mini, guard prompt", "gpt41mini+guard2": "GPT 4.1 mini, guard prompt v2",
+         "gpt41mini+guard3": "GPT 4.1 mini, guard prompt v3",
          "sonnet+plainseed": "Claude Sonnet + seeding conftest", "haiku+plainseed": "Claude Haiku 4.5 + seeding conftest",
          "gpt54mini+plainseed": "GPT 5.4 mini + seeding conftest", "gpt41mini+plainseed": "GPT 4.1 mini + seeding conftest"}
 
