@@ -16,7 +16,8 @@ already known to cause flaky tests (the Gruber et al. ICST 2021 dataset).
 | Path | Content |
 |---|---|
 | `llm_tests/`, `gen_oneshot_sonnet/`, `gen_oneshot_haiku/`, `gen_tp_sonnet/`, `gen_plain_sonnet/`, `gen_plain_gpt54mini/`, `gen_plain_gpt41mini/` | generated suites for the 12 libraries, one folder per condition (codes in `docs/DATA.md`) |
-| `matched/<project>/<model>_plain_<k>/test_gen.py` | generated suites for the matched study, `matched/targets.json` lists the code under test per project |
+| `matched/<project>/<model>_<prompt>_<k>/test_gen.py` | generated suites for the matched study, `matched/targets.json` lists the code under test per project |
+| `mitigations/` | the M1 (seeding) and M2 (seeding plus state restore) `conftest.py` fixtures |
 | `scripts/` | everything that generates, runs, and analyzes (table below) |
 | `results/` | raw results and tables (see `docs/DATA.md`) |
 | `.github/workflows/` | the experiments that run on GitHub Actions |
@@ -45,9 +46,14 @@ brew install stress-ng uv                   # or apt-get install stress-ng; pip 
 | Generated tests inside the human suite | `python scripts/mixed.py <cond> <lib> --runs 30 --out out.json`, or `gh workflow run mixed-suites` | `results/mixed/` |
 | 1,000 reruns of scanner flagged tests | `gh workflow run extended-rerun -f count=100` (`-f stress=true` for stress-ng) | `results/extended_gha*/` |
 | Reproduce a known flaky test from Gruber et al. | `python scripts/gruber_reproduce.py <Project_Name> --runs 150 --out out.json`, or `gh workflow run gruber-reproduce` | `results/gruber/repro/` |
+| Pick the replication batch from the unlabeled data | `python scripts/select_ext.py` | `results/gruber/candidates_ext.csv` |
 | Find the code under test of a known flaky test | `python scripts/matched_targets.py <Project_Name> --repo <checkout>` | JSON on stdout |
 | Generate OpenAI suites | `python scripts/gen_openai.py matched <Project_Name> gpt-5.4-mini 1` or `... library <lib> gpt-4.1-mini 1` | `matched/...`, `gen_plain_<model>/...` |
 | Run matched suites next to the known flaky test | `python scripts/matched_run.py <Project_Name> --runs 200 --out out.json` (`--suites '*_guard_*'` for one prompt), or `gh workflow run matched-study -f runs=200` | `results/matched/` |
+| Add the M1 and M2 fixtures to every plain matched suite | `python scripts/make_seed_suites.py` | `matched/*/*_plainseed_*/`, `matched/*/*_plainiso_*/` |
+| Alone reruns and polluter search for flaky matched tests | `python scripts/od_diagnose.py <Project_Name> --out out.json`, or `gh workflow run od-diagnose -f projects=a,b` | `results/od_diagnose/` |
+| Matched study model comparisons, per suite and per project | `python scripts/matched_stats.py` | `results/matched_stats.json` |
+| Expected catch of a longer filter | `python scripts/krun_estimate.py` | `results/krun_estimate.json` |
 | Static risk scan | `python scripts/run_smells.py > results/smells.md` | `results/smells.json` |
 | Scanner check against Gruber et al. labels | `python scripts/validate_scanner.py` | `results/scanner_validation/validation.json` |
 | Test characteristics (why LLM tests rarely flip) | `python scripts/characterize.py` | `results/why_analysis.md`, `results/characterize.json` |

@@ -1,0 +1,52 @@
+{
+ "project": "data-partitioner",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_internal_state_advance_after_yielding",
+   "alone_varied_fail": 7,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_guard_1",
+   "test": "test_training_test_partition_ratios[0.1]",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_guard_1",
+   "test": "test_training_test_partition_ratios[0.5]",
+   "alone_varied_fail": 7,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_guard_1",
+   "test": "test_training_test_partition_ratios[0.8]",
+   "alone_varied_fail": 3,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_guard_2",
+   "test": "test_pseudorandom_partition_consistency_for_fixed_seed",
+   "alone_varied_fail": 20,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  }
+ ],
+ "seconds": 36.5
+}

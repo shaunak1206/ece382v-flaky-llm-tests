@@ -1,0 +1,55 @@
+{
+ "project": "limix-lmm",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt54mini_plain_2",
+   "test": "test_limix_lmm_init_imports_dummy_test_callable",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 16,
+   "polluters": [
+    "test_get_beta_cov_raises_attribute_error",
+    "test_get_beta_snpste_has_same_shape_as_betas_and_is_finite",
+    "test_getters_return_same_object_references",
+    "test_init_and_process_with_float_inputs_produces_float_outputs",
+    "test_init_computes_null_quantities_with_identity_kidot",
+    "test_init_sets_degrees_of_freedom_correctly",
+    "test_init_with_none_F_uses_intercept_only",
+    "test_process_overwrites_previous_results_on_second_call",
+    "test_process_pvalues_are_between_zero_and_one",
+    "test_process_with_inter_and_step1_returns_expected_beta_shape",
+    "test_process_with_inter_and_step2_uses_hadodot_path",
+    "test_process_with_verbose_true_prints_message",
+    "test_process_without_inter_returns_expected_shapes",
+    "test_process_works_when_kidot_is_none"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_plainseed_2",
+   "test": "test_limix_lmm_init_imports_dummy_test_callable",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 16,
+   "polluters": [
+    "test_get_beta_cov_raises_attribute_error",
+    "test_get_beta_snpste_has_same_shape_as_betas_and_is_finite",
+    "test_getters_return_same_object_references",
+    "test_init_and_process_with_float_inputs_produces_float_outputs",
+    "test_init_computes_null_quantities_with_identity_kidot",
+    "test_init_sets_degrees_of_freedom_correctly",
+    "test_init_with_none_F_uses_intercept_only",
+    "test_process_overwrites_previous_results_on_second_call",
+    "test_process_pvalues_are_between_zero_and_one",
+    "test_process_with_inter_and_step1_returns_expected_beta_shape",
+    "test_process_with_inter_and_step2_uses_hadodot_path",
+    "test_process_with_verbose_true_prints_message",
+    "test_process_without_inter_returns_expected_shapes",
+    "test_process_works_when_kidot_is_none"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 430.0
+}

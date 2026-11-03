@@ -1,0 +1,135 @@
+{
+ "project": "spreading_dye_sampler",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_make_blot_without_permitted_returns_blot",
+   "alone_varied_fail": 5,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_make_blot_returns_exact_requested_cells_if_possible",
+   "alone_varied_fail": 11,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_make_blot_with_squeeze_true_skips_forbidden_cells",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_make_blot_starts_within_grid_bounds",
+   "alone_varied_fail": 8,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_make_blot_cell_neighbors_addition",
+   "alone_varied_fail": 11,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_make_blot_cells_adjacent",
+   "alone_varied_fail": 13,
+   "alone_fixed_fail": 6,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_make_blot_permitted_none_defaults_to_all_true",
+   "alone_varied_fail": 11,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_make_blot_basic_properties",
+   "alone_varied_fail": 6,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_make_blot_cells_are_connected",
+   "alone_varied_fail": 17,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_make_blot_allows_squeeze_to_skip_nonpermitted_cells",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [
+    "test_make_blot_returns_none_if_start_cell_not_permitted_and_permitted_given"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_make_blot_returns_none_if_nonpermitted_cell_found_and_squeeze_false",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_make_blot_cells_are_unique",
+   "alone_varied_fail": 9,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_make_blot_with_non_standard_cell_dims",
+   "alone_varied_fail": 7,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_internal_neighbour_sharing_edges_accumulate",
+   "alone_varied_fail": 6,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  }
+ ],
+ "seconds": 136.1
+}

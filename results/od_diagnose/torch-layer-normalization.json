@@ -1,0 +1,25 @@
+{
+ "project": "torch-layer-normalization",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_forward_matches_pytorch_native_layernorm",
+   "alone_varied_fail": 16,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_layernorm_with_tuple_normalized_shape",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  }
+ ],
+ "seconds": 168.0
+}

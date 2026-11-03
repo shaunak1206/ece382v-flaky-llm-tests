@@ -117,29 +117,58 @@ FlaPy's own per test overview (columns documented in the FlaPy README). `flaky?`
 | `TestsOverview.csv` | the full dataset from Zenodo (not committed, 249 MB, download with the URL in `scripts/gruber_reproduce.py`) |
 | `candidates.csv` | the 58 hand labeled non order dependent flaky tests whose cause is not network. Columns `Project_Name, Project_URL, Project_Hash, Test_filename, Test_classname, Test_funcname, Test_parametrization, flakiness category, fail_rate` (failures over runs in the original study), `project_tests` |
 | `repro/<project>.json` | output of `scripts/gruber_reproduce.py`, fields documented at the top of that script |
+| `nod_projects.csv` | projects with a flaky test that is not order dependent (`Project_Name, n, url, sha, tests, fail_rate_med`) |
+| `candidates_ext.csv` | the replication batch: one unlabeled flaky test per remaining project, same columns as `candidates.csv` with `flakiness category` = `unlabeled`; rebuilt by `scripts/select_ext.py`, whose docstring gives the rule |
+| `repro_ext/<project>.json` | `scripts/gruber_reproduce.py` output for `candidates_ext.csv` |
+| `matched_projects.txt` | the 41 E2 projects, space separated; the first 17 are the hand labeled batch, the other 24 the replication batch |
+| `human_root_causes_ext.json` | root cause of the human flaky test of each replication project (`project`, `category`, `mechanism`, `evidence`, `confidence`, second check fields) |
+| `data_genie_recheck.json` | every rerun of the data-genie human test, with where it ran and the failures |
 
 ## Matched study: `matched/<project>/<suite_id>/`, `results/matched/<project>.json`
 
 Generated suites that target the same code as the known flaky human test, and their rerun results from
 `scripts/matched_run.py` (fields documented at the top of that script). `matched/targets.json` names the code
 under test per project. Suite ids are `<model>_<prompt>_<sample>`: model `sonnet`, `haiku`, `gpt54mini`,
-`gpt41mini`, prompt `plain` or `guard` (the mitigation prompt in `prompts/README.md`).
+`gpt41mini`, prompt `plain`, `guard`, `guard2`, `guard3` (the guard prompts in `prompts/README.md`), `plainseed` (the
+plain suite plus `mitigations/seed_conftest.py` as `conftest.py`, fixture M1) or `plainiso` (plus
+`mitigations/isolate_conftest.py`, fixture M2). `scripts/make_seed_suites.py` makes the last two.
 
 Per project file: `project`, `sha`, `category` (Gruber et al. label), `install_ok`, `seconds`, `human` (the known
 flaky test as a control: `runs`, `passed`, `failed`, `errors`, `reproduced`, `messages`), and `suites[suite_id]`
 with `model`, `prompt`, `sample`, `runs`, `n_tests`, `first_run_failed` (ids that failed in run 1, which a one run
 filter rejects), `tests[id]` = {`pass`, `fail`, `error`, `skip`, `kind`: stable, flaky, always-fail,
-always-skip}, and the `flaky` and `always_fail` id lists. Even runs keep file order, odd runs use
+always-skip, `fails_file_order`, `fails_shuffled` (failures in each half of the runs, recorded from the
+replication batch on; absent in older files)}, and the `flaky` and `always_fail` id lists. Even runs keep file order, odd runs use
 pytest-randomly with seed 7000 plus the run index. An id of the form `::module` means the file did not import.
 
-`results/matched_guard/<project>.json` has the same format for the `gpt41mini_guard_*` suites only (the first
-mitigation trial, run separately on November 2). `scripts/analyze_matched.py` reads both folders and writes
+The other folders have the same format: `results/matched_guard/` holds the `gpt41mini_guard_*` suites (the
+first mitigation trial), `results/matched_mitig/` the `*_plainseed_*` suites and `gpt41mini_guard2_*`,
+`results/matched_guard3/` the `gpt41mini_guard3_*` suites, and `results/matched_iso/` the `*_plainiso_*` suites.
+`scripts/analyze_matched.py` reads all of them and writes
 `results/matched_summary.json` (`models` per model and prompt, `projects` with the human control, `flaky` list)
 and `results/matched_analysis.md`.
 
+## Model comparisons and filter estimate: `results/matched_stats.json`, `results/krun_estimate.json`
+
+`scripts/matched_stats.py` writes, for `original_17`, `new_24` and `all` projects (and the same with `_seeded` and
+`_isolated` for the fixture suites): `models[m]` = {`suites`, `suites_with_flaky`, `projects_with_flaky`, `kept`,
+`flaky_kept`} and `pairs["a vs b"]` = {`p_suite_fisher`, `projects_only_first`, `projects_only_second`,
+`p_project_sign`}. `scripts/krun_estimate.py` writes the expected share of kept flaky LLM tests that k extra
+filter runs catch, in file order and shuffled (`file_order[k]`, `shuffled[k]`), plus `tests`,
+`fail_under_5pct`, and `never_fail_in_file_order`.
+
+## Order dependence diagnosis: `results/od_diagnose/<project>.json`
+
+`scripts/od_diagnose.py` output for every flaky generated test of an E2 project: `tests` = [{`suite`, `test`,
+`alone_varied_fail` (of 20 alone runs with a new hash seed), `alone_fixed_fail` (of 10 with PYTHONHASHSEED=0),
+`pairs_tried`, `polluters` (tests whose run just before it makes it fail in one of 3 tries), `verdict`: od,
+nod, nod-hash, or unknown}]. Read the verdict together with the root cause label. For a test that draws from a shared
+generator, an earlier test can shift the generator stream and so show up as a polluter (pelicun,
+spreading_dye_sampler), and a rare failure can be missed in 30 alone runs (unknown, nod-hash with 1 failure).
+
 ## Root causes: `results/root_causes/labels.json`
 
-One record per flaky test found in November (E1 campaign, E2 plain prompt, E2 guard prompt), with category
+One record per flaky test found in November (E1 campaign, E2 plain prompt, E2 guard prompts), with category
 (Luo et al. and Gruber et al. categories), order dependence, whether it flips for the same reason as the known
 flaky human test, the mechanism, quoted evidence, and a second independent check. Field list and counts in
 `results/root_causes/README.md`.

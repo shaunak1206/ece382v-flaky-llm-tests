@@ -1,0 +1,27 @@
+{
+ "project": "pelicun",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_tmvn_rvs_scalar_cov_repeated",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_tmvn_MLE_multivariate_no_censoring",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "test_tmvn_MLE_mutlidim_truncation_none_and_inf"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 102.1
+}

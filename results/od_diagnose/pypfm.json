@@ -1,0 +1,29 @@
+{
+ "project": "pypfm",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt54mini_plain_2",
+   "test": "test_reimporting_package_preserves_pfml_loader_identity",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_package_can_be_imported_when_already_loaded"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_plainseed_2",
+   "test": "test_reimporting_package_preserves_pfml_loader_identity",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_package_can_be_imported_when_already_loaded"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 70.0
+}

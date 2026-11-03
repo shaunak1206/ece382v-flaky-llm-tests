@@ -1,0 +1,69 @@
+{
+ "project": "pylabeledrf",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_computeLRF_identical_simple_tree",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_computeLRF_islands_mismatch_valueerror"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_computeLRF_simple_flip_label",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_computeLRF_islands_mismatch_valueerror"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_mutateLabeledTree_returns_different_tree",
+   "alone_varied_fail": 18,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_guard_1",
+   "test": "test_mutateLabeledTree_flips_nodes_correctly",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 15,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_plainseed_1",
+   "test": "test_computeLRF_identical_simple_tree",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_computeLRF_islands_mismatch_valueerror"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_plainseed_1",
+   "test": "test_computeLRF_simple_flip_label",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_computeLRF_islands_mismatch_valueerror"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 96.6
+}

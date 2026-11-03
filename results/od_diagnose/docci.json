@@ -1,0 +1,81 @@
+{
+ "project": "docci",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_xlsx_to_bytes_saves_content_consistently",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 15,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_xlsx_to_bytes_same_workbook_consistency",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_xlsx_to_file_multiple_calls_generate_different_objects",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt54mini_plain_2",
+   "test": "test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_plainseed_1",
+   "test": "test_xlsx_to_bytes_and_xlsx_to_file_consistent_content",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_plainseed_1",
+   "test": "test_xlsx_to_bytes_saves_content_consistently",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 15,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_plainseed_2",
+   "test": "test_xlsx_to_bytes_same_workbook_consistency",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [
+    "test_xlsx_to_bytes_empty_workbook"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_plainseed_2",
+   "test": "test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  }
+ ],
+ "seconds": 127.8
+}
