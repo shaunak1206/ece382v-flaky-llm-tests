@@ -1,0 +1,25 @@
+{
+ "project": "WikidataIntegrator",
+ "url": "https://github.com/sulab/WikidataIntegrator",
+ "sha": "2ce3477b47447e335dd5e7413396fecf306c7146",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.027777777777777776,
+ "test_file": "wikidataintegrator/tests/test_backoff.py",
+ "test_func": "test_all",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_all",
+ "collect_tail": "site-packages/wlighter/w_lighter.py:513: DeprecationWarning: invalid escape sequence \\(\n    re.compile(\"(?:^| |\\(|\\[)\" + self._namespaces[self._namespace_indirect_prop] + \":P[0-9]+[ ?*+;,.)\\]]\")\n\n../venv/lib/python3.8/site-packages/wlighter/w_lighter.py:513\n  /tmp/gw/WikidataIntegrator/venv/lib/python3.8/site-packages/wlighter/w_lighter.py:513: DeprecationWarning: invalid escape sequence \\]\n    re.compile(\"(?:^| |\\(|\\[)\" + self._namespaces[self._namespace_indirect_prop] + \":P[0-9]+[ ?*+;,.)\\]]\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 test collected in 1.15s\n",
+ "first_run_tail": "se')))\n=============================== warnings summary ===============================\nwikidataintegrator/__init__.py:1\n  /tmp/gw/WikidataIntegrator/repo/wikidataintegrator/__init__.py:1: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n    import pkg_resources\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpg_eek4ef.xml -------------------\n=========================== short test summary info ============================\nFAILED wikidataintegrator/tests/test_backoff.py::TestMethods::test_all - requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))\n1 failed, 1 warning in 2.91s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+ ],
+ "seconds": 461.6,
+ "reproduced": false
+}

@@ -1,0 +1,27 @@
+{
+ "project": "rockhound",
+ "url": "https://github.com/fatiando/rockhound",
+ "sha": "c4d84b2628c4b0dd666ceb1b334647489fe85f17",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.014285714285714285,
+ "test_file": "rockhound/tests/test_availability.py",
+ "test_func": "test_available",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=2 error: Couldn't parse requirement in `requirements-dev.txt` at position 68\n  cause: no such comparison operator \"=\", must be one of ~= == != <= >= < > ===\n         sphinx=2.2.1\n               ^^^^^^\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_available",
+ "collect_tail": "rockhound/tests/test_availability.py::test_available\n\n=============================== warnings summary ===============================\nrockhound/tests/test_availability.py:8\n  /tmp/gw/rockhound/repo/rockhound/tests/test_availability.py:8: PytestUnknownMarkWarning: Unknown pytest.mark.minimal - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html\n    @pytest.mark.minimal\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 test collected in 1.41s\n",
+ "first_run_tail": "mark.minimal - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html\n    @pytest.mark.minimal\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpj0gwjx5r.xml -------------------\n=========================== short test summary info ============================\nFAILED rockhound/tests/test_availability.py::test_available - AssertionError: assert False\n +  where False = <bound method Pooch.is_available of <pooch.core.Pooch object at 0x76e3a543cc70>>('PREM_1s.csv')\n +    where <bound method Pooch.is_available of <pooch.core.Pooch object at 0x76e3a543cc70>> = <pooch.core.Pooch object at 0x76e3a543cc70>.is_available\n1 failed, 1 warning in 1.21s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert False\n +  where False = <bound method Pooch.is_available of <pooch.core.Pooch object at 0x76e3a543cc70>>('PREM_1s.csv')\n +    where <bound method Pooch.is_available of <pooch.co",
+  "AssertionError: assert False\n +  where False = <bound method Pooch.is_available of <pooch.core.Pooch object at 0x74694797bc40>>('PREM_1s.csv')\n +    where <bound method Pooch.is_available of <pooch.co",
+  "AssertionError: assert False\n +  where False = <bound method Pooch.is_available of <pooch.core.Pooch object at 0x7fd9f3dfbd60>>('PREM_1s.csv')\n +    where <bound method Pooch.is_available of <pooch.co"
+ ],
+ "seconds": 185.7,
+ "reproduced": false
+}

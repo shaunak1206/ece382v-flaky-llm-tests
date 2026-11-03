@@ -1,0 +1,25 @@
+{
+ "project": "newrelic-lambda-cli",
+ "url": "https://github.com/newrelic/newrelic-lambda-cli",
+ "sha": "a08271396c7451b7c4e7ccf905353dbe3782ef40",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.02,
+ "test_file": "tests/cli/test_layers.py",
+ "test_func": "test_layers_install",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[dev-requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_layers_install",
+ "collect_tail": "hon/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/cli/test_layers.py:1: in <module>\n    from moto import mock_lambda\nE   ImportError: cannot import name 'mock_lambda' from 'moto' (/tmp/gw/newrelic-lambda-cli/venv/lib/python3.8/site-packages/moto/__init__.py)\n=========================== short test summary info ============================\nERROR tests/cli/test_layers.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.54s\n",
+ "first_run_tail": "/tests/cli/test_layers.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/cli/test_layers.py:1: in <module>\n    from moto import mock_lambda\nE   ImportError: cannot import name 'mock_lambda' from 'moto' (/tmp/gw/newrelic-lambda-cli/venv/lib/python3.8/site-packages/moto/__init__.py)\n------------------- generated xml file: /tmp/tmplwmdfd8h.xml -------------------\n=========================== short test summary info ============================\nERROR tests/cli/test_layers.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.22s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 5.1,
+ "reproduced": false
+}

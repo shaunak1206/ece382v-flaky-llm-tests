@@ -1,0 +1,25 @@
+{
+ "project": "asv",
+ "url": "https://github.com/airspeed-velocity/asv",
+ "sha": "a131ca742daf53c4521fbfefeb53507b5c140c84",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.07017543859649122,
+ "test_file": "test/test_workflow.py",
+ "test_func": "test_run_publish",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_run_publish",
+ "collect_tail": "xception.with_traceback(exception.__traceback__)\nINTERNALERROR>   File \"/tmp/gw/asv/venv/lib/python3.8/site-packages/pluggy/_callers.py\", line 103, in _multicall\nINTERNALERROR>     res = hook_impl.function(*args)\nINTERNALERROR>   File \"/tmp/gw/asv/repo/test/conftest.py\", line 21, in pytest_sessionstart\nINTERNALERROR>     _monkeypatch_conda_lock(session.config)\nINTERNALERROR>   File \"/tmp/gw/asv/repo/test/conftest.py\", line 43, in _monkeypatch_conda_lock\nINTERNALERROR>     path = config.cache.makedir('conda-lock') / 'lock'\nINTERNALERROR> AttributeError: 'Config' object has no attribute 'cache'\n",
+ "first_run_tail": "elf._inner_hookexec(hook_name, methods, kwargs, firstresult)\nINTERNALERROR>   File \"/tmp/gw/asv/venv/lib/python3.8/site-packages/pluggy/_callers.py\", line 139, in _multicall\nINTERNALERROR>     raise exception.with_traceback(exception.__traceback__)\nINTERNALERROR>   File \"/tmp/gw/asv/venv/lib/python3.8/site-packages/pluggy/_callers.py\", line 103, in _multicall\nINTERNALERROR>     res = hook_impl.function(*args)\nINTERNALERROR>   File \"/tmp/gw/asv/repo/test/conftest.py\", line 21, in pytest_sessionstart\nINTERNALERROR>     _monkeypatch_conda_lock(session.config)\nINTERNALERROR>   File \"/tmp/gw/asv/repo/test/conftest.py\", line 43, in _monkeypatch_conda_lock\nINTERNALERROR>     path = config.cache.makedir('conda-lock') / 'lock'\nINTERNALERROR> AttributeError: 'Config' object has no attribute 'cache'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "po/test/conftest.py\", line 43, in _monkeypatch_conda_lock\nINTERNALERROR>     path = config.cache.makedir('conda-lock') / 'lock'\nINTERNALERROR> AttributeError: 'Config' object has no attribute 'cache'\n"
+ ],
+ "seconds": 6.1,
+ "reproduced": false
+}

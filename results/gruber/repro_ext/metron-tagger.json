@@ -1,0 +1,25 @@
+{
+ "project": "metron-tagger",
+ "url": "https://github.com/bpepple/metron-tagger",
+ "sha": "2be176293218fa101dd84c95c72b8ae646b2731a",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.5555555555555556,
+ "test_file": "tests/test_taggerlib_metrontalker.py",
+ "test_func": "test_map_resp_to_metadata",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_map_resp_to_metadata",
+ "collect_tail": "tests/test_taggerlib_metrontalker.py::test_map_resp_to_metadata\ntests/test_taggerlib_metrontalker.py::test_map_resp_to_metadata_with_no_story_name\ntests/test_taggerlib_metrontalker.py::test_fetch_issue_by_id\ntests/test_taggerlib_metrontalker.py::test_search_for_issue\n\n4 tests collected in 0.01s\n",
+ "first_run_tail": "      roles = person[\"role\"]\n                    for role in roles:\n>                       metadata.add_credit(person[\"creator\"], role[\"name\"], False)\nE                       TypeError: add_credit() takes 3 positional arguments but 4 were given\n\nmetrontagger/taggerlib/metrontalker.py:126: TypeError\n------------------- generated xml file: /tmp/tmpv1s51r_q.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_taggerlib_metrontalker.py::test_map_resp_to_metadata - TypeError: add_credit() takes 3 positional arguments but 4 were given\nFAILED tests/test_taggerlib_metrontalker.py::test_map_resp_to_metadata_with_no_story_name - TypeError: add_credit() takes 3 positional arguments but 4 were given\n2 failed, 2 deselected in 0.04s\n",
+ "collected": 2,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "TypeError: add_credit() takes 3 positional arguments but 4 were given"
+ ],
+ "seconds": 79.6,
+ "reproduced": false
+}

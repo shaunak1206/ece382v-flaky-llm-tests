@@ -1,0 +1,25 @@
+{
+ "project": "coo",
+ "url": "https://github.com/wilfredinni/coo",
+ "sha": "da9e75d46ed65599cd2223b029ac30c08496a80b",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.00625,
+ "test_file": "tests/test_coo.py",
+ "test_func": "test_tweet_random",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=1 error: Failed to build `coo @ file:///tmp/gw/coo/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=1 error: Failed to build `coo @ file:///tmp/gw/coo/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=0 ",
+ "test": "test_tweet_random",
+ "collect_tail": "e_time_zone_media\ntests/test_coo.py::test_schedule_ScheduleError[updates0]\ntests/test_coo.py::test_schedule_ScheduleError[updates1]\ntests/test_coo.py::test_schedule_ScheduleError[updates2]\ntests/test_coo.py::test_schedule_ScheduleError[updates3]\ntests/test_coo.py::test_schedule_ScheduleError[updates4]\ntests/test_coo.py::test__str_update[My Twitter Update-None]\ntests/test_coo.py::test__str_update[My Twitter Update-$message]\ntests/test_coo.py::test_delay[0]\ntests/test_coo.py::test_delay[now]\ntests/test_coo.py::test__interval[0]\ntests/test_coo.py::test__interval[now]\n\n49 tests collected in 0.24s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmp_vi8gzxy.xml -------------------\n1 passed, 48 deselected in 0.11s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 149,
+ "failed": 1,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert ['mock1', 'mock2', 'mock3', 'mock4', 'mock5'] != ['mock1', 'mock2', 'mock3', 'mock4', 'mock5']"
+ ],
+ "seconds": 43.6,
+ "reproduced": true
+}

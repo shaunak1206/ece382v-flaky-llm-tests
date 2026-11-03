@@ -1,0 +1,26 @@
+{
+ "project": "pcpartpicker",
+ "url": "https://github.com/JonathanVusich/pcpartpicker",
+ "sha": "19b505d90b2e76d747fd8b5be4d7a979da3cc365",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005,
+ "test_file": "tests/test_parser.py",
+ "test_func": "test_ca_tokens",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_ca_tokens",
+ "collect_tail": "t_parser.py::ParserTest::test_se_tokens\ntests/test_parser.py::ParserTest::test_uk_tokens\ntests/test_parser.py::ParserTest::test_us_tokens\n\n=============================== warnings summary ===============================\n/tmp/gw/pcpartpicker/venv/lib/python3.8/site-packages/aiohttp/helpers.py:106\n  /tmp/gw/pcpartpicker/venv/lib/python3.8/site-packages/aiohttp/helpers.py:106: DeprecationWarning: \"@coroutine\" decorator is deprecated since Python 3.8, use \"async def\" instead\n    def noop(*args, **kwargs):  # type: ignore\n\n-- Docs: https://docs.pytest.org/en/latest/warnings.html\n1 warning in 0.26s\n",
+ "first_run_tail": ":964: DeprecationWarning: The loop argument is deprecated since Python 3.8, and scheduled for removal in Python 3.10.\n    hosts = await asyncio.shield(self._resolve_host(\n\ntests/test_parser.py::ParserTest::test_ca_tokens\n  /tmp/gw/pcpartpicker/venv/lib/python3.8/site-packages/aiohttp/locks.py:21: DeprecationWarning: The loop argument is deprecated since Python 3.8, and scheduled for removal in Python 3.10.\n    self._event = asyncio.Event(loop=loop)\n\n-- Docs: https://docs.pytest.org/en/latest/warnings.html\n------------------- generated xml file: /tmp/tmp_y1pr17u.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_parser.py::ParserTest::test_ca_tokens - dacite.exceptions.M...\n1 failed, 12 deselected, 25 warnings in 0.51s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "dacite.exceptions.MissingValueError: missing value for field \"form_factor\"",
+  "dacite.exceptions.MissingValueError: missing value for field \"interface\""
+ ],
+ "seconds": 246.9,
+ "reproduced": false
+}

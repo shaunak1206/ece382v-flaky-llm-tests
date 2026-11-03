@@ -1,0 +1,27 @@
+{
+ "project": "pybnn",
+ "url": "https://github.com/automl/pybnn",
+ "sha": "6bd277421b83f882fa43d8dad2b7851b9682aa4b",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.4388888888888889,
+ "test_file": "test/test_bohamiann.py",
+ "test_func": "test_gradient_mean",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_gradient_mean",
+ "collect_tail": "test/test_bohamiann.py::TestBohamiann::test_gradient_mean\ntest/test_bohamiann.py::TestBohamiann::test_gradient_variance\ntest/test_bohamiann.py::TestBohamiann::test_predict\ntest/test_bohamiann.py::TestBohamiannSampler::test_adaptive_sghmc\ntest/test_bohamiann.py::TestBohamiannSampler::test_preconditioned_sgld\ntest/test_bohamiann.py::TestBohamiannSampler::test_sghmc\ntest/test_bohamiann.py::TestBohamiannSampler::test_sgld\n\n7 tests collected in 2.86s\n",
+ "first_run_tail": "lf.model.predictive_mean_gradient(X_test[0])\n        assert grad.shape[0] == X_test.shape[1]\n    \n        for xi in X_test:\n            err = check_grad(wrapper, wrapper_grad, xi, epsilon=1e-6)\n>           assert err < 1e-5\nE           assert 2.1129706718964786e-05 < 1e-05\n\ntest/test_bohamiann.py:41: AssertionError\n------------------------------ Captured log call -------------------------------\nWARNING  root:bohamiann.py:180 Not enough datapoints to form a batch. Use all datapoints in each batch\n------------------- generated xml file: /tmp/tmp8k86p98l.xml -------------------\n=========================== short test summary info ============================\nFAILED test/test_bohamiann.py::TestBohamiann::test_gradient_mean - assert 2.1129706718964786e-05 < 1e-05\n1 failed, 6 deselected in 3.76s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 83,
+ "failed": 67,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert 2.1129706718964786e-05 < 1e-05",
+  "assert 2.1164873385078668e-05 < 1e-05",
+  "assert 1.790828274893564e-05 < 1e-05"
+ ],
+ "seconds": 433.8,
+ "reproduced": true
+}

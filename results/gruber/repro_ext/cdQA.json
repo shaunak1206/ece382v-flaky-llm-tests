@@ -1,0 +1,25 @@
+{
+ "project": "cdQA",
+ "url": "https://github.com/cdqa-suite/cdQA",
+ "sha": "40387925db8f0da44a5bd2fe549cde675a92d479",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.5555555555555556,
+ "test_file": "tests/test_evaluation.py",
+ "test_func": "test_evaluate_pipeline",
+ "install_ok": true,
+ "install_log_tail": "ou require cdqa[test], we can conclude that your requirements are unsatisfiable.\n\nhint: You require CPython 3.8 (`cp38`), but we only found wheels for `torch` (v1.2.0) with the following Python ABI tags: `cp27m`, `cp27mu`, `cp35m`, `cp36m`, `cp37m`\n\n[-e .] rc=1 error: No solution found when resolving dependencies\n  cause: Because torch==1.2.0 has no wheels with a matching Python ABI tag (e.g., `cp38`) and cdqa==1.3.9 depends on torch==1.2.0, we can conclude that cdqa==1.3.9 cannot be used.\n         And because only cdqa==1.3.9 is available and you require cdqa, we can conclude that your requirements are unsatisfiable.\n\nhint: You require CPython 3.8 (`cp38`), but we only found wheels for `torch` (v1.2.0) with the following Python ABI tags: `cp27m`, `cp27mu`, `cp35m`, `cp36m`, `cp37m`\n\n[.] rc=1 error: No solution found when resolving dependencies\n  cause: Because torch==1.2.0 has no wheels with a matching Python ABI tag (e.g., `cp38`) and cdqa==1.3.9 depends on torch==1.2.0, we can conclude that cdqa==1.3.9 cannot be used.\n         And because only cdqa==1.3.9 is available and you require cdqa, we can conclude that your requirements are unsatisfiable.\n\nhint: You require CPython 3.8 (`cp38`), but we only found wheels for `torch` (v1.2.0) with the following Python ABI tags: `cp27m`, `cp27mu`, `cp35m`, `cp36m`, `cp37m`\n\n[auto pandas] rc=0 \n[auto torch] rc=0 \n[auto tqdm] rc=0 \n[auto joblib] rc=0 \n[auto wget] rc=0 \n[auto scikit-learn] rc=0 \n[auto prettytable] rc=0 \n[auto tika] rc=0 ",
+ "test": "test_evaluate_pipeline",
+ "collect_tail": "tion.py:9: in <module>\n    from cdqa.pipeline import QAPipeline\ncdqa/pipeline/__init__.py:1: in <module>\n    from .cdqa_sklearn import QAPipeline\ncdqa/pipeline/cdqa_sklearn.py:11: in <module>\n    from cdqa.utils.converters import generate_squad_examples\ncdqa/utils/converters.py:6: in <module>\n    from tika import parser\nE   ModuleNotFoundError: No module named 'tika'\n=========================== short test summary info ============================\nERROR tests/test_evaluation.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 1.46s\n",
+ "first_run_tail": "  /tmp/gw/cdQA/venv/lib/python3.8/site-packages/tika/__init__.py:20: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('tika')`.\n  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages\n    __import__('pkg_resources').declare_namespace(__name__)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpv2si7heg.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_evaluation.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n2 warnings, 1 error in 1.58s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 37.8,
+ "reproduced": false
+}

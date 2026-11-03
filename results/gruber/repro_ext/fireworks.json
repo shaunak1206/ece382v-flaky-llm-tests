@@ -1,0 +1,25 @@
+{
+ "project": "fireworks",
+ "url": "https://github.com/kellylab/Fireworks",
+ "sha": "ff027cd8d1b8ce5eec6a37d786e7de675d8c0849",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.0125,
+ "test_file": "fireworks/core/model_test.py",
+ "test_func": "test_multiple_Models_training",
+ "install_ok": true,
+ "install_log_tail": "se: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_editable` failed (exit status: 1)\n\n         [stderr]\n         error in fireworks-ml setup command: 'install_requires' must be a string or iterable of strings containing valid project/version requirement specifiers; Expected end or semicolon (after name and no valid version specifier)\n             biopython>==1.73\n                      ^\n\n[-e .] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_editable` failed (exit status: 1)\n\n         [stderr]\n         error in fireworks-ml setup command: 'install_requires' must be a string or iterable of strings containing valid project/version requirement specifiers; Expected end or semicolon (after name and no valid version specifier)\n             biopython>==1.73\n                      ^\n\n[.] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         error in fireworks-ml setup command: 'install_requires' must be a string or iterable of strings containing valid project/version requirement specifiers; Expected end or semicolon (after name and no valid version specifier)\n             biopython>==1.73\n                      ^\n\n[auto torch] rc=0 \n[auto pandas] rc=0 \n[auto pyarrow] rc=0 \n[auto ignite] rc=0 \n[auto ignite] rc=0 \n[auto ignite] rc=0 \n[auto ignite] rc=0 \n[auto ignite] rc=0 ",
+ "test": "test_multiple_Models_training",
+ "collect_tail": "=====\nfireworks/core/message.py:10\n  /tmp/gw/fireworks/repo/fireworks/core/message.py:10: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    from collections import Hashable\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nERROR fireworks/core/model_test.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 1.48s\n",
+ "first_run_tail": "duleNotFoundError: No module named 'ignite.handlers'\n=============================== warnings summary ===============================\nfireworks/core/message.py:10\n  /tmp/gw/fireworks/repo/fireworks/core/message.py:10: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    from collections import Hashable\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpj2_xmec9.xml -------------------\n=========================== short test summary info ============================\nERROR fireworks/core/model_test.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 warning, 1 error in 1.49s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 32.7,
+ "reproduced": false
+}

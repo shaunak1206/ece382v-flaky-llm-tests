@@ -1,0 +1,25 @@
+{
+ "project": "gamry-parser",
+ "url": "https://github.com/bcliang/gamry-parser",
+ "sha": "0e1f81fb8fd3e433e0df945a85b133ed70a416e4",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.1111111111111111,
+ "test_file": "tests/test_gamryparser.py",
+ "test_func": "test_getters",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[dev-requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_getters",
+ "collect_tail": "tests/test_gamryparser.py::TestGamryParser::test_getters\ntests/test_gamryparser.py::TestGamryParser::test_indices_and_numbers\ntests/test_gamryparser.py::TestGamryParser::test_is_loaded\ntests/test_gamryparser.py::TestGamryParser::test_load\ntests/test_gamryparser.py::TestGamryParser::test_locale\ntests/test_gamryparser.py::TestGamryParser::test_ocvcurve_self\ntests/test_gamryparser.py::TestGamryParser::test_read_header\n\n7 tests collected in 0.92s\n",
+ "first_run_tail": "):\n            curve += cur_line + '\\n'\n            pos = fid.tell()\n            cur_line = fid.readline().strip()\n            if fid.tell() == pos:\n                break\n    \n>       curve = pd.read_csv(StringIO(curve), '\\t', header=0, index_col=0)\nE       TypeError: read_csv() takes 1 positional argument but 2 positional arguments (and 2 keyword-only arguments) were given\n\ngamry_parser/gamryparser.py:207: TypeError\n------------------- generated xml file: /tmp/tmp8kpxi1k6.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_gamryparser.py::TestGamryParser::test_getters - TypeError: read_csv() takes 1 positional argument but 2 positional arguments (and 2 keyword-only arguments) were given\n1 failed, 6 deselected in 0.28s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "TypeError: read_csv() takes 1 positional argument but 2 positional arguments (and 2 keyword-only arguments) were given"
+ ],
+ "seconds": 77.1,
+ "reproduced": false
+}

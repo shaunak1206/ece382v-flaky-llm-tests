@@ -1,0 +1,23 @@
+{
+ "project": "livebridge",
+ "url": "https://github.com/dpa-newslab/livebridge",
+ "sha": "d930e887faa2f882d15b574f0f1fe4a580d7c5fa",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.1111111111111111,
+ "test_file": "tests/test_controller.py",
+ "test_func": "test_save_control_data",
+ "install_ok": true,
+ "install_log_tail": "runner/.local/share/uv/python/cpython-3.8.20-linux-x86_64-gnu/include/python3.8/cpython/object.h:260:30: note: declared here\n           260 |     Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);\n               |                              ^~~~~~~~\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: `pyyaml` (v3.13) was included because `livebridge` (v0.27.0) depends on `pyyaml`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 t)(PyObject *, FILE *, int);\n               |                              ^~~~~~~~\n         ext/_yaml.c:25732:3: warning: \u2018tp_print\u2019 is deprecated [-Wdeprecated-declarations]\n         25732 |   __pyx_type_5_yaml_CEmitter.tp_print = 0;\n               |   ^~~~~~~~~~~~~~~~~~~~~~~~~~\n         /home/runner/.local/share/uv/python/cpython-3.8.20-linux-x86_64-gnu/include/python3.8/cpython/object.h:260:30: note: declared here\n           260 |     Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);\n               |                              ^~~~~~~~\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: `pyyaml` (v3.13) was included because `livebridge` (v0.27.0) depends on `pyyaml`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto python-dateutil] rc=0 \n[auto aiobotocore] rc=0 \n[auto sqlalchemy_aio] rc=0 \n[auto dsnparse] rc=0 \n[auto pymongo] rc=0 \n[auto motor] rc=0 \n[auto asynctest] rc=0 \n[auto pyyaml] rc=0 ",
+ "test": "test_save_control_data",
+ "collect_tail": "  def _drain_loop(self):\n\n../venv/lib/python3.8/site-packages/asynctest/helpers.py:13\n  /tmp/gw/livebridge/venv/lib/python3.8/site-packages/asynctest/helpers.py:13: DeprecationWarning: \"@coroutine\" decorator is deprecated since Python 3.8, use \"async def\" instead\n    def exhaust_callbacks(loop):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nERROR tests/test_controller.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.37s\n",
+ "first_run_tail": "thon 3.8, use \"async def\" instead\n    def advance(self, seconds):\n\n../venv/lib/python3.8/site-packages/asynctest/case.py:487\n  /tmp/gw/livebridge/venv/lib/python3.8/site-packages/asynctest/case.py:487: DeprecationWarning: \"@coroutine\" decorator is deprecated since Python 3.8, use \"async def\" instead\n    def _drain_loop(self):\n\n../venv/lib/python3.8/site-packages/asynctest/helpers.py:13\n  /tmp/gw/livebridge/venv/lib/python3.8/site-packages/asynctest/helpers.py:13: DeprecationWarning: \"@coroutine\" decorator is deprecated since Python 3.8, use \"async def\" instead\n    def exhaust_callbacks(loop):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpk95mo74g.xml -------------------\n1 passed, 24 deselected, 12 warnings in 0.25s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 150,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 79.2,
+ "reproduced": false
+}

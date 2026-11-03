@@ -1,0 +1,25 @@
+{
+ "project": "token-io",
+ "url": "https://github.com/overcat/token-io",
+ "sha": "f1b14fef9fd64989b9c9e5c076272f72253b39ed",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005,
+ "test_file": "tests/test_address.py",
+ "test_func": "test_add_and_get_address",
+ "install_ok": true,
+ "install_log_tail": "kages/setuptools/_distutils/unixccompiler.py\", line 202, in _compile\n             raise CompileError(msg)\n         distutils.errors.CompileError: command '/usr/bin/c++' failed with exit code 1\n\nhint: `grpcio` (v1.18.0) was included because `tokenio` (v0.0.1a3) depends on `grpcio`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 build_ext.py\", line 557, in build_extension\n             objects = self.compiler.compile(\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmp3b04Gr/lib/python3.8/site-packages/setuptools/_distutils/ccompiler.py\", line 606, in compile\n             self._compile(obj, src, ext, cc_args, extra_postargs, pp_opts)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmp3b04Gr/lib/python3.8/site-packages/setuptools/_distutils/unixccompiler.py\", line 202, in _compile\n             raise CompileError(msg)\n         distutils.errors.CompileError: command '/usr/bin/c++' failed with exit code 1\n\nhint: `grpcio` (v1.18.0) was included because `tokenio` (v0.0.1a3) depends on `grpcio`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto grpc] rc=1 ls/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 33, in <module>\n         RuntimeError: Please install the official package with: pip install grpcio\n\nhint: Build failures usually indicate a problem with the package or the build environment\n",
+ "test": "test_add_and_get_address",
+ "collect_tail": " sure your test modules/packages have valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_address.py:2: in <module>\n    from grpc import StatusCode\nE   ModuleNotFoundError: No module named 'grpc'\n=========================== short test summary info ============================\nERROR tests/test_address.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.06s\n",
+ "first_run_tail": "ests/test_address.py ____________________\nImportError while importing test module '/tmp/gw/token-io/repo/tests/test_address.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_address.py:2: in <module>\n    from grpc import StatusCode\nE   ModuleNotFoundError: No module named 'grpc'\n------------------- generated xml file: /tmp/tmpfi57jems.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_address.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.06s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 152.6,
+ "reproduced": false
+}

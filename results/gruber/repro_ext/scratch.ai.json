@@ -1,0 +1,25 @@
+{
+ "project": "scratch.ai",
+ "url": "https://github.com/iArunava/scratch.ai",
+ "sha": "9472f64fd3a06a1daa51486b68f5d3d3c36ac2f0",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.45348837209302323,
+ "test_file": "tests/test_utils.py",
+ "test_func": "test_freeze",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because opencv-python==4.0.0.21 has no wheels with a matching Python ABI tag (e.g., `cp38`) and you require opencv-python==4.0.0.21, we can conclude that your requirements are unsatisfiable.\n\nhint: You require CPython 3.8 (`cp38`), but we only found wheels for `opencv-python` (v4.0.0.21) with the following Python ABI tags: `cp27m`, `cp27mu`, `cp34m`, `cp35m`, `cp36m`, `cp37m`\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto torch] rc=0 \n[auto pillow] rc=0 \n[auto numpy] rc=0 \n[auto tqdm] rc=0 \n[auto torchvision] rc=0 \n[auto requests] rc=0 \n[auto opencv-python-headless] rc=0 \n[auto matplotlib] rc=0 ",
+ "test": "test_freeze",
+ "collect_tail": "ackage, level)\ntests/test_utils.py:6: in <module>\n    import scratchai\nscratchai/__init__.py:1: in <module>\n    from scratchai import learners\nscratchai/learners/__init__.py:4: in <module>\n    from scratchai.learners.quicktrain import *\nscratchai/learners/quicktrain.py:6: in <module>\n    import matplotlib.pyplot as plt\nE   ModuleNotFoundError: No module named 'matplotlib'\n=========================== short test summary info ============================\nERROR tests/test_utils.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 1.66s\n",
+ "first_run_tail": " 'zero_gradients' from 'torch.autograd.gradcheck' (/tmp/gw/scratch.ai/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py)\n=============================== warnings summary ===============================\nscratchai/DataLoader/SegLoader.py:219\n  /tmp/gw/scratch.ai/repo/scratchai/DataLoader/SegLoader.py:219: SyntaxWarning: \"is not\" with a literal. Did you mean \"!=\"?\n    root = root + '/' if root[-1] is not '/' else root\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpzzsqrwv4.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_utils.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 warning, 1 error in 2.49s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 310.9,
+ "reproduced": false
+}

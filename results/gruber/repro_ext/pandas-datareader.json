@@ -1,0 +1,26 @@
+{
+ "project": "pandas-datareader",
+ "url": "https://github.com/pydata/pandas-datareader",
+ "sha": "d2ef4e62e584d87f424749ff7ecd28af64cc9e53",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.13125,
+ "test_file": "pandas_datareader/tests/test_eurostat.py",
+ "test_func": "test_get_sts_cobp_a",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_get_sts_cobp_a",
+ "collect_tail": ".py:14\n  /tmp/gw/pandas-datareader/repo/pandas_datareader/compat/__init__.py:14: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    PANDAS_0220 = PANDAS_VERSION >= LooseVersion(\"0.22.0\")\n\npandas_datareader/compat/__init__.py:15\n  /tmp/gw/pandas-datareader/repo/pandas_datareader/compat/__init__.py:15: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    PANDAS_0230 = PANDAS_VERSION >= LooseVersion(\"0.23.0\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n4 tests collected in 0.03s\n",
+ "first_run_tail": "e/ESTAT/DSD_sts_cobp_a\nResponse Text:\nb'<HTML><HEAD>\\r\\n<TITLE>Access Denied</TITLE>\\r\\n</HEAD>\\r\\n<BODY>\\r\\n<FONT face=\"Helvetica\">\\r\\n<big><strong></strong></big><BR>\\r\\n</FONT>\\r\\n<blockquote>\\r\\n<TABLE border=0 cellPadding=1 width=\"80%\">\\r\\n<TR><TD>\\r\\n<FONT face=\"Helvetica\">\\r\\n<big>Access Denied (policy_denied)</big>\\r\\n<BR>\\r\\n<BR>\\r\\n</FONT>\\r\\n</TD></TR>\\r\\n<TR><TD>\\r\\n<FONT face=\"Helvetica\">\\r\\nYour system policy has denied access to the requested URL.\\r\\n</FONT>\\r\\n</TD></TR>\\r\\n<TR><TD>\\r\\n<FONT face=\"Helvetica\">\\r\\n\\r\\n</FONT>\\r\\n</TD></TR>\\r\\n<TR><TD>\\r\\n<FONT face=\"Helvetica\" SIZE=2>\\r\\n<BR>\\r\\nFor assistance, contact your network support team.\\r\\n</FONT>\\r\\n</TD></TR>\\r\\n</TABLE>\\r\\n</blockquote>\\r\\n</FONT>\\r\\n</BODY></HTML>\\r\\n'\n1 failed, 3 deselected, 4 warnings in 1.09s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "pandas_datareader._utils.RemoteDataError: Unable to read URL: http://ec.europa.eu/eurostat/SDMX/diss-web/rest/datastructure/ESTAT/DSD_sts_cobp_a\nResponse Text:\nb'<HTML><HEAD>\\r\\n<TITLE>Access Denied</",
+  "requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+ ],
+ "seconds": 280.7,
+ "reproduced": false
+}

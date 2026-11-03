@@ -1,0 +1,25 @@
+{
+ "project": "wordoftheday",
+ "url": "https://github.com/patrickc-dev/wordoftheday",
+ "sha": "35439b87e782199813933ae6bddbfd1c6cea2b6c",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005,
+ "test_file": "wotd_test.py",
+ "test_func": "test_word",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_word",
+ "collect_tail": "ine 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 975, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 671, in _load_unlocked\n  File \"/tmp/gw/wordoftheday/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 143, in exec_module\n    exec(co, module.__dict__)\n  File \"/tmp/gw/wordoftheday/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n",
+ "first_run_tail": "/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py\", line 127, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 975, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 671, in _load_unlocked\n  File \"/tmp/gw/wordoftheday/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 143, in exec_module\n    exec(co, module.__dict__)\n  File \"/tmp/gw/wordoftheday/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "w/wordoftheday/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n"
+ ],
+ "seconds": 3.9,
+ "reproduced": false
+}

@@ -1,0 +1,26 @@
+{
+ "project": "rs3clans.py",
+ "url": "https://github.com/johnvictorfs/rs3clans.py",
+ "sha": "692ffb859d954a304d039a6e20cc39bc55ed13cb",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.8857142857142857,
+ "test_file": "tests/test_players.py",
+ "test_func": "test_attribute_types",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=1 error: Failed to build `rs3clans @ file:///tmp/gw/rs3clans.py/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=1 error: Failed to build `rs3clans @ file:///tmp/gw/rs3clans.py/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=0 ",
+ "test": "test_attribute_types",
+ "collect_tail": "layers.py::test_skill_exp[woodcutting-100]\ntests/test_players.py::test_skill_exp[WoOdcuttIng-100]\ntests/test_players.py::test_skill_exp[constitution-1154]\ntests/test_players.py::test_skill_exp[CoNsTiTutioN-1154]\ntests/test_players.py::test_skill_exp[attack-0]\ntests/test_players.py::test_skill_exp[aTTacK-0]\ntests/test_players.py::test_skill_exp[3-1154]\ntests/test_players.py::test_skill_exp[8-100]\ntests/test_players.py::test_skill_exp[0-0]\ntests/test_players.py::test_skill_exp[26-0]\ntests/test_players.py::test_skill_exp[13-0]\ntests/test_players.py::test_status_codes\n\n31 tests collected in 0.19s\n",
+ "first_run_tail": "ibute_types _____________________________\n\nvalid_player = Player(name='pytestacc', clan=None, exists=False)\n\n    def test_attribute_types(valid_player):\n>       assert isinstance(valid_player.exp, int)\nE       AssertionError: assert False\nE        +  where False = isinstance(None, int)\nE        +    where None = Player(name='pytestacc', clan=None, exists=False).exp\n\ntests/test_players.py:55: AssertionError\n------------------- generated xml file: /tmp/tmp70e_11kt.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_players.py::test_attribute_types - AssertionError: assert False\n +  where False = isinstance(None, int)\n +    where None = Player(name='pytestacc', clan=None, exists=False).exp\n1 failed, 30 deselected in 1.97s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 46,
+ "errors": 104,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert False\n +  where False = isinstance(None, int)\n +    where None = Player(name='pytestacc', clan=None, exists=False).exp",
+  "failed on setup with \"ConnectionError: Not able to connect to RS3 Runemetrics player profile API. Status code: 429\""
+ ],
+ "seconds": 180.8,
+ "reproduced": false
+}

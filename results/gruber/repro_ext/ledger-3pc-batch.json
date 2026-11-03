@@ -1,0 +1,25 @@
+{
+ "project": "ledger-3pc-batch",
+ "url": "https://github.com/evernym/ledger",
+ "sha": "7210c3b288e07f940eddad09b1dfc6a56be846df",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.0375,
+ "test_file": "ledger/test/test_file_store_perf.py",
+ "test_func": "testMeasureWriteTime",
+ "install_ok": true,
+ "install_log_tail": "    File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpKaqmyi/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpKaqmyi/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpKaqmyi/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 7, in <module>\n         ModuleNotFoundError: No module named 'pip'\n\n[.] rc=1 equires_for_build_wheel\n             return self._get_build_requires(config_settings, requirements=[])\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpsJwLFt/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpsJwLFt/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpsJwLFt/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 7, in <module>\n         ModuleNotFoundError: No module named 'pip'\n",
+ "test": "testMeasureWriteTime",
+ "collect_tail": "ledger/test/test_file_store_perf.py::testMeasureWriteTime\n\n1 test collected in 0.02s\n",
+ "first_run_tail": "iteTime ____________________\n\ntmpdir_factory = TempdirFactory(_tmppath_factory=TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x7b36bbee3910>, _basetemp=PosixPath('/tmp/pytest-of-runner/pytest-0'), _retention_count=3, _retention_policy='all'))\n\n    @pytest.fixture(scope='function')\n    def tempdir(tmpdir_factory):\n>       return tmpdir_factory.mktemp('').strpath\nE       ValueError: . is not a normalized and relative path\n\nledger/test/conftest.py:11: ValueError\n------------------- generated xml file: /tmp/tmp2gdfbnja.xml -------------------\n=========================== short test summary info ============================\nERROR ledger/test/test_file_store_perf.py::testMeasureWriteTime - ValueError: . is not a normalized and relative path\n1 error in 0.03s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "failed on setup with \"ValueError: . is not a normalized and relative path\""
+ ],
+ "seconds": 3.6,
+ "reproduced": false
+}

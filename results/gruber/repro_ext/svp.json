@@ -1,0 +1,25 @@
+{
+ "project": "svp",
+ "url": "https://github.com/joshmgrant/svp",
+ "sha": "fdf64445d8038b4df5ab2181eb6306d56e3b5162",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.03888888888888889,
+ "test_file": "samples/tests/test_normal.py",
+ "test_func": "test_length",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_length",
+ "collect_tail": "samples/tests/test_normal.py::test_response\nsamples/tests/test_normal.py::test_length\n\n2 tests collected in 0.00s\n",
+ "first_run_tail": "===== FAILURES ===================================\n_________________________________ test_length __________________________________\n\napi = <samples.corsica_api.CorsicaAPI object at 0x7f23b7afb280>\napi_assert = <svp.api_object.APIAssert object at 0x7f23b7afba90>\n\n    def test_length(api, api_assert):\n        r = api.default_normal()\n    \n        data = r['samples']\n    \n>       assert len(data) == 10\nE       TypeError: object of type 'NoneType' has no len()\n\nsamples/tests/test_normal.py:18: TypeError\n------------------- generated xml file: /tmp/tmprl2ilnai.xml -------------------\n=========================== short test summary info ============================\nFAILED samples/tests/test_normal.py::test_length - TypeError: object of type 'NoneType' has no len()\n1 failed, 1 deselected in 0.44s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "TypeError: object of type 'NoneType' has no len()"
+ ],
+ "seconds": 76.0,
+ "reproduced": false
+}

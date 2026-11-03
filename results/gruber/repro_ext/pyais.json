@@ -1,0 +1,27 @@
+{
+ "project": "pyais",
+ "url": "https://github.com/M0r13n/pyais",
+ "sha": "d2ca5ff08c532fce5da1c9d268eb453924f12a33",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.43670886075949367,
+ "test_file": "tests/test_tcp_stream.py",
+ "test_func": "test_tcp_stream",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements_dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_tcp_stream",
+ "collect_tail": "tests/test_tcp_stream.py::TestTCPStream::test_default_buf_size\ntests/test_tcp_stream.py::TestTCPStream::test_invalid_endpoint\ntests/test_tcp_stream.py::TestTCPStream::test_tcp_stream\n\n3 tests collected in 0.01s\n",
+ "first_run_tail": " listen\n      conn.send(msg + b\"\\r\\n\")\n  ConnectionResetError: [Errno 104] Connection reset by peer\n  \n    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpz8stdabd.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_tcp_stream.py::TestTCPStream::test_tcp_stream - assert None\n +  where None = <bound method NMEAMessage.decode of <pyais.messages.NMEAMessage object at 0x7234bd18e6c0>>()\n +    where <bound method NMEAMessage.decode of <pyais.messages.NMEAMessage object at 0x7234bd18e6c0>> = <pyais.messages.NMEAMessage object at 0x7234bd18e6c0>.decode\n1 failed, 2 passed, 1 warning in 0.04s\n",
+ "collected": 3,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert None\n +  where None = <bound method NMEAMessage.decode of <pyais.messages.NMEAMessage object at 0x7234bd18e6c0>>()\n +    where <bound method NMEAMessage.decode of <pyais.messages.NMEAMessage ob",
+  "assert None\n +  where None = <bound method NMEAMessage.decode of <pyais.messages.NMEAMessage object at 0x76d30f6506c0>>()\n +    where <bound method NMEAMessage.decode of <pyais.messages.NMEAMessage ob",
+  "assert None\n +  where None = <bound method NMEAMessage.decode of <pyais.messages.NMEAMessage object at 0x7d2b8648c6c0>>()\n +    where <bound method NMEAMessage.decode of <pyais.messages.NMEAMessage ob"
+ ],
+ "seconds": 42.8,
+ "reproduced": false
+}

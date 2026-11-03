@@ -1,0 +1,27 @@
+{
+ "project": "fossor",
+ "url": "https://github.com/linkedin/fossor",
+ "sha": "d8dbdc40f2f16da601c317dfa74b83e3932c9bb3",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.075,
+ "test_file": "test/test_check_similar_log_errors.py",
+ "test_func": "test_max_unique_lines",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_max_unique_lines",
+ "collect_tail": ".py::test_process_line\ntest/test_check_similar_log_errors.py::test_basic_output\ntest/test_check_similar_log_errors.py::test_max_unique_lines\n\n=============================== warnings summary ===============================\n../venv/lib/python3.8/site-packages/_pytest/config/__init__.py:1373\n  /tmp/gw/fossor/venv/lib/python3.8/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: pep8ignore\n  \n    self._warn_or_fail_if_strict(f\"Unknown config option: {key}\\n\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n3 tests collected in 0.05s\n",
+ "first_run_tail": ".                                                                        [100%]\n=============================== warnings summary ===============================\n../venv/lib/python3.8/site-packages/_pytest/config/__init__.py:1373\n  /tmp/gw/fossor/venv/lib/python3.8/site-packages/_pytest/config/__init__.py:1373: PytestConfigWarning: Unknown config option: pep8ignore\n  \n    self._warn_or_fail_if_strict(f\"Unknown config option: {key}\\n\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmptq6e4psj.xml -------------------\n1 passed, 2 deselected, 1 warning in 0.08s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 139,
+ "failed": 11,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmpk3q82kb2/tmphggd0z3u\\nFirst seen: 2017/10/10 00:00:34.251, Count: 1, ERROR FSWBUFSWBUFSWBUFSWBUFSWB...Y98V7Y98V7Y98V7Y98V7Y98V7Y98V7Y98V7Y98V7Y9",
+  "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmp376xlyii/tmpja_igxin\\nFirst seen: 2017/10/10 00:00:34.251, Count: 1, ERROR 9HUHU9HUHU9HUHU9HUHU9HUH...N2RJJN2RJJN2RJJN2RJJN2RJJN2RJJN2RJJN2RJJN2",
+  "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmp9zegvf1z/tmpeknn2j0y\\nFirst seen: 2017/10/10 00:00:34.251, Count: 1, ERROR A27IKA27IKA27IKA27IKA27I...H8JR9H8JR9H8JR9H8JR9H8JR9H8JR9H8JR9H8JR9H8"
+ ],
+ "seconds": 44.2,
+ "reproduced": true
+}

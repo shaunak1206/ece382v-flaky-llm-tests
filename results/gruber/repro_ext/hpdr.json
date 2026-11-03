@@ -1,0 +1,25 @@
+{
+ "project": "hpdr",
+ "url": "https://github.com/laboo/hpdr",
+ "sha": "6760ceb1f4a6078f70e86e54bb2ee4e269915f9c",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.00625,
+ "test_file": "tests/test_large.py",
+ "test_func": "test_days",
+ "install_ok": true,
+ "install_log_tail": "or\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         error in funcparserlib setup command: use_2to3 is invalid.\n\nhint: `funcparserlib` (v0.3.6) was included because `hpdr` (v1.0.0) depends on `funcparserlib>=0.3.6, <1.0.0`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=1 error: Failed to build `funcparserlib==0.3.6`\n  cause: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         error in funcparserlib setup command: use_2to3 is invalid.\n\nhint: `funcparserlib` (v0.3.6) was included because `hpdr` (v1.0.0) depends on `funcparserlib>=0.3.6, <1.0.0`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 error: Failed to build `funcparserlib==0.3.6`\n  cause: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         error in funcparserlib setup command: use_2to3 is invalid.\n\nhint: `funcparserlib` (v0.3.6) was included because `hpdr` (v1.0.0) depends on `funcparserlib>=0.3.6, <1.0.0`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto pendulum] rc=0 \n[auto future] rc=0 \n[auto funcparserlib] rc=0 \n[auto attrs] rc=0 \n[auto tabulate] rc=0 ",
+ "test": "test_days",
+ "collect_tail": "tests/test_large.py::test_months\ntests/test_large.py::test_days\ntests/test_large.py::test_years\n\n=============================== warnings summary ===============================\nhpdr/functions.py:22\n  /tmp/gw/hpdr/repo/hpdr/functions.py:22: DeprecationWarning: invalid escape sequence \\$\n    REGEX = re.compile('\\${HPDR_(.*?)\\((.*?)\\)}')\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n3 tests collected in 0.04s\n",
+ "first_run_tail": "els.py:116: in __init__\n    self.begin = Spec._shift_dt(begin, dzone, qzone)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ndtime = DateTime(2026, 11, 2, 23, 1, 54, 122964, tzinfo=Timezone('UTC'))\nd_zone_str = 'UTC', q_zone_str = 'UTC'\n\n    @staticmethod\n    def _shift_dt(dtime, d_zone_str, q_zone_str):\n>       if isinstance(dtime, pendulum.pendulum.Pendulum):\nE       AttributeError: module 'pendulum' has no attribute 'pendulum'\n\nhpdr/models.py:148: AttributeError\n------------------- generated xml file: /tmp/tmpg9ro20qu.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_large.py::test_days - AttributeError: module 'pendulum' has no attribute 'pendulum'\n1 failed, 2 deselected in 0.05s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AttributeError: module 'pendulum' has no attribute 'pendulum'"
+ ],
+ "seconds": 31.6,
+ "reproduced": false
+}

@@ -1,0 +1,25 @@
+{
+ "project": "SSLyze",
+ "url": "https://github.com/nabla-c0d3/sslyze",
+ "sha": "bf1b01048560308654b31bf55ad2d2363285f95f",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.03888888888888889,
+ "test_file": "tests/plugins_tests/certificate_info/test_certificate_info_plugin.py",
+ "test_func": "test_not_trusted_by_mozilla_but_trusted_by_microsoft",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_not_trusted_by_mozilla_but_trusted_by_microsoft",
+ "collect_tail": "y::TestCertificateInfoPlugin::test_certificate_with_no_cn\ntests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_certificate_with_no_subject\ntests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_certificate_with_scts\ntests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_multiple_certificates\ntests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_succeeds_when_client_auth_failed\n\n15 tests collected in 0.32s\n",
+ "first_run_tail": " port, socket.AF_UNSPEC, socket.IPPROTO_IP)\n        except (socket.gaierror, IndexError, ConnectionError):\n>           raise ServerHostnameCouldNotBeResolved(f\"Could not resolve {hostname}\")\nE           sslyze.errors.ServerHostnameCouldNotBeResolved: Could not resolve webmail.russia.nasa.gov\n\nsslyze/server_setting.py:34: ServerHostnameCouldNotBeResolved\n------------------- generated xml file: /tmp/tmplbhif5nx.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_not_trusted_by_mozilla_but_trusted_by_microsoft - sslyze.errors.ServerHostnameCouldNotBeResolved: Could not resolve webmail.russia.nasa.gov\n1 failed, 14 deselected in 0.20s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "sslyze.errors.ServerHostnameCouldNotBeResolved: Could not resolve webmail.russia.nasa.gov"
+ ],
+ "seconds": 61.8,
+ "reproduced": false
+}

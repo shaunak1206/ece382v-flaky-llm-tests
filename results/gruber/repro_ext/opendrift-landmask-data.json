@@ -1,0 +1,23 @@
+{
+ "project": "opendrift-landmask-data",
+ "url": "https://github.com/OpenDrift/opendrift-landmask-data",
+ "sha": "a7479b0ff159791f5232387f530b4f1d15ad3acd",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.07,
+ "test_file": "tests/test_landmask.py",
+ "test_func": "test_concurrent_threads_landmask_generation",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 /temp.linux-x86_64-cpython-38/lib/cartopy/trace.o\n\n         [stderr]\n         lib/cartopy/trace.cpp:767:10: fatal error: geos_c.h: No such file or directory\n           767 | #include \"geos_c.h\"\n               |          ^~~~~~~~~~\n         compilation terminated.\n         <string>:90: UserWarning: Unable to determine GEOS version. Ensure you have 3.7.2 or later installed, or installation may fail.\n         /home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpC3Pbcx/lib/python3.8/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'\n           warnings.warn(msg)\n         error: command '/usr/bin/c++' failed with exit code 1\n\nhint: This error likely indicates that you need to install a library that provides `geos_c.h` for `cartopy@0.21.1`\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto numpy] rc=0 \n[auto shapely] rc=0 \n[auto affine] rc=0 ",
+ "test": "test_concurrent_threads_landmask_generation",
+ "collect_tail": "est_landmask.py::test_setup_landmask_retry_open\ntests/test_landmask.py::test_setup_landmask_pregenerated\ntests/test_landmask.py::test_setup_landmask_generate\ntests/test_landmask.py::test_landmask_contains\ntests/test_landmask.py::test_landmask_onland\ntests/test_landmask.py::test_landmask_onland_skippoly\ntests/test_landmask.py::test_landmask_onocean\ntests/test_landmask.py::test_landmask_onocean_skippoly\ntests/test_landmask.py::test_landmask_many\ntests/test_landmask.py::test_landmask_many_extent\ntests/test_landmask.py::test_norway\ntests/test_landmask.py::test_tromsoe\n\n17 tests collected in 0.10s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmp3iltz4j2.xml -------------------\n1 passed, 16 deselected in 0.10s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 150,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 63.7,
+ "reproduced": false
+}

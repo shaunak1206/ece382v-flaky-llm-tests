@@ -1,0 +1,25 @@
+{
+ "project": "deviceidentifier-py",
+ "url": "https://github.com/reincubate/deviceidentifier-py",
+ "sha": "e6ddf73c6ab3b26a703bca8619fc999dfeaeb5d2",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.975,
+ "test_file": "tests/test_enhance_metadata.py",
+ "test_func": "test_calls",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_calls",
+ "collect_tail": "tests/test_enhance_metadata.py::TestEnhanceMetadata::test_auth\ntests/test_enhance_metadata.py::TestEnhanceMetadata::test_misformed\ntests/test_enhance_metadata.py::TestEnhanceMetadata::test_calls\n\n3 tests collected in 0.10s\n",
+ "first_run_tail": ".                                                                        [100%]\n=============================== warnings summary ===============================\ntests/test_enhance_metadata.py::TestEnhanceMetadata::test_calls\ntests/test_enhance_metadata.py::TestEnhanceMetadata::test_calls\n  /tmp/gw/deviceidentifier-py/repo/deviceidentifier/api.py:86: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead\n    logger.warn( 'Token not specified, relying on anonymous access which may be limited or rate-limited' )\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmp1wrhw93c.xml -------------------\n1 passed, 2 deselected, 2 warnings in 1.11s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 20,
+ "failed": 130,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "Exception: You have been ratelimited; please sign up for a key at https://reincubate.com/deviceidentifier-api/ if you require a larger limit (HTTP 429)"
+ ],
+ "seconds": 77.7,
+ "reproduced": true
+}

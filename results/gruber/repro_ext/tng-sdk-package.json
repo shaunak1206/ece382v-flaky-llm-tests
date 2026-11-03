@@ -1,0 +1,25 @@
+{
+ "project": "tng-sdk-package",
+ "url": "https://github.com/sonata-nfv/tng-sdk-package",
+ "sha": "dc505568618dc8e67981d176e2c2bb87d65f442d",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.015,
+ "test_file": "src/tngsdk/package/tests/test_unit_packager_osm.py",
+ "test_func": "test_do_package",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_do_package",
+ "collect_tail": "y:3: in <module>\n    from .filters import FILTERS as DEFAULT_FILTERS  # noqa: F401\n../venv/lib/python3.8/site-packages/jinja2/filters.py:13: in <module>\n    from markupsafe import soft_unicode\nE   ImportError: cannot import name 'soft_unicode' from 'markupsafe' (/tmp/gw/tng-sdk-package/venv/lib/python3.8/site-packages/markupsafe/__init__.py)\n=========================== short test summary info ============================\nERROR src/tngsdk/package/tests/test_unit_packager_osm.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.08s\n",
+ "first_run_tail": "ages/jinja2/environment.py:25: in <module>\n    from .defaults import BLOCK_END_STRING\n../venv/lib/python3.8/site-packages/jinja2/defaults.py:3: in <module>\n    from .filters import FILTERS as DEFAULT_FILTERS  # noqa: F401\n../venv/lib/python3.8/site-packages/jinja2/filters.py:13: in <module>\n    from markupsafe import soft_unicode\nE   ImportError: cannot import name 'soft_unicode' from 'markupsafe' (/tmp/gw/tng-sdk-package/venv/lib/python3.8/site-packages/markupsafe/__init__.py)\n------------------- generated xml file: /tmp/tmp4y_x031k.xml -------------------\n=========================== short test summary info ============================\nERROR src/tngsdk/package/tests/test_unit_packager_osm.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.07s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 3.9,
+ "reproduced": false
+}

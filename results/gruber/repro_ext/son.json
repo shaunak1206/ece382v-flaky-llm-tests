@@ -1,0 +1,25 @@
+{
+ "project": "son",
+ "url": "https://github.com/flokno/son",
+ "sha": "a860c049e276151c8fddf82fdbe833d4127ada0d",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005555555555555556,
+ "test_file": "tests/test_son.py",
+ "test_func": "test_read_verbose",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=1 error: Failed to build `son @ file:///tmp/gw/son/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=1 error: Failed to build `son @ file:///tmp/gw/son/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=0 ",
+ "test": "test_read_verbose",
+ "collect_tail": "tests/test_son.py::test_write\ntests/test_son.py::test_read\ntests/test_son.py::test_write_again\ntests/test_son.py::test_read_verbose\n\n4 tests collected in 0.01s\n",
+ "first_run_tail": "z2 import open as read\n        elif Path(file).suffix == \".gz\":\n            from gzip import open as read\n        else:\n            read = open\n    \n        if verbose:\n            print(f\"[son] read file:  {file}\", flush=True)\n    \n>       with read(file, \"rt\") as fp:\nE       FileNotFoundError: [Errno 2] No such file or directory: 'test.son'\n\nson/__init__.py:126: FileNotFoundError\n----------------------------- Captured stdout call -----------------------------\n[son] read file:  test.son\n------------------- generated xml file: /tmp/tmp274kizzk.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_son.py::test_read_verbose - FileNotFoundError: [Errno 2] No such file or directory: 'test.son'\n1 failed, 3 deselected in 0.03s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "FileNotFoundError: [Errno 2] No such file or directory: 'test.son'"
+ ],
+ "seconds": 36.2,
+ "reproduced": false
+}

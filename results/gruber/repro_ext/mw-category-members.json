@@ -1,0 +1,25 @@
+{
+ "project": "mw-category-members",
+ "url": "https://github.com/jfilter/mw-category-members",
+ "sha": "9d3b11b5cfde2165a9ff1613ff11d7595a33320e",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005555555555555556,
+ "test_file": "tests/test_retrieve.py",
+ "test_func": "test_retrieve_clean_subcat",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_retrieve_clean_subcat",
+ "collect_tail": "tests/test_retrieve.py::test_retrieve\ntests/test_retrieve.py::test_retrieve_page_only\ntests/test_retrieve.py::test_retrieve_clean_subcat\n\n3 tests collected in 0.16s\n",
+ "first_run_tail": "ror: 403 Client Error: Forbidden for url: https://en.wikipedia.org/w/api.php?action=query&format=json&list=categorymembers&cmtitle=Category:Presidents_of_the_United_States&cmlimit=500&cmtype=page%7Csubcat%7Cfile&cmcontinue=\n\n../venv/lib/python3.8/site-packages/requests/models.py:1026: HTTPError\n------------------- generated xml file: /tmp/tmpka05mwek.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_retrieve.py::test_retrieve_clean_subcat - requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://en.wikipedia.org/w/api.php?action=query&format=json&list=categorymembers&cmtitle=Category:Presidents_of_the_United_States&cmlimit=500&cmtype=page%7Csubcat%7Cfile&cmcontinue=\n1 failed, 2 deselected in 0.24s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://en.wikipedia.org/w/api.php?action=query&format=json&list=categorymembers&cmtitle=Category:Presidents_of_the_United_States&cm"
+ ],
+ "seconds": 66.9,
+ "reproduced": false
+}

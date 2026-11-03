@@ -1,0 +1,25 @@
+{
+ "project": "py-gardener",
+ "url": "https://github.com/loopmediagroup/py-gardener",
+ "sha": "ef485b969df0ee1e848b594eb1abfe9d8a53dae3",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005,
+ "test_file": "py_gardener/TestPylint.py",
+ "test_func": "test_pylint",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because python-coveralls==2.9.1 depends on coverage==4.0.3 and pytest-cov==2.7.1 depends on coverage>=4.4, we can conclude that pytest-cov==2.7.1 and python-coveralls==2.9.1 are incompatible.\n         And because you require pytest-cov==2.7.1 and python-coveralls==2.9.1, we can conclude that your requirements are unsatisfiable.\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_pylint",
+ "collect_tail": "e/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\npy_gardener/TestPylint.py:6: in <module>\n    from pylint import epylint\nE   ImportError: cannot import name 'epylint' from 'pylint' (/tmp/gw/py-gardener/venv/lib/python3.8/site-packages/pylint/__init__.py)\n=========================== short test summary info ============================\nERROR py_gardener/TestPylint.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.07s\n",
+ "first_run_tail": "er/repo/py_gardener/TestPylint.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\npy_gardener/TestPylint.py:6: in <module>\n    from pylint import epylint\nE   ImportError: cannot import name 'epylint' from 'pylint' (/tmp/gw/py-gardener/venv/lib/python3.8/site-packages/pylint/__init__.py)\n------------------- generated xml file: /tmp/tmpb_cwsal_.xml -------------------\n=========================== short test summary info ============================\nERROR py_gardener/TestPylint.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.06s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 4.6,
+ "reproduced": false
+}

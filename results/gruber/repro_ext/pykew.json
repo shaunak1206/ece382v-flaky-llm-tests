@@ -1,0 +1,25 @@
+{
+ "project": "pykew",
+ "url": "https://github.com/RBGKew/pykew",
+ "sha": "557c1852ad7a4366467e344e7a46b42549ce8694",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.02142857142857143,
+ "test_file": "pykew/test_powo.py",
+ "test_func": "test_filters",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_filters",
+ "collect_tail": "pykew/test_powo.py::test_basic_search\npykew/test_powo.py::test_advanced_name_search\npykew/test_powo.py::test_advanced_characteristic_search\npykew/test_powo.py::test_advanced_geography_search\npykew/test_powo.py::test_lookup\npykew/test_powo.py::test_lookup_with_extra_fields\npykew/test_powo.py::test_filters\n\n7 tests collected in 0.13s\n",
+ "first_run_tail": ":\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../venv/lib/python3.8/site-packages/requests/models.py:980: JSONDecodeError\n------------------- generated xml file: /tmp/tmpv4piqyqa.xml -------------------\n=========================== short test summary info ============================\nFAILED pykew/test_powo.py::test_filters - requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n1 failed, 6 deselected in 1.09s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+ ],
+ "seconds": 158.7,
+ "reproduced": false
+}

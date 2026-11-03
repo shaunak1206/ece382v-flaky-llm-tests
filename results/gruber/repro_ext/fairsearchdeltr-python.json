@@ -1,0 +1,25 @@
+{
+ "project": "fairsearchdeltr-python",
+ "url": "https://github.com/fair-search/fairsearchdeltr-python",
+ "sha": "5bc2e8f0bf24ecd492978474919f512d3c0b65e1",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.11,
+ "test_file": "tests/test_deltr.py",
+ "test_func": "test_train_deltr_synthetic_data",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because abc was not found in the package registry and you require abc, we can conclude that your requirements are unsatisfiable.\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_train_deltr_synthetic_data",
+ "collect_tail": "py::test_train_deltr_synthetic_data[20-5-1-100-False]\ntests/test_deltr.py::test_train_deltr_synthetic_data[50-10-0.8-500-False]\ntests/test_deltr.py::test_train_deltr_synthetic_data[1000-3-1-1000-False]\ntests/test_deltr.py::test_train_deltr_synthetic_data[20-5-1-100-True]\ntests/test_deltr.py::test_train_deltr_synthetic_data[50-10-0.8-500-True]\ntests/test_deltr.py::test_train_deltr_synthetic_data[1000-3-1-1000-True]\ntests/test_deltr.py::test_rank_deltr[20-5-1-100]\ntests/test_deltr.py::test_rank_deltr[50-10-0.8-500]\ntests/test_deltr.py::test_rank_deltr[1000-3-1-1000]\n\n12 tests collected in 1.06s\n",
+ "first_run_tail": "teError: 'DataFrame' object has no attribute 'append'\nFAILED tests/test_deltr.py::test_train_deltr_synthetic_data[50-10-0.8-500-False] - AttributeError: 'DataFrame' object has no attribute 'append'\nFAILED tests/test_deltr.py::test_train_deltr_synthetic_data[1000-3-1-1000-False] - AttributeError: 'DataFrame' object has no attribute 'append'\nFAILED tests/test_deltr.py::test_train_deltr_synthetic_data[20-5-1-100-True] - AttributeError: 'DataFrame' object has no attribute 'append'\nFAILED tests/test_deltr.py::test_train_deltr_synthetic_data[50-10-0.8-500-True] - AttributeError: 'DataFrame' object has no attribute 'append'\nFAILED tests/test_deltr.py::test_train_deltr_synthetic_data[1000-3-1-1000-True] - AttributeError: 'DataFrame' object has no attribute 'append'\n6 failed, 6 deselected in 0.84s\n",
+ "collected": 6,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AttributeError: 'DataFrame' object has no attribute 'append'"
+ ],
+ "seconds": 169.7,
+ "reproduced": false
+}

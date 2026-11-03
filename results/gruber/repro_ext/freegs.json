@@ -1,0 +1,25 @@
+{
+ "project": "freegs",
+ "url": "https://github.com/bendudson/freegs",
+ "sha": "87bc845a8c1f4f48249c6fd930bc97b436468dd2",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.044444444444444446,
+ "test_file": "freegs/test_optimiser.py",
+ "test_func": "test_quadratic",
+ "install_ok": true,
+ "install_log_tail": "setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmp0UfkrB/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 7, in <module>\n           File \"/tmp/gw/freegs/repo/freegs/__init__.py\", line 33, in <module>\n             from .equilibrium import Equilibrium\n           File \"/tmp/gw/freegs/repo/freegs/equilibrium.py\", line 6, in <module>\n             from numpy import pi, meshgrid, linspace, exp, zeros, nditer, array\n         ModuleNotFoundError: No module named 'numpy'\n\n[.] rc=1 up()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpfv1QZM/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpfv1QZM/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 7, in <module>\n           File \"/tmp/gw/freegs/repo/freegs/__init__.py\", line 33, in <module>\n             from .equilibrium import Equilibrium\n           File \"/tmp/gw/freegs/repo/freegs/equilibrium.py\", line 6, in <module>\n             from numpy import pi, meshgrid, linspace, exp, zeros, nditer, array\n         ModuleNotFoundError: No module named 'numpy'\n",
+ "test": "test_quadratic",
+ "collect_tail": " error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.75s\n",
+ "first_run_tail": "========== short test summary info ============================\nERROR freegs/test_optimiser.py - AttributeError: module 'numpy' has no attribute 'int'.\n`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.31s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 5.6,
+ "reproduced": false
+}

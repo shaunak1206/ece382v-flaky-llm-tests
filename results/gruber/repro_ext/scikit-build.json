@@ -1,0 +1,27 @@
+{
+ "project": "scikit-build",
+ "url": "https://github.com/scikit-build/scikit-build",
+ "sha": "1a25f132ef746e90d41ed165892fd68a44a81403",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.0379746835443038,
+ "test_file": "tests/test_setup.py",
+ "test_func": "test_setup_requires_keyword_include_cmake",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 \n[auto mock] rc=0 ",
+ "test": "test_setup_requires_keyword_include_cmake",
+ "collect_tail": "/scikit-build/venv/lib/python3.8/site-packages/wheel/bdist_wheel.py:4: DeprecationWarning: The 'wheel' package is no longer the canonical location of the 'bdist_wheel' command, and will be removed in a future release. Please update to setuptools v70.1 or later which contains an integrated version of this command.\n    warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n\n---------- coverage: platform linux, python 3.8.20-final-0 -----------\nCoverage XML written to file tests/coverage.xml\n\n========================= 98 tests collected in 0.28s ==========================\n",
+ "first_run_tail": "*****\n  \n  !!\n    dist.fetch_build_eggs(setup_requires)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpm7_k5nzy.xml -------------------\n\n---------- coverage: platform linux, python 3.8.20-final-0 -----------\nCoverage XML written to file tests/coverage.xml\n\n=========================== short test summary info ============================\nFAILED tests/test_setup.py::test_setup_requires_keyword_include_cmake - distutils.errors.DistutilsError: Command '['/tmp/gw/scikit-build/venv/bin/python', '-m', 'pip', '--disable-pip-version-check', 'wheel', '--no-deps', '-w', '/tmp/tmpife0b5c1', '--quiet', 'cmake>=3.10']' returned non-zero exit status 1.\n================= 1 failed, 97 deselected, 3 warnings in 0.67s =================\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "distutils.errors.DistutilsError: Command '['/tmp/gw/scikit-build/venv/bin/python', '-m', 'pip', '--disable-pip-version-check', 'wheel', '--no-deps', '-w', '/tmp/tmpife0b5c1', '--quiet', 'cmake>=3.10']",
+  "distutils.errors.DistutilsError: Command '['/tmp/gw/scikit-build/venv/bin/python', '-m', 'pip', '--disable-pip-version-check', 'wheel', '--no-deps', '-w', '/tmp/tmpj4ymde5c', '--quiet', 'cmake>=3.10']",
+  "distutils.errors.DistutilsError: Command '['/tmp/gw/scikit-build/venv/bin/python', '-m', 'pip', '--disable-pip-version-check', 'wheel', '--no-deps', '-w', '/tmp/tmp_91corvk', '--quiet', 'cmake>=3.10']"
+ ],
+ "seconds": 196.2,
+ "reproduced": false
+}

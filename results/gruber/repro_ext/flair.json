@@ -1,0 +1,25 @@
+{
+ "project": "flair",
+ "url": "https://github.com/zalandoresearch/flair",
+ "sha": "c37aa7874c9e99692a9ee7a22a8f8fa060a03819",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.00558659217877095,
+ "test_file": "tests/test_language_model.py",
+ "test_func": "test_compute_perplexity",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_compute_perplexity",
+ "collect_tail": "rk.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html\n    @pytest.mark.integration\n\ntests/test_language_model.py:51\n  /tmp/gw/flair/repo/tests/test_language_model.py:51: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html\n    @pytest.mark.integration\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n4 tests collected in 5.43s\n",
+ "first_run_tail": "del.py:51\n  /tmp/gw/flair/repo/tests/test_language_model.py:51: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html\n    @pytest.mark.integration\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmp874qy8b2.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_language_model.py::test_compute_perplexity - OSError: HEAD request failed for url https://s3.eu-central-1.amazonaws.com/alan-nlp/resources/embeddings/lm-news-english-forward-1024-v0.2rc.pt with status code 301.\n1 failed, 3 deselected, 2 warnings in 2.37s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "OSError: HEAD request failed for url https://s3.eu-central-1.amazonaws.com/alan-nlp/resources/embeddings/lm-news-english-forward-1024-v0.2rc.pt with status code 301."
+ ],
+ "seconds": 474.0,
+ "reproduced": false
+}

@@ -1,0 +1,25 @@
+{
+ "project": "PyXenaValkyrie",
+ "url": "https://github.com/xenadevel/PyXenaValkyrie",
+ "sha": "92b45f1f37a5589cbdb9224a287fa0426d2c8d47",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.4722222222222222,
+ "test_file": "tests/test_offline.py",
+ "test_func": "test_load_config",
+ "install_ok": true,
+ "install_log_tail": "d because `xenavalkyrie` (v1.4.1) depends on `pypacker==4.3`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=1 error: Failed to build `pypacker==4.3`\n  cause: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         error in pypacker setup command: 'python_requires' must be a string containing valid version specifiers; Invalid specifier: '>=3.3.*'\n\nhint: `pypacker` (v4.3) was included because `xenavalkyrie` (v1.4.1) depends on `pypacker==4.3`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 error: Failed to build `pypacker==4.3`\n  cause: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         error in pypacker setup command: 'python_requires' must be a string containing valid version specifiers; Invalid specifier: '>=3.3.*'\n\nhint: `pypacker` (v4.3) was included because `xenavalkyrie` (v1.4.1) depends on `pypacker==4.3`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto trafficgenerator] rc=1 error: No solution found when resolving dependencies\n  cause: Because trafficgenerator was not found in the package registry and you require trafficgenerator, we can conclude that your requirements are unsatisfiable.\n",
+ "test": "test_load_config",
+ "collect_tail": "hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'trafficgenerator' (from /tmp/gw/PyXenaValkyrie/repo/tests/conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest '/tmp/gw/PyXenaValkyrie/repo/tests/conftest.py'.\ntests/conftest.py:4: in <module>\n    from trafficgenerator.tgn_utils import ApiType\nE   ModuleNotFoundError: No module named 'trafficgenerator'\n",
+ "first_run_tail": "/tmp/gw/PyXenaValkyrie/venv/lib/python3.8/site-packages/_pytest/config/__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'trafficgenerator' (from /tmp/gw/PyXenaValkyrie/repo/tests/conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest '/tmp/gw/PyXenaValkyrie/repo/tests/conftest.py'.\ntests/conftest.py:4: in <module>\n    from trafficgenerator.tgn_utils import ApiType\nE   ModuleNotFoundError: No module named 'trafficgenerator'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "nftest '/tmp/gw/PyXenaValkyrie/repo/tests/conftest.py'.\ntests/conftest.py:4: in <module>\n    from trafficgenerator.tgn_utils import ApiType\nE   ModuleNotFoundError: No module named 'trafficgenerator'\n"
+ ],
+ "seconds": 5.8,
+ "reproduced": false
+}

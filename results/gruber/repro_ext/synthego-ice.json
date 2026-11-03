@@ -1,0 +1,25 @@
+{
+ "project": "synthego-ice",
+ "url": "https://github.com/synthego-open/ice",
+ "sha": "310495fe536b7d2eafcee80f145c55f7c65d947c",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005,
+ "test_file": "ice/tests/test_alignment.py",
+ "test_func": "test_donor_alignment_hdr_indel_size",
+ "install_ok": true,
+ "install_log_tail": "    - if the 'sklearn' package is used by one of your dependencies,\n           it would be great if you take some time to track which package uses\n           'sklearn' instead of 'scikit-learn' and report it to their issue tracker\n         - as a last resort, set the environment variable\n           SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error\n\n         More information is available at\n         https://github.com/scikit-learn/sklearn-pypi-package\n\nhint: `sklearn` is often confused for `scikit-learn`. Did you mean to install `scikit-learn` instead?\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 rn' by 'scikit-learn' in your pip requirements files\n           (requirements.txt, setup.py, setup.cfg, Pipfile, etc ...)\n         - if the 'sklearn' package is used by one of your dependencies,\n           it would be great if you take some time to track which package uses\n           'sklearn' instead of 'scikit-learn' and report it to their issue tracker\n         - as a last resort, set the environment variable\n           SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error\n\n         More information is available at\n         https://github.com/scikit-learn/sklearn-pypi-package\n\nhint: `sklearn` is often confused for `scikit-learn`. Did you mean to install `scikit-learn` instead?\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto Bio] rc=0 ",
+ "test": "test_donor_alignment_hdr_indel_size",
+ "collect_tail": "d, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.\n    warnings.warn(\n\nice/tests/fixtures.py:98\n  /tmp/gw/synthego-ice/repo/ice/tests/fixtures.py:98: PytestDeprecationWarning: @pytest.yield_fixture is deprecated.\n  Use @pytest.fixture instead; they are the same.\n    @pytest.yield_fixture(scope='session', autouse=True)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n10 tests collected in 0.20s\n",
+ "first_run_tail": "eAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.\n    warnings.warn(\n\nice/tests/fixtures.py:98\n  /tmp/gw/synthego-ice/repo/ice/tests/fixtures.py:98: PytestDeprecationWarning: @pytest.yield_fixture is deprecated.\n  Use @pytest.fixture instead; they are the same.\n    @pytest.yield_fixture(scope='session', autouse=True)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmp5fn75t8c.xml -------------------\n=========================== short test summary info ============================\nERROR ice/tests/test_alignment.py::test_donor_alignment_hdr_indel_size - AttributeError: 'MultipleSeqAlignment' object has no attribute 'format'\n9 deselected, 2 warnings, 1 error in 0.16s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "failed on setup with \"AttributeError: 'MultipleSeqAlignment' object has no attribute 'format'\""
+ ],
+ "seconds": 5.9,
+ "reproduced": false
+}

@@ -1,0 +1,25 @@
+{
+ "project": "fdep",
+ "url": "https://github.com/checkr/fdep",
+ "sha": "36fba98e6b3af35adf238c61f700a8138c090a5e",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.01,
+ "test_file": "tests/test_commands.py",
+ "test_func": "test_run_version",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_run_version",
+ "collect_tail": "%\nfdep/servers/jsonrpc.py                        65     65     0%\nfdep/servers/xmlrpc.py                         59     59     0%\nfdep/utils.py                                  38     38     0%\n---------------------------------------------------------------\nTOTAL                                        1068   1068     0%\n\n========================= 17 tests collected in 0.16s ==========================\n/tmp/gw/fdep/venv/lib/python3.8/site-packages/coverage/control.py:894: CoverageWarning: No data was collected. (no-data-collected)\n  self._warn(\"No data was collected.\", slug=\"no-data-collected\")\n",
+ "first_run_tail": "integrations/__init__.py           7      3    57%\nfdep/servers/integrations/fluentd_http.py      11      4    64%\nfdep/servers/integrations/sentry.py             8      4    50%\nfdep/servers/jsonrpc.py                        65     45    31%\nfdep/servers/xmlrpc.py                         59     41    31%\nfdep/utils.py                                  38     21    45%\n---------------------------------------------------------------\nTOTAL                                        1068    641    40%\n\n=========================== short test summary info ============================\nFAILED tests/test_commands.py::test_run_version - pkg_resources.extern.packaging.version.InvalidVersion: Invalid version: 'NETWORK ERROR'\n================= 1 failed, 16 deselected, 5 warnings in 0.94s =================\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "pkg_resources.extern.packaging.version.InvalidVersion: Invalid version: 'NETWORK ERROR'"
+ ],
+ "seconds": 121.2,
+ "reproduced": false
+}

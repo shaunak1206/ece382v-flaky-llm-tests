@@ -1,0 +1,25 @@
+{
+ "project": "docci",
+ "url": "https://github.com/potykion/docci",
+ "sha": "24cb73232d32e69a412512ed2f110fbbfde99768",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.01,
+ "test_file": "tests/test_xlsx.py",
+ "test_func": "test_xlsx_to_file_saves_xlsx_as_file_attachment",
+ "install_ok": true,
+ "install_log_tail": "/Include/asdl.h:9:15: note: \u2018false\u2019 is a keyword with \u2018-std=c23\u2019 onwards\n         ast27/Include/asdl.h:9:28: error: expected \u2018;\u2019, identifier or \u2018(\u2019 before \u2018bool\u2019\n             9 | typedef enum {false, true} bool;\n               |                            ^~~~\n         ast27/Include/asdl.h:9:28: warning: useless type name in empty declaration\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .[test,tests,testing,dev]] rc=1 error: Failed to build `docci @ file:///tmp/gw/docci/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=1 error: Failed to build `docci @ file:///tmp/gw/docci/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=0 ",
+ "test": "test_xlsx_to_file_saves_xlsx_as_file_attachment",
+ "collect_tail": "===================\nplatform linux -- Python 3.8.20, pytest-7.4.4, pluggy-1.5.0 -- /tmp/gw/docci/venv/bin/python\nrootdir: /tmp/gw/docci/repo\nconfigfile: setup.cfg\nplugins: timeout-2.4.0\ncollecting ... collected 6 items\n\n<Module tests/test_xlsx.py>\n  <Function test_xlsx_to_bytes_saves_xlsx_as_valid_bytes>\n  <Function test_xlsx_to_file_saves_xlsx_as_file_attachment>\n  <Function test_dicts_to_xlsx>\n  <Function test_dicts_to_xlsx_with_custom_headers>\n  <Function test_xlsx_from_bytes>\n  <Function test_xlsx_from_file>\n\n========================== 6 tests collected in 0.21s ==========================\n",
+ "first_run_tail": "============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-7.4.4, pluggy-1.5.0 -- /tmp/gw/docci/venv/bin/python\nrootdir: /tmp/gw/docci/repo\nconfigfile: setup.cfg\nplugins: timeout-2.4.0\ntimeout: 120.0s\ntimeout method: signal\ntimeout func_only: False\ncollecting ... collected 6 items / 5 deselected / 1 selected\n\ntests/test_xlsx.py::test_xlsx_to_file_saves_xlsx_as_file_attachment PASSED [100%]\n\n------------------- generated xml file: /tmp/tmpcak5dgdm.xml -------------------\n======================= 1 passed, 5 deselected in 0.10s ========================\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 149,
+ "failed": 1,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 209 diff: b'\\xea' != b'K'\n  Full diff:\n    (\n     b'PK\\x03\\x04\\x14\\x00\\x00\\x00\\x08\\x00I\\xb7b]F\\xc7MH\\x95\\x00\\x00\\x00\\"
+ ],
+ "seconds": 51.0,
+ "reproduced": true
+}

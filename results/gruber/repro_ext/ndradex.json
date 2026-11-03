@@ -1,0 +1,25 @@
+{
+ "project": "ndradex",
+ "url": "https://github.com/astropenguin/ndradex",
+ "sha": "0d1a1ed52296f7d4d38254ad081aabff8e923182",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.011111111111111112,
+ "test_file": "tests/test_radex.py",
+ "test_func": "test_radex_single_run",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_radex_single_run",
+ "collect_tail": "tests/test_radex.py::test_binary_existences\ntests/test_radex.py::test_radex_single_run\ntests/test_radex.py::test_radex_grid_run\ntests/test_radex.py::test_work_dir\ntests/test_radex.py::test_dataset_io\n\n5 tests collected in 1.18s\n",
+ "first_run_tail": "       name = Path(urlparse(query).path).stem\n            Lamda.molecule_dict[name] = query\n            return Lamda.query(name)\n    \n        # case 2: try to get by local path\n        path = Path(query).expanduser().resolve()\n        if path.exists():\n            return parse_lamda_datafile(path)\n    \n        # case 3: try to get by astroquery\n        try:\n            return Lamda.query(Path(query).stem)\n        except:\n>           raise ValueError(query)\nE           ValueError: co.dat\n\nndradex/db.py:174: ValueError\n------------------- generated xml file: /tmp/tmphwh8uj5g.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_radex.py::test_radex_single_run - ValueError: co.dat\n1 failed, 4 deselected in 120.45s (0:02:00)\n",
+ "collected": 1,
+ "runs": 20,
+ "passed": 0,
+ "failed": 20,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "ValueError: co.dat"
+ ],
+ "seconds": 2421.6,
+ "reproduced": false
+}

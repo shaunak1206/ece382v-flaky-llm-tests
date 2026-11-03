@@ -1,0 +1,25 @@
+{
+ "project": "danlp",
+ "url": "https://github.com/alexandrainst/danlp",
+ "sha": "0c7169e4c8b0595205fbb7bdf64ce4f2ca79edcc",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.2625,
+ "test_file": "tests/test_flair_models.py",
+ "test_func": "test_flair_tagger",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_flair_tagger",
+ "collect_tail": "ib/python3.8/site-packages/gensim/models/doc2vec.py:73: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    from collections import namedtuple, defaultdict, Iterable\n\n../venv/lib/python3.8/site-packages/transformers/tokenization_xlm.py:665\n  /tmp/gw/danlp/venv/lib/python3.8/site-packages/transformers/tokenization_xlm.py:665: DeprecationWarning: invalid escape sequence \\*\n    \"\"\"\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n2 tests collected in 4.06s\n",
+ "first_run_tail": "lp/venv/lib/python3.8/site-packages/gensim/models/doc2vec.py:73: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    from collections import namedtuple, defaultdict, Iterable\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpvjev5vjz.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_flair_models.py::TestNerTaggers::test_flair_tagger - urllib.error.HTTPError: HTTP Error 404: Not Found\nFAILED tests/test_flair_models.py::TestPosTaggers::test_flair_tagger - urllib.error.HTTPError: HTTP Error 404: Not Found\n2 failed, 3 warnings in 3.60s\n",
+ "collected": 2,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "urllib.error.HTTPError: HTTP Error 404: Not Found"
+ ],
+ "seconds": 633.0,
+ "reproduced": false
+}

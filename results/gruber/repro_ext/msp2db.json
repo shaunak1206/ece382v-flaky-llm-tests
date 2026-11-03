@@ -1,0 +1,27 @@
+{
+ "project": "msp2db",
+ "url": "https://github.com/computational-metabolomics/msp2db",
+ "sha": "fc7108625704c1074a3c085fe67d7ce72367a124",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.00625,
+ "test_file": "tests/test_msp2db.py",
+ "test_func": "test_mona_files",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_mona_files",
+ "collect_tail": "e.py:72\n  /tmp/gw/msp2db/repo/msp2db/re.py:72: DeprecationWarning: invalid escape sequence \\d\n    meta_parse['pubchem_id'] = ['^pubchem.*cid(?:=|:)(\\d*)\".*$']\n\nmsp2db/re.py:73\n  /tmp/gw/msp2db/repo/msp2db/re.py:73: DeprecationWarning: invalid escape sequence \\d\n    meta_parse['chemspider_id'] = ['^chemspider(?:=|:)(\\d*)\".*$']\n\nmsp2db/re.py:75\n  /tmp/gw/msp2db/repo/msp2db/re.py:75: DeprecationWarning: invalid escape sequence \\d\n    meta_parse['exact_mass'] = ['^exact.*mass(?:=|:)(\\d*[.,]?\\d*)$']\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n9 tests collected in 0.02s\n",
+ "first_run_tail": "',\n    'Sulfadimethoxine',\n    '5323',\n    None,\n    None,\n-   310.07357611,\n?              ^\n\n+   310.07357612,\n?              ^\n\n    'C12H14N4O4S',\n    310.33,\n    None,\n-   None,\n+   'COC1=NC(=NC(=C1)NS(=O)(=O)C2=CC=C(C=C2)N)OC',\n    None,\n    None],\n   ['PJSFRIWCGOHTNF-UHFFFAOYSA-N',\n    'Sulfadoxine',\n    '17134',\n    None,\n    None,\n-   310.07357611,\n?              ^\n\n+   310.07357612,\n?              ^\n\n    'C12H14N4O4S',\n    310.33,\n    None,\n-   None,\n+   'COC1=C(N=CN=C1OC)NS(=O)(=O)C2=CC=C(C=C2)N',\n    None,\n    None],\n   ['SEEPANYCNGTZFQ-UHFFFAOYSA-N',\n    'Sulfadiazine',\n    '5215',\n    None,\n    None,\n    250.05244675,\n    'C10H10N4O2S',\n    250.28,\n    None,\n-   None,\n+   'C1=CN=C(N=C1)NS(=O)(=O)C2=CC=C(C=C2)N',\n    None,\n    None]]\n1 failed, 8 deselected, 2 warnings in 9.85s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: Lists differ: [['QU[99 chars]one, None, None, None], ['HAWUXIAKFTWNEO-ZDUSS[2326 chars]one]] != [['QU[99 chars]one, 'CN(C)CCC(C1=CC=CC2=CC=CC=C21)(C(C3=CC=CC[3171 chars]one]]\n\nFirst di",
+  "pubchempy.PubChemHTTPError: 'Bad Gateway'",
+  "pubchempy.PubChemHTTPError: 'Too Many Requests'"
+ ],
+ "seconds": 813.3,
+ "reproduced": false
+}

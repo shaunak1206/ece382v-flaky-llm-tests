@@ -1,0 +1,23 @@
+{
+ "project": "libearth",
+ "url": "https://github.com/earthreader/libearth",
+ "sha": "71d2f3246eb0b6a3668a64e2242616d20b1d7dcd",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005,
+ "test_file": "tests/feed_test.py",
+ "test_func": "test_race_condition",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_race_condition",
+ "collect_tail": "ession pattern.\n\nlibearth/subscribe.py:464\n  /tmp/gw/libearth/repo/libearth/subscribe.py:464: DeprecationWarning: invalid escape sequence \\ \n    \"\"\"The set (exactly, tree) of subscriptions.  It consists of\n\nlibearth/subscribe.py:61\n  /tmp/gw/libearth/repo/libearth/subscribe.py:61: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    class SubscriptionSet(collections.MutableSet):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n30 tests collected in 0.31s\n",
+ "first_run_tail": "ions.Sequence):\n\nlibearth/repository.py:434\n  /tmp/gw/libearth/repo/libearth/repository.py:434: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    class FileIterator(collections.Iterator):\n\nlibearth/subscribe.py:61\n  /tmp/gw/libearth/repo/libearth/subscribe.py:61: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    class SubscriptionSet(collections.MutableSet):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpmfkeo_ii.xml -------------------\n1 passed, 29 deselected, 6 warnings in 0.15s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 150,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 57.4,
+ "reproduced": false
+}

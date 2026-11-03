@@ -1,0 +1,25 @@
+{
+ "project": "nipype",
+ "url": "https://github.com/nipy/nipype",
+ "sha": "f2a2034c5198d955318d76163dee9562314d1eb0",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005555555555555556,
+ "test_file": "nipype/pipeline/engine/tests/test_join.py",
+ "test_func": "test_multifield_join_node",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_multifield_join_node",
+ "collect_tail": "ec, TraitDictObject, TraitListObject\n  File \"/tmp/gw/nipype/repo/nipype/interfaces/__init__.py\", line 11, in <module>\n    from .io import DataGrabber, DataSink, SelectFiles, BIDSDataGrabber\n  File \"/tmp/gw/nipype/repo/nipype/interfaces/io.py\", line 37, in <module>\n    from .base import (\n  File \"/tmp/gw/nipype/repo/nipype/interfaces/base/__init__.py\", line 11, in <module>\n    from traits.trait_handlers import TraitDictObject, TraitListObject\nImportError: cannot import name 'TraitDictObject' from 'traits.trait_handlers' (/tmp/gw/nipype/venv/lib/python3.8/site-packages/traits/trait_handlers.py)\n",
+ "first_run_tail": "y\", line 11, in <module>\n    from .workflows import Workflow\n  File \"/tmp/gw/nipype/repo/nipype/pipeline/engine/workflows.py\", line 23, in <module>\n    from ...interfaces.base import traits, TraitedSpec, TraitDictObject, TraitListObject\n  File \"/tmp/gw/nipype/repo/nipype/interfaces/__init__.py\", line 11, in <module>\n    from .io import DataGrabber, DataSink, SelectFiles, BIDSDataGrabber\n  File \"/tmp/gw/nipype/repo/nipype/interfaces/io.py\", line 37, in <module>\n    from .base import (\n  File \"/tmp/gw/nipype/repo/nipype/interfaces/base/__init__.py\", line 11, in <module>\n    from traits.trait_handlers import TraitDictObject, TraitListObject\nImportError: cannot import name 'TraitDictObject' from 'traits.trait_handlers' (/tmp/gw/nipype/venv/lib/python3.8/site-packages/traits/trait_handlers.py)\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "dlers import TraitDictObject, TraitListObject\nImportError: cannot import name 'TraitDictObject' from 'traits.trait_handlers' (/tmp/gw/nipype/venv/lib/python3.8/site-packages/traits/trait_handlers.py)\n"
+ ],
+ "seconds": 7.8,
+ "reproduced": false
+}

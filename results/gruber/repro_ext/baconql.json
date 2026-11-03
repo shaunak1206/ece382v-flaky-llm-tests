@@ -1,0 +1,25 @@
+{
+ "project": "baconql",
+ "url": "https://github.com/lsenta/baconql",
+ "sha": "c5b3bda63e243bf450e593f3d8fdaa437b4d28f3",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.11666666666666667,
+ "test_file": "test/compiler/test_auto_inputs.py",
+ "test_func": "test_insert_simple",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[test-requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_insert_simple",
+ "collect_tail": "e>\n    __ENV = Environment(loader=PackageLoader('baconql.compiler', 'templates'), extensions=['jinja2.ext.with_'])\n../venv/lib/python3.8/site-packages/jinja2/environment.py:365: in __init__\n    self.extensions = load_extensions(self, extensions)\n../venv/lib/python3.8/site-packages/jinja2/environment.py:119: in load_extensions\n    extension = t.cast(t.Type[\"Extension\"], import_string(extension))\n../venv/lib/python3.8/site-packages/jinja2/utils.py:158: in import_string\n    return getattr(__import__(module, None, None, [obj]), obj)\nE   AttributeError: module 'jinja2.ext' has no attribute 'with_'\n",
+ "first_run_tail": "er/conftest.py'.\ntest/compiler/conftest.py:10: in <module>\n    from baconql import compiler\nbaconql/compiler/__init__.py:9: in <module>\n    from . import render\nbaconql/compiler/render.py:7: in <module>\n    __ENV = Environment(loader=PackageLoader('baconql.compiler', 'templates'), extensions=['jinja2.ext.with_'])\n../venv/lib/python3.8/site-packages/jinja2/environment.py:365: in __init__\n    self.extensions = load_extensions(self, extensions)\n../venv/lib/python3.8/site-packages/jinja2/environment.py:119: in load_extensions\n    extension = t.cast(t.Type[\"Extension\"], import_string(extension))\n../venv/lib/python3.8/site-packages/jinja2/utils.py:158: in import_string\n    return getattr(__import__(module, None, None, [obj]), obj)\nE   AttributeError: module 'jinja2.ext' has no attribute 'with_'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "/venv/lib/python3.8/site-packages/jinja2/utils.py:158: in import_string\n    return getattr(__import__(module, None, None, [obj]), obj)\nE   AttributeError: module 'jinja2.ext' has no attribute 'with_'\n"
+ ],
+ "seconds": 4.2,
+ "reproduced": false
+}

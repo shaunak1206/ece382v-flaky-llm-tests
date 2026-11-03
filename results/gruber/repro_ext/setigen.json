@@ -1,0 +1,27 @@
+{
+ "project": "setigen",
+ "url": "https://github.com/bbrzycki/setigen",
+ "sha": "30acd4645896d07c660be2ba00542f64b5c64316",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.07222222222222222,
+ "test_file": "tests/test_noise_generation.py",
+ "test_func": "test_very_hres_chi2",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_very_hres_chi2",
+ "collect_tail": "tests/test_noise_generation.py::test_hres_chi2\ntests/test_noise_generation.py::test_very_hres_chi2\n\n=============================== warnings summary ===============================\n<frozen importlib._bootstrap>:219\n  <frozen importlib._bootstrap>:219: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n2 tests collected in 2.41s\n",
+ "first_run_tail": ".                                                                        [100%]\n=============================== warnings summary ===============================\n<frozen importlib._bootstrap>:219\n  <frozen importlib._bootstrap>:219: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpcz564dv6.xml -------------------\n1 passed, 1 deselected, 1 warning in 0.82s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 146,
+ "failed": 4,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert 0.012810232774252528 < 0.01\n +  where 0.012810232774252528 = abs(((5.064051163871262 / (10 * ((2 / (4 * 2)) ** 0.5))) - 1))\n +    where 5.064051163871262 = <function std at 0x76bc6d36ee50>(arra",
+  "assert 0.011585616817866518 < 0.01\n +  where 0.011585616817866518 = abs(((5.057928084089332 / (10 * ((2 / (4 * 2)) ** 0.5))) - 1))\n +    where 5.057928084089332 = <function std at 0x70bb0c43be50>(arra",
+  "assert 0.010798696044624356 < 0.01\n +  where 0.010798696044624356 = abs(((4.946006519776878 / (10 * ((2 / (4 * 2)) ** 0.5))) - 1))\n +    where 4.946006519776878 = <function std at 0x7e91d816de50>(arra"
+ ],
+ "seconds": 183.2,
+ "reproduced": true
+}

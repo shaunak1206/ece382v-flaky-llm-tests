@@ -1,0 +1,25 @@
+{
+ "project": "py2pack",
+ "url": "https://github.com/openSUSE/py2pack",
+ "sha": "9c6f8eb3fd5d481aecbe4091ca0974e5a077db48",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.3388888888888889,
+ "test_file": "test/test_template.py",
+ "test_func": "test_template_opensuse.spec",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[test-requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_template_opensuse.spec",
+ "collect_tail": "s/__init__.py:2832\n../venv/lib/python3.8/site-packages/pkg_resources/__init__.py:2832\n  /tmp/gw/py2pack/venv/lib/python3.8/site-packages/pkg_resources/__init__.py:2832: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.\n  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages\n    declare_namespace(pkg)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n5 tests collected in 0.18s\n",
+ "first_run_tail": "ckages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages\n    declare_namespace(pkg)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpp2iv6vx5.xml -------------------\n=========================== short test summary info ============================\nFAILED test/test_template.py::TemplateTestCase::test_template_opensuse.spec - xmlrpc.client.Fault: <Fault -32500: 'RuntimeError: PyPI no longer supports the XMLRPC release_data method. Use JSON or Simple API instead. See https://warehouse.pypa.io/api-reference/xml-rpc.html#deprecated-methods for more information.'>\n1 failed, 4 deselected, 5 warnings in 0.72s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "xmlrpc.client.Fault: <Fault -32500: 'RuntimeError: PyPI no longer supports the XMLRPC release_data method. Use JSON or Simple API instead. See https://warehouse.pypa.io/api-reference/xml-rpc.html#depr"
+ ],
+ "seconds": 91.5,
+ "reproduced": false
+}

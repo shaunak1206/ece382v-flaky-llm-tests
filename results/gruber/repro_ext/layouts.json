@@ -1,0 +1,26 @@
+{
+ "project": "layouts",
+ "url": "https://github.com/hid-io/layouts-python",
+ "sha": "0b036e1f1695b16e0e6e61540ef7ecd6047a5bd1",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.825,
+ "test_file": "tests/test_cache.py",
+ "test_func": "test_local_cache",
+ "install_ok": true,
+ "install_log_tail": "kages/flit_core/buildapi.py\", line 22, in get_requires_for_build_wheel\n             info = read_flit_config(pyproj_toml)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpucEcfH/lib/python3.8/site-packages/flit_core/config.py\", line 75, in read_flit_config\n             return prep_toml_config(d, path)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpucEcfH/lib/python3.8/site-packages/flit_core/config.py\", line 91, in prep_toml_config\n             raise ConfigError(\n         flit_core.config.ConfigError: The [tool.flit.metadata] table is no longer supported. Switch to the standard [project] table or require flit_core<4 to build this package.\n\n[.] rc=1 n <module>\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpLNLikp/lib/python3.8/site-packages/flit_core/buildapi.py\", line 22, in get_requires_for_build_wheel\n             info = read_flit_config(pyproj_toml)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpLNLikp/lib/python3.8/site-packages/flit_core/config.py\", line 75, in read_flit_config\n             return prep_toml_config(d, path)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpLNLikp/lib/python3.8/site-packages/flit_core/config.py\", line 91, in prep_toml_config\n             raise ConfigError(\n         flit_core.config.ConfigError: The [tool.flit.metadata] table is no longer supported. Switch to the standard [project] table or require flit_core<4 to build this package.\n",
+ "test": "test_local_cache",
+ "collect_tail": "tests/test_cache.py::test_local_cache\ntests/test_cache.py::test_github_cache\ntests/test_cache.py::test_git_cache\n\n3 tests collected in 0.23s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmp8luwbrh_.xml -------------------\n1 passed, 2 deselected in 0.61s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 19,
+ "failed": 131,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "github.GithubException.RateLimitExceededException: 403 {\"message\": \"API rate limit exceeded for 20.106.231.149. (But here's the good news: Authenticated requests get a higher rate limit. Check out the",
+  "github.GithubException.GithubException: 429 {\"documentation_url\": \"https://developer.github.com/v3/#abuse-rate-limits\", \"message\": \"You have triggered an abuse detection mechanism. Please wait a few m"
+ ],
+ "seconds": 48.5,
+ "reproduced": true
+}

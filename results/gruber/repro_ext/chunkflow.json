@@ -1,0 +1,25 @@
+{
+ "project": "chunkflow",
+ "url": "https://github.com/seung-lab/chunkflow",
+ "sha": "56301bbf49af289739d6d0612772de43e0f9b586",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.006134969325153374,
+ "test_file": "tests/flow/test_flow.py",
+ "test_func": "test_inference_pipeline",
+ "install_ok": true,
+ "install_log_tail": "         6234 |       this->print_space();\n               |             ^~~~~~~~~~~\n               |             call_print_space\n         error: command '/usr/bin/c++' failed with exit code 1\n\nhint: `pysimdjson` (v6.0.2) was included because `chunkflow` (v1.0) depends on `cloud-volume` (v12.4.1) which depends on `pysimdjson`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1           ^~~~~~~~~~~~~\n               |             call_print_indents\n         simdjson/simdjson.h: In member function \u2018void simdjson::internal::base_formatter<formatter>::call_print_space()\u2019:\n         simdjson/simdjson.h:6234:13: error: \u2018class simdjson::internal::base_formatter<formatter>\u2019 has no member named \u2018print_space\u2019; did you mean \u2018call_print_space\u2019? [-Wtemplate-body]\n          6234 |       this->print_space();\n               |             ^~~~~~~~~~~\n               |             call_print_space\n         error: command '/usr/bin/c++' failed with exit code 1\n\nhint: `pysimdjson` (v6.0.2) was included because `chunkflow` (v1.0) depends on `cloud-volume` (v12.4.1) which depends on `pysimdjson`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto gevent] rc=0 \n[auto numpy] rc=0 \n[auto cloudvolume] rc=1 error: No solution found when resolving dependencies\n  cause: Because cloudvolume was not found in the package registry and you require cloudvolume, we can conclude that your requirements are unsatisfiable.\n",
+ "test": "test_inference_pipeline",
+ "collect_tail": "ules/packages have valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/flow/test_flow.py:4: in <module>\n    from cloudvolume import CloudVolume\nE   ModuleNotFoundError: No module named 'cloudvolume'\n=========================== short test summary info ============================\nERROR tests/flow/test_flow.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.46s\n",
+ "first_run_tail": "___________________\nImportError while importing test module '/tmp/gw/chunkflow/repo/tests/flow/test_flow.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/flow/test_flow.py:4: in <module>\n    from cloudvolume import CloudVolume\nE   ModuleNotFoundError: No module named 'cloudvolume'\n------------------- generated xml file: /tmp/tmpl60nh5vc.xml -------------------\n=========================== short test summary info ============================\nERROR tests/flow/test_flow.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.37s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 23.2,
+ "reproduced": false
+}

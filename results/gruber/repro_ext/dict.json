@@ -1,0 +1,25 @@
+{
+ "project": "dict",
+ "url": "https://github.com/wufeifei/dict",
+ "sha": "89e730dbc035da6b5ceb598833d2eafc5343864d",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.00625,
+ "test_file": "tests/test_dict.py",
+ "test_func": "test_e2c_sentences",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_e2c_sentences",
+ "collect_tail": "tests/test_dict.py::test_e2c_words\ntests/test_dict.py::test_e2c_sentences\ntests/test_dict.py::test_c2e_words\ntests/test_dict.py::test_c2e_sentences\n\n4 tests collected in 0.01s\n",
+ "first_run_tail": "__________________ test_e2c_sentences ______________________________\n\ncapfd = <_pytest.capture.CaptureFixture object at 0x73b130a48a00>\n\n    def test_e2c_sentences(capfd):\n        Dict(['I', 'Love', 'You'])\n        out, err = capfd.readouterr()\n>       assert '\u6211\u7231\u4f60' in out\nE       AssertionError: assert '\u6211\u7231\u4f60' in 'ERROR: Network or remote service error!\\nExpecting value: line 1 column 1 (char 0)\\n'\n\ntests/test_dict.py:28: AssertionError\n------------------- generated xml file: /tmp/tmppqmq8rcf.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_dict.py::test_e2c_sentences - AssertionError: assert '\u6211\u7231\u4f60' in 'ERROR: Network or remote service error!\\nExpecting value: line 1 column 1 (char 0)\\n'\n1 failed, 3 deselected in 2.25s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert '\u6211\u7231\u4f60' in 'ERROR: Network or remote service error!\\nExpecting value: line 1 column 1 (char 0)\\n'"
+ ],
+ "seconds": 196.2,
+ "reproduced": false
+}

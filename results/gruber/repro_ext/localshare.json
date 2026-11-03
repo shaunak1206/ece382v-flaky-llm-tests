@@ -1,0 +1,25 @@
+{
+ "project": "localshare",
+ "url": "https://github.com/sunu/localshare",
+ "sha": "0bfada0682ab020ded70fc6bf796ba188b726292",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.5375,
+ "test_file": "tests/test_localshare.py",
+ "test_func": "test_existing_file",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmppl91Pc/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmppl91Pc/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmppl91Pc/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 17, in <module>\n         AttributeError: 'dict' object has no attribute 'print'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_existing_file",
+ "collect_tail": "tests/test_localshare.py::test_non_existent_file\ntests/test_localshare.py::test_existing_file\ntests/test_localshare.py::test_wrongfile_download\n\n3 tests collected in 0.13s\n",
+ "first_run_tail": "TIMEOUT after 540s",
+ "collected": 1,
+ "runs": 5,
+ "passed": 0,
+ "failed": 5,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert 1 == 0\n +  where 1 = <Result TypeError(\"Argument 'port' has incorrect type (expected int, got bytes)\")>.exit_code"
+ ],
+ "seconds": 2704.2,
+ "reproduced": false
+}

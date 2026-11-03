@@ -1,0 +1,25 @@
+{
+ "project": "isle",
+ "url": "https://github.com/dmkskn/isle",
+ "sha": "81397e6e8c75543f9fd2efd2c34928077542da2a",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.5222222222222223,
+ "test_file": "tests/test_movie.py",
+ "test_func": "test_get_upcoming",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_get_upcoming",
+ "collect_tail": "tests/test_movie.py::test_get_latest\ntests/test_movie.py::test_get_popular\ntests/test_movie.py::test_get_top_rated\ntests/test_movie.py::test_get_upcoming\ntests/test_movie.py::test_get_now_playing\n\n5 tests collected in 0.02s\n",
+ "first_run_tail": "1250>\nreq = <urllib.request.Request object at 0x7be4b49d16d0>\nfp = <http.client.HTTPResponse object at 0x7be4b488d430>, code = 401\nmsg = 'Unauthorized', hdrs = <http.client.HTTPMessage object at 0x7be4b488d730>\n\n    def http_error_default(self, req, fp, code, msg, hdrs):\n>       raise HTTPError(req.full_url, code, msg, hdrs, fp)\nE       urllib.error.HTTPError: HTTP Error 401: Unauthorized\n\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/urllib/request.py:649: HTTPError\n------------------- generated xml file: /tmp/tmpxt3wm6la.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_movie.py::test_get_upcoming - urllib.error.HTTPError: HTTP Error 401: Unauthorized\n1 failed, 4 deselected in 0.22s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "urllib.error.HTTPError: HTTP Error 401: Unauthorized"
+ ],
+ "seconds": 41.0,
+ "reproduced": false
+}

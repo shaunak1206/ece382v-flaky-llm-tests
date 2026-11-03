@@ -1,0 +1,23 @@
+{
+ "project": "pyrieef",
+ "url": "https://github.com/humans-to-robots-motion/pyrieef",
+ "sha": "73a82d3250db8b48a1602bd5422bb3902fc11e57",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005,
+ "test_file": "tests/test_workspace.py",
+ "test_func": "test_sdf_derivatives",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because tensorflow==1.0.0 has no wheels with a matching Python ABI tag (e.g., `cp38`) and you require tensorflow==1.0, we can conclude that your requirements are unsatisfiable.\n\nhint: You require CPython 3.8 (`cp38`), but we only found wheels for `tensorflow` (v1.0.0) with the following Python ABI tags: `cp27m`, `cp27mu`, `cp33m`, `cp34m`, `cp35m`, `cp36m`\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto numpy] rc=0 \n[auto scipy] rc=0 ",
+ "test": "test_sdf_derivatives",
+ "collect_tail": "workspace.py::test_box\ntests/test_workspace.py::test_inside_box\ntests/test_workspace.py::test_axis_aligned_box\ntests/test_workspace.py::test_ellipse\ntests/test_workspace.py::test_line_side\ntests/test_workspace.py::test_polygon\ntests/test_workspace.py::test_hexagon\ntests/test_workspace.py::test_hexagon_jac\ntests/test_workspace.py::test_sdf_derivatives\ntests/test_workspace.py::test_sdf_workspace\ntests/test_workspace.py::test_meshgrid\ntests/test_workspace.py::test_pixelmap\ntests/test_workspace.py::test_sdf_grid\ntests/test_workspace.py::test_workspace_to_occupancy_map\n\n16 tests collected in 0.51s\n",
+ "first_run_tail": "ent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.\n    return np.matrix(self._shape.dist_hessian(x))\n\ntests/test_workspace.py: 10 warnings\n  /tmp/gw/pyrieef/repo/tests/../pyrieef/geometry/differentiable_geometry.py:773: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.\n    return np.matrix(H)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpq_n6htq9.xml -------------------\n1 passed, 15 deselected, 80 warnings in 0.23s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 150,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 72.3,
+ "reproduced": false
+}

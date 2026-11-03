@@ -1,0 +1,25 @@
+{
+ "project": "SSMToybox",
+ "url": "https://github.com/jacobnzw/SSMToybox",
+ "sha": "b3a8c05fa1b0d85356ac6554009af38ff2720780",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.1,
+ "test_file": "ssmtoybox/tests/test_bqmod.py",
+ "test_func": "test_mc_poly_verification",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_mc_poly_verification",
+ "collect_tail": "qmod.py:734\n  /tmp/gw/SSMToybox/repo/ssmtoybox/bq/bqmod.py:734: DeprecationWarning: invalid escape sequence \\l\n    \"\"\"\n\nssmtoybox/utils.py:19\n  /tmp/gw/SSMToybox/repo/ssmtoybox/utils.py:19: DeprecationWarning: invalid escape sequence \\m\n    \"\"\"\n\nssmtoybox/utils.py:68\n  /tmp/gw/SSMToybox/repo/ssmtoybox/utils.py:68: DeprecationWarning: invalid escape sequence \\S\n    \"\"\"\n\nssmtoybox/ssmod.py:588\n  /tmp/gw/SSMToybox/repo/ssmtoybox/ssmod.py:588: DeprecationWarning: invalid escape sequence \\D\n    \"\"\"\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n29 tests collected in 2.59s\n",
+ "first_run_tail": "====================== short test summary info ============================\nFAILED ssmtoybox/tests/test_bqmod.py::BayesSardModelTest::test_mc_poly_verification - AttributeError: module 'numpy' has no attribute 'int'.\n`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n1 failed, 28 deselected in 0.86s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AttributeError: module 'numpy' has no attribute 'int'.\n`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any "
+ ],
+ "seconds": 178.9,
+ "reproduced": false
+}

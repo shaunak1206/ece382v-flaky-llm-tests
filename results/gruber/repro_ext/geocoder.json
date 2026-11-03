@@ -1,0 +1,25 @@
+{
+ "project": "geocoder",
+ "url": "https://github.com/DenisCarriere/geocoder",
+ "sha": "39b9999ec70e61da9fa52fe9fe82a261ad70fa8b",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.9333333333333333,
+ "test_file": "tests/test_gaode.py",
+ "test_func": "test_gaode_reverse",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of codecov==2.0.9 and you require codecov==2.0.9, we can conclude that your requirements are unsatisfiable.\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_gaode_reverse",
+ "collect_tail": "re either\n\n../venv/lib/python3.8/site-packages/click/_compat.py:14\n  /tmp/gw/geocoder/venv/lib/python3.8/site-packages/click/_compat.py:14: DeprecationWarning: invalid escape sequence \\[\n    _ansi_re = re.compile('\\033\\[((?:\\d|;)*)([a-zA-Z])')\n\n../venv/lib/python3.8/site-packages/click/decorators.py:93\n  /tmp/gw/geocoder/venv/lib/python3.8/site-packages/click/decorators.py:93: DeprecationWarning: invalid escape sequence \\s\n    \"\"\"Creates a new :class:`Command` and uses the decorated function as\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n2 tests collected in 0.20s\n",
+ "first_run_tail": "c' is deprecated since Python 3.3, and in 3.10 it will stop working\n    from collections import Mapping, MutableMapping\n\ntests/test_gaode.py::test_gaode_reverse\n  /tmp/gw/geocoder/venv/lib/python3.8/site-packages/requests/models.py:177: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    if isinstance(hook, collections.Callable):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpte4gx9q9.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_gaode.py::test_gaode_reverse - KeyError: 'regeocode'\n1 failed, 1 deselected, 4 warnings in 0.79s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "KeyError: 'regeocode'"
+ ],
+ "seconds": 106.0,
+ "reproduced": false
+}

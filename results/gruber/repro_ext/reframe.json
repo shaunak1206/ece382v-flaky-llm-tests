@@ -1,0 +1,23 @@
+{
+ "project": "reframe",
+ "url": "https://github.com/eth-cscs/reframe",
+ "sha": "576eb3f1dcc015d1e6d7a10602c748d4f810da68",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.10555555555555556,
+ "test_file": "unittests/test_policies.py",
+ "test_func": "test_kbd_interrupt_in_wait_with_limited_concurrency",
+ "install_ok": true,
+ "install_log_tail": "in run_setup\n             exec(code, locals())\n           File \"<string>\", line 8, in <module>\n           File \"/tmp/gw/reframe/repo/reframe/__init__.py\", line 26, in <module>\n             from reframe.core.pipeline import *     # noqa: F401, F403\n           File \"/tmp/gw/reframe/repo/reframe/core/pipeline.py\", line 26, in <module>\n             import reframe.core.runtime as rt\n           File \"/tmp/gw/reframe/repo/reframe/core/runtime.py\", line 14, in <module>\n             import reframe.core.config as config\n           File \"/tmp/gw/reframe/repo/reframe/core/config.py\", line 10, in <module>\n             import jsonschema\n         ModuleNotFoundError: No module named 'jsonschema'\n\n[.] rc=1 rk/_temp/setup-uv-cache/builds-v0/.tmpsg7Iwm/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 8, in <module>\n           File \"/tmp/gw/reframe/repo/reframe/__init__.py\", line 26, in <module>\n             from reframe.core.pipeline import *     # noqa: F401, F403\n           File \"/tmp/gw/reframe/repo/reframe/core/pipeline.py\", line 26, in <module>\n             import reframe.core.runtime as rt\n           File \"/tmp/gw/reframe/repo/reframe/core/runtime.py\", line 14, in <module>\n             import reframe.core.config as config\n           File \"/tmp/gw/reframe/repo/reframe/core/config.py\", line 10, in <module>\n             import jsonschema\n         ModuleNotFoundError: No module named 'jsonschema'\n",
+ "test": "test_kbd_interrupt_in_wait_with_limited_concurrency",
+ "collect_tail": ":test_concurrency_none\nunittests/test_policies.py::test_kbd_interrupt_in_wait_with_concurrency\nunittests/test_policies.py::test_kbd_interrupt_in_wait_with_limited_concurrency\nunittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency\nunittests/test_policies.py::test_kbd_interrupt_in_setup_with_limited_concurrency\nunittests/test_policies.py::test_poll_fails_main_loop\nunittests/test_policies.py::test_poll_fails_busy_loop\nunittests/test_policies.py::test_compile_fail_reschedule_main_loop\nunittests/test_policies.py::test_compile_fail_reschedule_busy_loop\n\n41 tests collected in 0.19s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmp4846ns36.xml -------------------\n1 passed, 40 deselected in 1.14s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 150,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 201.9,
+ "reproduced": false
+}

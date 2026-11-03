@@ -1,0 +1,25 @@
+{
+ "project": "music-dl",
+ "url": "https://github.com/0xHJK/music-dl",
+ "sha": "883b643d62c63496572f5b883f76359324a5c853",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.011111111111111112,
+ "test_file": "tests/test_addon_baidu.py",
+ "test_func": "test_baidu",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_baidu",
+ "collect_tail": "tests/test_addon_baidu.py::test_baidu\n\n=============================== warnings summary ===============================\nmusic_dl/song.py:148\n  /tmp/gw/music-dl/repo/music_dl/song.py:148: DeprecationWarning: invalid escape sequence \\s\n    keywords = re.split(\";|,|\\s|\\*\", config.get(\"keyword\"))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 test collected in 0.23s\n",
+ "first_run_tail": " to resolve 'musicapi.qianqian.com' ([Errno -2] Name or service not known)\"))\n\n../venv/lib/python3.8/site-packages/requests/adapters.py:700: ConnectionError\n------------------- generated xml file: /tmp/tmpkzo3br1p.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_addon_baidu.py::test_baidu - requests.exceptions.ConnectionError: HTTPConnectionPool(host='musicapi.qianqian.com', port=80): Max retries exceeded with url: /v1/restserver/ting?query=%E8%AE%B8%E5%B7%8D&method=baidu.ting.search.common&format=json&page_no=1&page_size=5 (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x7adcdc1598e0>: Failed to resolve 'musicapi.qianqian.com' ([Errno -2] Name or service not known)\"))\n1 failed in 1.14s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "requests.exceptions.ConnectionError: HTTPConnectionPool(host='musicapi.qianqian.com', port=80): Max retries exceeded with url: /v1/restserver/ting?query=%E8%AE%B8%E5%B7%8D&method=baidu.ting.search.com"
+ ],
+ "seconds": 71.5,
+ "reproduced": false
+}

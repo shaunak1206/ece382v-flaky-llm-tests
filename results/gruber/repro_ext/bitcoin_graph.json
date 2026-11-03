@@ -1,0 +1,25 @@
+{
+ "project": "bitcoin_graph",
+ "url": "https://github.com/joeblankenship1/bitcoin_graph",
+ "sha": "8f5dee94b0cc82a0a0d8a412709a13a38d180167",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.01,
+ "test_file": "test/test_bitcoin_graph.py",
+ "test_func": "test_bitcoin_data_export_adjmatrix",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1   File \"/home/runner/work/_temp/setup-uv-cache/sdists-v10/pypi/numpy/1.17.2/WAGiupeALH1O39G0/src/numpy/distutils/mingw32ccompiler.py\", line 34, in <module>\n             from distutils.msvccompiler import get_build_version as get_build_msvc_version\n         ModuleNotFoundError: No module named 'distutils.msvccompiler'\n\nhint: This error likely indicates that `numpy@1.17.2` depends on `distutils.msvccompiler`, but doesn't declare it as a build dependency. If `numpy` is a first-party package, consider adding `distutils.msvccompiler` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:\n\n[tool.uv.extra-build-dependencies]\nnumpy = [\"distutils.msvccompiler\"]\n\nor `uv pip install distutils.msvccompiler` into the environment and re-run with `--no-build-isolation`.\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto pandas] rc=0 ",
+ "test": "test_bitcoin_data_export_adjmatrix",
+ "collect_tail": " error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.91s\n",
+ "first_run_tail": "======== short test summary info ============================\nERROR test/test_bitcoin_graph.py - AttributeError: module 'numpy' has no attribute 'int'.\n`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.27s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 5.8,
+ "reproduced": false
+}

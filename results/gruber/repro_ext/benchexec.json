@@ -1,0 +1,25 @@
+{
+ "project": "benchexec",
+ "url": "https://github.com/sosy-lab/benchexec",
+ "sha": "d29aba0c958dd034b172c099df6c4bf394087222",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.1,
+ "test_file": "benchexec/test_runexecutor.py",
+ "test_func": "test_stop_run",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_stop_run",
+ "collect_tail": "WithContainer::test_temp_dirs_are_removed\nbenchexec/test_runexecutor.py::TestRunExecutorWithContainer::test_uptime_with_lxcfs\nbenchexec/test_runexecutor.py::TestRunExecutorWithContainer::test_uptime_without_lxcfs\nbenchexec/test_runexecutor.py::TestRunExecutorWithContainer::test_walltime_limit\nbenchexec/test_runexecutor.py::TestRunExecutorWithContainer::test_wrong_command\nbenchexec/test_runexecutor.py::TestRunExecutorWithContainer::test_wrong_command_extern\nbenchexec/test_runexecutor.py::TestRunExecutorUnits::test_get_debug_output_with_error_report_and_invalid_utf8\n\n85 tests collected in 0.06s\n",
+ "first_run_tail": "r.py:361 Cannot measure memory consumption without memory cgroup.\nWARNING  root:cgroups.py:284 Cgroup subsystem cpuset is not available. Please make sure it is supported by your kernel and mounted.\nCRITICAL root:runexecutor.py:793 Cannot execute '/bin/sleep': execution in container failed, check log for details.\n------------------- generated xml file: /tmp/tmp2e526ymn.xml -------------------\n=========================== short test summary info ============================\nFAILED benchexec/test_runexecutor.py::TestRunExecutorWithContainer::test_stop_run - AssertionError: 'failed' != 'killed'\n- failed\n+ killed\n : Unexpected terminationreason, output is \n/bin/sleep 10\n\n\n--------------------------------------------------------------------------------\n1 failed, 1 skipped, 83 deselected in 0.11s\n",
+ "collected": 2,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: 'failed' != 'killed'\n- failed\n+ killed\n : Unexpected terminationreason, output is \n/bin/sleep 10\n\n\n--------------------------------------------------------------------------------"
+ ],
+ "seconds": 47.4,
+ "reproduced": false
+}

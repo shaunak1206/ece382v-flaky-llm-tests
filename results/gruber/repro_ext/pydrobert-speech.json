@@ -1,0 +1,25 @@
+{
+ "project": "pydrobert-speech",
+ "url": "https://github.com/sdrobert/pydrobert-speech",
+ "sha": "ed023518408034c2ed1c77c938f0f379d476b121",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.02,
+ "test_file": "tests/test_filters.py",
+ "test_func": "test_truncated_matches_full",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 \n[auto six] rc=0 ",
+ "test": "test_truncated_matches_full",
+ "collect_tail": "ak_matches[4-0.9-100]\ntests/test_filters.py::test_gamma_window_peak_matches[4-0.9-1000]\ntests/test_filters.py::test_kaldi_filters_match_fbank_filters\n\n=============================== warnings summary ===============================\npydrobert/speech/__init__.py:45\n  /tmp/gw/pydrobert-speech/repo/pydrobert/speech/__init__.py:45: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n    from pkg_resources import DistributionNotFound\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n99 tests collected in 0.11s\n",
+ "first_run_tail": "................                                                         [100%]\n=============================== warnings summary ===============================\npydrobert/speech/__init__.py:45\n  /tmp/gw/pydrobert-speech/repo/pydrobert/speech/__init__.py:45: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n    from pkg_resources import DistributionNotFound\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmperk8sz_k.xml -------------------\n16 passed, 83 deselected, 1 warning in 0.17s\n",
+ "collected": 16,
+ "runs": 150,
+ "passed": 149,
+ "failed": 1,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: idx: 10 threshold:0.0005 full:[0.00049191-9.01076877e-05j] challenge:[0.+0.j]\nassert False\n +  where False = <function allclose at 0x7204e8a53790>(array([ 4.12458425e-05-8.96221079e-06"
+ ],
+ "seconds": 53.6,
+ "reproduced": true
+}

@@ -1,0 +1,23 @@
+{
+ "project": "symphony",
+ "url": "https://github.com/SurrealAI/symphony",
+ "sha": "747b87eee20d48032b4a554950687d0b1209fd24",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.1111111111111111,
+ "test_file": "test/test_tmux_topdown.py",
+ "test_func": "test_duplicate_names",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_duplicate_names",
+ "collect_tail": "x_topdown.py::TestTmuxCluster::test_transfer_file\n\n=============================== warnings summary ===============================\n../venv/lib/python3.8/site-packages/benedict/config.py:13\n  /tmp/gw/symphony/venv/lib/python3.8/site-packages/benedict/config.py:13: DeprecationWarning: invalid escape sequence \\[\n    _enum_marker = re.compile('_enum\\[(.*)\\]_')\n\nsymphony/kube/cluster.py:449\n  /tmp/gw/symphony/repo/symphony/kube/cluster.py:449: DeprecationWarning: invalid escape sequence \\.\n    \"\"\"\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n21 tests collected in 0.23s\n",
+ "first_run_tail": "onWarning: Window.attached_pane() is deprecated in favor of Window.active_pane()\n    pane = window.attached_pane\n\ntest/test_tmux_topdown.py::TestTmuxCluster::test_duplicate_names\n  /tmp/gw/symphony/repo/test/test_tmux_topdown.py:72: DeprecationWarning: Session.kill_session() is deprecated in favor of Session.kill()\n    sess.kill_session()\n\ntest/test_tmux_topdown.py::TestTmuxCluster::test_duplicate_names\n  /tmp/gw/symphony/repo/test/test_tmux_topdown.py:62: DeprecationWarning: Server.kill_server() is deprecated in favor of Server.kill()\n    libtmux.Server(socket_name=_TEST_SERVER).kill_server()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmp4enya_uu.xml -------------------\n1 passed, 20 deselected, 5 warnings in 0.64s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 150,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 122.9,
+ "reproduced": false
+}

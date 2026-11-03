@@ -1,0 +1,25 @@
+{
+ "project": "logbeam",
+ "url": "https://github.com/osperlabs/logbeam",
+ "sha": "05a6609d6ecd066a35c79ab4ff5726c3cb69f03d",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.05,
+ "test_file": "logbeam/test/test_logbeam.py",
+ "test_func": "test_sink_timeout",
+ "install_ok": true,
+ "install_log_tail": "0 and boto3>=1.4.4,<=1.42.97 are incompatible. (2)\n\n         Because the current Python version (3.8.20) does not satisfy Python>=3.10 and boto3>=1.43.0 depends on Python>=3.10, we can conclude that boto3>=1.43.0 cannot be used.\n         And because we know from (2) that awscli-cwlogs==1.4.0 and boto3>=1.4.4,<=1.42.97 are incompatible, we can conclude that awscli-cwlogs==1.4.0 and boto3>=1.4.4 are incompatible.\n         And because logbeam==1.0.1 depends on awscli-cwlogs==1.4.0 and boto3>=1.4.4, we can conclude that logbeam==1.0.1 cannot be used.\n         And because only logbeam==1.0.1 is available and you require logbeam, we can conclude that your requirements are unsatisfiable.\n\n[.] rc=1 hat awscli-cwlogs==1.4.0 and boto3>=1.4.4,<=1.37.38 are incompatible, we can conclude that awscli-cwlogs==1.4.0 and boto3>=1.4.4,<=1.42.97 are incompatible. (2)\n\n         Because the current Python version (3.8.20) does not satisfy Python>=3.10 and boto3>=1.43.0 depends on Python>=3.10, we can conclude that boto3>=1.43.0 cannot be used.\n         And because we know from (2) that awscli-cwlogs==1.4.0 and boto3>=1.4.4,<=1.42.97 are incompatible, we can conclude that awscli-cwlogs==1.4.0 and boto3>=1.4.4 are incompatible.\n         And because logbeam==1.0.1 depends on awscli-cwlogs==1.4.0 and boto3>=1.4.4, we can conclude that logbeam==1.0.1 cannot be used.\n         And because only logbeam==1.0.1 is available and you require logbeam, we can conclude that your requirements are unsatisfiable.\n",
+ "test": "test_sink_timeout",
+ "collect_tail": "/lib/python3.8/site-packages/pkg_resources/__init__.py\", line 2504, in require\n    items = working_set.resolve(reqs, env, installer, extras=self.extras)\n  File \"/tmp/gw/logbeam/venv/lib/python3.8/site-packages/pkg_resources/__init__.py\", line 798, in resolve\n    dist = self._resolve_dist(\n  File \"/tmp/gw/logbeam/venv/lib/python3.8/site-packages/pkg_resources/__init__.py\", line 844, in _resolve_dist\n    raise VersionConflict(dist, req).with_context(dependent_req)\npkg_resources.VersionConflict: (pytest 2.9.0 (/tmp/gw/logbeam/venv/lib/python3.8/site-packages), Requirement.parse('pytest>=7.0.0'))\n",
+ "first_run_tail": "ntrypoints\n    plugin = ep.load()\n  File \"/tmp/gw/logbeam/venv/lib/python3.8/site-packages/pkg_resources/__init__.py\", line 2481, in load\n    self.require(*args, **kwargs)\n  File \"/tmp/gw/logbeam/venv/lib/python3.8/site-packages/pkg_resources/__init__.py\", line 2504, in require\n    items = working_set.resolve(reqs, env, installer, extras=self.extras)\n  File \"/tmp/gw/logbeam/venv/lib/python3.8/site-packages/pkg_resources/__init__.py\", line 798, in resolve\n    dist = self._resolve_dist(\n  File \"/tmp/gw/logbeam/venv/lib/python3.8/site-packages/pkg_resources/__init__.py\", line 844, in _resolve_dist\n    raise VersionConflict(dist, req).with_context(dependent_req)\npkg_resources.VersionConflict: (pytest 2.9.0 (/tmp/gw/logbeam/venv/lib/python3.8/site-packages), Requirement.parse('pytest>=7.0.0'))\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "t\n    raise VersionConflict(dist, req).with_context(dependent_req)\npkg_resources.VersionConflict: (pytest 2.9.0 (/tmp/gw/logbeam/venv/lib/python3.8/site-packages), Requirement.parse('pytest>=7.0.0'))\n"
+ ],
+ "seconds": 7.7,
+ "reproduced": false
+}

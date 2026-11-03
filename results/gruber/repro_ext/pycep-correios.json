@@ -1,0 +1,25 @@
+{
+ "project": "pycep-correios",
+ "url": "https://github.com/mstuttgart/pycep-correios",
+ "sha": "44fd6a1ede24d6215afa573a9faa2f0db58bad25",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.135,
+ "test_file": "tests/test_pycep_correios.py",
+ "test_func": "test_consultar_cep_integration",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_consultar_cep_integration",
+ "collect_tail": "tests/test_pycep_correios.py::TestPyCEPCorreios::test_consultar_cep\ntests/test_pycep_correios.py::TestPyCEPCorreios::test_consultar_cep_integration\ntests/test_pycep_correios.py::TestPyCEPCorreios::test_consultar_return_error\ntests/test_pycep_correios.py::TestPyCEPCorreios::test_formatar_cep\ntests/test_pycep_correios.py::TestPyCEPCorreios::test_validar_cep\n\n5 tests collected in 0.23s\n",
+ "first_run_tail": "ecationWarning: Call to deprecated function (or staticmethod) consultar_cep. ('consultar_cep' is no longer supported and will be removed in a future release. Please, use 'get_address_from_cep' instead.) -- Deprecated since version 4.0.0.\n    endereco = consultar_cep('37.503-130')\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmprmbozxvm.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_pycep_correios.py::TestPyCEPCorreios::test_consultar_cep_integration - requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl\n1 failed, 4 deselected, 1 warning in 1.14s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl"
+ ],
+ "seconds": 161.3,
+ "reproduced": false
+}

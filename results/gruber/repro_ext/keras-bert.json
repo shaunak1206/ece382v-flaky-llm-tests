@@ -1,0 +1,27 @@
+{
+ "project": "keras-bert",
+ "url": "https://github.com/CyberZHG/keras-bert",
+ "sha": "e9ccba8ed56b52102bfd08fd231bf9b79d7e0e3e",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.0125,
+ "test_file": "tests/test_bert.py",
+ "test_func": "test_fit",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_fit",
+ "collect_tail": "wnloads a file from a URL if it not already in the cache.\n\n../venv/lib/python3.8/site-packages/keras/utils/vis_utils.py:285\n  /tmp/gw/keras-bert/venv/lib/python3.8/site-packages/keras/utils/vis_utils.py:285: DeprecationWarning: invalid escape sequence \\{\n    .replace(\"{\", \"\\{\")\n\n../venv/lib/python3.8/site-packages/keras/utils/vis_utils.py:286\n  /tmp/gw/keras-bert/venv/lib/python3.8/site-packages/keras/utils/vis_utils.py:286: DeprecationWarning: invalid escape sequence \\}\n    .replace(\"}\", \"\\}\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n5 tests collected in 4.74s\n",
+ "first_run_tail": "/initializers/initializers.py:120: UserWarning: The initializer VarianceScaling is unseeded and being called multiple times, which will return identical values each time (even if the initializer is unseeded). Please update your code to provide a seed to the initializer, or avoid using the same initalizer instance more than once.\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpvzruinv3.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_bert.py::TestBERT::test_fit - ValueError: Could not interpret optimizer identifier: <keras_bert.optimizers.warmup_v2.AdamWarmup object at 0x775b6c9577f0>\n1 failed, 4 deselected, 1 warning in 5.17s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "ValueError: Could not interpret optimizer identifier: <keras_bert.optimizers.warmup_v2.AdamWarmup object at 0x775b6c9577f0>",
+  "ValueError: Could not interpret optimizer identifier: <keras_bert.optimizers.warmup_v2.AdamWarmup object at 0x79907b317820>",
+  "ValueError: Could not interpret optimizer identifier: <keras_bert.optimizers.warmup_v2.AdamWarmup object at 0x7cb6f2717820>"
+ ],
+ "seconds": 862.5,
+ "reproduced": false
+}

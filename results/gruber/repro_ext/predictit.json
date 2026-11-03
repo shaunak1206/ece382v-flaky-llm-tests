@@ -1,0 +1,25 @@
+{
+ "project": "predictit",
+ "url": "https://github.com/Malachov/predictit",
+ "sha": "15ff850d544d8d456e0ac0842079131c0f3db26e",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.05,
+ "test_file": "tests/test_it.py",
+ "test_func": "test_main_from_config",
+ "install_ok": true,
+ "install_log_tail": "setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 4, in <module>\n           File \"/tmp/gw/predictit/repo/predictit/__init__.py\", line 59, in <module>\n             from . import analyze\n           File \"/tmp/gw/predictit/repo/predictit/analyze.py\", line 5, in <module>\n             from predictit import misc\n           File \"/tmp/gw/predictit/repo/predictit/misc.py\", line 5, in <module>\n             import pygments\n         ModuleNotFoundError: No module named 'pygments'\n\n[.] rc=1 lds-v0/.tmpeFJ72W/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpeFJ72W/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 4, in <module>\n           File \"/tmp/gw/predictit/repo/predictit/__init__.py\", line 59, in <module>\n             from . import analyze\n           File \"/tmp/gw/predictit/repo/predictit/analyze.py\", line 5, in <module>\n             from predictit import misc\n           File \"/tmp/gw/predictit/repo/predictit/misc.py\", line 5, in <module>\n             import pygments\n         ModuleNotFoundError: No module named 'pygments'\n\n[auto matplotlib] rc=0 \n[auto pandas] rc=0 \n[auto pygments] rc=0 \n[auto statsmodels] rc=0 \n[auto scikit-learn] rc=0 \n[auto sklearn_extensions] rc=0 ",
+ "test": "test_main_from_config",
+ "collect_tail": "reme_learning_machines.elm import ELMClassifier, ELMRegressor, GenELMClassifier, GenELMRegressor\n../venv/lib/python3.8/site-packages/sklearn_extensions/extreme_learning_machines/elm.py:28: in <module>\n    from scipy.linalg import pinv2\nE   ImportError: cannot import name 'pinv2' from 'scipy.linalg' (/tmp/gw/predictit/venv/lib/python3.8/site-packages/scipy/linalg/__init__.py)\n=========================== short test summary info ============================\nERROR tests/test_it.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.75s\n",
+ "first_run_tail": "../venv/lib/python3.8/site-packages/sklearn_extensions/extreme_learning_machines/__init__.py:1: in <module>\n    from sklearn_extensions.extreme_learning_machines.elm import ELMClassifier, ELMRegressor, GenELMClassifier, GenELMRegressor\n../venv/lib/python3.8/site-packages/sklearn_extensions/extreme_learning_machines/elm.py:28: in <module>\n    from scipy.linalg import pinv2\nE   ImportError: cannot import name 'pinv2' from 'scipy.linalg' (/tmp/gw/predictit/venv/lib/python3.8/site-packages/scipy/linalg/__init__.py)\n------------------- generated xml file: /tmp/tmpok9decsc.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_it.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.77s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 16.4,
+ "reproduced": false
+}

@@ -1,0 +1,25 @@
+{
+ "project": "chazutsu",
+ "url": "https://github.com/chakki-works/chazutsu",
+ "sha": "734828f2f05799a1d59d9280a032bf5996fe3261",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.005555555555555556,
+ "test_file": "tests/test_text8.py",
+ "test_func": "test_extract",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_extract",
+ "collect_tail": "g: invalid escape sequence \\.\n    self._line_strip_pattern = re.compile(\"(\\.|\\!|\\?|\\\"|\\'|,|\\(|\\)|\\<|\\>)\")\n\nchazutsu/datasets/multi_nli.py:41\n  /tmp/gw/chazutsu/repo/chazutsu/datasets/multi_nli.py:41: DeprecationWarning: invalid escape sequence \\(\n    self._tokenize_pattern = re.compile(\"\\(|\\)\")\n\nchazutsu/datasets/news_group20.py:19\n  /tmp/gw/chazutsu/repo/chazutsu/datasets/news_group20.py:19: DeprecationWarning: invalid escape sequence \\w\n    self._mail_pattern = re.compile(\"[\\w|\\.]+@[\\w|\\.]+\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n3 tests collected in 0.79s\n",
+ "first_run_tail": "0%|          | 0.00/11.9 [00:00<?, ?B/s]\n101%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12.0/11.9 [00:00<-00:00, 60.0kB/s]\n=============================== warnings summary ===============================\ntests/test_text8.py::TestText8::test_extract\n  /tmp/gw/chazutsu/venv/lib/python3.8/site-packages/tqdm/std.py:636: TqdmWarning: clamping frac to range [0, 1]\n    full_bar = Bar(frac,\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpjxg7kmoy.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_text8.py::TestText8::test_extract - FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gw/chazutsu/repo/tests/data/text8/_extracted/text8'\n2 deselected, 1 warning, 1 error in 0.48s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gw/chazutsu/repo/tests/data/text8/_extracted/text8'\""
+ ],
+ "seconds": 5.1,
+ "reproduced": false
+}

@@ -1,0 +1,25 @@
+{
+ "project": "addon-check",
+ "url": "https://github.com/xbmc/addon-check",
+ "sha": "35cde58ed8b22b8df27efe232d9b2b2c25b079d5",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.00625,
+ "test_file": "tests/test_check_addon.py",
+ "test_func": "test_start",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_start",
+ "collect_tail": "eck_entrypoint,\nkodi_addon_checker/check_artwork.py:19: in <module>\n    from .versions import KodiVersion\nkodi_addon_checker/versions.py:9: in <module>\n    from packaging.version import parse, Version, LegacyVersion\nE   ImportError: cannot import name 'LegacyVersion' from 'packaging.version' (/tmp/gw/addon-check/venv/lib/python3.8/site-packages/packaging/version.py)\n=========================== short test summary info ============================\nERROR tests/test_check_addon.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.10s\n",
+ "first_run_tail": "addon import get_all_repo_addons\nkodi_addon_checker/check_addon.py:13: in <module>\n    from . import (check_artwork, check_dependencies, check_entrypoint,\nkodi_addon_checker/check_artwork.py:19: in <module>\n    from .versions import KodiVersion\nkodi_addon_checker/versions.py:9: in <module>\n    from packaging.version import parse, Version, LegacyVersion\nE   ImportError: cannot import name 'LegacyVersion' from 'packaging.version' (/tmp/gw/addon-check/venv/lib/python3.8/site-packages/packaging/version.py)\n------------------- generated xml file: /tmp/tmp_9k09vbd.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_check_addon.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.09s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 4.8,
+ "reproduced": false
+}

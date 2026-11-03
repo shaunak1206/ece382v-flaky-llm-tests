@@ -1,0 +1,27 @@
+{
+ "project": "knit",
+ "url": "https://github.com/dask/knit/",
+ "sha": "934aee7012967453b7343f6e01f16b26aece2aaf",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.085,
+ "test_file": "knit/tests/test_env.py",
+ "test_func": "test_miniconda_install",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_miniconda_install",
+ "collect_tail": "dask_yarn/core.py:15: DeprecationWarning: invalid escape sequence \\w\n    prog = re.compile('\\w+')\n\nknit/tests/test_env.py:16\n  /tmp/gw/knit/repo/knit/tests/test_env.py:16: PytestDeprecationWarning: @pytest.yield_fixture is deprecated.\n  Use @pytest.fixture instead; they are the same.\n    def c():\n\nknit/tests/test_env.py:24\n  /tmp/gw/knit/repo/knit/tests/test_env.py:24: PytestDeprecationWarning: @pytest.yield_fixture is deprecated.\n  Use @pytest.fixture instead; they are the same.\n    def tmp():\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n4 tests collected in 0.20s\n",
+ "first_run_tail": "========================\nFAILED knit/tests/test_env.py::test_miniconda_install - AssertionError: assert False\n +  where False = <function exists at 0x76e0cf5fc5e0>('/tmp/tmp03m9yhre/bin/conda')\n +    where <function exists at 0x76e0cf5fc5e0> = <module 'posixpath' from '/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/posixpath.py'>.exists\n +      where <module 'posixpath' from '/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/posixpath.py'> = os.path\n +    and   '/tmp/tmp03m9yhre/bin/conda' = <knit.env.CondaCreator object at 0x76e0ce11cee0>.conda_bin\nERROR knit/tests/test_env.py::test_miniconda_install - FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp03m9yhre'\n1 failed, 3 deselected, 2 warnings, 1 error in 2.21s\n",
+ "collected": 2,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert False\n +  where False = <function exists at 0x76e0cf5fc5e0>('/tmp/tmp03m9yhre/bin/conda')\n +    where <function exists at 0x76e0cf5fc5e0> = <module 'posixpath' from '/home/runne",
+  "failed on teardown with \"FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp03m9yhre'\"",
+  "AssertionError: assert False\n +  where False = <function exists at 0x77df4909c5e0>('/tmp/tmpg7k_m2_z/bin/conda')\n +    where <function exists at 0x77df4909c5e0> = <module 'posixpath' from '/home/runne"
+ ],
+ "seconds": 363.0,
+ "reproduced": false
+}

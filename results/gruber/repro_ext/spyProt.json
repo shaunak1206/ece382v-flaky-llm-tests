@@ -1,0 +1,25 @@
+{
+ "project": "spyProt",
+ "url": "https://github.com/Zedelghem/spyProt",
+ "sha": "e2d978ce68ab9449acfc39dcc05b54d0c41460f6",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.15,
+ "test_file": "test_spyprot.py",
+ "test_func": "test_get_pfam_annotations",
+ "install_ok": true,
+ "install_log_tail": "File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpGDpmbS/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpGDpmbS/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpGDpmbS/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 1, in <module>\n         ModuleNotFoundError: No module named 'skbuild'\n\n[.] rc=1 res_for_build_wheel\n             return self._get_build_requires(config_settings, requirements=[])\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpm4kFK4/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpm4kFK4/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpm4kFK4/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 1, in <module>\n         ModuleNotFoundError: No module named 'skbuild'\n",
+ "test": "test_get_pfam_annotations",
+ "collect_tail": "test_spyprot.py::test_get_annotations\ntest_spyprot.py::test_get_ec_annotations\ntest_spyprot.py::test_get_pfam_annotations\ntest_spyprot.py::test_fetch_pdb_info\n\n4 tests collected in 0.38s\n",
+ "first_run_tail": "py:19: AssertionError\n----------------------------- Captured stdout call -----------------------------\ndownloading file: /home/runner/.local/spyprot/pdb_chain_pfam.tsv.gz from: http://ftp.ebi.ac.uk/pub/databases/msd/sifts/flatfiles/tsv/pdb_chain_pfam.tsv.gz\ndownloading file: /home/runner/.local/spyprot/pdb_chain_pfam_desc from: http://pfam.xfam.org/families?output=text\n------------------- generated xml file: /tmp/tmpbl_a4y3l.xml -------------------\n=========================== short test summary info ============================\nFAILED test_spyprot.py::test_get_pfam_annotations - assert \"[('1j85', 'A', '', '', '')]\" == \"[('1j85', 'A..., 'PF00588')]\"\n  - [('1j85', 'A', 'SpoU_methylase', 'SpoU rRNA Methylase family', 'PF00588')]\n  + [('1j85', 'A', '', '', '')]\n1 failed, 3 deselected in 9.06s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert \"[('1j85', 'A', '', '', '')]\" == \"[('1j85', 'A..., 'PF00588')]\"\n  - [('1j85', 'A', 'SpoU_methylase', 'SpoU rRNA Methylase family', 'PF00588')]\n  + [('1j85', 'A', '', '', '')]"
+ ],
+ "seconds": 119.6,
+ "reproduced": false
+}

@@ -1,0 +1,25 @@
+{
+ "project": "OnToma",
+ "url": "https://github.com/opentargets/OnToma",
+ "sha": "0a76f30c03eb44a62223a5c83f13e2f8d9ba67a4",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.00625,
+ "test_file": "tests/test_ontoma.py",
+ "test_func": "test_find_term_asthma",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_find_term_asthma",
+ "collect_tail": "tests/test_ontoma.py::test_find_term_asthma\ntests/test_ontoma.py::test_is_included\ntests/test_ontoma.py::test_find_term_excludes\ntests/test_ontoma.py::test_suggest_hp_term_not_excluded\ntests/test_ontoma.py::test_catch_ordo\ntests/test_ontoma.py::test_query_comma\n\n6 tests collected in 0.02s\n",
+ "first_run_tail": "self.status_code < 600:\n            http_error_msg = (\n                f\"{self.status_code} Server Error: {reason} for url: {self.url}\"\n            )\n    \n        if http_error_msg:\n>           raise HTTPError(http_error_msg, response=self)\nE           requests.exceptions.HTTPError: 400 Client Error:  for url: https://www.ebi.ac.uk/spot/oxo/api/datasources?size=500\n\n../venv/lib/python3.8/site-packages/requests/models.py:1026: HTTPError\n------------------- generated xml file: /tmp/tmpybnre85m.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_ontoma.py::test_find_term_asthma - requests.exceptions.HTTPError: 400 Client Error:  for url: https://www.ebi.ac.uk/spot/oxo/api/datasources?size=500\n5 deselected, 1 error in 0.79s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "failed on setup with \"requests.exceptions.HTTPError: 400 Client Error:  for url: https://www.ebi.ac.uk/spot/oxo/api/datasources?size=500\""
+ ],
+ "seconds": 4.9,
+ "reproduced": false
+}

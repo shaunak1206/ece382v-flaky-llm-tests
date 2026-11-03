@@ -1,0 +1,25 @@
+{
+ "project": "keplertools",
+ "url": "https://github.com/dsavransky/keplertools",
+ "sha": "8a46aea897a7cd584c4c2afa1e5ea160f47aef6e",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.2,
+ "test_file": "tests/test_keplertools.py",
+ "test_func": "test_orbElem2vec_Nbody",
+ "install_ok": true,
+ "install_log_tail": "  File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpsklLRt/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpsklLRt/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpsklLRt/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 2, in <module>\n         ModuleNotFoundError: No module named 'numpy'\n\n[.] rc=1 uires_for_build_wheel\n             return self._get_build_requires(config_settings, requirements=[])\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpGVqx16/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpGVqx16/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpGVqx16/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 2, in <module>\n         ModuleNotFoundError: No module named 'numpy'\n",
+ "test": "test_orbElem2vec_Nbody",
+ "collect_tail": "ccanom_vecM_vece_noc\ntests/test_keplertools.py::TestKeplerTools::test_orbElem2vec_1body\ntests/test_keplertools.py::TestKeplerTools::test_orbElem2vec_Nbody\ntests/test_keplertools.py::TestKeplerTools::test_trueanom\n\n=============================== warnings summary ===============================\nkeplertools/fun.py:343\n  /tmp/gw/keplertools/repo/keplertools/fun.py:343: DeprecationWarning: invalid escape sequence \\s\n    \"\"\" Calculate inertial frame components of perifocal frame unit vectors scaled\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n10 tests collected in 0.26s\n",
+ "first_run_tail": "*2*np.pi\n        mus = np.random.rand(n)\n    \n        #convert back and forth to vectors\n        rs,vs,ABs = orbElem2vec(E,mus,orbElem=(a,e,O,I,w),returnAB=True)\n        a1,e1,E1,O1,I1,w1,P1,tau1 = vec2orbElem(rs,vs,mus)\n    \n        tol = np.spacing(np.max(np.abs(np.linalg.norm(rs,axis=0))))*100000\n    \n        #check that you got back what you put in\n>       self.assertTrue(np.max(np.abs(a - a1))<tol)\nE       AssertionError: False is not true\n\ntests/test_keplertools.py:134: AssertionError\n------------------- generated xml file: /tmp/tmpq_bqqmbe.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_keplertools.py::TestKeplerTools::test_orbElem2vec_Nbody - AssertionError: False is not true\n1 failed, 9 deselected in 0.75s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 111,
+ "failed": 39,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: False is not true"
+ ],
+ "seconds": 206.4,
+ "reproduced": true
+}

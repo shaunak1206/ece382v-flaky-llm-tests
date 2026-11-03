@@ -1,0 +1,25 @@
+{
+ "project": "pyoos.git",
+ "url": "https://github.com/ioos/pyoos.git",
+ "sha": "908660385029ecd8eccda8ab3a6b20b47b915c77",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.405,
+ "test_file": "tests/collectors/test_wqp.py",
+ "test_func": "test_wqp_results_metadata",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_wqp_results_metadata",
+ "collect_tail": "tests/collectors/test_wqp.py::WqpTest::test_bad_wqp_site\ntests/collectors/test_wqp.py::WqpTest::test_into_dsg\ntests/collectors/test_wqp.py::WqpTest::test_wqp_results_metadata\ntests/collectors/test_wqp.py::WqpTest::test_wqp_sites_metadata\n\n4 tests collected in 0.50s\n",
+ "first_run_tail": "  # If provided, set socket level options before connecting.\n                _set_socket_options(sock, socket_options)\n    \n                if timeout is not _DEFAULT_TIMEOUT:\n                    sock.settimeout(timeout)\n                if source_address:\n                    sock.bind(source_address)\n>               sock.connect(sa)\nE               Failed: Timeout (>120.0s) from pytest-timeout.\n\n../venv/lib/python3.8/site-packages/urllib3/util/connection.py:73: Failed\n------------------- generated xml file: /tmp/tmpzgzrd6fd.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/collectors/test_wqp.py::WqpTest::test_wqp_results_metadata - Failed: Timeout (>120.0s) from pytest-timeout.\n1 failed, 3 deselected in 120.31s (0:02:00)\n",
+ "collected": 1,
+ "runs": 20,
+ "passed": 0,
+ "failed": 20,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "Failed: Timeout (>120.0s) from pytest-timeout."
+ ],
+ "seconds": 2417.0,
+ "reproduced": false
+}

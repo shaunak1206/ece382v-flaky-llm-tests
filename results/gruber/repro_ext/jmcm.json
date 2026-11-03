@@ -1,0 +1,26 @@
+{
+ "project": "jmcm",
+ "url": "https://github.com/Xuerui-Yang/jmcm",
+ "sha": "e82574eaad2195944ec1899a41de238f8948f554",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.027624309392265192,
+ "test_file": "tests/test_3jmcm.py",
+ "test_func": "test_modelselection",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1   File \"/home/runner/work/_temp/setup-uv-cache/sdists-v10/pypi/numpy/1.17.2/R5WY1sMkMNzY88pN/src/numpy/distutils/mingw32ccompiler.py\", line 34, in <module>\n             from distutils.msvccompiler import get_build_version as get_build_msvc_version\n         ModuleNotFoundError: No module named 'distutils.msvccompiler'\n\nhint: This error likely indicates that `numpy@1.17.2` depends on `distutils.msvccompiler`, but doesn't declare it as a build dependency. If `numpy` is a first-party package, consider adding `distutils.msvccompiler` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:\n\n[tool.uv.extra-build-dependencies]\nnumpy = [\"distutils.msvccompiler\"]\n\nor `uv pip install distutils.msvccompiler` into the environment and re-run with `--no-build-isolation`.\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto numpy] rc=0 \n[auto pandas] rc=0 \n[auto scipy] rc=0 \n[auto patsy] rc=0 \n[auto tabulate] rc=0 \n[auto matplotlib] rc=0 ",
+ "test": "test_modelselection",
+ "collect_tail": "tests/test_3jmcm.py::test_modelselection\ntests/test_3jmcm.py::test_modelfit\ntests/test_3jmcm.py::test_functions\n\n3 tests collected in 1.31s\n",
+ "first_run_tail": ".                                                                        [100%]\n------------------- generated xml file: /tmp/tmpzywpfq5z.xml -------------------\n1 passed, 2 deselected in 0.87s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 131,
+ "failed": 19,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "UnboundLocalError: local variable 'alpha' referenced before assignment",
+  "RuntimeWarning: overflow encountered in exp"
+ ],
+ "seconds": 218.8,
+ "reproduced": true
+}
