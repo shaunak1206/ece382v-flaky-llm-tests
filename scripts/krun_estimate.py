@@ -48,6 +48,8 @@ def main():
     ts = tests()
     res = {"tests": len(ts), "file_order": {}, "shuffled": {},
            "fail_under_5pct": sum(1 for _, a, b in ts if max(a, b) < 0.05),
+           # over all runs (E2 runs are half file order, half shuffled; E1 b is already the all-runs rate)
+           "fail_under_5pct_all_runs": sum(1 for src, a, b in ts if ((a + b) / 2 if src == "E2" else b) < 0.05),
            "never_fail_in_file_order": sum(1 for _, a, _ in ts if a == 0)}
     for k in KS:
         res["file_order"][k] = round(100 * sum(1 - (1 - a) ** k for _, a, _ in ts) / len(ts), 1)

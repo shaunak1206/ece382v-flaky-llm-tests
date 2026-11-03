@@ -155,7 +155,7 @@ and `results/matched_analysis.md`.
 `flaky_kept`} and `pairs["a vs b"]` = {`p_suite_fisher`, `projects_only_first`, `projects_only_second`,
 `p_project_sign`}. `scripts/krun_estimate.py` writes the expected share of kept flaky LLM tests that k extra
 filter runs catch, in file order and shuffled (`file_order[k]`, `shuffled[k]`), plus `tests`,
-`fail_under_5pct`, and `never_fail_in_file_order`.
+`fail_under_5pct` (larger of the file order and shuffled rate under 5%), `fail_under_5pct_all_runs` (rate over all runs under 5%), and `never_fail_in_file_order`.
 
 ## Order dependence diagnosis: `results/od_diagnose/<project>.json`
 
