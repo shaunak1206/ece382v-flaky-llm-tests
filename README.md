@@ -51,6 +51,8 @@ brew install stress-ng uv                   # or apt-get install stress-ng; pip 
 | Generate OpenAI suites | `python scripts/gen_openai.py matched <Project_Name> gpt-5.4-mini 1` or `... library <lib> gpt-4.1-mini 1` | `matched/...`, `gen_plain_<model>/...` |
 | Run matched suites next to the known flaky test | `python scripts/matched_run.py <Project_Name> --runs 200 --out out.json` (`--suites '*_guard_*'` for one prompt), or `gh workflow run matched-study -f runs=200` | `results/matched/` |
 | Add the M1 and M2 fixtures to every plain matched suite | `python scripts/make_seed_suites.py` | `matched/*/*_plainseed_*/`, `matched/*/*_plainiso_*/` |
+| Rerun the fixture suites | `gh workflow run matched-study -f runs=200 -f suites='*_plainseed_*'` (M1) or `-f suites='*_plainiso_*'` (M2) | `results/matched_mitig/`, `results/matched_iso/` |
+| Audit the Claude E2 generation transcripts for test file reads | `python3 -I scripts/audit_generation_reads.py --json report.json` (needs the local Claude Code transcripts) | `results/generation_audit.json` |
 | Alone reruns and polluter search for flaky matched tests | `python scripts/od_diagnose.py <Project_Name> --out out.json`, or `gh workflow run od-diagnose -f projects=a,b` | `results/od_diagnose/` |
 | Matched study model comparisons, per suite and per project | `python scripts/matched_stats.py` | `results/matched_stats.json` |
 | Expected catch of a longer filter | `python scripts/krun_estimate.py` | `results/krun_estimate.json` |

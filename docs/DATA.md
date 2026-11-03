@@ -178,3 +178,10 @@ flaky human test, the mechanism, quoted evidence, and a second independent check
 `scripts/characterize.py` scans every test function for shared state, isolation helpers, clock and sleep use,
 timing bounds, randomness, and concurrency. The field table is at the top of `results/why_analysis.md`.
 `characterize.json` is about 14 MB and is not committed; rerun the script to rebuild it (about 2 minutes).
+
+## results/generation_audit.json
+
+One entry per Claude E2 plain suite (`<project>/<model>_plain_<k>`): `models` (model ids in the generating transcript),
+`shell_commands` (number of shell commands the subagent ran), and `test_files_opened` (any project test file the
+subagent opened or searched, with the tool; empty for 163 of 164 suites, and the one entry is a `grep -rl` that
+printed file names only). Made by `scripts/audit_generation_reads.py` from the Claude Code transcripts.
