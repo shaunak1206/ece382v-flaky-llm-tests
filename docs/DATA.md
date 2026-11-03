@@ -6,11 +6,11 @@ Condition names used everywhere:
 | Code | Directory | Who wrote the tests | Prompt | Feedback |
 |---|---|---|---|---|
 | Human | the library's own `tests/` | the library developers | none | none |
-| AG-S | `llm_tests/<lib>` | Claude Sonnet as an agent | feature prompt | runs its suite and fixes or deletes failing tests, up to 3 rounds |
-| OS-S | `gen_oneshot_sonnet/<lib>` | Claude Sonnet, one shot | feature prompt | none, never runs the tests |
+| AG-S | `llm_tests/<lib>` | Claude Sonnet 5 as an agent | feature prompt | runs its suite and fixes or deletes failing tests, up to 3 rounds |
+| OS-S | `gen_oneshot_sonnet/<lib>` | Claude Sonnet 5.5, one shot | feature prompt | none, never runs the tests |
 | OS-H | `gen_oneshot_haiku/<lib>` | Claude Haiku 4.5, one shot | feature prompt | none |
-| TP-S | `gen_tp_sonnet/<lib>` | Claude Sonnet, one shot | TestPilot style (API docs only) | none |
-| PL-S | `gen_plain_sonnet/<lib>` | Claude Sonnet, one shot | plain "write pytest tests" | none |
+| TP-S | `gen_tp_sonnet/<lib>` | Claude Sonnet 5.5, one shot | TestPilot style (API docs only) | none |
+| PL-S | `gen_plain_sonnet/<lib>` | Claude Sonnet 5.5, one shot | plain "write pytest tests" | none |
 | PL-G5 | `gen_plain_gpt54mini/<lib>` | GPT 5.4 mini (OpenAI API, reasoning effort low), one shot | plain, source pasted into the prompt | none |
 | PL-G4 | `gen_plain_gpt41mini/<lib>` | GPT 4.1 mini (OpenAI API), one shot | plain, source pasted into the prompt | none |
 

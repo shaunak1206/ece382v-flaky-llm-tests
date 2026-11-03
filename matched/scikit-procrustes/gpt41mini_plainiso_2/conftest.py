@@ -1,10 +1,12 @@
-"""Mitigation M2: M1 seeding plus restoring interpreter state after every test.
+"""Mitigation M2: M1 seeding, importing the code under test up front, and restoring interpreter state after every test.
 
 Added after generation to a suite's folder as conftest.py. M1 (seed_conftest.py) leaves the order dependent
 tests that GPT 5.4 mini writes when it reloads a package or pops it from sys.modules: a later test then sees a
 new module object, or a package whose attributes were rebound by importlib.reload while a monkeypatch was
 active. This fixture snapshots, before each test's setup, every sys.modules entry, the globals of every loaded
-module, sys.path, os.environ and the working directory, and puts back whatever changed after teardown. Modules
+module, sys.path, os.environ and the working directory, and puts back whatever changed after teardown. It also
+imports the project's top level packages once at session start, so a test that patches the import system cannot
+be the first to import them. Modules
 imported for the first time during a test stay loaded and bound on their parent package. pytest's own
 modules, sys and builtins are skipped.
 """
@@ -45,6 +47,29 @@ def pytest_collection_modifyitems(items):
             return __fn(*args, **kwargs)
 
         item.obj = seeded
+
+
+def _project_packages(root):
+    # top level packages and modules of the project checkout this suite was copied into (its parent folder)
+    for name in sorted(os.listdir(root)):
+        path = os.path.join(root, name)
+        mod = name[:-3] if name.endswith(".py") else name
+        if not mod.isidentifier() or mod.startswith(("test", "zz_", "doc", "example", "setup", "conftest", "_")): continue
+        if (os.path.isdir(path) and os.path.exists(os.path.join(path, "__init__.py"))) or (name.endswith(".py") and os.path.isfile(path)):
+            yield mod
+    if os.path.isdir(os.path.join(root, "src")):
+        yield from _project_packages(os.path.join(root, "src"))
+
+
+def pytest_sessionstart(session):
+    # Import the code under test once before any test runs, so that its dependencies are never imported for the
+    # first time inside a test that patches the import system (jmcm), where they would be left half initialized.
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for mod in _project_packages(root):
+        try:
+            __import__(mod)
+        except BaseException:
+            pass
 
 
 def _skip(name):

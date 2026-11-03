@@ -4,8 +4,8 @@ Three generation conditions, all prompted with the same per-library API descript
 
 | Condition | Model | Execution feedback | Output dir | File prefix |
 |---|---|---|---|---|
-| AG-S (agentic) | Claude Sonnet (subagent) | runs suite once, may fix or delete failing tests up to 3 iterations | llm_tests/<proj> | test_llm_ |
-| OS-S (one-shot) | Claude Sonnet (subagent) | none, must not execute anything | gen_oneshot_sonnet/<proj> | test_oss_ |
+| AG-S (agentic) | Claude Sonnet 5 (subagent) | runs suite once, may fix or delete failing tests up to 3 iterations | llm_tests/<proj> | test_llm_ |
+| OS-S (one-shot) | Claude Sonnet 5.5 (subagent) | none, must not execute anything | gen_oneshot_sonnet/<proj> | test_oss_ |
 | OS-H (one-shot) | Claude Haiku 4.5 (subagent) | none, must not execute anything | gen_oneshot_haiku/<proj> | test_osh_ |
 
 All conditions: tests from source and docstrings only (library tests dir is off limits), 50 to 80 test functions,
@@ -66,8 +66,9 @@ All 24 TP-S and PL-S agents were told to run no commands. None ran pytest or imp
 
 For each known flaky human test from Gruber et al. that we could reproduce, the generators are pointed at the
 same code under test (found by `scripts/matched_targets.py` from the names the flaky test uses) and are not
-allowed to read any test file of the project, so they cannot copy the flaky test. Four models (Claude Sonnet,
-Claude Haiku 4.5, GPT 5.4 mini, GPT 4.1 mini), the plain prompt, two independent samples each, one shot with
+allowed to read any test file of the project, so they cannot copy the flaky test. Four models (Claude Sonnet 5.5,
+Claude Haiku 5.5, GPT 5.4 mini, GPT 4.1 mini; the Claude versions are from the Claude Code logs of each
+generation), the plain prompt, two independent samples each, one shot with
 no execution. Suite ids are `<model>_plain_<sample>`.
 
 Plain matched prompt (verbatim, `{...}` filled per project):
