@@ -32,8 +32,9 @@ def run_suite(py, repo, target_dir, timeout_s, seed, randomize):
     # src layout projects that are not installable (fuzzylogic) put src/ on sys.path in their own tests
     path = os.pathsep.join([repo] + ([f"{repo}/src"] if os.path.isdir(f"{repo}/src") else []))
     env = dict(os.environ, PYTHONPATH=path, PYTHONHASHSEED=str(seed))
+    # -o python_files: a project ini can narrow collection (fossor sets python_files = test/*.py), which would skip test_gen.py
     cmd = [py, "-m", "pytest", "-q", "-p", "no:cacheprovider", "--continue-on-collection-errors", f"--timeout={timeout_s}",
-           "--junitxml", xml]
+           "-o", "python_files=test_*.py", "--junitxml", xml]
     cmd += ["-p", "randomly", f"--randomly-seed={seed}"] if randomize else ["-p", "no:randomly"]
     rc, out = gr.sh(cmd + [target_dir], cwd=repo, timeout=900, env=env)
     res = {}
