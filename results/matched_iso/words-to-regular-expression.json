@@ -1,0 +1,1565 @@
+{
+ "project": "words-to-regular-expression",
+ "sha": "6be1a3846f4bc07a2264b72d1e1ee031c605bac7",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plainiso_1": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_empty_iterable",
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_formatter_baseformatter",
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_formatter_type_inheritance",
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_cover_escape_characters",
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_to_regexp_method_basic_usage",
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_to_regexp_method_empty_prefix_tree"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_basic_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_empty_iterable": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_single_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_similar_prefixes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_duplicates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_formatter_baseformatter": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_returns_string_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_str_and_repr_methods": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_to_regexp_method_basic_usage": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_to_regexp_method_empty_prefix_tree": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_cover_escape_characters": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_non_string_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_unicode_strings": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_mixed_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_long_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_returns_same_for_repeated_calls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_formatter_type_inheritance": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_empty_iterable",
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_formatter_baseformatter",
+    "zz_gpt41mini_plainiso_1.test_gen::test_iterable_to_regexp_with_formatter_type_inheritance",
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_cover_escape_characters",
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_to_regexp_method_basic_usage",
+    "zz_gpt41mini_plainiso_1.test_gen::test_pythonformatter_to_regexp_method_empty_prefix_tree"
+   ]
+  },
+  "gpt41mini_plainiso_2": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_custom_formatter",
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_inherited_formatter_class",
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_single_word",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_linesep_handling",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_skips_empty_lines",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_custom_formatter",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_formatter_class_not_typing_Type",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_non_text_stream_type",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_simple_stream",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_spaces_and_tabs_in_lines"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_returns_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_empty_iterable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_single_word": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_custom_formatter": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_simple_stream": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_skips_empty_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_custom_formatter": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_preserves_input_order_for_prefix_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_uses_PythonFormatter_by_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_imported_iterable_to_regexp_is_same_as_in_utils": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_empty_stream": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_linesep_handling": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_non_string_iterable_elements": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_non_text_stream_type": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_formatter_class_not_typing_Type": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_multiple_calls_consistent_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_inherited_formatter_class": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_spaces_and_tabs_in_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_handles_duplicates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_custom_formatter",
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_inherited_formatter_class",
+    "zz_gpt41mini_plainiso_2.test_gen::test_iterable_to_regexp_with_single_word",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_linesep_handling",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_skips_empty_lines",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_custom_formatter",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_formatter_class_not_typing_Type",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_non_text_stream_type",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_simple_stream",
+    "zz_gpt41mini_plainiso_2.test_gen::test_stream_to_regexp_with_spaces_and_tabs_in_lines"
+   ]
+  },
+  "gpt54mini_plainiso_1": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_plainiso_1.test_gen::test_package_reexports_public_api": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_package_metadata_constants": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_iterable_to_regexp_uses_default_python_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_iterable_to_regexp_passes_custom_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_iterable_to_regexp_accepts_generator_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_iterable_to_regexp_produces_regex_for_single_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_iterable_to_regexp_handles_shared_prefixes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_iterable_to_regexp_handles_prefix_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_iterable_to_regexp_ignores_duplicate_words_semantically": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_stream_to_regexp_uses_default_python_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_stream_to_regexp_filters_empty_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_stream_to_regexp_passes_custom_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_stream_to_regexp_with_single_line": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_prefix_tree_to_regexp_works_with_python_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt54mini_plainiso_2": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 15,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_is_order_independent"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_2.test_gen::test_package_version_constant": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_package_application_name_constant": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_package_changelog_url_constant": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_init_reexports_iterable_to_regexp": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_init_reexports_stream_to_regexp": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_init_reexports_python_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_returns_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_matches_single_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_matches_multiple_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_is_order_independent": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_ignores_duplicate_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_supports_generators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_stream_to_regexp_matches_stream_content": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_uses_prefix_tree_to_regexp_with_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_stream_to_regexp_filters_empty_lines_before_building_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_iterable_to_regexp_is_order_independent"
+   ]
+  },
+  "haiku_plainiso_1": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_1.test_gen::test_empty_iterable_matches_only_empty_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_single_word_is_literal_regexp": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_single_letter_and_metacharacter_words_are_escaped": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_dotted_word_escapes_metacharacters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_shared_prefix_words_branch_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_prefix_word_makes_tail_optional_in_either_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_word_order_does_not_change_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_duplicate_words_do_not_change_pattern": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_generator_and_list_inputs_match": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_single_letters_collapse_into_character_class": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_single_letters_mixed_with_words_use_alternation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_repeated_block_is_compressed_without_changing_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_repeated_letters_language_is_preserved": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_multi_character_branches_with_metacharacters_are_escaped": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_unicode_words_are_supported": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_word_match_formatter_exact_pattern": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_word_match_formatter_only_matches_whole_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_default_formatter_is_python_formatter_and_matches_substrings": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_formatter_codes_and_descriptions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_base_formatter_wrap_is_not_implemented": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_package_metadata_and_exports": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_metacharacter_single_letter_beside_longer_word_is_escaped": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_caret_letter_in_character_class_is_literal": {
+     "pass": 0,
+     "fail": 0,
+     "error": 0,
+     "skip": 200,
+     "kind": "always-skip",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainiso_2": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_2.test_gen::test_empty_iterable_matches_only_empty_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_empty_string_words_are_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_result_is_str_and_compiles": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_single_word_regexp_is_the_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_all_inserted_words_match": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_language_equals_word_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_shared_prefix_and_optional_suffix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_single_letter_words_form_character_class": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_regex_metacharacters_are_escaped": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_repeated_block_is_compressed_but_exact": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_duplicate_words_do_not_change_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_insertion_order_does_not_change_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_generator_input_is_consumed_once": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_tuple_and_set_inputs_match_list_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_default_formatter_is_python_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_word_match_formatter_adds_word_boundaries": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_word_match_formatter_empty_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_custom_formatter_receives_root_node": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_python_formatter_wraps_nodes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_formatter_metadata": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_base_formatter_requires_subclass_overrides": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_all_formatters_registry": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_package_exports_same_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_version_and_metadata_constants": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_1": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [
+    "zz_sonnet_plainiso_1.test_gen::test_special_regex_characters_are_escaped"
+   ],
+   "tests": {
+    "zz_sonnet_plainiso_1.test_gen::test_package_exports_and_metadata": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_python_formatter_metadata": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_base_formatter_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_empty_iterable_matches_only_empty_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_iterable_with_only_empty_string_matches_empty_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_python_formatter_wrap_regexp_empty_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_python_formatter_wrap_regexp_non_empty_tree": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_single_word_is_returned_literally": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_single_character_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_common_prefix_is_factored_out": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_word_that_is_prefix_of_another_becomes_optional_suffix": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_consecutive_letters_are_collapsed_into_range": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_alternation_of_unrelated_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_duplicates_do_not_change_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_accepts_generator_and_tuple_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_special_regex_characters_are_escaped": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_single_special_characters_match_literally": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_repeated_substrings_are_compressed_but_still_match_exactly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_round_trip_for_mixed_word_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_unicode_words_round_trip": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_explicit_python_formatter_equals_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_word_match_formatter_wraps_pattern_with_boundaries": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_sonnet_plainiso_1.test_gen::test_special_regex_characters_are_escaped"
+   ]
+  },
+  "sonnet_plainiso_2": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_2.test_gen::test_empty_iterable_gives_empty_string_matcher": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_iterable_of_empty_strings_gives_empty_string_matcher": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_single_word_is_returned_verbatim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_single_character_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_two_adjacent_letters_form_character_class": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_consecutive_letters_and_digits_collapse_to_ranges": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_common_prefix_is_factored_out": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_word_that_is_prefix_of_another_word": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_duplicates_do_not_change_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_result_matches_same_language_regardless_of_input_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_regex_special_characters_are_escaped": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_brackets_backslash_and_hyphen_inside_character_class": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_repeated_substrings_are_compressed_but_still_match": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_accepts_any_iterable_of_strings": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_unicode_words": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_default_formatter_is_python_formatter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_word_match_formatter_wraps_with_word_boundaries": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_word_match_formatter_with_multiple_words_and_empty_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_python_formatter_metadata_and_wrap_regexp": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_base_formatter_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_stream_to_regexp_ignores_blank_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_package_level_exports_and_metadata": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 4,
+  "failed": 196,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'^', '_'}\nMatched: {'^', ' '}\nRegexp: [^_]\nFalsifying example: test_generates",
+   "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'_', '^'}\nMatched: {' ', '^'}\nRegexp: [^_]\nFalsifying example: test_generates",
+   "AssertionError: Items in the first set but not the second:\n'_'\nItems in the second set but not the first:\n' ' : Expected: {'^', '_'}\nMatched: {' ', '^'}\nRegexp: [^_]\nFalsifying example: test_generates"
+  ]
+ },
+ "seconds": 952.0
+}

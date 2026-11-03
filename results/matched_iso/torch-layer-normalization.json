@@ -1,0 +1,1564 @@
+{
+ "project": "torch-layer-normalization",
+ "sha": "89f405b60f53f85da6f03fe685c190ef394ce50c",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plainiso_1": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_backward_pass",
+    "zz_gpt41mini_plainiso_1.test_gen::test_elementwise_affine_parameter_presence[False]",
+    "zz_gpt41mini_plainiso_1.test_gen::test_elementwise_affine_parameter_presence[True]",
+    "zz_gpt41mini_plainiso_1.test_gen::test_eps_prevents_divide_by_zero",
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_computes_mean_and_var_correctly",
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_matches_pytorch_native_layernorm",
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_with_affine_parameters",
+    "zz_gpt41mini_plainiso_1.test_gen::test_invalid_normalized_shape_raises",
+    "zz_gpt41mini_plainiso_1.test_gen::test_output_mean_zero_and_var_one_when_affine_false",
+    "zz_gpt41mini_plainiso_1.test_gen::test_repr_contains_expected_info",
+    "zz_gpt41mini_plainiso_1.test_gen::test_state_dict_and_load_state_dict",
+    "zz_gpt41mini_plainiso_1.test_gen::test_weight_and_bias_initialize_to_ones_and_zeros"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_output_shape[10]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_output_shape[normalized_shape1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_output_shape[normalized_shape2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_elementwise_affine_parameter_presence[True]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_elementwise_affine_parameter_presence[False]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_computes_mean_and_var_correctly": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_with_affine_parameters": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_backward_pass": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_eps_prevents_divide_by_zero": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_invalid_normalized_shape_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_normalized_shape_accepts_tuple_and_int": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_with_multidimensional_normalized_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_repr_contains_expected_info": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_weight_and_bias_initialize_to_ones_and_zeros": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_layernorm_on_device[cpu]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_state_dict_and_load_state_dict": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_output_mean_zero_and_var_one_when_affine_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_layernorm_does_not_mutate_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_with_single_element_normalized_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_layernorm_with_requires_grad_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_matches_pytorch_native_layernorm": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_backward_pass",
+    "zz_gpt41mini_plainiso_1.test_gen::test_elementwise_affine_parameter_presence[False]",
+    "zz_gpt41mini_plainiso_1.test_gen::test_elementwise_affine_parameter_presence[True]",
+    "zz_gpt41mini_plainiso_1.test_gen::test_eps_prevents_divide_by_zero",
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_computes_mean_and_var_correctly",
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_matches_pytorch_native_layernorm",
+    "zz_gpt41mini_plainiso_1.test_gen::test_forward_with_affine_parameters",
+    "zz_gpt41mini_plainiso_1.test_gen::test_invalid_normalized_shape_raises",
+    "zz_gpt41mini_plainiso_1.test_gen::test_output_mean_zero_and_var_one_when_affine_false",
+    "zz_gpt41mini_plainiso_1.test_gen::test_repr_contains_expected_info",
+    "zz_gpt41mini_plainiso_1.test_gen::test_state_dict_and_load_state_dict",
+    "zz_gpt41mini_plainiso_1.test_gen::test_weight_and_bias_initialize_to_ones_and_zeros"
+   ]
+  },
+  "gpt41mini_plainiso_2": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_backward_pass",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_gradients",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_output_close_to_manual_computation",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_repr_contains_elementwise_affine_flag",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_repr_contains_parameters",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_weight_and_bias_requires_grad",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_elementwise_affine_false",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_epsilon"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_basic_forward": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_forward_with_different_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_elementwise_affine_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_epsilon": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_different_input_dtype": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_train_and_eval_mode_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_weight_and_bias_requires_grad": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_forward_with_single_dimension_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_output_close_to_manual_computation": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_large_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_scriptability": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_repr_contains_parameters": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_gradients": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_float16_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_invalid_normalized_shape_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_tuple_normalized_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_device_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_repr_contains_elementwise_affine_flag": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_multiple_calls_produce_consistent_outputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_backward_pass": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_backward_pass",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_gradients",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_output_close_to_manual_computation",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_repr_contains_elementwise_affine_flag",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_repr_contains_parameters",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_weight_and_bias_requires_grad",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_elementwise_affine_false",
+    "zz_gpt41mini_plainiso_2.test_gen::test_layernorm_with_epsilon"
+   ]
+  },
+  "gpt54mini_plainiso_1": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_forward_matches_torch_layer_norm_default_settings"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_1.test_gen::test_version_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_layer_normalization_is_exported_from_package": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_all_star_import_exports_layer_normalization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_layer_normalization_class_name": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_constructor_accepts_one_dimensional_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_forward_preserves_shape_2d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_forward_preserves_shape_3d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_forward_matches_torch_layer_norm_default_settings": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_forward_matches_torch_layer_norm_with_affine_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_backward_computes_gradients_for_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_backward_computes_gradients_for_parameters_if_present": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_repr_includes_class_name": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_multiple_calls_are_deterministic_in_eval_mode": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_module_can_be_moved_to_cpu_and_still_run": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_forward_matches_torch_layer_norm_default_settings"
+   ]
+  },
+  "gpt54mini_plainiso_2": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_can_disable_affine_parameters"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_2.test_gen::test_version_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_is_exported": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_instantiates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_has_trainable_parameters_by_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_can_disable_affine_parameters": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_forward_shape_2d": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_forward_shape_3d_last_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_matches_torch_layer_norm_without_affine": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_matches_torch_layer_norm_with_identity_affine": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_backward_produces_input_grad": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_backward_produces_parameter_grads": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_is_deterministic_in_eval_mode": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_repr_contains_class_name": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_forward_preserves_dtype": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_layer_normalization_can_disable_affine_parameters"
+   ]
+  },
+  "haiku_plainiso_1": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_1.test_gen::test_int_normal_shape_sets_feature_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_tuple_normal_shape_uses_only_last_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_list_normal_shape_uses_only_last_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_default_parameters_initialised_to_identity_affine": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_default_epsilon_is_1e_minus_10": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_gamma_false_removes_scale_parameter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_beta_false_removes_shift_parameter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_no_affine_parameters_when_gamma_and_beta_disabled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_forward_preserves_input_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_forward_does_not_modify_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_default_output_has_zero_mean_and_unit_variance_per_row": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_matches_hand_written_reference_with_affine_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_matches_torch_functional_layer_norm": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_affine_parameters_scale_and_shift_normalized_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_constant_row_maps_to_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_single_feature_output_equals_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_shift_invariance_along_feature_axis": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_scale_invariance_of_normalized_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_rows_are_normalized_independently": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_small_epsilon_amplifies_low_variance_rows_more_than_large_epsilon": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_gradcheck_passes_for_input_and_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_backward_populates_parameter_gradients_with_expected_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_input_gradient_of_feature_sum_vanishes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_extra_repr_reports_configuration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainiso_2": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_2.test_gen::test_int_normal_shape_sets_last_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_tuple_normal_shape_uses_last_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_list_normal_shape_uses_last_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_default_parameters_are_ones_and_zeros": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_gamma_false_registers_none_and_keeps_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_beta_false_registers_none_and_keeps_gamma": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_no_affine_parameters_when_both_disabled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_reset_parameters_restores_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_forward_output_has_zero_mean_and_unit_variance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_forward_matches_manual_formula_with_random_affine": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_forward_matches_functional_layer_norm": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_affine_parameters_scale_and_shift_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_forward_preserves_input_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rows_are_normalized_independently": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_output_invariant_to_row_scale_and_shift": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_constant_row_maps_to_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_custom_epsilon_is_stored_and_damps_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_repr_reports_configuration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_gradients_reach_gamma_and_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_gradcheck_passes_in_double_precision": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_forward_does_not_modify_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_mismatched_last_dimension_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_1": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_1.test_gen::test_int_normal_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_tuple_normal_shape_uses_last_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_list_normal_shape_uses_last_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_default_parameter_initialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_parameters_registered": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_no_gamma": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_no_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_no_gamma_no_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_epsilon_stored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_forward_output_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_forward_3d_input_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_forward_zero_mean_unit_variance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_forward_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_forward_gamma_and_beta_applied": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_forward_constant_input_gives_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_forward_does_not_modify_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_forward_matches_torch_layer_norm": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_reset_parameters_restores_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_backward_produces_gradients": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_extra_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_2": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_2.test_gen::test_version_defined": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_int_normal_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_tuple_normal_shape_uses_last_dim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_torch_size_normal_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_default_parameter_initialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_no_gamma": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_no_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_no_gamma_no_beta_has_no_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_epsilon_stored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_output_shape_preserved": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_output_zero_mean_unit_variance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_matches_torch_layer_norm": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_gamma_and_beta_applied": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_without_affine_params_is_pure_normalization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_constant_input_gives_beta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_shift_invariance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_backward_produces_gradients": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_reset_parameters_restores_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_extra_repr_and_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 187,
+  "failed": 13,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: False is not true : (4, tensor([[-0.0041, -0.9894, -0.3376,  0.1311],\n        [-0.8300, -0.2882,  0.3682, -0.4500]]), tensor([[-0.0038, -0.9902, -0.3376,  0.1315],\n        [-0.8305, -0",
+   "AssertionError: False is not true : (2, tensor([[ 0.2069, -0.9609, -0.3719, -0.0740],\n        [-0.2860, -0.8190, -0.4676,  0.3726]]), tensor([[ 0.2074, -0.9620, -0.3720, -0.0737],\n        [-0.2860, -0",
+   "AssertionError: False is not true : (1, tensor([[-0.5155, -0.1434, -0.8524,  0.3114],\n        [-0.4327,  0.4399, -0.5875, -0.6197]]), tensor([[-0.5159, -0.1432, -0.8532,  0.3124],\n        [-0.4328,  0"
+  ]
+ },
+ "seconds": 3699.7
+}

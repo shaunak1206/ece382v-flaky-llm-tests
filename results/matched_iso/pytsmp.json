@@ -1,0 +1,1638 @@
+{
+ "project": "pytsmp",
+ "sha": "15d58a39e016100fb44cdcc9f6115fa7736eb2bb",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plainiso_1": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_with_array_mean_sigma_Q",
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_full_dot",
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_large_input_consistency",
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_with_negative_values"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_full_dot": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_query_longer_than_T_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_rolling_avg_sd_simple": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_rolling_avg_sd_window_too_large": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_rolling_avg_sd_constant_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_input_dimension_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_constant_Q_and_constant_T": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_constant_Q_nonconstant_T": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_nonconstant_Q_constant_T": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_negative_value_protection": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_with_zeros": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_with_negative_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_length_one_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_with_array_mean_sigma_Q": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_array_mean_sigma_Q_and_correct_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_large_input_consistency": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_rolling_avg_sd_large_input_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_calculate_distance_profile_with_array_mean_sigma_Q",
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_full_dot",
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_large_input_consistency",
+    "zz_gpt41mini_plainiso_1.test_gen::test_sliding_dot_product_with_negative_values"
+   ]
+  },
+  "gpt41mini_plainiso_2": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_vs_manual_dot"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_T_shorter_than_Q_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_result_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_rolling_avg_sd_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_rolling_avg_sd_window_larger_than_series_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_rolling_avg_sd_constant_series_zero_sd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_dimension_mismatch_QT_meanT_sigmaT": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_dimension_mismatch_meanQ_sigmaQ_arrays": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_constant_sigmaQ_and_sigmaT_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_constant_sigmaQ_nonzero_sigmaT": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_nonzero_sigmaQ_sigmaT": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_sigmaT_zero_sigmaQ_nonzero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_with_floats": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_identical_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_zero_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_with_arrays_meanQ_sigmaQ": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_with_negative_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_calculate_distance_profile_distance_nonnegative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_large_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_vs_manual_dot": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_sliding_dot_product_vs_manual_dot"
+   ]
+  },
+  "gpt54mini_plainiso_1": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 15,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_plainiso_1.test_gen::test_sliding_dot_product_matches_naive_example": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_sliding_dot_product_with_negative_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_sliding_dot_product_raises_when_query_longer_than_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_sliding_dot_product_single_element_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_rolling_avg_sd_matches_manual_computation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_rolling_avg_sd_window_size_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_rolling_avg_sd_constant_series_has_zero_sd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_rolling_avg_sd_raises_when_window_too_large": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_rolling_avg_sd_with_integer_input_returns_float_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_calculate_distance_profile_matches_manual_formula": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_calculate_distance_profile_constant_query_and_constant_series_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_calculate_distance_profile_constant_query_and_nonconstant_series_is_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_calculate_distance_profile_nonconstant_query_and_constant_series_is_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_calculate_distance_profile_raises_on_dimension_mismatch_qt_mean_sigma_lengths": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_calculate_distance_profile_raises_on_dimension_mismatch_when_mean_q_and_sigma_q_arrays": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt54mini_plainiso_2": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_identical_normalized_windows_gives_zero_distance"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_2.test_gen::test_sliding_dot_product_basic_matches_manual_convolution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_sliding_dot_product_with_query_length_one_returns_original_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_sliding_dot_product_raises_when_query_longer_than_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_sliding_dot_product_with_odd_length_time_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_rolling_avg_sd_basic_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_rolling_avg_sd_window_size_one_has_zero_sd_and_same_mean": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_rolling_avg_sd_window_size_equals_length_returns_single_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_rolling_avg_sd_raises_when_window_too_large": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_rolling_avg_sd_returns_non_negative_sd_for_constant_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_dimension_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_identical_normalized_windows_gives_zero_distance": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_constant_query_against_nonconstant_series_is_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_constant_query_and_constant_series_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_constant_subsequence_in_time_series_gets_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_matches_manual_formula_for_nonconstant_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_respects_epsilon_threshold_for_near_constant_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_calculate_distance_profile_identical_normalized_windows_gives_zero_distance"
+   ]
+  },
+  "haiku_plainiso_1": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_1.test_gen::test_sliding_dot_product_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_sliding_dot_product_reverses_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_sliding_dot_product_matches_naive_even_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_sliding_dot_product_matches_naive_odd_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_sliding_dot_product_output_length_and_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_sliding_dot_product_equal_length_returns_single_dot": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_sliding_dot_product_raises_when_query_longer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_rolling_avg_sd_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_rolling_avg_sd_matches_numpy_per_window": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_rolling_avg_sd_window_one_returns_series_and_zero_sd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_rolling_avg_sd_constant_series_has_zero_sd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_rolling_avg_sd_raises_when_window_too_large": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_rolling_avg_sd_finite_nonnegative_with_large_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_identical_subsequence_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_matches_bruteforce_znormalized_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_perfect_correlation_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_perfect_anticorrelation_is_two_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_constant_query_gives_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_constant_subsequence_gives_sqrt_m_at_that_index": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_both_constant_gives_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_custom_epsilon_treats_small_sd_as_constant": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_clips_negative_radicand_to_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_raises_on_length_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_profile_raises_when_query_arrays_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainiso_2": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_2.test_gen::test_sdp_matches_naive_even_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_sdp_matches_naive_odd_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_sdp_output_length_is_n_minus_m_plus_1": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_sdp_known_small_example": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_sdp_query_same_length_as_series_gives_single_dot": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_sdp_zero_query_returns_zeros": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_sdp_raises_when_query_longer_than_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rolling_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rolling_matches_numpy_per_window": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rolling_returns_pair_of_correct_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rolling_constant_series_has_zero_sd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rolling_window_equal_to_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rolling_window_of_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rolling_sd_is_never_negative_with_large_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_rolling_raises_when_window_too_large": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_matches_bruteforce_znorm_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_zero_at_exact_match": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_bounded_by_two_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_constant_query_gives_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_constant_window_gives_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_constant_pair_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_epsilon_controls_constant_threshold": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_raises_on_series_length_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_profile_raises_on_query_array_mismatch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_1": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_matches_naive_even_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_matches_naive_odd_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_output_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_query_same_length_as_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_query_same_length_odd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_query_longer_than_series_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_length_one_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_sliding_dot_product_does_not_modify_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_rolling_avg_sd_matches_numpy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_rolling_avg_sd_output_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_rolling_avg_sd_window_larger_than_series_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_rolling_avg_sd_window_equals_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_rolling_avg_sd_window_one_gives_series_and_zero_sd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_rolling_avg_sd_constant_series_has_zero_sd_and_nonnegative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_matches_naive_znorm_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_self_match_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_constant_query_gives_sqrt_m_for_nonconstant_windows": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_both_constant_gives_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_constant_window_in_series_gives_sqrt_m": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_epsilon_treats_small_sigma_as_constant": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_qt_length_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_mean_sigma_length_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_profile_array_query_stats_length_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_2": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_2.test_gen::test_sliding_dot_product_matches_bruteforce_even_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_sliding_dot_product_matches_bruteforce_odd_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_sliding_dot_product_output_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_sliding_dot_product_query_same_length_as_series": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_sliding_dot_product_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_sliding_dot_product_length_one_query": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_sliding_dot_product_raises_when_query_longer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_rolling_avg_sd_matches_bruteforce": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_rolling_avg_sd_output_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_rolling_avg_sd_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_rolling_avg_sd_constant_series_has_zero_sd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_rolling_avg_sd_window_one_returns_series_and_zero_sd": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_rolling_avg_sd_sd_never_negative_or_nan": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_rolling_avg_sd_integer_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_rolling_avg_sd_raises_when_window_too_large": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_matches_znorm_euclidean": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_exact_match_is_near_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_scale_and_shift_invariant": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_constant_query_and_constant_subsequence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_constant_query_nonconstant_subsequence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_nonconstant_query_constant_subsequence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_epsilon_controls_constant_threshold": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_clamps_negative_to_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_length_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_calculate_distance_profile_array_query_stats_mismatch_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 197,
+  "failed": 3,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: calculate_distance_profile_constant_sequence_and_query: distance of constant query to constant sequence is ero by definition.\nassert False\n +  where False = <function allclose at 0x7ce",
+   "AssertionError: calculate_distance_profile_constant_sequence_and_query: distance of constant query to constant sequence is ero by definition.\nassert False\n +  where False = <function allclose at 0x761",
+   "AssertionError: calculate_distance_profile_constant_sequence_and_query: distance of constant query to constant sequence is ero by definition.\nassert False\n +  where False = <function allclose at 0x752"
+  ]
+ },
+ "seconds": 805.4
+}

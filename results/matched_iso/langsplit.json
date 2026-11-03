@@ -1,0 +1,1634 @@
+{
+ "project": "langsplit",
+ "sha": "d30d47bd6f73852dc716f1e79225d8d49dc39daa",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plainiso_1": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_convert_with_dict_single_key_default_ends",
+    "zz_gpt41mini_plainiso_1.test_gen::test_convert_with_dict_title_true_uses_last_end",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_respects_min_and_max_key_length",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_returns_original_if_not_string",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_text_with_unknown_language_autodetect_false",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_title_true_and_markdown_true",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_with_multiple_paragraphs_autodetect_true"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_1.test_gen::test_detect_language_returns_short_code_for_default_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_detect_language_shorter_codes_mapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_convert_with_dict_single_key_default_ends": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_convert_with_dict_title_true_uses_last_end": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_convert_with_non_dict_returns_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_with_empty_text_returns_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_with_only_sep_and_lang_key_short_text": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_text_with_known_language_key_and_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_text_with_unknown_language_autodetect_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_with_multiple_paragraphs_autodetect_true": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_with_ends_variation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_markdown_true_returns_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_title_true_and_markdown_true": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_text_with_unknown_language_and_handling_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_text_preserves_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_respects_min_and_max_key_length": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_multiline_single_token_with_missing_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_token_with_end_symbol_in_key_position": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_multiple_empty_tokens": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_convert_removes_leading_ends": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_with_pargraph_sep_and_autodetect": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_returns_original_if_not_string": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_convert_with_dict_single_key_default_ends",
+    "zz_gpt41mini_plainiso_1.test_gen::test_convert_with_dict_title_true_uses_last_end",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_respects_min_and_max_key_length",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_returns_original_if_not_string",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_text_with_unknown_language_autodetect_false",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_title_true_and_markdown_true",
+    "zz_gpt41mini_plainiso_1.test_gen::test_split_with_multiple_paragraphs_autodetect_true"
+   ]
+  },
+  "gpt41mini_plainiso_2": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_convert_with_dict_and_title_false",
+    "zz_gpt41mini_plainiso_2.test_gen::test_convert_with_dict_and_title_true",
+    "zz_gpt41mini_plainiso_2.test_gen::test_detect_language_no_mapping_long_code_truncated",
+    "zz_gpt41mini_plainiso_2.test_gen::test_detect_language_respects_max_length",
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_chunk_length_greater_than_max_key_length_treated_as_unknown",
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_no_autodetect_text_after_unknown_key",
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_preserves_language_order"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_2.test_gen::test_detect_language_basic_known_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_detect_language_shorter_codes_mapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_detect_language_no_mapping_long_code_truncated": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_convert_with_dict_and_title_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_convert_with_dict_and_title_true": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_convert_with_non_dict_returns_input_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_empty_text_returns_text": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_only_sep_and_short_text_returns_ordereddict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_simple_known_keys_no_autodetect": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_uses_autodetect_for_unknown_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_assigns_unknown_language_when_detection_fails": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_preserves_language_order": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_with_markdown_true_returns_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_with_title_true_changes_convert_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_ignores_empty_tokens": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_handles_paragraph_sep_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_chunk_length_greater_than_max_key_length_treated_as_unknown": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_returns_original_text_if_not_dict_or_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_no_autodetect_text_after_unknown_key": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_detect_language_respects_max_length": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_convert_with_dict_and_title_false",
+    "zz_gpt41mini_plainiso_2.test_gen::test_convert_with_dict_and_title_true",
+    "zz_gpt41mini_plainiso_2.test_gen::test_detect_language_no_mapping_long_code_truncated",
+    "zz_gpt41mini_plainiso_2.test_gen::test_detect_language_respects_max_length",
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_chunk_length_greater_than_max_key_length_treated_as_unknown",
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_no_autodetect_text_after_unknown_key",
+    "zz_gpt41mini_plainiso_2.test_gen::test_split_preserves_language_order"
+   ]
+  },
+  "gpt54mini_plainiso_1": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_convert_removes_leading_end_markers_from_result",
+    "zz_gpt54mini_plainiso_1.test_gen::test_detect_language_truncates_long_language_code",
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_explicit_language_token_without_autodetect"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_1.test_gen::test_detect_language_shortens_zh_cn_to_cn": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_detect_language_truncates_long_language_code": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_detect_language_keeps_short_code_when_within_max_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_convert_returns_input_when_not_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_convert_basic_dict_uses_default_separator_and_newline": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_convert_title_uses_colon_end_and_strips_leading_whitespace": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_convert_removes_leading_end_markers_from_result": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_returns_input_for_falsey_text": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_handles_short_prefixed_text_without_end_symbol": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_explicit_language_token_without_autodetect": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_with_autodetect_assigns_unknown_chunk_to_detected_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_with_autodetect_multiple_paragraphs_preserves_paragraph_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_with_autodetect_uses_multiple_detected_languages": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_falls_back_to_unknown_language_when_detection_fails": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_returns_markdown_when_requested": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_returns_title_markdown_when_requested": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_convert_removes_leading_end_markers_from_result",
+    "zz_gpt54mini_plainiso_1.test_gen::test_detect_language_truncates_long_language_code",
+    "zz_gpt54mini_plainiso_1.test_gen::test_split_explicit_language_token_without_autodetect"
+   ]
+  },
+  "gpt54mini_plainiso_2": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_dict_title_mode_uses_colon_newline",
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_dict_uses_default_separator_and_strips_leading_spaces",
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_removes_initial_separator_tokens",
+    "zz_gpt54mini_plainiso_2.test_gen::test_detect_language_truncates_long_code",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_aggregates_repeated_language_keys",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_explicit_language_segments_are_collected_in_order",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_markdown_roundtrip_from_explicit_languages",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_short_prefixed_token_without_end_symbol_returns_ordered_dict",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_title_markdown_roundtrip_from_explicit_languages"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_2.test_gen::test_detect_language_truncates_long_code": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_detect_language_maps_zh_cn_to_cn": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_detect_language_returns_short_code_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_non_dict_returns_input_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_dict_uses_default_separator_and_strips_leading_spaces": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_dict_title_mode_uses_colon_newline": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_removes_initial_separator_tokens": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_returns_input_when_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_short_prefixed_token_without_end_symbol_returns_ordered_dict": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_explicit_language_segments_are_collected_in_order": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_aggregates_repeated_language_keys": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_autodetects_language_for_unknown_chunks": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_autodetects_each_paragraph_separately": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_preserves_unknown_language_when_detection_fails": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_markdown_roundtrip_from_explicit_languages": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_title_markdown_roundtrip_from_explicit_languages": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_dict_title_mode_uses_colon_newline",
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_dict_uses_default_separator_and_strips_leading_spaces",
+    "zz_gpt54mini_plainiso_2.test_gen::test_convert_removes_initial_separator_tokens",
+    "zz_gpt54mini_plainiso_2.test_gen::test_detect_language_truncates_long_code",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_aggregates_repeated_language_keys",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_explicit_language_segments_are_collected_in_order",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_markdown_roundtrip_from_explicit_languages",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_short_prefixed_token_without_end_symbol_returns_ordered_dict",
+    "zz_gpt54mini_plainiso_2.test_gen::test_split_title_markdown_roundtrip_from_explicit_languages"
+   ]
+  },
+  "haiku_plainiso_1": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_1.test_gen::test_split_two_keyed_languages": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_merges_repeated_language_keys": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_orders_keys_by_first_appearance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_returns_falsy_input_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_short_leading_separator_special_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_leading_separator_with_content": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_accepts_newline_and_carriage_return_after_key": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_keeps_later_colons_in_text": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_custom_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_allows_three_letter_keys_when_max_key_length_is_three": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_rejects_key_shorter_than_min_key_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_groups_unkeyed_segments_by_detected_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_detects_each_paragraph_separately": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_detection_failure_falls_back_to_unknown_and_logs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_without_autodetect_skips_detection": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_markdown_uses_newline_after_key": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_markdown_title_uses_colon_after_key": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_split_markdown_output_round_trips": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_convert_returns_non_dict_input_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_convert_strips_leading_whitespace_of_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_detect_language_maps_chinese_variants_to_cn": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_detect_language_returns_two_letter_code": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainiso_2": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_2.test_gen::test_split_falsy_input_is_returned_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_known_keys_build_ordered_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_colon_terminator_recognized": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_merges_repeated_keys_in_first_seen_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_key_only_short_text_returns_empty_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_custom_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_custom_key_length_accepts_three_letter_keys": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_single_letter_prefix_is_not_a_key": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_known_keys_skip_detection": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_unknown_leading_text_is_detected_and_ordered_first": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_paragraphs_detected_separately_and_separator_kept": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_custom_paragraph_separator_is_reinserted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_failed_detection_goes_to_unknown_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_failed_detection_paragraphs_keep_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_crlf_terminator_recognized": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_markdown_round_trip": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_markdown_strips_leading_whitespace_of_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_split_markdown_title_mode_uses_colon_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_convert_dict_uses_newline_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_convert_title_uses_colon_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_convert_lstrips_values_and_passes_through_non_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_detect_language_returns_two_letter_code": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_detect_language_maps_chinese_variants_to_cn": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_detect_language_propagates_detector_errors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_1": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_1.test_gen::test_split_empty_string_returns_empty_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_none_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_two_labelled_languages_newline_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_returns_ordered_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_colon_as_end_symbol": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_carriage_return_end_symbol": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_combines_repeated_keys_in_first_seen_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_only_prefix_without_end_symbol_returns_key_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_prefix_with_trailing_newline_gives_empty_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_ignores_empty_tokens_between_separators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_custom_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_longer_key_with_max_key_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_unlabelled_text_without_autodetect_goes_to_unknown_key": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_markdown_roundtrip": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_markdown_title_uses_colon_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_autodetect_splits_paragraphs_by_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_autodetect_custom_paragraph_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_autodetect_unlabelled_prefix_before_labelled_part": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_autodetect_skips_empty_paragraphs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_split_autodetect_failure_falls_back_to_unknown": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_convert_non_dict_is_returned_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_2": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_2.test_gen::test_empty_string_returned_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_none_returned_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_key_only_without_end_symbol_returns_single_entry": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_short_key_only_text_uses_available_characters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_newline_end_splits_into_languages": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_colon_end_single_line": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_carriage_return_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_same_key_parts_are_combined_in_first_seen_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_empty_tokens_are_skipped": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_custom_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_custom_key_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_markdown_round_trip_with_newline_ends": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_markdown_title_uses_colon_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_autodetect_assigns_paragraphs_to_detected_languages": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_autodetect_same_language_paragraphs_keep_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_autodetect_custom_paragraph_separator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_autodetect_text_before_first_separator_merges_with_keyed_part": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_detection_failure_falls_back_to_unknown_language": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_real_detector_failure_on_digits_goes_to_unknown": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_autodetect_disabled_puts_text_under_unknown_key": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_autodetect_disabled_still_parses_explicit_keys": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 176,
+  "failed": 24,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: assert OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')]) == OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  Omitting 2 identical items, use -vv to show\n  Left contains 1 more item:\n  {'sw': 'amazing world'}\n  Right con",
+   "AssertionError: assert OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')]) == OrderedDict([...', '\u4eca\u65e5\u306f\u3001\u4e16\u754c')])\n  Omitting 2 identical items, use -vv to show\n  Left contains 1 more item:\n  {'pl': 'amazing world'}\n  Right con"
+  ]
+ },
+ "seconds": 1054.2
+}

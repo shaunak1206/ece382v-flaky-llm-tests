@@ -1,0 +1,1592 @@
+{
+ "project": "homog",
+ "sha": "5b49902ff3dea972f2c466abe7937546b50ee9f1",
+ "category": "unlabeled",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plainiso_1": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 12,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_hray_invalid_direction_raises",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_closest_points_identical_lines",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_closest_points_simple",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_pa_vectorized",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_perpendicular",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_skew_lines"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_1.test_gen::test_hray_basic_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_hray_broadcasting": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_parallel_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_perpendicular": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_skew_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_closest_points_simple": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_closest_points_identical_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_hray_invalid_direction_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_pa_vectorized": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_closest_points_pa_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_hray_returns_homogeneous_points": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_pa_when_cross_zero_direction_parallel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_hray_invalid_direction_raises",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_closest_points_identical_lines",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_closest_points_simple",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_pa_vectorized",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_perpendicular",
+    "zz_gpt41mini_plainiso_1.test_gen::test_line_line_distance_skew_lines"
+   ]
+  },
+  "gpt41mini_plainiso_2": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_identical_rays",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_nonparallel",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_identical_lines",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_parallel_lines",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_simple",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_verbose_output",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_pa_general_case",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_pa_parallel_lines_zero_distance",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_with_array_inputs"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_2.test_gen::test_hray_basic_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_hray_broadcast_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_parallel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_nonparallel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_simple": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_identical_rays": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_nonparallel": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_hray_requires_hpoint_and_hnormalized": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_pa_parallel_lines_zero_distance": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_pa_general_case": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_with_array_inputs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_parallel_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_verbose_output": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_hray_direction_normalization_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_identical_rays_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_perpendicular_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_identical_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_same_points_different_directions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_broadcasting_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_identical_rays",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_nonparallel",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_identical_lines",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_parallel_lines",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_simple",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_closest_points_pa_verbose_output",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_pa_general_case",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_pa_parallel_lines_zero_distance",
+    "zz_gpt41mini_plainiso_2.test_gen::test_line_line_distance_with_array_inputs"
+   ]
+  },
+  "gpt54mini_plainiso_1": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_closest_points_parallel_lines_returns_one_valid_minimizer",
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_same_line_is_zero"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_1.test_gen::test_hray_from_3d_point_and_direction_shapes_and_homogeneous_components": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_hray_preserves_four_component_origin_and_direction_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_hray_broadcasts_scalar_ray_inputs_to_batch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_hray_raises_when_origin_has_invalid_last_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_hray_raises_when_direction_has_invalid_last_dimension": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_intersecting_orthogonal_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_skew_lines_matches_known_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_parallel_offset_lines_uses_perpendicular_separation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_antiparallel_lines_are_treated_as_parallel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_same_line_is_zero": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_matches_broadcasted_batch_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_closest_points_intersecting_lines_return_same_point": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_closest_points_skew_lines_have_expected_pair": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_closest_points_parallel_lines_returns_one_valid_minimizer": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_closest_points_are_symmetric_up_to_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_closest_points_batch_shape_matches_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_closest_points_parallel_lines_returns_one_valid_minimizer",
+    "zz_gpt54mini_plainiso_1.test_gen::test_line_line_distance_same_line_is_zero"
+   ]
+  },
+  "gpt54mini_plainiso_2": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_plainiso_2.test_gen::test_hray_from_3d_origin_and_direction_produces_valid_ray": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_hray_accepts_4d_origin_and_direction_without_changing_origin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_hray_broadcasts_origin_and_direction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_hray_direction_is_normalized_even_if_input_is_not_unit_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_hray_with_batch_input_returns_expected_shape_and_validity": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_distance_intersecting_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_distance_skew_lines_matches_expected_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_distance_perpendicular_offset_lines_matches_expected_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_distance_parallel_lines_uses_perpendicular_separation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_distance_anti_parallel_lines_uses_perpendicular_separation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_distance_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_closest_points_intersecting_lines_return_same_point": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_closest_points_skew_lines_produce_points_on_each_line": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_closest_points_are_on_the_input_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_closest_points_midpoint_property_for_skew_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_line_line_closest_points_parallel_lines_raise_or_return_nonfinite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_hpoint_round_trips_three_vector_and_ray_functions_accept_it": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainiso_1": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_verbose_prints_intermediates"
+   ],
+   "tests": {
+    "zz_haiku_plainiso_1.test_gen::test_hray_builds_point_and_unit_direction_columns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_hray_normalizes_direction_to_unit_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_hray_output_passes_is_valid_rays": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_hray_forces_origin_homogeneous_w_to_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_hray_batched_inputs_give_stacked_rays": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_hray_broadcasts_single_origin_over_many_directions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_hray_rejects_two_component_origin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_skew_lines_equals_perpendicular_separation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_intersecting_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_parallel_lines_is_perpendicular_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_antiparallel_lines_uses_parallel_branch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_coincident_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_is_symmetric_in_arguments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_matches_closest_point_gap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_batched_matches_scalar_calls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_distance_invariant_to_direction_scaling": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_known_skew_configuration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_crossing_lines_meet_at_crossing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_lie_on_their_respective_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_connecting_segment_perpendicular_to_both": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_batched_matches_scalar_calls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_verbose_prints_intermediates": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_parallel_lines_not_finite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_haiku_plainiso_1.test_gen::test_closest_points_verbose_prints_intermediates"
+   ]
+  },
+  "haiku_plainiso_2": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_2.test_gen::test_hray_shape_is_four_by_two": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_hray_origin_and_direction_columns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_hray_normalizes_direction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_hray_accepts_homogeneous_origin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_hray_result_is_valid_ray": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_hray_batched_origins_and_directions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_hray_rejects_origin_of_wrong_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_skew_axis_aligned_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_skew_lines_with_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_skew_lines_with_diagonal_direction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_parallel_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_antiparallel_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_collinear_lines_are_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_intersecting_lines_are_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_is_symmetric_in_its_arguments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_distance_batched_mixed_cases": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_closest_points_axis_aligned_skew_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_closest_points_offset_skew_lines_known_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_closest_points_lie_on_their_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_closest_points_segment_is_orthogonal_to_both_axes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_closest_points_distance_matches_line_line_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_closest_points_unnormalized_axes_give_same_points": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_closest_points_batched_rows": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_1": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_1.test_gen::test_hray_shape_and_values_from_3vectors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_accepts_4vector_origin": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_accepts_4vector_direction_with_zero_w": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_direction_is_normalized": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_direction_scale_invariant": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_homogeneous_components": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_batch_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_broadcasts_single_origin_over_many_directions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_broadcasts_many_origins_over_single_direction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_output_is_valid_ray_and_float": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_hray_invalid_origin_length_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_skew_axis_aligned_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_skew_diagonal_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_intersecting_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_parallel_lines_uses_perpendicular_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_antiparallel_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_identical_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_is_symmetric_and_nonnegative": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_distance_unchanged_by_sliding_origin_along_own_axis": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_closest_points_axis_aligned_skew_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_closest_points_coincide_for_intersecting_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_closest_points_output_shape_and_homogeneous_w": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_closest_points_lie_on_their_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_closest_points_segment_is_perpendicular_to_both_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_closest_points_separation_matches_line_line_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_2": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_2.test_gen::test_hray_basic_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_hray_normalizes_direction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_hray_accepts_four_vectors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_hray_origin_w_is_forced_to_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_hray_is_valid_ray": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_hray_batch_shape_and_rows": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_hray_broadcasts_single_origin_over_directions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_hray_bad_origin_length_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_distance_axis_aligned_skew_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_distance_general_skew_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_distance_parallel_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_distance_antiparallel_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_distance_intersecting_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_distance_batch_of_mixed_pairs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_distance_is_symmetric": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_distance_unchanged_by_sliding_origin_along_axis": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_closest_points_axis_aligned_skew": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_closest_points_intersecting_lines_coincide": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_closest_points_lie_on_lines_and_segment_is_perpendicular": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_closest_points_segment_length_matches_line_line_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_closest_points_swapping_rays_swaps_points": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_closest_points_translate_with_rays": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_closest_points_parallel_lines_are_not_finite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 197,
+  "failed": 3,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "assert False\n +  where False = <function allclose at 0x7fcb1b589040>(array([[[1.80803615e-02, 2.45247477e+00, 1.78387798e+00, 2.33002708e+00,\\n         1.33213556e+00, 8.46010130e-01, 6.34...902467e+0",
+   "assert False\n +  where False = <function allclose at 0x7e69cdd0a040>(array([[[1.1979765 , 0.41316727, 0.64639079, 2.06105003, 1.70249936,\\n         0.69125858, 1.81497355],\\n        [2.0376..., 2.2862",
+   "assert False\n +  where False = <function allclose at 0x794174d49040>(array([[[3.22659762, 0.19529739, 2.58666414, 1.40287436, 0.65812858,\\n         2.04790804, 2.97237047],\\n        [0.8526..., 1.0752"
+  ]
+ },
+ "seconds": 857.8
+}

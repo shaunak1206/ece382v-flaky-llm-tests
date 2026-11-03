@@ -28,7 +28,7 @@ We now have 74 flaky LLM tests that a developer would keep, plus 17 that a one r
 \begin{itemize}
 \item \textbf{Each model fails in its own way} (Table~\ref{tab:modelcause}). GPT~4.1 mini leaves randomness unseeded. GPT~5.4 mini is the only model that reloads modules, and 24 of its tests depend on test order because of it. In E2, Claude Haiku and Claude Sonnet flip only where the code under test is nondeterministic in a way a test cannot control.
 \item \textbf{Sonnet wrote the fewest flaky tests.} Over 41 projects, GPT~4.1 mini has a kept flaky test in 6 projects where Sonnet has none, and the reverse never happens (exact sign test, $p = 0.031$). Per suite it is 10 of 80 against 1 of 81 ($p = 0.005$). Only the suite level result survives a correction for six model pairs (Table~\ref{tab:stats}).
-\item \textbf{A fixture fixes most of them.} Seeding every generator inside the test call removed all 12 unseeded randomness tests. Adding a state restore removed REPLACE\_M2 of the 24 order dependent ones. What is left depends on the clock or on \texttt{hash()}.
+\item \textbf{A fixture fixes most of them.} Seeding every generator inside the test call removed all 12 unseeded randomness tests. Adding a state restore removed all 24 order dependent ones, and GPT~5.4 mini went from 25 kept flaky tests to 1. The 10 that are left, across all four models, depend on the clock or on a hash.
 \end{itemize}
 
 \begin{table}[h]
@@ -67,7 +67,7 @@ The subject filter numbers were packed into one sentence. What does ``and we say
 Why randomly sample, and why not run more? & The random sample was only for the last funnel rule, which needs a clone, an install, and a test run per package, so we checked 6 packages per stratum to estimate the pass rate. It did not pick our subjects. We now run far more (600 runs per generated test instead of 70 to 90), and instead of adding random libraries we added projects that are known to have flaky tests. \\
 Why not use Python flaky tests that prior datasets already found? & We now do. We reproduced 21 of the 58 hand labeled flaky tests of Gruber et al.\ that are not order dependent and not caused by the network, then 30 of 176 more from their unlabeled data, and used 41 projects in all (Table~\ref{tab:repro}). \\
 Can a study rest on three flaky tests? & No, so we built E2 to find more. We now have 74 kept flaky LLM tests and 17 that a filter removes (Table~\ref{tab:count}). They cluster in a few suites, so we compare models per suite and per project. \\
-Are LLMs just good at avoiding flakiness, and why? & Mostly, but not uniformly. Most LLM tests share no state between tests, which removes the main human cause (Section~\ref{sec:why}). Each model then has its own failure habit (Table~\ref{tab:modelcause}), and we can now name each one and fix most of them with a fixture (Section~\ref{sec:mitigation}). \\
+Are LLMs just good at avoiding flakiness, and why? & Mostly, but not uniformly. Most LLM tests share no state between tests, which removes the main human cause (Section~\ref{sec:why}). Each model then has its own failure habit (Table~\ref{tab:modelcause}), and we can now name each one. A fixture added after generation removes 39 of the 49 kept flaky E2 tests (Section~\ref{sec:mitigation}). \\
 Why only one shot Haiku? & Haiku 4.5 was only the first model where we saw flips. E2 compares four models from two families under the same plain prompt. There Claude Haiku 5.5 has 7 kept flaky tests in 1,908, all in two projects whose code is itself nondeterministic. \\
 72 LLM suites does not equal 36 plus 24. & This was our error. There were 60 LLM suites (36 on October 1 and 24 on October 22) plus 12 human suites, so 72 suites in all. With the 24 OpenAI suites added since, E1 has 84 LLM suites and 96 suites in all. \\
 What are AG-S, OS-S, OS-H? & Every condition is now defined in Table~\ref{tab:conds} before it is used. \\
@@ -337,7 +337,7 @@ Reloads a module or edits \texttt{sys.modules} & 0 & 0 & 13 & 0 \\
 \label{sec:mitigation}
 We tried three kinds of mitigation, research question 4 of the proposal, on the E2 tests.
 
-\textbf{Fixtures added after generation.} A fixture is a \texttt{conftest.py} added to each generated suite, with the tests unchanged. \emph{M1} (\texttt{mitigations/seed\_conftest.py}) seeds \texttt{random}, NumPy, and PyTorch inside each test call. It has to run there, after pytest-randomly reseeds, which is also why the module level seeding GPT~4.1 mini wrote in pelicun had no effect. \emph{M2} (\texttt{mitigations/isolate\_conftest.py}) does the same and also snapshots \texttt{sys.modules}, the globals of every loaded module, \texttt{sys.path}, the environment, and the working directory before each test, then restores whatever changed after teardown. Every suite reran 200 times as before (Table~\ref{tab:mitig}).
+\textbf{Fixtures added after generation.} A fixture is a \texttt{conftest.py} added to each generated suite, with the tests unchanged. \emph{M1} (\texttt{mitigations/seed\_conftest.py}) seeds \texttt{random}, NumPy, and PyTorch inside each test call. It has to run there, after pytest-randomly reseeds, which is also why the module level seeding GPT~4.1 mini wrote in pelicun had no effect. \emph{M2} (\texttt{mitigations/isolate\_conftest.py}) does the same, imports the project's packages once before any test runs, and snapshots \texttt{sys.modules}, the globals of every loaded module, \texttt{sys.path}, the environment, and the working directory before each test, then restores whatever changed after teardown. The up front import is there for jmcm. Without it, a restore cannot help, because the polluter is the first to import pandas and leaves it half built (in a local check of 40 shuffled runs, a restore alone did not help, and adding the up front import removed every failure). Every suite reran 200 times as before (Table~\ref{tab:mitig}).
 
 \begin{table}[h]
 \caption{Kept flaky E2 tests with each fixture, 41 projects, kept tests in parentheses}
@@ -348,15 +348,15 @@ We tried three kinds of mitigation, research question 4 of the proposal, on the 
 \toprule
 Model & Plain & M1, seed & M2, seed and restore \\
 \midrule
-Claude Sonnet 5.5 & 1 (1,883) & 2 (1,884) & REPLACE\_S \\
-Claude Haiku 5.5 & 7 (1,908) & 5 (1,906) & REPLACE\_H \\
-GPT 5.4 mini & 25 (1,028) & 25 (1,028) & REPLACE\_G5 \\
-GPT 4.1 mini & 16 (1,070) & 3 (1,075) & REPLACE\_G4 \\
+Claude Sonnet 5.5 & 1 (1,883) & 2 (1,884) & 2 (1,884) \\
+Claude Haiku 5.5 & 7 (1,908) & 5 (1,906) & 5 (1,906) \\
+GPT 5.4 mini & 25 (1,028) & 25 (1,028) & 1 (1,027) \\
+GPT 4.1 mini & 16 (1,070) & 3 (1,075) & 2 (1,073) \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-M1 removed all 12 unseeded generator tests. Kept counts moved by at most 5 per model. GPT~4.1 mini keeps 5 more because some tests that failed their first run now pass it, and Haiku's 2 fewer are kevinarpe-rambutan3 tests that happened to fail their first run. REPLACE\_M2\_PARA What neither fixture can fix is the clock (docci), the salted \texttt{hash()} (cuckoopy), and the code's own unstable hash (kevinarpe-rambutan3, whose counts move between runs because its failures depend on memory layout, which is also why Sonnet goes from 1 to 2 under M1). These need a change to the test or to the code.
+M1 removed all 12 unseeded generator tests. Kept counts moved by at most 5 per model. GPT~4.1 mini keeps 5 more because some tests that failed their first run now pass it, and Haiku's 2 fewer are kevinarpe-rambutan3 tests that happened to fail their first run. M2 removed all 24 order dependent tests (jmcm, torch-gpt-2, and pypfm) and kept every M1 fix, so GPT~5.4 mini goes from 25 to 1. It made no new flaky test, since every test still flaky under M2 was also flaky in the plain or M1 run, and kept counts moved by at most 3, so the restore did not break any suite. The 10 kept flaky tests left under M2 are all in three projects. What neither fixture can fix is the clock (docci), the salted \texttt{hash()} (cuckoopy), and the code's own unstable hash (kevinarpe-rambutan3, whose counts move between runs because its failures depend on memory layout, which is also why Sonnet goes from 1 to 2 under both fixtures). These need a change to the test or to the code.
 
 \textbf{Prompts.} We regenerated the 34 GPT~4.1 mini suites of the first 17 projects with three versions of a guard prompt (\texttt{prompts/README.md}). Version~1 lists the usual causes of flakiness. Version~2 adds three concrete rules (seed inside the test body, do not assert on \texttt{hash()} of strings, use \texttt{monkeypatch} for module attributes). Version~3 limits seeding to the generators the code under test already uses, because version~2 made GPT~4.1 mini import PyTorch or NumPy into projects that do not have them.
 

@@ -163,6 +163,66 @@
     0.04115871365453225,
     1.3084343014345905
    ]
+  },
+  "gpt41mini+plainiso": {
+   "suites": 80,
+   "generated": 1630,
+   "kept": 1073,
+   "flaky": 2,
+   "rejected": 557,
+   "rejected_but_flaky": 1,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 2,
+   "suites_not_collected": 2,
+   "ci": [
+    0.05112958353991749,
+    0.677074081697384
+   ]
+  },
+  "gpt54mini+plainiso": {
+   "suites": 80,
+   "generated": 1284,
+   "kept": 1027,
+   "flaky": 1,
+   "rejected": 257,
+   "rejected_but_flaky": 0,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 1,
+   "suites_not_collected": 2,
+   "ci": [
+    0.01718999565754778,
+    0.5494926062087331
+   ]
+  },
+  "haiku+plainiso": {
+   "suites": 81,
+   "generated": 1920,
+   "kept": 1906,
+   "flaky": 5,
+   "rejected": 14,
+   "rejected_but_flaky": 2,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 4,
+   "suites_not_collected": 1,
+   "ci": [
+    0.11210027144883937,
+    0.6126509330489577
+   ]
+  },
+  "sonnet+plainiso": {
+   "suites": 81,
+   "generated": 1891,
+   "kept": 1884,
+   "flaky": 2,
+   "rejected": 7,
+   "rejected_but_flaky": 0,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 1,
+   "suites_not_collected": 1,
+   "ci": [
+    0.029116328572016074,
+    0.3862575036393303
+   ]
   }
  },
  "projects": [
@@ -1622,6 +1682,96 @@
    "pass": 151,
    "fail": 49,
    "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "haiku_plainiso_1",
+   "model": "haiku+plainiso",
+   "test": "zz_haiku_plainiso_1.test_gen::test_delete_keeps_other_items_findable",
+   "pass": 197,
+   "fail": 3,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "haiku_plainiso_1",
+   "model": "haiku+plainiso",
+   "test": "zz_haiku_plainiso_1.test_gen::test_len_tracks_mixed_inserts_and_deletes",
+   "pass": 194,
+   "fail": 6,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "haiku_plainiso_2",
+   "model": "haiku+plainiso",
+   "test": "zz_haiku_plainiso_2.test_gen::test_many_inserts_remain_findable",
+   "pass": 156,
+   "fail": 44,
+   "category": "random"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_plainiso_1",
+   "model": "gpt41mini+plainiso",
+   "test": "zz_gpt41mini_plainiso_1.test_gen::test_xlsx_to_bytes_and_xlsx_to_file_consistent_content",
+   "pass": 199,
+   "fail": 1,
+   "category": "unlabeled"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_plainiso_2",
+   "model": "gpt41mini+plainiso",
+   "test": "zz_gpt41mini_plainiso_2.test_gen::test_xlsx_to_bytes_same_workbook_consistency",
+   "pass": 198,
+   "fail": 2,
+   "category": "unlabeled"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_plainiso_2",
+   "model": "gpt54mini+plainiso",
+   "test": "zz_gpt54mini_plainiso_2.test_gen::test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes",
+   "pass": 197,
+   "fail": 3,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "haiku_plainiso_1",
+   "model": "haiku+plainiso",
+   "test": "zz_haiku_plainiso_1.test_gen::test_not_none_check_arg_raises_for_none",
+   "pass": 112,
+   "fail": 88,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "haiku_plainiso_2",
+   "model": "haiku+plainiso",
+   "test": "zz_haiku_plainiso_2.test_gen::test_not_none_rejects_none_and_records_failure",
+   "pass": 120,
+   "fail": 80,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "sonnet_plainiso_2",
+   "model": "sonnet+plainiso",
+   "test": "zz_sonnet_plainiso_2.test_gen::test_not_none_matcher_error_recorded_only_on_failure",
+   "pass": 137,
+   "fail": 63,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "sonnet_plainiso_2",
+   "model": "sonnet+plainiso",
+   "test": "zz_sonnet_plainiso_2.test_gen::test_not_none_check_arg",
+   "pass": 101,
+   "fail": 99,
+   "category": "unlabeled"
   }
  ]
 }

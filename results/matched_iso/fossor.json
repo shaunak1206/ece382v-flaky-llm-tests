@@ -1,0 +1,1827 @@
+{
+ "project": "fossor",
+ "sha": "d8dbdc40f2f16da601c317dfa74b83e3932c9bb3",
+ "category": "unlabeled",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plainiso_1": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_get_error_pattern_counts_creates_ordered_dict_and_counts",
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_new_unique_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_to_other_error_lines_when_too_many",
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_increments_existing",
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_similar_but_below_threshold_counts_new",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_handles_short_line_and_index_error",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_alpha_start_no_exception",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_caused_by_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_non_error_digit_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_stacktrace_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_returns_line_and_date_for_error_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_truncates_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_remove_blacklisted_logs_empty_list",
+    "zz_gpt41mini_plainiso_1.test_gen::test_remove_blacklisted_logs_removes_blacklisted",
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_filters_blacklisted_logfiles_and_returns_formatted_output",
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_multiple_errors_logged",
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_returns_none_if_all_logs_filtered_blacklist",
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_returns_none_if_no_logfiles_in_variables"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_1.test_gen::test_remove_blacklisted_logs_removes_blacklisted": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_remove_blacklisted_logs_empty_list": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_stacktrace_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_alpha_start_no_exception": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_caused_by_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_non_error_digit_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_returns_line_and_date_for_error_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_truncates_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_handles_short_line_and_index_error": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_increments_existing": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_new_unique_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_to_other_error_lines_when_too_many": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_similar_but_below_threshold_counts_new": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_get_error_pattern_counts_creates_ordered_dict_and_counts": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_returns_none_if_no_logfiles_in_variables": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_filters_blacklisted_logfiles_and_returns_formatted_output": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_returns_none_if_all_logs_filtered_blacklist": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_multiple_errors_logged": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_get_error_pattern_counts_creates_ordered_dict_and_counts",
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_new_unique_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_to_other_error_lines_when_too_many",
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_increments_existing",
+    "zz_gpt41mini_plainiso_1.test_gen::test_group_similar_log_lines_similar_but_below_threshold_counts_new",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_handles_short_line_and_index_error",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_alpha_start_no_exception",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_caused_by_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_non_error_digit_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_none_for_stacktrace_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_returns_line_and_date_for_error_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_process_line_truncates_line",
+    "zz_gpt41mini_plainiso_1.test_gen::test_remove_blacklisted_logs_empty_list",
+    "zz_gpt41mini_plainiso_1.test_gen::test_remove_blacklisted_logs_removes_blacklisted",
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_filters_blacklisted_logfiles_and_returns_formatted_output",
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_multiple_errors_logged",
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_returns_none_if_all_logs_filtered_blacklist",
+    "zz_gpt41mini_plainiso_1.test_gen::test_run_returns_none_if_no_logfiles_in_variables"
+   ]
+  },
+  "gpt41mini_plainiso_2": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_adds_to_other_error_lines_when_max_exceeded",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_counts_first_line_as_unique",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_increments_count_when_date_absent",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_merges_similar_line",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_merges_when_ratio_edge_case",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_respects_threshold",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_keeps_date_and_line_length",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_non_digit_starts_returns_none",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_none_if_level_not_error",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_none_when_indexerror_raised",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_processed_line_and_date",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_alpha_line_without_exception",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_caused_by_line",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_leading_whitespace",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_truncates_long_line",
+    "zz_gpt41mini_plainiso_2.test_gen::test_get_error_pattern_counts_reads_and_groups",
+    "zz_gpt41mini_plainiso_2.test_gen::test_log_messages_generated_during_run",
+    "zz_gpt41mini_plainiso_2.test_gen::test_remove_blacklisted_logs_removes_expected",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_handles_None_LogFiles",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_handles_empty_LogFiles_list",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_logs_debug_messages",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_returns_none_if_no_LogFiles",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_returns_none_if_no_lines_after_filter",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_skips_blacklisted_logs_and_returns_formatted_string"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_2.test_gen::test_remove_blacklisted_logs_removes_expected": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_leading_whitespace": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_alpha_line_without_exception": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_caused_by_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_none_when_indexerror_raised": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_none_if_level_not_error": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_processed_line_and_date": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_truncates_long_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_counts_first_line_as_unique": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_merges_similar_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_adds_to_other_error_lines_when_max_exceeded": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_get_error_pattern_counts_reads_and_groups": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_returns_none_if_no_LogFiles": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_skips_blacklisted_logs_and_returns_formatted_string": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_returns_none_if_no_lines_after_filter": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_respects_threshold": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_merges_when_ratio_edge_case": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_keeps_date_and_line_length": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_logs_debug_messages": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_log_messages_generated_during_run": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_non_digit_starts_returns_none": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_increments_count_when_date_absent": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_handles_empty_LogFiles_list": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_handles_None_LogFiles": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_adds_to_other_error_lines_when_max_exceeded",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_counts_first_line_as_unique",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_increments_count_when_date_absent",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_merges_similar_line",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_merges_when_ratio_edge_case",
+    "zz_gpt41mini_plainiso_2.test_gen::test__group_similar_log_lines_respects_threshold",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_keeps_date_and_line_length",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_non_digit_starts_returns_none",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_none_if_level_not_error",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_none_when_indexerror_raised",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_returns_processed_line_and_date",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_alpha_line_without_exception",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_caused_by_line",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_skips_leading_whitespace",
+    "zz_gpt41mini_plainiso_2.test_gen::test__process_line_truncates_long_line",
+    "zz_gpt41mini_plainiso_2.test_gen::test_get_error_pattern_counts_reads_and_groups",
+    "zz_gpt41mini_plainiso_2.test_gen::test_log_messages_generated_during_run",
+    "zz_gpt41mini_plainiso_2.test_gen::test_remove_blacklisted_logs_removes_expected",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_handles_None_LogFiles",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_handles_empty_LogFiles_list",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_logs_debug_messages",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_returns_none_if_no_LogFiles",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_returns_none_if_no_lines_after_filter",
+    "zz_gpt41mini_plainiso_2.test_gen::test_run_skips_blacklisted_logs_and_returns_formatted_string"
+   ]
+  },
+  "gpt54mini_plainiso_1": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_get_error_pattern_counts_groups_lines_from_file",
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_new_unique_line_with_date",
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_increments_similar_existing_line_and_sets_first_seen",
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_uses_other_error_lines_when_max_unique_exceeded",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_allows_alpha_lines_containing_exception",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_handles_index_error_and_returns_none",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_digit_starting_non_error_line",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[   stacktrace line\\n-None-None]",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[Caused by: nope\\n-None-None]",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[INFO not an error\\n-None-None]",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_returns_error_line_and_date",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_truncates_long_error_line",
+    "zz_gpt54mini_plainiso_1.test_gen::test_remove_blacklisted_logs_filters_matching_names",
+    "zz_gpt54mini_plainiso_1.test_gen::test_remove_blacklisted_logs_leaves_non_matching_names_unchanged",
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_filters_blacklisted_logs_and_formats_output",
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_returns_none_when_no_logfiles",
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_returns_none_when_pool_results_are_empty"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_1.test_gen::test_remove_blacklisted_logs_filters_matching_names": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_remove_blacklisted_logs_leaves_non_matching_names_unchanged": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[   stacktrace line\\n-None-None]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[INFO not an error\\n-None-None]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[Caused by: nope\\n-None-None]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_digit_starting_non_error_line": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_returns_error_line_and_date": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_truncates_long_error_line": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_handles_index_error_and_returns_none": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_allows_alpha_lines_containing_exception": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_increments_similar_existing_line_and_sets_first_seen": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_new_unique_line_with_date": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_uses_other_error_lines_when_max_unique_exceeded": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_get_error_pattern_counts_groups_lines_from_file": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_returns_none_when_no_logfiles": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_filters_blacklisted_logs_and_formats_output": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_returns_none_when_pool_results_are_empty": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_get_error_pattern_counts_groups_lines_from_file",
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_adds_new_unique_line_with_date",
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_increments_similar_existing_line_and_sets_first_seen",
+    "zz_gpt54mini_plainiso_1.test_gen::test_group_similar_log_lines_uses_other_error_lines_when_max_unique_exceeded",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_allows_alpha_lines_containing_exception",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_handles_index_error_and_returns_none",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_digit_starting_non_error_line",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[   stacktrace line\\n-None-None]",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[Caused by: nope\\n-None-None]",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_ignores_non_error_and_stacktrace_lines[INFO not an error\\n-None-None]",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_returns_error_line_and_date",
+    "zz_gpt54mini_plainiso_1.test_gen::test_process_line_truncates_long_error_line",
+    "zz_gpt54mini_plainiso_1.test_gen::test_remove_blacklisted_logs_filters_matching_names",
+    "zz_gpt54mini_plainiso_1.test_gen::test_remove_blacklisted_logs_leaves_non_matching_names_unchanged",
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_filters_blacklisted_logs_and_formats_output",
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_returns_none_when_no_logfiles",
+    "zz_gpt54mini_plainiso_1.test_gen::test_run_returns_none_when_pool_results_are_empty"
+   ]
+  },
+  "gpt54mini_plainiso_2": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_get_error_pattern_counts_groups_lines_from_file",
+    "zz_gpt54mini_plainiso_2.test_gen::test_get_error_pattern_counts_sets_first_seen_for_grouped_lines",
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_adds_new_unique_line",
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_increments_similar_line",
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_uses_other_error_lines_after_limit",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_handles_short_numeric_line",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[   at com.example.Class.method(Class.java:1)\\n-None-None]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 ERROR Something bad happened\\n-ERROR Something bad happened\\n-2024-01-01 12:00:00]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 ERROR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\\n-ERROR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-2024-01-01 12:00:00]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 INFO Not an error\\n-None-None]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[Caused by: java.lang.RuntimeException: boom\\n-None-None]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[Hello world\\n-None-None]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_remove_blacklisted_logs_filters_expected_names",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_filters_blacklisted_files_before_processing",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_formats_single_file_result",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_returns_none_when_all_files_blacklisted",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_returns_none_when_no_logfiles",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_uses_cpu_count_to_size_pool"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_returns_none_when_no_logfiles": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_remove_blacklisted_logs_filters_expected_names": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 ERROR Something bad happened\\n-ERROR Something bad happened\\n-2024-01-01 12:00:00]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 INFO Not an error\\n-None-None]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[   at com.example.Class.method(Class.java:1)\\n-None-None]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[Caused by: java.lang.RuntimeException: boom\\n-None-None]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[Hello world\\n-None-None]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 ERROR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\\n-ERROR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-2024-01-01 12:00:00]": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_handles_short_numeric_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_increments_similar_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_adds_new_unique_line": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_uses_other_error_lines_after_limit": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_get_error_pattern_counts_groups_lines_from_file": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_get_error_pattern_counts_sets_first_seen_for_grouped_lines": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_formats_single_file_result": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_filters_blacklisted_files_before_processing": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_returns_none_when_all_files_blacklisted": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_uses_cpu_count_to_size_pool": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_get_error_pattern_counts_groups_lines_from_file",
+    "zz_gpt54mini_plainiso_2.test_gen::test_get_error_pattern_counts_sets_first_seen_for_grouped_lines",
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_adds_new_unique_line",
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_increments_similar_line",
+    "zz_gpt54mini_plainiso_2.test_gen::test_group_similar_log_lines_uses_other_error_lines_after_limit",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_handles_short_numeric_line",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[   at com.example.Class.method(Class.java:1)\\n-None-None]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 ERROR Something bad happened\\n-ERROR Something bad happened\\n-2024-01-01 12:00:00]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 ERROR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\\n-ERROR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-2024-01-01 12:00:00]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[2024-01-01 12:00:00 INFO Not an error\\n-None-None]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[Caused by: java.lang.RuntimeException: boom\\n-None-None]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_process_line_variants[Hello world\\n-None-None]",
+    "zz_gpt54mini_plainiso_2.test_gen::test_remove_blacklisted_logs_filters_expected_names",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_filters_blacklisted_files_before_processing",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_formats_single_file_result",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_returns_none_when_all_files_blacklisted",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_returns_none_when_no_logfiles",
+    "zz_gpt54mini_plainiso_2.test_gen::test_run_uses_cpu_count_to_size_pool"
+   ]
+  },
+  "haiku_plainiso_1": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_1.test_gen::test_remove_blacklisted_logs_drops_noise_files": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_remove_blacklisted_logs_keeps_order_of_ordinary_logs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_blank_and_indented_lines_are_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_plain_text_without_exception_is_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_exception_text_is_returned_verbatim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_caused_by_lines_are_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_error_line_splits_timestamp_and_message": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_collapses_whitespace_and_strips_newline": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_non_error_levels_are_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_truncates_message_to_200_characters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_timestamp_without_level_is_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_process_line_other_leading_character_passes_through_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_group_first_line_creates_entry_with_count_and_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_group_similar_line_merges_and_keeps_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_group_dissimilar_line_creates_new_entry": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_group_ratio_exactly_at_threshold_is_not_merged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_group_ratio_above_threshold_is_merged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_group_without_date_records_no_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_group_overflow_collapses_into_other_error_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_get_error_pattern_counts_counts_similar_error_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_get_error_pattern_counts_without_errors_is_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_run_without_log_files_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_run_formats_report_per_file_and_skips_blacklisted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_1.test_gen::test_run_returns_none_when_every_log_is_blacklisted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plainiso_2": {
+   "model": "haiku",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plainiso_2.test_gen::test_run_without_log_files_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_blacklist_removes_known_log_names": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_blacklist_keeps_unmatched_names": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_blacklist_matches_substrings": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_skips_stacktrace_continuation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_skips_blank_line": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_skips_plain_text_without_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_keeps_exception_text_without_date": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_skips_caused_by_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_parses_error_with_timestamp": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_skips_non_error_levels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_truncates_to_200_chars": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_process_line_short_digit_line_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_group_first_line_creates_entry": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_group_near_duplicate_increments_count": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_group_dissimilar_lines_stay_separate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_group_respects_instance_similarity_ratio": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_group_caps_unique_lines_into_other_bucket": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_group_first_seen_keeps_earliest_date": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_get_error_pattern_counts_reads_and_groups": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_run_formats_report_per_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_run_skips_blacklisted_files": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_run_returns_none_when_no_errors": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plainiso_2.test_gen::test_run_pool_size_is_twice_cpu_count": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_1": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_error_line_splits_date_and_message": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_non_error_level_is_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_indented_stacktrace_line_is_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_alpha_line_without_exception_is_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_alpha_line_with_exception_is_kept_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_caused_by_is_ignored_even_with_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_short_digit_line_is_ignored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_truncates_long_messages_to_200_chars": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_process_line_other_first_character_passes_through": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_group_first_line_creates_entry_with_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_group_similar_lines_are_merged_and_keep_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_group_dissimilar_lines_get_separate_entries": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_group_without_date_has_no_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_group_ratio_exactly_at_threshold_is_not_merged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_group_ratio_above_threshold_is_merged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_group_overflow_goes_to_other_error_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_remove_blacklisted_logs_filters_known_names": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_get_error_pattern_counts_reads_and_groups_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_get_error_pattern_counts_empty_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_run_without_log_files_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_run_formats_output_for_log_file": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_run_returns_none_when_no_errors_or_only_blacklisted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_run_reports_each_file_with_errors_in_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_run_omits_first_seen_and_strips_line_when_missing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_1.test_gen::test_run_helper_returns_output_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plainiso_2": {
+   "model": "sonnet",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_skips_indented_stacktrace": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_skips_blank_newline": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_skips_plain_alpha_line_without_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_keeps_alpha_line_with_exception": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_skips_caused_by": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_error_level_extracts_date_and_message": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_non_error_level_is_skipped": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_too_few_fields_is_skipped": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_process_line_truncates_to_200_chars": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_group_first_line_creates_entry_with_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_group_identical_lines_increment_and_keep_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_group_similar_lines_merge_under_first_line": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_group_dissimilar_lines_stay_separate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_group_without_date_has_no_first_seen": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_group_overflow_goes_to_other_error_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_remove_blacklisted_logs_filters_known_names": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_get_error_pattern_counts_counts_only_error_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_run_without_logfiles_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_run_formats_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_run_returns_none_when_no_errors_or_all_blacklisted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_run_exception_line_has_no_first_seen_text": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plainiso_2.test_gen::test_run_multiple_files_and_run_helper": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 185,
+  "failed": 15,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmp16h8c_o1/tmp90nyphvl\\nFirst seen: 2017/10/10 00:00:34.251, Count: 1, ERROR ZGY8AZGY8AZGY8AZGY8AZGY8...4RP254RP254RP254RP254RP254RP254RP254RP254R",
+   "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmpsl_98hyi/tmpkw1ag1ti\\nFirst seen: 2017/10/10 00:00:34.251, Count: 2, ERROR ROEW0ROEW0ROEW0ROEW0ROEW...LLZI5LLZI5LLZI5LLZI5LLZI5LLZI5LLZI5LLZI5LL",
+   "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmpoca2l4n5/tmp5svoiace\\nFirst seen: 2017/10/10 00:00:34.251, Count: 1, ERROR UZ3UFUZ3UFUZ3UFUZ3UFUZ3U...4HE5C4HE5C4HE5C4HE5C4HE5C4HE5C4HE5C4HE5C4H"
+  ]
+ },
+ "seconds": 427.9
+}
