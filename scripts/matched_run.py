@@ -88,8 +88,8 @@ def main():
         model, prompt, sample = (sid.split("_") + ["", "", ""])[:3]
         dst = f"{repo}/zz_{sid}"; shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst)
         for f in glob.glob(f"{sdir}/*.py"):
-            # a conftest.py is copied only for the M1 mitigation suites, which add mitigations/seed_conftest.py
-            if os.path.basename(f) == "__init__.py" or (os.path.basename(f) == "conftest.py" and prompt != "plainseed"): continue
+            # a conftest.py is copied only for the M1 and M2 mitigation suites (mitigations/seed_conftest.py, isolate_conftest.py)
+            if os.path.basename(f) == "__init__.py" or (os.path.basename(f) == "conftest.py" and prompt not in ("plainseed", "plainiso")): continue
             shutil.copy(f, dst)
         hist = collections.defaultdict(collections.Counter); first_fail = []
         fails_by_order = collections.defaultdict(collections.Counter)

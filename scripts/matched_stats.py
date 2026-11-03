@@ -26,17 +26,17 @@ ORIGINAL = set(open(f"{ROOT}/results/gruber/matched_projects.txt").read().split(
 
 def suite_rows():
     rows = []  # (project, condition, sid, kept, kept_flaky)
-    for f in sorted(glob.glob(f"{ROOT}/results/matched/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_mitig/*.json")):
+    for f in sorted(glob.glob(f"{ROOT}/results/matched/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_mitig/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_iso/*.json")):
         j = json.load(open(f))
         for sid, s in j["suites"].items():
-            if s.get("prompt") not in ("plain", "plainseed"):
+            if s.get("prompt") not in ("plain", "plainseed", "plainiso"):
                 continue
             if all(t.startswith("::") for t in s["tests"]):
                 continue
             kept = [t for t in s["tests"] if t not in set(s["first_run_failed"])]
             fl = [t for t in kept if s["tests"][t]["kind"] == "flaky"
                   and (j["project"], sid, t.split("::")[-1]) not in NEEDS_REJECTED_POLLUTER]
-            cond = s["model"] + ("" if s["prompt"] == "plain" else "+seed")
+            cond = s["model"] + {"plain": "", "plainseed": "+seed", "plainiso": "+iso"}[s["prompt"]]
             rows.append((j["project"], cond, sid, len(kept), len(fl)))
     return rows
 
@@ -72,6 +72,7 @@ def main():
     for name, ps in (("original_17", ORIGINAL & allp), ("new_24", allp - ORIGINAL), ("all", allp)):
         res[name] = compare(rows, ps, models)
         res[name + "_seeded"] = compare(rows, ps, [m + "+seed" for m in models])
+        res[name + "_isolated"] = compare(rows, ps, [m + "+iso" for m in models])
     json.dump(res, open(f"{ROOT}/results/matched_stats.json", "w"), indent=1)
     for name in ("original_17", "new_24", "all"):
         r = res[name]
@@ -83,6 +84,8 @@ def main():
             if "gpt41mini" in k: print(f"  {k:24s} suite p={v['p_suite_fisher']}  projects {v['projects_only_first']}:{v['projects_only_second']} sign p={v['p_project_sign']}")
         s = res[name + "_seeded"]
         print("  seeded:", {m: (v["suites_with_flaky"], v["suites"], v["flaky_kept"]) for m, v in s["models"].items()})
+        s = res[name + "_isolated"]
+        print("  isolated:", {m: (v["suites_with_flaky"], v["suites"], v["flaky_kept"]) for m, v in s["models"].items()})
 
 
 if __name__ == "__main__":

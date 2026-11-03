@@ -3,7 +3,8 @@
 
 Reads results/matched/<project>.json and the mitigation trials results/matched_guard/<project>.json (guard
 prompt) and results/matched_mitig/<project>.json (M1 seeding conftest on every plain suite, and the guard2
-prompt), all from scripts/matched_run.py, writes results/matched_summary.json and
+prompt), results/matched_guard3/ (guard3 prompt) and results/matched_iso/ (M2 state restoring conftest), all from
+scripts/matched_run.py, writes results/matched_summary.json and
 prints markdown tables. A generated test is counted only if a one run filter would keep it (it passed in the
 first run), the same rule as the 12 library study; always failing tests are reported separately.
 """
@@ -14,13 +15,15 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # restores a module level function, see results/root_causes/labels.json). In a filtered suite they never flip,
 # so they are counted with the removed tests.
 # The seeding conftest copy of the same suite (gpt41mini_plainseed_1) has the same polluter and victims.
-NEEDS_REJECTED_POLLUTER = {("pylabeledrf", sid, t) for sid in ("gpt41mini_plain_1", "gpt41mini_plainseed_1")
+NEEDS_REJECTED_POLLUTER = {("pylabeledrf", sid, t) for sid in ("gpt41mini_plain_1", "gpt41mini_plainseed_1", "gpt41mini_plainiso_1")
                            for t in ("test_computeLRF_identical_simple_tree", "test_computeLRF_simple_flip_label")}
 MODEL = {"sonnet": "Claude Sonnet", "haiku": "Claude Haiku 4.5", "gpt54mini": "GPT 5.4 mini", "gpt41mini": "GPT 4.1 mini",
          "gpt41mini+guard": "GPT 4.1 mini, guard prompt", "gpt41mini+guard2": "GPT 4.1 mini, guard prompt v2",
          "gpt41mini+guard3": "GPT 4.1 mini, guard prompt v3",
          "sonnet+plainseed": "Claude Sonnet + seeding conftest", "haiku+plainseed": "Claude Haiku 4.5 + seeding conftest",
-         "gpt54mini+plainseed": "GPT 5.4 mini + seeding conftest", "gpt41mini+plainseed": "GPT 4.1 mini + seeding conftest"}
+         "gpt54mini+plainseed": "GPT 5.4 mini + seeding conftest", "gpt41mini+plainseed": "GPT 4.1 mini + seeding conftest",
+         "sonnet+plainiso": "Claude Sonnet + state restoring conftest", "haiku+plainiso": "Claude Haiku 4.5 + state restoring conftest",
+         "gpt54mini+plainiso": "GPT 5.4 mini + state restoring conftest", "gpt41mini+plainiso": "GPT 4.1 mini + state restoring conftest"}
 
 
 def wilson(k, n, z=1.96):
@@ -32,7 +35,7 @@ def wilson(k, n, z=1.96):
 
 def main():
     files = sorted(glob.glob(f"{ROOT}/results/matched/*.json"))
-    guard = sorted(glob.glob(f"{ROOT}/results/matched_guard/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_mitig/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_guard3/*.json"))
+    guard = sorted(glob.glob(f"{ROOT}/results/matched_guard/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_mitig/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_guard3/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_iso/*.json"))
     per_model = collections.defaultdict(lambda: collections.Counter())
     per_project = []
     flaky_list = []
