@@ -1,0 +1,572 @@
+{
+ "project": "python-matlab-functions",
+ "sha": "2860bf48f904d546af75143c531750c8857670bc",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 26,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_1.test_gen::test_ind2sub_sub2ind_consistency_multiple_shapes",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape0]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape1]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape2]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape0-subs0-0]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape1-subs1-1]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape2-subs2-3]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape3-subs3-11]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape4-subs4-23]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_dtype_and_return_type",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_ind2sub_roundtrip",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_index_error_message",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_invalid_index_raises",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_large_indices_raises",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_large_shape",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_negative_dimension_raises",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_out_of_bounds_negative",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_out_of_bounds_too_large",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_random_large_inputs",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_tuple_subscripts",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_with_single_dimension",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_with_zeros_in_shape"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape0-subs0-0]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape1-subs1-1]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape2-subs2-3]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape3-subs3-11]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape4-subs4-23]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_ind2sub_roundtrip": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_invalid_index_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_out_of_bounds_negative": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_out_of_bounds_too_large": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape0]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape1]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape2]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_large_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_with_zeros_in_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_dtype_and_return_type": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_random_large_inputs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_float_subscript_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_tuple_subscripts": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_with_single_dimension": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_zero_dim_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_non_integer_shape_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_ind2sub_sub2ind_consistency_multiple_shapes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_negative_dimension_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_non_tuple_shape_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_index_error_message": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_large_indices_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_1.test_gen::test_ind2sub_sub2ind_consistency_multiple_shapes",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape0]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape1]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_all_zeros[shape2]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape0-subs0-0]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape1-subs1-1]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape2-subs2-3]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape3-subs3-11]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_basic[shape4-subs4-23]",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_dtype_and_return_type",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_ind2sub_roundtrip",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_index_error_message",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_invalid_index_raises",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_large_indices_raises",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_large_shape",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_negative_dimension_raises",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_out_of_bounds_negative",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_out_of_bounds_too_large",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_random_large_inputs",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_tuple_subscripts",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_with_single_dimension",
+    "zz_gpt41mini_guard3_1.test_gen::test_sub2ind_with_zeros_in_shape"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 23,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_boolean_indices",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_consistency_with_ind2sub",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_consistency_with_ind2sub_randomized",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_dimension_mismatch_less_subs",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_dimension_mismatch_more_subs",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_edge_first_element",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_edge_last_element",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_empty_sizes",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_indices_out_of_bounds",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_large_dimensions",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_large_index_out_of_bounds",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_negative_indices",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_single_dimension",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_three_dimensions_basic",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_two_dimensions_basic",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_numpy_arrays_and_broadcast",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_numpy_ints",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_one_as_size",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_sizes_containing_one_elsewhere",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_zero_dimensions"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_single_dimension": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_two_dimensions_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_three_dimensions_basic": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_indices_out_of_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_dimension_mismatch_more_subs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_dimension_mismatch_less_subs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_zero_dimensions": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_negative_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_large_dimensions": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_numpy_ints": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_numpy_arrays_and_broadcast": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_consistency_with_ind2sub": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_consistency_with_ind2sub_randomized": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_edge_last_element": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_edge_first_element": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_one_as_size": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_sizes_containing_one_elsewhere": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_large_index_out_of_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_non_integer_indices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_non_integer_sizes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_empty_sizes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_unicode_indices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_boolean_indices": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_boolean_indices",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_consistency_with_ind2sub",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_consistency_with_ind2sub_randomized",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_dimension_mismatch_less_subs",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_dimension_mismatch_more_subs",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_edge_first_element",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_edge_last_element",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_empty_sizes",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_indices_out_of_bounds",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_large_dimensions",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_large_index_out_of_bounds",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_negative_indices",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_single_dimension",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_three_dimensions_basic",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_two_dimensions_basic",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_numpy_arrays_and_broadcast",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_numpy_ints",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_one_as_size",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_with_sizes_containing_one_elsewhere",
+    "zz_gpt41mini_guard3_2.test_gen::test_sub2ind_zero_dimensions"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 197,
+  "failed": 3,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "ValueError: high <= 0"
+  ]
+ },
+ "seconds": 280.0
+}

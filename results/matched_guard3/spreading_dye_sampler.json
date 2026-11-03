@@ -1,0 +1,425 @@
+{
+ "project": "spreading_dye_sampler",
+ "sha": "4282f7609959a31d1b2a4832f3ed643b15c46cb6",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_1.test_gen::test_cells_added_do_not_repeat",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_all_cells_added_with_full_permitted_mask",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_neighbours_external_state_unchanged",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_probabilities_sum_to_one_and_distribution"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_1.test_gen::test_dyeblot_initial_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_dyeblot_num_cells_and_for_each_cell_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_basic_properties[grid_dims0-cell_dims0-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_basic_properties[grid_dims1-cell_dims1-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_basic_properties[grid_dims2-cell_dims2-3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_basic_properties[grid_dims3-cell_dims3-5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_returns_none_if_start_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_respects_permitted_mask_squeeze_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_respects_permitted_mask_squeeze_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_cells_are_contiguous_and_share_edges": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_neighbours_external_state_unchanged": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_for_each_cell_function_is_called_exactly_once_per_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_for_each_cell_passes_correct_coordinates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_probabilities_sum_to_one_and_distribution": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_with_single_cell_and_masked_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_rejection_due_to_nonpermitted_with_squeeze_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_rejection_due_to_start_cell_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_all_cells_added_with_full_permitted_mask": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_cells_added_do_not_repeat": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_with_non_boolean_permitted_array": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_1.test_gen::test_cells_added_do_not_repeat",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_all_cells_added_with_full_permitted_mask",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_neighbours_external_state_unchanged",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_probabilities_sum_to_one_and_distribution"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_2.test_gen::test_is_permitted_outside_bounds",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_basic_no_permitted_seeded",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[2]",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[3]",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_restricts_cells_seeded"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_2.test_gen::test_dyeblot_init_and_num_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_for_each_cell_calls_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_basic_no_permitted_seeded": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_all_false_returns_none_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_restricts_cells_seeded": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_non_permitted_no_squeeze_returns_none_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_non_permitted_with_squeeze_skips_cells_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_req_num_cells_is_one_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_neighbors_accumulate_shared_edge_length_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_draw_neighbour_probability_distribution_sum_to_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_is_permitted_outside_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_with_cell_dimensions_stored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_zero_cells_requested_returns_blot_with_zero_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_large_num_cells_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_with_non_bool_permitted_mask_coerced": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_with_1x1_grid_and_req_1_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[2]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[3]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_for_each_cell_with_no_cells_does_not_call_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_2.test_gen::test_is_permitted_outside_bounds",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_basic_no_permitted_seeded",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[2]",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[3]",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_restricts_cells_seeded"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 196,
+  "failed": 4,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: False\nassert 0"
+  ]
+ },
+ "seconds": 208.6
+}

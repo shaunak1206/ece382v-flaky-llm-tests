@@ -1,0 +1,431 @@
+{
+ "project": "torch-layer-normalization",
+ "sha": "89f405b60f53f85da6f03fe685c190ef394ce50c",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_1.test_gen::test_backward_pass_and_gradients",
+    "zz_gpt41mini_guard3_1.test_gen::test_default_construction_and_forward_shapes",
+    "zz_gpt41mini_guard3_1.test_gen::test_eps_effect_on_variance",
+    "zz_gpt41mini_guard3_1.test_gen::test_forward_output_properties_with_affine",
+    "zz_gpt41mini_guard3_1.test_gen::test_gamma_beta_parameters_affine",
+    "zz_gpt41mini_guard3_1.test_gen::test_no_affine_parameters_when_elementwise_affine_false",
+    "zz_gpt41mini_guard3_1.test_gen::test_normalized_shape_tuple_and_tensor_input",
+    "zz_gpt41mini_guard3_1.test_gen::test_repr_contains_normalized_shape_and_affine_flag",
+    "zz_gpt41mini_guard3_1.test_gen::test_state_dict_and_load_state_dict",
+    "zz_gpt41mini_guard3_1.test_gen::test_zero_dimensional_input_raises"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_1.test_gen::test_default_construction_and_forward_shapes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_normalized_shape_tuple_and_tensor_input": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_gamma_beta_parameters_affine": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_no_affine_parameters_when_elementwise_affine_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_forward_output_properties_with_affine": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_eps_effect_on_variance": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_invalid_normalized_shape_type_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_zero_dimensional_input_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_state_dict_and_load_state_dict": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_repr_contains_normalized_shape_and_affine_flag": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_forward_on_gpu_if_available": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_backward_pass_and_gradients": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_layernorm_with_batch_and_sequence_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_layernorm_float64_precision": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_layernorm_different_input_dtypes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_can_handle_singleton_batch_and_feature": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_inplace_modification_of_input_is_prevented": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_forward_with_non_contiguous_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_forward_with_large_values_stable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_1.test_gen::test_backward_pass_and_gradients",
+    "zz_gpt41mini_guard3_1.test_gen::test_default_construction_and_forward_shapes",
+    "zz_gpt41mini_guard3_1.test_gen::test_eps_effect_on_variance",
+    "zz_gpt41mini_guard3_1.test_gen::test_forward_output_properties_with_affine",
+    "zz_gpt41mini_guard3_1.test_gen::test_gamma_beta_parameters_affine",
+    "zz_gpt41mini_guard3_1.test_gen::test_no_affine_parameters_when_elementwise_affine_false",
+    "zz_gpt41mini_guard3_1.test_gen::test_normalized_shape_tuple_and_tensor_input",
+    "zz_gpt41mini_guard3_1.test_gen::test_repr_contains_normalized_shape_and_affine_flag",
+    "zz_gpt41mini_guard3_1.test_gen::test_state_dict_and_load_state_dict",
+    "zz_gpt41mini_guard3_1.test_gen::test_zero_dimensional_input_raises"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_affine_parameters_can_be_updated",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_consistent_with_manual_layernorm",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_eps_property",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_invalid_normalized_shape_raises",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_no_parameters_when_affine_false",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_repr_contains_classname_and_normalized_shape",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_state_dict_contains_correct_keys",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_weight_and_bias_are_trainable_parameters",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_weight_and_bias_parameters_present_when_affine_true",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_with_affine_off_means_weight_bias_not_applied"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_basic_forward_shape_and_dtype": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_forward_two_different_inputs_produce_different_returns": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_output_mean_zero_and_variance_one_per_sample": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_with_different_normalized_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_with_affine_off_means_weight_bias_not_applied": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_weight_and_bias_parameters_present_when_affine_true": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_forward_is_deterministic_with_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_forward_preserves_dtype_on_double_and_float": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_forward_with_large_input_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_consistent_with_manual_layernorm": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_invalid_normalized_shape_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_eps_property": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_weight_and_bias_are_trainable_parameters": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_no_parameters_when_affine_false": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_state_dict_contains_correct_keys": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_repr_contains_classname_and_normalized_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_forward_single_element_tensor": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_affine_parameters_can_be_updated": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_forward_with_multidimensional_normalized_shape_and_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_affine_parameters_can_be_updated",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_consistent_with_manual_layernorm",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_eps_property",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_invalid_normalized_shape_raises",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_no_parameters_when_affine_false",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_repr_contains_classname_and_normalized_shape",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_state_dict_contains_correct_keys",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_weight_and_bias_are_trainable_parameters",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_weight_and_bias_parameters_present_when_affine_true",
+    "zz_gpt41mini_guard3_2.test_gen::test_layernorm_with_affine_off_means_weight_bias_not_applied"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 191,
+  "failed": 9,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: False is not true : (3, tensor([[-0.2983,  0.1991, -0.8009],\n        [-0.7218,  0.2523, -0.4305]]), tensor([[-0.2983,  0.2001, -0.8014],\n        [-0.7223,  0.2533, -0.4307]], grad_fn=<",
+   "AssertionError: False is not true : (0, tensor([[-0.9959, -0.3056, -0.0482,  0.1498],\n        [ 0.0829, -0.0890, -1.0343, -0.1596]]), tensor([[-0.9971, -0.3056, -0.0478,  0.1503],\n        [ 0.0835, -0",
+   "AssertionError: False is not true : (0, tensor([[ 0.1879, -0.9872, -0.1005, -0.3002],\n        [-1.0340, -0.0101,  0.0414, -0.1973]]), tensor([[ 0.1886, -0.9880, -0.1003, -0.3003],\n        [-1.0350, -0"
+  ]
+ },
+ "seconds": 1290.0
+}

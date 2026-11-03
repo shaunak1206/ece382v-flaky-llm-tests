@@ -1,0 +1,1655 @@
+{
+ "project": "torch-embed-sim",
+ "sha": "ace404f9cca0d47aa3efcf4e819bcd48899e4e35",
+ "category": "unlabeled",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_1.test_gen::test_default_initialization",
+    "zz_gpt41mini_plain_1.test_gen::test_empty_input_raises",
+    "zz_gpt41mini_plain_1.test_gen::test_incompatible_dimension_raises",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_batch_vs_single_vector",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_between_identical_vectors_is_one",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_between_orthogonal_vectors_is_zero_or_close",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_consistent_with_multiple_calls",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_differs_for_different_vectors",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_identity_matrix",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_normalizes_input_vectors",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_of_zero_vectors_handled",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_produces_gradient",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_range",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_shape_with_batch_vectors",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_with_cuda_if_available",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_with_non_float_input_raises",
+    "zz_gpt41mini_plain_1.test_gen::test_single_vector_similarity_works",
+    "zz_gpt41mini_plain_1.test_gen::test_supports_float64_and_float32"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_default_initialization": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_between_identical_vectors_is_one": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_between_orthogonal_vectors_is_zero_or_close": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_shape_with_batch_vectors": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_range": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_differs_for_different_vectors": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_empty_input_raises": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_incompatible_dimension_raises": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_single_vector_similarity_works": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_supports_float64_and_float32": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_with_cuda_if_available": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_normalizes_input_vectors": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_of_zero_vectors_handled": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_consistent_with_multiple_calls": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_produces_gradient": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_with_non_float_input_raises": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_batch_vs_single_vector": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_identity_matrix": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_1.test_gen::test_default_initialization",
+    "zz_gpt41mini_plain_1.test_gen::test_empty_input_raises",
+    "zz_gpt41mini_plain_1.test_gen::test_incompatible_dimension_raises",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_batch_vs_single_vector",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_between_identical_vectors_is_one",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_between_orthogonal_vectors_is_zero_or_close",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_consistent_with_multiple_calls",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_differs_for_different_vectors",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_identity_matrix",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_normalizes_input_vectors",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_of_zero_vectors_handled",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_produces_gradient",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_range",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_shape_with_batch_vectors",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_with_cuda_if_available",
+    "zz_gpt41mini_plain_1.test_gen::test_similarity_with_non_float_input_raises",
+    "zz_gpt41mini_plain_1.test_gen::test_single_vector_similarity_works",
+    "zz_gpt41mini_plain_1.test_gen::test_supports_float64_and_float32"
+   ]
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 26,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[cosine]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[dot]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[l2]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_different_batch_and_vec_dim_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_different_dims_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_empty_batch_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_invalid_input_dims_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_normalize_affects_dot_and_cosine",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_shape_mismatch_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_single_vector_and_2d_batch_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_single_vector_mismatched_dims_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_1d_tensors",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_2d_tensors",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_normalize_false_cosine_and_dot",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_default",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[123]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[None]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[invalid]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[cosine]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[dot]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[l2]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_l2_similarity_values",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_normalize_true_cosine",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_normalize_true_dot"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_default": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[cosine]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[dot]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[l2]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[invalid]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[None]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[123]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_2d_tensors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_1d_tensors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[cosine]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[dot]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[l2]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_shape_mismatch_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_normalize_true_cosine": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_normalize_true_dot": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_l2_similarity_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_different_dims_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_invalid_input_dims_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_single_vector_mismatched_dims_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_empty_batch_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_on_cpu_and_gpu_similar_outputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_normalize_false_cosine_and_dot": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_normalize_affects_dot_and_cosine": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_different_batch_and_vec_dim_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_single_vector_and_2d_batch_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[cosine]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[dot]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_batch_consistency[l2]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_different_batch_and_vec_dim_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_different_dims_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_empty_batch_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_invalid_input_dims_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_normalize_affects_dot_and_cosine",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_shape_mismatch_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_single_vector_and_2d_batch_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_single_vector_mismatched_dims_raises",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_1d_tensors",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_2d_tensors",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_call_with_normalize_false_cosine_and_dot",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_default",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[123]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[None]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_invalid_measure_raises[invalid]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[cosine]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[dot]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_init_valid_measures[l2]",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_l2_similarity_values",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_normalize_true_cosine",
+    "zz_gpt41mini_plain_2.test_gen::test_embedding_sim_normalize_true_dot"
+   ]
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_accepts_batched_inputs_if_supported",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_can_be_instantiated",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_handles_negative_values",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_instance_has_a_similarity_callable",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_orthogonal_vectors_produce_finite_result",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_repr_contains_class_name",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_result_changes_for_different_vectors",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_same_vector_similarity_is_high_or_defined"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_package_exports_embedding_sim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_is_class": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_has_public_name": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_has_module_path": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_can_be_instantiated": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_instance_has_a_similarity_callable": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_same_vector_similarity_is_high_or_defined": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_orthogonal_vectors_produce_finite_result": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_handles_negative_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_accepts_batched_inputs_if_supported": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_result_changes_for_different_vectors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_repr_contains_class_name": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_has_no_required_public_instance_methods_without_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_module_reexports_match_submodule_import": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_accepts_batched_inputs_if_supported",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_can_be_instantiated",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_handles_negative_values",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_instance_has_a_similarity_callable",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_orthogonal_vectors_produce_finite_result",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_repr_contains_class_name",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_result_changes_for_different_vectors",
+    "zz_gpt54mini_plain_1.test_gen::test_embedding_sim_same_vector_similarity_is_high_or_defined"
+   ]
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 15,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_package_import_exposes_embedding_sim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_is_accessible_via_from_import": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_matches_submodule_attribute": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_is_a_class": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_class_name_is_correct": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_qualname_contains_class_name": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_defined_in_embedding_sim_module": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_is_same_object_after_reload": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_package_star_import_includes_embedding_sim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_module_attribute_lookup_returns_embedding_sim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_has_a_callable_constructor": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_signature_can_be_introspected": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_importing_package_does_not_replace_sys_modules_entry": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_object_identity_is_stable_across_import_paths": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_embedding_sim_submodule_and_package_are_consistent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plain_1": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_bias_parameter_has_expected_shape_type_and_zero_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_num_embeddings_is_stored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bias_false_sets_bias_none_and_reset_is_noop": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bias_true_bias_is_only_parameter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_state_dict_keys_follow_bias_flag": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_reset_parameters_zeroes_nonzero_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_forward_output_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_forward_rows_are_probability_distributions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_forward_matches_softmax_of_matmul_without_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_forward_adds_bias_before_softmax": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_large_bias_dominates_argmax": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_forward_stable_with_large_logits": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_forward_batched_3d_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_weight_is_detached_from_graph": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_input_gradient_flows": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bias_receives_gradient": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_inputs_are_not_modified_in_place": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_gradcheck_on_input_in_double_precision": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_extra_repr_reflects_bias_flag": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_repr_uses_class_name_and_extra_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_package_exports_embedding_sim_as_nn_module": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plain_2": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_default_bias_is_parameter_with_num_embeddings_shape": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bias_initialized_to_zeros": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bias_false_sets_bias_to_none_and_registers_no_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_num_embeddings_is_stored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_reset_parameters_zeros_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_reset_parameters_without_bias_is_noop": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_forward_output_shape_for_batched_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_forward_output_shape_for_vector_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_forward_rows_sum_to_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_forward_outputs_are_nonnegative_and_finite": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_forward_matches_manual_softmax_without_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_forward_matches_manual_softmax_with_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_large_bias_entry_concentrates_distribution_on_that_index": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_argmax_matches_largest_dot_product_without_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_forward_does_not_modify_bias_weight_or_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_weight_receives_no_gradient_because_it_is_detached": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bias_and_input_receive_gradients": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_large_logits_remain_numerically_stable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_float64_inputs_preserve_dtype": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_extra_repr_and_repr_report_bias_flag": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_state_dict_keys_follow_bias_flag": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_package_exports_embedding_sim": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_single_embedding_gives_probability_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bias_size_mismatch_raises_runtime_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_1": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_init_with_bias_creates_parameter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_init_without_bias_is_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bias_initialized_to_zeros": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_reset_parameters_zeroes_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_reset_parameters_without_bias_does_not_fail": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_forward_output_shape_2d": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_forward_output_shape_3d": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_forward_rows_sum_to_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_forward_outputs_are_probabilities": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_forward_matches_manual_softmax_without_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_forward_matches_manual_softmax_with_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_zero_bias_equals_no_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_large_bias_dominates_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_identical_embeddings_give_uniform_distribution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_weight_receives_no_gradient": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bias_receives_gradient": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_input_receives_gradient": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_forward_does_not_modify_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_extra_repr_with_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_extra_repr_without_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_works_with_embedding_layer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_2": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_init_with_bias_creates_parameter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_init_without_bias_is_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bias_initialized_to_zeros": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_reset_parameters_zeros_modified_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_reset_parameters_without_bias_is_noop": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_output_shape_2d": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_output_shape_3d": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_rows_sum_to_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_matches_manual_softmax_without_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_with_zero_bias_equals_no_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_applies_bias_before_softmax": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_large_bias_dominates_distribution": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_uniform_when_all_scores_equal": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_does_not_propagate_gradient_to_weight": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_gradient_reaches_bias_and_input": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_does_not_modify_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_forward_with_embedding_weight_argmax_matches_similar_vector": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_extra_repr_with_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_extra_repr_without_bias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_state_dict_contains_bias_only_when_enabled": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 198,
+  "failed": 2,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: 0.917 not greater than 0.99",
+   "AssertionError: 0.918 not greater than 0.99"
+  ]
+ },
+ "seconds": 3145.2
+}

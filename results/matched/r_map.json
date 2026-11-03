@@ -1,0 +1,1752 @@
+{
+ "project": "r_map",
+ "sha": "56cad81c91153d81e831d6afa49b92e5117c2171",
+ "category": "unlabeled",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_annotation_returns_enum_or_hex",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_validate_duplicate_values",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_get",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_str_and_enum",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_wrong_type",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_write_and_read",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_add_and_properties",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_copy_alias_behavior",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_validate_errors",
+    "zz_gpt41mini_plain_1.test_gen::test_register_access_property",
+    "zz_gpt41mini_plain_1.test_gen::test_register_basic_value_set_get",
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_block_dimensions_and_errors",
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_read_write_flow",
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_write_partial_data",
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_write_raises_on_empty",
+    "zz_gpt41mini_plain_1.test_gen::test_register_read_write_calls",
+    "zz_gpt41mini_plain_1.test_gen::test_register_reset_resets_all_bitfieldrefs",
+    "zz_gpt41mini_plain_1.test_gen::test_register_str_includes_value",
+    "zz_gpt41mini_plain_1.test_gen::test_register_validate_errors"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_init_and_str": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_get": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_str_and_enum": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_wrong_type": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_annotation_returns_enum_or_hex": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_validate_duplicate_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_write_and_read": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_init_invalid_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_add_and_properties": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_copy_alias_behavior": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_validate_errors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_basic_value_set_get": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_reset_resets_all_bitfieldrefs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_str_includes_value": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_access_property": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_validate_errors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_read_write_calls": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_block_dimensions_and_errors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_read_write_flow": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_write_partial_data": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_write_raises_on_empty": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_annotation_returns_enum_or_hex",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_validate_duplicate_values",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_get",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_str_and_enum",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_value_set_wrong_type",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfield_write_and_read",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_add_and_properties",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_copy_alias_behavior",
+    "zz_gpt41mini_plain_1.test_gen::test_bitfieldref_validate_errors",
+    "zz_gpt41mini_plain_1.test_gen::test_register_access_property",
+    "zz_gpt41mini_plain_1.test_gen::test_register_basic_value_set_get",
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_block_dimensions_and_errors",
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_read_write_flow",
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_write_partial_data",
+    "zz_gpt41mini_plain_1.test_gen::test_register_map_write_raises_on_empty",
+    "zz_gpt41mini_plain_1.test_gen::test_register_read_write_calls",
+    "zz_gpt41mini_plain_1.test_gen::test_register_reset_resets_all_bitfieldrefs",
+    "zz_gpt41mini_plain_1.test_gen::test_register_str_includes_value",
+    "zz_gpt41mini_plain_1.test_gen::test_register_validate_errors"
+   ]
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_2.test_gen::test_bitfield_validate_duplicate_enum",
+    "zz_gpt41mini_plain_2.test_gen::test_bitfield_value_setter_and_getter",
+    "zz_gpt41mini_plain_2.test_gen::test_bitfieldref_validate_errors",
+    "zz_gpt41mini_plain_2.test_gen::test_register_access_property",
+    "zz_gpt41mini_plain_2.test_gen::test_register_iteration_order",
+    "zz_gpt41mini_plain_2.test_gen::test_register_read_and_write",
+    "zz_gpt41mini_plain_2.test_gen::test_register_reset",
+    "zz_gpt41mini_plain_2.test_gen::test_register_str_method",
+    "zz_gpt41mini_plain_2.test_gen::test_register_validate_errors",
+    "zz_gpt41mini_plain_2.test_gen::test_register_value_property_and_setter",
+    "zz_gpt41mini_plain_2.test_gen::test_registermap_block_dimensions_and_read_write",
+    "zz_gpt41mini_plain_2.test_gen::test_registermap_write_raises_with_no_registers"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_bitfield_init_and_str": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_bitfield_value_setter_and_getter": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_bitfield_reset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_bitfield_validate_duplicate_enum": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_bitfieldref_init_and_properties": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_bitfieldref_value_getter_setter": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_bitfieldref_invalid_slice_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_bitfieldref_validate_errors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_register_value_property_and_setter": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_register_access_property": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_register_reset": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_register_str_method": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_register_validate_errors": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_register_read_and_write": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_register_iteration_order": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_registermap_block_dimensions_and_read_write": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_registermap_write_raises_with_no_registers": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_plain_2.test_gen::test_bitfield_validate_duplicate_enum",
+    "zz_gpt41mini_plain_2.test_gen::test_bitfield_value_setter_and_getter",
+    "zz_gpt41mini_plain_2.test_gen::test_bitfieldref_validate_errors",
+    "zz_gpt41mini_plain_2.test_gen::test_register_access_property",
+    "zz_gpt41mini_plain_2.test_gen::test_register_iteration_order",
+    "zz_gpt41mini_plain_2.test_gen::test_register_read_and_write",
+    "zz_gpt41mini_plain_2.test_gen::test_register_reset",
+    "zz_gpt41mini_plain_2.test_gen::test_register_str_method",
+    "zz_gpt41mini_plain_2.test_gen::test_register_validate_errors",
+    "zz_gpt41mini_plain_2.test_gen::test_register_value_property_and_setter",
+    "zz_gpt41mini_plain_2.test_gen::test_registermap_block_dimensions_and_read_write",
+    "zz_gpt41mini_plain_2.test_gen::test_registermap_write_raises_with_no_registers"
+   ]
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_masks_reset_value_to_width",
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_validate_detects_duplicate_enum_values",
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_value_accepts_int_str_and_enumeration",
+    "zz_gpt54mini_plain_1.test_gen::test_bitfieldref_validate_without_bitfield_reports_error",
+    "zz_gpt54mini_plain_1.test_gen::test_bitfieldref_value_roundtrip_with_partial_slice",
+    "zz_gpt54mini_plain_1.test_gen::test_register_iteration_sorts_by_reg_offset",
+    "zz_gpt54mini_plain_1.test_gen::test_register_read_uses_io_function_and_updates_value",
+    "zz_gpt54mini_plain_1.test_gen::test_register_validate_detects_no_children_and_overlaps",
+    "zz_gpt54mini_plain_1.test_gen::test_register_value_and_reset_propagate_to_bitfieldrefs",
+    "zz_gpt54mini_plain_1.test_gen::test_register_write_uses_io_function_and_default_value",
+    "zz_gpt54mini_plain_1.test_gen::test_registermap_get_dimensions_and_block_read_write_roundtrip",
+    "zz_gpt54mini_plain_1.test_gen::test_registermap_write_partial_data_updates_only_within_bounds"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_rejects_invalid_width_and_reset_val": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_masks_reset_value_to_width": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_value_accepts_int_str_and_enumeration": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_value_rejects_unknown_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_annotation_uses_matching_enum_name_or_hex": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_validate_detects_duplicate_enum_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_bitfieldref_rejects_invalid_slice_and_field_offsets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_bitfieldref_value_roundtrip_with_partial_slice": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_bitfieldref_validate_without_bitfield_reports_error": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_register_value_and_reset_propagate_to_bitfieldrefs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_register_iteration_sorts_by_reg_offset": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_register_validate_detects_no_children_and_overlaps": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_register_read_uses_io_function_and_updates_value": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_register_write_uses_io_function_and_default_value": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_registermap_get_dimensions_and_block_read_write_roundtrip": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_registermap_write_partial_data_updates_only_within_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_masks_reset_value_to_width",
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_validate_detects_duplicate_enum_values",
+    "zz_gpt54mini_plain_1.test_gen::test_bitfield_value_accepts_int_str_and_enumeration",
+    "zz_gpt54mini_plain_1.test_gen::test_bitfieldref_validate_without_bitfield_reports_error",
+    "zz_gpt54mini_plain_1.test_gen::test_bitfieldref_value_roundtrip_with_partial_slice",
+    "zz_gpt54mini_plain_1.test_gen::test_register_iteration_sorts_by_reg_offset",
+    "zz_gpt54mini_plain_1.test_gen::test_register_read_uses_io_function_and_updates_value",
+    "zz_gpt54mini_plain_1.test_gen::test_register_validate_detects_no_children_and_overlaps",
+    "zz_gpt54mini_plain_1.test_gen::test_register_value_and_reset_propagate_to_bitfieldrefs",
+    "zz_gpt54mini_plain_1.test_gen::test_register_write_uses_io_function_and_default_value",
+    "zz_gpt54mini_plain_1.test_gen::test_registermap_get_dimensions_and_block_read_write_roundtrip",
+    "zz_gpt54mini_plain_1.test_gen::test_registermap_write_partial_data_updates_only_within_bounds"
+   ]
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_rejects_negative_offsets",
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_reset_val_reflects_slice_and_offsets",
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_validate_without_child_reports_error",
+    "zz_gpt54mini_plain_2.test_gen::test_register_iteration_sorts_by_reg_offset",
+    "zz_gpt54mini_plain_2.test_gen::test_register_read_and_write_delegate_to_callbacks",
+    "zz_gpt54mini_plain_2.test_gen::test_register_validate_detects_overlapping_refs",
+    "zz_gpt54mini_plain_2.test_gen::test_register_validate_no_children_and_non_bitfieldref_child",
+    "zz_gpt54mini_plain_2.test_gen::test_register_value_and_reset_aggregate_child_refs",
+    "zz_gpt54mini_plain_2.test_gen::test_registermap_dimensions_and_empty_map_error",
+    "zz_gpt54mini_plain_2.test_gen::test_registermap_read_and_write_roundtrip_bytes"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_bitfield_rejects_invalid_width_and_reset_val": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfield_masks_value_to_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfield_accepts_enumeration_name_and_instance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfield_annotation_returns_matching_name_or_hex": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfield_validate_reports_duplicate_enumeration_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_rejects_negative_offsets": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_default_slice_width_uses_child_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_value_get_and_set_updates_underlying_bitfield": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_reset_val_reflects_slice_and_offsets": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_validate_without_child_reports_error": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_register_value_and_reset_aggregate_child_refs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_register_iteration_sorts_by_reg_offset": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_register_validate_no_children_and_non_bitfieldref_child": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_register_validate_detects_overlapping_refs": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_register_read_and_write_delegate_to_callbacks": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_registermap_dimensions_and_empty_map_error": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_registermap_read_and_write_roundtrip_bytes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_rejects_negative_offsets",
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_reset_val_reflects_slice_and_offsets",
+    "zz_gpt54mini_plain_2.test_gen::test_bitfieldref_validate_without_child_reports_error",
+    "zz_gpt54mini_plain_2.test_gen::test_register_iteration_sorts_by_reg_offset",
+    "zz_gpt54mini_plain_2.test_gen::test_register_read_and_write_delegate_to_callbacks",
+    "zz_gpt54mini_plain_2.test_gen::test_register_validate_detects_overlapping_refs",
+    "zz_gpt54mini_plain_2.test_gen::test_register_validate_no_children_and_non_bitfieldref_child",
+    "zz_gpt54mini_plain_2.test_gen::test_register_value_and_reset_aggregate_child_refs",
+    "zz_gpt54mini_plain_2.test_gen::test_registermap_dimensions_and_empty_map_error",
+    "zz_gpt54mini_plain_2.test_gen::test_registermap_read_and_write_roundtrip_bytes"
+   ]
+  },
+  "haiku_plain_1": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_bitfield_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfield_int_assignment_is_masked": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfield_string_assignment_selects_enumeration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfield_unknown_enumeration_name_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfield_validate_reports_duplicate_enum_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfieldref_slice_width_defaults_to_bitfield_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfieldref_value_places_slice_at_reg_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfieldref_setter_only_touches_its_slice": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfieldref_field_offset_selects_high_nibble": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfieldref_validate_flags_slice_wider_than_field": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfieldref_second_reference_becomes_alias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfieldref_copy_preserves_geometry_and_clones_field": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_register_value_ors_slices_at_their_offsets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_register_value_setter_distributes_to_slices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_register_iterates_children_in_offset_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_register_validate_reports_missing_slices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_register_validate_reports_overlapping_slices": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_register_validate_reports_non_ref_child": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_register_read_write_use_parent_map_io": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_bitfield_write_then_read_round_trips_through_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_regmap_block_read_splits_bytes_across_registers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_regmap_block_write_packs_little_endian": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_regmap_write_with_buffer_updates_only_covered_registers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_1.test_gen::test_regmap_read_and_write_require_registers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plain_2": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 24,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_bitfield_rejects_zero_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_int_assignment_is_masked_to_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_assign_enumeration_by_name_and_object": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_unknown_enumeration_name_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_reset_restores_reset_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_validate_reports_duplicate_enum_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_read_without_register_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_write_updates_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_write_preserves_sibling_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfield_write_respects_always_write_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_register_value_combines_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_register_value_setter_fans_out_to_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_register_reset_restores_all_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_register_read_write_uses_absolute_address": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_register_validate_reports_missing_bitfieldrefs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_register_validate_reports_overlapping_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfieldref_slice_width_defaults_to_field_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfieldref_setter_only_touches_its_slice": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfieldref_second_reference_becomes_alias": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_bitfieldref_add_rejects_non_bitfield": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_block_dimensions_span_registers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_map_read_populates_registers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_map_write_serialises_little_endian": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_haiku_plain_2.test_gen::test_map_partial_write_stops_at_short_buffer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_1": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_bitfield_defaults_and_reset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_invalid_arguments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_value_masks_to_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_value_from_enumeration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_annotation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_validate_duplicate_enumerations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_str_contains_summary": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_io_without_parent_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_read_and_write_through_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfield_write_skips_when_value_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfieldref_value_and_reset_mapping": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfieldref_default_slice_width_uses_bitfield_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfieldref_invalid_arguments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfieldref_add_rules": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfieldref_alias_when_bitfield_shared": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_bitfieldref_validate_slice_wider_than_field": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_register_value_reset_val_and_reset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_register_iteration_order_access_and_str": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_register_validate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_register_read_and_write_use_io_functions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_register_io_functions_inherited_from_parent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_get_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_registermap_without_registers_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_registermap_read_splits_block_little_endian": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_1.test_gen::test_registermap_write_from_registers_and_from_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_2": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_bitfield_defaults_and_initial_value": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfield_invalid_construction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfield_value_masked_to_width_and_reset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfield_value_from_enumeration_name_and_object": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfield_value_rejects_bad_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfield_validate_duplicate_enumerations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfield_read_write_without_parent_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfieldref_slice_width_defaults_to_field_width": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfieldref_add_rejects_non_bitfield_and_is_idempotent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfieldref_value_and_reset_val_with_offsets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfieldref_value_setter_updates_only_its_slice": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfieldref_alias_shares_field": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfieldref_validate_slice_wider_than_field": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_register_defaults_and_required_args": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_register_value_composes_and_distributes_fields": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_register_children_iterate_in_reg_offset_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_register_access_and_str": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_register_validate_reports_empty_overlap_and_wrong_child_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_register_read_and_write_use_io_functions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_bitfield_write_does_read_modify_write_of_parent_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_registermap_addresses_and_ordering": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_registermap_read_splits_block_into_registers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_registermap_write_builds_block_from_register_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_registermap_write_with_data_updates_registers": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_sonnet_plain_2.test_gen::test_registermap_without_registers_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 191,
+  "failed": 9,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: assert 14 == 12345678\n +  where 14 = Register(local_address=0,name='NwCfwPMLOgXniuSgkP4Z',uuid='8bc709d2433b4d70a5ad2497e71d1a26',width=32).value",
+   "AssertionError: assert 1859918 == 12345678\n +  where 1859918 = Register(local_address=0,name='fU52YlQgOg2C2YfK6h2nE6Ca0eSKAjO8O8Cni3t',uuid='d6154d71441e43658de1eeaf7b7d5180',width=32).value",
+   "AssertionError: assert 334 == 12345678\n +  where 334 = Register(local_address=0,name='PIJgcdQrqp7RvkWyTkKfWVvhjHubJIxu9',uuid='8e080053f06141189274115e9b6d3549',width=32).value"
+  ]
+ },
+ "seconds": 535.3
+}

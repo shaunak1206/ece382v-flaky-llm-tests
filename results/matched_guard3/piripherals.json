@@ -1,0 +1,532 @@
+{
+ "project": "piripherals",
+ "sha": "74e4807a64363e3c95a03222fa250a1073387eaf",
+ "category": "async wait",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_1.test_gen::test_auto_config_writes_bytes_and_word",
+    "zz_gpt41mini_guard3_1.test_gen::test_baseline_configure_calls_write_block_no_raise",
+    "zz_gpt41mini_guard3_1.test_gen::test_baseline_returns_raw_baseline_on_no_args",
+    "zz_gpt41mini_guard3_1.test_gen::test_charge_writes_correct_bytes_and_masks",
+    "zz_gpt41mini_guard3_1.test_gen::test_configure_writes_correct_byte",
+    "zz_gpt41mini_guard3_1.test_gen::test_debounce_sets_correct_byte",
+    "zz_gpt41mini_guard3_1.test_gen::test_dump_runs_without_error",
+    "zz_gpt41mini_guard3_1.test_gen::test_electrode_data_returns_correct_values",
+    "zz_gpt41mini_guard3_1.test_gen::test_filter_writes_word_with_correct_bits",
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_set_writes_set_and_clr",
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_setup_calls_write_byte_and_sets_bits",
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_status_reads_byte",
+    "zz_gpt41mini_guard3_1.test_gen::test_handlers_do_not_raise_if_removing",
+    "zz_gpt41mini_guard3_1.test_gen::test_init_defaults_no_handlers_no_setup_no_reset",
+    "zz_gpt41mini_guard3_1.test_gen::test_is_touched_reflects_touched_bit",
+    "zz_gpt41mini_guard3_1.test_gen::test_on_touch_registers_handler_and_calls_properly",
+    "zz_gpt41mini_guard3_1.test_gen::test_out_of_range_raises_for_failure_bits",
+    "zz_gpt41mini_guard3_1.test_gen::test_reset_calls_write_byte",
+    "zz_gpt41mini_guard3_1.test_gen::test_threshold_release_default_is_0_6_times_touch",
+    "zz_gpt41mini_guard3_1.test_gen::test_threshold_sets_all_channels_when_channel_not_specified",
+    "zz_gpt41mini_guard3_1.test_gen::test_touched_returns_low_bits_and_raises_on_failure",
+    "zz_gpt41mini_guard3_1.test_gen::test_update_touch_state_updates_and_calls_handlers"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_1.test_gen::test_init_defaults_no_handlers_no_setup_no_reset": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_reset_calls_write_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_configure_writes_correct_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_touched_returns_low_bits_and_raises_on_failure": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_out_of_range_raises_for_failure_bits": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_electrode_data_returns_correct_values": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_baseline_returns_raw_baseline_on_no_args": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_baseline_configure_calls_write_block_no_raise": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_threshold_sets_all_channels_when_channel_not_specified": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_threshold_release_default_is_0_6_times_touch": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_debounce_sets_correct_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_filter_writes_word_with_correct_bits": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_charge_writes_correct_bytes_and_masks": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_auto_config_writes_bytes_and_word": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_setup_calls_write_byte_and_sets_bits": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_status_reads_byte": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_set_writes_set_and_clr": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_is_touched_reflects_touched_bit": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_on_touch_registers_handler_and_calls_properly": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_update_touch_state_updates_and_calls_handlers": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_handlers_do_not_raise_if_removing": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_dump_runs_without_error": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_1.test_gen::test_auto_config_writes_bytes_and_word",
+    "zz_gpt41mini_guard3_1.test_gen::test_baseline_configure_calls_write_block_no_raise",
+    "zz_gpt41mini_guard3_1.test_gen::test_baseline_returns_raw_baseline_on_no_args",
+    "zz_gpt41mini_guard3_1.test_gen::test_charge_writes_correct_bytes_and_masks",
+    "zz_gpt41mini_guard3_1.test_gen::test_configure_writes_correct_byte",
+    "zz_gpt41mini_guard3_1.test_gen::test_debounce_sets_correct_byte",
+    "zz_gpt41mini_guard3_1.test_gen::test_dump_runs_without_error",
+    "zz_gpt41mini_guard3_1.test_gen::test_electrode_data_returns_correct_values",
+    "zz_gpt41mini_guard3_1.test_gen::test_filter_writes_word_with_correct_bits",
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_set_writes_set_and_clr",
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_setup_calls_write_byte_and_sets_bits",
+    "zz_gpt41mini_guard3_1.test_gen::test_gpio_status_reads_byte",
+    "zz_gpt41mini_guard3_1.test_gen::test_handlers_do_not_raise_if_removing",
+    "zz_gpt41mini_guard3_1.test_gen::test_init_defaults_no_handlers_no_setup_no_reset",
+    "zz_gpt41mini_guard3_1.test_gen::test_is_touched_reflects_touched_bit",
+    "zz_gpt41mini_guard3_1.test_gen::test_on_touch_registers_handler_and_calls_properly",
+    "zz_gpt41mini_guard3_1.test_gen::test_out_of_range_raises_for_failure_bits",
+    "zz_gpt41mini_guard3_1.test_gen::test_reset_calls_write_byte",
+    "zz_gpt41mini_guard3_1.test_gen::test_threshold_release_default_is_0_6_times_touch",
+    "zz_gpt41mini_guard3_1.test_gen::test_threshold_sets_all_channels_when_channel_not_specified",
+    "zz_gpt41mini_guard3_1.test_gen::test_touched_returns_low_bits_and_raises_on_failure",
+    "zz_gpt41mini_guard3_1.test_gen::test_update_touch_state_updates_and_calls_handlers"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_2.test_gen::test_filter_writes_word",
+    "zz_gpt41mini_guard3_2.test_gen::test_handle_touch_with_handler_one_arg",
+    "zz_gpt41mini_guard3_2.test_gen::test_init_default_calls_setup",
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[0]",
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[12]",
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[5]",
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_registers_and_unregisters_handler",
+    "zz_gpt41mini_guard3_2.test_gen::test_setup_calls_methods_correctly",
+    "zz_gpt41mini_guard3_2.test_gen::test_touched_returns_touch_bits_and_raises"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_2.test_gen::test_init_default_calls_setup": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_update_touch_state_calls_handle_touch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_handle_touch_with_handler_one_arg": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_is_touched": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_registers_and_unregisters_handler": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_reset_writes_reset_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_configure_writes_correct_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_touched_returns_touch_bits_and_raises": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_electrode_data_returns_list_of_ints": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_baseline_without_args_returns_scaled_block": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_baseline_with_args_writes_blocks": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_threshold_sets_all_or_single_channels": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_debounce_writes_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_filter_writes_word": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_charge_writes_bytes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_auto_config_writes_correct_regs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_out_of_range_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_gpio_setup_bits_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_gpio_status_returns_byte": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_gpio_set_writes_correct_register": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_setup_calls_methods_correctly": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[0]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[5]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[12]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_dump_runs_and_prints": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_2.test_gen::test_filter_writes_word",
+    "zz_gpt41mini_guard3_2.test_gen::test_handle_touch_with_handler_one_arg",
+    "zz_gpt41mini_guard3_2.test_gen::test_init_default_calls_setup",
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[0]",
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[12]",
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_accepts_and_normalizes[5]",
+    "zz_gpt41mini_guard3_2.test_gen::test_on_touch_registers_and_unregisters_handler",
+    "zz_gpt41mini_guard3_2.test_gen::test_setup_calls_methods_correctly",
+    "zz_gpt41mini_guard3_2.test_gen::test_touched_returns_touch_bits_and_raises"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 199,
+  "failed": 1,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: expected call not found.\nExpected: mock(False, 6)\nActual: mock(True, 6)\n\npytest introspection follows:\n\nArgs:\nassert (True, 6) == (False, 6)\n  At index 0 diff: True != False\n  Full dif"
+  ]
+ },
+ "seconds": 324.9
+}

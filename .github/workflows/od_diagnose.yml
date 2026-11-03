@@ -1,0 +1,58 @@
+name: od-diagnose
+
+# Targeted reruns of every flaky generated test in the matched study: alone (varied and fixed hash seed),
+# then the pairwise polluter search. See scripts/od_diagnose.py for the output format.
+#   gh workflow run od-diagnose -f projects=docci,jmcm
+on:
+  workflow_dispatch:
+    inputs:
+      projects:
+        description: "comma separated project names"
+        required: true
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - id: p
+        run: |
+          python3 -c "import json; print('matrix=' + json.dumps({'project': [x for x in '${{ inputs.projects }}'.split(',') if x]}))" >> "$GITHUB_OUTPUT"
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: diagnose
+        run: |
+          mkdir -p out
+          python3 scripts/od_diagnose.py "${{ matrix.project }}" --work /tmp/odw --out "out/${{ matrix.project }}.json" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: od-${{ strategy.job-index }}
+          path: out/*.json
+          if-no-files-found: warn
+
+  collect:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: od-*
+          merge-multiple: true
+          path: out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: od-results
+          path: out/

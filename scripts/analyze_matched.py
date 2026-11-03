@@ -32,7 +32,7 @@ def wilson(k, n, z=1.96):
 
 def main():
     files = sorted(glob.glob(f"{ROOT}/results/matched/*.json"))
-    guard = sorted(glob.glob(f"{ROOT}/results/matched_guard/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_mitig/*.json"))
+    guard = sorted(glob.glob(f"{ROOT}/results/matched_guard/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_mitig/*.json")) + sorted(glob.glob(f"{ROOT}/results/matched_guard3/*.json"))
     per_model = collections.defaultdict(lambda: collections.Counter())
     per_project = []
     flaky_list = []
