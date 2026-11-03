@@ -74,6 +74,9 @@ Plain matched prompt (verbatim, `{...}` filled per project):
 
 > You are generating a unit test suite for a research experiment. Do not run any commands (no pytest, no python, no shell). Only read files and write files. Write pytest unit tests for the Python project {project}. Focus on this code: {target names} in {target files}. The project source is in {repo}; you may read any non test source file there to understand the code, but do not open any test file (anything under a tests/, test/ or testing/ folder, or named test_*.py, *_test.py or conftest.py). Write between 10 and 25 test functions in one file named test_gen.py in {out dir} (create it). The tests will run with Python 3.8 and pytest 7, with the project and its own dependencies installed; do not use other third party packages. Do not create __init__.py or conftest.py files. When done, reply with just the number of test functions.
 
+Deviations for the 24 projects added on November 3 (same prompt, same `sonnet` and `haiku` subagents): Haiku
+pybnn sample 2 ran one read-only `ls` before writing, which the prompt forbids. Nothing else ran a command.
+
 OpenAI matched prompt (verbatim, `scripts/gen_openai.py matched`). The API models cannot open files, so the
 source of the target files is pasted after the prompt as `### File: <path>` headers with a python code block
 each. GPT 5.4 mini runs with `reasoning_effort: low`. The longest python code block of the reply is saved.
