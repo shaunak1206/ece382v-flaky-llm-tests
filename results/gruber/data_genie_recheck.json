@@ -1,0 +1,44 @@
+{
+ "project": "data-genie.git",
+ "test": "tests/test_dqc.py::test_has_columns (Hypothesis, @settings(deadline=300))",
+ "runs": [
+  {
+   "where": "GitHub Actions, gruber-reproduce run 41365905605 (Nov 2, first reproduction)",
+   "setup": "reproduction",
+   "runs": 150,
+   "failures": 98
+  },
+  {
+   "where": "GitHub Actions, matched-study run 41493987953",
+   "setup": "matched (adds pytest-randomly, freezegun, pytest-mock)",
+   "runs": 200,
+   "failures": 0
+  },
+  {
+   "where": "GitHub Actions, gruber-reproduce run 41542285830 (Nov 2 recheck)",
+   "setup": "reproduction",
+   "runs": 150,
+   "failures": 0
+  },
+  {
+   "where": "GitHub Actions, matched-study run 41542291416 (Nov 2 recheck, human control only)",
+   "setup": "matched",
+   "runs": 150,
+   "failures": 0
+  },
+  {
+   "where": "MacBook, Python 3.8, same install steps",
+   "setup": "reproduction",
+   "runs": 80,
+   "failures": 0
+  },
+  {
+   "where": "MacBook, Python 3.8, same install steps",
+   "setup": "matched",
+   "runs": 40,
+   "failures": 1,
+   "message": "hypothesis.errors.FlakyFailure"
+  }
+ ],
+ "conclusion": "The extra plugins do not explain the difference: both setups pass on the recheck. The failures cluster in one runner session, which fits a timing cause (the test has a 300 ms Hypothesis deadline and builds pandas frames). Gruber et al. measured a 6.5% failure rate."
+}
