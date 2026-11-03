@@ -1,59 +1,63 @@
 {
  "models": {
   "gpt41mini": {
-   "suites": 34,
-   "generated": 746,
-   "kept": 558,
-   "flaky": 10,
-   "rejected": 188,
+   "suites": 80,
+   "generated": 1630,
+   "kept": 1070,
+   "flaky": 16,
+   "rejected": 560,
    "rejected_but_flaky": 10,
    "flaky_only_after_rejected_polluter": 2,
-   "suites_with_flaky": 5,
+   "suites_with_flaky": 10,
+   "suites_not_collected": 2,
    "ci": [
-    0.9762884830056116,
-    3.267185122366436
+    0.9224885694619711,
+    2.4152103984305007
    ]
   },
   "gpt54mini": {
-   "suites": 34,
-   "generated": 554,
-   "kept": 429,
-   "flaky": 0,
-   "rejected": 125,
-   "rejected_but_flaky": 0,
+   "suites": 80,
+   "generated": 1284,
+   "kept": 1028,
+   "flaky": 25,
+   "rejected": 256,
+   "rejected_but_flaky": 1,
    "flaky_only_after_rejected_polluter": 0,
-   "suites_with_flaky": 0,
+   "suites_with_flaky": 4,
+   "suites_not_collected": 2,
    "ci": [
-    0,
-    0.8875302189068703
+    1.6525760116264936,
+    3.565434194591205
    ]
   },
   "haiku": {
-   "suites": 34,
-   "generated": 810,
-   "kept": 806,
-   "flaky": 3,
-   "rejected": 4,
+   "suites": 81,
+   "generated": 1920,
+   "kept": 1908,
+   "flaky": 7,
+   "rejected": 12,
    "rejected_but_flaky": 0,
    "flaky_only_after_rejected_polluter": 0,
-   "suites_with_flaky": 2,
+   "suites_with_flaky": 4,
+   "suites_not_collected": 1,
    "ci": [
-    0.126661176212005,
-    1.0885888183548336
+    0.17782581982777873,
+    0.7553895678905341
    ]
   },
   "sonnet": {
-   "suites": 34,
-   "generated": 792,
-   "kept": 789,
-   "flaky": 0,
-   "rejected": 3,
-   "rejected_but_flaky": 0,
+   "suites": 81,
+   "generated": 1891,
+   "kept": 1883,
+   "flaky": 1,
+   "rejected": 8,
+   "rejected_but_flaky": 1,
    "flaky_only_after_rejected_polluter": 0,
-   "suites_with_flaky": 0,
+   "suites_with_flaky": 1,
+   "suites_not_collected": 1,
    "ci": [
-    0,
-    0.484535624770446
+    0.009375018483043684,
+    0.30022171714118673
    ]
   },
   "gpt41mini+guard": {
@@ -68,6 +72,96 @@
    "ci": [
     0.8632290096332906,
     3.080425638193814
+   ]
+  },
+  "gpt41mini+guard2": {
+   "suites": 25,
+   "generated": 672,
+   "kept": 500,
+   "flaky": 0,
+   "rejected": 172,
+   "rejected_but_flaky": 0,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 0,
+   "suites_not_collected": 9,
+   "ci": [
+    0,
+    0.7624618530903362
+   ]
+  },
+  "gpt41mini+plainseed": {
+   "suites": 80,
+   "generated": 1630,
+   "kept": 1075,
+   "flaky": 3,
+   "rejected": 555,
+   "rejected_but_flaky": 1,
+   "flaky_only_after_rejected_polluter": 2,
+   "suites_with_flaky": 2,
+   "suites_not_collected": 2,
+   "ci": [
+    0.09495158783044735,
+    0.8172861308485506
+   ]
+  },
+  "gpt54mini+plainseed": {
+   "suites": 80,
+   "generated": 1284,
+   "kept": 1028,
+   "flaky": 25,
+   "rejected": 256,
+   "rejected_but_flaky": 1,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 4,
+   "suites_not_collected": 2,
+   "ci": [
+    1.6525760116264936,
+    3.565434194591205
+   ]
+  },
+  "haiku+plainseed": {
+   "suites": 81,
+   "generated": 1920,
+   "kept": 1906,
+   "flaky": 5,
+   "rejected": 14,
+   "rejected_but_flaky": 2,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 3,
+   "suites_not_collected": 1,
+   "ci": [
+    0.11210027144883937,
+    0.6126509330489577
+   ]
+  },
+  "sonnet+plainseed": {
+   "suites": 81,
+   "generated": 1891,
+   "kept": 1884,
+   "flaky": 2,
+   "rejected": 7,
+   "rejected_but_flaky": 0,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 1,
+   "suites_not_collected": 1,
+   "ci": [
+    0.029116328572016074,
+    0.3862575036393303
+   ]
+  },
+  "gpt41mini+guard3": {
+   "suites": 29,
+   "generated": 630,
+   "kept": 429,
+   "flaky": 1,
+   "rejected": 201,
+   "rejected_but_flaky": 0,
+   "flaky_only_after_rejected_polluter": 0,
+   "suites_with_flaky": 1,
+   "suites_not_collected": 5,
+   "ci": [
+    0.04115871365453225,
+    1.3084343014345905
    ]
   }
  },
@@ -103,6 +197,21 @@
    "sonnet_plain_2_flaky": 0
   },
   {
+   "project": "coo",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 3,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
    "project": "cuckoopy",
    "category": "random",
    "human_runs": 200,
@@ -114,6 +223,20 @@
    "gpt54mini_plain_2_flaky": 0,
    "haiku_plain_1_flaky": 2,
    "haiku_plain_2_flaky": 1,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "darkchess",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 18,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
    "sonnet_plain_1_flaky": 0,
    "sonnet_plain_2_flaky": 0
   },
@@ -148,10 +271,70 @@
    "sonnet_plain_2_flaky": 0
   },
   {
+   "project": "docci",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 0,
+   "human_reproduced": false,
+   "gpt41mini_plain_1_flaky": 1,
+   "gpt41mini_plain_2_flaky": 2,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 1,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "event-bus",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 38,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
    "project": "filtered-intervaltree",
    "category": "random",
    "human_runs": 200,
    "human_failures": 48,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "fistro",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 2,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "fossor",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 16,
    "human_reproduced": true,
    "gpt41mini_plain_1_flaky": 0,
    "gpt41mini_plain_2_flaky": 0,
@@ -193,6 +376,81 @@
    "sonnet_plain_2_flaky": 0
   },
   {
+   "project": "homog",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 4,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "jmcm",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 17,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 16,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "keplertools",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 33,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 129,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 1,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 2,
+   "haiku_plain_2_flaky": 2,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 1
+  },
+  {
+   "project": "kindle-maker",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 17,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
    "project": "langsplit",
    "category": "random",
    "human_runs": 200,
@@ -200,6 +458,36 @@
    "human_reproduced": true,
    "gpt41mini_plain_1_flaky": 0,
    "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "limix-lmm",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 5,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "pelicun",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 6,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 1,
+   "gpt41mini_plain_2_flaky": 1,
    "gpt54mini_plain_1_flaky": 0,
    "gpt54mini_plain_2_flaky": 0,
    "haiku_plain_1_flaky": 0,
@@ -223,6 +511,50 @@
    "sonnet_plain_2_flaky": 0
   },
   {
+   "project": "pyalcs",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 0,
+   "human_reproduced": false,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "pybnn",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 89,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "pydrobert-speech",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 7,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
    "project": "pylabeledrf",
    "category": "random",
    "human_runs": 200,
@@ -238,8 +570,49 @@
    "sonnet_plain_2_flaky": 0
   },
   {
+   "project": "pymemorydb",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 48,
+   "human_reproduced": true,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "pypfm",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 6,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 1,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
    "project": "python-matlab-functions",
    "category": "random",
+   "human_runs": 200,
+   "human_failures": 3,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "python-timemarker",
+   "category": "unlabeled",
    "human_runs": 200,
    "human_failures": 3,
    "human_reproduced": true,
@@ -268,12 +641,42 @@
    "sonnet_plain_2_flaky": 0
   },
   {
+   "project": "r_map",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 9,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
    "project": "scikit-procrustes",
    "category": "random",
    "human_runs": 200,
    "human_failures": 21,
    "human_reproduced": true,
    "gpt41mini_plain_1_flaky": 1,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "setigen",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 14,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
    "gpt41mini_plain_2_flaky": 0,
    "gpt54mini_plain_1_flaky": 0,
    "gpt54mini_plain_2_flaky": 0,
@@ -298,6 +701,36 @@
    "sonnet_plain_2_flaky": 0
   },
   {
+   "project": "torch-embed-sim",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 2,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "torch-gpt-2",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 3,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 7,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
    "project": "torch-layer-normalization",
    "category": "random",
    "human_runs": 200,
@@ -305,6 +738,21 @@
    "human_reproduced": true,
    "gpt41mini_plain_1_flaky": 0,
    "gpt41mini_plain_2_flaky": 1,
+   "gpt54mini_plain_1_flaky": 0,
+   "gpt54mini_plain_2_flaky": 0,
+   "haiku_plain_1_flaky": 0,
+   "haiku_plain_2_flaky": 0,
+   "sonnet_plain_1_flaky": 0,
+   "sonnet_plain_2_flaky": 0
+  },
+  {
+   "project": "uhashring",
+   "category": "unlabeled",
+   "human_runs": 200,
+   "human_failures": 7,
+   "human_reproduced": true,
+   "gpt41mini_plain_1_flaky": 0,
+   "gpt41mini_plain_2_flaky": 0,
    "gpt54mini_plain_1_flaky": 0,
    "gpt54mini_plain_2_flaky": 0,
    "haiku_plain_1_flaky": 0,
@@ -364,6 +812,267 @@
    "pass": 142,
    "fail": 58,
    "category": "random"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
+   "test": "zz_gpt41mini_plain_1.test_gen::test_xlsx_to_bytes_saves_content_consistently",
+   "pass": 196,
+   "fail": 4,
+   "category": "unlabeled"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_plain_2",
+   "model": "gpt41mini",
+   "test": "zz_gpt41mini_plain_2.test_gen::test_xlsx_to_bytes_same_workbook_consistency",
+   "pass": 199,
+   "fail": 1,
+   "category": "unlabeled"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_plain_2",
+   "model": "gpt41mini",
+   "test": "zz_gpt41mini_plain_2.test_gen::test_xlsx_to_file_multiple_calls_generate_different_objects",
+   "pass": 196,
+   "fail": 4,
+   "category": "unlabeled"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes",
+   "pass": 199,
+   "fail": 1,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_package_import_exposes_jointmodel",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_jointmodel_is_a_class",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_jointmodel_reexport_matches_submodule_class",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_jointmodel_class_name_is_correct",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_jointmodel_module_path_is_expected",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_jmcm_package_name_attribute_is_set",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[math]",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[numpy]",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[pandas]",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[scipy]",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[collections]",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[patsy]",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[warnings]",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_import_raises_clear_error_for_missing_pandas",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_import_raises_clear_error_for_missing_scipy",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plain_1",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_1.test_gen::test_import_raises_clear_error_for_missing_math",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
+   "test": "zz_gpt41mini_plain_1.test_gen::test_RNotNoneTypeMatcher_eq_and_hash",
+   "pass": 199,
+   "fail": 1,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "haiku_plain_1",
+   "model": "haiku",
+   "test": "zz_haiku_plain_1.test_gen::test_not_none_matches_collects_failure_for_none",
+   "pass": 168,
+   "fail": 32,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "haiku_plain_1",
+   "model": "haiku",
+   "test": "zz_haiku_plain_1.test_gen::test_not_none_check_arg_raises_for_none",
+   "pass": 151,
+   "fail": 49,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "haiku_plain_2",
+   "model": "haiku",
+   "test": "zz_haiku_plain_2.test_gen::test_not_none_rejects_none_and_records_failure",
+   "pass": 164,
+   "fail": 36,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "haiku_plain_2",
+   "model": "haiku",
+   "test": "zz_haiku_plain_2.test_gen::test_not_none_check_arg_none_message",
+   "pass": 168,
+   "fail": 32,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "sonnet_plain_2",
+   "model": "sonnet",
+   "test": "zz_sonnet_plain_2.test_gen::test_not_none_matcher_error_recorded_only_on_failure",
+   "pass": 171,
+   "fail": 29,
+   "category": "unlabeled"
+  },
+  {
+   "project": "pelicun",
+   "suite": "gpt41mini_plain_1",
+   "model": "gpt41mini",
+   "test": "zz_gpt41mini_plain_1.test_gen::test_tmvn_rvs_scalar_cov_repeated",
+   "pass": 197,
+   "fail": 3,
+   "category": "unlabeled"
+  },
+  {
+   "project": "pelicun",
+   "suite": "gpt41mini_plain_2",
+   "model": "gpt41mini",
+   "test": "zz_gpt41mini_plain_2.test_gen::test_tmvn_MLE_multivariate_no_censoring",
+   "pass": 171,
+   "fail": 29,
+   "category": "unlabeled"
+  },
+  {
+   "project": "pypfm",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_reimporting_package_preserves_pfml_loader_identity",
+   "pass": 144,
+   "fail": 56,
+   "category": "unlabeled"
   },
   {
    "project": "scikit-procrustes",
@@ -436,6 +1145,69 @@
    "pass": 129,
    "fail": 71,
    "category": "random"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_bytepairencoding_reexport_is_same_object",
+   "pass": 178,
+   "fail": 22,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_gpt2_reexport_is_same_object_as_net_module",
+   "pass": 176,
+   "fail": 24,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_gelu_reexport_is_same_object_as_net_module",
+   "pass": 178,
+   "fail": 22,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_generate_reexport_is_same_object_as_gen_module",
+   "pass": 189,
+   "fail": 11,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_bytepairencoding_looks_like_a_class",
+   "pass": 184,
+   "fail": 16,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_gpt2_looks_like_a_class",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plain_2",
+   "model": "gpt54mini",
+   "test": "zz_gpt54mini_plain_2.test_gen::test_generate_is_callable",
+   "pass": 178,
+   "fail": 22,
+   "category": "unlabeled"
   },
   {
    "project": "torch-layer-normalization",
@@ -525,6 +1297,330 @@
    "test": "zz_gpt41mini_guard_1.test_gen::test_mutateLabeledTree_flips_nodes_correctly",
    "pass": 117,
    "fail": 83,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "haiku_plainseed_1",
+   "model": "haiku+plainseed",
+   "test": "zz_haiku_plainseed_1.test_gen::test_delete_keeps_other_items_findable",
+   "pass": 197,
+   "fail": 3,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "haiku_plainseed_1",
+   "model": "haiku+plainseed",
+   "test": "zz_haiku_plainseed_1.test_gen::test_len_tracks_mixed_inserts_and_deletes",
+   "pass": 194,
+   "fail": 6,
+   "category": "random"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "haiku_plainseed_2",
+   "model": "haiku+plainseed",
+   "test": "zz_haiku_plainseed_2.test_gen::test_many_inserts_remain_findable",
+   "pass": 156,
+   "fail": 44,
+   "category": "random"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_plainseed_1",
+   "model": "gpt41mini+plainseed",
+   "test": "zz_gpt41mini_plainseed_1.test_gen::test_xlsx_to_bytes_and_xlsx_to_file_consistent_content",
+   "pass": 199,
+   "fail": 1,
+   "category": "unlabeled"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_plainseed_1",
+   "model": "gpt41mini+plainseed",
+   "test": "zz_gpt41mini_plainseed_1.test_gen::test_xlsx_to_bytes_saves_content_consistently",
+   "pass": 195,
+   "fail": 5,
+   "category": "unlabeled"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_plainseed_2",
+   "model": "gpt41mini+plainseed",
+   "test": "zz_gpt41mini_plainseed_2.test_gen::test_xlsx_to_bytes_same_workbook_consistency",
+   "pass": 199,
+   "fail": 1,
+   "category": "unlabeled"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes",
+   "pass": 199,
+   "fail": 1,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_package_import_exposes_jointmodel",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_jointmodel_is_a_class",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_jointmodel_reexport_matches_submodule_class",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_jointmodel_class_name_is_correct",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_jointmodel_module_path_is_expected",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_jmcm_package_name_attribute_is_set",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[math]",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[numpy]",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[pandas]",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[scipy]",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[collections]",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[patsy]",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_hard_dependencies_are_importable_via_jmcm_module[warnings]",
+   "pass": 192,
+   "fail": 8,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_import_raises_clear_error_for_missing_pandas",
+   "pass": 195,
+   "fail": 5,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_import_raises_clear_error_for_missing_scipy",
+   "pass": 195,
+   "fail": 5,
+   "category": "unlabeled"
+  },
+  {
+   "project": "jmcm",
+   "suite": "gpt54mini_plainseed_1",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_1.test_gen::test_import_raises_clear_error_for_missing_math",
+   "pass": 195,
+   "fail": 5,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "haiku_plainseed_2",
+   "model": "haiku+plainseed",
+   "test": "zz_haiku_plainseed_2.test_gen::test_not_none_rejects_none_and_records_failure",
+   "pass": 146,
+   "fail": 54,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "haiku_plainseed_2",
+   "model": "haiku+plainseed",
+   "test": "zz_haiku_plainseed_2.test_gen::test_not_none_check_arg_none_message",
+   "pass": 125,
+   "fail": 75,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "sonnet_plainseed_2",
+   "model": "sonnet+plainseed",
+   "test": "zz_sonnet_plainseed_2.test_gen::test_not_none_matcher_error_recorded_only_on_failure",
+   "pass": 124,
+   "fail": 76,
+   "category": "unlabeled"
+  },
+  {
+   "project": "kevinarpe-rambutan3",
+   "suite": "sonnet_plainseed_2",
+   "model": "sonnet+plainseed",
+   "test": "zz_sonnet_plainseed_2.test_gen::test_not_none_check_arg",
+   "pass": 121,
+   "fail": 79,
+   "category": "unlabeled"
+  },
+  {
+   "project": "pypfm",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_reimporting_package_preserves_pfml_loader_identity",
+   "pass": 145,
+   "fail": 55,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_bytepairencoding_reexport_is_same_object",
+   "pass": 178,
+   "fail": 22,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_gpt2_reexport_is_same_object_as_net_module",
+   "pass": 186,
+   "fail": 14,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_gelu_reexport_is_same_object_as_net_module",
+   "pass": 179,
+   "fail": 21,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_generate_reexport_is_same_object_as_gen_module",
+   "pass": 181,
+   "fail": 19,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_bytepairencoding_looks_like_a_class",
+   "pass": 175,
+   "fail": 25,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_gpt2_looks_like_a_class",
+   "pass": 176,
+   "fail": 24,
+   "category": "unlabeled"
+  },
+  {
+   "project": "torch-gpt-2",
+   "suite": "gpt54mini_plainseed_2",
+   "model": "gpt54mini+plainseed",
+   "test": "zz_gpt54mini_plainseed_2.test_gen::test_generate_is_callable",
+   "pass": 183,
+   "fail": 17,
+   "category": "unlabeled"
+  },
+  {
+   "project": "cuckoopy",
+   "suite": "gpt41mini_guard3_2",
+   "model": "gpt41mini+guard3",
+   "test": "zz_gpt41mini_guard3_2.test_gen::test_contains_and_delete_with_duplicate_fingerprints",
+   "pass": 151,
+   "fail": 49,
    "category": "random"
   }
  ]
