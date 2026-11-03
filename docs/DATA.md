@@ -185,3 +185,17 @@ One entry per Claude E2 plain suite (`<project>/<model>_plain_<k>`): `models` (m
 `shell_commands` (number of shell commands the subagent ran), and `test_files_opened` (any project test file the
 subagent opened or searched, with the tool; empty for 163 of 164 suites, and the one entry is a `grep -rl` that
 printed file names only). Made by `scripts/audit_generation_reads.py` from the Claude Code transcripts.
+
+## results/matched_habits.json
+
+From `scripts/matched_habits.py`. Keys `all` (41 projects) and `first_17` map each model to `suites`
+(plain suites generated, including any that did not import), `seeds` (suites that seed random, NumPy, or PyTorch),
+`monkeypatch` (suites that use `monkeypatch` or `mock.patch`), and `reloads` (suites that call `importlib.reload`
+or read or edit `sys.modules`).
+
+## results/humanize_reset_check.json
+
+From `scripts/humanize_reset_check.py`. `as_generated` and `with_reset_fixture` each give `runs` (shuffled runs),
+`tests`, and `flaky` (the PL-G4 humanize tests that flipped), with and without a fixture that calls
+`humanize.i18n.deactivate()` around every test.
+

@@ -60,6 +60,7 @@ brew install stress-ng uv                   # or apt-get install stress-ng; pip 
 | Scanner check against Gruber et al. labels | `python scripts/validate_scanner.py` | `results/scanner_validation/validation.json` |
 | Test characteristics (why LLM tests rarely flip) | `python scripts/characterize.py` | `results/why_analysis.md`, `results/characterize.json` |
 | Reset fixture check for the PL-G4 humanize tests | `python scripts/humanize_reset_check.py --runs 50` | `results/humanize_reset_check.json` |
+| Count how each model's E2 plain suites seed, monkeypatch, and reload or touch `sys.modules` | `python scripts/matched_habits.py` | `results/matched_habits.json` |
 | Coverage | `python scripts/coverage.py` (`COV_CONDS=...` to pick conditions) | `results/coverage/summary.json` |
 | Study tables | `python scripts/analyze.py > results/analysis.md`, `python scripts/analyze_mixed.py`, `python scripts/analyze_matched.py` | `results/summary.json`, `results/mixed_summary.json`, `results/matched_summary.json` |
 | Subject selection funnel | `python scripts/select_subjects.py --top 5000 --static` then `--run-sample 6` | `results/subject_funnel/` |
