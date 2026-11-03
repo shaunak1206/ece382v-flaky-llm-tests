@@ -36,7 +36,7 @@ def row_for(name):
 
 def sh(cmd, cwd=None, timeout=900, env=None):
     try:
-        p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout, env=env)
+        p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, errors="replace", timeout=timeout, env=env)
         return p.returncode, (p.stdout + p.stderr)
     except subprocess.TimeoutExpired as e:
         return -9, f"TIMEOUT after {timeout}s"
