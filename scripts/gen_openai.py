@@ -18,7 +18,7 @@ import json, os, re, sys, time, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, f"{ROOT}/scripts")
-TAGS = {"gpt-5.4-mini": "gpt54mini", "gpt-4.1-mini": "gpt41mini"}
+TAGS = {"gpt-5.4-mini": "gpt54mini", "gpt-4.1-mini": "gpt41mini", "claude-sonnet-5-5": "sonnet", "claude-haiku-5-5": "haiku"}
 
 
 GUARD = ("These tests must not be flaky: every test must give the same result in every run, in any order, on any "
@@ -57,7 +57,27 @@ def key():
     return k
 
 
+def call_claude(model, prompt):
+    # Claude models through the Claude Code CLI in print mode with every tool disabled, no MCP servers, no settings or
+    # CLAUDE.md files (run from an empty folder), and a one line system prompt, so they see exactly the pasted prompt
+    # that the OpenAI models see. Used for the held out sample, where all four models share this one pipeline.
+    import subprocess, tempfile
+    t0 = time.time()
+    cwd = tempfile.mkdtemp(prefix="claude_p_")
+    p = subprocess.run(["claude", "-p", "--model", model, "--tools", "", "--strict-mcp-config", "--setting-sources", "",
+                        "--system-prompt", "You are a helpful assistant.", "--output-format", "json"],
+                       input=prompt, capture_output=True, text=True, timeout=900, cwd=cwd)
+    j = json.loads(p.stdout)
+    if j.get("is_error"):
+        raise RuntimeError(str(j.get("result"))[:300])
+    u = j.get("usage", {})
+    return j["result"], {"prompt_tokens": u.get("input_tokens", 0) + u.get("cache_read_input_tokens", 0) + u.get("cache_creation_input_tokens", 0),
+                         "completion_tokens": u.get("output_tokens"), "models": list(j.get("modelUsage", {}))}, round(time.time() - t0, 1)
+
+
 def call(model, prompt):
+    if model.startswith("claude-"):
+        return call_claude(model, prompt)
     body = {"model": model, "messages": [{"role": "user", "content": prompt}]}
     if model.startswith("gpt-5"):
         body["reasoning_effort"] = "low"
@@ -98,6 +118,8 @@ def main():
                   f"one file. The tests will run with Python 3.8 and pytest 7, with the project and its own dependencies "
                   f"installed, from the project root; do not use other third party packages. Reply with only the test file "
                   f"in one python code block.\n\n")
+        # heldout: the plain prompt again, for the held out sample of Progress Report 3 (new suites, all four models
+        # through this one pasted source pipeline, analysis fixed before the runs)
         if variant in ("guard", "guard2", "guard3"):
             g = {"guard": GUARD, "guard2": GUARD2, "guard3": GUARD3}[variant]
             prompt = prompt.replace("Reply with only", g + "Reply with only")
@@ -115,7 +137,7 @@ def main():
     text, usage, secs = call(model, prompt)
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, "w").write(extract_code(text))
-    with open(f"{ROOT}/results/openai_calls.jsonl", "a") as f:
+    with open(f"{ROOT}/results/{'claude' if model.startswith('claude-') else 'openai'}_calls.jsonl", "a") as f:
         f.write(json.dumps({"mode": mode, "target": target, "model": model, "sample": sample, "variant": variant, "out": os.path.relpath(out, ROOT),
                             "prompt_chars": len(prompt), "usage": usage, "seconds": secs}) + "\n")
     n = len(re.findall(r"^\s*(?:async )?def test_", open(out).read(), re.M))

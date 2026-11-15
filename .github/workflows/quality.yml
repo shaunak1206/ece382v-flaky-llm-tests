@@ -1,0 +1,71 @@
+name: e2-quality
+
+# Line coverage and mutation score of matched study suites on the code under test (scripts/e2_quality.py).
+#   gh workflow run e2-quality -f suites='*_plain_*,gpt41mini_guard*'
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "optional comma separated project names"
+        default: ""
+      suites:
+        description: "comma separated globs over suite ids"
+        default: "*_plain_*"
+      mutants:
+        description: "mutants per project"
+        default: "40"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          only = [x for x in "${{ inputs.only }}".split(",") if x]
+          names = open("results/gruber/matched_projects.txt").read().split()
+          names = [n for n in names if not only or n in only]
+          print("matrix=" + json.dumps({"project": names}))
+          PY
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: quality
+        run: |
+          mkdir -p out
+          python3 scripts/e2_quality.py "${{ matrix.project }}" --work /tmp/qw --suites "${{ inputs.suites }}" \
+            --mutants "${{ inputs.mutants }}" --out "out/${{ matrix.project }}.json" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q-${{ strategy.job-index }}
+          path: out/*.json
+          if-no-files-found: warn
+
+  collect:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q-*
+          merge-multiple: true
+          path: out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quality-results
+          path: out/

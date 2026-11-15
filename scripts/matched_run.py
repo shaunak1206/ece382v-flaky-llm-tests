@@ -37,18 +37,20 @@ def run_suite(py, repo, target_dir, timeout_s, seed, randomize):
            "-o", "python_files=test_*.py", "--junitxml", xml]
     cmd += ["-p", "randomly", f"--randomly-seed={seed}"] if randomize else ["-p", "no:randomly"]
     rc, out = gr.sh(cmd + [target_dir], cwd=repo, timeout=900, env=env)
-    res = {}
+    res, msgs = {}, {}
     try:
         for tc in ET.parse(xml).getroot().iter("testcase"):
             tid = f'{tc.get("classname")}::{tc.get("name")}'; st = "pass"
             for ch in tc:
                 if ch.tag in ("failure", "error", "skipped"):
                     st = {"failure": "fail", "error": "error", "skipped": "skip"}[ch.tag]
+                    if st != "skip": msgs[tid] = (ch.get("message") or "")[:300]
             res[tid] = st
     except Exception:
         pass
     finally:
         os.unlink(xml)
+    run_suite.last_messages = msgs
     return res, out
 
 
@@ -92,21 +94,28 @@ def main():
             if os.path.basename(f) == "__init__.py" or (os.path.basename(f) == "conftest.py" and prompt not in ("plainseed", "plainiso")): continue
             shutil.copy(f, dst)
         hist = collections.defaultdict(collections.Counter); first_fail = []
+        # per run outcome of every test, one letter per run in run order (P pass, F fail, E error, S skip, - missing),
+        # so the k run filters can be measured on consecutive real runs; and the first failure message of each test
+        seq = collections.defaultdict(lambda: ["-"] * a.runs); first_msg = {}
         fails_by_order = collections.defaultdict(collections.Counter)
         for i in range(a.runs):
             seed = 7000 + i
             out_res, tail = run_suite(py, repo, f"zz_{sid}", a.timeout, seed, randomize=(i % 2 == 1))
             if i == 0:
                 first_fail = sorted(t for t, s in out_res.items() if s in ("fail", "error"))
+            for t, m in getattr(run_suite, "last_messages", {}).items():
+                first_msg.setdefault(t, m)
             for t, s in out_res.items():
                 hist[t][s] += 1
+                seq[t][i] = s[0].upper()
                 if s in ("fail", "error"): fails_by_order[t]["shuffled" if i % 2 else "file"] += 1
         tests = {}
         for t, c in hist.items():
             p, f = c["pass"], c["fail"] + c["error"]
             kind = "flaky" if p and f else "always-fail" if f else "always-skip" if not p else "stable"
             tests[t] = {"pass": p, "fail": c["fail"], "error": c["error"], "skip": c["skip"], "kind": kind,
-                        "fails_file_order": fails_by_order[t]["file"], "fails_shuffled": fails_by_order[t]["shuffled"]}
+                        "fails_file_order": fails_by_order[t]["file"], "fails_shuffled": fails_by_order[t]["shuffled"],
+                        "sequence": "".join(seq[t]), "first_message": first_msg.get(t)}
         res["suites"][sid] = {"model": model, "prompt": prompt, "sample": sample, "runs": a.runs, "n_tests": len(tests),
                               "first_run_failed": first_fail, "tests": tests,
                               "flaky": sorted(t for t, v in tests.items() if v["kind"] == "flaky"),
