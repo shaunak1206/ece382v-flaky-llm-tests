@@ -27,7 +27,7 @@ REQ_FILES = ["requirements.txt", "requirements-dev.txt", "requirements_dev.txt",
 
 def row_for(name):
     # candidates.csv: the 58 hand labeled tests; candidates_ext.csv: one unlabeled flaky test per remaining project
-    for f in ("candidates.csv", "candidates_ext.csv", "candidates_time.csv"):
+    for f in ("candidates.csv", "candidates_ext.csv", "candidates_time.csv", "candidates_od.csv"):
         for r in csv.DictReader(open(f"{ROOT}/results/gruber/{f}")):
             if r["Project_Name"] == name:
                 return r
@@ -82,11 +82,14 @@ def fix_missing_modules(py, repo, testfile, log, tries=8):
     return out
 
 
-def run_once(py, repo, kexpr, testfile, timeout_s):
+def run_once(py, repo, kexpr, testfile, timeout_s, shuffle_seed=None):
+    # shuffle_seed: run the whole test file in a pytest-randomly order (order dependent batch) and keep only the
+    # cases of the target test, so a polluter in the same file can run before it
     fd, xml = tempfile.mkstemp(suffix=".xml"); os.close(fd)
     env = dict(os.environ, PYTHONPATH=repo)
-    rc, out = sh([py, "-m", "pytest", "-q", "-p", "no:cacheprovider", "-p", "no:randomly", f"--timeout={timeout_s}",
-                  "--junitxml", xml, "-k", kexpr, testfile], cwd=repo, timeout=timeout_s * 4 + 60, env=env)
+    sel = ["-p", "no:randomly", "-k", kexpr] if shuffle_seed is None else ["-p", "randomly", f"--randomly-seed={shuffle_seed}"]
+    rc, out = sh([py, "-m", "pytest", "-q", "-p", "no:cacheprovider", f"--timeout={timeout_s}",
+                  "--junitxml", xml] + sel + [testfile], cwd=repo, timeout=timeout_s * 4 + 60 if shuffle_seed is None else 1800, env=env)
     res = []
     try:
         for tc in ET.parse(xml).getroot().iter("testcase"):
@@ -94,7 +97,8 @@ def run_once(py, repo, kexpr, testfile, timeout_s):
             for ch in tc:
                 if ch.tag in ("failure", "error", "skipped"):
                     st = {"failure": "fail", "error": "error", "skipped": "skip"}[ch.tag]; msg = (ch.get("message") or "")[:200]
-            res.append((tc.get("name"), st, msg))
+            if shuffle_seed is None or tc.get("name", "").split("[")[0] == kexpr:
+                res.append((tc.get("name"), st, msg))
     except Exception:
         res = [("<no junit>", "error", out[-200:])]
     finally:
@@ -108,6 +112,7 @@ def main():
     ap.add_argument("--runs", type=int, default=150); ap.add_argument("--timeout", type=int, default=120)
     ap.add_argument("--out", required=True)
     ap.add_argument("--max-minutes", type=int, default=180, help="stop rerunning after this much wall time")
+    ap.add_argument("--shuffle-file", action="store_true", help="order dependent batch: shuffle the whole test file each run")
     a = ap.parse_args()
     r = row_for(a.project); t0 = time.time()
     d = f"{a.work}/{a.project}"; repo = f"{d}/repo"; venv = f"{d}/venv"
@@ -130,7 +135,7 @@ def main():
         res["reproduced"] = False; json.dump(res, open(a.out, "w"), indent=1); return
     counts = {"pass": 0, "fail": 0, "error": 0, "skip": 0}; msgs = []; collected = 0; runs = 0
     for i in range(a.runs):
-        out_res, tail = run_once(py, repo, kexpr, r["Test_filename"], a.timeout)
+        out_res, tail = run_once(py, repo, kexpr, r["Test_filename"], a.timeout, 9000 + i if a.shuffle_file else None)
         runs += 1
         if i == 0:
             collected = len(out_res); res["first_run_tail"] = tail[-800:]

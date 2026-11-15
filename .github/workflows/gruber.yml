@@ -18,6 +18,9 @@ on:
       max_minutes:
         description: "wall time cap per project"
         default: "180"
+      shuffle:
+        description: "1 to shuffle the whole test file each run (order dependent batch)"
+        default: "0"
 
 jobs:
   plan:
@@ -51,6 +54,7 @@ jobs:
         run: |
           mkdir -p out
           python3 scripts/gruber_reproduce.py "${{ matrix.project }}" --work /tmp/gw --runs "${{ inputs.runs }}" --max-minutes "${{ inputs.max_minutes }}" \
+            $( [ "${{ inputs.shuffle }}" = "1" ] && echo --shuffle-file ) \
             --out "out/${{ matrix.project }}.json" || true
       - uses: actions/upload-artifact@v4
         if: always()
