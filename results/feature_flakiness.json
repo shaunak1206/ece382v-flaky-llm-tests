@@ -1,0 +1,234 @@
+{
+ "features": {
+  "random_calls": {
+   "label": "Calls a random number generator",
+   "group": "randomness",
+   "human": {
+    "use": 46,
+    "share": 1.5,
+    "flaky": 0,
+    "flaky_tests": []
+   },
+   "llm": {
+    "use": 138,
+    "share": 1.8,
+    "flaky": 1,
+    "flaky_tests": [
+     "gen_oneshot_haiku/tenacity::test_wait_random_exponential_in_timing_test"
+    ]
+   }
+  },
+  "random_unseeded": {
+   "label": "Uses randomness without a seed",
+   "group": "randomness",
+   "human": {
+    "use": 34,
+    "share": 1.1,
+    "flaky": 0,
+    "flaky_tests": []
+   },
+   "llm": {
+    "use": 82,
+    "share": 1.1,
+    "flaky": 1,
+    "flaky_tests": [
+     "gen_oneshot_haiku/tenacity::test_wait_random_exponential_in_timing_test"
+    ]
+   }
+  },
+  "real_clock_read": {
+   "label": "Reads the real clock",
+   "group": "time",
+   "human": {
+    "use": 58,
+    "share": 1.9,
+    "flaky": 0,
+    "flaky_tests": []
+   },
+   "llm": {
+    "use": 206,
+    "share": 2.8,
+    "flaky": 3,
+    "flaky_tests": [
+     "gen_oneshot_haiku/schedule::test_until_with_string_time_format",
+     "gen_oneshot_haiku/schedule::test_until_with_time_object",
+     "gen_oneshot_haiku/tenacity::test_wait_random_exponential_in_timing_test"
+    ]
+   }
+  },
+  "real_sleep": {
+   "label": "Sleeps for real",
+   "group": "time",
+   "human": {
+    "use": 35,
+    "share": 1.1,
+    "flaky": 2,
+    "flaky_tests": [
+     "human/pybreaker::test_half_open_thread_safety",
+     "human/pybreaker::test_half_open_thread_safety"
+    ]
+   },
+   "llm": {
+    "use": 107,
+    "share": 1.4,
+    "flaky": 0,
+    "flaky_tests": []
+   }
+  },
+  "timing_assert": {
+   "label": "Asserts on elapsed time",
+   "group": "time",
+   "human": {
+    "use": 4,
+    "share": 0.1,
+    "flaky": 0,
+    "flaky_tests": []
+   },
+   "llm": {
+    "use": 42,
+    "share": 0.6,
+    "flaky": 1,
+    "flaky_tests": [
+     "gen_oneshot_haiku/tenacity::test_wait_random_exponential_in_timing_test"
+    ]
+   }
+  },
+  "concurrency": {
+   "label": "Uses threads, processes, or asyncio",
+   "group": "concurrency",
+   "human": {
+    "use": 56,
+    "share": 1.8,
+    "flaky": 2,
+    "flaky_tests": [
+     "human/pybreaker::test_half_open_thread_safety",
+     "human/pybreaker::test_half_open_thread_safety"
+    ]
+   },
+   "llm": {
+    "use": 248,
+    "share": 3.3,
+    "flaky": 0,
+    "flaky_tests": []
+   }
+  },
+  "threads_or_procs_without_join": {
+   "label": "Starts a thread or process without join",
+   "group": "concurrency",
+   "human": {
+    "use": 2,
+    "share": 0.1,
+    "flaky": 0,
+    "flaky_tests": []
+   },
+   "llm": {
+    "use": 6,
+    "share": 0.1,
+    "flaky": 0,
+    "flaky_tests": []
+   }
+  },
+  "shared_state_any": {
+   "label": "Shares state between tests",
+   "group": "order",
+   "human": {
+    "use": 736,
+    "share": 23.9,
+    "flaky": 2,
+    "flaky_tests": [
+     "human/arrow::test_locale_name_validation",
+     "human/arrow::test_locale_validation"
+    ]
+   },
+   "llm": {
+    "use": 170,
+    "share": 2.3,
+    "flaky": 0,
+    "flaky_tests": []
+   }
+  },
+  "wide_scope_fixture": {
+   "label": "Class or module scoped fixture",
+   "group": "order",
+   "human": {
+    "use": 599,
+    "share": 19.5,
+    "flaky": 2,
+    "flaky_tests": [
+     "human/arrow::test_locale_name_validation",
+     "human/arrow::test_locale_validation"
+    ]
+   },
+   "llm": {
+    "use": 0,
+    "share": 0.0,
+    "flaky": 0,
+    "flaky_tests": []
+   }
+  },
+  "setup_without_teardown": {
+   "label": "Setup without teardown",
+   "group": "order",
+   "human": {
+    "use": 130,
+    "share": 4.2,
+    "flaky": 1,
+    "flaky_tests": [
+     "human/pybreaker::test_half_open_thread_safety"
+    ]
+   },
+   "llm": {
+    "use": 0,
+    "share": 0.0,
+    "flaky": 0,
+    "flaky_tests": []
+   }
+  },
+  "iso_freezegun": {
+   "label": "Freezes the clock (freezegun)",
+   "group": "isolation",
+   "human": {
+    "use": 12,
+    "share": 0.4,
+    "flaky": 0,
+    "flaky_tests": []
+   },
+   "llm": {
+    "use": 323,
+    "share": 4.3,
+    "flaky": 0,
+    "flaky_tests": []
+   }
+  },
+  "iso_monkeypatch": {
+   "label": "Uses monkeypatch",
+   "group": "isolation",
+   "human": {
+    "use": 7,
+    "share": 0.2,
+    "flaky": 0,
+    "flaky_tests": []
+   },
+   "llm": {
+    "use": 133,
+    "share": 1.8,
+    "flaky": 3,
+    "flaky_tests": [
+     "gen_plain_gpt41mini/humanize::test_gettext_functions_basic",
+     "gen_plain_gpt41mini/humanize::test_intcomma_custom_separators",
+     "gen_plain_gpt41mini/humanize::test_thousands_and_decimal_separators"
+    ]
+   }
+  }
+ },
+ "totals": {
+  "human": {
+   "functions": 3077,
+   "flaky_functions": 4
+  },
+  "llm": {
+   "functions": 7474,
+   "flaky_functions": 8
+  }
+ }
+}

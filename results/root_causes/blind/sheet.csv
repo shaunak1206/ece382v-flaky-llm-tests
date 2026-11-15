@@ -1,0 +1,686 @@
+item,project,test,test_code,your_category,your_order_dependent,notes
+1,docci,test_xlsx_to_file_multiple_calls_generate_different_objects,"def test_xlsx_to_file_multiple_calls_generate_different_objects():
+    wb = create_sample_workbook()
+    file1 = xlsx_to_file(wb, ""file1.xlsx"")
+    file2 = xlsx_to_file(wb, ""file2.xlsx"")
+    assert file1 is not file2
+    assert file1.content == file2.content
+    assert file1.name == ""file1.xlsx""
+    assert file2.name == ""file2.xlsx""",,,
+2,cuckoopy,test_size_updating_after_insert_and_delete,"def test_size_updating_after_insert_and_delete():
+    cf = cuckoofilter.CuckooFilter(capacity=50)
+    keys = [""k1"", ""k2"", ""k3""]
+    for k in keys:
+        assert cf.insert(k)
+    assert cf.size == len(keys)
+    # Delete one
+    assert cf.delete(keys[1]) is True
+    assert cf.size == len(keys) - 1
+    # Delete again returns False, size unchanged
+    assert cf.delete(keys[1]) is False
+    assert cf.size == len(keys) - 1",,,
+3,cuckoopy,test_len_tracks_mixed_inserts_and_deletes,"def test_len_tracks_mixed_inserts_and_deletes():
+    f = CuckooFilter(100, fingerprint_size=4)
+    f.insert(""x"")
+    f.insert(""y"")
+    assert len(f) == 2
+    assert f.delete(""x"")
+    assert len(f) == 1
+    assert f.delete(""x"") is False
+    assert len(f) == 1
+    f.insert(""z"")
+    assert len(f) == 2
+    assert f.delete(""y"")
+    assert len(f) == 1
+    assert f.contains(""z"")",,,
+4,docci,test_xlsx_to_bytes_same_workbook_consistency,"def test_xlsx_to_bytes_same_workbook_consistency():
+    wb = create_sample_workbook()
+    b1 = xlsx_to_bytes(wb)
+    b2 = xlsx_to_bytes(wb)
+    assert b1 == b2",,,
+5,torch-layer-normalization,test_forward_matches_pytorch_native_layernorm,"def test_forward_matches_pytorch_native_layernorm():
+    import torch.nn as nn
+    normalized_shape = (4,)
+    ln_custom = LayerNormalization(normalized_shape)
+    ln_native = nn.LayerNorm(normalized_shape, elementwise_affine=False)
+    x = torch.randn(5, 4)
+    out_custom = ln_custom(x)
+    out_native = ln_native(x)
+    assert torch.allclose(out_custom, out_native, atol=1e-5)",,,
+6,kevinarpe-rambutan3,test_not_none_matches_collects_failure_for_none,"def test_not_none_matches_collects_failure_for_none():
+    m = RNotNoneTypeMatcher()
+    err = RTypeMatcherError()
+    assert m.matches(None, err) is False
+    failed = list(err.failed_match_tuple_set_view)
+    assert len(failed) == 1
+    assert failed[0].matcher is m
+    assert failed[0].value is None",,,
+7,kevinarpe-rambutan3,test_not_none_matcher_error_recorded_only_on_failure,"def test_not_none_matcher_error_recorded_only_on_failure():
+    matcher = RNotNoneTypeMatcher()
+
+    ok_error = RTypeMatcherError()
+    assert matcher.matches(1, ok_error)
+
+    bad_error = RTypeMatcherError()
+    assert not matcher.matches(None, bad_error)
+    failed = list(bad_error.failed_match_tuple_set_view)
+    assert len(failed) == 1
+    assert failed[0].matcher is matcher
+    assert failed[0].value is None",,,
+8,pylabeledrf,test_mutateLabeledTree_returns_different_tree,"def test_mutateLabeledTree_returns_different_tree():
+    newick = ""((A,B),(C,D));""
+    node_labels = ['speciation', 'duplication', 'speciation']
+    tree = build_tree(newick, node_labels)
+    mutated = mutateLabeledTree(tree, n=3, p_flip=0.1, model='LRF')
+    # mutated must be a dendropy tree
+    assert isinstance(mutated, dendropy.Tree)
+    # mutated tree should not be the same instance as original
+    assert mutated is not tree
+    # At least one internal node label might differ (not guaranteed due to randomness)
+    labels_orig = [n.label for n in tree.internal_nodes()]
+    labels_mut = [n.label for n in mutated.internal_nodes()]
+    assert len(labels_orig) == len(labels_mut)",,,
+9,spreading_dye_sampler,test_make_blot_permitted_none_defaults_to_all_true,"def test_make_blot_permitted_none_defaults_to_all_true():
+    grid_dims = [4,4]
+    cell_dims = [1,1]
+    blot = make_blot(grid_dims, cell_dims, 5, permitted=None)
+    assert blot is not None
+    assert blot.num_cells() <= 5
+    # All cells should appear inside grid
+    for (x,y) in blot._cells:
+        assert 0 <= x < grid_dims[0]
+        assert 0 <= y < grid_dims[1]",,,
+10,torch-gpt-2,test_bytepairencoding_reexport_is_same_object,"def test_bytepairencoding_reexport_is_same_object():
+    assert torch_gpt_2.BytePairEncoding is BytePairEncoding",,,
+11,limix-lmm,test_limix_lmm_init_imports_dummy_test_callable,"def test_limix_lmm_init_imports_dummy_test_callable():
+    limix_lmm = _reload_limix_lmm()
+    assert callable(limix_lmm.test)
+    assert limix_lmm.test() == ""ok""",,,
+12,kevinarpe-rambutan3,test_not_none_check_arg_raises_for_none,"def test_not_none_check_arg_raises_for_none():
+    with pytest.raises(RCheckArgsError) as exc_info:
+        RNotNoneTypeMatcher().check_arg(None, ""thing"")
+    msg = str(exc_info.value)
+    assert ""Argument name : thing"" in msg
+    assert ""Expected type : not None"" in msg
+    assert ""Actual   type : NoneType"" in msg",,,
+13,pelicun,test_tmvn_rvs_scalar_cov_repeated,"def test_tmvn_rvs_scalar_cov_repeated():
+    mu = 1
+    COV = 2.0
+    # Should handle scalar covariance converted properly
+    samples = tmvn_rvs(mu, COV, size=10)
+    # sample shape is correct
+    assert samples.shape[0] == 10
+    # values roughly around mu
+    assert np.abs(np.mean(samples) - mu) < 1.0",,,
+14,jmcm,test_import_raises_clear_error_for_missing_scipy,"def test_import_raises_clear_error_for_missing_scipy(monkeypatch):
+    msg = _fresh_import_jmcm(monkeypatch, fail_on=""scipy"")
+    assert ""Unable to import required dependencies"" in msg
+    assert ""scipy: mocked missing dependency: scipy"" in msg",,,
+15,jmcm,test_package_import_exposes_jointmodel,"def test_package_import_exposes_jointmodel():
+    jmcm = importlib.import_module(""jmcm"")
+    assert hasattr(jmcm, ""JointModel"")",,,
+16,jmcm,test_jmcm_package_name_attribute_is_set,"def test_jmcm_package_name_attribute_is_set():
+    jmcm = importlib.import_module(""jmcm"")
+    assert jmcm.name == ""jmcm""",,,
+17,cuckoopy,test_contains_and_delete_using_custom_items,"def test_contains_and_delete_using_custom_items():
+    cf = CuckooFilter(capacity=10, bucket_size=4, fingerprint_size=1)
+    objs = [{""id"": i} for i in range(5)]
+
+    for obj in objs:
+        cf.insert(str(obj))  # Convert dict to string to keep hashing consistent
+
+    for obj in objs:
+        assert str(obj) in cf
+
+    obj_del = objs[2]
+    assert cf.delete(str(obj_del))
+    assert str(obj_del) not in cf
+    assert len(cf) == 4",,,
+18,cuckoopy,test_insert_raises_when_full,"def test_insert_raises_when_full(monkeypatch):
+    # To reliably test full condition: 
+    # We'll create a small filter likely to fill quickly, 
+    # and patch random.choice to always pick first bucket.
+    cf = cuckoofilter.CuckooFilter(capacity=3, bucket_size=1, fingerprint_size=1, max_displacements=5)
+
+    # Patch random.choice to always pick first argument (effectively deterministic eviction)
+    monkeypatch.setattr(random, 'choice', lambda seq: seq[0])
+    
+    # Fill up the filter
+    inserted = []
+    for i in range(3):
+        res = cf.insert(f'item-{i}')
+        inserted.append(res)
+        assert res is True
+    # Next insert likely to fail (with above params)
+    with pytest.raises(exceptions.CuckooFilterFullException):
+        cf.insert('extra-item')",,,
+19,pelicun,test_tmvn_MLE_multivariate_no_censoring,"def test_tmvn_MLE_multivariate_no_censoring():
+    mu = np.array([1, -1])
+    cov = np.array([[1.0, 0.3], [0.3, 2.0]])
+    samples = np.random.multivariate_normal(mu, cov, size=150).T
+    est_mu, est_cov = tmvn_MLE(samples)
+    assert est_mu.shape == (2,)
+    assert est_cov.shape == (2,2)
+    assert abs(est_mu[0] - mu[0]) < 0.3
+    assert abs(est_mu[1] - mu[1]) < 0.3
+    # Covariance diagonal approx original variances
+    assert abs(est_cov[0,0] - cov[0,0]) < 0.2
+    assert abs(est_cov[1,1] - cov[1,1]) < 0.3",,,
+20,pypfm,test_reimporting_package_preserves_pfml_loader_identity,"def test_reimporting_package_preserves_pfml_loader_identity():
+    first = pypfm.PFMLoader
+    module = importlib.reload(pypfm)
+    assert module.PFMLoader is first",,,
+21,torch-gpt-2,test_gpt2_looks_like_a_class,"def test_gpt2_looks_like_a_class():
+    assert inspect.isclass(torch_gpt_2.GPT_2)",,,
+22,cuckoopy,test_multiple_inserts_and_deletes_consistency,"def test_multiple_inserts_and_deletes_consistency(monkeypatch):
+    random.seed(987)
+    cf = cuckoofilter.CuckooFilter(capacity=15, bucket_size=4, fingerprint_size=1, max_displacements=50)
+
+    items = [f'item{i}' for i in range(10)]
+    # Insert all items
+    for item in items:
+        assert cf.insert(item) is True
+    assert len(cf) == 10
+
+    # Delete half
+    for item in items[:5]:
+        assert cf.delete(item) is True
+    assert len(cf) == 5
+    # Confirm deleted not contained
+    for item in items[:5]:
+        assert item not in cf
+    # Confirm others still contained
+    for item in items[5:]:
+        assert item in cf",,,
+23,cuckoopy,test_delete_only_affects_existing_items,"def test_delete_only_affects_existing_items():
+    cf = cuckoofilter.CuckooFilter(capacity=50)
+    item1 = ""test1""
+    item2 = ""test2""
+    cf.insert(item1)
+    assert cf.delete(item2) is False
+    # item1 still present
+    assert cf.contains(item1)
+    # item2 never present
+    assert not cf.contains(item2)",,,
+24,kevinarpe-rambutan3,test_not_none_check_arg_none_message,"def test_not_none_check_arg_none_message():
+    with pytest.raises(RCheckArgsError) as excinfo:
+        RNotNoneTypeMatcher().check_arg(None, ""value"")
+    msg = excinfo.value.args[0]
+    assert ""Argument name : value"" in msg
+    assert ""Expected type : not None"" in msg
+    assert ""Actual   type : NoneType"" in msg
+    assert ""Actual  value : None"" in msg",,,
+25,spreading_dye_sampler,test_make_blot_cells_adjacent,"def test_make_blot_cells_adjacent():
+    # Since blot grows from neighbors only, all cells must be adjacent to at least one other cell
+    blot = make_blot([10,10], [1,1], 10)
+    assert blot is not None
+    cells = blot._cells
+    if len(cells) > 1:
+        for i, cell in enumerate(cells):
+            if i == 0:
+                continue
+            # Check cell has at least one neighbor in previous cells (share edge)
+            x,y = cell
+            neighbors = [(x-1,y), (x+1,y), (x,y-1), (x,y+1)]
+            assert any(neigh in cells[:i] for neigh in neighbors)",,,
+26,jmcm,test_jointmodel_is_a_class,"def test_jointmodel_is_a_class():
+    jmcm = importlib.import_module(""jmcm"")
+    assert isinstance(jmcm.JointModel, type)",,,
+27,spreading_dye_sampler,test_internal_neighbour_sharing_edges_accumulate,"def test_internal_neighbour_sharing_edges_accumulate():
+    blot = dye_blot.make_blot([5, 5], [1, 1], 3)
+    # neighbours is internal, but indirectly test logic by checking neighbors are adjacent
+    cells = blot._cells
+    for c in cells:
+        # No cell is out of bounds
+        assert 0 <= c[0] < 5
+        assert 0 <= c[1] < 5",,,
+28,data-partitioner,test_training_test_partition_ratios,"def test_training_test_partition_ratios(training_percent):
+    # Since partitioner is pseudorandom, ratios should be close to expected - allow 5% tolerance
+    suplier = DataSuplier(dataset, training_percent=training_percent)
+    list(suplier.training_set())
+    list(suplier.test_set())
+    tr_len = len(suplier.training_indexes)
+    te_len = len(suplier.test_indexes)
+    total = tr_len + te_len
+    assert total == len(dataset)
+    if training_percent == 0.0:
+        assert tr_len == 0
+        assert te_len == len(dataset)
+    elif training_percent == 1.0:
+        assert tr_len == len(dataset)
+        assert te_len == 0
+    else:
+        ratio = tr_len / total
+        assert abs(ratio - training_percent) <= 0.05",,,
+29,torch-gpt-2,test_gelu_reexport_is_same_object_as_net_module,"def test_gelu_reexport_is_same_object_as_net_module():
+    net = importlib.import_module(""torch_gpt_2.net"")
+    assert torch_gpt_2.gelu is net.gelu",,,
+30,cuckoopy,test_contains_and_delete_with_duplicate_fingerprints,"def test_contains_and_delete_with_duplicate_fingerprints(monkeypatch):
+    # We test duplicate fingerprints handling by inserting different items that
+    # may produce same fingerprint, then deleting one item does not delete other
+
+    # Patch bucket.Bucket with dummy allowing duplicates
+    class DummyBucket:
+        def __init__(self, size):
+            self.items = []
+            self.size = size
+
+        def insert(self, fingerprint):
+            if len(self.items) >= self.size:
+                return False
+            self.items.append(fingerprint)
+            return True
+
+        def swap(self, fingerprint):
+            evicted = self.items.pop(0)
+            self.items.append(fingerprint)
+            return evicted
+
+        def delete(self, fingerprint):
+            # Delete one occurrence of fingerprint if present
+            if fingerprint in self.items:
+                self.items.remove(fingerprint)
+                return True
+            return False
+
+        def __contains__(self, fingerprint):
+            return fingerprint in self.items
+
+    monkeypatch.setattr(
+        cuckoofilter,
+        ""bucket"",
+        type(""bucket"", (), {""Bucket"": DummyBucket})
+    )
+
+    # Patch hashutils.fingerprint to produce same fingerprint for different inputs
+    # use a fixed dummy fingerprint value e.g. b'\xAA'
+    def dummy_fingerprint(item, size):
+        return b'\xAA' * size
+
+    monkeypatch.setattr(
+        cuckoofilter.hashutils,
+        ""fingerprint"",
+        dummy_fingerprint
+    )
+
+    random.seed(10101)
+    cf = cuckoofilter.CuckooFilter(capacity=4, bucket_size=3, fingerprint_size=1)
+    # Insert two distinct items but same fingerprint
+    assert cf.insert(10) is True
+    assert cf.insert(20) is True
+
+    # Both items should be 'contained'
+    assert cf.contains(10) is True
+    assert cf.contains(20) is True
+
+    # Delete one item must return True, but the other remains
+    assert cf.delete(10) is True
+    assert cf.contains(20) is True
+    # Deleting 10 again returns False
+    assert cf.delete(10) is False",,,
+31,torch-gpt-2,test_generate_is_callable,"def test_generate_is_callable():
+    assert callable(torch_gpt_2.generate)",,,
+32,spreading_dye_sampler,test_make_blot_with_squeeze_true_skips_forbidden_cells,"def test_make_blot_with_squeeze_true_skips_forbidden_cells():
+    grid_dims = [5, 5]
+    cell_dims = [1, 1]
+    permitted = np.ones(grid_dims, dtype=bool)
+    # Forbid cell (1,1)
+    permitted[1,1] = False
+    blot = make_blot(grid_dims, cell_dims, req_num_cells=10, permitted=permitted, squeeze=True)
+    assert blot is not None
+    # No forbidden cell in blot
+    assert all(permitted[x,y] for (x,y) in blot._cells)",,,
+33,cuckoopy,test_delete_keeps_other_items_findable,"def test_delete_keeps_other_items_findable():
+    f = CuckooFilter(100, fingerprint_size=4)
+    for item in [""a"", ""b"", ""c""]:
+        f.insert(item)
+    assert f.delete(""b"") is True
+    assert f.contains(""a"")
+    assert f.contains(""c"")
+    assert not f.contains(""b"")
+    assert len(f) == 2",,,
+34,tenacity,test_stop_after_delay_threshold[5.0-True],,,,
+35,scikit-procrustes,test_gbb_solver_invH_branch,"def test_gbb_solver_invH_branch(monkeypatch):
+    # Test gbb_solver branch where p < smalldim/2, forcing invH = False code path
+    from skprocrustes.skprocrustes import gbb_solver
+    m, n, p = 6, 6, 1  # p=1 < 6/2 == 3
+    problem = ProcrustesProblem((m, n, p, p), problemnumber=1)
+    problem.stats = {""nbiter"":0, ""fev"":0, ""grad"":0}
+    X = np.eye(n, p)
+    options = {
+        ""tau"": 1e-3,
+        ""xtol"": 1e-6,
+        ""ftol"": 1e-12,
+        ""gtol"": 1e-6,
+        ""memory"": 5,
+        ""full_results"": False,
+        ""eta"": 0.85,
+        ""etavar"": False,
+        ""kappa"": 0.1,
+        ""zeta"": 1e-4,
+        ""verbose"":0,
+        ""projected_gradient"":1,
+        ""maxiter"": 2,
+        ""filename"": None,
+        ""timer"": False,
+    }
+    # Run the gbb_solver, should finish due to maxiter=2 quickly
+    exitcode, f, Xout, normG, nbiter, msg = gbb_solver(problem, m, n, X, problem.A, problem.B,
+                                                       options, False, sys.stdout)
+    assert exitcode in (0,1)
+    assert isinstance(Xout, np.ndarray)",,,
+36,data-partitioner,test_pseudorandom_partition_consistency_for_fixed_seed,"def test_pseudorandom_partition_consistency_for_fixed_seed():
+    # We know pseudorandom_function is based on hash - it's deterministic,
+    # but test deterministic behavior by running two DataSuplier instances
+    ds1 = DataSuplier(dataset, training_percent=0.7, partitioning_function=pseudorandom_function)
+    ds2 = DataSuplier(dataset, training_percent=0.7, partitioning_function=pseudorandom_function)
+    for _ in range(len(dataset)):
+        ds1._DataSuplier__next()
+        ds2._DataSuplier__next()
+    # training indexes should match and test indexes should match
+    assert sorted(ds1.training_indexes) == sorted(ds2.training_indexes)
+    assert sorted(ds1.test_indexes) == sorted(ds2.test_indexes)",,,
+37,data-partitioner,test_internal_state_advance_after_yielding,"def test_internal_state_advance_after_yielding():
+    dataset = list(range(4))
+    ds = DataSuplier(dataset, training_percent=0.5)
+
+    # Initially index is 0
+    assert ds.index == 0
+    # When we get one element from training_set or test_set, index should advance
+    gen = ds.training_set()
+    first_item = next(gen)
+    assert ds.index > 0
+    # Subsequent calls increase index
+    second_item = next(gen)
+    assert ds.index > 1",,,
+38,spreading_dye_sampler,test_make_blot_cells_are_connected,"def test_make_blot_cells_are_connected():
+    # connectivity by shared cell edges: adjacents have x or y differ by 1 only
+    blot = dye_blot.make_blot([7, 7], [2, 2], 10)
+    assert blot is not None
+    cells = blot._cells
+    # Each added cell must neighbor at least one other cell on either axis
+    # except possibly the first
+    for i in range(1, len(cells)):
+        cx, cy = cells[i]
+        neighbors = [(cx - 1, cy), (cx + 1, cy), (cx, cy - 1), (cx, cy + 1)]
+        assert any(n in cells[:i] for n in neighbors)",,,
+39,torch-gpt-2,test_gpt2_reexport_is_same_object_as_net_module,"def test_gpt2_reexport_is_same_object_as_net_module():
+    net = importlib.import_module(""torch_gpt_2.net"")
+    assert torch_gpt_2.GPT_2 is net.GPT_2",,,
+40,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[math],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
+    # Importing jmcm should succeed when all dependencies are available.
+    jmcm = _fresh_import_jmcm(monkeypatch)
+    assert hasattr(jmcm, ""JointModel"")",,,
+41,cuckoopy,test_insert_eviction_path,"def test_insert_eviction_path(monkeypatch):
+    # To test the eviction path deterministically, fix random.choice and fingerprints
+    # Set max_displacements low to test the eviction loop runs but succeeds
+    cf = cuckoofilter.CuckooFilter(capacity=5, bucket_size=1, fingerprint_size=1, max_displacements=10)
+
+    monkeypatch.setattr(random, 'choice', lambda seq: seq[0])
+
+    # Insert unique items to fill buckets partially
+    items = [f'key{i}' for i in range(4)]
+    # Insert normally
+    for item in items:
+        assert cf.insert(item) is True
+    # Insert another item which triggers eviction path and eventually succeeds
+    new_item = 'trigger-evict'
+    assert cf.insert(new_item) is True
+    # Size should be 5 after all insertions
+    assert len(cf) == 5
+    # Confirm those items exist logically (contains True)
+    for item in items + [new_item]:
+        assert item in cf",,,
+42,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[scipy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
+    # Importing jmcm should succeed when all dependencies are available.
+    jmcm = _fresh_import_jmcm(monkeypatch)
+    assert hasattr(jmcm, ""JointModel"")",,,
+43,pylabeledrf,test_mutateLabeledTree_flips_nodes_correctly,"def test_mutateLabeledTree_flips_nodes_correctly():
+    t1 = _simple_tree1()
+    t2 = mutateLabeledTree(t1, n=10, p_flip=1.0)  # force only flips
+    # All original internal nodes labeled spec/dup
+    original_labels = set(n.label for n in t1.internal_nodes())
+    new_labels = set(n.label for n in t2.internal_nodes())
+    # The labels must be from {'speciation','duplication'}
+    assert new_labels.issubset({'speciation', 'duplication'})
+    # Since p_flip=1, at least some nodes flipped label, likely different sets
+    assert original_labels != new_labels or len(t1.internal_nodes()) == 0",,,
+44,cuckoopy,test_many_inserts_remain_findable,"def test_many_inserts_remain_findable():
+    cuckoo = CuckooFilter(capacity=16, bucket_size=4, fingerprint_size=4)
+    names = [""entry-%d"" % n for n in range(40)]
+    for name in names:
+        assert cuckoo.insert(name) is True
+    assert len(cuckoo) == 40
+    for name in names:
+        assert cuckoo.contains(name) is True",,,
+45,torch-gpt-2,test_bytepairencoding_looks_like_a_class,"def test_bytepairencoding_looks_like_a_class():
+    assert inspect.isclass(torch_gpt_2.BytePairEncoding)",,,
+46,kevinarpe-rambutan3,test_not_none_rejects_none_and_records_failure,"def test_not_none_rejects_none_and_records_failure():
+    m = RNotNoneTypeMatcher()
+    assert not m.matches(None)
+    err = RTypeMatcherError()
+    assert m.matches(None, err) is False
+    tuples = list(err.failed_match_tuple_set_view)
+    assert len(tuples) == 1
+    assert tuples[0].matcher is m
+    assert tuples[0].value is None",,,
+47,spreading_dye_sampler,test_make_blot_starts_within_grid_bounds,"def test_make_blot_starts_within_grid_bounds():
+    grid_dims = [8, 8]
+    cell_dims = [2, 2]
+    blot = make_blot(grid_dims, cell_dims, req_num_cells=4)
+    assert blot is not None
+    for (x,y) in blot._cells:
+        assert 0 <= x < grid_dims[0]
+        assert 0 <= y < grid_dims[1]",,,
+48,schedule,test_until_with_time_object,,,,
+49,spreading_dye_sampler,test_make_blot_allows_squeeze_to_skip_nonpermitted_cells,"def test_make_blot_allows_squeeze_to_skip_nonpermitted_cells():
+    permitted = np.ones((5, 5), dtype=bool)
+    permitted[1, 0] = False  # block a cell that would neighbor start
+    blot = dye_blot.make_blot([5, 5], [1, 1], 3, permitted=permitted, squeeze=True)
+    assert blot is not None
+    assert blot.num_cells() == 3
+    # The blocked cell should not be in blot
+    assert (1, 0) not in blot._cells",,,
+50,kevinarpe-rambutan3,test_not_none_check_arg,"def test_not_none_check_arg():
+    matcher = RNotNoneTypeMatcher()
+    assert matcher.check_arg('v', 'arg') == 'v'
+    with pytest.raises(RCheckArgsError) as exc_info:
+        matcher.check_arg(None, 'some_arg')
+    msg = exc_info.value.args[0]
+    assert 'some_arg' in msg
+    assert 'not None' in msg
+    assert 'NoneType' in msg",,,
+51,spreading_dye_sampler,test_make_blot_returns_exact_requested_cells_if_possible,"def test_make_blot_returns_exact_requested_cells_if_possible():
+    grid_dims = [10,10]
+    cell_dims = [1,1]
+    blot = make_blot(grid_dims, cell_dims, req_num_cells=7)
+    assert isinstance(blot, DyeBlot)
+    # Since some blot could be smaller if start unpermitted, but our start is always permitted here
+    # The blot size must be exactly req_num_cells or less if failed.
+    # The current code picks start randomly, so blot size can be between 1 and 7.
+    # To strengthen test run many times.
+    for _ in range(10):
+        blot = make_blot(grid_dims, cell_dims, req_num_cells=7)
+        if blot is not None:
+            assert blot.num_cells() <= 7
+            assert blot.num_cells() >= 1",,,
+52,torch-layer-normalization,test_layernorm_with_tuple_normalized_shape,"def test_layernorm_with_tuple_normalized_shape():
+    ln = LayerNormalization((3, 2))
+    x = torch.randn(4, 3, 2)
+    y = ln(x)
+    assert y.shape == x.shape
+    mean = y.mean(dim=(-2, -1))
+    std = y.std(dim=(-2, -1), unbiased=False)
+    assert torch.allclose(mean, torch.zeros_like(mean), atol=1e-5)
+    assert torch.allclose(std, torch.ones_like(std), atol=1e-5)",,,
+53,spreading_dye_sampler,test_make_blot_with_non_standard_cell_dims,"def test_make_blot_with_non_standard_cell_dims():
+    blot = dye_blot.make_blot([10, 10], [3, 2], 5)
+    assert blot is not None
+    assert blot.num_cells() == 5",,,
+54,jmcm,test_import_raises_clear_error_for_missing_pandas,"def test_import_raises_clear_error_for_missing_pandas(monkeypatch):
+    msg = _fresh_import_jmcm(monkeypatch, fail_on=""pandas"")
+    assert ""Unable to import required dependencies"" in msg
+    assert ""pandas: mocked missing dependency: pandas"" in msg",,,
+55,jmcm,test_jointmodel_module_path_is_expected,"def test_jointmodel_module_path_is_expected():
+    jmcm = importlib.import_module(""jmcm"")
+    assert jmcm.JointModel.__module__ == ""jmcm.joint_model""",,,
+56,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[warnings],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
+    # Importing jmcm should succeed when all dependencies are available.
+    jmcm = _fresh_import_jmcm(monkeypatch)
+    assert hasattr(jmcm, ""JointModel"")",,,
+57,gamble.git,test_deck_shuffle_increases_shuffles_counter_and_changes_order,"def test_deck_shuffle_increases_shuffles_counter_and_changes_order():
+    deck1 = Deck(shuffle=False)
+    cards_before = deck1.cards.copy()
+    deck1.shuffle(times=3)
+    cards_after = deck1.cards
+    assert deck1.shuffles == 3
+    # Shuffle should change order at least sometimes (not testing randomness)
+    # But it's possible to shuffle and get same order (low chance), so we check that
+    # cards_after is a permutation of cards_before and shuffles count matches
+    assert sorted(cards_after, key=lambda c: (c.suit.value, c.value.value)) == sorted(
+        cards_before, key=lambda c: (c.suit.value, c.value.value)
+    )
+    # Check that the reference list was not altered (copy was used)
+    assert cards_before[0] == deck1.bottom",,,
+58,spreading_dye_sampler,test_make_blot_cells_are_unique,"def test_make_blot_cells_are_unique():
+    blot = dye_blot.make_blot([10, 10], [1, 1], 8)
+    assert blot is not None
+    assert len(blot._cells) == len(set(blot._cells))",,,
+59,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[pandas],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
+    # Importing jmcm should succeed when all dependencies are available.
+    jmcm = _fresh_import_jmcm(monkeypatch)
+    assert hasattr(jmcm, ""JointModel"")",,,
+60,spreading_dye_sampler,test_make_blot_returns_none_if_nonpermitted_cell_found_and_squeeze_false,"def test_make_blot_returns_none_if_nonpermitted_cell_found_and_squeeze_false():
+    permitted = np.ones((5, 5), dtype=bool)
+    # create a ""hole"" that must be used if squeeze is false
+    permitted[1, 0] = False
+    blot = dye_blot.make_blot([2, 2], [1, 1], 3, permitted=permitted, squeeze=False)
+    # It's possible that the blot fails because of hitting disallowed cell
+    # so blot should be None
+    assert blot is None or blot.num_cells() < 3",,,
+61,kevinarpe-rambutan3,test_RNotNoneTypeMatcher_eq_and_hash,"def test_RNotNoneTypeMatcher_eq_and_hash():
+    matcher1 = RNotNoneTypeMatcher()
+    matcher2 = RNotNoneTypeMatcher()
+
+    # __eq__
+    assert matcher1 == matcher2
+    assert matcher1 == matcher1
+    assert matcher1 != object()
+    # __hash__
+    h1 = hash(matcher1)
+    h2 = hash(matcher2)
+    assert isinstance(h1, int)
+    assert h1 == h2",,,
+62,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[patsy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
+    # Importing jmcm should succeed when all dependencies are available.
+    jmcm = _fresh_import_jmcm(monkeypatch)
+    assert hasattr(jmcm, ""JointModel"")",,,
+63,jmcm,test_jointmodel_class_name_is_correct,"def test_jointmodel_class_name_is_correct():
+    jmcm = importlib.import_module(""jmcm"")
+    assert jmcm.JointModel.__name__ == ""JointModel""",,,
+64,tenacity,test_run_stop_sets_delay_since_first_attempt_and_result,,,,
+65,jmcm,test_jointmodel_reexport_matches_submodule_class,"def test_jointmodel_reexport_matches_submodule_class():
+    jmcm = importlib.import_module(""jmcm"")
+    submodule = importlib.import_module(""jmcm.joint_model"")
+    assert jmcm.JointModel is submodule.JointModel",,,
+66,pylabeledrf,test_computeLRF_identical_simple_tree,"def test_computeLRF_identical_simple_tree():
+    # Two identical trees: LRF distance should be 0
+    newick = ""((A,B),(C,D));""
+    # internal nodes: root + two internal nodes under root, order is root then left then right (approx)
+    node_labels = ['speciation', 'duplication', 'speciation']
+    t1 = build_tree(newick, node_labels)
+    t2 = build_tree(newick, node_labels)
+    dist = computeLRF(t1, t2)
+    assert dist == 0",,,
+67,docci,test_xlsx_to_bytes_saves_content_consistently,"def test_xlsx_to_bytes_saves_content_consistently(sample_workbook):
+    bytes1 = xlsx_to_bytes(sample_workbook)
+    bytes2 = xlsx_to_bytes(sample_workbook)
+    # Both calls produce the same bytes content for the same workbook state
+    assert bytes1 == bytes2",,,
+68,jmcm,test_import_raises_clear_error_for_missing_math,"def test_import_raises_clear_error_for_missing_math(monkeypatch):
+    msg = _fresh_import_jmcm(monkeypatch, fail_on=""math"")
+    assert ""Unable to import required dependencies"" in msg
+    assert ""math: mocked missing dependency: math"" in msg",,,
+69,spreading_dye_sampler,test_make_blot_basic_properties,"def test_make_blot_basic_properties():
+    blot = dye_blot.make_blot([10, 10], [1, 1], 5)
+    assert blot is not None
+    # Cells within grid
+    for x, y in blot._cells:
+        assert 0 <= x < 10
+        assert 0 <= y < 10
+    # Number of cells
+    assert blot.num_cells() == 5",,,
+70,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[numpy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
+    # Importing jmcm should succeed when all dependencies are available.
+    jmcm = _fresh_import_jmcm(monkeypatch)
+    assert hasattr(jmcm, ""JointModel"")",,,
+71,torch-gpt-2,test_generate_reexport_is_same_object_as_gen_module,"def test_generate_reexport_is_same_object_as_gen_module():
+    gen = importlib.import_module(""torch_gpt_2.gen"")
+    assert torch_gpt_2.generate is gen.generate",,,
+72,pylabeledrf,test_computeLRF_simple_flip_label,"def test_computeLRF_simple_flip_label():
+    # Trees differ only by one flip (speciation <-> duplication) at one internal node
+    newick = ""((A,B),(C,D));""
+    node_labels1 = ['speciation', 'duplication', 'speciation']
+    node_labels2 = ['speciation', 'speciation', 'speciation']  # flipped one label
+    t1 = build_tree(newick, node_labels1)
+    t2 = build_tree(newick, node_labels2)
+    dist = computeLRF(t1, t2)
+    # Should detect substitutions, distance > 0
+    assert dist > 0",,,
+73,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[collections],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
+    # Importing jmcm should succeed when all dependencies are available.
+    jmcm = _fresh_import_jmcm(monkeypatch)
+    assert hasattr(jmcm, ""JointModel"")",,,
+74,pybreaker,test_successful_after_timeout,,,,
+75,docci,test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes,"def test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes():
+    wb = make_workbook([[""a""], [1]])
+    attachment = xlsx_mod.xlsx_to_file(wb, ""data.xlsx"")
+    raw = xlsx_mod.xlsx_to_bytes(wb)
+
+    assert attachment.content == raw",,,
+76,spreading_dye_sampler,test_make_blot_cell_neighbors_addition,"def test_make_blot_cell_neighbors_addition():
+    # We'll monkeypatch np.random.choice to always pick the first neighbor to make predictable test
+    import spreading_dye_sampler.dye_blot as dye_blot_module
+
+    original_choice = dye_blot_module.np.random.choice if hasattr(dye_blot_module.np.random, 'choice') else None
+
+    def fake_choice(indices, p):
+        return 0
+
+    dye_blot_module.np.random.choice = fake_choice
+
+    grid_dims = [3,3]
+    cell_dims = [1,1]
+
+    blot = make_blot(grid_dims, cell_dims, req_num_cells=3)
+    assert blot is not None
+    # After forcing choice=0, cells should be connected in a predictable manner
+    # The first cell is start, next one is first neighbor added, etc.
+    # Number of cells should be exactly 3
+    assert blot.num_cells() == 3
+
+    # Restore original function
+    if original_choice:
+        dye_blot_module.np.random.choice = original_choice",,,
+77,cuckoopy,test_delete_does_not_affect_other_fingerprints,"def test_delete_does_not_affect_other_fingerprints():
+    cf = cuckoofilter.CuckooFilter(capacity=10, bucket_size=4, fingerprint_size=1)
+    items = [""a"", ""b"", ""c""]
+    for item in items:
+        assert cf.insert(item) is True
+    size_before = len(cf)
+    # Delete one item only
+    deleted = cf.delete(""b"")
+    assert deleted is True
+    assert len(cf) == size_before - 1
+    # Other items still contained
+    assert ""a"" in cf
+    assert ""c"" in cf
+    # Deleted item no longer contained
+    assert ""b"" not in cf",,,
+78,spreading_dye_sampler,test_make_blot_without_permitted_returns_blot,"def test_make_blot_without_permitted_returns_blot():
+    grid_dims = [10,10]
+    cell_dims = [1,1]
+    blot = make_blot(grid_dims, cell_dims, req_num_cells=5)
+    assert isinstance(blot, DyeBlot)
+    assert blot.num_cells() >= 1
+    assert blot.num_cells() <= 5",,,
