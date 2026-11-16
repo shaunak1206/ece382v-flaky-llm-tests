@@ -16,7 +16,7 @@ Output JSON: project, tests: [{suite, test, alone_varied_fail, alone_fixed_fail,
 verdict is one of od (passes alone, fails after a polluter), nod-hash (fails alone only with varied hash seeds),
 nod (fails alone with a fixed hash seed), unknown (passes alone and after every single other test).
 """
-import argparse, glob, json, os, shutil, sys, time
+import argparse, fnmatch, glob, json, os, shutil, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gruber_reproduce as gr
@@ -47,6 +47,8 @@ def run(py, repo, ids, seed, timeout_s=120):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("project")
     ap.add_argument("--work", default="/tmp/od_work"); ap.add_argument("--out", required=True)
+    ap.add_argument("--results", default="matched*", help="glob over results/ folders to read flaky tests from")
+    ap.add_argument("--suites", default="*", help="comma separated globs over suite ids")
     a = ap.parse_args()
     r = gr.row_for(a.project); t0 = time.time()
     d = f"{a.work}/{a.project}"; repo = f"{d}/repo"; venv = f"{d}/venv"
@@ -60,8 +62,10 @@ def main():
     gr.sh(["uv", "pip", "install", "-q", "-p", py, "pytest-randomly<3.16", "freezegun", "pytest-mock", "pytest-timeout"])
     gr.fix_missing_modules(py, repo, r["Test_filename"], log)
     targets = []  # (sid, test id, all test ids of the suite)
-    for f in glob.glob(f"{ROOT}/results/matched*/{a.project}.json"):
+    pats = [x for x in a.suites.split(",") if x]
+    for f in glob.glob(f"{ROOT}/results/{a.results}/{a.project}.json"):
         for sid, s in json.load(open(f))["suites"].items():
+            if not any(fnmatch.fnmatch(sid, x) for x in pats): continue
             for t, v in s["tests"].items():
                 if v["kind"] == "flaky" and (sid, t) not in {(x, y) for x, y, _ in targets}:
                     targets.append((sid, t, sorted(s["tests"])))

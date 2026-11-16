@@ -9,6 +9,12 @@ on:
       projects:
         description: "comma separated project names"
         required: true
+      results:
+        description: "glob over results/ folders to read flaky tests from"
+        default: "matched*"
+      suites:
+        description: "comma separated globs over suite ids"
+        default: "*"
 
 jobs:
   plan:
@@ -34,7 +40,8 @@ jobs:
       - name: diagnose
         run: |
           mkdir -p out
-          python3 scripts/od_diagnose.py "${{ matrix.project }}" --work /tmp/odw --out "out/${{ matrix.project }}.json" || true
+          python3 scripts/od_diagnose.py "${{ matrix.project }}" --work /tmp/odw --out "out/${{ matrix.project }}.json" \
+            --results "${{ inputs.results }}" --suites "${{ inputs.suites }}" || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
