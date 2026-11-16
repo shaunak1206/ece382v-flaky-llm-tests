@@ -14,6 +14,9 @@ on:
       mutants:
         description: "mutants per project"
         default: "40"
+      list:
+        description: "project list file in results/gruber"
+        default: "matched_projects.txt"
 
 jobs:
   plan:
@@ -27,7 +30,7 @@ jobs:
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           only = [x for x in "${{ inputs.only }}".split(",") if x]
-          names = open("results/gruber/matched_projects.txt").read().split()
+          names = open("results/gruber/${{ inputs.list }}").read().split()
           names = [n for n in names if not only or n in only]
           print("matrix=" + json.dumps({"project": names}))
           PY
