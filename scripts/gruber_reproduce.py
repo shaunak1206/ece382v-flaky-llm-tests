@@ -128,6 +128,8 @@ def main():
     sh(["git", "-C", repo, "checkout", "-q", "FETCH_HEAD"])
     log = []
     ok, py = install(repo, venv, log)
+    if a.shuffle_file:
+        sh(["uv", "pip", "install", "-q", "-p", py, "pytest-randomly<3.16"])
     kexpr = r["Test_funcname"]
     coll = fix_missing_modules(py, repo, r["Test_filename"], log)
     res.update(install_ok=ok, install_log_tail="\n".join(log)[-1500:], test=kexpr, collect_tail=coll[-600:])

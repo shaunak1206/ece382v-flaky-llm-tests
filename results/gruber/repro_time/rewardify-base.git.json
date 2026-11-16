@@ -1,0 +1,25 @@
+{
+ "project": "rewardify-base.git",
+ "url": "https://github.com/the16thpythonist/rewardify-base.git",
+ "sha": "4740ec78b22fb6b9d1a62697c8592e5830a38ac6",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.1,
+ "test_file": "tests/test_backend.py",
+ "test_func": "test_calculating_duration",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements_dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_editable` failed: after parsing `1.12ar`, found `gon2>=0.1.0`, which is not part of a valid version\n         cffi>=1.12argon2>=0.1.0\n             ^^^^^^^^^^^^^^^^^^^ at line 1 column 55 (exit status: 0)\n\n[-e .] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_editable` failed: after parsing `1.12ar`, found `gon2>=0.1.0`, which is not part of a valid version\n         cffi>=1.12argon2>=0.1.0\n             ^^^^^^^^^^^^^^^^^^^ at line 1 column 55 (exit status: 0)\n\n[.] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed: after parsing `1.12ar`, found `gon2>=0.1.0`, which is not part of a valid version\n         cffi>=1.12argon2>=0.1.0\n             ^^^^^^^^^^^^^^^^^^^ at line 1 column 55 (exit status: 0)\n",
+ "test": "test_calculating_duration",
+ "collect_tail": "  File \"<frozen importlib._bootstrap>\", line 975, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 655, in _load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 618, in _load_backward_compatible\n  File \"/tmp/gw/rewardify-base.git/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 290, in load_module\n    six.exec_(co, mod.__dict__)\n  File \"/tmp/gw/rewardify-base.git/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n",
+ "first_run_tail": "e\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 975, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 655, in _load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 618, in _load_backward_compatible\n  File \"/tmp/gw/rewardify-base.git/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 290, in load_module\n    six.exec_(co, mod.__dict__)\n  File \"/tmp/gw/rewardify-base.git/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "rdify-base.git/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n"
+ ],
+ "seconds": 7.0,
+ "reproduced": false
+}

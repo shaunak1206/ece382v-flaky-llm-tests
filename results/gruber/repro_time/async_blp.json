@@ -1,0 +1,23 @@
+{
+ "project": "async_blp",
+ "url": "https://github.com/rockscie/async_blp",
+ "sha": "acb8777ccf2499681bde87d76ca780b61219699c",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.3333333333333333,
+ "test_file": "tests/test_async_blp.py",
+ "test_func": "test__security_lookup",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test__security_lookup",
+ "collect_tail": "_reached\ntests/test_async_blp.py::TestAsyncBloomberg::test__init__not_inside_loop\ntests/test_async_blp.py::TestAsyncBloomberg::test___divide_reference_data_request\ntests/test_async_blp.py::TestAsyncBloomberg::test__get_reference_data\ntests/test_async_blp.py::TestAsyncBloomberg::test__get_historical_data\ntests/test_async_blp.py::TestAsyncBloomberg::test__search_fields\ntests/test_async_blp.py::TestAsyncBloomberg::test__security_lookup\ntests/test_async_blp.py::TestAsyncBloomberg::test__curve_lookup\ntests/test_async_blp.py::TestAsyncBloomberg::test__government_lookup\n\nno tests ran in 0.01 seconds\n",
+ "first_run_tail": "/test_async_blp.py::TestAsyncBloomberg::test__security_lookup\n  /tmp/gw/async_blp/repo/async_blp/base_request.py:30: DeprecationWarning: The loop argument is deprecated since Python 3.8, and scheduled for removal in Python 3.10.\n    self._msg_queue = asyncio.Queue(loop=self._loop)\n\ntests/test_async_blp.py::TestAsyncBloomberg::test__security_lookup\n  /home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/asyncio/queues.py:48: DeprecationWarning: The loop argument is deprecated since Python 3.8, and scheduled for removal in Python 3.10.\n    self._finished = locks.Event(loop=loop)\n\n-- Docs: https://docs.pytest.org/en/latest/warnings.html\n------------------- generated xml file: /tmp/tmpa4xhno4f.xml -------------------\n1 passed, 10 deselected, 4 warnings in 0.02 seconds\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 150,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 96.9,
+ "reproduced": false
+}

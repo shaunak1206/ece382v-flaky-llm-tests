@@ -1,0 +1,25 @@
+{
+ "project": "speed-tester",
+ "url": "https://github.com/jw/speed-tester",
+ "sha": "2d7f9acc55c797d1011605e2d610751f77de5290",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.875,
+ "test_file": "test_scheduler.py",
+ "test_func": "test_scheduler",
+ "install_ok": true,
+ "install_log_tail": "ork/_temp/setup-uv-cache/builds-v0/.tmph3Ob1w/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmph3Ob1w/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmph3Ob1w/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 4, in <module>\n         ModuleNotFoundError: No module named 'pipenv'\n\n[.] rc=1 ires_for_build_wheel\n             return self._get_build_requires(config_settings, requirements=[])\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpIpC2lb/lib/python3.8/site-packages/setuptools/build_meta.py\", line 303, in _get_build_requires\n             self.run_setup()\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpIpC2lb/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpIpC2lb/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 4, in <module>\n         ModuleNotFoundError: No module named 'pipenv'\n\n[auto crontab] rc=0 ",
+ "test": "test_scheduler",
+ "collect_tail": "test_scheduler.py::test_no_required_parameters\ntest_scheduler.py::test_scheduler\n\n2 tests collected in 0.01s\n",
+ "first_run_tail": " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <crontab._crontab.CronTab object at 0x7193abfe1d00>, crontab = True\nloop = False, random_seconds = False\n\n    def _make_matchers(self, crontab, loop, random_seconds):\n        '''\n        This constructs the full matcher struct.\n        '''\n        crontab = _aliases.get(crontab, crontab)\n>       ct = crontab.split()\nE       AttributeError: 'bool' object has no attribute 'split'\n\n../venv/lib/python3.8/site-packages/crontab/_crontab.py:421: AttributeError\n------------------- generated xml file: /tmp/tmpimgeiunk.xml -------------------\n=========================== short test summary info ============================\nFAILED test_scheduler.py::test_scheduler - AttributeError: 'bool' object has no attribute 'split'\n1 failed, 1 passed in 0.05s\n",
+ "collected": 2,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AttributeError: 'bool' object has no attribute 'split'"
+ ],
+ "seconds": 38.1,
+ "reproduced": false
+}

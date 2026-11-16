@@ -1,0 +1,25 @@
+{
+ "project": "databird",
+ "url": "https://github.com/jonas-hagen/databird",
+ "sha": "cfb358e74da62bb9d7ea0e6c7ac984671472120b",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.5555555555555556,
+ "test_file": "tests/test_queue.py",
+ "test_func": "test_reservation",
+ "install_ok": true,
+ "install_log_tail": "quirements-test.txt] rc=1 error: `/home/runner/work/_temp/setup-uv-cache/git-v1/checkouts/7d541eaf311239fd/45bb427` does not appear to be a Python project, as neither `pyproject.toml` nor `setup.py` are present in the directory\n\n[-e .[test,tests,testing,dev]] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_editable` failed (exit status: 1)\n\n         [stderr]\n         error in databird setup command: 'python_requires' must be a string containing valid version specifiers; Invalid specifier: '>=3.5.*'\n\n[-e .] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_editable` failed (exit status: 1)\n\n         [stderr]\n         error in databird setup command: 'python_requires' must be a string containing valid version specifiers; Invalid specifier: '>=3.5.*'\n\n[.] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         error in databird setup command: 'python_requires' must be a string containing valid version specifiers; Invalid specifier: '>=3.5.*'\n\n[auto dict_recursive_update] rc=0 \n[auto frozendict] rc=0 \n[auto ruamel] rc=1 error: No solution found when resolving dependencies\n  cause: Because ruamel was not found in the package registry and you require ruamel, we can conclude that your requirements are unsatisfiable.\n",
+ "test": "test_reservation",
+ "collect_tail": "n import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_queue.py:1: in <module>\n    from databird.queue import MultiQueue\ndatabird/__init__.py:3: in <module>\n    from databird.configuration import ConfigurationError\ndatabird/configuration.py:3: in <module>\n    from ruamel.yaml import YAML\nE   ModuleNotFoundError: No module named 'ruamel'\n=========================== short test summary info ============================\nERROR tests/test_queue.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.04s\n",
+ "first_run_tail": " valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py:127: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_queue.py:1: in <module>\n    from databird.queue import MultiQueue\ndatabird/__init__.py:3: in <module>\n    from databird.configuration import ConfigurationError\ndatabird/configuration.py:3: in <module>\n    from ruamel.yaml import YAML\nE   ModuleNotFoundError: No module named 'ruamel'\n------------------- generated xml file: /tmp/tmp7dee8ca6.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_queue.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.04s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 4.4,
+ "reproduced": false
+}

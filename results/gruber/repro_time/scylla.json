@@ -1,0 +1,25 @@
+{
+ "project": "scylla",
+ "url": "https://github.com/imWildCat/scylla",
+ "sha": "37469f9daaa3a4f2715ffb11f2bfa6671124cfc4",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.50920245398773,
+ "test_file": "tests/worker_test.py",
+ "test_func": "test_get_html_with_js_rendering",
+ "install_ok": true,
+ "install_log_tail": " error: No solution found when resolving dependencies\n  cause: Because there is no version of requests-async==0.5.0 and sanic==19.6.3 depends on requests-async==0.5.0, we can conclude that sanic==19.6.3 cannot be used.\n         And because scylla==1.1.7 depends on sanic==19.6.3, we can conclude that scylla==1.1.7 cannot be used.\n         And because only scylla[test]==1.1.7 is available and you require scylla[test], we can conclude that your requirements are unsatisfiable.\n\n[-e .] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of requests-async==0.5.0 and sanic==19.6.3 depends on requests-async==0.5.0, we can conclude that sanic==19.6.3 cannot be used.\n         And because scylla==1.1.7 depends on sanic==19.6.3, we can conclude that scylla==1.1.7 cannot be used.\n         And because only scylla==1.1.7 is available and you require scylla, we can conclude that your requirements are unsatisfiable.\n\n[.] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of requests-async==0.5.0 and sanic==19.6.3 depends on requests-async==0.5.0, we can conclude that sanic==19.6.3 cannot be used.\n         And because scylla==1.1.7 depends on sanic==19.6.3, we can conclude that scylla==1.1.7 cannot be used.\n         And because only scylla==1.1.7 is available and you require scylla, we can conclude that your requirements are unsatisfiable.\n\n[auto peewee] rc=0 \n[auto requests] rc=0 \n[auto requests_html] rc=0 ",
+ "test": "test_get_html_with_js_rendering",
+ "collect_tail": "gent, UserAgent\n../venv/lib/python3.8/site-packages/fake_useragent/fake.py:8: in <module>\n    from fake_useragent.utils import BrowserUserAgentData, load\n../venv/lib/python3.8/site-packages/fake_useragent/utils.py:42: in <module>\n    def load() -> list[BrowserUserAgentData]:\nE   TypeError: 'type' object is not subscriptable\n=========================== short test summary info ============================\nERROR tests/worker_test.py - TypeError: 'type' object is not subscriptable\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.31s\n",
+ "first_run_tail": "mport UserAgent\n../venv/lib/python3.8/site-packages/fake_useragent/__init__.py:4: in <module>\n    from fake_useragent.fake import FakeUserAgent, UserAgent\n../venv/lib/python3.8/site-packages/fake_useragent/fake.py:8: in <module>\n    from fake_useragent.utils import BrowserUserAgentData, load\n../venv/lib/python3.8/site-packages/fake_useragent/utils.py:42: in <module>\n    def load() -> list[BrowserUserAgentData]:\nE   TypeError: 'type' object is not subscriptable\n------------------- generated xml file: /tmp/tmpzpn4gnk1.xml -------------------\n=========================== short test summary info ============================\nERROR tests/worker_test.py - TypeError: 'type' object is not subscriptable\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.20s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 7.4,
+ "reproduced": false
+}

@@ -1,0 +1,25 @@
+{
+ "project": "pycdlib",
+ "url": "https://github.com/clalancette/pycdlib",
+ "sha": "36ba6eace1993e611f292b42833985cfc1c3b668",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.8888888888888888,
+ "test_file": "tests/integration/test_parse.py",
+ "test_func": "test_parse_pvd_zero_datetime",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_parse_pvd_zero_datetime",
+ "collect_tail": "y::test_parse_unicode_name_isolevel4\ntests/integration/test_parse.py::test_parse_unicode_name_joliet\ntests/integration/test_parse.py::test_parse_unicode_name_udf\ntests/integration/test_parse.py::test_parse_unicode_name_two_byte\ntests/integration/test_parse.py::test_parse_unicode_name_two_byte_isolevel4\ntests/integration/test_parse.py::test_parse_unicode_name_two_byte_joliet\ntests/integration/test_parse.py::test_parse_unicode_name_two_byte_udf\ntests/integration/test_parse.py::test_parse_eltorito_get_bootcat\ntests/integration/test_parse.py::test_parse_eltorito_uefi\n\n208 tests collected in 0.67s\n",
+ "first_run_tail": "  err_filename = cwd\n                else:\n                    err_filename = orig_executable\n                if errno_num != 0:\n                    err_msg = os.strerror(errno_num)\n>               raise child_exception_type(errno_num, err_msg, err_filename)\nE               FileNotFoundError: [Errno 2] No such file or directory: 'genisoimage'\n\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/subprocess.py:1720: FileNotFoundError\n------------------- generated xml file: /tmp/tmp298l8lho.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/integration/test_parse.py::test_parse_pvd_zero_datetime - FileNotFoundError: [Errno 2] No such file or directory: 'genisoimage'\n1 failed, 207 deselected in 0.14s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "FileNotFoundError: [Errno 2] No such file or directory: 'genisoimage'"
+ ],
+ "seconds": 50.4,
+ "reproduced": false
+}
