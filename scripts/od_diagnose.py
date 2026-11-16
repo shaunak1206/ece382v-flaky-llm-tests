@@ -70,7 +70,7 @@ def main():
         model, prompt = sid.split("_")[:2]
         dst = f"{repo}/zz_{sid}"; shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst)
         for f in glob.glob(f"{ROOT}/matched/{a.project}/{sid}/*.py"):
-            if os.path.basename(f) == "__init__.py" or (os.path.basename(f) == "conftest.py" and prompt not in ("plainseed", "plainiso")): continue
+            if os.path.basename(f) == "__init__.py" or (os.path.basename(f) == "conftest.py" and not prompt.endswith(("seed", "iso"))): continue
             shutil.copy(f, dst)
     for sid, t, suite in targets:
         v = node_id(t)

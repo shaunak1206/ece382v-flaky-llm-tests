@@ -91,7 +91,7 @@ def main():
         dst = f"{repo}/zz_{sid}"; shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst)
         for f in glob.glob(f"{sdir}/*.py"):
             # a conftest.py is copied only for the M1 and M2 mitigation suites (mitigations/seed_conftest.py, isolate_conftest.py)
-            if os.path.basename(f) == "__init__.py" or (os.path.basename(f) == "conftest.py" and prompt not in ("plainseed", "plainiso")): continue
+            if os.path.basename(f) == "__init__.py" or (os.path.basename(f) == "conftest.py" and not prompt.endswith(("seed", "iso"))): continue
             shutil.copy(f, dst)
         hist = collections.defaultdict(collections.Counter); first_fail = []
         # per run outcome of every test, one letter per run in run order (P pass, F fail, E error, S skip, - missing),

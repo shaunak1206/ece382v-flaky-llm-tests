@@ -145,7 +145,7 @@ def main():
     sdirs = sorted({x for p in pats for x in glob.glob(f"{ROOT}/matched/{a.project}/{p}/")})
     for sdir in sdirs:
         sid = os.path.basename(sdir.rstrip("/"))
-        if sid.split("_")[1] in ("plainseed", "plainiso"):
+        if sid.split("_")[1].endswith(("seed", "iso")):
             continue  # same tests as plain
         dst = f"{repo}/zz_{sid}"; shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst)
         shutil.copy(f"{sdir}/test_gen.py", dst)
