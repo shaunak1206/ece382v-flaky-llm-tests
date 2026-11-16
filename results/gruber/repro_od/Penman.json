@@ -1,0 +1,27 @@
+{
+ "project": "Penman",
+ "url": "https://github.com/goodmami/penman",
+ "sha": "e83cf6d006724d72a3e19a955aad94412da912b7",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.9214285714285714,
+ "test_file": "tests/test_layout.py",
+ "test_func": "test_rearrange",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=1  The namespace_packages parameter is deprecated.\n         !!\n\n                 ********************************************************************************\n                 Please replace its usage with implicit namespaces (PEP 420).\n\n                 See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages for details.\n                 ********************************************************************************\n\n         !!\n           ep.load()(self, ep.name, value)\n         error in sphinxcontrib-tikz setup command: use_2to3 is invalid.\n\nhint: `sphinxcontrib-tikz` (v0.4.8) was included because `penman[dev]` (v1.1.0) depends on `sphinxcontrib-tikz==0.4.8`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=0 ",
+ "test": "test_rearrange",
+ "collect_tail": "tests/test_layout.py::test_issue_47\ntests/test_layout.py::test_get_pushed_variable\ntests/test_layout.py::test_issue_85\ntests/test_layout.py::test_node_contexts\ntests/test_layout.py::test_issue_34\ntests/test_layout.py::test_configure\ntests/test_layout.py::test_rearrange\ntests/test_layout.py::test_interpret\ntests/test_layout.py::test_reconfigure\ntests/test_layout.py::test_appears_inverted\n\n10 tests collected in 0.02s\n",
+ "first_run_tail": "    :ARG1 (d / delta))\nE         ?                               ^\nE         +    :ARG0-of d\nE         +    :ARG1 (e / epsilon))\n\ntests/test_layout.py:71: AssertionError\n------------------- generated xml file: /tmp/tmptcxdcpxv.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_layout.py::test_rearrange - AssertionError: assert '(a / alpha\\n...e / epsilon))' == '(a / alpha\\n...(d / delta)))'\n    (a / alpha\n  -    :ARG0-of d\n  -    :ARG1 (e / epsilon)\n       :ARG0 (b / beta\n                :ARG0 (g / gamma)\n  -             :ARG1 (d / delta)))\n  ?                               ^\n  +             :ARG1 (d / delta))\n  ?                               ^\n  +    :ARG0-of d\n  +    :ARG1 (e / epsilon))\n1 failed, 9 passed in 0.03s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 8,
+ "failed": 52,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert '(a / alpha\\n...e / epsilon))' == '(a / alpha\\n...(d / delta)))'\n    (a / alpha\n  -    :ARG0-of d\n  -    :ARG1 (e / epsilon)\n       :ARG0 (b / beta\n                :ARG0 (g / ga",
+  "AssertionError: assert '(a / alpha\\n...(g / gamma)))' == '(a / alpha\\n...(d / delta)))'\n  Skipping 73 identical leading characters in diff, use -v to show\n  -       :ARG0 (g / gamma)\n  -             :",
+  "AssertionError: assert '(a / alpha\\n...  :ARG0-of d)' == '(a / alpha\\n...(d / delta)))'\n    (a / alpha\n  -    :ARG0-of d\n       :ARG1 (e / epsilon)\n       :ARG0 (b / beta\n                :ARG0 (g / ga"
+ ],
+ "seconds": 13.0,
+ "reproduced": true
+}

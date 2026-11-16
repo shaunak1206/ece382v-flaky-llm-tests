@@ -1,0 +1,2454 @@
+{
+ "project": "data-partitioner",
+ "sha": "c37bca05576648c3f69f8694951bb2ae9ea9ed21",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard2_1": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard2_1.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard2_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+     "first_message": "collection failure"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard2_1.test_gen"
+   ]
+  },
+  "gpt41mini_guard2_2": {
+   "model": "gpt41mini",
+   "prompt": "guard2",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard2_2.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard2_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+     "first_message": "collection failure"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard2_2.test_gen"
+   ]
+  },
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard3_1.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard3_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+     "first_message": "collection failure"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard3_1.test_gen"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard3_2.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard3_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+     "first_message": "collection failure"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard3_2.test_gen"
+   ]
+  },
+  "gpt41mini_guard_1": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 25,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_1.test_gen::test_index_increments_correctly_when_iterating",
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.1]",
+    "zz_gpt41mini_guard_1.test_gen::test_yield_set_does_not_yield_after_all_data"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_1.test_gen::test_init_sets_attributes_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_index_partition_counts_sum_to_dataset_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_and_test_indexes_are_disjoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_and_test_indexes_cover_all_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.1]": {
+     "pass": 189,
+     "fail": 11,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 6,
+     "fails_shuffled": 5,
+     "sequence": "FPPFPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPFPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPFPPPPPPPPPFFP",
+     "first_message": "assert 0.06 <= 0.05\n +  where 0.06 = abs((0.16 - 0.1))"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.5]": {
+     "pass": 134,
+     "fail": 66,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 33,
+     "fails_shuffled": 33,
+     "sequence": "PFPPPPPFFPPPPFPPPPFPPFFPPPFFPFFPFPPFFPFFPFFPPPPFPPPPFPFFPFPPPPPPFFPPPFPFPPPFPPPPFPFPPPPPFPPPPPPPFFPPFPFFPFPFPPFPFPPFPPFPPPFPFPPFFFPFPPPFPPFPPPPPPPPFFFPPPFFPPPPFFPPPPPPPPPFFPFFPFPPPPPPPFPPPPFFPPFPPPPPP",
+     "first_message": "assert 0.08000000000000002 <= 0.05\n +  where 0.08000000000000002 = abs((0.42 - 0.5))"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.8]": {
+     "pass": 164,
+     "fail": 36,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 18,
+     "fails_shuffled": 18,
+     "sequence": "PPFPPPPPPFPPPPPPPPFPFFPPFPPPPPPPFPFPPFPFPPPPFPPPFPPPPPPPFPPPPPPPFPPFPFPFPPPPFPPPFPPPPPPPPPPPPPFFPFPPPPPPPFPPPFPFPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPFPPPPFPPPPPPPPPPFPPPFPPFPPPPPPPPFFPPPPPPPPPFPPPFPPPPPFPP",
+     "first_message": "assert 0.08000000000000007 <= 0.05\n +  where 0.08000000000000007 = abs((0.72 - 0.8))"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[1.0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_set_generator_yields_correct_elements": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_test_set_generator_yields_correct_elements": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_yield_set_does_not_yield_after_all_data": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'StopIteration'>"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_index_increments_correctly_when_iterating": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert 2 >= 10\n +  where 2 = <data_partitioner.data_suplier.DataSuplier object at 0x79a1459eec70>.index"
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_partitioning_function_is_used": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_set_and_test_set_iterators_are_independent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_set_iterates_all_training_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_test_set_iterates_all_test_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_yield_set_returns_empty_for_empty_dataset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_percent_1_results_all_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_training_percent_0_results_all_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_len_dataset_zero_init": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_consecutive_calls_to_training_set_produce_same_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_consecutive_calls_to_test_set_produce_same_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_partial_iteration_then_full_iteration_training_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_1.test_gen::test_partial_iteration_then_full_iteration_test_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.1]",
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.5]",
+    "zz_gpt41mini_guard_1.test_gen::test_training_test_partition_ratios[0.8]"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_guard_1.test_gen::test_index_increments_correctly_when_iterating",
+    "zz_gpt41mini_guard_1.test_gen::test_yield_set_does_not_yield_after_all_data"
+   ]
+  },
+  "gpt41mini_guard_2": {
+   "model": "gpt41mini",
+   "prompt": "guard",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt41mini_guard_2.test_gen::test_pseudorandom_partition_consistency_for_fixed_seed"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard_2.test_gen::test_init_stores_parameters": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_partition_lengths_sum_to_dataset_len": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_training_and_test_indexes_disjoint_and_cover_all": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_test_set_generator_yields_test_data_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_training_set_generator_yields_training_data_only": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_generators_yield_same_elements_each_call": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_empty_dataset_results_in_empty_sets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_training_percent_zero_results_all_in_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_training_percent_one_results_all_in_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_partitioning_function_is_used": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_index_advances_properly_after_next_calls": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test__yield_set_yields_no_elements_when_no_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test__yield_set_yields_elements_correctly_after_partial_partition": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test__yield_set_waits_for_more_indexes_until_complete": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_pseudorandom_partition_consistency_for_fixed_seed": {
+     "pass": 1,
+     "fail": 199,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 99,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFPFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert [0, 1, 3, 4, 6, 8] == [1, 2, 3, 4, 7, 8]\n  At index 0 diff: 0 != 1\n  Full diff:\n  - [1, 2, 3, 4, 7, 8]\n  ?     ---      ^\n  + [0, 1, 3, 4, 6, 8]\n  ?  +++         ^"
+    },
+    "zz_gpt41mini_guard_2.test_gen::test_raises_stopiteration_if_next_called_after_all_partitions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_guard_2.test_gen::test_pseudorandom_partition_consistency_for_fixed_seed"
+   ],
+   "always_fail": []
+  },
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_1.test_gen::test_partitioning_stability_with_same_training_percent"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_initialization_with_default_partitioning_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_initialization_with_custom_training_percent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_custom_partitioning_function_is_used": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_yield_training_and_test_sets_non_empty_dataset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_training_set_exhaustion_before_test_set_starts": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_test_set_exhaustion_before_training_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_empty_dataset_yields_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_yield_set_yields_correct_tuples": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_yield_set_with_all_test_data": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_internal_state_advance_after_yielding": {
+     "pass": 140,
+     "fail": 60,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 33,
+     "fails_shuffled": 27,
+     "sequence": "PPPPFPPFPPFFFFFPFFPPPPFPPPPPPPFPPFPFFFFPPPPPPPPPPFFFPFPPPPFPPPPPPPPPPPPPPFPPPFFFPPPPFFPPPFFPFPFPFPPPFFPFFFPPPPFPFPPPPPPPPPFPPPPPPPFPFPPPPPPPPPFFPPFPPPFPFPPFFPFPPPPPPFPPPPFPFPPFPFPPFFPPPFPFPPPPPPPPPPPF",
+     "first_message": "StopIteration"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_training_and_test_indexes_populated_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test__yield_set_returns_all_indices_even_if_index_advances_during_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test__yield_set_yields_no_elements_if_indexes_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_test_set_generator_next_and_stopiteration_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_training_set_generator_next_and_stopiteration_behavior": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_index_advances_to_n_of_elements_after_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_partitioning_stability_with_same_training_percent": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert {0, 3, 6, 7, 8, 9} == {0, 1, 2, 3, 4, 5, ...}\n  Extra items in the left set:\n  8\n  6\n  Extra items in the right set:\n  1\n  2\n  4\n  5\n  Full diff:\n  - {0, 1, 2, 3, 4, 5, 7, 9}\n  + {0, 3, 6, 7, 8, 9}"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_partitioning_function_override_changes_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_internal_state_advance_after_yielding"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plain_1.test_gen::test_partitioning_stability_with_same_training_percent"
+   ]
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 19,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_init_sets_attributes_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_init_default_partitioning_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test___next_adds_indexes_correctly_to_training_and_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test___next_increments_index": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_training_set_yields_expected_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_test_set_yields_expected_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_yield_set_generates_all_indexes_even_if_index_not_at_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_yield_set_works_when_indexes_empty_but_index_at_end": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_multiple_calls_to_training_set_return_fresh_generators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_multiple_calls_to_test_set_return_fresh_generators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_training_set_and_test_set_combine_to_full_dataset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_training_percent_zero_all_go_to_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_training_percent_one_all_go_to_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_empty_dataset_results_in_no_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_partitioning_function_can_be_custom": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_yield_set_waits_until_indexes_append_if_initially_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_yield_set_raises_stopiteration_when_consumed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_test_set_returns_generator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_training_set_returns_generator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_init_stores_dataset_and_percent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_init_constructs_partitioner_with_expected_arguments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_initial_indexes_are_empty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_test_set_yields_expected_indexes_and_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_training_set_yields_expected_indexes_and_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_generators_are_lazy_and_do_not_partition_until_iterated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_test_set_only_consumes_needed_partition_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_training_set_only_consumes_needed_partition_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_multiple_generators_share_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_empty_dataset_yields_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_all_training_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_all_test_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_partitioning_function_argument_is_forwarded_even_if_unused": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_2.test_gen::test_multiple_iterators_share_the_same_internal_state",
+    "zz_gpt54mini_plain_2.test_gen::test_training_set_consumption_advances_internal_state"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_init_sets_basic_attributes_and_constructs_partitioner": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_test_set_returns_generator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_training_set_returns_generator": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_empty_dataset_yields_nothing_for_training_and_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_training_set_yields_only_training_items_in_original_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_test_set_yields_only_test_items_in_original_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_training_and_test_sets_partition_complementary_items": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_training_set_consumption_advances_internal_state": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert 4 == 3\n +  where 4 = <data_partitioner.data_suplier.DataSuplier object at 0x7d211477b1c0>.index"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_test_set_can_be_called_before_training_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_generator_after_partial_consumption_returns_remaining_items": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_dataset_items_are_returned_by_reference_not_copied": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_training_percent_is_passed_through_without_validation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_partitioning_function_argument_is_forwarded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_multiple_iterators_share_the_same_internal_state": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert [(0, 'a'), (2, 'c')] == [(2, 'c')]\n  At index 0 diff: (0, 'a') != (2, 'c')\n  Left contains one more item: (2, 'c')\n  Full diff:\n  - [(2, 'c')]\n  + [(0, 'a'), (2, 'c')]"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_2.test_gen::test_multiple_iterators_share_the_same_internal_state",
+    "zz_gpt54mini_plain_2.test_gen::test_training_set_consumption_advances_internal_state"
+   ]
+  },
+  "haiku_plain_1": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 33,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_constructor_sets_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_training_percent_is_point_eight": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_constructor_does_not_call_partitioning_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_fixed_values_assign_elements_to_expected_sets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_index_lists_record_partition_after_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_linear_fake_function_splits_in_half": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_linear_partition_matches_requested_fraction[0.25-5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_linear_partition_matches_requested_fraction[0.5-10]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_linear_partition_matches_requested_fraction[0.75-15]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_pairs_hold_index_and_matching_item": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partition_is_disjoint_and_covers_dataset[0.3-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partition_is_disjoint_and_covers_dataset[0.3-2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partition_is_disjoint_and_covers_dataset[0.3-7]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partition_is_disjoint_and_covers_dataset[0.3-100]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partition_is_disjoint_and_covers_dataset[0.8-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partition_is_disjoint_and_covers_dataset[0.8-2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partition_is_disjoint_and_covers_dataset[0.8-7]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partition_is_disjoint_and_covers_dataset[0.8-100]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_yielded_indexes_are_ascending": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_empty_dataset_yields_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_training_percent_one_sends_everything_to_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_training_percent_zero_sends_everything_to_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_out_of_range_training_percent_fails_on_first_iteration[-0.1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_out_of_range_training_percent_fails_on_first_iteration[1.5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_partitioning_function_called_once_per_element_in_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_partitioning_is_lazy_and_stops_at_first_needed_element": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_interleaved_iteration_matches_sequential_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_repeated_iteration_returns_same_pairs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_set_methods_return_generators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_default_partitioning_function_uses_random_random": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_index_reaches_dataset_length_after_full_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_string_dataset_is_split_by_character": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_1.test_gen::test_separate_instances_do_not_share_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "haiku_plain_2": {
+   "model": "haiku",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_construction_stores_dataset_and_defaults": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_construction_does_not_call_partitioning_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_generators_are_lazy_until_iterated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_partitioning_function_called_once_per_element_in_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_scripted_values_route_elements_to_sets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_linear_half_split_of_ten": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_linear_quarter_split_of_eight": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_default_training_percent_is_eighty": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_zero_percent_sends_everything_to_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_full_percent_sends_everything_to_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_single_element_goes_to_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_empty_dataset_yields_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_yielded_pairs_hold_index_and_same_element": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_indexes_are_yielded_in_ascending_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_sets_partition_dataset_without_overlap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_repeat_iteration_yields_same_items": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_interleaved_consumption_matches_sequential": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_pseudorandom_split_reproducible_with_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_default_partitioning_function_is_pseudorandom": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_pseudorandom_training_fraction_near_percent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_out_of_range_percent_fails_on_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_haiku_plain_2.test_gen::test_set_methods_return_generators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_1": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_init_stores_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_default_training_percent_is_80": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_init_is_lazy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_training_set_with_linear_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_test_set_with_linear_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_yielded_items_are_index_value_pairs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_sets_are_disjoint_and_cover_dataset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_indexes_are_increasing_within_each_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_repeated_calls_are_consistent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_test_set_first_then_training_set_is_consistent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_interleaved_generators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_partial_consumption_is_lazy": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_all_training_with_custom_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_all_test_with_custom_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_full_training_percent_puts_everything_in_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_zero_training_percent_puts_everything_in_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_works_with_non_list_sequences": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_1.test_gen::test_empty_dataset_yields_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "sonnet_plain_2": {
+   "model": "sonnet",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_init_stores_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_default_training_percent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_init_is_lazy_and_consumes_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_training_set_with_linear_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_test_set_with_linear_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_yields_index_and_element_pairs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_training_and_test_cover_dataset_without_overlap": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_custom_partitioning_function_alternating": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_all_training_when_percent_is_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_all_test_when_percent_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_generators_can_be_interleaved": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_repeated_calls_return_same_results": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_index_advances_only_as_needed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_empty_dataset_yields_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_single_element_dataset_goes_to_training_with_default_percent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_pseudorandom_partition_is_complete_and_disjoint": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_pseudorandom_partition_reproducible_with_seed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_works_with_string_dataset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_invalid_negative_percent_raises_on_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_sonnet_plain_2.test_gen::test_partitioning_function_receives_sequential_indexes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 196,
+  "failed": 4,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: 0.1898 != 0.2 within 0.00949 delta (0.010200000000000015 difference)",
+   "AssertionError: 0.2106 != 0.2 within 0.010530000000000001 delta (0.010599999999999998 difference)",
+   "AssertionError: 0.2114 != 0.2 within 0.01057 delta (0.011399999999999993 difference)"
+  ]
+ },
+ "seconds": 545.6
+}

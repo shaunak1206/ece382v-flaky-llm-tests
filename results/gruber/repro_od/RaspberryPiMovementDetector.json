@@ -1,0 +1,25 @@
+{
+ "project": "RaspberryPiMovementDetector",
+ "url": "https://github.com/KSanthanam/RaspberryPiMovementDetector",
+ "sha": "a415e5aca22fa41ce0eba0b61cf56d3035f92f64",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.075,
+ "test_file": "tests/test_watch.py",
+ "test_func": "test_ping",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: Failed to build `futures==3.4.0`\n  cause: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         This backport is meant only for Python 2.\n         It does not work on Python 3, and Python 3 users do not need it as the concurrent.futures package is available in the standard library.\n         For projects that work on both Python 2 and 3, the dependency needs to be conditional on the Python version, like so:\n         extras_require={':python_version == \"2.7\"': ['futures']}\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto pymitter] rc=0 \n[auto fake_rpi] rc=0 ",
+ "test": "test_ping",
+ "collect_tail": "ved_out]\ntests/test_watch.py::TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]\ntests/test_watch.py::TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]\ntests/test_watch.py::TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]\ntests/test_watch.py::TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]\ntests/test_watch.py::TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]\ntests/test_watch.py::TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]\ntests/test_watch.py::TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]\n\n10 tests collected in 0.02s\n",
+ "first_run_tail": "ests/test_watch.py:47: IndexError\n----------------------------- Captured stdout call -----------------------------\nDistance Measurement In Progress\nfake_rpi.RPi._GPIO.setup(3, 0)\nfake_rpi.RPi._GPIO.setup(4, 1)\nfake_rpi.RPi._GPIO.output(3, False)\nWaiting For Sensor To Settle\nfake_rpi.RPi._GPIO.output(3, True)\nfake_rpi.RPi._GPIO.output(3, False)\nfake_rpi.RPi._GPIO.input(4,): 1\nfake_rpi.RPi._GPIO.input(4,): 1\nfake_rpi.RPi._GPIO.input(4,)\nDistance: 1.04 cm\nfake_rpi.RPi._GPIO.cleanup()\n------------------- generated xml file: /tmp/tmpzvij0qr3.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_watch.py::TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out] - IndexError: list index out of range\n1 failed, 9 passed in 34.10s\n",
+ "collected": 2,
+ "runs": 60,
+ "passed": 59,
+ "failed": 1,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "IndexError: list index out of range"
+ ],
+ "seconds": 2063.9,
+ "reproduced": true
+}

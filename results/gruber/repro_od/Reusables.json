@@ -1,0 +1,25 @@
+{
+ "project": "Reusables",
+ "url": "https://github.com/cdgriffith/Reusables",
+ "sha": "171ea3dc10a37ed46ff833c48926a995496d2fc6",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.9111111111111111,
+ "test_file": "test/test_reuse.py",
+ "test_func": "test_duplicate_dir",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-test.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_duplicate_dir",
+ "collect_tail": "join_path_clean>\n      <TestCaseFunction test_safe_bad_path>\n      <TestCaseFunction test_join_path_dirty>\n\n=============================== warnings summary ===============================\nreusables/cli.py:151\n  /tmp/gw/Reusables/repo/reusables/cli.py:151: DeprecationWarning: invalid escape sequence \\_\n    \"\"\"\n\nreusables/wrappers.py:229\n  /tmp/gw/Reusables/repo/reusables/wrappers.py:229: DeprecationWarning: invalid escape sequence \\w\n    \"\"\"\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n========================= 57 tests collected in 0.08s ==========================\n",
+ "first_run_tail": " FAILURES ===================================\n_________________________ TestReuse.test_duplicate_dir _________________________\n\nself = <test.test_reuse.TestReuse testMethod=test_duplicate_dir>\n\n    def test_duplicate_dir(self):\n        dups = reusables.directory_duplicates(test_root)\n>       assert len(dups) == 1, len(dups)\nE       AssertionError: 0\nE       assert 0 == 1\nE        +  where 0 = len([])\n\ntest/test_reuse.py:433: AssertionError\n------------------- generated xml file: /tmp/tmpq2dt2hl1.xml -------------------\n=========================== short test summary info ============================\nFAILED test/test_reuse.py::TestReuse::test_duplicate_dir - AssertionError: 0\nassert 0 == 1\n +  where 0 = len([])\n========================= 1 failed, 56 passed in 0.46s =========================\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 31,
+ "failed": 29,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: 0\nassert 0 == 1\n +  where 0 = len([])"
+ ],
+ "seconds": 21.4,
+ "reproduced": true
+}

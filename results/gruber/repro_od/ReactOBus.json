@@ -1,0 +1,25 @@
+{
+ "project": "ReactOBus",
+ "url": "https://github.com/ivoire/ReactOBus",
+ "sha": "841d5c0442ffe92fcaec278e07053afe5b93d925",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.49166666666666664,
+ "test_file": "tests/test_db.py",
+ "test_func": "test_run",
+ "install_ok": true,
+ "install_log_tail": "cache/builds-v0/.tmpMMAQ2H/lib/python3.8/site-packages/setuptools/dist.py\", line 337, in __init__\n             self.metadata.version = self._normalize_version(self.metadata.version)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpMMAQ2H/lib/python3.8/site-packages/setuptools/dist.py\", line 373, in _normalize_version\n             normalized = str(Version(version))\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpMMAQ2H/lib/python3.8/site-packages/setuptools/_vendor/packaging/version.py\", line 202, in __init__\n             raise InvalidVersion(f\"Invalid version: '{version}'\")\n         packaging.version.InvalidVersion: Invalid version: 'git'\n\n[.] rc=1 etup\n             _setup_distribution = dist = klass(attrs)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpBj7rip/lib/python3.8/site-packages/setuptools/dist.py\", line 337, in __init__\n             self.metadata.version = self._normalize_version(self.metadata.version)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpBj7rip/lib/python3.8/site-packages/setuptools/dist.py\", line 373, in _normalize_version\n             normalized = str(Version(version))\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpBj7rip/lib/python3.8/site-packages/setuptools/_vendor/packaging/version.py\", line 202, in __init__\n             raise InvalidVersion(f\"Invalid version: '{version}'\")\n         packaging.version.InvalidVersion: Invalid version: 'git'\n",
+ "test": "test_run",
+ "collect_tail": "tests/test_db.py::test_errors\ntests/test_db.py::test_run\n\n=============================== warnings summary ===============================\ntests/test_db.py:21\n  /tmp/gw/ReactOBus/repo/tests/test_db.py:21: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses\n    import imp\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n2 tests collected in 0.58s\n",
+ "first_run_tail": "vedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)\n    Base = declarative_base()\n\ntests/test_db.py: 29 warnings\n  /tmp/gw/ReactOBus/repo/reactobus/db.py:106: DeprecationWarning: zmq.utils.strtypes is deprecated in pyzmq 23.\n    (topic, uuid, dt, username, data) = (u(m) for m in msg)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmp991ck08x.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_db.py::test_run - AttributeError: 'SessionMock' object has no attribute 'query'\n1 failed, 1 passed, 32 warnings in 0.34s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 27,
+ "failed": 33,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AttributeError: 'SessionMock' object has no attribute 'query'"
+ ],
+ "seconds": 37.8,
+ "reproduced": true
+}

@@ -1,0 +1,25 @@
+{
+ "project": "Flaskerizer",
+ "url": "https://github.com/brettvanderwerff/Flaskerizer",
+ "sha": "5a9724804f4e479fc3289e8644dc788adfeff06d",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.21666666666666667,
+ "test_file": "flaskerizer/flaskerizer_src/tests/test_structure_directory.py",
+ "test_func": "test_migrate_files",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 t_text, cyan_text,\n           File \"/home/runner/work/_temp/setup-uv-cache/sdists-v10/pypi/numpy/1.15.1/jZjEHFbpwpTqHWEq/src/numpy/distutils/misc_util.py\", line 16, in <module>\n             from distutils.msvccompiler import get_build_architecture\n         ModuleNotFoundError: No module named 'distutils.msvccompiler'\n\nhint: This error likely indicates that `numpy@1.15.1` depends on `distutils.msvccompiler`, but doesn't declare it as a build dependency. If `numpy` is a first-party package, consider adding `distutils.msvccompiler` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:\n\n[tool.uv.extra-build-dependencies]\nnumpy = [\"distutils.msvccompiler\"]\n\nor `uv pip install distutils.msvccompiler` into the environment and re-run with `--no-build-isolation`.\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_migrate_files",
+ "collect_tail": "flaskerizer/flaskerizer_src/tests/test_structure_directory.py::TestStructureDirectory::test_mkdir\nflaskerizer/flaskerizer_src/tests/test_structure_directory.py::TestStructureDirectory::test_migrate_files\nflaskerizer/flaskerizer_src/tests/test_structure_directory.py::TestStructureDirectory::test_detect_and_migrate_html_files\n\n3 tests collected in 0.01s\n",
+ "first_run_tail": "tderr call -----------------------------\nusage: __main__.py [-h] -i TOP_LEVEL_PATH -t TEMPLATES_PATH [-n APP_NAME] -o\n                   APP_PATH [-L] [-S]\n__main__.py: error: the following arguments are required: -i, -t, -o\n------------------- generated xml file: /tmp/tmpjeboe7bm.xml -------------------\n=========================== short test summary info ============================\nFAILED flaskerizer/flaskerizer_src/tests/test_structure_directory.py::TestStructureDirectory::test_mkdir - SystemExit: 2\nFAILED flaskerizer/flaskerizer_src/tests/test_structure_directory.py::TestStructureDirectory::test_migrate_files - SystemExit: 2\nFAILED flaskerizer/flaskerizer_src/tests/test_structure_directory.py::TestStructureDirectory::test_detect_and_migrate_html_files - SystemExit: 2\n3 failed in 0.25s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 0,
+ "failed": 60,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "SystemExit: 2"
+ ],
+ "seconds": 32.1,
+ "reproduced": false
+}

@@ -1,0 +1,27 @@
+{
+ "project": "PyGraph",
+ "url": "https://github.com/Rickecr/PyGraph",
+ "sha": "e81c3a0f543f5bfcda1a603c6dcecde13d582c57",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.49375,
+ "test_file": "__tests__/test_simple_graph.py",
+ "test_func": "test_vertex_exists",
+ "install_ok": true,
+ "install_log_tail": "\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=1 error: Failed to build `pygraph @ file:///tmp/gw/PyGraph/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1  in self._module.includes:\n           File \"/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/functools.py\", line 967, in __get__\n             val = self.func(instance)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpHN4Fns/lib/python3.8/site-packages/poetry/core/masonry/builders/builder.py\", line 97, in _module\n             return Module(\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpHN4Fns/lib/python3.8/site-packages/poetry/core/masonry/utils/module.py\", line 65, in __init__\n             raise ModuleOrPackageNotFound(\n         poetry.core.masonry.utils.module.ModuleOrPackageNotFound: No file/folder found for package pygraph\n\nhint: Build failures usually indicate a problem with the package or the build environment\n",
+ "test": "test_vertex_exists",
+ "collect_tail": "ncy\n__tests__/test_simple_graph.py::TestSimpleGraph::test_false_regular_graph\n__tests__/test_simple_graph.py::TestSimpleGraph::test_duplicated_edge\n__tests__/test_simple_graph.py::TestSimpleGraph::test_true_regular_graph\n__tests__/test_simple_graph.py::TestSimpleGraph::test_list_graph_edges\n__tests__/test_simple_graph.py::TestSimpleGraph::test_list_graph_vertices\n__tests__/test_simple_graph.py::TestSimpleGraph::test_is_terminal\n__tests__/test_simple_graph.py::TestSimpleGraph::test_delete_vertex\n__tests__/test_simple_graph.py::TestSimpleGraph::test_true_cycle_graph\n\n20 tests collected in 0.02s\n",
+ "first_run_tail": "xNotExistsException: V\u00e9rtice n\u00e3o existe\nFAILED __tests__/test_simple_graph.py::TestSimpleGraph::test_num_edges - assert 5 == 1\n +  where 5 = <bound method Graph.num_edges of <repo.py_graph_t.SimpleGraph.SimpleGraph object at 0x78d8008b26a0>>()\n +    where <bound method Graph.num_edges of <repo.py_graph_t.SimpleGraph.SimpleGraph object at 0x78d8008b26a0>> = <repo.py_graph_t.SimpleGraph.SimpleGraph object at 0x78d8008b26a0>.num_edges\n +      where <repo.py_graph_t.SimpleGraph.SimpleGraph object at 0x78d8008b26a0> = <repo.__tests__.test_simple_graph.TestSimpleGraph object at 0x78d80087c790>.graph\nFAILED __tests__/test_simple_graph.py::TestSimpleGraph::test_false_cycle_graph - repo.py_graph_t.exceptions.SimpleGraphException.EdgeNotFoundException: Aresta n\u00e3o existe\n15 failed, 5 passed in 0.06s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 26,
+ "failed": 34,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert False\n +  where False = <bound method Graph.vertex_exists of <repo.py_graph_t.SimpleGraph.SimpleGraph object at 0x78d8008b26a0>>('a')\n +    where <bound method Graph.vertex_exis",
+  "AssertionError: assert False\n +  where False = <bound method Graph.vertex_exists of <repo.py_graph_t.SimpleGraph.SimpleGraph object at 0x79ec389729d0>>('a')\n +    where <bound method Graph.vertex_exis",
+  "AssertionError: assert False\n +  where False = <bound method Graph.vertex_exists of <repo.py_graph_t.SimpleGraph.SimpleGraph object at 0x7ea7c20b29d0>>('a')\n +    where <bound method Graph.vertex_exis"
+ ],
+ "seconds": 14.3,
+ "reproduced": true
+}

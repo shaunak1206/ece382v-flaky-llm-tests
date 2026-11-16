@@ -1,0 +1,23 @@
+{
+ "project": "NeuroKit.py",
+ "url": "https://github.com/neuropsychology/NeuroKit.py",
+ "sha": "fc77dc94e421d5b166a5516b7186bae483d753bd",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.014285714285714285,
+ "test_file": "tests/test_ecg.py",
+ "test_func": "test_ecg_process",
+ "install_ok": true,
+ "install_log_tail": "great if you take some time to track which package uses\n           'sklearn' instead of 'scikit-learn' and report it to their issue tracker\n         - as a last resort, set the environment variable\n           SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error\n\n         More information is available at\n         https://github.com/scikit-learn/sklearn-pypi-package\n\nhint: `sklearn` is often confused for `scikit-learn`. Did you mean to install `scikit-learn` instead?\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=1 rn' by 'scikit-learn' in your pip requirements files\n           (requirements.txt, setup.py, setup.cfg, Pipfile, etc ...)\n         - if the 'sklearn' package is used by one of your dependencies,\n           it would be great if you take some time to track which package uses\n           'sklearn' instead of 'scikit-learn' and report it to their issue tracker\n         - as a last resort, set the environment variable\n           SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error\n\n         More information is available at\n         https://github.com/scikit-learn/sklearn-pypi-package\n\nhint: `sklearn` is often confused for `scikit-learn`. Did you mean to install `scikit-learn` instead?\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto pandas] rc=0 \n[auto scipy] rc=0 \n[auto matplotlib] rc=0 \n[auto scikit-learn] rc=0 \n[auto nolds] rc=0 ",
+ "test": "test_ecg_process",
+ "collect_tail": "g: invalid escape sequence \\|\n    \"\"\"\n\n../venv/lib/python3.8/site-packages/nolds/measures.py:1402\n  /tmp/gw/NeuroKit.py/venv/lib/python3.8/site-packages/nolds/measures.py:1402: DeprecationWarning: invalid escape sequence \\|\n    \"\"\"\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nERROR tests/test_ecg.py - AttributeError: module 'importlib.resources' has no attribute 'files'\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\nno tests collected, 1 error in 0.97s\n",
+ "first_run_tail": "site-packages/nolds/__init__.py:5: in <module>\n    from .datasets import brown72, tent_map, logistic_map, fbm, fgn, qrandom, \\\n../venv/lib/python3.8/site-packages/nolds/datasets.py:467: in <module>\n    brown72 = load_brown72()\n../venv/lib/python3.8/site-packages/nolds/datasets.py:162: in load_brown72\n    with resources.files(__name__).joinpath(fname).open('rb') as f:\nE   AttributeError: module 'importlib.resources' has no attribute 'files'\n------------------- generated xml file: /tmp/tmpjkpc4pi5.xml -------------------\n=========================== short test summary info ============================\nERROR tests/test_ecg.py - AttributeError: module 'importlib.resources' has no attribute 'files'\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.96s\n",
+ "collected": 0,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 25.3,
+ "reproduced": false
+}

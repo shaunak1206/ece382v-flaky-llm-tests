@@ -1,0 +1,23 @@
+{
+ "project": "Breathe",
+ "url": "https://github.com/mrob95/Breathe",
+ "sha": "4600818e24f4156cd7bb8cc0f43886b27323968e",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.4,
+ "test_file": "tests/test_loading.py",
+ "test_func": "test_loading_failure",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_loading_failure",
+ "collect_tail": "tests/test_loading.py::test_clear\ntests/test_loading.py::test_loading_failure\ntests/test_loading.py::test_loading\ntests/test_loading.py::test_reloading\n\n4 tests collected in 0.33s\n",
+ "first_run_tail": "ds %r.\"\n                               % (words,))\nE           dragonfly.engines.base.engine.MimicFailure: No matching rule found for words ['parsnip'].\n\n../venv/lib/python3.8/site-packages/dragonfly/engines/backend_text/engine.py:228: MimicFailure\n------------------------------ Captured log call -------------------------------\nWARNING  breathe_master:master.py:211 Nothing found to reload. For modules to be reloadable they must be loaded using 'Breathe.load_modules()'\n------------------- generated xml file: /tmp/tmpewm57qf1.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_loading.py::test_reloading - dragonfly.engines.base.engine.MimicFailure: No matching rule found for words ['parsnip'].\n1 failed, 3 passed in 0.15s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 60,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 20.9,
+ "reproduced": false
+}

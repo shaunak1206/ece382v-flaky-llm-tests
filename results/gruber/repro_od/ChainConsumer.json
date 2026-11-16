@@ -1,0 +1,27 @@
+{
+ "project": "ChainConsumer",
+ "url": "https://github.com/samreay/ChainConsumer",
+ "sha": "3206a98f5e121ff3e17c30c840710bd7fda59fca",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.2625,
+ "test_file": "tests/test_chain.py",
+ "test_func": "test_pass_in_dataframe3",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_pass_in_dataframe3",
+ "collect_tail": "ainConsumer/repo/chainconsumer/plotter.py:448: DeprecationWarning: invalid escape sequence \\l\n    self._plot_walk(ax, \"$\\log(P)$\", chain.posterior - chain.posterior.max(), convolve=convolve, color=chain.config[\"color\"])\n\nchainconsumer/analysis.py:6\n  /tmp/gw/ChainConsumer/repo/chainconsumer/analysis.py:6: DeprecationWarning: Please use `gaussian_filter` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.\n    from scipy.ndimage.filters import gaussian_filter\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n62 tests collected in 2.47s\n",
+ "first_run_tail": "..............................................................           [100%]\n=============================== warnings summary ===============================\nchainconsumer/analysis.py:6\n  /tmp/gw/ChainConsumer/repo/chainconsumer/analysis.py:6: DeprecationWarning: Please use `gaussian_filter` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.\n    from scipy.ndimage.filters import gaussian_filter\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpflynt22p.xml -------------------\n62 passed, 1 warning in 1.92s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 55,
+ "failed": 5,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert False\n +  where False = <function isclose at 0x76b0300259d0>(-0.06767515532367785, 0, atol=0.05)\n +    where <function isclose at 0x76b0300259d0> = np.isclose",
+  "assert False\n +  where False = <function isclose at 0x7d92e9b3f9d0>(0.08875195436543892, 0, atol=0.05)\n +    where <function isclose at 0x7d92e9b3f9d0> = np.isclose",
+  "assert False\n +  where False = <function isclose at 0x7164b33bf9d0>(0.08874613939485743, 0, atol=0.05)\n +    where <function isclose at 0x7164b33bf9d0> = np.isclose"
+ ],
+ "seconds": 148.5,
+ "reproduced": true
+}

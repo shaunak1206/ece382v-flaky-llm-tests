@@ -1,0 +1,25 @@
+{
+ "project": "FirebaseData",
+ "url": "https://github.com/heston/firebase-live-data",
+ "sha": "dd73615ccfae11e95830f49df8d3a90546d671f5",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.4,
+ "test_file": "tests/test_watcher.py",
+ "test_func": "test_watch__stale",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because python-coveralls==2.9.1 depends on coverage==4.0.3 and you require coverage==4.5.2, we can conclude that your requirements and python-coveralls==2.9.1 are incompatible.\n         And because you require python-coveralls==2.9.1, we can conclude that your requirements are unsatisfiable.\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_watch__stale",
+ "collect_tail": "cancel__unknown_name\ntests/test_watcher.py::test_Watcher_init\ntests/test_watcher.py::test_watch__existing_name\ntests/test_watcher.py::test_Watcher_start\ntests/test_watcher.py::test_cancel__known_name\ntests/test_watcher.py::test_Watcher_action__not_stale\ntests/test_watcher.py::test_watch__not_stale\ntests/test_watcher.py::test_Watcher_action__should_cancel\ntests/test_watcher.py::test_watch__stale\ntests/test_watcher.py::test_Watcher_cannot_start_while_running\ntests/test_watcher.py::test_Watcher_cannot_start_after_cancel\ntests/test_watcher.py::test_watch__unknown_name\n\n15 tests collected in 0.03s\n",
+ "first_run_tail": "__unknown_name\nERROR tests/test_watcher.py::test_cancel_all\nERROR tests/test_watcher.py::test_Watcher_init\nERROR tests/test_watcher.py::test_Watcher_action__should_cancel\nERROR tests/test_watcher.py::test_Watcher_cancel\nERROR tests/test_watcher.py::test_Watcher_cannot_start_after_cancel\nERROR tests/test_watcher.py::test_watch__unknown_name\nERROR tests/test_watcher.py::test_watch__stale\nERROR tests/test_watcher.py::test_cancel__known_name\nERROR tests/test_watcher.py::test_Watcher_cannot_start_while_running\nERROR tests/test_watcher.py::test_Watcher_action__not_stale\nERROR tests/test_watcher.py::test_watch__existing_name\nERROR tests/test_watcher.py::test_Watcher_action__stale\nERROR tests/test_watcher.py::test_watch__not_stale\nERROR tests/test_watcher.py::test_Watcher_start\n15 errors in 0.04s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "failed on setup with \"file /tmp/gw/FirebaseData/repo/tests/test_watcher.py, line 181\n  def test_watch__stale(mocker):\nE       fixture 'mocker' not found\n>       available fixtures: capfd, capfdbinary,"
+ ],
+ "seconds": 5.2,
+ "reproduced": false
+}

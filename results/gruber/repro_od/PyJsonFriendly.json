@@ -1,0 +1,25 @@
+{
+ "project": "PyJsonFriendly",
+ "url": "https://github.com/maboualidev/PyJsonFriendly",
+ "sha": "8b1ee498bc7a27024851b5101bf09913031e2477",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.5083333333333333,
+ "test_file": "tests/test_pyJsonFriendly.py",
+ "test_func": "test_01",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_01",
+ "collect_tail": "tests/test_pyJsonFriendly.py::TestPyJsonFriendly::test_05\ntests/test_pyJsonFriendly.py::TestPyJsonFriendly::test_02\ntests/test_pyJsonFriendly.py::TestPyJsonFriendly::test_01\ntests/test_pyJsonFriendly.py::TestPyJsonFriendly::test_04\ntests/test_pyJsonFriendly.py::TestPyJsonFriendly::test_03\n\n5 tests collected in 0.01s\n",
+ "first_run_tail": "                                      [100%]\n=================================== FAILURES ===================================\n__________________________ TestPyJsonFriendly.test_01 __________________________\n\nself = <tests.test_pyJsonFriendly.TestPyJsonFriendly testMethod=test_01>\n\n    def test_01(self):\n        o = NotJsonFriendly(1, 2)\n        with self.assertRaises(TypeError):\n>           json.dumps(o)\nE           AssertionError: TypeError not raised\n\ntests/test_pyJsonFriendly.py:66: AssertionError\n------------------- generated xml file: /tmp/tmpupa4m9le.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_pyJsonFriendly.py::TestPyJsonFriendly::test_01 - AssertionError: TypeError not raised\n1 failed, 4 passed in 0.05s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 32,
+ "failed": 28,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: TypeError not raised"
+ ],
+ "seconds": 20.4,
+ "reproduced": true
+}

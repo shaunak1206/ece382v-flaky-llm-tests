@@ -1,0 +1,25 @@
+{
+ "project": "QTAF",
+ "url": "https://github.com/Tencent/QTAF",
+ "sha": "c9141e8fbdfd89f5f13dd59dfab17f9e8193dcf8",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.49375,
+ "test_file": "tests/test_testbase/test_assert.py",
+ "test_func": "test_assert_failure",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_assert_failure",
+ "collect_tail": "/en/latest/pkg_resources.html\n    import pkg_resources\n\ntestbase/conf.py:45\n  /tmp/gw/QTAF/repo/testbase/conf.py:45: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses\n    import imp\n\ntestbase/testcase.py:144\n  /tmp/gw/QTAF/repo/testbase/testcase.py:144: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: tests/test_testbase/test_assert.py)\n    class TestCase(object):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n5 tests collected in 0.12s\n",
+ "first_run_tail": "/repo/testbase/util.py:26: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n    import pkg_resources\n\ntestbase/conf.py:45\n  /tmp/gw/QTAF/repo/testbase/conf.py:45: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses\n    import imp\n\ntestbase/testcase.py:144\n  /tmp/gw/QTAF/repo/testbase/testcase.py:144: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __init__ constructor (from: tests/test_testbase/test_assert.py)\n    class TestCase(object):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmp5s_pgced.xml -------------------\n5 passed, 3 warnings in 0.09s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 30,
+ "failed": 30,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: False != True : \u91cd\u5199assert\u5931\u8d25\uff0ccode\u5bf9\u8c61\u6ca1\u6709\u6539\u53d8"
+ ],
+ "seconds": 16.2,
+ "reproduced": true
+}

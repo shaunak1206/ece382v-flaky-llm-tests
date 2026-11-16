@@ -1,0 +1,23 @@
+{
+ "project": "CMasher",
+ "url": "https://github.com/1313e/CMasher",
+ "sha": "fccda3b76ac93e089f34be572b984b7718076756",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.52,
+ "test_file": "cmasher/tests/test_utils.py",
+ "test_func": "test_CMasher_cmaps",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements_dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_CMasher_cmaps",
+ "collect_tail": "coverage: platform linux, python 3.8.20-final-0 -----------\nName                  Stmts   Miss  Cover   Missing\n---------------------------------------------------\ncmasher/__init__.py       9      0   100%\ncmasher/cm.py             3      0   100%\ncmasher/utils.py        279    196    30%   45-58, 95-144, 194-261, 324-553, 565-592, 640, 645, 661, 670, 722-731, 783, 789-797, 817, 822-839, 852-862, 896, 956-967, 1046-1077\n---------------------------------------------------\nTOTAL                   291    196    33%\n\n========================= 67 tests collected in 1.46s ==========================\n",
+ "first_run_tail": "39\n---------------------------------------------------\nTOTAL                   291      4    99%\n\n=========================== short test summary info ============================\nFAILED cmasher/tests/test_utils.py::Test_create_cmap_mod::test_standalone_rainforest - ValueError: A colormap named \"cmr.rainforest\" is already registered.\nFAILED cmasher/tests/test_utils.py::Test_import_cmaps::test_cmap_file_jscm - ValueError: Provided colormap 'rainforest_jscm' is invalid! (The 'viscm' package is required to read '.jscm' files!)\nFAILED cmasher/tests/test_utils.py::Test_import_cmaps::test_cmap_file_txt - ValueError: Provided colormap 'rainforest' is invalid! (A colormap named \"cmr.rainforest\" is already registered.)\n================= 3 failed, 64 passed, 3134 warnings in 41.79s =================\n",
+ "collected": 36,
+ "runs": 60,
+ "passed": 60,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 2747.5,
+ "reproduced": false
+}

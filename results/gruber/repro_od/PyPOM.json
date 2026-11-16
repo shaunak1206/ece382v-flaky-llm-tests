@@ -1,0 +1,25 @@
+{
+ "project": "PyPOM",
+ "url": "https://github.com/mozilla/PyPOM",
+ "sha": "9cb84df9d27b428b4e7423d1bbe6502e92990154",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.6785714285714286,
+ "test_file": "tests/test_driver.py",
+ "test_func": "test_register_driver",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto mock] rc=0 ",
+ "test": "test_register_driver",
+ "collect_tail": "table/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest '/tmp/gw/PyPOM/repo/tests/conftest.py'.\ntests/conftest.py:9: in <module>\n    from pypom.selenium_driver import ISelenium\nsrc/pypom/__init__.py:8: in <module>\n    from .selenium_driver import register as registerSelenium\nsrc/pypom/selenium_driver.py:7: in <module>\n    from selenium.webdriver import (\nE   ImportError: cannot import name 'Android' from 'selenium.webdriver' (/tmp/gw/PyPOM/venv/lib/python3.8/site-packages/selenium/webdriver/__init__.py)\n",
+ "first_run_tail": "enium.webdriver' (/tmp/gw/PyPOM/venv/lib/python3.8/site-packages/selenium/webdriver/__init__.py) (from /tmp/gw/PyPOM/repo/tests/conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest '/tmp/gw/PyPOM/repo/tests/conftest.py'.\ntests/conftest.py:9: in <module>\n    from pypom.selenium_driver import ISelenium\nsrc/pypom/__init__.py:8: in <module>\n    from .selenium_driver import register as registerSelenium\nsrc/pypom/selenium_driver.py:7: in <module>\n    from selenium.webdriver import (\nE   ImportError: cannot import name 'Android' from 'selenium.webdriver' (/tmp/gw/PyPOM/venv/lib/python3.8/site-packages/selenium/webdriver/__init__.py)\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "n <module>\n    from selenium.webdriver import (\nE   ImportError: cannot import name 'Android' from 'selenium.webdriver' (/tmp/gw/PyPOM/venv/lib/python3.8/site-packages/selenium/webdriver/__init__.py)\n"
+ ],
+ "seconds": 5.6,
+ "reproduced": false
+}

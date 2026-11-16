@@ -1,0 +1,25 @@
+{
+ "project": "LabIFSC",
+ "url": "https://github.com/gjvnq/LabIFSC",
+ "sha": "cb56b75f51eb54680d0b81f4c87aa0234538a2a8",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.06666666666666667,
+ "test_file": "tests/medida_test.py",
+ "test_func": "test_medida_si_3",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_medida_si_3",
+ "collect_tail": "medida_abs_1\ntests/medida_test.py::test_medida_sub_1\ntests/medida_test.py::test_medida_add_2\ntests/medida_test.py::test_medida_si_1\ntests/medida_test.py::test_medida_si_3\ntests/medida_test.py::test_medida_div_1\ntests/medida_test.py::test_medida_pow_4\ntests/medida_test.py::test_medida_div_2\ntests/medida_test.py::test_medida_repr_1\ntests/medida_test.py::test_medida_eq_1\ntests/medida_test.py::test_medida_eq_3\ntests/medida_test.py::test_medida_eq_4\ntests/medida_test.py::test_medida_pow_2\ntests/medida_test.py::test_medida_array_2\ntests/medida_test.py::test_medida_mul_1\n\n25 tests collected in 0.03s\n",
+ "first_run_tail": "                    raise Exception(\"prefixo desconhecido em '{}'\".format(tok[0]))\n                if base in TODAS_AS_UNIDADES:\n                    u = TODAS_AS_UNIDADES[base]\n                    u.nova_unidade_por_prefixo(prefix)\n                else:\n>                   raise Exception(\"unidade desconhecida em '{}'\".format(tok[0]))\nE                   Exception: unidade desconhecida em 'ft\u00b2'\n\nLabIFSC/geral.py:420: Exception\n------------------- generated xml file: /tmp/tmph9y8pk9x.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/medida_test.py::test_medida_si_3 - Exception: unidade desconhecida em 'ft\u00b2'\nFAILED tests/medida_test.py::test_medida_si_2 - Exception: unidade desconhecida em 'ft\u00b2'\n2 failed, 23 passed in 0.07s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 0,
+ "failed": 60,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "Exception: unidade desconhecida em 'ft\u00b2'"
+ ],
+ "seconds": 15.0,
+ "reproduced": false
+}
