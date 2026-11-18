@@ -258,3 +258,9 @@ human and LLM test functions use it, the share, and which of those flipped.
 ### Generation logs: `results/claude_calls.jsonl`, `results/openai_calls.jsonl`, `logs/`
 One line per generated suite with token usage. `scripts/gen_jobs.py` writes the Progress Report 3 job list and
 runs it with a spend cap; its logs are in `logs/`.
+
+### Interim LLM relabel: `results/root_causes/blind/llm_labels.csv`, `results/root_causes/blind/kappa_llm_labels.json`
+An independent Claude agent labeled the 78 blind records, reading only `sheet.csv`, the category list, and the
+project source (`matched_src/`, `subjects/`). The `labeler` column says so, and `scripts/kappa.py --second
+results/root_causes/blind/llm_labels.csv` copies it into `second_labeler`. This is not the human relabel; that is
+`sheet.csv` -> `kappa.json`.

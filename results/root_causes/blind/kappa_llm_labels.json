@@ -1,0 +1,76 @@
+{
+ "second_labeler": "LLM (an independent Claude agent given only the blind sheet and project source)",
+ "second_file": "results/root_causes/blind/llm_labels.csv",
+ "labeled": 78,
+ "of": 78,
+ "category": {
+  "kappa": 0.822,
+  "agreement": 0.872
+ },
+ "order_dependent": {
+  "kappa": 1.0,
+  "agreement": 1.0
+ },
+ "disagreements": [
+  {
+   "project": "cuckoopy",
+   "test": "test_size_updating_after_insert_and_delete",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_len_tracks_mixed_inserts_and_deletes",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_contains_and_delete_using_custom_items",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_insert_raises_when_full",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_multiple_inserts_and_deletes_consistency",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_delete_only_affects_existing_items",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_delete_keeps_other_items_findable",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_insert_eviction_path",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_many_inserts_remain_findable",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  },
+  {
+   "project": "cuckoopy",
+   "test": "test_delete_does_not_affect_other_fingerprints",
+   "first": "randomness unseeded",
+   "second": "randomness salted hash"
+  }
+ ]
+}

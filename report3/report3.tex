@@ -71,7 +71,7 @@ Goal & Status & Notes \\
 2. Mitigation for every model: guard v3 for the other three models, a measured 3 and 5 run shuffled filter, why M2 broke 3 tests, M1 and M2 on the library study, comparison with an iFixFlakies style fix & Partly & Guard v3 ran for Sonnet, Haiku, and GPT~5.4 mini\PENDING{G2N}. The filters are measured in file order, shuffled, and alternating, for 1, 3, 5, and 10 runs (Table~\ref{tab:krun}). M2 broke no test in the new suites. We have not found why it broke 2 keplertools tests, and the limix-lmm test did not fail in a 20 run rerun. M1 and M2 on the library study and the iFixFlakies~\cite{shi2019} comparison were not done and move to the final report. \\
 3. Order dependent arm, 10 projects (5 if short), generated tests run inside the developer suite & Partly & 17 of 45 reproduced, and 4 suites per model per project ran on their own\PENDING{G3N}. Running them inside the developer suite, the part that tests whether generated tests pollute developer tests, is not done and is next step 3. \\
 4. 40 more time, concurrency, and async wait tests, retrying old dependencies with pinned versions, and stress-ng reruns of the six projects outside randomness & Not met & The rule found only 16 eligible tests, so 40 was not possible, and none reproduced. We did not do the pinned version retry or the stress-ng reruns. Progress Report 2's fallback for fewer than 3 reproduced tests was to run stress-ng instead. We did not follow it, and spent the time on the order dependent arm, which reproduced well. The stress-ng reruns are next step 4. \\
-5. Root causes, and a blind relabel by November 16 with Cohen's kappa & Behind & 62 of the 65 new flaky held out Claude tests have polluter search results (Section~\ref{sec:rootcause3}), and labels are in progress. The blind sheet and \texttt{kappa.py} are ready, but Shaunak's relabel missed November 16. \\
+5. Root causes, and a blind relabel by November 16 with Cohen's kappa & Behind & 62 of the 65 new flaky held out Claude tests have polluter search results (Section~\ref{sec:rootcause3}), and labels are in progress. Shaunak's human relabel missed November 16. As an interim check, an independent LLM labeler on the same blind sheet agrees with Manas's labels at kappa 0.82 (category) and 1.0 (order dependence). \\
 New: test quality after mitigation (Progress Report 2 feedback) & Done & Coverage and mutation score for every plain and guard suite (Tables~\ref{tab:guard3} and~\ref{tab:quality}). \\
 \bottomrule
 \end{tabularx}
@@ -100,7 +100,7 @@ The final report targets were at least 40 suites with a kept flaky test from at 
 The final report is due December 12. In priority order:
 \begin{enumerate}
 \item \textbf{Finish the held out analysis (Shaunak, by November 22).} Diagnose the GPT held out flaky tests, run the polluter search on the remaining tests, and report the failure rate of the flaky tests each mitigation leaves, which Progress Report 2 promised.
-\item \textbf{Root causes and agreement (Manas, by November 25; Shaunak's relabel by November 22).} Label every new flaky test. Report Cohen's kappa on the 78 blind records, and separately on new held out tests that Shaunak has not written about, since his relabel of the old ones is not fully blind.
+\item \textbf{Root causes and agreement (Manas, by November 25; Shaunak's relabel by November 22).} Label every new flaky test. Report the human Cohen's kappa on the 78 blind records next to the interim LLM kappa, and separately on new held out tests that Shaunak has not written about, since his relabel of the old ones is not fully blind.
 \item \textbf{Order dependent arm inside the developer suite (Manas and Shaunak, by November 29).} Run each generated suite inside the project's developer suite in shuffled orders, to test whether generated tests become polluters of developer tests, which Progress Report 2 promised.
 \item \textbf{Stress and the remaining mitigation work (Shaunak, by December 2).} The library study already runs a quarter of its runs under stress-ng, so the fallback of Progress Report 2 is most useful on the six known flaky code projects outside randomness, which we will rerun under the same stress-ng configurations. Run M1 and M2 on the library study suites, confirm the kindle-maker mechanism and add a temporary directory reset to M2, and compare with an iFixFlakies~\cite{shi2019} style cleaner that runs a test from the same suite.
 \item \textbf{Writing (both, by December 10).} Manas writes related work and the root cause section, Shaunak the setup, results, and threats. Section~\ref{sec:setup} is our first draft of the setup.
@@ -118,7 +118,7 @@ The final report is due December 12. In priority order:
 \item \texttt{heldout\_stats.py} (the frozen test) and \texttt{heldout\_summary.py}.
 \item \texttt{e2\_quality.py} (coverage and mutation, also with fixtures) and \texttt{quality\_summary.py}.
 \item \texttt{krun\_measured.py}, \texttt{feature\_flakiness.py}, and \texttt{feature\_flakiness\_matched.py}.
-\item Filters for \texttt{od\_diagnose.py}, and \texttt{kappa.py} with the blind sheet.
+\item Filters for \texttt{od\_diagnose.py}, and \texttt{kappa.py} with the blind sheet, which reads who made the second labels from the label file.
 \end{itemize}
 
 \section{Code, data, and documentation}
