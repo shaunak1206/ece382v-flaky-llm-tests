@@ -199,3 +199,62 @@ From `scripts/humanize_reset_check.py`. `as_generated` and `with_reset_fixture` 
 `tests`, and `flaky` (the PL-G4 humanize tests that flipped), with and without a fixture that calls
 `humanize.i18n.deactivate()` around every test.
 
+
+## Progress Report 3 additions
+
+### Held out sample: `matched/<project>/<model>_heldout_<k>/`, `results/matched_heldout/<project>.json`
+Eight new plain suites per model and project (k = 1..8), all four models through one pasted source pipeline
+(`scripts/gen_openai.py matched <project> <model> <k> heldout`; Claude models through `claude -p` with no tools).
+`<model>_heldoutseed_<k>` and `<model>_heldoutiso_<k>` are the same tests with fixture M1 and M2 added
+(`scripts/make_seed_suites.py heldout`). Result files have the `matched_run.py` format, merged from several CI
+runs with `scripts/merge_results.py` (later runs' human controls are under `merged_human`).
+`results/heldout_stats.json` is the frozen sign test of commit 7c05b6b run on these suites only
+(`scripts/heldout_stats.py`), with `preregistered.significant_pairs` at alpha 0.05/6.
+`results/heldout_summary.json` (`scripts/heldout_summary.py`): `groups` per model and condition (suites,
+not_imported, generated, kept, flaky_kept, removed_flaky, suites_with_flaky, projects_with_flaky, shuffle_only),
+`fixture_cost` per fixture (flaky before, still flaky, not flaky after, and `<model>_broken` = stable tests that fail
+every run with the fixture; the list is in `broken`), and `flaky`, every kept flaky test with its file order and
+shuffled failure counts and first failure message. It also covers the guard v3 Claude suites and the order
+dependent arm (conditions od, odseed, odiso).
+
+### Claude guard v3: `matched/<project>/{sonnet,haiku}_guard3_<k>/`, `results/matched_guard3cl/`
+Two guard v3 suites per Claude model and project, same pipeline as the held out sample, 200 runs.
+
+### Order dependent arm: `results/gruber/candidates_od.csv`, `results/gruber/repro_od/`, `results/gruber/matched_projects_od.txt`, `results/matched_od/`
+`scripts/select_od.py` picks the candidates, `gruber_reproduce.py --shuffle-file` reproduces them (whole test file
+in a new random order per run, up to 60 runs), the 17 that reproduced are listed in `matched_projects_od.txt`,
+their targets are in `matched/targets.json` (hand checked; `matched_src/<project>.targets.json` has the automatic
+output), and `results/matched_od/` has the 200 run results of 4 suites per model plus M1 and M2 copies.
+In `matched_od` the `human` block runs the developer test alone, so victims always pass and brittles always fail.
+
+### Time batch: `results/gruber/candidates_time.csv`, `results/gruber/repro_time/`
+`scripts/select_time.py`; 16 eligible, none reproduced.
+
+### Run order sequences: `results/matched_seq/<project>.json`
+A 200 run rerun of the plain and GPT 4.1 mini guard suites of the 14 projects with flaky suites. Each test now has
+`sequence` (one letter per run in run order: P pass, F fail, E error, S skip, - not collected; even runs are file
+order, odd runs shuffled) and `first_message`. `results/krun_measured.json` (`scripts/krun_measured.py`) gives,
+for every flaky test, whether a 1, 3, 5, or 10 run filter keeps it, in file order only and in the mixed order.
+
+### Test quality: `results/quality*/<project>.json`, `results/quality_summary*.json`
+`scripts/e2_quality.py` (workflow `e2-quality`): `target_files`, `mutant_pool`, `mutants` (the fixed sample,
+seeded by the project name, at most 40), and per suite `tests`, `passing` (clean file order run), `covered`,
+`statements`, `coverage` (line coverage of the target files, %), `mutants` run, `killed`, `timeouts`, `score`.
+`results/quality/`: plain suites of all four models and the GPT 4.1 mini guard suites. `results/quality_guard3cl/`:
+Claude held out samples 1-2 and guard v3. `results/quality_od/`: order dependent arm. `scripts/quality_summary.py`
+pools them per model and prompt (a suite with no kept test counts as 0 killed).
+
+### Features: `results/feature_flakiness.json`
+`scripts/feature_flakiness.py` joins `characterize.json` with the library study flaky list: per feature, how many
+human and LLM test functions use it, the share, and which of those flipped.
+
+### Polluter search on held out tests: `results/od_diagnose_heldout/<project>.json`
+`od_diagnose.py --results matched_heldout --suites '*_heldout_*'`, same format as `results/od_diagnose/`.
+
+### Blind relabel: `results/root_causes/blind/sheet.csv`, `scripts/kappa.py`
+78 labeled tests in shuffled order with the model and label hidden. Fill `your_category` and
+`your_order_dependent`, then `python scripts/kappa.py` writes `results/root_causes/blind/kappa.json`.
+
+### Generation logs: `results/claude_calls.jsonl`, `results/openai_calls.jsonl`, `logs/`
+One line per generated suite with token usage. `scripts/gen_jobs.py` writes the Progress Report 3 job list and
+runs it with a spend cap; its logs are in `logs/`.

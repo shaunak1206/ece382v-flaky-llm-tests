@@ -1,0 +1,70 @@
+\section{Experimental setup (first draft for the final report)}
+\label{sec:setup}
+
+\subsection{Research questions and the two studies}
+We answer the four research questions of our proposal.
+\begin{description}
+\item[RQ1, prevalence.] How often are LLM written unit tests flaky, compared with developer written tests of the same code?
+\item[RQ2, root causes.] Why do the flaky LLM tests flip?
+\item[RQ3, risky features.] Do the features of a test that are known to cause flakiness (randomness, the clock, sleeps, concurrency, shared state) tell which tests flip?
+\item[RQ4, mitigation.] Can a cheap step in the generate and filter pipeline remove the flaky tests, and what does it cost in test quality?
+\end{description}
+Two studies feed these questions. They differ in what is held fixed, so we keep them separate.
+\begin{itemize}
+\item \textbf{The library study} asks whether LLM tests are flaky on ordinary code. It uses 12 popular Python libraries, the developer suite of each, and eight generation conditions (Table~\ref{tab:conds}).
+\item \textbf{The known flaky code study} asks whether LLM tests are flaky where flakiness is likely. It uses 41 projects in which Gruber et al.~\cite{gruber2021} found a flaky developer test, and asks four models to test the same code that test exercises.
+\end{itemize}
+\begin{table}[h]
+\caption{Generation conditions of the library study. All generation is one shot with no test execution, except AG-S. Codes: AG agent, OS one shot, TP TestPilot style, PL plain; S Sonnet, H Haiku, G5 GPT~5.4 mini, G4 GPT~4.1 mini.}
+\label{tab:conds}
+\small
+\begin{tabularx}{\columnwidth}{lXl}
+\toprule
+Code & Model & Prompt \\
+\midrule
+Human & library developers & none \\
+AG-S & Claude Sonnet 5, agent that runs and fixes its tests & feature \\
+OS-S & Claude Sonnet 5.5 & feature \\
+OS-H & Claude Haiku 4.5 & feature \\
+TP-S & Claude Sonnet 5.5 & TestPilot style \\
+PL-S & Claude Sonnet 5.5 & plain \\
+PL-G5 & GPT 5.4 mini (OpenAI) & plain \\
+PL-G4 & GPT 4.1 mini (OpenAI) & plain \\
+\bottomrule
+\end{tabularx}
+\end{table}
+The \emph{feature} prompt names the time, randomness, thread, and file features of each library so the model tests them. The \emph{TestPilot style} prompt shows only signatures, docstrings, and README examples, as the TestPilot generator does~\cite{schafer2024}. The \emph{plain} prompt only asks for pytest unit tests of the given source.
+
+Both studies use the same definitions, the same root cause method, and the same analysis. They use different run protocols because they measure different things (Section~\ref{sec:collect}).
+
+\subsection{Subjects}
+\textbf{Library study.} We took the 5,000 most downloaded PyPI packages and kept libraries (no stubs or pytest plugins) that link a GitHub repository, ship a pure Python wheel, need at most three dependencies, run on Python 3.12, and have test files (1,959 left). We split them by whether the library imports \texttt{time}, \texttt{random}, \texttt{threading}, or \texttt{asyncio}, because nondeterminism enters through those modules, and oversample that stratum on purpose. Our 12 libraries pass every rule, with 10 in the first stratum and 2 controls.
+
+\textbf{Known flaky code study.} A project enters if its flaky developer test reproduces on our runner, which means it both passes and fails in up to 150 runs at the commit Gruber et al.\ recorded, in a fresh Python 3.8 environment. Candidates come from three fixed rules, each written before any run.
+\begin{enumerate}
+\item The 58 hand labeled tests of Gruber et al.\ that are not order dependent and not caused by the network (17 projects used).
+\item One unlabeled test per remaining project, preferring tests not marked as infrastructure and with a failure rate near one half, and dropping names that point to the network (\texttt{scripts/select\_ext.py}, 24 projects used).
+\item Two batches added after Progress Report 2, both by rules fixed before any run. The time batch takes one time, concurrency, or async wait test per project that was not tried before (\texttt{select\_time.py}, 16 eligible). The order dependent batch takes one test per project that Gruber et al.\ mark as order dependent (\texttt{select\_od.py}, first 45 of 499 eligible projects by name). An order dependent test reproduces if it both passes and fails when its whole test file runs in a new random order in each of up to 60 runs (\texttt{gruber\_reproduce.py --shuffle-file}).
+\end{enumerate}
+The first two rules give the 41 projects of the main known flaky code study. The order dependent batch gives a separate \emph{order dependent arm} of 17 projects that we analyze apart, because those projects flip for a different reason.
+We drop a test that needs the network, a download, or special hardware.
+
+\subsection{Test generation}
+Every model writes tests one shot, with no execution, except the agentic condition AG-S. The prompts are in \texttt{prompts/README.md}. The plain prompt is a source only baseline that approximates a simple developer request, and we did not observe how developers actually prompt. In the known flaky code study every model gets the plain prompt with the target source files pasted in, and is told which code to test. The first two suites per model came from two pipelines (Claude Code subagents for the Claude models, the API for the OpenAI models). The held out sample (Section~\ref{sec:heldout}) puts every model through one pipeline, with Claude models called through \texttt{claude -p} with every tool turned off, no project settings, and the source pasted into the prompt exactly as for the OpenAI API. The order dependent arm uses the same pipeline, four suites per model. In both, each suite is a fresh call with no memory of earlier suites.
+
+\subsection{Running tests and collecting results}
+\label{sec:collect}
+Every run is a fresh pytest process with a new \texttt{PYTHONHASHSEED}, and every result comes from pytest's JUnit report. A test is \emph{flaky} if it both passed and failed on the same machine. A generated test is \emph{kept} if it passes the first run of its suite, which is the one run filter of TestPilot~\cite{schafer2024}. It is \emph{removed} if it fails that run, or if it only flips after a removed test.
+\begin{itemize}
+\item \textbf{Library study.} The question is how often a test flips under common sources of nondeterminism, so every run shuffles the order with pytest-randomly. Each generated test runs 600 times: 300 with only the shuffle and hash seed, 150 that also set the time zone, cycling through 10 fixed zones by run index, and 150 under stress-ng load, cycling through 10 fixed CPU and memory configurations sampled once with a fixed seed, as Shaker~\cite{silva2020} does. Developer suites are about five times larger, so their tests run 200 times with the same 2:1:1 split. All runs use 2 vCPU GitHub Actions Linux runners.
+\item \textbf{Known flaky code study.} The question is whether a generate and filter pipeline would ship a flaky test, and that pipeline runs the file in its written order. So run $i$ of 200 keeps the file order without pytest-randomly when $i$ is even and shuffles with seed $7000+i$ when $i$ is odd. Comparing the two halves separates order dependent tests from the rest. Because these projects are already known to flip without load, there is no time zone or load mode. The flaky developer test runs 200 times next to the generated suites as a control. We record every outcome in run order, so filters with $k$ extra runs can be measured directly.
+\end{itemize}
+
+\subsection{Root causes}
+Each flaky test gets a category from Luo et al.~\cite{luo2014} and Gruber et al.~\cite{gruber2021}, based on the test, the code it calls, and a reproduction of the failure. For every flaky test in the known flaky code study we also rerun the test alone 30 times and, if it never fails alone, run every other test of its suite before it, as iDFlakies~\cite{lam2019} does, to find its polluter. Manas labels and Shaunak labels the same tests blind (without the model or the first label), and we report Cohen's kappa.
+
+\subsection{Mitigation and test quality}
+We study two kinds of mitigation. \emph{Fixtures} patch the generated suite after generation and leave the tests unchanged. M1 seeds every generator inside each test call. M2 also imports the project once at session start and restores interpreter state after each test. \emph{Prompts} change the generation itself. Guard v1 lists the usual causes of flakiness. Guard v2 adds three rules we derived from the root causes of the flaky tests that guard v1 still produced, and guard v3 narrows the seeding rule after v2 made suites fail to import. Both fixtures and the guard prompts were derived from the first 17 projects, so we evaluate them on tests and projects they were not built on (Section~\ref{sec:heldout}). For every suite we also measure quality, so a mitigation cannot win by deleting tests. We report the kept tests, the line coverage of the target files with pytest-cov, and a mutation score. The mutation score uses one fixed set of up to 40 single token mutants per project (comparison and arithmetic operators, \texttt{and}/\texttt{or}, numeric constants, booleans, and return values), sampled with a seed, so every suite of a project faces the same mutants (\texttt{scripts/e2\_quality.py}).
+
+\subsection{Analysis}
+Flaky tests cluster within suites and projects, so we compare models on suites and projects, not on tests. The main test is an exact sign test on the projects in which only one of two models has a kept flaky test, with a Bonferroni correction for six model pairs ($p < 0.0083$). For the held out sample this test was fixed in Progress Report 2 and is run unchanged from commit \texttt{7c05b6b} (\texttt{scripts/heldout\_stats.py}). Rates come with 95\% Wilson intervals.

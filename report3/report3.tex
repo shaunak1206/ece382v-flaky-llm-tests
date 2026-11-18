@@ -1,0 +1,99 @@
+\documentclass[sigconf,nonacm]{acmart}
+\settopmatter{printacmref=false, printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\newcommand{\PENDING}[1]{\textbf{[#1]}}
+\begin{document}
+\sloppy
+
+\title{Are LLM Written Unit Tests Flaky?}
+\subtitle{Progress Report 3, ECE 382V Software Testing in the Era of Nondeterminism, Fall 2026}
+\author{Shaunak Kapur (sk62288)}
+\affiliation{\institution{The University of Texas at Austin}\city{Austin}\state{Texas}\country{USA}}
+\author{Manas Pathak (map7848)}
+\affiliation{\institution{The University of Texas at Austin}\city{Austin}\state{Texas}\country{USA}}
+\maketitle
+
+%SUMMARY%
+
+\section{Response to the Progress Report 2 feedback}
+Table~\ref{tab:response} answers each comment.
+
+\begin{table*}[t]
+\caption{Each comment on Progress Report 2 and what we changed}
+\label{tab:response}
+\small
+\begin{tabularx}{\textwidth}{p{5.2cm}X}
+\toprule
+Comment & What we did \\
+\midrule
+The E1, E2, E3 labels were hard to follow and the parts are conceptually different. Write in numbered order. & We dropped the labels. The report now follows the four research questions of the proposal (RQ1 to RQ4) and names the two studies by what they hold fixed, the \emph{library study} and the \emph{known flaky code study}. Section~\ref{sec:setup} is a paper style first draft of the experimental setup. \\
+Explain the different run modes, and make ``some runs'' concrete. & Section~\ref{sec:collect} gives each study's protocol exactly: the library study runs 300 shuffled runs, 150 with one of 10 fixed time zones, and 150 under one of 10 fixed stress-ng configurations; the known flaky code study alternates file order (even runs) and shuffled order (odd runs, seed $7000+i$) for 200 runs. It also says why the two differ. \\
+The feature table looked only at order dependence. Add randomness and concurrency, and show whether human tests use these features and stay stable. & Table~\ref{tab:features} now covers randomness, time, concurrency, and shared state, and for each gives how many human and LLM test functions use it and how many of those flipped (Section~\ref{sec:rq3}). \\
+Do the mitigations patch tests or improve generation? How were the prompts derived, and does that bias the evaluation? & Fixtures patch a suite after generation, prompts change generation (Section~\ref{sec:rq4}). Both were derived on the first 17 projects with GPT~4.1 mini, so we now test them on suites they were not built on: the fixtures on 656 new held out suites and 136 order dependent arm suites, and guard v3 on two new models (Section~\ref{sec:rq4}). \\
+Measure quality after mitigation, for example coverage and mutation score. & New: line coverage and a fixed mutation set per project for every plain and guard suite (Table~\ref{tab:quality}). The guard prompts cost quality, mostly through suites that no longer import. \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\input{setup}
+
+\input{results}
+
+\section{Milestone goals and status}
+Table~\ref{tab:goals} lists the five steps Progress Report 2 promised for this milestone, plus the check point rules it set.
+
+\begin{table*}[t]
+\caption{Goals for this milestone, from the next steps of Progress Report 2}
+\label{tab:goals}
+\small
+\begin{tabularx}{\textwidth}{p{5.6cm}p{1.6cm}X}
+\toprule
+Goal & Status & Notes \\
+\midrule
+1. Held out sample: 8 new plain suites per model for the 41 projects in one pipeline, run plain, with M1, and with M2, analyzed with the frozen sign test & \PENDING{G1S} & \PENDING{G1N} \\
+2. Mitigation for every model: guard v3 for the other three models, a measured 3 and 5 run filter, why M2 broke 3 tests, M1 and M2 on the library study & Mostly done & Guard v3 ran for Sonnet and Haiku\PENDING{G2N}. The rerun filters are now measured from outcome sequences. M2 broke no held out test, but the keplertools cause is still unknown. M1 and M2 on the library study and the comparison with an iFixFlakies style fix moved to the final report. \\
+3. Order dependent arm, 10 projects (5 if short) & Done & 17 of 45 reproduced. 4 suites per model per project\PENDING{G3N}. We ran the generated suites on their own. Running them inside the developer suite, to see if they pollute developer tests, is a next step. \\
+4. 40 more time, concurrency, and async wait tests & Done, no yield & Only 16 passed the rule and none reproduced. By the check point rule we did not run stress-ng on the library study instead, because the order dependent arm took the time. \\
+5. Root causes and a blind relabel with Cohen's kappa & In progress & The blind sheet (78 tests) and \texttt{kappa.py} are ready for Shaunak's relabel. The new flaky tests have polluter search results and go to Manas for labels. \\
+New: test quality after mitigation (Progress Report 2 feedback) & Done & Coverage and mutation score for every plain and guard suite (Tables~\ref{tab:guard3} and~\ref{tab:quality}). \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+The final report target was at least 40 suites with a kept flaky test from at least three models, and at least 8 projects outside randomness. We now have \PENDING{SUITECOUNT}, so the first target is met. The second is not, because the time batch reproduced nothing, and we report that as a limit.
+
+\section{Challenges}
+\label{sec:challenges3}
+\begin{itemize}
+\item \textbf{Reproduction yield.} 0 of 16 time tests reproduced, while 17 of 45 order dependent tests did. Old time tests mostly fail at collection on dependencies that no longer install.
+\item \textbf{Credentials.} The Claude CLI login and the OpenAI key both expired during the milestone, which delayed the GPT half of the held out sample by about two days. All generation now runs through a job runner that skips finished suites and stops at a spending cap (\texttt{scripts/gen\_jobs.py}).
+\item \textbf{Slow projects.} The PyTorch projects take close to the four hour limit of a GitHub job for 16 suites of 200 runs.
+\item \textbf{The M2 keplertools failure.} Two stable tests compute an eccentricity of 0 through \texttt{np.sqrt(1.0 - p/a)}, which gives NaN when rounding makes the argument slightly negative. Under M2 this happens on the Linux runners and not on our laptop. The project has no fast math build flags, so we have not found what M2 changes.
+\item \textbf{File system state.} The kindle-maker tests show that a test can depend on order through files a previous test left behind, which neither our pairwise polluter search nor M2 sees.
+\end{itemize}
+
+\section{Next steps toward the final report}
+\label{sec:next3}
+The final report is due December 12. In priority order:
+\begin{enumerate}
+\item \textbf{Finish the held out analysis (Shaunak, by November 22).} \PENDING{NEXT1}
+\item \textbf{Root causes and agreement (Manas, by November 25; Shaunak's relabel by November 22).} Label every new flaky test, and report Cohen's kappa on the blind sheet.
+\item \textbf{Order dependent arm inside the developer suite (Manas and Shaunak, by November 29).} Run each generated suite inside the project's developer suite in shuffled orders, to test whether generated tests become polluters of developer tests, which Progress Report 2 promised.
+\item \textbf{Fixtures on the library study and a file system restore (Shaunak, by December 2).} Run M1 and M2 on the library study suites, add a temporary directory reset to M2 for the kindle-maker case, and compare with an iFixFlakies style cleaner.
+\item \textbf{Writing (both, by December 10).} Manas writes related work and the root cause section, Shaunak the setup, results, and threats. Section~\ref{sec:setup} is our first draft of the setup.
+\end{enumerate}
+
+\textbf{Division of work.} Since Progress Report 2, Shaunak built the held out pipeline, generated and ran the held out, guard v3, and order dependent arm suites, wrote the quality, feature, and rerun filter analyses, and wrote this report. \PENDING{MANAS}
+
+\section{Code, data, and documentation}
+\label{sec:code}
+Everything is in the public repository \url{https://github.com/shaunak1206/ece382v-flaky-llm-tests}, with this report's results at commit \texttt{\PENDING{COMMIT}}. \texttt{docs/DATA.md} describes every result file. The held out analysis is \texttt{python scripts/heldout\_stats.py} (the frozen sign test) and \texttt{python scripts/heldout\_summary.py}, the quality tables \texttt{python scripts/quality\_summary.py}, the rerun filters \texttt{python scripts/krun\_measured.py}, and the feature table \texttt{python scripts/feature\_flakiness.py}, all offline from the committed results.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{refs}
+
+\end{document}
