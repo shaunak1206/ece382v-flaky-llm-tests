@@ -1,6 +1,61 @@
 {
  "project": "cuckoopy",
  "install_ok": true,
- "tests": [],
- "seconds": 3.8
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_bucket_insert_called_with_correct_fingerprint",
+   "alone_varied_fail": 12,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_delete_reduces_size_correctly_when_multiple_items",
+   "alone_varied_fail": 6,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_delete_decrements_size_only_if_deleted",
+   "alone_varied_fail": 8,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_insert_when_bucket_inserts_directly",
+   "alone_varied_fail": 13,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_insert_when_swap_and_reinsert",
+   "alone_varied_fail": 11,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_contains_reflects_removed_item_but_preserves_other_inserted_items",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  }
+ ],
+ "seconds": 47.3
 }

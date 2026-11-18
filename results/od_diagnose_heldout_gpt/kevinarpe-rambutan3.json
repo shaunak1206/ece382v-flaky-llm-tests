@@ -1,6 +1,45 @@
 {
  "project": "kevinarpe-rambutan3",
  "install_ok": true,
- "tests": [],
- "seconds": 3.4
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_RNotNoneTypeMatcher_eq_and_hash",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 13,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_RNotNoneTypeMatcher_hash_consistent",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 15,
+   "polluters": [
+    "test_INT_matches_with_custom_class_subclassing_int"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_RNotNoneTypeMatcher_eq_and_hash",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_rnotnonetypematcher_hash_and_str",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [],
+   "verdict": "unknown"
+  }
+ ],
+ "seconds": 55.9
 }

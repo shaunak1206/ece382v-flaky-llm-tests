@@ -33,3 +33,10 @@
 44250415150 matched-study spreading_dye_sampler gpt heldout/seed/iso 5-8 without gpt54mini_*_7 (test appends to the list it iterates: never ends, runner OOM) -> results/matched_heldout
 44250613347 od-diagnose GPT held out plain flaky tests, 14 projects (spreading_dye_sampler after its rerun) -> results/od_diagnose_heldout_gpt
 44250627004 od-diagnose GPT order dependent arm plain flaky tests, 5 projects -> results/od_diagnose_od_gpt
+44254559363 od-diagnose spreading_dye_sampler GPT held out plain -> results/od_diagnose_heldout_gpt
+44254605384 od-diagnose GPT held out plain flaky, 14 projects (redo: 44250613347 ran before the results were pushed and found no tests) -> results/od_diagnose_heldout_gpt
+44422876440 matched-study OD arm gpt ReactOBus, all 24 GPT suites, non terminating rule -> results/matched_od
+44422965780 e2-quality fixtures data-partitioner gpt*_heldoutseed_[12],gpt*_heldoutiso_[12] (first run hit the 5 h limit) -> results/quality_fixtures (join)
+44422983697 e2-quality fixtures data-partitioner haiku_heldoutseed_[12],haiku_heldoutiso_[12],sonnet_heldoutseed_[12],sonnet_heldoutiso_[12] (first run hit the 5 h limit) -> results/quality_fixtures (join)
+44423102878 matched-study spreading_dye_sampler gpt54mini heldout/seed/iso 7 retry with non terminating rule -> results/matched_heldout
+44423160055 od-diagnose uhashring GPT held out -> results/od_diagnose_heldout_gpt

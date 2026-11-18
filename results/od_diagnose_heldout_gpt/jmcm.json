@@ -1,6 +1,316 @@
 {
  "project": "jmcm",
  "install_ok": true,
- "tests": [],
- "seconds": 18.2
+ "tests": [
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_import_exposes_module_name",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal",
+    "test_import_after_failure_still_works",
+    "test_missing_dependency_does_not_leak_partial_module",
+    "test_missing_dependency_raises_importerror[collections]",
+    "test_missing_dependency_raises_importerror[math]",
+    "test_missing_dependency_raises_importerror[numpy]",
+    "test_missing_dependency_raises_importerror[warnings]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_import_exports_jointmodel",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal",
+    "test_import_after_failure_still_works",
+    "test_missing_dependency_does_not_leak_partial_module",
+    "test_missing_dependency_raises_importerror[collections]",
+    "test_missing_dependency_raises_importerror[math]",
+    "test_missing_dependency_raises_importerror[numpy]",
+    "test_missing_dependency_raises_importerror[warnings]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_jointmodel_matches_submodule_class",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal",
+    "test_import_after_failure_still_works",
+    "test_missing_dependency_does_not_leak_partial_module",
+    "test_missing_dependency_raises_importerror[collections]",
+    "test_missing_dependency_raises_importerror[math]",
+    "test_missing_dependency_raises_importerror[numpy]",
+    "test_missing_dependency_raises_importerror[warnings]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_jointmodel_is_class_like",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal",
+    "test_import_after_failure_still_works",
+    "test_missing_dependency_does_not_leak_partial_module",
+    "test_missing_dependency_raises_importerror[collections]",
+    "test_missing_dependency_raises_importerror[math]",
+    "test_missing_dependency_raises_importerror[numpy]",
+    "test_missing_dependency_raises_importerror[warnings]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_module_allows_reimport",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal",
+    "test_import_after_failure_still_works",
+    "test_missing_dependency_does_not_leak_partial_module",
+    "test_missing_dependency_raises_importerror[collections]",
+    "test_missing_dependency_raises_importerror[math]",
+    "test_missing_dependency_raises_importerror[numpy]",
+    "test_missing_dependency_raises_importerror[warnings]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_private_helper_names_not_kept",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal",
+    "test_import_after_failure_still_works",
+    "test_missing_dependency_does_not_leak_partial_module",
+    "test_missing_dependency_raises_importerror[collections]",
+    "test_missing_dependency_raises_importerror[math]",
+    "test_missing_dependency_raises_importerror[numpy]",
+    "test_missing_dependency_raises_importerror[warnings]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[math]",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[numpy]",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[pandas]",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal",
+    "test_import_after_failure_still_works",
+    "test_missing_dependency_does_not_leak_partial_module",
+    "test_missing_dependency_raises_importerror[collections]",
+    "test_missing_dependency_raises_importerror[math]",
+    "test_missing_dependency_raises_importerror[numpy]",
+    "test_missing_dependency_raises_importerror[warnings]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[scipy]",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal",
+    "test_import_after_failure_still_works",
+    "test_missing_dependency_does_not_leak_partial_module",
+    "test_missing_dependency_raises_importerror[collections]",
+    "test_missing_dependency_raises_importerror[math]",
+    "test_missing_dependency_raises_importerror[numpy]",
+    "test_missing_dependency_raises_importerror[warnings]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[warnings]",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_does_not_leak_partial_module",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "None",
+    "internal"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_import_jmcm_succeeds",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_module_name_variable_is_set",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_jointmodel_is_exported_from_package",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_jointmodel_is_a_class",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_from_import_matches_package_attribute",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_jointmodel_origin_is_jmcm_joint_model_module",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_imported_jointmodel_has_a_name_attribute",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_package_does_not_leave_dependency_list_globals_around",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_reimport_after_removal_gives_access_to_jointmodel_again",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_raises_if_a_hard_dependency_is_missing",
+    "test_import_raises_if_math_is_missing"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_import_raises_if_math_is_missing",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [],
+   "verdict": "unknown"
+  }
+ ],
+ "seconds": 1038.1
 }

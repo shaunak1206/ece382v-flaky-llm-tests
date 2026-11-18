@@ -1,6 +1,118 @@
 {
  "project": "event-bus",
  "install_ok": true,
- "tests": [],
- "seconds": 3.8
+ "tests": [
+  {
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_eventbus_is_reexported_from_package",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_package_import_uses_bus_eventbus_from_sys_modules",
+    "test_star_import_respects_all"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_package_eventbus_name_is_class_like",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_package_import_uses_bus_eventbus_from_sys_modules",
+    "test_star_import_respects_all"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_import_eventbus_directly_from_package_namespace",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_package_import_uses_bus_eventbus_from_sys_modules",
+    "test_star_import_respects_all"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_package_eventbus_is_class_or_type_like",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_reload_package_keeps_all_constant",
+    "test_reload_package_keeps_version_constant",
+    "test_reload_package_rebinds_eventbus_from_bus_module"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_eventbus_export_matches_bus_module_symbol",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_reload_package_keeps_all_constant",
+    "test_reload_package_keeps_version_constant",
+    "test_reload_package_rebinds_eventbus_from_bus_module"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_eventbus_is_same_as_bus_module_class",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reimporting_bus_module_preserves_eventbus_identity"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_eventbus_can_be_imported_via_from_import",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_reimporting_package_preserves_eventbus_identity",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reimporting_bus_module_preserves_eventbus_identity"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_import_star_respects_all",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_package_eventbus_attribute_matches_direct_import",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [],
+   "verdict": "unknown"
+  }
+ ],
+ "seconds": 127.8
 }

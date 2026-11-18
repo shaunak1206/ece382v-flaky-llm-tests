@@ -1,6 +1,107 @@
 {
  "project": "fistro",
  "install_ok": true,
- "tests": [],
- "seconds": 3.5
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_int_generator_returns_int_and_within_expected_range",
+   "alone_varied_fail": 20,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_generate_as_dict_returns_dict_of_correct_keys",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_generate_with_custom_generators_overrides_factory",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_generate_creates_instance_with_field_values",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 20,
+   "polluters": [
+    "test_all_fields_of_generated_class_are_dataclass_fields"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_generate_with_as_dict_and_as_json_both_true_prefers_as_dict",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 20,
+   "polluters": [
+    "test_generate_from_json_field_default_factory_consistency"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_datetime_generator_returns_datetime_and_values_in_range",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_datetime_generator_returns_datetime_in_range",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 21,
+   "polluters": [
+    "test_generate_from_json_creates_dataclass",
+    "test_inner_inspection_with_dict",
+    "test_int_list_generator_has_given_length[1]"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_date_generator_returns_date_in_range",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 21,
+   "polluters": [
+    "test_inner_inspection_with_list_of_empty_list"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_generate_as_dict_returns_correct_dict",
+   "alone_varied_fail": 8,
+   "alone_fixed_fail": 4,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_generate_as_json_returns_valid_json",
+   "alone_varied_fail": 13,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  }
+ ],
+ "seconds": 89.8
 }

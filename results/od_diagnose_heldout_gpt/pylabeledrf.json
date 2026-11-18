@@ -1,6 +1,56 @@
 {
  "project": "pylabeledrf",
  "install_ok": true,
- "tests": [],
- "seconds": 3.9
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_mutateLabeledTree_no_modifies_input",
+   "alone_varied_fail": 14,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_computeLRF_identical_trees_zero_distance",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [
+    "test_computeLRF_raise_unequal_number_of_islands"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_computeLRF_no_goodedges_single_island",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [
+    "test_computeLRF_raise_unequal_number_of_islands"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_mutateLabeledTree_returns_new_tree_not_same_object",
+   "alone_varied_fail": 4,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_mutateLabeledTree_multiple_edits",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 4,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  }
+ ],
+ "seconds": 60.1
 }

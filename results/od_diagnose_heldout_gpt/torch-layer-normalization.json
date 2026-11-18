@@ -1,6 +1,25 @@
 {
  "project": "torch-layer-normalization",
  "install_ok": true,
- "tests": [],
- "seconds": 27.6
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_forward_with_non_flat_normalized_shape",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_forward_with_higher_dimensional_input",
+   "alone_varied_fail": 3,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  }
+ ],
+ "seconds": 116.4
 }

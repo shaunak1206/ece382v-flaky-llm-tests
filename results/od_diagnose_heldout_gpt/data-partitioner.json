@@ -1,6 +1,115 @@
 {
  "project": "data-partitioner",
  "install_ok": true,
- "tests": [],
- "seconds": 2.9
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_multiple_calls_to_training_and_test_set_continue_iteration",
+   "alone_varied_fail": 6,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_yield_set_handles_two_calls_interleaved",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_yield_set_produces_correct_number_of_elements",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_multiple_calls_to_training_set_resume_iteration_properly",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_training_and_test_sets_are_generators_and_lazy",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_yield_set_multiple_generators_progress_separately",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_partition_ratios_approximate_training_percent",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_yield_set_generator_does_not_stop_early",
+   "alone_varied_fail": 18,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_yield_set_generator_handles_new_indexes_appended_on_the_fly",
+   "alone_varied_fail": 11,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_partitioning_totals_add_up[0.5]",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_repeated_calls_to_test_set_continue_to_yield_empty_after_first_iter",
+   "alone_varied_fail": 19,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_training_percent_near_one_splits_data_almost_all_training",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [],
+   "verdict": "unknown"
+  }
+ ],
+ "seconds": 76.1
 }

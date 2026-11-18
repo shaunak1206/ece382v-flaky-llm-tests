@@ -1,6 +1,116 @@
 {
  "project": "pelicun",
  "install_ok": true,
- "tests": [],
- "seconds": 7.9
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_tmvn_MLE_fit_univariate_normal",
+   "alone_varied_fail": 6,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_tmvn_MLE_fit_univariate_truncated",
+   "alone_varied_fail": 8,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_tmvn_MLE_fit_multivariate_normal",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 23,
+   "polluters": [
+    "test_tmvn_MLE_censored_data_behavior"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_tmvn_MLE_fit_multivariate_truncated",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 23,
+   "polluters": [
+    "test_mvn_orthotope_density_basic",
+    "test_tmvn_MLE_fit_univariate_truncated",
+    "test_tmvn_MLE_nan_params"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_tmvn_MLE_censored_data_behavior",
+   "alone_varied_fail": 20,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_tmvn_rvs_untruncated_sample_stats",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 21,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_tmvn_MLE_fit_multivariate",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 21,
+   "polluters": [
+    "test_tmvn_MLE_handles_nan_in_rho",
+    "test_tmvn_rvs_raises_valueerror_small_density",
+    "test_tmvn_rvs_warn_high_rejection"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_tmvn_rvs_no_truncation[0-1-10]",
+   "alone_varied_fail": 3,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_tmvn_rvs_no_truncation[mu1-COV1-5]",
+   "alone_varied_fail": 3,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_tmvn_rvs_no_truncation[mu2-COV2-10]",
+   "alone_varied_fail": 3,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_tmvn_rvs_univariate_no_truncation",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 16,
+   "polluters": [],
+   "verdict": "unknown"
+  }
+ ],
+ "seconds": 507.3
 }

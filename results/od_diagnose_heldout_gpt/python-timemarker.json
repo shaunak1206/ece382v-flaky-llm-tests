@@ -1,6 +1,80 @@
 {
  "project": "python-timemarker",
  "install_ok": true,
- "tests": [],
- "seconds": 5.4
+ "tests": [
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_package_exports_timemarker_class",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_import_from_package_and_module_match",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_package_reexport_matches_timer_module_after_reload"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_package_has_no_unexpected_time_marker_alias_object",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_reload_package_preserves_time_marker_identity",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_package_reexport_matches_timer_module_after_reload"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_version_check_allows_supported_version",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_package_reexport_matches_timer_module_after_reload"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_version_assertion_fails_for_lower_versions",
+   "alone_varied_fail": 20,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_module_exposes_version_info_name",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 10,
+   "polluters": [
+    "test_import_with_python_3_6_1_version_passes",
+    "test_import_with_python_3_6_version_passes",
+    "test_import_with_python_3_7_version_passes"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 72.5
 }

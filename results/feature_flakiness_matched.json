@@ -1,214 +1,236 @@
 {
- "kept_functions": 25668,
- "flaky_functions": 104,
- "flaky_functions_with_no_feature": 86,
- "suites": 1355,
- "suites_with_flaky": 51,
+ "kept_functions": 36752,
+ "flaky_functions": 277,
+ "flaky_functions_with_no_feature": 220,
+ "suites": 2232,
+ "suites_with_flaky": 131,
  "features": {
   "random": {
    "label": "Calls a random generator",
-   "use": 3150,
-   "share": 12.3,
-   "flaky": 4,
-   "flaky_rate": 0.13,
-   "without": 22518,
-   "flaky_without": 100,
-   "flaky_rate_without": 0.44,
-   "suites_use": 441,
-   "suites_use_flaky": 12,
-   "suite_flaky_rate": 2.7,
-   "suite_flaky_rate_ci": [
-    1.6,
-    4.7
-   ],
-   "projects_with_flaky": [
-    "cuckoopy",
-    "fistro",
-    "pelicun",
-    "scikit-procrustes",
-    "setigen",
-    "spreading_dye_sampler",
-    "torch-layer-normalization"
-   ],
-   "suite_flaky_rate_without": 4.3
-  },
-  "random_unseeded": {
-   "label": "without a seed in the test or module",
-   "use": 332,
-   "share": 1.3,
-   "flaky": 2,
-   "flaky_rate": 0.6,
-   "without": 25336,
-   "flaky_without": 102,
-   "flaky_rate_without": 0.4,
-   "suites_use": 91,
-   "suites_use_flaky": 6,
-   "suite_flaky_rate": 6.6,
-   "suite_flaky_rate_ci": [
-    3.1,
-    13.6
-   ],
-   "projects_with_flaky": [
-    "pelicun",
-    "scikit-procrustes",
-    "setigen",
-    "torch-layer-normalization"
-   ],
-   "suite_flaky_rate_without": 3.6
-  },
-  "clock": {
-   "label": "Reads the real clock",
-   "use": 12,
-   "share": 0.0,
-   "flaky": 0,
-   "flaky_rate": 0.0,
-   "without": 25656,
-   "flaky_without": 104,
-   "flaky_rate_without": 0.41,
-   "suites_use": 11,
-   "suites_use_flaky": 0,
-   "suite_flaky_rate": 0.0,
-   "suite_flaky_rate_ci": [
-    0.0,
-    25.9
-   ],
-   "projects_with_flaky": [],
-   "suite_flaky_rate_without": 3.8
-  },
-  "sleep": {
-   "label": "Sleeps for real",
-   "use": 8,
-   "share": 0.0,
-   "flaky": 0,
-   "flaky_rate": 0.0,
-   "without": 25660,
-   "flaky_without": 104,
-   "flaky_rate_without": 0.41,
-   "suites_use": 6,
-   "suites_use_flaky": 1,
-   "suite_flaky_rate": 16.7,
-   "suite_flaky_rate_ci": [
-    3.0,
-    56.4
-   ],
-   "projects_with_flaky": [
-    "python-timemarker"
-   ],
-   "suite_flaky_rate_without": 3.7
-  },
-  "concurrency": {
-   "label": "Threads, processes, or asyncio",
-   "use": 16,
-   "share": 0.1,
-   "flaky": 0,
-   "flaky_rate": 0.0,
-   "without": 25652,
-   "flaky_without": 104,
-   "flaky_rate_without": 0.41,
-   "suites_use": 14,
-   "suites_use_flaky": 0,
-   "suite_flaky_rate": 0.0,
-   "suite_flaky_rate_ci": [
-    0,
-    21.5
-   ],
-   "projects_with_flaky": [],
-   "suite_flaky_rate_without": 3.8
-  },
-  "module_state": {
-   "label": "Reloads a module or edits sys.modules",
-   "use": 84,
-   "share": 0.3,
-   "flaky": 1,
-   "flaky_rate": 1.19,
-   "without": 25584,
-   "flaky_without": 103,
-   "flaky_rate_without": 0.4,
-   "suites_use": 41,
-   "suites_use_flaky": 7,
-   "suite_flaky_rate": 17.1,
-   "suite_flaky_rate_ci": [
-    8.5,
-    31.3
-   ],
-   "projects_with_flaky": [
-    "HikLoad",
-    "jmcm",
-    "pypfm",
-    "python-timemarker",
-    "torch-gpt-2"
-   ],
-   "suite_flaky_rate_without": 3.3
-  },
-  "filesystem": {
-   "label": "Writes files outside tmp_path",
-   "use": 9,
-   "share": 0.0,
-   "flaky": 0,
-   "flaky_rate": 0.0,
-   "without": 25659,
-   "flaky_without": 104,
-   "flaky_rate_without": 0.41,
-   "suites_use": 10,
-   "suites_use_flaky": 0,
-   "suite_flaky_rate": 0.0,
-   "suite_flaky_rate_ci": [
-    0,
-    27.8
-   ],
-   "projects_with_flaky": [],
-   "suite_flaky_rate_without": 3.8
-  },
-  "hash_or_id": {
-   "label": "Calls hash() or id()",
-   "use": 31,
-   "share": 0.1,
-   "flaky": 1,
-   "flaky_rate": 3.23,
-   "without": 25637,
-   "flaky_without": 103,
-   "flaky_rate_without": 0.4,
-   "suites_use": 32,
-   "suites_use_flaky": 6,
-   "suite_flaky_rate": 18.8,
-   "suite_flaky_rate_ci": [
-    8.9,
-    35.3
-   ],
-   "projects_with_flaky": [
-    "kevinarpe-rambutan3",
-    "pylabeledrf"
-   ],
-   "suite_flaky_rate_without": 3.4
-  },
-  "monkeypatch": {
-   "label": "Uses monkeypatch or mock.patch",
-   "use": 1517,
-   "share": 5.9,
+   "use": 3967,
+   "share": 10.8,
    "flaky": 13,
-   "flaky_rate": 0.86,
-   "without": 24151,
-   "flaky_without": 91,
-   "flaky_rate_without": 0.38,
-   "suites_use": 419,
-   "suites_use_flaky": 23,
-   "suite_flaky_rate": 5.5,
+   "flaky_rate": 0.33,
+   "without": 32785,
+   "flaky_without": 264,
+   "flaky_rate_without": 0.81,
+   "suites_use": 601,
+   "suites_use_flaky": 21,
+   "suite_flaky_rate": 3.5,
    "suite_flaky_rate_ci": [
-    3.7,
-    8.1
+    2.3,
+    5.3
    ],
    "projects_with_flaky": [
     "cuckoopy",
     "docci",
     "fistro",
-    "jmcm",
-    "kindle-maker",
+    "pelicun",
+    "pylabeledrf",
+    "scikit-procrustes",
+    "setigen",
+    "spreading_dye_sampler",
+    "torch-layer-normalization"
+   ],
+   "suite_flaky_rate_without": 6.7
+  },
+  "random_unseeded": {
+   "label": "without a seed in the test or module",
+   "use": 661,
+   "share": 1.8,
+   "flaky": 8,
+   "flaky_rate": 1.21,
+   "without": 36091,
+   "flaky_without": 269,
+   "flaky_rate_without": 0.75,
+   "suites_use": 171,
+   "suites_use_flaky": 10,
+   "suite_flaky_rate": 5.8,
+   "suite_flaky_rate_ci": [
+    3.2,
+    10.4
+   ],
+   "projects_with_flaky": [
     "pelicun",
     "scikit-procrustes",
-    "spreading_dye_sampler",
-    "torch-gpt-2"
+    "setigen",
+    "torch-layer-normalization"
    ],
-   "suite_flaky_rate_without": 3.0
+   "suite_flaky_rate_without": 5.9
+  },
+  "clock": {
+   "label": "Reads the real clock",
+   "use": 25,
+   "share": 0.1,
+   "flaky": 0,
+   "flaky_rate": 0.0,
+   "without": 36727,
+   "flaky_without": 277,
+   "flaky_rate_without": 0.75,
+   "suites_use": 27,
+   "suites_use_flaky": 2,
+   "suite_flaky_rate": 7.4,
+   "suite_flaky_rate_ci": [
+    2.1,
+    23.4
+   ],
+   "projects_with_flaky": [
+    "BT-Tracker"
+   ],
+   "suite_flaky_rate_without": 5.9
+  },
+  "sleep": {
+   "label": "Sleeps for real",
+   "use": 9,
+   "share": 0.0,
+   "flaky": 0,
+   "flaky_rate": 0.0,
+   "without": 36743,
+   "flaky_without": 277,
+   "flaky_rate_without": 0.75,
+   "suites_use": 14,
+   "suites_use_flaky": 1,
+   "suite_flaky_rate": 7.1,
+   "suite_flaky_rate_ci": [
+    1.3,
+    31.5
+   ],
+   "projects_with_flaky": [
+    "python-timemarker"
+   ],
+   "suite_flaky_rate_without": 5.9
+  },
+  "concurrency": {
+   "label": "Threads, processes, or asyncio",
+   "use": 18,
+   "share": 0.0,
+   "flaky": 0,
+   "flaky_rate": 0.0,
+   "without": 36734,
+   "flaky_without": 277,
+   "flaky_rate_without": 0.75,
+   "suites_use": 20,
+   "suites_use_flaky": 1,
+   "suite_flaky_rate": 5.0,
+   "suite_flaky_rate_ci": [
+    0.9,
+    23.6
+   ],
+   "projects_with_flaky": [
+    "QTAF"
+   ],
+   "suite_flaky_rate_without": 5.9
+  },
+  "module_state": {
+   "label": "Reloads a module or edits sys.modules",
+   "use": 204,
+   "share": 0.6,
+   "flaky": 14,
+   "flaky_rate": 6.86,
+   "without": 36548,
+   "flaky_without": 263,
+   "flaky_rate_without": 0.72,
+   "suites_use": 105,
+   "suites_use_flaky": 26,
+   "suite_flaky_rate": 24.8,
+   "suite_flaky_rate_ci": [
+    17.5,
+    33.8
+   ],
+   "projects_with_flaky": [
+    "HikLoad",
+    "QTAF",
+    "event-bus",
+    "jmcm",
+    "pypfm",
+    "python-timemarker",
+    "torch-embed-sim",
+    "torch-gpt-2",
+    "uhashring"
+   ],
+   "suite_flaky_rate_without": 4.9
+  },
+  "filesystem": {
+   "label": "Writes files outside tmp_path",
+   "use": 37,
+   "share": 0.1,
+   "flaky": 0,
+   "flaky_rate": 0.0,
+   "without": 36715,
+   "flaky_without": 277,
+   "flaky_rate_without": 0.75,
+   "suites_use": 34,
+   "suites_use_flaky": 0,
+   "suite_flaky_rate": 0.0,
+   "suite_flaky_rate_ci": [
+    0,
+    10.2
+   ],
+   "projects_with_flaky": [],
+   "suite_flaky_rate_without": 6.0
+  },
+  "hash_or_id": {
+   "label": "Calls hash() or id()",
+   "use": 55,
+   "share": 0.1,
+   "flaky": 6,
+   "flaky_rate": 10.91,
+   "without": 36697,
+   "flaky_without": 271,
+   "flaky_rate_without": 0.74,
+   "suites_use": 58,
+   "suites_use_flaky": 13,
+   "suite_flaky_rate": 22.4,
+   "suite_flaky_rate_ci": [
+    13.6,
+    34.7
+   ],
+   "projects_with_flaky": [
+    "kevinarpe-rambutan3",
+    "pylabeledrf",
+    "torch-embed-sim"
+   ],
+   "suite_flaky_rate_without": 5.4
+  },
+  "monkeypatch": {
+   "label": "Uses monkeypatch or mock.patch",
+   "use": 3257,
+   "share": 8.9,
+   "flaky": 30,
+   "flaky_rate": 0.92,
+   "without": 33495,
+   "flaky_without": 247,
+   "flaky_rate_without": 0.74,
+   "suites_use": 871,
+   "suites_use_flaky": 66,
+   "suite_flaky_rate": 7.6,
+   "suite_flaky_rate_ci": [
+    6.0,
+    9.5
+   ],
+   "projects_with_flaky": [
+    "BT-Tracker",
+    "PyJsonFriendly",
+    "QTAF",
+    "RaspberryPiMovementDetector",
+    "cuckoopy",
+    "data-partitioner",
+    "docci",
+    "event-bus",
+    "fistro",
+    "jmcm",
+    "kevinarpe-rambutan3",
+    "kindle-maker",
+    "pelicun",
+    "pylabeledrf",
+    "python-timemarker",
+    "scikit-procrustes",
+    "spreading_dye_sampler",
+    "torch-embed-sim",
+    "torch-gpt-2",
+    "uhashring"
+   ],
+   "suite_flaky_rate_without": 4.8
   },
   "freeze": {
    "label": "Freezes the clock",
@@ -216,15 +238,15 @@
    "share": 0.0,
    "flaky": 0,
    "flaky_rate": null,
-   "without": 25668,
-   "flaky_without": 104,
-   "flaky_rate_without": 0.41,
+   "without": 36752,
+   "flaky_without": 277,
+   "flaky_rate_without": 0.75,
    "suites_use": 0,
    "suites_use_flaky": 0,
    "suite_flaky_rate": null,
    "suite_flaky_rate_ci": null,
    "projects_with_flaky": [],
-   "suite_flaky_rate_without": 3.8
+   "suite_flaky_rate_without": 5.9
   }
  }
 }

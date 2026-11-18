@@ -1,6 +1,166 @@
 {
  "project": "torch-embed-sim",
  "install_ok": true,
- "tests": [],
- "seconds": 19.8
+ "tests": [
+  {
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_package_exports_embedding_sim_from_real_submodule",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_reload_excludes_private_names_from_fake_submodule",
+    "test_reload_overwrites_previous_public_names_from_fake_submodule",
+    "test_reload_uses_fake_submodule_public_names",
+    "test_reload_with_fake_submodule_import_star_behavior",
+    "test_reload_with_fake_submodule_keeps_only_public_exports"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_embedding_sim_is_accessible_via_from_import",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_reload_excludes_private_names_from_fake_submodule",
+    "test_reload_overwrites_previous_public_names_from_fake_submodule",
+    "test_reload_uses_fake_submodule_public_names",
+    "test_reload_with_fake_submodule_import_star_behavior",
+    "test_reload_with_fake_submodule_keeps_only_public_exports"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_package_embedding_sim_matches_submodule_object_identity",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_reload_excludes_private_names_from_fake_submodule",
+    "test_reload_overwrites_previous_public_names_from_fake_submodule",
+    "test_reload_uses_fake_submodule_public_names",
+    "test_reload_with_fake_submodule_import_star_behavior",
+    "test_reload_with_fake_submodule_keeps_only_public_exports"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_reloading_package_preserves_embedding_sim_identity",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_reload_excludes_private_names_from_fake_submodule",
+    "test_reload_overwrites_previous_public_names_from_fake_submodule",
+    "test_reload_uses_fake_submodule_public_names",
+    "test_reload_with_fake_submodule_import_star_behavior",
+    "test_reload_with_fake_submodule_keeps_only_public_exports"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_embedding_sim_is_same_as_submodule_symbol",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 13,
+   "polluters": [
+    "test_submodule_reimport_preserves_package_reference_identity"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_package_reimport_preserves_embedding_sim_identity",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 13,
+   "polluters": [
+    "test_submodule_reimport_preserves_package_reference_identity"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_package_does_not_shadow_embedding_sim_with_different_object",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 13,
+   "polluters": [
+    "test_submodule_reimport_preserves_package_reference_identity"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_embedding_sim_is_same_object_as_submodule_attribute",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reload_submodule_keeps_embedding_sim_accessible"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_submodule_contains_embedding_sim_name_in_dict",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reload_submodule_keeps_embedding_sim_accessible"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_embedding_sim_identity_is_stable_with_multiple_import_styles",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reload_submodule_keeps_embedding_sim_accessible"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_8",
+   "test": "test_embedding_sim_is_same_object_as_submodule_definition",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 16,
+   "polluters": [
+    "test_reloading_submodule_keeps_embedding_sim_accessible"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_8",
+   "test": "test_reimporting_package_preserves_embedding_sim_identity",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 16,
+   "polluters": [
+    "test_reloading_submodule_keeps_embedding_sim_accessible"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_8",
+   "test": "test_embedding_sim_is_accessible_through_sys_modules",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 16,
+   "polluters": [
+    "test_reloading_submodule_keeps_embedding_sim_accessible"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 1128.7
 }

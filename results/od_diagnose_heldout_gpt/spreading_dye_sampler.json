@@ -1,0 +1,475 @@
+{
+ "project": "spreading_dye_sampler",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_make_blot_creates_blot_with_no_permitted_mask",
+   "alone_varied_fail": 9,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_make_blot_respects_permitted_mask_with_squeeze_true",
+   "alone_varied_fail": 6,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_make_blot_num_cells_at_most_req_num_cells",
+   "alone_varied_fail": 11,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_make_blot_large_grid_large_req_num_cells",
+   "alone_varied_fail": 8,
+   "alone_fixed_fail": 4,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_make_blot_respects_grid_and_cell_dims",
+   "alone_varied_fail": 5,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_make_blot_creates_blot_of_correct_size",
+   "alone_varied_fail": 3,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_make_blot_with_permitted_mask_blocks_disallowed_cells",
+   "alone_varied_fail": 19,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_make_blot_squeeze_removes_non_permitted_cells",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_make_blot_cells_are_adjacent_and_connect_via_shared_edges",
+   "alone_varied_fail": 18,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_make_blot_all_cells_within_bounds",
+   "alone_varied_fail": 17,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_make_blot_basic_shape_and_cells",
+   "alone_varied_fail": 9,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_make_blot_all_cells_permitted",
+   "alone_varied_fail": 16,
+   "alone_fixed_fail": 6,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_make_blot_with_mask_squeeze_true_skips_blocked_cells",
+   "alone_varied_fail": 4,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_make_blot_start_cell_not_permitted_returns_none",
+   "alone_varied_fail": 7,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_cells_neighbors_are_valid_after_construction",
+   "alone_varied_fail": 18,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_for_each_cell_function_called_right_number_of_times",
+   "alone_varied_fail": 14,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_make_blot_respects_req_num_cells_or_less",
+   "alone_varied_fail": 7,
+   "alone_fixed_fail": 2,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_make_blot_basic_properties",
+   "alone_varied_fail": 15,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_make_blot_permitted_mask_all_true_returns_blot",
+   "alone_varied_fail": 4,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_make_blot_partial_permitted_squeeze_true_skips_nonpermitted",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_make_blot_partial_permitted_squeeze_false_passes_if_no_forbidden_neighbors",
+   "alone_varied_fail": 12,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_make_blot_does_not_add_duplicate_cells",
+   "alone_varied_fail": 17,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_make_blot_repeated_calls_generate_different_blot_cells",
+   "alone_varied_fail": 18,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_basic_correct_size[grid_dims1-cell_dims1-5]",
+   "alone_varied_fail": 16,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_basic_correct_size[grid_dims2-cell_dims2-10]",
+   "alone_varied_fail": 14,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_with_permitted_mask_all_true",
+   "alone_varied_fail": 8,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_with_permitted_mask_some_false_squeeze_true",
+   "alone_varied_fail": 15,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_cells_are_unique",
+   "alone_varied_fail": 9,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_cells_are_adjacent",
+   "alone_varied_fail": 13,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_with_non_boolean_permitted_coerced",
+   "alone_varied_fail": 10,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_permitted_partial_with_squeeze_true_at_least_one_cell",
+   "alone_varied_fail": 16,
+   "alone_fixed_fail": 9,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_with_large_grid_and_req_num_cells",
+   "alone_varied_fail": 9,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_make_blot_probabilities_sum_to_one",
+   "alone_varied_fail": 9,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_make_blot_basic_size_and_cells",
+   "alone_varied_fail": 11,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_make_blot_with_permitted_all_true",
+   "alone_varied_fail": 10,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_make_blot_with_permitted_some_false_squeeze_true",
+   "alone_varied_fail": 3,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_make_blot_with_permitted_some_false_squeeze_false_returns_none",
+   "alone_varied_fail": 17,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_make_blot_permitted_mask_not_boolean",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_make_blot_with_non_square_grid_and_cells",
+   "alone_varied_fail": 18,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_make_blot_creates_blot_with_correct_num_cells",
+   "alone_varied_fail": 6,
+   "alone_fixed_fail": 3,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_make_blot_all_cells_permitted",
+   "alone_varied_fail": 16,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_make_blot_returns_blot_with_cells_within_bounds",
+   "alone_varied_fail": 10,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_make_blot_permitted_mask_partial",
+   "alone_varied_fail": 5,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_make_blot_no_permitted_passed_defaults_all_permitted",
+   "alone_varied_fail": 15,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_make_blot_basic[grid_dims1-cell_dims1-5]",
+   "alone_varied_fail": 13,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_make_blot_basic[grid_dims2-cell_dims2-20]",
+   "alone_varied_fail": 14,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_make_blot_with_permitted_mask_all_true",
+   "alone_varied_fail": 16,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_make_blot_with_permitted_mask_some_false_squeeze",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_make_blot_cells_are_unique",
+   "alone_varied_fail": 15,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_make_blot_produces_cells_within_bounds",
+   "alone_varied_fail": 10,
+   "alone_fixed_fail": 8,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_make_blot_with_nonstandard_cell_dims",
+   "alone_varied_fail": 12,
+   "alone_fixed_fail": 7,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_make_blot_cells_add_correct_neighbours",
+   "alone_varied_fail": 18,
+   "alone_fixed_fail": 5,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  }
+ ],
+ "seconds": 467.8
+}

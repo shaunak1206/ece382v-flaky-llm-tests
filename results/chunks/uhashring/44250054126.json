@@ -1,0 +1,295 @@
+{
+ "project": "uhashring",
+ "sha": "e45d6a7a2556e73c5a2c07f2f07ac76f8c22aca3",
+ "category": "unlabeled",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_heldoutiso_2": {
+   "model": "gpt41mini",
+   "prompt": "heldoutiso",
+   "sample": "2",
+   "runs": 70,
+   "start": 70,
+   "n_tests": 21,
+   "first_run_failed": [
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_add_existing_node_no_duplicate",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_add_node",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_for_key_count",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_order_is_consistent",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_returns_unique_nodes_when_requesting_multiple",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_with_zero_or_negative_count_returns_empty_list",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_add_node_invalid_type_raises",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_init_nodes_as_set",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_init_nodes_as_tuple",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_len_and_contains",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_init_with_no_nodes_creates_empty_ring",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_iter_nodes",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_remove_node",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_repr_contains_class_name_and_nodes"
+   ],
+   "tests": {
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_init_nodes_as_list": {
+     "pass": 70,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "----------------------------------------------------------------------PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_init_nodes_as_set": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "ValueError: nodes configuration should be a list or a dict, got <class 'set'>"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_init_nodes_as_tuple": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "ValueError: nodes configuration should be a list or a dict, got <class 'tuple'>"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_len_and_contains": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: object of type 'HashRing' has no len()"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_add_node": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: Timeout (>60.0s) from pytest-timeout."
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_add_existing_node_no_duplicate": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: object of type 'HashRing' has no len()"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_remove_node": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: Timeout (>60.0s) from pytest-timeout."
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_remove_nonexistent_node_raises_keyerror": {
+     "pass": 70,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "----------------------------------------------------------------------PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_node_for_key_consistency": {
+     "pass": 70,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "----------------------------------------------------------------------PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_node_returns_None_if_no_nodes": {
+     "pass": 70,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "----------------------------------------------------------------------PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_for_key_count": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: get_nodes() takes 1 positional argument but 3 were given"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_order_is_consistent": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: get_nodes() takes 1 positional argument but 3 were given"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_repr_contains_class_name_and_nodes": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert 'node1' in '<uhashring.ring.HashRing object at 0x7af2976238b0>'"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_iter_nodes": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: Timeout (>60.0s) from pytest-timeout."
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_init_with_no_nodes_creates_empty_ring": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: object of type 'HashRing' has no len()"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_node_returns_node_when_only_one_node": {
+     "pass": 70,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "----------------------------------------------------------------------PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_returns_unique_nodes_when_requesting_multiple": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: get_nodes() takes 1 positional argument but 3 were given"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_add_and_remove_node_affect_get_node": {
+     "pass": 70,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "----------------------------------------------------------------------PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_add_node_invalid_type_raises": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'TypeError'>"
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_remove_node_invalid_type_raises": {
+     "pass": 70,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "----------------------------------------------------------------------PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_with_zero_or_negative_count_returns_empty_list": {
+     "pass": 0,
+     "fail": 70,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 35,
+     "fails_shuffled": 35,
+     "sequence": "----------------------------------------------------------------------FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: get_nodes() takes 1 positional argument but 3 were given"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_add_existing_node_no_duplicate",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_add_node",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_for_key_count",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_order_is_consistent",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_returns_unique_nodes_when_requesting_multiple",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_get_nodes_with_zero_or_negative_count_returns_empty_list",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_add_node_invalid_type_raises",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_init_nodes_as_set",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_init_nodes_as_tuple",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_hashring_len_and_contains",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_init_with_no_nodes_creates_empty_ring",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_iter_nodes",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_remove_node",
+    "zz_gpt41mini_heldoutiso_2.test_gen::test_repr_contains_class_name_and_nodes"
+   ]
+  }
+ },
+ "human": {
+  "runs": 140,
+  "passed": 137,
+  "failed": 3,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "assert 21.57313143704455 <= 20",
+   "assert 20.361728806759018 <= 20",
+   "assert 24.182638400306942 <= 20"
+  ]
+ },
+ "seconds": 12654.7
+}

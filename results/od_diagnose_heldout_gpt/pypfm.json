@@ -1,6 +1,68 @@
 {
  "project": "pypfm",
  "install_ok": true,
- "tests": [],
- "seconds": 19.1
+ "tests": [
+  {
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_importing_package_does_not_create_unexpected_modules",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_import_star_brings_pfml_loader_into_namespace",
+    "test_import_star_does_not_override_builtin_name_by_default",
+    "test_module_name_is_pypfm",
+    "test_package_has_expected_minimum_attributes",
+    "test_package_import_exposes_pfml_loader",
+    "test_package_import_exposes_version",
+    "test_package_module_can_be_reimported_and_same_version",
+    "test_pfml_loader_is_class",
+    "test_pfml_loader_is_same_object_as_submodule_export",
+    "test_pfml_loader_module_is_pypfm_submodule",
+    "test_pfml_loader_name_is_correct"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_package_exposes_pfml_loader",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_package_and_submodule_share_same_class_object",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_reimporting_submodule_keeps_pfml_loader_stable"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_reimporting_package_keeps_public_api_stable",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [
+    "test_reimporting_submodule_keeps_pfml_loader_stable"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_package_allows_attribute_access_to_version_and_loader",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [],
+   "verdict": "unknown"
+  }
+ ],
+ "seconds": 99.0
 }

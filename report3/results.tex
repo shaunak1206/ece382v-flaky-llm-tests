@@ -4,10 +4,10 @@ The subsections follow the research questions in order. Flaky tests cluster in s
 
 \subsection{RQ1, prevalence}
 \label{sec:heldout}
-\textbf{The held out sample.} Progress Report 2 fixed this step before any new data: 8 new plain suites per model for each of the 41 projects, all models through the one pasted source pipeline, each suite run 200 times plain, with M1, and with M2, and analyzed alone with the frozen sign test. Table~\ref{tab:heldout} has the plain runs.%GPTHELDOUT%
+\textbf{The held out sample.} Progress Report 2 fixed this step before any new data: 8 new plain suites per model for each of the 41 projects, all models through the one pasted source pipeline, each suite run 200 times plain, with M1, and with M2, and analyzed alone with the frozen sign test. Table~\ref{tab:heldout} has the plain runs. Two GPT suites were not measured. A GPT~5.4 mini spreading\_dye\_sampler suite has a test that appends to the list it iterates over, so the run never ends and exhausts the runner's memory. A GPT~4.1 mini ReactOBus suite in the order dependent arm starts threads that never stop, so pytest never exits. Neither is flaky, they are tests that do not terminate. From now on a suite whose filter run does not exit within 15 minutes is recorded as non terminating and not rerun (\texttt{matched\_run.py}).
 
 \begin{table}[h]
-\caption{Held out sample, plain prompt, 41 projects, 8 suites per model, 200 runs per suite. Suites counts suites whose file imported (rates leave out the rest). Kept counts tests that pass the first run. Suites with flaky counts suites with at least one kept flaky test, with a 95\% Wilson interval, Proj.\ the projects they are in, and Flaky the kept flaky tests. Removed flaky tests (failed the first run): Sonnet 9, Haiku 4.}
+\caption{Held out sample, plain prompt, 41 projects, 8 suites per model, 200 runs per suite. Suites counts suites whose file imported (rates leave out the rest). Kept counts tests that pass the first run. Suites with flaky counts suites with at least one kept flaky test, with a 95\% Wilson interval, Proj.\ the projects they are in, and Flaky the kept flaky tests. Removed flaky tests (failed the first run): Sonnet 9, Haiku 4, GPT~5.4 mini 5, GPT~4.1 mini 43.}
 \label{tab:heldout}
 \small
 \setlength{\tabcolsep}{2.5pt}
@@ -18,17 +18,38 @@ Model & Suites & Kept & \multicolumn{3}{c}{Suites with flaky} & Proj. & Flaky \\
 \midrule
 Sonnet 5.5 & 328 & 6,898 & 8 & 2.4 & 1.2--4.7 & 6 & 18 \\
 Haiku 5.5 & 319 & 6,981 & 15 & 4.7 & 2.9--7.6 & 8 & 34 \\
-%GPTROWS%
+GPT 5.4 mini & 324 & 4,114 & 22 & 6.8 & 4.5--10.1 & 10 & 70 \\
+GPT 4.1 mini & 310 & 4,022 & 40 & 12.9 & 9.6--17.1 & 10 & 70 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \begin{itemize}
 \item \textbf{With four times as many suites, Sonnet also writes flaky tests.} In Progress Report 2, 1 of 81 Sonnet suites had a kept flaky test (1.2\%), against 8 of 328 here (2.4\%). Haiku is about the same, 4 of 81 (4.9\%) against 15 of 319 (4.7\%). So the near zero for Sonnet was a small sample, not evidence that Sonnet avoids flakiness. With 81 earlier suites, a Fisher test cannot show whether the pipeline changes the rate ($p = 1.0$ for Sonnet, ignoring that suites of one project are related). Nine Haiku suites did not import.
-\item \textbf{Most kept flaky tests fail only in shuffled runs.} That holds for 36 of the 52 kept flaky Claude tests, from 10 suites, 28 of them from two (jmcm and kindle-maker), so ``most tests'' here means two suites. A shuffled run changes the order and also lets pytest-randomly reseed the generators, so not all 36 are order dependent (Section~\ref{sec:rootcause3}).
+\item \textbf{The GPT models write more flaky suites, and keep fewer tests.} 6.8\% of GPT~5.4 mini and 12.9\% of GPT~4.1 mini suites have a kept flaky test, against 2.4\% and 4.7\% for the Claude models. They also keep far fewer tests per suite, 13 against 21 to 22, because their suites have fewer tests and more of them fail the first run. 18 GPT~4.1 mini suites did not import, against 9 for Haiku, 3 for GPT~5.4 mini, and none for Sonnet.
+\item \textbf{Most kept flaky tests fail only in shuffled runs.} That holds for 36 of the 52 kept flaky Claude tests, from 10 suites, 28 of them from two (jmcm and kindle-maker), so ``most tests'' here means two suites. For GPT~5.4 mini it holds for 64 of 70 tests, in 9 projects. For GPT~4.1 mini it does not: 52 of its 70 also fail in file order. A shuffled run changes the order and also lets pytest-randomly reseed the generators, so not all 36 are order dependent (Section~\ref{sec:rootcause3}).
 \end{itemize}
 
-\textbf{The pre registered test.} Progress Report 2 committed to one confirmatory analysis: for each of the six model pairs, the exact sign test over the projects where only one of the two models has a kept flaky test, significant at $p < 0.05/6 = 0.0083$. The lead it was meant to test is Sonnet against GPT~4.1 mini (0 : 6 projects in Progress Report 2). \texttt{scripts/heldout\_stats.py} copies \texttt{scripts/matched\_stats.py} from commit \texttt{7c05b6b} unchanged and runs it on the held out results, after renaming the held out prompt labels to the ones that version expects. With 41 projects, a split of 0 : 8 or more lopsided is significant. %PREREG%
+\textbf{The pre registered test.} Progress Report 2 committed to one confirmatory analysis: for each of the six model pairs, the exact sign test over the projects where only one of the two models has a kept flaky test, significant at $p < 0.05/6 = 0.0083$. The lead it was meant to test is Sonnet against GPT~4.1 mini (0 : 6 projects in Progress Report 2). \texttt{scripts/heldout\_stats.py} copies \texttt{scripts/matched\_stats.py} from commit \texttt{7c05b6b} unchanged and runs it on the held out results, after renaming the held out prompt labels to the ones that version expects. With 41 projects, a split of 0 : 8 or more lopsided is significant. None of the six pairs is significant (Table~\ref{tab:prereg}). Counted on suites, the GPT~4.1 mini differences are large (Fisher $p < 0.001$ against both Claude models), but those tests ignore that suites of one project are related, and at the project level the split is 2 : 6 for Sonnet against GPT~4.1 mini ($p = 0.29$). With 41 projects, and flaky tests in only 6 to 10 of them per model, the frozen test cannot separate the models. What differs between models is mostly which projects are flaky and why (Section~\ref{sec:rootcause3}), not how many.
+
+\begin{table}[h]
+\caption{The pre registered sign test (\texttt{matched\_stats.py} at \texttt{7c05b6b}) on the held out plain suites. Only first and only second count projects in which only one of the two models has a kept flaky test. Bonferroni threshold $p < 0.0083$.}
+\label{tab:prereg}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{Xrrr}
+\toprule
+Pair & Only first & Only second & Sign $p$ \\
+\midrule
+Sonnet, Haiku & 2 & 4 & 0.69 \\
+Sonnet, GPT~5.4 mini & 3 & 7 & 0.34 \\
+Sonnet, GPT~4.1 mini & 2 & 6 & 0.29 \\
+Haiku, GPT~5.4 mini & 5 & 7 & 0.77 \\
+Haiku, GPT~4.1 mini & 3 & 5 & 0.73 \\
+GPT~5.4 mini, GPT~4.1 mini & 6 & 6 & 1.00 \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \textbf{Order dependent and time batches.} Table~\ref{tab:batches} gives the two batches promised in Progress Report 2.
 

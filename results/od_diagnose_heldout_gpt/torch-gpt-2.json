@@ -1,6 +1,106 @@
 {
  "project": "torch-gpt-2",
  "install_ok": true,
- "tests": [],
- "seconds": 35.4
+ "tests": [
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_bytepairencoding_is_reexported_from_keras_gpt_2",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_get_bpe_from_files_is_reexported_from_keras_gpt_2",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_gpt_2_is_reexported_from_net_module",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_gpt_2"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_gelu_is_reexported_from_net_module",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_gelu"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_generate_is_reexported_from_gen_module",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_generate"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_bytepairencoding_name_and_module_are_preserved",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_gpt_2_name_and_module_are_preserved",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_gpt_2"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_gelu_name_and_module_are_preserved",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_gelu"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_generate_name_and_module_are_preserved",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 14,
+   "polluters": [
+    "test_reloading_package_picks_up_monkeypatched_generate"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 2609.9
 }

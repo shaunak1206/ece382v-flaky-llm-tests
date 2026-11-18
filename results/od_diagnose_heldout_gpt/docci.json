@@ -1,6 +1,171 @@
 {
  "project": "docci",
  "install_ok": true,
- "tests": [],
- "seconds": 5.2
+ "tests": [
+  {
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_xlsx_to_bytes_file_roundtrip_equivalence",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 16,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_xlsx_to_bytes_and_xlsx_to_file_content_equality",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_xlsx_to_file_multiple_calls_return_independent_attachments",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_xlsx_to_file_returns_fileattachment",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_xlsx_to_file_content_matches_xlsx_to_bytes",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_4",
+   "test": "test_roundtrip_bytes_to_workbook_and_back",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 1,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_xlsx_to_bytes_can_be_called_multiple_times_on_same_workbook",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_2",
+   "test": "test_xlsx_to_file_sets_content_to_bytes",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_xlsx_to_bytes_uses_new_bytesio_stream_each_call",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_xlsx_to_file_content_matches_xlsx_to_bytes",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [
+    "test_xlsx_from_bytes_invalid_bytes_raises_exception"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_xlsx_to_bytes_multiple_saves_produce_same_content",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_xlsx_to_file_content_matches_xlsx_to_bytes",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 19,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_7",
+   "test": "test_xlsx_to_file_and_bytes_are_consistent",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 15,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt41mini_heldout_8",
+   "test": "test_xlsx_to_bytes_multiple_saves_are_consistent",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 21,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_xlsx_to_bytes_can_be_called_multiple_times_with_same_result",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_xlsx_to_file_content_matches_xlsx_to_bytes",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_xlsx_to_bytes_is_deterministic_for_same_workbook_content",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "gpt54mini_heldout_8",
+   "test": "test_xlsx_to_bytes_can_be_called_multiple_times_with_same_result_length",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 11,
+   "polluters": [],
+   "verdict": "unknown"
+  }
+ ],
+ "seconds": 269.1
 }
