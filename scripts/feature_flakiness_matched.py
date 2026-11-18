@@ -14,7 +14,7 @@ module at top level, calls a seed function.
 
   python scripts/feature_flakiness_matched.py
 """
-import ast, collections, glob, json, os, re
+import ast, collections, glob, json, math, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIRS = ("matched", "matched_guard", "matched_guard3", "matched_mitig", "matched_heldout", "matched_guard3cl",
@@ -71,9 +71,17 @@ def features(fn, module_seeded, src):
     return f
 
 
+def wilson(k, n, z=1.96):
+    if not n: return None
+    p = k / n; d = 1 + z * z / n; c = (p + z * z / (2 * n)) / d
+    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
+    return [round(100 * max(0, c - h), 1), round(100 * min(1, c + h), 1)]
+
+
 def main():
     use = collections.Counter(); flaky = collections.Counter(); total = flaky_total = 0
     s_use = collections.Counter(); s_flaky = collections.Counter(); s_total = s_flaky_total = 0; none_flaky = 0
+    s_proj = collections.defaultdict(set)
     per_suite_seen = set()
     for d in DIRS:
         for path in sorted(glob.glob(f"{ROOT}/results/{d}/*.json")):
@@ -111,6 +119,7 @@ def main():
                 s_total += 1; s_flaky_total += suite_fl
                 for x in suite_f:
                     s_use[x] += 1; s_flaky[x] += suite_fl
+                    if suite_fl: s_proj[x].add(p)
     out = {"kept_functions": total, "flaky_functions": flaky_total, "flaky_functions_with_no_feature": none_flaky,
            "suites": s_total, "suites_with_flaky": s_flaky_total, "features": {}}
     for x, label in FEATURES.items():
@@ -120,6 +129,8 @@ def main():
                               "flaky_rate_without": round(100 * (flaky_total - flaky[x]) / (total - use[x]), 2),
                               "suites_use": s_use[x], "suites_use_flaky": s_flaky[x],
                               "suite_flaky_rate": round(100 * s_flaky[x] / s_use[x], 1) if s_use[x] else None,
+                              "suite_flaky_rate_ci": wilson(s_flaky[x], s_use[x]),
+                              "projects_with_flaky": sorted(s_proj[x]),
                               "suite_flaky_rate_without": round(100 * (s_flaky_total - s_flaky[x]) / (s_total - s_use[x]), 1)}
     json.dump(out, open(f"{ROOT}/results/feature_flakiness_matched.json", "w"), indent=1)
     print(total, "kept functions,", flaky_total, "flaky,", none_flaky, "flaky with no feature;", s_total, "suites,", s_flaky_total, "with a kept flaky test")

@@ -5,6 +5,7 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{multirow}
+\usepackage{xurl}
 \newcommand{\PENDING}[1]{\textbf{[#1]}}
 \begin{document}
 \sloppy
@@ -18,20 +19,19 @@
 \maketitle
 
 \section{Summary}
-Since Progress Report 2 we ran every experiment it promised for this milestone, plus the quality measurements its feedback asked for.
+Since Progress Report 2 we ran its main experiments for this milestone and the quality measurements its feedback asked for. Three of its five goals are only partly met or missed (Section~\ref{sec:goals}).
 \begin{enumerate}
 \item \textbf{A held out sample.} 8 new suites per model for each of the 41 known flaky code projects, all four models through one pipeline, each suite run 200 times plain and with both fixtures, and the model comparison fixed in advance (Section~\ref{sec:heldout}).
 \item \textbf{Two new batches.} An order dependent arm of 17 projects, and a time batch in which none of 16 tests reproduced.
-\item \textbf{Quality.} Line coverage and mutation score for every plain, guard, and fixture suite.
-\item \textbf{Better measurements.} Rerun filters measured from run order sequences, the feature analysis of RQ3 on 25,668 generated test functions, and a polluter search on every new flaky test.
+\item \textbf{Quality.} Line coverage and mutation score for all plain suites of Progress Report 2, held out samples 1 and 2, the guard suites, the order dependent arm, and the fixture copies of held out samples 1 and 2.
+\item \textbf{Better measurements.} Rerun filters measured from run order sequences, a feature analysis for RQ3 on all generated suites of the known flaky code study, and a polluter search on 62 of the 65 new flaky held out tests.
 \end{enumerate}
 Three preliminary results stand out.
 \begin{itemize}
-\item \textbf{Sonnet's near zero was a small sample.} With 328 suites, 2.4\% of Sonnet suites and 4.7\% of Haiku suites have a kept flaky test, and most of these tests flip only when the order changes. %SUMGPT%
-\item \textbf{The fixtures carry over to new suites.} M1 removed most new randomness cases and M2 the module state cases, without breaking a stable test this time. Neither reaches state on disk, a mechanism we had not seen before.
-\item \textbf{Prompt mitigations cost quality for one model and not another.} The guard prompts lower GPT~4.1 mini's mutation score from 56\% to 36--50\%, mostly through suites that no longer import, while guard v3 removes the Claude flaky tests at no loss of coverage or mutation score.
+\item \textbf{Sonnet's near zero was a small sample.} 2.4\% of 328 Sonnet suites and 4.7\% of 319 Haiku suites have a kept flaky test. Most of these tests fail only in shuffled runs, 28 of them in two suites. %SUMGPT%
+\item \textbf{The fixtures carry over to new suites.} M1 removed most new randomness cases and M2 the module state cases, and this time neither broke a stable test. Neither helps the kindle-maker tests, whose temp folder names collide.
+\item \textbf{Prompt mitigations cost quality for GPT~4.1 mini.} Its guard prompts lower the mutation score from 56\% to 36--50\%, mostly through suites in which no test passes. For the Claude models guard v3 removed every kept flaky test, at 6.5 to 12\% fewer kept tests, about 1 point less coverage, and the same mutation score, though on few suites ($p = 0.059$).
 \end{itemize}
-
 
 \section{Response to the Progress Report 2 feedback}
 Table~\ref{tab:response} answers each comment.
@@ -48,12 +48,16 @@ The E1, E2, E3 labels were hard to follow and the parts are conceptually differe
 Explain the different run modes, and make ``some runs'' concrete. & Section~\ref{sec:collect} gives each study's protocol exactly: in the library study every rerun is shuffled, 300 with nothing else, 150 that also set one of 10 fixed time zones, and 150 under one of 10 fixed stress-ng configurations; the known flaky code study alternates file order (even runs) and shuffled order (odd runs, seed $7000+i$) for 200 runs. It also says why the two differ. \\
 The feature table looked only at order dependence. Add randomness and concurrency, and show whether human tests use these features and stay stable. & Table~\ref{tab:features} now covers randomness, time, concurrency, and shared state, and for each gives how many human and LLM test functions use it and how many of those flipped (Section~\ref{sec:rq3}). \\
 Do the mitigations patch tests or improve generation? How were the prompts derived, and does that bias the evaluation? & Fixtures patch a suite after generation and prompts change generation (Section~\ref{sec:mitig}). The guard prompts and M1 were derived on the first 17 projects with GPT~4.1 mini, and M2 on reload cases among the 41 projects, jmcm above all. Section~\ref{sec:mitig} says so, and we now test them on suites they were not built on: the fixtures on the new held out suites (also without jmcm) and on the order dependent arm, whose 17 projects none of them saw, and guard v3 on three new models (Section~\ref{sec:rq4}). \\
-Measure quality after mitigation, for example coverage and mutation score. & New: line coverage and a fixed mutation set per project for every plain, guard, and fixture suite (Tables~\ref{tab:guard3} and~\ref{tab:quality}). The guard prompts cost GPT~4.1 mini quality, mostly through suites that no longer import, and cost the Claude models none. \\
+Measure quality after mitigation, for example coverage and mutation score. & New: line coverage and a fixed mutation set per project for all plain suites of Progress Report 2, held out samples 1 and 2, the guard suites, the order dependent arm, and the fixture copies (Tables~\ref{tab:guard3} and~\ref{tab:quality}). The guard prompts cost GPT~4.1 mini quality, mostly through suites that no longer import, and cost the Claude models none. \\
 \bottomrule
 \end{tabularx}
 \end{table*}
 
-\input{setup}
+\section{Milestone goals and status}
+\label{sec:goals}
+Table~\ref{tab:goals} lists the five steps Progress Report 2 promised for this milestone and the status of each. Progress Report 2 also set a check point for November 13. It slipped to November 15, because the Claude CLI login and the OpenAI key had both expired and no new suite could be generated until they were renewed.
+
+
 
 \begin{table*}[t]
 \caption{Goals for this milestone, from the next steps of Progress Report 2}
@@ -64,23 +68,22 @@ Measure quality after mitigation, for example coverage and mutation score. & New
 Goal & Status & Notes \\
 \midrule
 1. Held out sample: 8 new plain suites per model for the 41 projects in one pipeline, run plain, with M1, and with M2, analyzed with the frozen sign test & \PENDING{G1S} & \PENDING{G1N} \\
-2. Mitigation for every model: guard v3 for the other three models, a measured 3 and 5 run shuffled filter, why M2 broke 3 tests, M1 and M2 on the library study, comparison with an iFixFlakies style fix & Partly & Guard v3 ran for Sonnet, Haiku, and GPT~5.4 mini\PENDING{G2N}. The filters are measured in file order, shuffled, and alternating, for 1, 3, 5, and 10 runs (Table~\ref{tab:krun}). M2 broke no test in the new suites, but we have not found why it broke 2 keplertools tests and did not rerun the limix-lmm test. M1 and M2 on the library study and the iFixFlakies~\cite{shi2019} comparison were not done and move to the final report. \\
+2. Mitigation for every model: guard v3 for the other three models, a measured 3 and 5 run shuffled filter, why M2 broke 3 tests, M1 and M2 on the library study, comparison with an iFixFlakies style fix & Partly & Guard v3 ran for Sonnet, Haiku, and GPT~5.4 mini\PENDING{G2N}. The filters are measured in file order, shuffled, and alternating, for 1, 3, 5, and 10 runs (Table~\ref{tab:krun}). M2 broke no test in the new suites. We have not found why it broke 2 keplertools tests, and the limix-lmm test did not fail in a 20 run rerun. M1 and M2 on the library study and the iFixFlakies~\cite{shi2019} comparison were not done and move to the final report. \\
 3. Order dependent arm, 10 projects (5 if short), generated tests run inside the developer suite & Partly & 17 of 45 reproduced, and 4 suites per model per project ran on their own\PENDING{G3N}. Running them inside the developer suite, the part that tests whether generated tests pollute developer tests, is not done and is next step 3. \\
-4. 40 more time, concurrency, and async wait tests, retrying old dependencies with pinned versions, and stress-ng reruns of the six projects outside randomness & Not met & Only 16 tests passed the rule and none reproduced, and we did not do the pinned version retry or the stress-ng reruns. Progress Report 2's fallback for fewer than 3 reproduced tests was to run stress-ng instead. We did not follow it, and spent the time on the order dependent arm, which reproduced well. The stress-ng reruns are next step 4. \\
-5. Root causes, and a blind relabel by November 16 with Cohen's kappa & Behind & Every new flaky test has rerun and polluter search evidence (Section~\ref{sec:rootcause3}), and labels are in progress. The blind sheet and \texttt{kappa.py} are ready, but Shaunak's relabel missed November 16. \\
+4. 40 more time, concurrency, and async wait tests, retrying old dependencies with pinned versions, and stress-ng reruns of the six projects outside randomness & Not met & The rule found only 16 eligible tests, so 40 was not possible, and none reproduced. We did not do the pinned version retry or the stress-ng reruns. Progress Report 2's fallback for fewer than 3 reproduced tests was to run stress-ng instead. We did not follow it, and spent the time on the order dependent arm, which reproduced well. The stress-ng reruns are next step 4. \\
+5. Root causes, and a blind relabel by November 16 with Cohen's kappa & Behind & 62 of the 65 new flaky held out Claude tests have polluter search results (Section~\ref{sec:rootcause3}), and labels are in progress. The blind sheet and \texttt{kappa.py} are ready, but Shaunak's relabel missed November 16. \\
 New: test quality after mitigation (Progress Report 2 feedback) & Done & Coverage and mutation score for every plain and guard suite (Tables~\ref{tab:guard3} and~\ref{tab:quality}). \\
 \bottomrule
 \end{tabularx}
 \end{table*}
 
-\input{results}
-
-\section{Milestone goals and status}
-Table~\ref{tab:goals} lists the five steps Progress Report 2 promised for this milestone and the status of each. Progress Report 2 also set a check point for November 13. It slipped to November 15, because the Claude CLI login and the OpenAI key had both expired and no new suite could be generated until they were renewed.
-
-
-
 The final report targets were at least 40 suites with a kept flaky test from at least three models, and at least 8 projects outside randomness. We now have \PENDING{SUITECOUNT}. The second target is not met, because the time batch reproduced nothing.
+
+\input{setup}
+
+
+
+\input{results}
 
 \section{Challenges}
 \label{sec:challenges3}
@@ -89,21 +92,34 @@ The final report targets were at least 40 suites with a kept flaky test from at 
 \item \textbf{Credentials.} The Claude CLI login and the OpenAI key both expired during the milestone, which delayed the GPT half of the held out sample by about two days. All generation now runs through a job runner that skips finished suites and stops at a spending cap (\texttt{scripts/gen\_jobs.py}).
 \item \textbf{Slow projects.} The PyTorch projects take close to the four hour limit of a GitHub job for 16 suites of 200 runs.
 \item \textbf{The M2 failures of Progress Report 2.} Two stable keplertools tests compute an eccentricity of 0 through \texttt{np.sqrt(1.0 - p/a)}, which gives NaN when rounding makes the argument slightly negative. Under M2 this happens on the Linux runners and not on our laptop, and the project has no fast math build flags, so we have not found what M2 changes. The third, a limix-lmm test, did not fail in a 20 run rerun, so it may have been a rare failure.
-\item \textbf{File system state.} The kindle-maker tests show that a test can depend on order through files a previous test left behind, which neither our pairwise polluter search nor M2 sees.
+\item \textbf{State outside the interpreter.} The kindle-maker tests collide through folders in \texttt{/tmp}, which M2 does not restore and our polluter search, which tries one earlier test at a time, does not reproduce.
 \end{itemize}
 
 \section{Next steps toward the final report}
 \label{sec:next3}
 The final report is due December 12. In priority order:
 \begin{enumerate}
-\item \textbf{Finish the held out analysis (Shaunak, by November 22).} \PENDING{NEXT1}
-\item \textbf{Root causes and agreement (Manas, by November 25; Shaunak's relabel by November 22).} Label every new flaky test, and report Cohen's kappa on the blind sheet.
+\item \textbf{Finish the held out analysis (Shaunak, by November 22).} Diagnose the GPT held out flaky tests, run the polluter search on the remaining tests, and report the failure rate of the flaky tests each mitigation leaves, which Progress Report 2 promised.
+\item \textbf{Root causes and agreement (Manas, by November 25; Shaunak's relabel by November 22).} Label every new flaky test. Report Cohen's kappa on the 78 blind records, and separately on new held out tests that Shaunak has not written about, since his relabel of the old ones is not fully blind.
 \item \textbf{Order dependent arm inside the developer suite (Manas and Shaunak, by November 29).} Run each generated suite inside the project's developer suite in shuffled orders, to test whether generated tests become polluters of developer tests, which Progress Report 2 promised.
-\item \textbf{Stress and the remaining mitigation work (Shaunak, by December 2).} Rerun the six known flaky code projects outside randomness under the stress-ng configurations of the library study. Run M1 and M2 on the library study suites, confirm the kindle-maker mechanism and add a temporary directory reset to M2, and compare with an iFixFlakies~\cite{shi2019} style cleaner that runs a test from the same suite.
+\item \textbf{Stress and the remaining mitigation work (Shaunak, by December 2).} The library study already runs a quarter of its runs under stress-ng, so the fallback of Progress Report 2 is most useful on the six known flaky code projects outside randomness, which we will rerun under the same stress-ng configurations. Run M1 and M2 on the library study suites, confirm the kindle-maker mechanism and add a temporary directory reset to M2, and compare with an iFixFlakies~\cite{shi2019} style cleaner that runs a test from the same suite.
 \item \textbf{Writing (both, by December 10).} Manas writes related work and the root cause section, Shaunak the setup, results, and threats. Section~\ref{sec:setup} is our first draft of the setup.
 \end{enumerate}
+\textbf{Check point and fallback.} On November 29 we check steps 1 to 3. If the developer suites of step 3 do not install for most of the 17 projects, we report the ones that do and move the time to step 4. If the relabel is not done by November 22, we report kappa on the new held out tests only.
 
-\textbf{Division of work.} Since Progress Report 2, Shaunak built the held out pipeline, generated and ran the held out, guard v3, and order dependent arm suites, wrote the quality, feature, and rerun filter analyses, and wrote this report. Manas continued the literature review and helped label the root causes of the flaky tests.
+\section{Division of work}
+\textbf{Since Progress Report 2.} Shaunak built the held out pipeline and the job runner, generated and ran the held out, guard v3, and order dependent arm suites, and wrote the quality, feature, rerun filter, and polluter search analyses and this report. The order dependent arm was assigned to Manas in Progress Report 2 and was run by Shaunak. Manas did the literature review for the final report and helped label the root causes of the flaky tests. \textbf{Until the final report.} The owners are in Section~\ref{sec:next3}: Manas leads root causes and related work, Shaunak the held out analysis, the stress reruns, and the remaining mitigation work, and both run the order dependent arm inside the developer suites.
+
+\section{Scripts written since Progress Report 2}
+\begin{itemize}
+\item \texttt{gen\_openai.py} (Claude through \texttt{claude -p}, the held out variant) and \texttt{gen\_jobs.py}, a job runner with a spending cap.
+\item \texttt{matched\_run.py} now records every outcome in run order and the first failure message, and \texttt{merge\_results.py} merges CI runs.
+\item \texttt{select\_time.py}, \texttt{select\_od.py}, and \texttt{gruber\_reproduce.py --shuffle-file} for the two batches.
+\item \texttt{heldout\_stats.py} (the frozen test) and \texttt{heldout\_summary.py}.
+\item \texttt{e2\_quality.py} (coverage and mutation, also with fixtures) and \texttt{quality\_summary.py}.
+\item \texttt{krun\_measured.py}, \texttt{feature\_flakiness.py}, and \texttt{feature\_flakiness\_matched.py}.
+\item Filters for \texttt{od\_diagnose.py}, and \texttt{kappa.py} with the blind sheet.
+\end{itemize}
 
 \section{Code, data, and documentation}
 \label{sec:code}
