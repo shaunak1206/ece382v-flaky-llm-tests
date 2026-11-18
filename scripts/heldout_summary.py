@@ -2,7 +2,7 @@
 """Counts for the held out sample and the Claude guard v3 suites (Progress Report 3).
 
 Reads results/matched_heldout/*.json, results/matched_od/*.json (order dependent arm, reported as od, odseed, odiso) (suites <model>_heldout_<k>, and their copies with fixture M1,
-<model>_heldoutseed_<k>, and M2, <model>_heldoutiso_<k>) and results/matched_guard3cl/*.json (Claude guard v3), all
+<model>_heldoutseed_<k>, and M2, <model>_heldoutiso_<k>) and results/matched_guard3cl/*.json and results/matched_guard3gpt/*.json (guard v3), all
 written by scripts/matched_run.py with 200 runs. The same counting rules as analyze_matched.py: a test is kept if it
 passed the first run, flaky if it passed and failed. For each model and condition it reports suites, suites that did
 not import, kept tests, kept flaky tests, suites and projects with a kept flaky test, and how many kept flaky tests
@@ -31,7 +31,7 @@ def main():
     G = collections.defaultdict(collections.Counter)
     gproj = collections.defaultdict(set)
     per = {}  # (project, model, k, cond) -> tests
-    for d in ("matched_heldout", "matched_guard3cl", "matched_od"):
+    for d in ("matched_heldout", "matched_guard3cl", "matched_guard3gpt", "matched_od"):
         for f in sorted(glob.glob(f"{ROOT}/results/{d}/*.json")):
             j = json.load(open(f))
             for sid, s in j["suites"].items():

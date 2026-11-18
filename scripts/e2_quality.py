@@ -122,6 +122,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("project")
     ap.add_argument("--work", default="/tmp/quality_work"); ap.add_argument("--out", required=True)
     ap.add_argument("--suites", default="*_plain_*"); ap.add_argument("--mutants", type=int, default=40)
+    ap.add_argument("--fixtures", action="store_true", help="also measure M1/M2 copies (*seed, *iso), with their conftest.py")
     a = ap.parse_args()
     r = gr.row_for(a.project); t0 = time.time()
     T = json.load(open(f"{ROOT}/matched/targets.json"))[a.project]
@@ -145,10 +146,13 @@ def main():
     sdirs = sorted({x for p in pats for x in glob.glob(f"{ROOT}/matched/{a.project}/{p}/")})
     for sdir in sdirs:
         sid = os.path.basename(sdir.rstrip("/"))
-        if sid.split("_")[1].endswith(("seed", "iso")):
+        fixture = sid.split("_")[1].endswith(("seed", "iso"))
+        if fixture and not a.fixtures:
             continue  # same tests as plain
         dst = f"{repo}/zz_{sid}"; shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst)
         shutil.copy(f"{sdir}/test_gen.py", dst)
+        if fixture:
+            shutil.copy(f"{sdir}/conftest.py", dst)  # M1 or M2, which changes what the tests exercise
         cov_json = f"{d}/cov_{sid}.json"
         _, clean = pytest(py, repo, [f"zz_{sid}"], ["--cov=.", f"--cov-report=json:{cov_json}", "--cov-config=/dev/null"], wall=900)
         passing = sorted(t for t, s in clean.items() if s == "pass")

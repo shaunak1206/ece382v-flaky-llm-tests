@@ -14,6 +14,9 @@ on:
       mutants:
         description: "mutants per project"
         default: "40"
+      fixtures:
+        description: "1 to also measure the M1 and M2 copies"
+        default: "0"
       list:
         description: "project list file in results/gruber"
         default: "matched_projects.txt"
@@ -50,7 +53,7 @@ jobs:
         run: |
           mkdir -p out
           python3 scripts/e2_quality.py "${{ matrix.project }}" --work /tmp/qw --suites "${{ inputs.suites }}" \
-            --mutants "${{ inputs.mutants }}" --out "out/${{ matrix.project }}.json" || true
+            --mutants "${{ inputs.mutants }}" $( [ "${{ inputs.fixtures }}" = "1" ] && echo --fixtures ) --out "out/${{ matrix.project }}.json" || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
