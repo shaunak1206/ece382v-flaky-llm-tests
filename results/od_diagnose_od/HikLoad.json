@@ -1,0 +1,51 @@
+{
+ "project": "HikLoad",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "sonnet_plain_1",
+   "test": "test_config_is_same_object_on_import",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "test_reload_restores_defaults_after_mutation"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "sonnet_plain_1",
+   "test": "test_config_mutation_is_visible_through_module",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "test_reload_restores_defaults_after_mutation"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "sonnet_plain_2",
+   "test": "test_config_same_object_after_reimport",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 18,
+   "polluters": [
+    "test_config_reload_restores_defaults"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "sonnet_plain_4",
+   "test": "test_module_exposes_same_object",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "test_reload_restores_defaults_after_mutation"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 44.8
+}
