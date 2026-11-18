@@ -1,0 +1,878 @@
+{
+ "project": "homog",
+ "sha": "5b49902ff3dea972f2c466abe7937546b50ee9f1",
+ "category": "unlabeled",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_batch",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_degenerate_direction",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_non_parallel",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_parallel",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_type_and_shape",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_batch",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_degenerate"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_1.test_gen::test_hray_shapes_and_values": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_hray_broadcasting_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_hray_direction_normalization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_parallel_rays_close": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_non_parallel": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_skew_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_parallel": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert False\n +  where False = <function allclose at 0x7d0b9c01fb80>(nan, 0)\n +    where <function allclose at 0x7d0b9c01fb80> = np.allclose"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_non_parallel": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "ValueError: operands could not be broadcast together with shapes (4,) (3,)"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_type_and_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert (2, 4) == (2, 3)\n  At index 1 diff: 4 != 3\n  Full diff:\n  - (2, 3)\n  ?     ^\n  + (2, 4)\n  ?     ^"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_no_mutation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_no_mutation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_hray_broadcast_different_shapes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_batch": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert False\n +  where False = <function isclose at 0x7d0b9c01fd30>(0.0, 1.0, atol=1e-12)\n +    where <function isclose at 0x7d0b9c01fd30> = np.isclose"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_batch": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert (2, 4) == (2, 3)\n  At index 1 diff: 4 != 3\n  Full diff:\n  - (2, 3)\n  ?     ^\n  + (2, 4)\n  ?     ^"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_hray_direction_input_various_length_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_degenerate": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'Exception'>"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_degenerate_direction": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (4,) and arg 1 with shape (3,)."
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_batch",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_degenerate_direction",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_non_parallel",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_parallel",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_closest_points_type_and_shape",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_batch",
+    "zz_gpt41mini_guard3_1.test_gen::test_line_line_distance_degenerate"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 22,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_broadcast_shape",
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_invalid_direction_length",
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_pa_parallel_axes",
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_parallel_lines",
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_large_offset"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_basic_properties[origin0-direction0]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_basic_properties[origin1-direction1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_basic_properties[origin2-direction2]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_basic_properties[origin3-direction3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_broadcast_shape": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "ValueError: operands could not be broadcast together with remapped shapes [original->remapped]: (4,)  and requested shape (4,3)"
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_parallel_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_skew_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_nonzero_skew": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_identical_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_skew": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_parallel_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'Exception'>"
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_pa_scalar_and_array": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_pa_consistency": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_direction_normalized_for_various_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_origin_with_homogeneous_input_returns_same": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_zero_for_intersecting_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_large_offset": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=1e-07\n\nMismatched elements: 1 / 1 (100%)\nMax absolute difference: 100.\nMax relative difference: 1.\n x: array(0.)\n y: array(100)"
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_multidimensional": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_invalid_direction_length": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (4,) and arg 1 with shape (2,)."
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_pa_same_point_and_axis": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_pa_parallel_axes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=1e-07\n\nMismatched elements: 1 / 3 (33.3%)\nMax absolute difference: 0\nMax relative difference: inf\n x: array([-9223372036854775808,                    0,                    0])\n y: array([0, 0, 0])"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_broadcast_shape",
+    "zz_gpt41mini_guard3_2.test_gen::test_hray_invalid_direction_length",
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_pa_parallel_axes",
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_closest_points_parallel_lines",
+    "zz_gpt41mini_guard3_2.test_gen::test_line_line_distance_large_offset"
+   ]
+  },
+  "gpt54mini_guard3_1": {
+   "model": "gpt54mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 17,
+   "first_run_failed": [
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_broadcasts_over_batches",
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_collinear_case_returns_finite_values",
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_for_parallel_lines_returns_endpoints_on_each_line"
+   ],
+   "tests": {
+    "zz_gpt54mini_guard3_1.test_gen::test_hray_creates_expected_shape_and_homogeneous_structure": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_hray_uses_hpoint_for_origin_passes_through_4d_origin_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_hray_broadcasts_over_batch_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_hray_accepts_numpy_arrays_and_does_not_modify_inputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_hray_normalizes_direction_vector": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_distance_parallel_lines_uses_perpendicular_offset": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_distance_intersecting_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_distance_skew_lines_matches_known_example": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_distance_is_symmetric_for_general_lines": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_distance_broadcasts_over_batches": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_intersecting_lines_return_same_point": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_for_parallel_lines_returns_endpoints_on_each_line": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=0\n\nx and y nan location mismatch:\n x: array([nan, nan, nan])\n y: array([0., 0., 0.])"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_between_skew_lines_are_orthogonal_to_both_directions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_are_symmetric_up_to_swapping_outputs": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_broadcasts_over_batches": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: \nNot equal to tolerance rtol=1e-07, atol=0\n\nMismatched elements: 1 / 3 (33.3%)\nMax absolute difference: 1.\nMax relative difference: 1.\n x: array([0., 0., 0.])\n y: array([0., 1., 0.])"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_collinear_case_returns_finite_values": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert False\n +  where False = <function all at 0x7dff2f612b80>(array([False, False, False, False]))\n +    where <function all at 0x7dff2f612b80> = np.all\n +    and   array([False, False, False, False]) = <ufunc 'isfinite'>(array([nan, nan, nan, nan]))\n +      where <ufunc 'isfinite'"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_distance_does_not_depend_on_ray_point_parameterization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_broadcasts_over_batches",
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_collinear_case_returns_finite_values",
+    "zz_gpt54mini_guard3_1.test_gen::test_line_line_closest_points_for_parallel_lines_returns_endpoints_on_each_line"
+   ]
+  },
+  "gpt54mini_guard3_2": {
+   "model": "gpt54mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_closest_points_parallel_lines_returns_a_valid_pair"
+   ],
+   "tests": {
+    "zz_gpt54mini_guard3_2.test_gen::test_hray_converts_3d_origin_and_direction_to_homogeneous_ray": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_hray_preserves_4d_origin_and_normalizes_direction": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_hray_broadcasts_origin_and_direction_arrays": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_hray_keeps_ray_direction_unit_length": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_distance_identical_intersecting_lines_is_zero": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_distance_skew_lines_simple_case": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_distance_parallel_lines_uses_perpendicular_separation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_distance_anti_parallel_lines_uses_perpendicular_separation": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_distance_translation_invariance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_closest_points_intersecting_lines_return_same_point": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_closest_points_skew_lines_give_expected_points": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_closest_points_outputs_points_on_each_line": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_closest_points_parallel_lines_returns_a_valid_pair": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert False\n +  where False = <function isclose at 0x79143e0dfca0>(nan, array(2.))\n +    where <function isclose at 0x79143e0dfca0> = np.isclose\n +    and   nan = <function norm at 0x79143e030ca0>((array([nan, nan, nan]) - array([nan, nan, nan])))\n +      where <function norm at 0x7"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_distance_and_closest_points_agree_on_distance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_guard3_2.test_gen::test_line_line_closest_points_parallel_lines_returns_a_valid_pair"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 198,
+  "failed": 2,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "assert False\n +  where False = <function allclose at 0x74c1a7bc7040>(array([[[2.78721485e+00, 3.04100497e+00, 3.50331356e-01, 3.80724388e+00,\\n         9.08951550e-01, 1.08249535e+00, 1.03...376071e-0",
+   "assert False\n +  where False = <function allclose at 0x77b19fb47040>(array([[[0.09317033, 0.9746281 , 3.88280612, 0.77918382, 0.40978236,\\n         2.0996942 , 2.25300041],\\n        [0.2223..., 4.4839"
+  ]
+ },
+ "seconds": 289.8
+}

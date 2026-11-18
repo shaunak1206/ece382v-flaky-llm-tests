@@ -1,0 +1,400 @@
+{
+ "project": "data-partitioner",
+ "sha": "c37bca05576648c3f69f8694951bb2ae9ea9ed21",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard3_1.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard3_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+     "first_message": "collection failure"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard3_1.test_gen"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard3_2.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard3_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+     "first_message": "collection failure"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard3_2.test_gen"
+   ]
+  },
+  "gpt54mini_guard3_1": {
+   "model": "gpt54mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_guard3_1.test_gen::test_more_than_one_generator_reference_shares_underlying_state"
+   ],
+   "tests": {
+    "zz_gpt54mini_guard3_1.test_gen::test_init_sets_basic_attributes": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_init_uses_default_training_percent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_training_set_all_training": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_test_set_all_test": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_mixed_partitioning_produces_expected_training_and_test_sets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_yield_set_is_lazy_until_consumed": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_training_and_test_sets_can_be_consumed_interleaved": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_empty_dataset_returns_empty_generators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_generators_can_be_called_multiple_times_and_restart_from_beginning_of_index_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_consuming_test_set_first_then_training_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_consuming_training_set_first_then_test_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_dataset_items_are_returned_by_index_not_by_partitioner_output": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_partitioning_function_passed_through_unchanged": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_more_than_one_generator_reference_shares_underlying_state": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert [] == [(0, 'a')]\n  Right contains one more item: (0, 'a')\n  Full diff:\n  - [(0, 'a')]\n  + []"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_guard3_1.test_gen::test_more_than_one_generator_reference_shares_underlying_state"
+   ]
+  },
+  "gpt54mini_guard3_2": {
+   "model": "gpt54mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt54mini_guard3_2.test_gen::test_init_sets_basic_attributes_and_partitioner_arguments": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_training_set_yields_only_training_items_in_index_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_test_set_yields_only_test_items_in_index_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_generators_are_lazy_until_iterated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_test_and_training_generators_share_cached_partitioning_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_consuming_test_set_first_still_allows_training_set_later": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_empty_dataset_yields_empty_generators": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_all_training_partition": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_all_test_partition": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_custom_partitioning_function_is_forwarded_to_partitioner": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_default_training_percent_creates_two_complementary_buckets": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_dataset_is_read_by_index_not_by_iteration": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_multiple_partial_iterations_resume_from_cached_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 197,
+  "failed": 3,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: 0.1863 != 0.2 within 0.009315 delta (0.013700000000000018 difference)",
+   "AssertionError: 0.1904 != 0.2 within 0.00952 delta (0.009599999999999997 difference)",
+   "AssertionError: 0.2108 != 0.2 within 0.01054 delta (0.010799999999999976 difference)"
+  ]
+ },
+ "seconds": 198.3
+}

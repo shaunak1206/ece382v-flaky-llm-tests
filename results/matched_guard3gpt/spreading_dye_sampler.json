@@ -1,0 +1,840 @@
+{
+ "project": "spreading_dye_sampler",
+ "sha": "4282f7609959a31d1b2a4832f3ed643b15c46cb6",
+ "category": "random",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_1.test_gen::test_cells_added_do_not_repeat",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_all_cells_added_with_full_permitted_mask",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_neighbours_external_state_unchanged",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_probabilities_sum_to_one_and_distribution"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_1.test_gen::test_dyeblot_initial_state": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_dyeblot_num_cells_and_for_each_cell_basic": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_basic_properties[grid_dims0-cell_dims0-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_basic_properties[grid_dims1-cell_dims1-1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_basic_properties[grid_dims2-cell_dims2-3]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_basic_properties[grid_dims3-cell_dims3-5]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_returns_none_if_start_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_respects_permitted_mask_squeeze_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_respects_permitted_mask_squeeze_true": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_cells_are_contiguous_and_share_edges": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_neighbours_external_state_unchanged": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert False\n +  where False = isinstance(None, <class 'spreading_dye_sampler.dye_blot.DyeBlot'>)\n +    where <class 'spreading_dye_sampler.dye_blot.DyeBlot'> = dye_blot.DyeBlot"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_for_each_cell_function_is_called_exactly_once_per_cell": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_for_each_cell_passes_correct_coordinates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_probabilities_sum_to_one_and_distribution": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "UnboundLocalError: local variable 'np' referenced before assignment"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_with_single_cell_and_masked_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_rejection_due_to_nonpermitted_with_squeeze_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_rejection_due_to_start_cell_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_all_cells_added_with_full_permitted_mask": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert None is not None"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_cells_added_do_not_repeat": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert None is not None"
+    },
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_with_non_boolean_permitted_array": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_1.test_gen::test_cells_added_do_not_repeat",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_all_cells_added_with_full_permitted_mask",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_neighbours_external_state_unchanged",
+    "zz_gpt41mini_guard3_1.test_gen::test_make_blot_probabilities_sum_to_one_and_distribution"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 20,
+   "first_run_failed": [
+    "zz_gpt41mini_guard3_2.test_gen::test_is_permitted_outside_bounds",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_basic_no_permitted_seeded",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[2]",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[3]",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_restricts_cells_seeded"
+   ],
+   "tests": {
+    "zz_gpt41mini_guard3_2.test_gen::test_dyeblot_init_and_num_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_for_each_cell_calls_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_basic_no_permitted_seeded": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert False\n +  where False = isinstance(None, <class 'spreading_dye_sampler.dye_blot.DyeBlot'>)\n +    where <class 'spreading_dye_sampler.dye_blot.DyeBlot'> = dye_blot.DyeBlot"
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_all_false_returns_none_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_restricts_cells_seeded": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert False\n +  where False = isinstance(None, <class 'spreading_dye_sampler.dye_blot.DyeBlot'>)\n +    where <class 'spreading_dye_sampler.dye_blot.DyeBlot'> = dye_blot.DyeBlot"
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_non_permitted_no_squeeze_returns_none_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_non_permitted_with_squeeze_skips_cells_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_req_num_cells_is_one_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_neighbors_accumulate_shared_edge_length_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_draw_neighbour_probability_distribution_sum_to_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_is_permitted_outside_bounds": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert True is True\n +  where True = <function test_is_permitted_outside_bounds.<locals>._is_permitted at 0x731b8a0c0e50>((0, 0))"
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_with_cell_dimensions_stored": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_zero_cells_requested_returns_blot_with_zero_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_large_num_cells_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_with_non_bool_permitted_mask_coerced": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_with_1x1_grid_and_req_1_seeded": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[1]": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[2]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert None is not None"
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[3]": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert None is not None"
+    },
+    "zz_gpt41mini_guard3_2.test_gen::test_for_each_cell_with_no_cells_does_not_call_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt41mini_guard3_2.test_gen::test_is_permitted_outside_bounds",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_basic_no_permitted_seeded",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[2]",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_cells_are_unique_seeded[3]",
+    "zz_gpt41mini_guard3_2.test_gen::test_make_blot_permitted_mask_restricts_cells_seeded"
+   ]
+  },
+  "gpt54mini_guard3_1": {
+   "model": "gpt54mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 14,
+   "first_run_failed": [
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_can_construct_from_large_requested_size_when_space_allows",
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_with_squeeze_true_skips_nonpermitted_neighbor"
+   ],
+   "tests": {
+    "zz_gpt54mini_guard3_1.test_gen::test_dyeblot_initial_state_and_num_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_for_each_cell_visits_cells_in_insertion_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_for_each_cell_on_empty_blot_calls_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_single_cell_selected_when_start_is_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_returns_none_when_start_cell_is_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_respects_permitted_mask_for_start_and_growth": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_returns_none_when_nonpermitted_neighbor_is_drawn_and_squeeze_false": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_with_squeeze_true_skips_nonpermitted_neighbor": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "StopIteration"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_uses_cell_dimensions_for_neighbor_weights": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_stops_when_reaching_requested_size": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_returns_blot_object_with_correct_metadata": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_can_construct_from_large_requested_size_when_space_allows": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert None is not None"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_for_each_cell_callback_receives_integer_coordinates": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_defaults_to_all_permitted_when_mask_is_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_can_construct_from_large_requested_size_when_space_allows",
+    "zz_gpt54mini_guard3_1.test_gen::test_make_blot_with_squeeze_true_skips_nonpermitted_neighbor"
+   ]
+  },
+  "gpt54mini_guard3_2": {
+   "model": "gpt54mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_builds_horizontal_chain_with_weighted_neighbor_choice",
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_builds_vertical_chain_with_weighted_neighbor_choice",
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_squeeze_true_skips_masked_neighbor_and_continues"
+   ],
+   "tests": {
+    "zz_gpt54mini_guard3_2.test_gen::test_dye_blot_initial_state_and_num_cells": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_for_each_cell_calls_function_in_insertion_order": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_for_each_cell_on_empty_blot_calls_nothing": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_single_cell_when_req_num_cells_is_one": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_returns_none_when_start_cell_is_not_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_builds_horizontal_chain_with_weighted_neighbor_choice": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert [(1, 1), (0, 1), (1, 0)] == [(1, 1), (0, 1), (2, 1)]\n  At index 2 diff: (1, 0) != (2, 1)\n  Full diff:\n  - [(1, 1), (0, 1), (2, 1)]\n  ?                   ^  ^\n  + [(1, 1), (0, 1), (1, 0)]\n  ?                   ^  ^"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_builds_vertical_chain_with_weighted_neighbor_choice": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert [(1, 1), (1, 0), (0, 0)] == [(1, 1), (1, 0), (1, 2)]\n  At index 2 diff: (0, 0) != (1, 2)\n  Full diff:\n  - [(1, 1), (1, 0), (1, 2)]\n  ?                   ^  ^\n  + [(1, 1), (1, 0), (0, 0)]\n  ?                   ^  ^"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_squeeze_false_returns_none_on_masked_neighbor": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_squeeze_true_skips_masked_neighbor_and_continues": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "assert [(1, 1), (2, 1), (2, 0)] == [(1, 1), (2, 1), (1, 2)]\n  At index 2 diff: (2, 0) != (1, 2)\n  Full diff:\n  - [(1, 1), (2, 1), (1, 2)]\n  ?                   ^  ^\n  + [(1, 1), (2, 1), (2, 0)]\n  ?                   ^  ^"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_respects_grid_bounds_and_returns_none_if_start_outside_permitted": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_with_all_permitted_false_returns_none": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_does_not_exceed_required_cell_count": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_returns_blot_object_with_expected_dimensions": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_builds_horizontal_chain_with_weighted_neighbor_choice",
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_builds_vertical_chain_with_weighted_neighbor_choice",
+    "zz_gpt54mini_guard3_2.test_gen::test_make_blot_squeeze_true_skips_masked_neighbor_and_continues"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 199,
+  "failed": 1,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: False\nassert 0"
+  ]
+ },
+ "seconds": 207.1
+}

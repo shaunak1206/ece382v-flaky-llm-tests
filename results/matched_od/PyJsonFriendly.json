@@ -5835,6 +5835,4236 @@
    },
    "flaky": [],
    "always_fail": []
+  },
+  "gpt41mini_plain_1": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_set"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_subclass_must_implement_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_subclass_with_implementation_can_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_set": {
+     "pass": 99,
+     "fail": 101,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 1,
+     "sequence": "FPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFP",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_uses_custom_method_for_jsonfriendly_instance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_falls_back_for_non_jsonfriendly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_dumps_encodes_jsonfriendly_object_like_expected": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_dumps_encodes_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_raises_typeerror_for_unknown": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonfriendly_abstractmethod_presence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_multiple_jsonfriendly_instances_serialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_is_original_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonfriendly_repr_and_str_are_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_with_builtin_types_returns_backup": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_as_json_friendly_obj_called_in_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_serialization_of_jsonfriendly_obj_in_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_set"
+   ],
+   "always_fail": []
+  },
+  "gpt41mini_plain_2": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_is_callable",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract",
+    "zz_gpt41mini_plain_2.test_gen::test_subclass_must_implement_as_json_friendly_obj"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_is_callable": {
+     "pass": 86,
+     "fail": 114,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 14,
+     "sequence": "FPFFFPFFFFFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFFFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFFFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFFFFFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFP",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj": {
+     "pass": 92,
+     "fail": 108,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 8,
+     "sequence": "FPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFFFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFFFP",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_calls_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_with_non_jsonfriendly_object_raises_typeerror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_subclass_must_implement_as_json_friendly_obj": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'TypeError'>"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_subclass_implements_abstract_method_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_is_abstract_meta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_cannot_instantiate_directly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'TypeError'>"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_serializing_object_returns_serializable_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_serializing_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_should_restore_original_behavior_after_assignment": {
+     "pass": 191,
+     "fail": 9,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 0,
+     "fails_shuffled": 9,
+     "sequence": "PPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPFPFPPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPP",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_with_builtin_type_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_subclass_with_non_dict_return_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_subclass_with_str_return_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_behavior_for_object_with_as_json_friendly_obj_attribute_but_not_callable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_is_callable",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_should_restore_original_behavior_after_assignment"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract",
+    "zz_gpt41mini_plain_2.test_gen::test_subclass_must_implement_as_json_friendly_obj"
+   ]
+  },
+  "gpt41mini_plain_3": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "3",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt41mini_plain_3.test_gen::test_subclass_must_implement_abstract_method": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_instantiate_and_call_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_json_encoder_default_is_monkeypatched": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_json_encoder_serializes_jsonfriendly_object_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_json_encoder_raises_type_error_for_unknown_object": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_json_encoder_default_backup_preserved_after_multiple_serializations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_does_not_modify_non_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_subclass_with_custom_json_friendly_obj_returns_non_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_serializer_works_for_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_handles_multiple_jsonfriendly_types_in_collection": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_uses_defaultbackup_for_non_jsonfriendly_objects": {
+     "pass": 187,
+     "fail": 0,
+     "error": 0,
+     "skip": 13,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPSPPPPPPPPPPPPPPPSPPPPPPPPPPPPPPPPPPPPPSPPPPPPPPPSPPPPPPPPPPPSPPPPPPPPPPPPPPPSPPPPPPPPPPPPPPPPPPPSPPPPPPPPPPPSPPPPPPPPPPPPPPPSPPPPPPPPPPPPPPPPPPPPPPPSPSPPPPPPPSPPPSPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_new_subclass_inherits_jsonencoder_patch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_repr_and_str_on_jsonfriendly_subclass_do_not_affect_serialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_subclass_with_none_return": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_handles_objects_with__as_json_friendly_obj_not_callable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_with_object_missing_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt41mini_plain_4": {
+   "model": "gpt41mini",
+   "prompt": "plain",
+   "sample": "4",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_4.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_subclass_can_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_as_json_friendly_obj_method": {
+     "pass": 135,
+     "fail": 65,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 0,
+     "fails_shuffled": 65,
+     "sequence": "PFPFPFPFPFPFPPPPPFPPPFPPPFPFPFPFPFPFPFPFPFPFPFPFPPPFPFPFPPPFPPPFPFPPPFPFPPPFPPPFPPPFPPPPPFPPPFPFPPPFPPPPPPPFPFPFPFPPPFPPPFPPPFPFPFPFPFPFPFPPPFPFPPPFPPPFPPPFPFPFPPPPPPPPPFPPPFPFPFPPPFPPPFPPPFPFPPPFPPPF",
+     "first_message": "AssertionError: assert None is True\n +  where None = <built-in method get of dict object at 0x7b4c26501080>('dummy')\n +    where <built-in method get of dict object at 0x7b4c26501080> = {'fake': 123}.get"
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_backup_set_after_first_call": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_calls_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_dummyjsonfriendly_str_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_with_builtin_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonfriendly_abstract_method_signature": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_does_not_set_default_backup_again": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_dummyjsonfriendly_multiple_times_in_jsonencoder": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonfriendly_inheritance_chain": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_abstractmethod_presence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plain_4.test_gen::test_as_json_friendly_obj_method"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup"
+   ]
+  },
+  "gpt41mini_plainiso_1": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonencoder_default_backup_set"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_subclass_must_implement_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_subclass_with_implementation_can_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonencoder_default_backup_set": {
+     "pass": 90,
+     "fail": 110,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 10,
+     "sequence": "FPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFFFPFFFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFFFPFFFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFFFPFPFPFPFPFF",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonencoder_default_uses_custom_method_for_jsonfriendly_instance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonencoder_default_falls_back_for_non_jsonfriendly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_dumps_encodes_jsonfriendly_object_like_expected": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_dumps_encodes_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonencoder_default_backup_raises_typeerror_for_unknown": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonfriendly_abstractmethod_presence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_multiple_jsonfriendly_instances_serialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonencoder_default_backup_is_original_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonfriendly_repr_and_str_are_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonencoder_default_with_builtin_types_returns_backup": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_as_json_friendly_obj_called_in_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_1.test_gen::test_serialization_of_jsonfriendly_obj_in_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plainiso_1.test_gen::test_jsonencoder_default_backup_set"
+   ],
+   "always_fail": []
+  },
+  "gpt41mini_plainiso_2": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj",
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_backup_is_callable",
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj",
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict",
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract",
+    "zz_gpt41mini_plainiso_2.test_gen::test_subclass_must_implement_as_json_friendly_obj"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_backup_is_callable": {
+     "pass": 91,
+     "fail": 109,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 9,
+     "sequence": "FPFPFPFFFPFPFPFPFPFPFPFPFFFPFPFPFPFPFFFPFFFPFPFFFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFP",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj": {
+     "pass": 90,
+     "fail": 110,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 10,
+     "sequence": "FPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFFFPFPFPFPFFFPFPFPFPFPFPFPFFFFFFFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFF",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_calls_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_with_non_jsonfriendly_object_raises_typeerror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_subclass_must_implement_as_json_friendly_obj": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'TypeError'>"
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_subclass_implements_abstract_method_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonfriendly_is_abstract_meta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonfriendly_cannot_instantiate_directly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'TypeError'>"
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_serializing_object_returns_serializable_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_serializing_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_should_restore_original_behavior_after_assignment": {
+     "pass": 189,
+     "fail": 11,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 0,
+     "fails_shuffled": 11,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPFPPPPPFPPPPPPPPPPPFPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPFPPPFPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPFPPPPPFPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_with_builtin_type_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonfriendly_subclass_with_non_dict_return_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonfriendly_subclass_with_str_return_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_behavior_for_object_with_as_json_friendly_obj_attribute_but_not_callable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj",
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_backup_is_callable",
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_should_restore_original_behavior_after_assignment"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj",
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict",
+    "zz_gpt41mini_plainiso_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract",
+    "zz_gpt41mini_plainiso_2.test_gen::test_subclass_must_implement_as_json_friendly_obj"
+   ]
+  },
+  "gpt41mini_plainiso_3": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "3",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt41mini_plainiso_3.test_gen::test_subclass_must_implement_abstract_method": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_instantiate_and_call_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_json_encoder_default_is_monkeypatched": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_json_encoder_serializes_jsonfriendly_object_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_json_encoder_raises_type_error_for_unknown_object": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_json_encoder_default_backup_preserved_after_multiple_serializations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_encoder_does_not_modify_non_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_subclass_with_custom_json_friendly_obj_returns_non_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_serializer_works_for_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_encoder_handles_multiple_jsonfriendly_types_in_collection": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_encoder_uses_defaultbackup_for_non_jsonfriendly_objects": {
+     "pass": 197,
+     "fail": 0,
+     "error": 0,
+     "skip": 3,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPSPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPSPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPSPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_new_subclass_inherits_jsonencoder_patch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_repr_and_str_on_jsonfriendly_subclass_do_not_affect_serialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_subclass_with_none_return": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_encoder_handles_objects_with__as_json_friendly_obj_not_callable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_3.test_gen::test_encoder_with_object_missing_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt41mini_plainiso_4": {
+   "model": "gpt41mini",
+   "prompt": "plainiso",
+   "sample": "4",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_subclass_can_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_as_json_friendly_obj_method": {
+     "pass": 150,
+     "fail": 50,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 0,
+     "fails_shuffled": 50,
+     "sequence": "PFPPPPPFPPPFPFPFPPPPPFPFPFPPPFPPPPPFPFPFPPPFPFPFPFPPPPPPPPPPPFPFPFPFPPPPPFPFPPPPPPPPPFPFPFPFPFPPPFPFPPPPPPPPPFPPPFPFPFPPPPPPPPPPPPPFPFPPPFPFPFPPPPPFPFPFPPPFPPPFPFPFPPPPPFPPPPPFPPPFPPPPPPPFPPPPPPPPPFPP",
+     "first_message": "AssertionError: assert None is True\n +  where None = <built-in method get of dict object at 0x729183434100>('dummy')\n +    where <built-in method get of dict object at 0x729183434100> = {'fake': 123}.get"
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonencoder_default_backup_set_after_first_call": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonencoder_default_calls_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_dummyjsonfriendly_str_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonencoder_default_with_builtin_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonfriendly_abstract_method_signature": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonencoder_default_does_not_set_default_backup_again": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_dummyjsonfriendly_multiple_times_in_jsonencoder": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonfriendly_inheritance_chain": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainiso_4.test_gen::test_abstractmethod_presence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plainiso_4.test_gen::test_as_json_friendly_obj_method"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plainiso_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup"
+   ]
+  },
+  "gpt41mini_plainseed_1": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonencoder_default_backup_set"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_subclass_must_implement_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_subclass_with_implementation_can_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonencoder_default_backup_set": {
+     "pass": 88,
+     "fail": 112,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 12,
+     "sequence": "FPFPFPFPFPFFFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFPFFFPFFFPFPFPFPFPFPFPFFFFFPFPFPFPFPFFFPFPFP",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonencoder_default_uses_custom_method_for_jsonfriendly_instance": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonencoder_default_falls_back_for_non_jsonfriendly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_dumps_encodes_jsonfriendly_object_like_expected": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_dumps_encodes_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonencoder_default_backup_raises_typeerror_for_unknown": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonfriendly_abstractmethod_presence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_multiple_jsonfriendly_instances_serialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonencoder_default_backup_is_original_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonfriendly_repr_and_str_are_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonencoder_default_with_builtin_types_returns_backup": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_as_json_friendly_obj_called_in_default": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_1.test_gen::test_serialization_of_jsonfriendly_obj_in_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plainseed_1.test_gen::test_jsonencoder_default_backup_set"
+   ],
+   "always_fail": []
+  },
+  "gpt41mini_plainseed_2": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 18,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj",
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_backup_is_callable",
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj",
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict",
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract",
+    "zz_gpt41mini_plainseed_2.test_gen::test_subclass_must_implement_as_json_friendly_obj"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_backup_is_callable": {
+     "pass": 89,
+     "fail": 111,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 11,
+     "sequence": "FPFPFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFFFPFPFFFPFPFFFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFFFFFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFP",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj": {
+     "pass": 90,
+     "fail": 110,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 10,
+     "sequence": "FPFFFPFPFPFFFPFPFPFPFPFPFPFPFFFPFPFPFPFPFFFPFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFFFPFPFPFPFPFPFPFPFPFPFPFPFPFPFFFPFPFP",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_calls_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_with_non_jsonfriendly_object_raises_typeerror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_subclass_must_implement_as_json_friendly_obj": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'TypeError'>"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_subclass_implements_abstract_method_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonfriendly_is_abstract_meta": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonfriendly_cannot_instantiate_directly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "Failed: DID NOT RAISE <class 'TypeError'>"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_serializing_object_returns_serializable_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_serializing_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_should_restore_original_behavior_after_assignment": {
+     "pass": 191,
+     "fail": 9,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 0,
+     "fails_shuffled": 9,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPFPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPFPPPPPPPPPPPPPPPPPPPFPFPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_with_builtin_type_set": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonfriendly_subclass_with_non_dict_return_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonfriendly_subclass_with_str_return_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_behavior_for_object_with_as_json_friendly_obj_attribute_but_not_callable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj",
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_backup_is_callable",
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_should_restore_original_behavior_after_assignment"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj",
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict",
+    "zz_gpt41mini_plainseed_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract",
+    "zz_gpt41mini_plainseed_2.test_gen::test_subclass_must_implement_as_json_friendly_obj"
+   ]
+  },
+  "gpt41mini_plainseed_3": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "3",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [],
+   "tests": {
+    "zz_gpt41mini_plainseed_3.test_gen::test_subclass_must_implement_abstract_method": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_instantiate_and_call_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_json_encoder_default_is_monkeypatched": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_json_encoder_serializes_jsonfriendly_object_correctly": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_json_encoder_raises_type_error_for_unknown_object": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_json_encoder_default_backup_preserved_after_multiple_serializations": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_encoder_does_not_modify_non_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_subclass_with_custom_json_friendly_obj_returns_non_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_serializer_works_for_nested_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_encoder_handles_multiple_jsonfriendly_types_in_collection": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_encoder_uses_defaultbackup_for_non_jsonfriendly_objects": {
+     "pass": 193,
+     "fail": 0,
+     "error": 0,
+     "skip": 7,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPSPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPSPSPPPPPPPPPPPPPPPPPPPPPPPSPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPSPSPPPPPPPPPPPPPS",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_new_subclass_inherits_jsonencoder_patch": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_repr_and_str_on_jsonfriendly_subclass_do_not_affect_serialization": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_subclass_with_none_return": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_encoder_handles_objects_with__as_json_friendly_obj_not_callable": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_3.test_gen::test_encoder_with_object_missing_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": []
+  },
+  "gpt41mini_plainseed_4": {
+   "model": "gpt41mini",
+   "prompt": "plainseed",
+   "sample": "4",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup"
+   ],
+   "tests": {
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_subclass_can_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_as_json_friendly_obj_method": {
+     "pass": 153,
+     "fail": 47,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 0,
+     "fails_shuffled": 47,
+     "sequence": "PPPPPPPFPFPPPFPPPFPFPPPFPPPFPFPPPFPFPFPPPFPPPFPPPPPPPPPFPPPPPPPPPPPFPPPPPFPPPPPFPFPFPFPFPFPPPFPPPFPFPFPFPPPPPFPFPFPFPFPFPFPPPFPPPPPPPFPPPFPFPPPPPPPPPPPPPPPPPPPFPPPFPPPFPPPFPPPPPFPFPPPPPPPFPPPPPPPFPPPF",
+     "first_message": "AssertionError: assert None is True\n +  where None = <built-in method get of dict object at 0x7c2599cecbc0>('dummy')\n +    where <built-in method get of dict object at 0x7c2599cecbc0> = {'fake': 123}.get"
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonencoder_default_backup_set_after_first_call": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonencoder_default_calls_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_dummyjsonfriendly_str_repr": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonencoder_default_with_builtin_type": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonfriendly_abstract_method_signature": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonencoder_default_does_not_set_default_backup_again": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_dummyjsonfriendly_multiple_times_in_jsonencoder": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonfriendly_inheritance_chain": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt41mini_plainseed_4.test_gen::test_abstractmethod_presence": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt41mini_plainseed_4.test_gen::test_as_json_friendly_obj_method"
+   ],
+   "always_fail": [
+    "zz_gpt41mini_plainseed_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup"
+   ]
+  },
+  "gpt54mini_plain_1": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_1.test_gen::test_encoding_sets_default_backup_attribute"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_jsonfriendly_is_abstract_and_cannot_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_subclass_without_implementation_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_jsonencoder_default_is_patched_to_lambda": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_concrete_subclass_can_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_dumps_uses_custom_json_friendly_object": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_dumps_works_with_nested_json_friendly_object_in_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_dumps_works_with_nested_json_friendly_object_in_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_friendly_method_may_return_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_friendly_method_may_return_integer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_friendly_method_may_return_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_encoding_sets_default_backup_attribute": {
+     "pass": 7,
+     "fail": 193,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 93,
+     "sequence": "FFFFFFFFFFFFFFFFFFFPFFFFFFFFFPFFFFFFFFFFFFFFFFFFFFFFFFFPFFFFFFFFFFFFFFFFFFFFFFFFFPFFFFFFFFFPFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFPFPFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert not True\n +  where True = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_default_backup_updates_to_current_default_on_each_encoding": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_multiple_encodings_remain_consistent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt54mini_plain_1.test_gen::test_encoding_sets_default_backup_attribute"
+   ],
+   "always_fail": []
+  },
+  "gpt54mini_plain_2": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 12,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_2.test_gen::test_default_backup_attribute_is_created",
+    "zz_gpt54mini_plain_2.test_gen::test_jsonencoder_default_sets_backup_when_called"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonencoder_default_is_patched": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_default_backup_attribute_is_created": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_encodes_to_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_encodes_to_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_encodes_nested_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_method_can_return_builtin_scalar": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_with_inherited_method_works": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonencoder_default_sets_backup_when_called": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert 'default_backup' in mappingproxy({'__module__': 'json.encoder', '__doc__': 'Extensible JSON <http://json.org> encoder for Python data stru...': <attribute '__dict__' of 'JSONEncoder' objects>, '__weakref__': <attribute '__weakref__' of 'JSONEncoder' objects>})\n +  where mappin"
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_non_jsonfriendly_object_raises_typeerror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_object_with_missing_method_falls_back_and_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_custom_encoder_still_handles_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_2.test_gen::test_default_backup_attribute_is_created",
+    "zz_gpt54mini_plain_2.test_gen::test_jsonencoder_default_sets_backup_when_called"
+   ]
+  },
+  "gpt54mini_plain_3": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "3",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method",
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_3.test_gen::test_jsonfriendly_is_abstract_and_cannot_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_subclass_without_override_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_subclass_with_override_can_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert <function JsonFriendly.<lambda> at 0x7a8e97049af0> is not <function JsonFriendly.<lambda> at 0x7a8e97049af0>\n +  where <function JsonFriendly.<lambda> at 0x7a8e97049af0> = JSONEncoder.default\n +  and   <function JsonFriendly.<lambda> at 0x7a8e97049af0> = <built-in method get o"
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_sets_default_backup_on_first_use": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_uses_as_json_friendly_obj_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_encodes_nested_friendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_uses_inherited_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_calls_instance_method_each_time": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_plain_object_raises_type_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_works_with_custom_jsonencoder_subclass": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_backup_is_reusable_original_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method",
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly"
+   ]
+  },
+  "gpt54mini_plain_4": {
+   "model": "gpt54mini",
+   "prompt": "plain",
+   "sample": "4",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_is_patched_to_callable",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_works_with_inherited_method"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_is_patched_to_callable": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert <function JsonFriendly.<lambda> at 0x7af674148c10> is not <function JsonFriendly.<lambda> at 0x7af674148c10>\n +  where <function JsonFriendly.<lambda> at 0x7af674148c10> = JSONEncoder.default\n +  and   <function JsonFriendly.<lambda> at 0x7af674148c10> = <built-in method get o"
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_not_present_before_use": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_abstract_class_cannot_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_subclass_without_implementation_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_subclass_can_implement_method_and_return_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_calls_instance_method_with_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_works_with_inherited_method": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_is_patched_to_callable",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object",
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_works_with_inherited_method"
+   ]
+  },
+  "gpt54mini_plainiso_1": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_encoding_sets_default_backup_attribute"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_1.test_gen::test_jsonfriendly_is_abstract_and_cannot_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_subclass_without_implementation_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_jsonencoder_default_is_patched_to_lambda": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_concrete_subclass_can_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_json_dumps_uses_custom_json_friendly_object": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_json_dumps_works_with_nested_json_friendly_object_in_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_json_dumps_works_with_nested_json_friendly_object_in_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_json_friendly_method_may_return_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_json_friendly_method_may_return_integer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_json_friendly_method_may_return_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_encoding_sets_default_backup_attribute": {
+     "pass": 10,
+     "fail": 190,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 90,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFPFFFPFFFFFFFFFFFPFFFFFFFFFFFFFFFFFPFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFPFFFFFFFFFFFFFFFFFFFFFPFFFPFFFFFFFFFFFFFFFFFFFFFFFPFFFFFPFFFP",
+     "first_message": "AssertionError: assert not True\n +  where True = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_default_backup_updates_to_current_default_on_each_encoding": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_1.test_gen::test_multiple_encodings_remain_consistent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt54mini_plainiso_1.test_gen::test_encoding_sets_default_backup_attribute"
+   ],
+   "always_fail": []
+  },
+  "gpt54mini_plainiso_2": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 12,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_default_backup_attribute_is_created",
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonencoder_default_sets_backup_when_called"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonencoder_default_is_patched": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_default_backup_attribute_is_created": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonfriendly_subclass_encodes_to_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonfriendly_subclass_encodes_to_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonfriendly_subclass_encodes_nested_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonfriendly_subclass_method_can_return_builtin_scalar": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonfriendly_subclass_with_inherited_method_works": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonencoder_default_sets_backup_when_called": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert 'default_backup' in mappingproxy({'__module__': 'json.encoder', '__doc__': 'Extensible JSON <http://json.org> encoder for Python data stru...': <attribute '__dict__' of 'JSONEncoder' objects>, '__weakref__': <attribute '__weakref__' of 'JSONEncoder' objects>})\n +  where mappin"
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_non_jsonfriendly_object_raises_typeerror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonfriendly_object_with_missing_method_falls_back_and_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_2.test_gen::test_custom_encoder_still_handles_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_2.test_gen::test_default_backup_attribute_is_created",
+    "zz_gpt54mini_plainiso_2.test_gen::test_jsonencoder_default_sets_backup_when_called"
+   ]
+  },
+  "gpt54mini_plainiso_3": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "3",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method",
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonfriendly_is_abstract_and_cannot_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_subclass_without_override_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_subclass_with_override_can_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert <function JsonFriendly.<lambda> at 0x7847929bf040> is not <function JsonFriendly.<lambda> at 0x7847929bf040>\n +  where <function JsonFriendly.<lambda> at 0x7847929bf040> = JSONEncoder.default\n +  and   <function JsonFriendly.<lambda> at 0x7847929bf040> = <built-in method get o"
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonencoder_default_sets_default_backup_on_first_use": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_json_dumps_uses_as_json_friendly_obj_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_json_dumps_encodes_nested_friendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_json_dumps_uses_inherited_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_json_dumps_calls_instance_method_each_time": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_json_dumps_plain_object_raises_type_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_json_dumps_works_with_custom_jsonencoder_subclass": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonencoder_default_backup_is_reusable_original_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method",
+    "zz_gpt54mini_plainiso_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly"
+   ]
+  },
+  "gpt54mini_plainiso_4": {
+   "model": "gpt54mini",
+   "prompt": "plainiso",
+   "sample": "4",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_is_patched_to_callable",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_works_with_inherited_method"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_is_patched_to_callable": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert <function JsonFriendly.<lambda> at 0x7d58349bf040> is not <function JsonFriendly.<lambda> at 0x7d58349bf040>\n +  where <function JsonFriendly.<lambda> at 0x7d58349bf040> = JSONEncoder.default\n +  and   <function JsonFriendly.<lambda> at 0x7d58349bf040> = <built-in method get o"
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_backup_not_present_before_use": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_abstract_class_cannot_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_subclass_without_implementation_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_subclass_can_implement_method_and_return_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_calls_instance_method_with_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_works_with_inherited_method": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_is_patched_to_callable",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object",
+    "zz_gpt54mini_plainiso_4.test_gen::test_jsonencoder_default_works_with_inherited_method"
+   ]
+  },
+  "gpt54mini_plainseed_1": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_encoding_sets_default_backup_attribute"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_1.test_gen::test_jsonfriendly_is_abstract_and_cannot_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_subclass_without_implementation_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_jsonencoder_default_is_patched_to_lambda": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_concrete_subclass_can_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_json_dumps_uses_custom_json_friendly_object": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_json_dumps_works_with_nested_json_friendly_object_in_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_json_dumps_works_with_nested_json_friendly_object_in_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_json_friendly_method_may_return_string": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_json_friendly_method_may_return_integer": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_json_friendly_method_may_return_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_encoding_sets_default_backup_attribute": {
+     "pass": 9,
+     "fail": 191,
+     "error": 0,
+     "skip": 0,
+     "kind": "flaky",
+     "fails_file_order": 100,
+     "fails_shuffled": 91,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFPFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFPFFFFFFFFFFFFFFFFFPFFFFFPFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFPFFFFFFFFFFFFFFFFFPFFFFFFFFFPFFFFFFFFFPFFFFFFFFFFFPFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert not True\n +  where True = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_default_backup_updates_to_current_default_on_each_encoding": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_1.test_gen::test_multiple_encodings_remain_consistent": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [
+    "zz_gpt54mini_plainseed_1.test_gen::test_encoding_sets_default_backup_attribute"
+   ],
+   "always_fail": []
+  },
+  "gpt54mini_plainseed_2": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 12,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_default_backup_attribute_is_created",
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonencoder_default_sets_backup_when_called"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonencoder_default_is_patched": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_default_backup_attribute_is_created": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert False\n +  where False = hasattr(JSONEncoder, 'default_backup')"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonfriendly_subclass_encodes_to_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonfriendly_subclass_encodes_to_list": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonfriendly_subclass_encodes_nested_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonfriendly_subclass_method_can_return_builtin_scalar": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonfriendly_subclass_with_inherited_method_works": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonencoder_default_sets_backup_when_called": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert 'default_backup' in mappingproxy({'__module__': 'json.encoder', '__doc__': 'Extensible JSON <http://json.org> encoder for Python data stru...': <attribute '__dict__' of 'JSONEncoder' objects>, '__weakref__': <attribute '__weakref__' of 'JSONEncoder' objects>})\n +  where mappin"
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_non_jsonfriendly_object_raises_typeerror": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonfriendly_object_with_missing_method_falls_back_and_raises": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_2.test_gen::test_custom_encoder_still_handles_jsonfriendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_2.test_gen::test_default_backup_attribute_is_created",
+    "zz_gpt54mini_plainseed_2.test_gen::test_jsonencoder_default_sets_backup_when_called"
+   ]
+  },
+  "gpt54mini_plainseed_3": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "3",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method",
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonfriendly_is_abstract_and_cannot_instantiate": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_subclass_without_override_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_subclass_with_override_can_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert <function JsonFriendly.<lambda> at 0x7542e684cd30> is not <function JsonFriendly.<lambda> at 0x7542e684cd30>\n +  where <function JsonFriendly.<lambda> at 0x7542e684cd30> = JSONEncoder.default\n +  and   <function JsonFriendly.<lambda> at 0x7542e684cd30> = <built-in method get o"
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonencoder_default_sets_default_backup_on_first_use": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: type object 'JSONEncoder' has no attribute 'default_backup'"
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_json_dumps_uses_as_json_friendly_obj_result": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_json_dumps_encodes_nested_friendly_objects": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_json_dumps_uses_inherited_as_json_friendly_obj": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_json_dumps_calls_instance_method_each_time": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_json_dumps_plain_object_raises_type_error": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_json_dumps_works_with_custom_jsonencoder_subclass": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonencoder_default_backup_is_reusable_original_function": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method",
+    "zz_gpt54mini_plainseed_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly"
+   ]
+  },
+  "gpt54mini_plainseed_4": {
+   "model": "gpt54mini",
+   "prompt": "plainseed",
+   "sample": "4",
+   "runs": 200,
+   "n_tests": 13,
+   "first_run_failed": [
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_is_patched_to_callable",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_works_with_inherited_method"
+   ],
+   "tests": {
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_is_patched_to_callable": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AssertionError: assert <function JsonFriendly.<lambda> at 0x79ae45027e50> is not <function JsonFriendly.<lambda> at 0x79ae45027e50>\n +  where <function JsonFriendly.<lambda> at 0x79ae45027e50> = JSONEncoder.default\n +  and   <function JsonFriendly.<lambda> at 0x79ae45027e50> = <built-in method get o"
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_backup_not_present_before_use": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_abstract_class_cannot_be_instantiated": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_subclass_without_implementation_is_still_abstract": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_subclass_can_implement_method_and_return_dict": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_calls_instance_method_with_self": {
+     "pass": 200,
+     "fail": 0,
+     "error": 0,
+     "skip": 0,
+     "kind": "stable",
+     "fails_file_order": 0,
+     "fails_shuffled": 0,
+     "sequence": "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+     "first_message": null
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_works_with_inherited_method": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    },
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "TypeError: <lambda>() missing 1 required positional argument: 'obj'"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_is_patched_to_callable",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object",
+    "zz_gpt54mini_plainseed_4.test_gen::test_jsonencoder_default_works_with_inherited_method"
+   ]
   }
  },
  "human": {
@@ -5845,5 +10075,15 @@
   "reproduced": false,
   "messages": []
  },
- "seconds": 1109.1
+ "seconds": 1109.1,
+ "merged_human": [
+  {
+   "runs": 200,
+   "passed": 200,
+   "failed": 0,
+   "errors": 0,
+   "reproduced": false,
+   "messages": []
+  }
+ ]
 }

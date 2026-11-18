@@ -59,6 +59,8 @@ def main():
     ap.add_argument("--work", default="/tmp/matched_work"); ap.add_argument("--runs", type=int, default=150)
     ap.add_argument("--timeout", type=int, default=60); ap.add_argument("--out", required=True)
     ap.add_argument("--suites", default="*", help="comma separated globs over suite ids, e.g. '*_guard_*'")
+    ap.add_argument("--start", type=int, default=0, help="first run index; a suite too slow for one CI job runs as "
+                    "several jobs over disjoint run ranges with the same seeds, joined by scripts/join_runs.py")
     a = ap.parse_args()
     r = gr.row_for(a.project); t0 = time.time()
     d = f"{a.work}/{a.project}"; repo = f"{d}/repo"; venv = f"{d}/venv"
@@ -98,10 +100,10 @@ def main():
         # so the k run filters can be measured on consecutive real runs; and the first failure message of each test
         seq = collections.defaultdict(lambda: ["-"] * a.runs); first_msg = {}
         fails_by_order = collections.defaultdict(collections.Counter)
-        for i in range(a.runs):
+        for i in range(a.start, a.runs):
             seed = 7000 + i
             out_res, tail = run_suite(py, repo, f"zz_{sid}", a.timeout, seed, randomize=(i % 2 == 1))
-            if i == 0:
+            if i == a.start:
                 first_fail = sorted(t for t, s in out_res.items() if s in ("fail", "error"))
             for t, m in getattr(run_suite, "last_messages", {}).items():
                 first_msg.setdefault(t, m)
@@ -116,7 +118,7 @@ def main():
             tests[t] = {"pass": p, "fail": c["fail"], "error": c["error"], "skip": c["skip"], "kind": kind,
                         "fails_file_order": fails_by_order[t]["file"], "fails_shuffled": fails_by_order[t]["shuffled"],
                         "sequence": "".join(seq[t]), "first_message": first_msg.get(t)}
-        res["suites"][sid] = {"model": model, "prompt": prompt, "sample": sample, "runs": a.runs, "n_tests": len(tests),
+        res["suites"][sid] = {"model": model, "prompt": prompt, "sample": sample, "runs": a.runs - a.start, "start": a.start, "n_tests": len(tests),
                               "first_run_failed": first_fail, "tests": tests,
                               "flaky": sorted(t for t, v in tests.items() if v["kind"] == "flaky"),
                               "always_fail": sorted(t for t, v in tests.items() if v["kind"] == "always-fail")}

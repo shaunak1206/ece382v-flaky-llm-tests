@@ -1,0 +1,519 @@
+{
+ "project": "fossor",
+ "sha": "d8dbdc40f2f16da601c317dfa74b83e3932c9bb3",
+ "category": "unlabeled",
+ "install_ok": true,
+ "suites": {
+  "gpt41mini_guard3_1": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard3_1.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard3_1.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+     "first_message": "collection failure"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard3_1.test_gen"
+   ]
+  },
+  "gpt41mini_guard3_2": {
+   "model": "gpt41mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 1,
+   "first_run_failed": [
+    "::zz_gpt41mini_guard3_2.test_gen"
+   ],
+   "tests": {
+    "::zz_gpt41mini_guard3_2.test_gen": {
+     "pass": 0,
+     "fail": 0,
+     "error": 200,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+     "first_message": "collection failure"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "::zz_gpt41mini_guard3_2.test_gen"
+   ]
+  },
+  "gpt54mini_guard3_1": {
+   "model": "gpt54mini",
+   "prompt": "guard3",
+   "sample": "1",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt54mini_guard3_1.test_gen::test_get_error_pattern_counts_groups_lines_from_file",
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_adds_unique_line_when_below_threshold",
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_merges_similar_lines_and_keeps_first_seen",
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_routes_extra_unique_lines_to_other_error_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_handles_malformed_date_line_without_crashing",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_alpha_lines_without_exception",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_caused_by_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_indented_stacktrace_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_non_error_level_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_parses_error_line_and_returns_timestamp",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_truncates_long_error_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_remove_blacklisted_logs_filters_all_blacklisted_entries",
+    "zz_gpt54mini_guard3_1.test_gen::test_remove_blacklisted_logs_keeps_logs_without_blacklisted_substrings",
+    "zz_gpt54mini_guard3_1.test_gen::test_run_filters_blacklisted_logs_before_processing",
+    "zz_gpt54mini_guard3_1.test_gen::test_run_returns_none_when_logfiles_variable_missing",
+    "zz_gpt54mini_guard3_1.test_gen::test_run_uses_pool_and_formats_results"
+   ],
+   "tests": {
+    "zz_gpt54mini_guard3_1.test_gen::test_remove_blacklisted_logs_filters_all_blacklisted_entries": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_remove_blacklisted_logs_keeps_logs_without_blacklisted_substrings": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_indented_stacktrace_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_alpha_lines_without_exception": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_caused_by_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_non_error_level_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_handles_malformed_date_line_without_crashing": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_parses_error_line_and_returns_timestamp": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_truncates_long_error_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_merges_similar_lines_and_keeps_first_seen": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_adds_unique_line_when_below_threshold": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_routes_extra_unique_lines_to_other_error_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_get_error_pattern_counts_groups_lines_from_file": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_run_returns_none_when_logfiles_variable_missing": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_run_uses_pool_and_formats_results": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_1.test_gen::test_run_filters_blacklisted_logs_before_processing": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_guard3_1.test_gen::test_get_error_pattern_counts_groups_lines_from_file",
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_adds_unique_line_when_below_threshold",
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_merges_similar_lines_and_keeps_first_seen",
+    "zz_gpt54mini_guard3_1.test_gen::test_group_similar_log_lines_routes_extra_unique_lines_to_other_error_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_handles_malformed_date_line_without_crashing",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_alpha_lines_without_exception",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_caused_by_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_indented_stacktrace_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_ignores_non_error_level_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_parses_error_line_and_returns_timestamp",
+    "zz_gpt54mini_guard3_1.test_gen::test_process_line_truncates_long_error_lines",
+    "zz_gpt54mini_guard3_1.test_gen::test_remove_blacklisted_logs_filters_all_blacklisted_entries",
+    "zz_gpt54mini_guard3_1.test_gen::test_remove_blacklisted_logs_keeps_logs_without_blacklisted_substrings",
+    "zz_gpt54mini_guard3_1.test_gen::test_run_filters_blacklisted_logs_before_processing",
+    "zz_gpt54mini_guard3_1.test_gen::test_run_returns_none_when_logfiles_variable_missing",
+    "zz_gpt54mini_guard3_1.test_gen::test_run_uses_pool_and_formats_results"
+   ]
+  },
+  "gpt54mini_guard3_2": {
+   "model": "gpt54mini",
+   "prompt": "guard3",
+   "sample": "2",
+   "runs": 200,
+   "n_tests": 16,
+   "first_run_failed": [
+    "zz_gpt54mini_guard3_2.test_gen::test_get_error_pattern_counts_groups_lines_from_file",
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_keeps_distinct_below_threshold",
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_merges_above_threshold",
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_uses_other_error_lines_after_max_unique",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_handles_short_timestamped_line_without_indexerror",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_caused_by_lines",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_indented_stacktrace_lines",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_non_error_alpha_lines_without_exception",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_non_error_timestamped_lines",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_keeps_error_lines_and_extracts_date",
+    "zz_gpt54mini_guard3_2.test_gen::test_remove_blacklisted_logs_filters_known_suffixes",
+    "zz_gpt54mini_guard3_2.test_gen::test_remove_blacklisted_logs_returns_empty_when_all_blacklisted",
+    "zz_gpt54mini_guard3_2.test_gen::test_run_filters_blacklisted_logs_before_processing",
+    "zz_gpt54mini_guard3_2.test_gen::test_run_formats_output_for_multiple_files",
+    "zz_gpt54mini_guard3_2.test_gen::test_run_returns_none_when_all_files_produce_no_common_lines",
+    "zz_gpt54mini_guard3_2.test_gen::test_run_returns_none_when_variables_missing_logfiles"
+   ],
+   "tests": {
+    "zz_gpt54mini_guard3_2.test_gen::test_remove_blacklisted_logs_filters_known_suffixes": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_remove_blacklisted_logs_returns_empty_when_all_blacklisted": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_indented_stacktrace_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_non_error_alpha_lines_without_exception": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_caused_by_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_keeps_error_lines_and_extracts_date": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_non_error_timestamped_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_handles_short_timestamped_line_without_indexerror": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_merges_above_threshold": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_keeps_distinct_below_threshold": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_uses_other_error_lines_after_max_unique": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_get_error_pattern_counts_groups_lines_from_file": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_run_returns_none_when_variables_missing_logfiles": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_run_filters_blacklisted_logs_before_processing": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_run_formats_output_for_multiple_files": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    },
+    "zz_gpt54mini_guard3_2.test_gen::test_run_returns_none_when_all_files_produce_no_common_lines": {
+     "pass": 0,
+     "fail": 200,
+     "error": 0,
+     "skip": 0,
+     "kind": "always-fail",
+     "fails_file_order": 100,
+     "fails_shuffled": 100,
+     "sequence": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+     "first_message": "AttributeError: can't set attribute"
+    }
+   },
+   "flaky": [],
+   "always_fail": [
+    "zz_gpt54mini_guard3_2.test_gen::test_get_error_pattern_counts_groups_lines_from_file",
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_keeps_distinct_below_threshold",
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_merges_above_threshold",
+    "zz_gpt54mini_guard3_2.test_gen::test_group_similar_log_lines_uses_other_error_lines_after_max_unique",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_handles_short_timestamped_line_without_indexerror",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_caused_by_lines",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_indented_stacktrace_lines",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_non_error_alpha_lines_without_exception",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_ignores_non_error_timestamped_lines",
+    "zz_gpt54mini_guard3_2.test_gen::test_process_line_keeps_error_lines_and_extracts_date",
+    "zz_gpt54mini_guard3_2.test_gen::test_remove_blacklisted_logs_filters_known_suffixes",
+    "zz_gpt54mini_guard3_2.test_gen::test_remove_blacklisted_logs_returns_empty_when_all_blacklisted",
+    "zz_gpt54mini_guard3_2.test_gen::test_run_filters_blacklisted_logs_before_processing",
+    "zz_gpt54mini_guard3_2.test_gen::test_run_formats_output_for_multiple_files",
+    "zz_gpt54mini_guard3_2.test_gen::test_run_returns_none_when_all_files_produce_no_common_lines",
+    "zz_gpt54mini_guard3_2.test_gen::test_run_returns_none_when_variables_missing_logfiles"
+   ]
+  }
+ },
+ "human": {
+  "runs": 200,
+  "passed": 187,
+  "failed": 13,
+  "errors": 0,
+  "reproduced": true,
+  "messages": [
+   "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmphruyrg4r/tmpn3lewbug\\nFirst seen: 2017/10/10 00:00:34.251, Count: 1, ERROR 7VHOL7VHOL7VHOL7VHOL7VHO...3UWQ73UWQ73UWQ73UWQ73UWQ73UWQ73UWQ73UWQ73U",
+   "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmpe1k2ghr1/tmp4_ntlick\\nFirst seen: 2017/10/10 00:00:34.251, Count: 1, ERROR SM8L5SM8L5SM8L5SM8L5SM8L...38Z2C38Z2C38Z2C38Z2C38Z2C38Z2C38Z2C38Z2C38",
+   "AssertionError: assert 'Count: 5' in 'filename: /tmp/tmpb4_khqu9/tmpd0uqcdoy\\nFirst seen: 2017/10/10 00:00:34.251, Count: 1, ERROR IW91QIW91QIW91QIW91QIW91...YWXYUYWXYUYWXYUYWXYUYWXYUYWXYUYWXYUYWXYUYW"
+  ]
+ },
+ "seconds": 198.2
+}

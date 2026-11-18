@@ -15,6 +15,9 @@ on:
       suites:
         description: "glob over suite ids to run (e.g. *_guard_*)"
         default: "*"
+      start:
+        description: "first run index (to split a slow suite's runs across jobs, joined by scripts/join_runs.py)"
+        default: "0"
       list:
         description: "project list file (matched_projects.txt, or matched_projects_od.txt for the order dependent arm)"
         default: "matched_projects.txt"
@@ -39,7 +42,7 @@ jobs:
   run:
     needs: plan
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 355
     strategy:
       fail-fast: false
       max-parallel: 20
@@ -51,7 +54,7 @@ jobs:
         run: |
           mkdir -p out
           python3 scripts/matched_run.py "${{ matrix.project }}" --work /tmp/mw --runs "${{ inputs.runs }}" \
-            --suites "${{ inputs.suites }}" --out "out/${{ matrix.project }}.json" || true
+            --suites "${{ inputs.suites }}" --start "${{ inputs.start || 0 }}" --out "out/${{ matrix.project }}.json" || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
