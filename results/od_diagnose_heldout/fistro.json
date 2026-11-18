@@ -1,0 +1,116 @@
+{
+ "project": "fistro",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "haiku_heldout_5",
+   "test": "test_datetime_generator_default_bounds_returns_datetime_in_year_range",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 23,
+   "polluters": [
+    "test_int_list_generator_zero_length_returns_empty_list"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "haiku_heldout_5",
+   "test": "test_date_generator_default_returns_plain_date_in_year_range",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 23,
+   "polluters": [
+    "test_bool_generator_returns_choice_result",
+    "test_generate_as_json_returns_parseable_json_string"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "haiku_heldout_6",
+   "test": "test_datetime_generator_none_argument_returns_datetime",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "sonnet_heldout_8",
+   "test": "test_datetime_and_date_default_types",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 22,
+   "polluters": [
+    "test_date_generator_with_fixed_values",
+    "test_generate_keeps_field_names_and_types"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "haiku_heldout_2",
+   "test": "test_date_generator_returns_date_not_datetime",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "haiku_heldout_3",
+   "test": "test_datetime_generator_none_returns_datetime",
+   "alone_varied_fail": 2,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "haiku_heldout_3",
+   "test": "test_date_generator_returns_date_not_datetime",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 21,
+   "polluters": [],
+   "verdict": "unknown"
+  },
+  {
+   "suite": "haiku_heldout_4",
+   "test": "test_datetime_generator_returns_datetime",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "haiku_heldout_4",
+   "test": "test_date_generator_returns_plain_date",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "sonnet_heldout_1",
+   "test": "test_datetime_generator_default_returns_datetime",
+   "alone_varied_fail": 1,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod-hash"
+  },
+  {
+   "suite": "sonnet_heldout_2",
+   "test": "test_datetime_generator_default_returns_datetime",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 22,
+   "polluters": [
+    "test_str_generator_respects_population"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 89.5
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Counts for the held out sample and the Claude guard v3 suites (Progress Report 3).
 
-Reads results/matched_heldout/*.json (suites <model>_heldout_<k>, and their copies with fixture M1,
+Reads results/matched_heldout/*.json, results/matched_od/*.json (order dependent arm, reported as od, odseed, odiso) (suites <model>_heldout_<k>, and their copies with fixture M1,
 <model>_heldoutseed_<k>, and M2, <model>_heldoutiso_<k>) and results/matched_guard3cl/*.json (Claude guard v3), all
 written by scripts/matched_run.py with 200 runs. The same counting rules as analyze_matched.py: a test is kept if it
 passed the first run, flaky if it passed and failed. For each model and condition it reports suites, suites that did
@@ -31,11 +31,12 @@ def main():
     G = collections.defaultdict(collections.Counter)
     gproj = collections.defaultdict(set)
     per = {}  # (project, model, k, cond) -> tests
-    for d in ("matched_heldout", "matched_guard3cl"):
+    for d in ("matched_heldout", "matched_guard3cl", "matched_od"):
         for f in sorted(glob.glob(f"{ROOT}/results/{d}/*.json")):
             j = json.load(open(f))
             for sid, s in j["suites"].items():
                 m, cond, k = sid.split("_")
+                if d == "matched_od": cond = cond.replace("plain", "od")  # order dependent arm: od, odseed, odiso
                 key = f"{m}_{cond}"
                 g = G[key]
                 r = suite_stats(s)
@@ -52,20 +53,20 @@ def main():
                     fo = v.get("fails_file_order"); sh = v.get("fails_shuffled")
                     shuffle_only = fo == 0 and (sh or 0) > 0
                     g["shuffle_only"] += shuffle_only
-                    out["flaky"].append({"project": j["project"], "suite": sid, "test": t, "pass": v["pass"],
+                    out["flaky"].append({"project": j["project"], "suite": sid, "arm": d, "test": t, "pass": v["pass"],
                                          "fail": v["fail"] + v["error"], "fails_file_order": fo, "fails_shuffled": sh,
                                          "first_message": v.get("first_message", "")[:200]})
     for key, g in G.items():
         g["projects_with_flaky"] = len(gproj[key])
         out["groups"][key] = dict(g)
     # fixture cost and effect, paired on the same suite
-    for fx in ("heldoutseed", "heldoutiso"):
+    for base, fx in (("heldout", "heldoutseed"), ("heldout", "heldoutiso"), ("od", "odseed"), ("od", "odiso")):
         c = collections.Counter()
         for (p, m, k, cond), tests in per.items():
-            if cond != "heldout" or (p, m, k, fx) not in per: continue
+            if cond != base or (p, m, k, fx) not in per: continue
             other = per[(p, m, k, fx)]
             for t, v in tests.items():
-                t2 = t.replace(f"_heldout_{k}.", f"_{fx}_{k}.")
+                t2 = t.replace(f"_{'plain' if base == 'od' else base}_{k}.", f"_{fx.replace('od', 'plain') if base == 'od' else fx}_{k}.")
                 w = other.get(t2)
                 if w is None: continue
                 if v["kind"] == "stable-pass" or (v["fail"] + v["error"] == 0 and v["pass"] > 0):
