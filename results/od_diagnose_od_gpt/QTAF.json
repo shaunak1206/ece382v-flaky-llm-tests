@@ -1,0 +1,66 @@
+{
+ "project": "QTAF",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_load_datadrive_tests_with_name_subset",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 25,
+   "polluters": [
+    "test_load_datadrive_tests_raises_runtimeerror_when_not_datadrive_and_settings_false",
+    "test_load_datadrive_tests_uses_loader_when_not_datadrive"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_modify_settings_restores_value",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 25,
+   "polluters": [
+    "test_load_datadrive_tests_raises_runtimeerror_when_not_datadrive_and_settings_false",
+    "test_load_datadrive_tests_uses_loader_when_not_datadrive",
+    "test_modify_settings_adds_new_key_and_removes",
+    "test_modify_settings_changes_and_restores",
+    "test_testcase_assert_"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_is_datadrive_and_get_datadrive",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 15,
+   "polluters": [
+    "test_load_datadrive_tests_without_datadrive_and_settings"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_plain_1",
+   "test": "test_testcase_properties_and_environ",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 17,
+   "polluters": [
+    "test_assert_continue_setting_controls_assert_raises",
+    "test_assert_equal_and_match_record_failure",
+    "test_load_datadrive_tests_from_dict_preserves_keys_and_attrs",
+    "test_load_datadrive_tests_from_list_uses_index_names",
+    "test_load_datadrive_tests_name_lookup_by_exact_key",
+    "test_load_datadrive_tests_name_lookup_by_translated_key",
+    "test_load_datadrive_tests_warns_on_bad_key",
+    "test_testcase_clean_test_destroys_resources",
+    "test_testcase_logging_methods_convert_non_text",
+    "test_testcase_test_doc_override_from_attrs",
+    "test_testcase_test_resmgr_session_created_lazily"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 91.0
+}

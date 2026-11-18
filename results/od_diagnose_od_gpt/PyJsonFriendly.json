@@ -1,0 +1,72 @@
+{
+ "project": "PyJsonFriendly",
+ "install_ok": true,
+ "tests": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "test": "test_jsonencoder_default_backup_set",
+   "alone_varied_fail": 20,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_jsonencoder_default_backup_is_callable",
+   "alone_varied_fail": 20,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_jsonencoder_default_backup_behavior_with_standard_obj",
+   "alone_varied_fail": 20,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "test": "test_jsonencoder_default_should_restore_original_behavior_after_assignment",
+   "alone_varied_fail": 20,
+   "alone_fixed_fail": 10,
+   "pairs_tried": 0,
+   "polluters": [],
+   "verdict": "nod"
+  },
+  {
+   "suite": "gpt41mini_plain_4",
+   "test": "test_as_json_friendly_obj_method",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_jsonencoder_default_calls_as_json_friendly_obj"
+   ],
+   "verdict": "od"
+  },
+  {
+   "suite": "gpt54mini_plain_1",
+   "test": "test_encoding_sets_default_backup_attribute",
+   "alone_varied_fail": 0,
+   "alone_fixed_fail": 0,
+   "pairs_tried": 12,
+   "polluters": [
+    "test_default_backup_updates_to_current_default_on_each_encoding",
+    "test_json_dumps_uses_custom_json_friendly_object",
+    "test_json_dumps_works_with_nested_json_friendly_object_in_dict",
+    "test_json_dumps_works_with_nested_json_friendly_object_in_list",
+    "test_json_friendly_method_may_return_integer",
+    "test_json_friendly_method_may_return_list",
+    "test_json_friendly_method_may_return_string",
+    "test_multiple_encodings_remain_consistent"
+   ],
+   "verdict": "od"
+  }
+ ],
+ "seconds": 33.8
+}
