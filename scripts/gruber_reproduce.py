@@ -16,7 +16,7 @@ Output JSON fields
   messages (up to 3 distinct failure messages), seconds
 The project checkout stays in <work>/<name>/repo so the generation step can read the code under test.
 """
-import argparse, csv, json, os, re, shutil, subprocess, sys, time, tempfile
+import signal, argparse, csv, json, os, re, shutil, subprocess, sys, time, tempfile
 import xml.etree.ElementTree as ET
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,10 +35,21 @@ def row_for(name):
 
 
 def sh(cmd, cwd=None, timeout=900, env=None):
+    # own process group, so a timeout also kills children that would otherwise keep the output pipes open
+    p = subprocess.Popen(cmd, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, errors="replace",
+                         env=env, start_new_session=True)
     try:
-        p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, errors="replace", timeout=timeout, env=env)
-        return p.returncode, (p.stdout + p.stderr)
-    except subprocess.TimeoutExpired as e:
+        out, err = p.communicate(timeout=timeout)
+        return p.returncode, (out + err)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(p.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        try:
+            p.communicate(timeout=30)
+        except subprocess.TimeoutExpired:
+            pass
         return -9, f"TIMEOUT after {timeout}s"
 
 

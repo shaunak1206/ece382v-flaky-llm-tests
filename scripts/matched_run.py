@@ -73,6 +73,7 @@ def main():
     ok, py = gr.install(repo, venv, log)
     gr.sh(["uv", "pip", "install", "-q", "-p", py, "pytest-randomly<3.16", "freezegun", "pytest-mock"])
     gr.fix_missing_modules(py, repo, r["Test_filename"], log)
+    os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     res = {"project": a.project, "sha": r["Project_Hash"], "category": r["flakiness category"], "install_ok": ok, "suites": {}}
     # control: the known flaky human test, same number of runs, file order
     hc = collections.Counter(); hm = []
@@ -99,18 +100,23 @@ def main():
         # per run outcome of every test, one letter per run in run order (P pass, F fail, E error, S skip, - missing),
         # so the k run filters can be measured on consecutive real runs; and the first failure message of each test
         seq = collections.defaultdict(lambda: ["-"] * a.runs); first_msg = {}
-        fails_by_order = collections.defaultdict(collections.Counter)
+        fails_by_order = collections.defaultdict(collections.Counter); nonterminating = False
         for i in range(a.start, a.runs):
             seed = 7000 + i
             out_res, tail = run_suite(py, repo, f"zz_{sid}", a.timeout, seed, randomize=(i % 2 == 1))
             if i == a.start:
                 first_fail = sorted(t for t, s in out_res.items() if s in ("fail", "error"))
+                if tail.startswith("TIMEOUT"):
+                    # the filter run did not exit in 15 minutes (a test that never ends, or threads that keep the
+                    # process alive): recorded as non terminating and not rerun
+                    nonterminating = True
             for t, m in getattr(run_suite, "last_messages", {}).items():
                 first_msg.setdefault(t, m)
             for t, s in out_res.items():
                 hist[t][s] += 1
                 seq[t][i] = s[0].upper()
                 if s in ("fail", "error"): fails_by_order[t]["shuffled" if i % 2 else "file"] += 1
+            if nonterminating: break
         tests = {}
         for t, c in hist.items():
             p, f = c["pass"], c["fail"] + c["error"]
@@ -122,6 +128,8 @@ def main():
                               "first_run_failed": first_fail, "tests": tests,
                               "flaky": sorted(t for t, v in tests.items() if v["kind"] == "flaky"),
                               "always_fail": sorted(t for t, v in tests.items() if v["kind"] == "always-fail")}
+        if nonterminating: res["suites"][sid]["nonterminating"] = True
+        json.dump(res, open(a.out, "w"), indent=1)  # after every suite, so a job that hits its time limit keeps the rest
         print(f"[{a.project}/{sid}] tests={len(tests)} flaky={len(res['suites'][sid]['flaky'])} "
               f"always_fail={len(res['suites'][sid]['always_fail'])}", flush=True)
     res["seconds"] = round(time.time() - t0, 1)
