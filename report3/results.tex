@@ -91,7 +91,7 @@ Haiku 5.5 & 68 & 1,644 & 0 & 0 \\
 \end{tabularx}
 \end{table}
 
-On code whose developer tests are known to depend on order, the Claude suites rarely do. The 3 kept flaky Sonnet tests are all in HikLoad, in three different suites. Each checks that \texttt{hikload.config.CONFIG} is the object the test module imported, and another test in the same suite calls \texttt{importlib.reload} on that module, which makes a new dict. This compares generated suites run on their own with developer tests that were chosen because they flip, and a developer victim needs other developer tests to fail, so it does not show that generated tests are safer in a shared suite. Running them inside the developer suite is a next step.%GPTOD%
+On code whose developer tests are known to depend on order, the Claude suites rarely do. The 3 kept flaky Sonnet tests are all in HikLoad, in three different suites. Each checks that \texttt{hikload.config.CONFIG} is the object the test module imported, and another test in the same suite calls \texttt{importlib.reload} on that module, which makes a new dict. This compares generated suites run on their own with developer tests that were chosen because they flip, and a developer victim needs other developer tests to fail, so it does not show that generated tests are safer in a shared suite. Running them inside the developer suite is a next step. The GPT models split. GPT~5.4 mini has no kept flaky test here. GPT~4.1 mini has 20 in 10 suites, 18 of them only in shuffled runs, and 14 in BT-Tracker. There the project's decorator \texttt{Event.check} assigns \texttt{cls.finished}, which replaces the \texttt{finished} property of the class with a plain boolean for the rest of the process, so every later test of an \texttt{Event} object can fail. In 9 of the 14 the polluter search found a test that calls the decorator before them, and 5 fail alone. The others are in PyJsonFriendly (2), QTAF (2, both with a polluter), RandomFileTree, and RaspberryPiMovementDetector. So on order dependent code the generated suites of three models are almost never order dependent, and GPT~4.1 mini's are in 1 of 6 suites.
 
 \subsection{RQ2, root causes}
 \label{sec:rootcause3}
@@ -107,6 +107,13 @@ The 91 labels of Progress Report 2 stand. Labels for the new flaky tests are in 
 So one mechanism is new (files left behind), and the rest recur from Progress Report 2, now in Claude suites as well.
 
 \textbf{Polluter search.} \texttt{od\_diagnose.py} ran on 62 of the 65 flaky held out Claude tests (kept or removed). The 3 it missed are removed tests. It reruns a test alone 30 times (20 with a new hash seed, 10 with \texttt{PYTHONHASHSEED=0}) and, if the test never fails alone, runs each other test of its suite before it 3 times. 10 tests failed alone (6 fistro, 2 spreading\_dye\_sampler, 2 cuckoopy), as their randomness predicts. The 2 cuckoopy tests also failed with the fixed hash seed, which fits their random evictions. For 20 tests a single earlier test made them fail: 13 of the 17 Haiku jmcm tests, the Sonnet jmcm and python-timemarker tests, 4 fistro tests, and 1 kevinarpe test. The last 5 flip through randomness or memory layout, so a pair that failed once in 3 runs may be chance, and we count them as unconfirmed. 32 tests never failed alone or after any single test: 20 kindle-maker tests, whose collision needs a particular sequence of allocations and earlier tests, 4 jmcm tests, and 8 others. In the order dependent arm the search found a polluter for all 4 flaky HikLoad tests (3 kept, 1 removed): in each suite, a test that reloads \texttt{hikload.config}.
+
+\textbf{Mechanisms of the 140 kept flaky held out GPT tests.} We ran the same polluter search on them (\texttt{results/od\_diagnose\_heldout\_gpt}), and the two GPT models fail in different ways.
+\begin{itemize}
+\item \emph{GPT~5.4 mini: a polluter that changes the package itself, 53 of 70 tests in 14 suites.} The polluter deletes the package from \texttt{sys.modules}, puts a fake submodule there, reloads the package, or leaves an attribute on it, and a later test then sees the changed package (jmcm 21, torch-embed-sim 11, torch-gpt-2 9, event-bus 7, pypfm 2, python-timemarker 2, uhashring 1). This is the habit of Progress Report 2, now on 7 projects, and none of these 53 tests fails in file order. Of the other 17, 7 are docci tests (third item), 9 never failed in the search, and 1 cuckoopy test depends on the salted \texttt{hash()}.
+\item \emph{GPT~4.1 mini: randomness in the code under test, 43 of 70 tests.} Leaving out its 11 docci tests (third item), 43 fail when run alone, 8 of them only with a varied hash seed. 21 are spreading\_dye\_sampler tests that assert on one draw of an unseeded sampler, and the others are in data-partitioner, fistro, pelicun, pylabeledrf, cuckoopy, torch-layer-normalization, and python-timemarker. 9 more failed after an earlier test in 1 of 3 tries, which in these projects can be the random draw again, so we count them as unconfirmed, and 7 never failed in the search.
+\item \emph{The clock, 18 docci tests from both GPT models.} Each saves the same workbook twice and compares the bytes. The ZIP header stores the modification time to 2 seconds and \texttt{docProps/core.xml} to 1 second, so the bytes differ when the two saves straddle a boundary, in 1 to 4 of 200 runs. This is new: it is a time dependency outside randomness, in tests that read no clock themselves, so the feature scan of Section~\ref{sec:rq3} cannot see it.
+\end{itemize}
 
 \textbf{Agreement.} \texttt{results/root\_causes/blind/sheet.csv} lists the 78 records of \texttt{labels.json}, the known flaky code study labels, in a shuffled order without the model or the first label. The 12 library study labels are prose in \texttt{why\_analysis.md} and are not in the sheet. The human relabel by Shaunak was due November 16 and is not done. As an interim check we gave the same sheet to an independent LLM labeler, a Claude agent that could read only the sheet, the category list, and the project source, and was told not to open any results, labels, or generated suites (\texttt{llm\_labels.csv}). It saw one stray field: the category of the original developer test in one project's target file. Against Manas's labels, Cohen's kappa is 0.82 for the category (87\% agreement) and 1.0 for order dependence (\texttt{kappa\_llm\_labels.json}). All 10 disagreements are cuckoopy tests, which Manas labeled unseeded randomness and the LLM salted \texttt{hash()}. The filter uses both, so both labels are defensible, and the final labels should name both. The LLM marked 30 of its 78 labels as unsure, 25 of them order dependent tests whose import helpers it read only in part. This is agreement with a model, not between two people, so it does not replace the human relabel, which stays next step 2.
 
@@ -142,10 +149,10 @@ Uses \texttt{monkeypatch} & 7 (0.2) & 0 & 133 (1.8) & 3 \\
 
 Human tests use the risky features and stay stable: none of the 34 functions with unseeded randomness or the 58 that read the clock flipped, and 54 of the 56 that use threads, processes, or asyncio never flipped (the 2 are pybreaker stress cases). The same holds for LLM tests. With 4 flaky human functions, this also fits a low base rate, so the table shows that the features are common in stable tests, not that they are safe. The groups use the features differently, and part of that is the prompt. The feature prompt (AG-S, OS-S, OS-H) asks for time, randomness, and thread tests, and those suites read the clock in 3.8\% of functions, sleep in 2.5\%, and start threads or asyncio in 4.2\%, against 1.7\%, 0.4\%, and 2.5\% for the plain and TestPilot style suites, which are close to the human shares. Both kinds of LLM suite freeze the clock about ten times as often as human tests, and the plain suites use \texttt{monkeypatch} in 3.4\% of functions, against 0.2\% for human tests. Human tests share state through wide fixtures, where both human order dependent flips (arrow) sit, and no LLM test uses one. The scan is name based, so it misses a clock read hidden behind a helper, such as the two tenacity tests of Progress Report 2. With 4 and 8 flaky functions this table describes use, not risk.
 
-\textbf{Known flaky code study.} To get more flaky tests we ran a similar scan on every generated suite of the known flaky code study that ran 200 times (\texttt{scripts/feature\_flakiness\_matched.py}): %FEATN%. It works per suite as well as per function, because for order dependence the feature sits in another test of the suite (Table~\ref{tab:featmatched}).
+\textbf{Known flaky code study.} To get more flaky tests we ran a similar scan on every generated suite of the known flaky code study that ran 200 times (\texttt{scripts/feature\_flakiness\_matched.py}): 36,752 kept test functions in 2,232 suites, of which 277 functions and 131 suites have a kept flaky test. It works per suite as well as per function, because for order dependence the feature sits in another test of the suite (Table~\ref{tab:featmatched}).
 
 \begin{table}[h]
-\caption{Known flaky code study suites (plain, guard, held out, and order dependent arm; not the fixture copies) that contain a test function with each feature, and the share of them with a kept flaky test, with a 95\% Wilson interval and the number of projects. Without is the share among the other suites. %FEATCAP%}
+\caption{Known flaky code study suites (plain, guard, held out, and order dependent arm; not the fixture copies) that contain a test function with each feature, and the share of them with a kept flaky test, with a 95\% Wilson interval and the number of projects. Without is the share among the other suites. All suites: 131 of 2,232 (5.9\%). The clock, sleep, and concurrency rows have one flaky project each.}
 \label{tab:featmatched}
 \small
 \setlength{\tabcolsep}{2pt}
@@ -153,12 +160,20 @@ Human tests use the risky features and stay stable: none of the 34 functions wit
 \toprule
 Feature in the suite & Suites & Flaky \% & CI & Proj. & Without \\
 \midrule
-%FEATROWS%
+Calls a random generator & 601 & 3.5 & 2.3--5.3 & 9 & 6.7 \\
+\quad without a seed & 171 & 5.8 & 3.2--10.4 & 4 & 5.9 \\
+Reads the real clock & 27 & 7.4 & 2.1--23.4 & 1 & 5.9 \\
+Sleeps for real & 14 & 7.1 & 1.3--31.5 & 1 & 5.9 \\
+Threads, processes, or asyncio & 20 & 5.0 & 0.9--23.6 & 1 & 5.9 \\
+Reloads a module or edits \texttt{sys.modules} & 105 & 24.8 & 17.5--33.8 & 9 & 4.9 \\
+Calls \texttt{hash()} or \texttt{id()} & 58 & 22.4 & 13.6--34.7 & 3 & 5.4 \\
+Uses \texttt{monkeypatch} or \texttt{mock.patch} & 871 & 7.6 & 6.0--9.5 & 20 & 4.8 \\
+Writes files outside \texttt{tmp\_path} & 34 & 0.0 & 0--10.2 & 0 & 6.0 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-Three results stand out. First, %FEATNONE% of the flaky functions use none of the features. Their nondeterminism is in the code they call, an unseeded generator or a salted hash inside the project, which a scan of the test cannot see. Suites that call a random generator themselves are no more often flaky than others, because those calls are mostly seeded. Second, suites that reload a module or edit \texttt{sys.modules} are often flaky, though the reloading test itself rarely flips. It is the polluter, and its victims are ordinary tests. Third, suites that call \texttt{hash()} or \texttt{id()} are often flaky, but the counts come from two projects. Every interval is wide, and the flaky suites cluster in a few projects, so these are leads, not risks. A risk check for generated tests should look at the whole suite and at the code under test, not at each test alone. The scan is name based: the kindle-maker fixture calls \texttt{id()} but is not a test function, so it is not counted.
+Four results stand out. First, 220 of the 277 flaky functions use none of the features. Their nondeterminism is in the code they call, an unseeded generator or a salted hash inside the project, which a scan of the test cannot see. Suites that call a random generator themselves are no more often flaky than others, because those calls are mostly seeded. Second, suites that reload a module or edit \texttt{sys.modules} are often flaky, though the reloading test itself rarely flips. It is the polluter, and its victims are ordinary tests. Third, suites that call \texttt{hash()} or \texttt{id()} are often flaky, but the counts come from three projects. Fourth, the features that are classic causes of flaky tests, the clock, sleeps, and concurrency, are rare in generated tests of this code (14 to 27 suites), and each of their flaky suites is in a single project, so they cannot be ranked. The clock dependency that we did find, in docci, is inside a library call, and the scan does not see it. Every interval is wide, and the flaky suites cluster in a few projects, so these are leads, not risks. A risk check for generated tests should look at the whole suite and at the code under test, not at each test alone. The scan is name based: the kindle-maker fixture calls \texttt{id()} but is not a test function, so it is not counted.
 
 \subsection{RQ4, mitigation}
 \label{sec:rq4}
@@ -177,9 +192,13 @@ Sonnet, held out & 8 (18) & 4 (14) & 2 (12) \\
 \quad without jmcm & 7 (17) & 3 (13) & 2 (12) \\
 Haiku, held out & 15 (34) & 4 (20) & 3 (3) \\
 \quad without jmcm & 14 (17) & 3 (3) & 3 (3) \\
-%GPTFIX%
+GPT~5.4 mini, held out & 22 (70) & 20 (70) & 8 (9) \\
+\quad without jmcm & 20 (48) & 18 (48) & 8 (9) \\
+GPT~4.1 mini, held out & 40 (70) & 15 (24) & 10 (16) \\
 Sonnet, order dependent arm & 3 (3) & 3 (3) & 0 (0) \\
 Haiku, order dependent arm & 0 (0) & 0 (0) & 0 (0) \\
+GPT~5.4 mini, order dependent arm & %OD54% \\
+GPT~4.1 mini, order dependent arm & %OD41% \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -187,12 +206,13 @@ Haiku, order dependent arm & 0 (0) & 0 (0) & 0 (0) \\
 \begin{itemize}
 \item \textbf{M1 carries over to new randomness tests.} Without jmcm, Haiku goes from 14 suites with a kept flaky test to 3 under M1 alone, mostly the fistro and seeding cases. What M1 leaves is the salted \texttt{hash()} and the unstable object hash.
 \item \textbf{M2 adds the module state cases.} It removes the 17 jmcm tests, on the project it was designed for, and the 3 HikLoad reload tests, a project it never saw.
-\item \textbf{Neither reaches state outside the interpreter.} 11 of Sonnet's 12 kept flaky tests under M2 are the kindle-maker suite, whose state is in \texttt{/tmp}.
-\item \textbf{No stable test broke.} In Progress Report 2, M2 made 3 stable tests fail in every run (2 in keplertools, 1 in limix-lmm). On the 13,879 kept held out Claude tests and the 3,047 of the order dependent arm, no test that passed all 200 plain runs failed all 200 M2 runs.%GPTFIXTEXT%
+\item \textbf{On the GPT suites each fixture fixes one model.} M1 takes GPT~4.1 mini, whose flaky tests are mostly randomness, from 40 suites to 15, and does nothing for GPT~5.4 mini (22 to 20). M2 takes GPT~5.4 mini from 22 suites to 8 and from 70 kept flaky tests to 9. Its package reset polluters are undone on torch-embed-sim and event-bus, which M2 was not built on, as well as on jmcm, torch-gpt-2, and pypfm, which it was. Without jmcm, GPT~5.4 mini still goes from 20 suites to 8.
+\item \textbf{Neither reaches state outside the interpreter or the clock.} 11 of Sonnet's 12 kept flaky tests under M2 are the kindle-maker suite, whose state is in \texttt{/tmp}, and 18 of the 25 GPT tests left under M2 are the docci clock tests. In the order dependent arm M2 leaves all 14 GPT~4.1 mini BT-Tracker tests, because the state they share is a class attribute, which M2 does not restore.
+\item \textbf{No stable test broke.} In Progress Report 2, M2 made 3 stable tests fail in every run (2 in keplertools, 1 in limix-lmm). On the 13,879 kept held out Claude tests and the 3,047 of the order dependent arm, no test that passed all 200 plain runs failed all 200 M2 runs. On the 8,136 kept held out GPT tests the same holds for M2, but M1 broke 2 limix-lmm tests, one per GPT model. Under M1's fixed seed every run draws the same random data, and that draw gives the model NaN or complex values.
 \end{itemize}
-Fixtures do not change the tests, but M1 fixes the random inputs a test sees and M2 resets state between tests, so either could weaken what a suite checks. We therefore also measure coverage and mutation score with each fixture. %FIXQ%
+Fixtures do not change the tests, but M1 fixes the random inputs a test sees and M2 resets state between tests, so either could weaken what a suite checks. We therefore also measure coverage and mutation score with each fixture, on held out samples 1 and 2 of all four models and on the whole order dependent arm, from one clean run of each suite with the fixture's \texttt{conftest.py}. %FIXQNUM%
 
-\textbf{Guard v3 on new models.} We generated 2 guard v3 suites per model for all 41 projects and compare them with held out samples 1 and 2 from the same pipeline (Table~\ref{tab:guard3}). Coverage and mutation score come from one clean run of each suite, which can keep a few tests fewer than the first of the 200 runs.%GPTGUARD%
+\textbf{Guard v3 on new models.} We generated 2 guard v3 suites per model for all 41 projects and compare them with held out samples 1 and 2 from the same pipeline (Table~\ref{tab:guard3}). Coverage and mutation score come from one clean run of each suite, which can keep a few tests fewer than the first of the 200 runs.
 
 \begin{table}[h]
 \caption{Guard v3 against the plain prompt, same pipeline, samples 1 and 2 of each, 41 projects. With flaky counts suites with a kept flaky test (kept flaky tests). Cov.\ is the mean line coverage of the target files and Mut.\ the pooled mutation score, both in \%.}
@@ -207,12 +227,17 @@ Sonnet plain & 82 & 1,735 & 2 (2) & 79.0 & 60.1 \\
 Sonnet guard v3 & 82 & 1,622 & 0 (0) & 78.4 & 61.1 \\
 Haiku plain & 81 & 1,840 & 5 (21) & 74.9 & 52.8 \\
 Haiku guard v3 & 80 & 1,616 & 0 (0) & 73.7 & 53.2 \\
-%GPTGUARDROWS%
+GPT 5.4 mini plain & 81 & 1,051 & 4 (6) & 73.4 & 42.3 \\
+GPT 5.4 mini guard v3 & 82 & 1,021 & 6 (25) & 75.0 & 41.3 \\
+GPT 4.1 mini plain & 79 & 1,039 & 12 (24) & 74.0 & 41.9 \\
+GPT 4.1 mini guard v3 & 66 & 923 & 3 (4) & 60.9 & 32.2 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 For the Claude models guard v3 removed every kept flaky test and cost 6.5\% (Sonnet) and 12\% (Haiku) of the kept tests, with coverage about 1 point lower and the mutation score unchanged. The evidence is thin: Haiku's 21 come from 5 suites, 17 of them one jmcm suite, the drop from 5 suites to 0 is not significant (Fisher's exact test on suites $p = 0.059$, which also ignores that suites of one project are related), and Sonnet had only 2 to remove. Split by batch, Haiku plain has 2 suites with a kept flaky test in the 17 projects the prompt was tuned on and 3 in the other 24, and guard v3 has none in either.
+
+Guard v3 does not carry over to the GPT models. For GPT~4.1 mini, the model it was tuned on, it cut the suites with a kept flaky test from 12 to 3, but 13 more suites did not import (66 of 82 against 79), and the pooled mutation score fell from 41.9 to 32.2\%. Over the 56 pairs in which both suites keep a test the score is about the same (43.2 and 42.6\%), so again the cost is suites that fail, not weaker tests. For GPT~5.4 mini it removed nothing: 4 suites with 6 kept flaky tests plain, and 6 with 25 under guard v3, 17 of them in one jmcm suite that deletes the package from \texttt{sys.modules}, although the prompt asks the model to undo any change to module level state. Its quality is unchanged. So the prompt did not reliably stop the mechanism of a model it was not tuned on, while M2 removed most of it (Table~\ref{tab:fixtures}).
 
 \textbf{Quality cost of the GPT~4.1 mini guard prompts.} Table~\ref{tab:quality} answers the feedback on quality after mitigation for the prompts of Progress Report 2, from the same mutants per project for every suite.
 
@@ -236,7 +261,7 @@ Guard v3 & 7 & 428 & 1 & 66.9 & 40.5 & 79.8$\to$80.7 & 55.2$\to$50.4 \\
 
 For GPT~4.1 mini the guard prompts trade flaky tests for test quality. For guard v2 and v3 most of the cost is suites in which no test passes, which includes the suites that do not import. For guard v1 it is weaker tests, since no more suites fail but the mutation score of the suites that keep tests falls from 58.1 to 51.9\%. Where both suites keep tests, coverage stays within 2 points. The Claude models did not pay this cost with guard v3 (Table~\ref{tab:guard3}), but that comparison also differs in pipeline and projects (41 projects through the held out pipeline, against GPT~4.1 mini's first 17 through the API), so the model difference is a lead.
 
-\textbf{Pipeline and model effects on quality.} The two pipelines differ in quality, not only in flakiness. With the plain prompt on the 41 projects, Haiku's mutation score is 60.9\% for its Claude Code subagent suites and 52.8\% through the pasted source pipeline (samples 1 and 2), and Sonnet's is 61.8\% and 60.1\%, so we compare models only within one pipeline.%GPTQUAL%
+\textbf{Pipeline and model effects on quality.} The two pipelines differ in quality, not only in flakiness. With the plain prompt on the 41 projects, Haiku's mutation score is 60.9\% for its Claude Code subagent suites and 52.8\% through the pasted source pipeline (samples 1 and 2), and Sonnet's is 61.8\% and 60.1\%, so we compare models only within one pipeline. The GPT models used the API with pasted source in both batches, and their scores agree across them (GPT~5.4 mini 40.8 and 42.3\%, GPT~4.1 mini 40.3 and 41.9\%). Within the held out pipeline, with the same mutants for every suite of a project, the mutation scores are Sonnet 60.1\%, Haiku 52.8\%, GPT~5.4 mini 42.3\%, and GPT~4.1 mini 41.9\%, and the coverage 79.0, 74.9, 73.4, and 74.0\%. So the models whose suites are flaky more often also write weaker suites, mostly because they keep fewer tests.
 
 \textbf{Measured rerun filters.} The runner now records every outcome in run order. We reran the 29 suites with a flaky test in 14 projects (plain suites of all four models and the GPT~4.1 mini guard suites) 200 more times and measured the filters directly (\texttt{scripts/krun\_measured.py}). 74 tests flipped. These are known flaky code study tests only, unlike the 74 of Progress Report 2, which included 15 from the library study, and only 9 are from Claude suites. Table~\ref{tab:krun} shows how many each filter would still keep.
 
