@@ -8,5 +8,6 @@ Categories (Luo et al. and Gruber et al., as used in the reports):
 randomness (unseeded generator), randomness (salted hash), unstable object hash in the code, test order dependency,
 time, floating point on a clock value, concurrency, async wait, network, IO, unordered collection, other.
 
-The reproduction logs in `results/matched*/` and `results/od_diagnose/` may be used, since they do not name the model.
+Do not open the reproduction logs in `results/matched*/` or `results/od_diagnose*/`: their suite ids (for example
+`zz_gpt41mini_plain_2`) name the model. Use only the sheet, the project source, and your own reruns of the test.
 `scripts/kappa.py` (to be run after the sheet is filled) compares the two labelings and writes `kappa.json`.

@@ -7,6 +7,7 @@ if it passes all of its first k runs. For every flaky test (passed and failed in
 suite we report whether it survives a 1, 3, 5, and 10 run filter, twice:
   file order:  the filter reruns the file in its written order (the even runs only), as a generate and filter
                pipeline would,
+  shuffled:    the odd runs only (each in a new random order),
   mixed:       the first k runs as they happened (file order and shuffled alternating).
 The M1 and M2 copies rerun the same tests and are left out. Writes results/krun_measured.json.
 
@@ -37,9 +38,10 @@ def main():
                 rows.append({"project": j["project"], "suite": sid, "model": s["model"], "prompt": s["prompt"], "test": t,
                              "fail_rate": round(sum(c in "FE" for c in ran) / len(ran), 3),
                              "file_order": {k: survives(seq[0::2], k) for k in KS},
+                             "shuffled": {k: survives(seq[1::2], k) for k in KS},
                              "mixed": {k: survives(seq, k) for k in KS}})
     out = {"flaky_tests": len(rows), "rows": rows, "summary": {}}
-    for mode in ("file_order", "mixed"):
+    for mode in ("file_order", "shuffled", "mixed"):
         out["summary"][mode] = {k: sum(r[mode][k] for r in rows) for k in KS}
     for grp in sorted({(r["model"], r["prompt"]) for r in rows}):
         rs = [r for r in rows if (r["model"], r["prompt"]) == grp]

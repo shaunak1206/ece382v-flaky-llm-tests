@@ -5,7 +5,8 @@ For each model and prompt: suites, generated tests, kept tests (pass the clean f
 test, mean line coverage of the target files, and the mutation score pooled over suites (killed / mutants run). A
 suite with no kept test kills nothing, so it counts as 0 killed out of the project's mutants. Mutant counts come from
 the project's fixed mutant set, so pooled scores of two prompts on the same projects face the same mutants.
-Prompt comparisons are paired: only projects that have both prompts for that model.
+Prompt comparisons are paired: only projects that have both prompts for that model, and again only the suite pairs
+(same project and sample) in which both suites keep at least one test.
 Writes results/quality_summary.json.
 
   python scripts/quality_summary.py [results/quality results/quality_heldout ...]
@@ -50,6 +51,14 @@ def main():
                 continue
             projs = {r["project"] for r in rows if (r["model"], r["prompt"]) == (m, p)} & \
                     {r["project"] for r in rows if (r["model"], r["prompt"]) == (m, q)}
+            # suite pairs (same project and sample) where both suites keep at least one test
+            pr = {}
+            for r in rows:
+                if r["model"] == m and r["prompt"] in (p, q):
+                    pr.setdefault((r["project"], r["suite"].split("_")[-1]), {})[r["prompt"]] = r
+            both = [v for v in pr.values() if p in v and q in v and v[p]["kept"] and v[q]["kept"]]
+            imported = {x: agg([v[x] for v in both]) for x in (p, q)}
+            out["paired"][f"{m}: {p} vs {q}, both keep tests"] = imported
             out["paired"][f"{m}: {p} vs {q}"] = {
                 p: agg([r for r in rows if (r["model"], r["prompt"]) == (m, p) and r["project"] in projs]),
                 q: agg([r for r in rows if (r["model"], r["prompt"]) == (m, q) and r["project"] in projs])}

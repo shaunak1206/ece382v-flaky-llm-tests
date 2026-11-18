@@ -49,7 +49,7 @@ def main():
             use = [r for r in rs if r.get(key)]
             fl = [r for r in use if is_flaky(r)]
             row[g] = {"use": len(use), "share": round(100 * len(use) / len(rs), 1), "flaky": len(fl),
-                      "flaky_tests": sorted(f"{r['cond']}/{r['proj']}::{r['test']}" for r in fl)}
+                      "flaky_tests": sorted(f"{r['cond']}/{r['proj']}::{r.get('class') or ''}::{r['test']}" for r in fl)}
         out["features"][key] = row
     json.dump(out, open(f"{R}/results/feature_flakiness.json", "w"), indent=1)
     print(f"| Feature | Human use (% of {out['totals']['human']['functions']}) | Human flaky | LLM use (% of {out['totals']['llm']['functions']}) | LLM flaky |")
