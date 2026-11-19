@@ -1,0 +1,43 @@
+name: cleaners
+
+# iFixFlakies style cleaner search for order dependent generated tests (scripts/cleaner_search.py).
+#   gh workflow run cleaners.yml
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "comma separated project names"
+        default: "kevinarpe-rambutan3,fistro,python-timemarker,jmcm,torch-gpt-2,event-bus,pylabeledrf,pelicun,torch-embed-sim,uhashring,pypfm,docci,HikLoad,BT-Tracker,QTAF,PyJsonFriendly"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          python3 -c "import json; print('matrix=' + json.dumps({'project': [x for x in '${{ inputs.only }}'.split(',') if x]}))" >> "$GITHUB_OUTPUT"
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: run
+        run: |
+          mkdir -p out
+          python3 scripts/cleaner_search.py "${{ matrix.project }}" --work /tmp/cl --out "out/${{ matrix.project }}.json" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cl-${{ strategy.job-index }}
+          path: out/*.json
+          if-no-files-found: warn
