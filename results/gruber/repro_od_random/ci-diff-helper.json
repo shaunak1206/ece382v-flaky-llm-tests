@@ -1,0 +1,23 @@
+{
+ "project": "ci-diff-helper",
+ "url": "https://github.com/dhermes/ci-diff-helper",
+ "sha": "876affd3ba49d78c48708a12103d39ef3c7d5f1d",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.02857142857142857,
+ "test_file": "tests/test__utils.py",
+ "test_func": "test_non_int_id",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_non_int_id",
+ "collect_tail": "tests/test__utils.py::Test_check_output::test_unicode\ntests/test__utils.py::Test_check_output::test_ignore_err\ntests/test__utils.py::Test_check_output::test_uncaught_err\ntests/test__utils.py::Test_check_output::test_bad_keywords\ntests/test__utils.py::Test_check_output::test_bytes\ntests/test__utils.py::Test_pr_from_commit::test_non_int_id\ntests/test__utils.py::Test_pr_from_commit::test_no_id\ntests/test__utils.py::Test_pr_from_commit::test_valid_id\ntests/test__utils.py::Test_pr_from_commit::test_too_many_ids\n\n9 tests collected in 0.01s\n",
+ "first_run_tail": "helper(self, ignore_err=False):\n        import subprocess\n>       import mock\nE       ModuleNotFoundError: No module named 'mock'\n\ntests/test__utils.py:47: ModuleNotFoundError\n------------------- generated xml file: /tmp/tmp36xg4sbi.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test__utils.py::Test_check_output::test_ignore_err - ModuleNotFoundError: No module named 'mock'\nFAILED tests/test__utils.py::Test_check_output::test_bytes - ModuleNotFoundError: No module named 'mock'\nFAILED tests/test__utils.py::Test_check_output::test_unicode - ModuleNotFoundError: No module named 'mock'\nFAILED tests/test__utils.py::Test_check_output::test_uncaught_err - ModuleNotFoundError: No module named 'mock'\n4 failed, 5 passed in 0.17s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 60,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 18.9,
+ "reproduced": false
+}

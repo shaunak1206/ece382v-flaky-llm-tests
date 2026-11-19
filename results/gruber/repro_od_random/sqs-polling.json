@@ -1,0 +1,25 @@
+{
+ "project": "sqs-polling",
+ "url": "https://github.com/ohke/sqs-polling",
+ "sha": "34d1375cf73e05211c73cd43bdd120ce076181c8",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.8,
+ "test_file": "sqs_polling/tests/test_sqs_polling.py",
+ "test_func": "test_execute_delete",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_execute_delete",
+ "collect_tail": "llback_returns_not_bool\nsqs_polling/tests/test_sqs_polling.py::TestSqsPolling::test_execute_with_args\nsqs_polling/tests/test_sqs_polling.py::TestSqsPolling::test_receive_1_message\nsqs_polling/tests/test_sqs_polling.py::TestSqsPolling::test_execute_with_kwargs\nsqs_polling/tests/test_sqs_polling.py::TestSqsPolling::test_execute_not_delete\nsqs_polling/tests/test_sqs_polling.py::TestSqsPolling::test_execute_delete\nsqs_polling/tests/test_sqs_polling.py::TestSqsPolling::test_receive_2_messages\nsqs_polling/tests/test_sqs_polling.py::TestSqsPolling::test_execute_with_whole\n\n9 tests collected in 0.33s\n",
+ "first_run_tail": "\n            msg = (\"Expected '%s' to be called once. Called %s times.%s\"\n                   % (self._mock_name or 'mock',\n                      self.call_count,\n                      self._calls_repr()))\n>           raise AssertionError(msg)\nE           AssertionError: Expected 'delete_message' to be called once. Called 0 times.\n\n/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/unittest/mock.py:924: AssertionError\n------------------- generated xml file: /tmp/tmppr9yjs86.xml -------------------\n=========================== short test summary info ============================\nFAILED sqs_polling/tests/test_sqs_polling.py::TestSqsPolling::test_execute_delete - AssertionError: Expected 'delete_message' to be called once. Called 0 times.\n1 failed, 8 passed in 0.18s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 18,
+ "failed": 42,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: Expected 'delete_message' to be called once. Called 0 times."
+ ],
+ "seconds": 25.1,
+ "reproduced": true
+}

@@ -1,0 +1,25 @@
+{
+ "project": "sphinx-gallery",
+ "url": "https://github.com/sphinx-gallery/sphinx-gallery",
+ "sha": "387900334ace5c0bf74e9e90aad1e8d2a54e6f17",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.9125,
+ "test_file": "sphinx_gallery/tests/test_full.py",
+ "test_func": "test_junit",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[dev-requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_junit",
+ "collect_tail": "inigallery_directive\nsphinx_gallery/tests/test_full.py::test_backreferences\n\n=============================== warnings summary ===============================\nsphinx_gallery/sphinx_compatibility.py:71\n  /tmp/gw/sphinx-gallery/repo/sphinx_gallery/sphinx_compatibility.py:71: RemovedInSphinx80Warning: The alias 'sphinx.util.status_iterator' is deprecated, use 'sphinx.util.display.status_iterator' instead. Check CHANGES for Sphinx API modifications.\n    status_iterator = sphinx.util.status_iterator\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n20 tests collected in 0.14s\n",
+ "first_run_tail": "not str)\nERROR sphinx_gallery/tests/test_full.py::test_command_line_args_img - sphinx.errors.ExtensionError: Handler <function embed_code_links at 0x7e2e7e26b0d0> for event 'build-finished' threw an exception (exception: list indices must be integers or slices, not str)\nERROR sphinx_gallery/tests/test_full.py::test_optipng - sphinx.errors.ExtensionError: Handler <function embed_code_links at 0x7e2e7e26b0d0> for event 'build-finished' threw an exception (exception: list indices must be integers or slices, not str)\nERROR sphinx_gallery/tests/test_full.py::test_rebuild - sphinx.errors.ExtensionError: Handler <function embed_code_links at 0x7e2e7e26b0d0> for event 'build-finished' threw an exception (exception: list indices must be integers or slices, not str)\n47 warnings, 20 errors in 11.04s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "failed on setup with \"sphinx.errors.ExtensionError: Handler <function embed_code_links at 0x7e2e7e26b0d0> for event 'build-finished' threw an exception (exception: list indices must be integers or sli"
+ ],
+ "seconds": 17.6,
+ "reproduced": false
+}

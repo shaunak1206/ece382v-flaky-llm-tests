@@ -1,0 +1,25 @@
+{
+ "project": "poio-lib",
+ "url": "https://github.com/Poio-NLP/poio-lib",
+ "sha": "2af55c863593511dbcf4c611c9265072022d8cdb",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.014285714285714285,
+ "test_file": "tests/test_wikipedia.py",
+ "test_func": "test_extract_to",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_extract_to",
+ "collect_tail": "_extractor\ntests/test_wikipedia.py::TestWikipedia::test_download_dump\ntests/test_wikipedia.py::TestWikipedia::test_extract_to_txt\ntests/test_wikipedia.py::TestWikipedia::test_extract_to\n\n=============================== warnings summary ===============================\n../venv/lib/python3.8/site-packages/bs4/dammit.py:53\n  /tmp/gw/poio-lib/venv/lib/python3.8/site-packages/bs4/dammit.py:53: DeprecationWarning: invalid escape sequence \\s\n    xml_encoding = '^\\s*<\\\\?.*encoding=[\\'\"](.*?)[\\'\"].*\\\\?>'\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n5 tests collected in 0.30s\n",
+ "first_run_tail": "s.MissingSchema: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?\nFAILED tests/test_wikipedia.py::TestWikipedia::test_extract_to - requests.exceptions.MissingSchema: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?\nFAILED tests/test_wikipedia.py::TestWikipedia::test_extract_to_txt - requests.exceptions.MissingSchema: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?\nFAILED tests/test_wikipedia.py::TestWikipedia::test_get_dump_link - requests.exceptions.MissingSchema: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?\nFAILED tests/test_wikipedia.py::TestWikipedia::test_download_dump - requests.exceptions.MissingSchema: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?\n5 failed in 1.45s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 0,
+ "failed": 60,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "requests.exceptions.MissingSchema: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?"
+ ],
+ "seconds": 107.4,
+ "reproduced": false
+}

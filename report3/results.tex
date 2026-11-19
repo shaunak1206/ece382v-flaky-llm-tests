@@ -75,24 +75,28 @@ GPT~5.4 mini, GPT~4.1 mini & 6 & 6 & 1.00 \\
 \textbf{Order dependent and time batches.} Table~\ref{tab:batches} gives the two batches promised in Progress Report 2.
 
 \begin{table}[htbp]
-\caption{Reproducing the two new batches of Gruber et al.\ flaky tests. Time tests ran up to 150 times alone, order dependent tests up to 60 times as part of their whole test file in a new random order.}
+\caption{Reproducing the new batches of Gruber et al.\ flaky tests. Time tests ran up to 150 times alone, order dependent tests up to 60 times as part of their whole test file in a new random order. The order dependent tests were drawn first as the first 45 eligible projects by name, then as a random sample of 45 of the remaining 454 (seed 2026).}
 \label{tab:batches}
 \small
-\begin{tabular}{lrr}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrr}
 \toprule
-Outcome & Time & Order dependent \\
+ & & \multicolumn{2}{c}{Order dependent} \\
+Outcome & Time & By name & Random \\
 \midrule
-Tried & 16 & 45 \\
-\quad Repository gone or install failed & 0 & 5 \\
-\quad Always failed & 12 & 17 \\
-\quad Never failed & 4 & 6 \\
-\quad Reproduced & 0 & 17 \\
+Tried & 16 & 45 & 45 \\
+\quad Repository gone or install failed & 0 & 5 & 0 \\
+\quad Always failed or error & 12 & 16 & 16 \\
+\quad Never failed & 4 & 6 & 17 \\
+\quad Reproduced & 0 & 17 & 10 \\
+\quad Still running & 0 & 1 & 2 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{itemize}
 \item \textbf{Time batch.} Only 16 tests passed the selection rule, not the 40 we planned, and none reproduced. 12 always failed, mostly at collection on old dependencies, and 4 never failed in 150 runs. We then retried all 16 with every package pinned to the date of the tested commit (\texttt{gruber\_reproduce.py --pin}, uv's \texttt{UV\_EXCLUDE\_NEWER}). 5 now run, but 11 still error on their first run (at collection, at setup, or on a pytest option the old configuration lacks), 1 always fails, 3 never fail, and the one that flips (gwosc, 3 of 150) fails on an HTTP 502 from a web service, which our rule excludes. The known flaky code study therefore still has only six projects outside randomness.
+\item \textbf{The random draw.} 10 of the 43 finished random projects reproduce (23\%), against 17 of 45 (38\%) drawn by name, so drawing by name did not pick unusually unreproducible projects, if anything the opposite. Writing this report we found that 8 projects of the by name batch had been run with a test from an older candidate list that shares their name; rerunning them with their order dependent test reproduced none (7 finished), so the 17 are unchanged.
 \item \textbf{Order dependent arm.} For the 17 projects that reproduced we generated 4 suites per model and ran them like the main study (Table~\ref{tab:odarm}). Run alone, 11 of the 17 developer tests always passed and 5 always failed, which is what victims and brittles do, though we have not confirmed a polluter or state setter for each. One test, ChainConsumer, flipped alone (13 and 22 of 200 in two control runs).
 \end{itemize}
 
@@ -213,7 +217,7 @@ Uses \texttt{monkeypatch} & 7 (0.2) & 0 & 133 (1.8) & 3 \\
 \end{tabularx}
 \end{table}
 
-Human tests use the risky features and stay stable: none of the 34 functions with unseeded randomness or the 58 that read the clock flipped, and 54 of the 56 that use threads, processes, or asyncio never flipped (the 2 are pybreaker stress cases). The same holds for LLM tests. With 4 flaky human functions, this also fits a low base rate, so the table shows that the features are common in stable tests, not that they are safe. The groups use the features differently, and part of that is the prompt. The feature prompt (AG-S, OS-S, OS-H) asks for time, randomness, and thread tests, and those suites read the clock in 3.8\% of functions, sleep in 2.5\%, and start threads or asyncio in 4.2\%, against 1.7\%, 0.4\%, and 2.5\% for the plain and TestPilot style suites. The human shares are 1.9\%, 1.1\%, and 1.8\%. Both kinds of LLM suite freeze the clock about ten times as often as human tests, and the plain suites use \texttt{monkeypatch} in 3.4\% of functions, against 0.2\% for human tests. Human tests share state through wide fixtures, where both human order dependent flips (arrow) sit, and no LLM test uses one. The scan is name based, so it misses a clock read hidden behind a helper, such as the two tenacity tests of Progress Report 2. With 4 and 8 flaky functions this table describes use, not risk.
+Human tests use the risky features and stay stable: none of the 34 functions with unseeded randomness or the 58 that read the clock flipped, and 54 of the 56 that use threads, processes, or asyncio never flipped (the 2 are pybreaker stress cases). The same holds for LLM tests. With 4 flaky human functions this shows the features are common in stable tests, not that they are safe. Part of the difference in use is the prompt: the feature prompt suites read the clock, sleep, and start threads 1.7 to 6 times as often as the plain and TestPilot style suites, whose shares are close to the human ones, and all LLM suites freeze the clock about ten times as often as human tests. Human tests share state through wide fixtures, where both human order dependent flips (arrow) sit, and no LLM test uses one.
 
 \textbf{Known flaky code study.} To get more flaky tests we ran a similar scan on every generated suite of the known flaky code study that ran 200 times (\texttt{scripts/feature\_flakiness\_matched.py}): 36,778 kept test functions in 2,235 suites, of which 277 functions and 131 suites have a kept flaky test. It works per suite as well as per function, because for order dependence the feature sits in another test of the suite (Table~\ref{tab:featmatched}).
 
@@ -239,17 +243,7 @@ Writes files outside \texttt{tmp\_path} & 34 & 0.0 & 0--10.2 & 0 & 6.0 \\
 \end{tabularx}
 \end{table}
 
-Four results stand out.
-
-\emph{Most flaky functions use none of the features.} 220 of the 277 do not. Their nondeterminism is in the code they call, an unseeded generator or a salted hash inside the project, which a scan of the test cannot see. Suites that call a random generator themselves are no more often flaky than others, because those calls are mostly seeded. 
-
-\emph{Module state marks flaky suites.} Suites that reload a module or edit \texttt{sys.modules} are often flaky, though the reloading test itself rarely flips. It is the polluter, and its victims are ordinary tests. 
-
-\emph{Hashes and patching are weaker leads.} Suites that call \texttt{hash()} or \texttt{id()} are often flaky, but the counts come from three projects. The \texttt{monkeypatch} row is the only one spread over many projects (20): suites that patch are flaky more often (7.6 against 4.8\%). But 39\% of all suites patch, only 15 of the 66 flaky ones also reload a module, and they sit in the same projects as the flaky suites in general (docci, cuckoopy, fistro, jmcm, data-partitioner first). So patching marks suites of code that is flaky anyway, and we cannot show that it causes flips. 
-
-\emph{The classic causes are rare.} The features that are classic causes of flaky tests, the clock, sleeps, and concurrency, are rare in generated tests of this code (15 to 30 suites), and each of their flaky suites is in a single project, so they cannot be ranked. The clock dependency that we did find, in docci, is inside a library call, and the scan does not see it.
-
-Every interval is wide, and the flaky suites cluster in a few projects, so these are leads, not risks. A risk check for generated tests should look at the whole suite and at the code under test, not at each test alone. The scan is name based: the kindle-maker fixture calls \texttt{id()} but is not a test function, so it is not counted.
+Four results stand out. \emph{Most flaky functions use none of the features} (220 of 277): their nondeterminism is in the code they call, which a scan of the test cannot see, and suites that call a random generator themselves are no more often flaky, because those calls are mostly seeded. \emph{Module state marks flaky suites}: suites that reload a module are flaky 25\% of the time, though the reloading test is the polluter and its victims are ordinary tests. \emph{Hashes and patching are weaker leads}: the \texttt{hash()} row comes from three projects, and patching, though spread over 20 projects, is in 39\% of all suites and in the same projects as flaky suites in general, so we cannot show it causes flips. \emph{The classic causes are rare}: the clock, sleeps, and concurrency appear in 15 to 30 suites, each flaky one in a single project, and the clock dependency we did find (docci) sits in a library call the scan cannot see. These are leads, not risks: a risk check for generated tests should look at the whole suite and the code under test.
 
 \subsection{RQ4, mitigation}
 \label{sec:rq4}
@@ -362,9 +356,9 @@ Guard v3 & 7 & 428 & 1 & 66.9 & 40.5 & 79.8$\to$80.7 & 55.2$\to$50.4 \\
 \end{tabularx}
 \end{table}
 
-For GPT~4.1 mini the guard prompts trade flaky tests for test quality. For guard v2 and v3 most of the cost is suites in which no test passes, which includes the suites that do not import, though under v3 the suites that keep tests also lose 4.8 points of mutation score. For guard v1 it is weaker tests, since no more suites fail but the mutation score of the suites that keep tests falls from 58.1 to 51.9\%. Where both suites keep tests, coverage stays within 2 points. The Claude models did not pay this cost with guard v3 (Table~\ref{tab:guard3}), but that comparison also differs in pipeline and projects (41 projects through the pasted source pipeline, against GPT~4.1 mini's first 17 through the API), so the model difference is a lead.
+For GPT~4.1 mini the guard prompts trade flaky tests for test quality. For guard v1 the cost is weaker tests (mutation score 58.1 to 51.9\% where both suites keep tests); for v2 and v3 it is mostly suites in which no test passes, and under v3 the suites that keep tests also lose 4.8 points. Coverage of the suites that keep tests stays within 2 points.
 
-\textbf{Pipeline and model effects on quality.} The two pipelines differ in quality, not only in flakiness. With the plain prompt on the 41 projects, Haiku's mutation score is 60.9\% for its Claude Code subagent suites and 52.8\% through the pasted source pipeline (samples 1 and 2), and Sonnet's is 61.8\% and 60.1\%, so we compare models only within one pipeline. The GPT models used the API with pasted source in both batches, and their scores agree across them (GPT~5.4 mini 40.8 and 42.3\%, GPT~4.1 mini 40.3 and 41.9\%). Within the pasted source pipeline, with the same mutants for every suite of a project, the mutation scores are Sonnet 60.1\%, Haiku 52.8\%, GPT~5.4 mini 42.3\%, and GPT~4.1 mini 41.9\%, and the coverage 79.0, 74.9, 73.4, and 74.0\%. So the models whose suites are flaky more often also write weaker suites, and they also keep fewer tests per suite, which we have not separated from test strength.
+\textbf{Pipeline and model effects on quality.} The pipelines differ in quality: Haiku's mutation score is 60.9\% through Claude Code subagents and 52.8\% through the pasted source pipeline (Sonnet 61.8 and 60.1\%), while the GPT models, which used the same API pipeline twice, agree across batches. So we compare models only within one pipeline. There the mutation scores are Sonnet 60.1\%, Haiku 52.8\%, GPT~5.4 mini 42.3\%, and GPT~4.1 mini 41.9\% (coverage 79.0, 74.9, 73.4, and 74.0\%): the models whose suites are flaky more often also write weaker suites, and keep fewer tests per suite, which we have not separated from test strength.
 
 \textbf{Measured rerun filters.} The runner now records every outcome in run order. We reran the Progress Report 2 suites (not the held out sample) of the 14 projects where one of them had a flaky test, 126 suites: the two plain suites per model from Progress Report 2 and its GPT~4.1 mini guard v1 to v3 suites. Each ran 200 more times, and we measured the filters directly (\texttt{scripts/krun\_measured.py}). 74 tests in 29 of the suites flipped. These 74 are known flaky code study tests only, unlike the 74 kept flaky tests of Progress Report 2, which included 15 from the library study, and only 9 are from Claude suites. The held out sample already records every run in order, so we measured the filters on its 253 flaky tests as well. Table~\ref{tab:krun} shows how many each filter would still keep.
 
@@ -400,7 +394,7 @@ File order reruns do help: going from 1 to 10 runs removes 19 of the 57 tests a 
 \item \textbf{Diagnosis and labels.} Single polluter pairs that failed once in 3 runs can be chance for randomness tests, the kindle-maker mechanism rests on one control suite, and the relabel is not fully blind.
 \item \textbf{Missed order dependence.} The main protocol alternates file order and shuffled runs, and the developer file control shows that some order dependent tests flip only under other shuffle seeds, so the flaky counts of the alone runs are lower bounds.
 \item \textbf{Two measurements per suite.} Flakiness comes from 200 runs and quality from one clean run, which can keep slightly different tests.
-\item \textbf{Flaky tests in the mutation score.} A flaky test that fails by chance on a mutant kills it, so models with more flaky tests could gain. The effect is small: at most 1.7\% of any model's kept tests are flaky, and most flip in few of 200 runs. A stricter score would count only kills by tests that never failed in the 200 runs (next step 4).
-\item \textbf{Batch selection.} The order dependent batch took the first 45 eligible projects by name in case sensitive order, so all 45 names start with a capital letter. The rule is fixed but not random.
+\item \textbf{Flaky tests in the mutation score.} A flaky test that fails by chance on a mutant kills it, so models with more flaky tests could gain. The effect is small: at most 1.7\% of any model's kept tests are flaky, and most flip in few of 200 runs. A stricter score would count only kills by tests that never failed in the 200 runs (next step 5).
+\item \textbf{Batch selection.} The order dependent arm's 17 projects come from the first 45 eligible projects by name, all capitalized. A seeded random draw of 45 more reproduced at a similar rate (10 of 43 so far), and its projects join the arm for the final paper.
 \item \textbf{Statistics.} Fisher tests on suites treat suites of one project as independent, so we use them only to describe, and the project level sign test is the one confirmatory test.
 \end{itemize}

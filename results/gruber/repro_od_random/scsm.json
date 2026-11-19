@@ -1,0 +1,25 @@
+{
+ "project": "scsm",
+ "url": "https://github.com/bubylou/scsm",
+ "sha": "a67059c398b40e31296faea25ae20d3dc78070bd",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.6375,
+ "test_file": "tests/test_core.py",
+ "test_func": "test_cached_login",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1 error: No solution found when resolving dependencies\n  cause: Because there is no version of codecov==2.0.16 and you require codecov==2.0.16, we can conclude that your requirements are unsatisfiable.\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_cached_login",
+ "collect_tail": "test_core.py::TestIndex::test_search[hl2dm-result2]\ntests/test_core.py::TestIndex::test_list\ntests/test_core.py::TestIndex::test_search[232370-result1]\ntests/test_core.py::TestIndex::test_update\n\n=============================== warnings summary ===============================\nscsm/config.py:4\n  /tmp/gw/scsm/repo/scsm/config.py:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n    from pkg_resources import resource_filename\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n38 tests collected in 0.03s\n",
+ "first_run_tail": "ests/test_core.py::TestServer::test_send - FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gw/scsm/repo/scsm/data/apps/None.yaml'\nERROR tests/test_core.py::TestServer::test_stop - FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gw/scsm/repo/scsm/data/apps/None.yaml'\nERROR tests/test_core.py::TestServer::test_init - FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gw/scsm/repo/scsm/data/apps/None.yaml'\nERROR tests/test_core.py::TestServer::test_start - FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gw/scsm/repo/scsm/data/apps/None.yaml'\nERROR tests/test_core.py::TestIndex::test_list - FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gw/scsm/repo/scsm/data/apps/None.yaml'\n4 failed, 10 passed, 1 warning, 24 errors in 52.40s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 45,
+ "failed": 15,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "subprocess.TimeoutExpired: Command '[PosixPath('/home/runner/.local/share/scsm/steamcmd/steamcmd.sh'), '+login', 'anonymous', '+quit']' timed out after 5 seconds"
+ ],
+ "seconds": 2370.2,
+ "reproduced": true
+}

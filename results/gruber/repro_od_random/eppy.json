@@ -1,0 +1,25 @@
+{
+ "project": "eppy",
+ "url": "https://github.com/santoshphilip/eppy",
+ "sha": "98e58583dce6c0fcec9c7b1ff1142bae0a67ddc7",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.5,
+ "test_file": "eppy/tests/test_case_insensitive.py",
+ "test_func": "test_contains",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements_dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_contains",
+ "collect_tail": "-gnu/lib/python3.8/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/tmp/gw/eppy/venv/lib/python3.8/site-packages/pytest.py\", line 13, in <module>\n    from _pytest.fixtures import fixture, yield_fixture\n  File \"/tmp/gw/eppy/venv/lib/python3.8/site-packages/_pytest/fixtures.py\", line 845, in <module>\n    class FixtureFunctionMarker(object):\n  File \"/tmp/gw/eppy/venv/lib/python3.8/site-packages/_pytest/fixtures.py\", line 847, in FixtureFunctionMarker\n    params = attr.ib(convert=attr.converters.optional(tuple))\nTypeError: attrib() got an unexpected keyword argument 'convert'\n",
+ "first_run_tail": "ython-3.8-linux-x86_64-gnu/lib/python3.8/runpy.py\", line 194, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n  File \"/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/tmp/gw/eppy/venv/lib/python3.8/site-packages/pytest.py\", line 13, in <module>\n    from _pytest.fixtures import fixture, yield_fixture\n  File \"/tmp/gw/eppy/venv/lib/python3.8/site-packages/_pytest/fixtures.py\", line 845, in <module>\n    class FixtureFunctionMarker(object):\n  File \"/tmp/gw/eppy/venv/lib/python3.8/site-packages/_pytest/fixtures.py\", line 847, in FixtureFunctionMarker\n    params = attr.ib(convert=attr.converters.optional(tuple))\nTypeError: attrib() got an unexpected keyword argument 'convert'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "8/site-packages/_pytest/fixtures.py\", line 847, in FixtureFunctionMarker\n    params = attr.ib(convert=attr.converters.optional(tuple))\nTypeError: attrib() got an unexpected keyword argument 'convert'\n"
+ ],
+ "seconds": 9.2,
+ "reproduced": false
+}

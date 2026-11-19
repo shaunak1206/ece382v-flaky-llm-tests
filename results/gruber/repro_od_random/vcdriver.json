@@ -1,0 +1,23 @@
+{
+ "project": "vcdriver",
+ "url": "https://github.com/Osirium/vcdriver",
+ "sha": "2f311df9a73c82b5837d01bac16a10eb4db955eb",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.95625,
+ "test_file": "test/unit/test_config.py",
+ "test_func": "test_read",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1   c/call_python.c: In function \u2018_update_cache_to_call_python\u2019:\n         c/call_python.c:160:39: error: invalid use of incomplete typedef \u2018PyInterpreterState\u2019 {aka \u2018struct _is\u2019}\n           160 |     new1 = PyThreadState_GET()->interp->modules;\n               |                                       ^~\n         c/call_python.c: In function \u2018cffi_call_python\u2019:\n         c/call_python.c:249:63: error: invalid use of incomplete typedef \u2018PyInterpreterState\u2019 {aka \u2018struct _is\u2019}\n           249 |         if (externpy->reserved1 != PyThreadState_GET()->interp->modules) {\n               |                                                               ^~\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto mock] rc=0 ",
+ "test": "test_read",
+ "collect_tail": "test/unit/test_config.py::test_configurable_and_reset\ntest/unit/test_config.py::test_read\n\n2 tests collected in 0.03s\n",
+ "first_run_tail": "..                                                                       [100%]\n------------------- generated xml file: /tmp/tmpcwvxmva5.xml -------------------\n2 passed in 0.02s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 60,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 18.6,
+ "reproduced": false
+}

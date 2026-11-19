@@ -1,0 +1,25 @@
+{
+ "project": "elifetools",
+ "url": "https://github.com/elifesciences/elife-tools",
+ "sha": "a5b93afbe4db7852bf1aa12265090d60140fca8e",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.4,
+ "test_file": "elifetools/tests/test_xmlio.py",
+ "test_func": "test_input_output_1_elife_02833_v2_xml",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=1        /tmp/xmlXPathInit61qb7j0n.c:3:5: warning: \u2018xmlXPathInit\u2019 is deprecated: See https://gnome.pages.gitlab.gnome.org/libxml2/html/deprecated.html [-Wdeprecated-declarations]\n             3 |     xmlXPathInit();\n               |     ^~~~~~~~~~~~\n         In file included from /tmp/xmlXPathInit61qb7j0n.c:1:\n         /usr/include/libxml2/libxml/xpath.h:561:21: note: declared here\n           561 |                     xmlXPathInit                (void);\n               |                     ^~~~~~~~~~~~\n         <string>:61: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n         error: command '/usr/bin/cc' failed with exit code 1\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto ddt] rc=0 ",
+ "test": "test_input_output_1_elife_02833_v2_xml",
+ "collect_tail": "oup_01_xml_____Cell_Biology____Plant_Biology_____heading___True____article__front__article_meta__article_categories__subj_group_subj_group_type__display_channel___subject_Research_Article__subject___subj_group__subj_group_subj_group_type__heading___subject_Cell_Biology__subject___subj_group__subj_group_subj_group_type__heading___subject_Plant_Biology__subject___subj_group___article_categories___article_meta___front___article___\nelifetools/tests/test_xmlio.py::TestParse::test_parse_doctype_1\nelifetools/tests/test_xmlio.py::TestParse::test_parse_doctype_processing_1\n\n26 tests collected in 0.01s\n",
+ "first_run_tail": "LParser() takes at most 2 keyword arguments (3 given)\nFAILED elifetools/tests/test_xmlio.py::TestParse::test_parse_doctype_1 - TypeError: XMLParser() takes at most 2 keyword arguments (3 given)\nFAILED elifetools/tests/test_xmlio.py::TestParse::test_parse_doctype_processing_1 - TypeError: XMLParser() takes at most 2 keyword arguments (3 given)\nFAILED elifetools/tests/test_xmlio.py::TestOutput::test_output_2 - TypeError: XMLParser() takes at most 2 keyword arguments (3 given)\nFAILED elifetools/tests/test_xmlio.py::TestOutput::test_output_1 - TypeError: XMLParser() takes at most 2 keyword arguments (3 given)\nFAILED elifetools/tests/test_xmlio.py::TestOutput::test_output_processing_instructions_1 - TypeError: XMLParser() takes at most 2 keyword arguments (3 given)\n24 failed, 2 passed in 0.21s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 0,
+ "failed": 60,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "TypeError: XMLParser() takes at most 2 keyword arguments (3 given)"
+ ],
+ "seconds": 28.2,
+ "reproduced": false
+}

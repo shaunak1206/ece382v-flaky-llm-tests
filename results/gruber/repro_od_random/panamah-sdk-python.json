@@ -1,0 +1,23 @@
+{
+ "project": "panamah-sdk-python",
+ "url": "https://github.com/casamagalhaes/panamah-sdk-python",
+ "sha": "746f3fb7ebcf01810917bf9afa8e7ff5a4efad21",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.08125,
+ "test_file": "tests/test_processor.py",
+ "test_func": "test_expiration_by_max_age",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_expiration_by_max_age",
+ "collect_tail": "tests/test_processor.py::TestStream::test_get_pending_resources\ntests/test_processor.py::TestStream::test_sending_batch\ntests/test_processor.py::TestStream::test_requesting_pending_resources\ntests/test_processor.py::TestStream::test_flushing\ntests/test_processor.py::TestStream::test_expiration_by_max_age\ntests/test_processor.py::TestStream::test_initialization_and_accumulation\ntests/test_processor.py::TestStream::test_expiration_by_max_length\ntests/test_processor.py::TestStream::test_expiration_by_max_size\ntests/test_processor.py::TestStream::test_recover_failures\n\n10 tests collected in 0.21s\n",
+ "first_run_tail": "hon3.8/http/server.py\", line 139, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/lib/python3.8/socketserver.py\", line 466, in server_bind\n    self.socket.bind(self.server_address)\nOSError: [Errno 98] Address already in use\n------------------- generated xml file: /tmp/tmpunic9gn2.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_processor.py::TestStream::test_flushing - panamah_sdk.exceptions.AuthException: Credenciais invalidas\nFAILED tests/test_processor.py::TestStream::test_sending_batch - panamah_sdk.exceptions.AuthException: Credenciais invalidas\nERROR tests/test_processor.py::test_expiration\n2 failed, 7 passed, 1 error in 5.52s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 60,
+ "failed": 0,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [],
+ "seconds": 342.1,
+ "reproduced": false
+}

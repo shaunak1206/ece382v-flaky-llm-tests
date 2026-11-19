@@ -1,0 +1,25 @@
+{
+ "project": "cfgsaver",
+ "url": "https://github.com/prahladyeri/cfgsaver",
+ "sha": "9654076b418c96bcddbf2fddc5fdb0f6f4117278",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.5714285714285714,
+ "test_file": "test/test_cfgsaver.py",
+ "test_func": "test_get",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_get",
+ "collect_tail": "test/test_cfgsaver.py::test_get\ntest/test_cfgsaver.py::test_save\n\n2 tests collected in 0.01s\n",
+ "first_run_tail": "F.                                                                       [100%]\n=================================== FAILURES ===================================\n___________________________________ test_get ___________________________________\n\n    def test_get():\n    \tobj = cfgsaver.get(pkg_name)\n>   \tassert obj[0]['name'] == 'Sophie'\nE    TypeError: 'NoneType' object is not subscriptable\n\ntest/test_cfgsaver.py:11: TypeError\n------------------- generated xml file: /tmp/tmp3p69tdmn.xml -------------------\n=========================== short test summary info ============================\nFAILED test/test_cfgsaver.py::test_get - TypeError: 'NoneType' object is not subscriptable\n1 failed, 1 passed in 0.03s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 59,
+ "failed": 1,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "TypeError: 'NoneType' object is not subscriptable"
+ ],
+ "seconds": 16.7,
+ "reproduced": true
+}

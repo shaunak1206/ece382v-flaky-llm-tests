@@ -1,0 +1,25 @@
+{
+ "project": "pybl3p",
+ "url": "https://github.com/gijzelaerr/pybl3p",
+ "sha": "98c102c02cb93803ee47941a48a8aa8d62fa4d6c",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.011111111111111112,
+ "test_file": "tests/test_public.py",
+ "test_func": "test_tradehistory",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=1 error: Failed to build `pybl3p @ file:///tmp/gw/pybl3p/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .] rc=1 error: Failed to build `pybl3p @ file:///tmp/gw/pybl3p/repo`\n  cause: The build backend returned an error\n  cause: Call to `poetry.masonry.api.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: module 'poetry.masonry.api' has no attribute 'build_editable'\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[.] rc=0 ",
+ "test": "test_tradehistory",
+ "collect_tail": "tests/test_public.py::PublicTest::test_trades\ntests/test_public.py::PublicTest::test_ticker\ntests/test_public.py::PublicTest::test_tradehistory_params\ntests/test_public.py::PublicTest::test_tradehistory\ntests/test_public.py::PublicTest::test_orderbook\n\n5 tests collected in 0.60s\n",
+ "first_run_tail": "e: %d' % response.status_code)\nE           Exception: unexpected response code: 302\n\npybl3p/requests.py:29: Exception\n------------------- generated xml file: /tmp/tmpcdnm7zqp.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/test_public.py::PublicTest::test_tradehistory_params - Exception: unexpected response code: 302\nFAILED tests/test_public.py::PublicTest::test_orderbook - Exception: unexpected response code: 302\nFAILED tests/test_public.py::PublicTest::test_trades - Exception: unexpected response code: 302\nFAILED tests/test_public.py::PublicTest::test_ticker - Exception: unexpected response code: 302\nFAILED tests/test_public.py::PublicTest::test_tradehistory - Exception: unexpected response code: 302\n5 failed in 3.43s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 0,
+ "failed": 60,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "Exception: unexpected response code: 302"
+ ],
+ "seconds": 206.8,
+ "reproduced": false
+}

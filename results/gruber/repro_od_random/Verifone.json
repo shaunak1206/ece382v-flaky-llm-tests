@@ -1,0 +1,25 @@
+{
+ "project": "Verifone",
+ "url": "https://github.com/vilkasgroup/Verifone",
+ "sha": "5509c08767a9b482cfe5a9572854cf4c73ad6c02",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.49375,
+ "test_file": "tests/test_verifone.py",
+ "test_func": "test_001_create_object_with_defaults",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements_dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_001_create_object_with_defaults",
+ "collect_tail": "__init__.py:2832\n../venv/lib/python3.8/site-packages/pkg_resources/__init__.py:2832\n  /tmp/gw/Verifone/venv/lib/python3.8/site-packages/pkg_resources/__init__.py:2832: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.\n  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages\n    declare_namespace(pkg)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n31 tests collected in 0.39s\n",
+ "first_run_tail": "ected str instance, NoneType found\nFAILED tests/test_verifone.py::TestVerifone::test_011_generate_payment_data - TypeError: sequence item 0: expected str instance, NoneType found\nFAILED tests/test_verifone.py::TestVerifone::test_031_generate_payment_data - TypeError: sequence item 0: expected str instance, NoneType found\nFAILED tests/test_verifone.py::TestVerifone::test_029_generate_payment_data - TypeError: sequence item 0: expected str instance, NoneType found\nFAILED tests/test_verifone.py::TestVerifone::test_026_verify_incorrect_signature - TypeError: 'NoneType' object cannot be interpreted as an integer\nFAILED tests/test_verifone.py::TestVerifone::test_010_generate_payment_data - TypeError: sequence item 0: expected str instance, NoneType found\n7 failed, 24 passed, 5 warnings in 1.14s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 33,
+ "failed": 27,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: False is not true"
+ ],
+ "seconds": 87.0,
+ "reproduced": true
+}

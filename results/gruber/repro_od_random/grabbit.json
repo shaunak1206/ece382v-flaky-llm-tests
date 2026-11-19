@@ -1,0 +1,26 @@
+{
+ "project": "grabbit",
+ "url": "https://github.com/grabbles/grabbit",
+ "sha": "83ff93df36019eaaee9d4e31f816a518e46cae07",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.08125,
+ "test_file": "grabbit/tests/test_core.py",
+ "test_func": "test_querying",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto six] rc=0 ",
+ "test": "test_querying",
+ "collect_tail": "nce \\d\n    layout = Layout([(root, config)], regex_search=True, include='sub-\\d*')\n\ngrabbit/tests/test_core.py:154\n  /tmp/gw/grabbit/repo/grabbit/tests/test_core.py:154: DeprecationWarning: invalid escape sequence \\d\n    layout = Layout([(root, config)], include='sub-\\d*', exclude=\"meh\")\n\ngrabbit/tests/test_core.py:159\n  /tmp/gw/grabbit/repo/grabbit/tests/test_core.py:159: DeprecationWarning: invalid escape sequence \\d\n    layout = Layout([(root, config)], regex_search=True, exclude='sub-\\d*')\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n43 tests collected in 0.10s\n",
+ "first_run_tail": "=================\nFAILED grabbit/tests/test_core.py::TestLayout::test_querying[local] - AssertionError: assert 4 == 8\n +  where 4 = len([File(filename='sub-01/ses-1/fmap/sub-01_ses-1_run-1_magnitude1.nii.gz', subject='01', session='1', run=1, type='magni...acq-fullbrain_run-1_bold.nii.gz', subject='01', session='1', run=1, type='bold', task='rest', acquisition='fullbrain')])\nFAILED grabbit/tests/test_core.py::TestLayout::test_unique_and_count[local] - AssertionError: assert 1 == 10\n +  where 1 = len(['01'])\nFAILED grabbit/tests/test_core.py::TestLayout::test_natsort[local] - AssertionError: assert ['01'] == ['01', '02', '03', '04', '05']\n  Right contains 4 more items, first extra item: '02'\n  Full diff:\n  - ['01', '02', '03', '04', '05']\n  + ['01']\n3 failed, 25 passed, 15 skipped in 0.26s\n",
+ "collected": 2,
+ "runs": 60,
+ "passed": 14,
+ "failed": 46,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert 4 == 8\n +  where 4 = len([File(filename='sub-01/ses-1/fmap/sub-01_ses-1_run-1_magnitude1.nii.gz', subject='01', session='1', run=1, type='magni...acq-fullbrain_run-1_bold.nii.gz",
+  "IndexError: list index out of range"
+ ],
+ "seconds": 31.7,
+ "reproduced": true
+}

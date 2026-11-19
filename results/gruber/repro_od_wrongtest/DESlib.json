@@ -1,0 +1,25 @@
+{
+ "project": "DESlib",
+ "url": "https://github.com/Menelau/DESlib",
+ "sha": "77d0ccb491c522e7505d9ac6081b72cac001cb9e",
+ "category": "random",
+ "gruber_fail_rate": 0.005555555555555556,
+ "test_file": "deslib/tests/des/test_probabilistic.py",
+ "test_func": "test_check_estimator_DESKL",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=1 rk/_temp/setup-uv-cache/builds-v0/.tmpyZr21T/lib/python3.8/site-packages/setuptools/build_meta.py\", line 521, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpyZr21T/lib/python3.8/site-packages/setuptools/build_meta.py\", line 319, in run_setup\n             exec(code, locals())\n           File \"<string>\", line 250, in <module>\n           File \"<string>\", line 238, in setup_package\n         ImportError: Numerical Python (NumPy) is not installed.\n         scikit-learn requires NumPy >= 1.8.2.\n         Installation instructions are available on the scikit-learn website: http://scikit-learn.org/stable/install.html\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_check_estimator_DESKL",
+ "collect_tail": "============================= warnings summary ===============================\ndeslib/util/prob_functions.py:7\n  /tmp/gw/DESlib/repo/deslib/util/prob_functions.py:7: PendingDeprecationWarning: Importing from numpy.matlib is deprecated since 1.19.0. The matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray. \n    import numpy.matlib as npm\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n22 tests collected in 0.33s\n",
+ "first_run_tail": "ting code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\nFAILED deslib/tests/des/test_probabilistic.py::test_check_estimator_DESKL - TypeError: Passing a class was deprecated in version 0.23 and isn't supported anymore from 0.24.Please pass an instance instead.\nFAILED deslib/tests/des/test_probabilistic.py::test_check_estimator_Exponential - TypeError: Passing a class was deprecated in version 0.23 and isn't supported anymore from 0.24.Please pass an instance instead.\n6 failed, 16 passed, 2 warnings in 0.37s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 0,
+ "failed": 60,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "TypeError: Passing a class was deprecated in version 0.23 and isn't supported anymore from 0.24.Please pass an instance instead."
+ ],
+ "seconds": 58.6,
+ "reproduced": false
+}

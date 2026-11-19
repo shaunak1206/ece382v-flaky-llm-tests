@@ -1,0 +1,27 @@
+{
+ "project": "thundra-lambda-agent-python",
+ "url": "https://github.com/thundra-io/thundra-lambda-agent-python",
+ "sha": "fcd1c2b0b309721d89bd35511bd6645ebd62a5bc",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.5094339622641509,
+ "test_file": "tests/plugins/log/test_log_plugin.py",
+ "test_func": "test_when_thundra_log_handler_is_not_added_to_logger",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 \n[auto mock] rc=0 ",
+ "test": "test_when_thundra_log_handler_is_not_added_to_logger",
+ "collect_tail": "tests/plugins/log/test_log_plugin.py::test_when_thundra_log_handler_is_not_added_to_logger\ntests/plugins/log/test_log_plugin.py::test_log_plugin_with_initialization\ntests/plugins/log/test_log_plugin.py::test_log_plugin_with_config_file\n\n3 tests collected in 0.03s\n",
+ "first_run_tail": "ponnh02_x.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/plugins/log/test_log_plugin.py::test_when_thundra_log_handler_is_not_added_to_logger - AssertionError: assert 1 == 0\n +  where 1 = len([{'id': '776e2f2c-b289-4ef4-8b99-dd2c700a70c7', 'logContextName': 'test_config_handler', 'logLevel': 'DEBUG', 'logLevelCode': 1, ...}])\nFAILED tests/plugins/log/test_log_plugin.py::test_log_plugin_with_initialization - AssertionError: assert 3 == 1\n +  where 3 = len([{'id': '776e2f2c-b289-4ef4-8b99-dd2c700a70c7', 'logContextName': 'test_config_handler', 'logLevel': 'DEBUG', 'logLeve... '0635ebf6-c9cc-4c0a-a39f-566d0fdbc955', 'logContextName': 'test_handler', 'logLevel': 'INFO', 'logLevelCode': 2, ...}])\n2 failed, 1 passed in 0.05s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 21,
+ "failed": 39,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert 1 == 0\n +  where 1 = len([{'id': '776e2f2c-b289-4ef4-8b99-dd2c700a70c7', 'logContextName': 'test_config_handler', 'logLevel': 'DEBUG', 'logLevelCode': 1, ...}])",
+  "AssertionError: assert 3 == 0\n +  where 3 = len([{'id': '2bcfe4c2-0d19-49ac-ba3a-a4a606d7934b', 'logContextName': 'test_config_handler', 'logLevel': 'DEBUG', 'logLeve... '4de38eb0-ef3c-4804-952a-b3492",
+  "AssertionError: assert 3 == 0\n +  where 3 = len([{'id': 'af756210-c7c1-4789-a663-709af8ab4edf', 'logContextName': 'test_config_handler', 'logLevel': 'DEBUG', 'logLeve... 'df9a5571-37ba-4e17-b1b0-7c6f0"
+ ],
+ "seconds": 23.8,
+ "reproduced": true
+}

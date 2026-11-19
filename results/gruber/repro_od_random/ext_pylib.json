@@ -1,0 +1,26 @@
+{
+ "project": "ext_pylib",
+ "url": "https://github.com/hbradleyiii/ext_pylib",
+ "sha": "15a9b5a80db87b5f20e03ef6bfa015acf4bf8543",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.5285714285714286,
+ "test_file": "tests/files/test_node.py",
+ "test_func": "test_node_repr",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_node_repr",
+ "collect_tail": "_verify[atts9]\ntests/files/test_node.py::test_node_concatenate[atts1-/this/path/]\ntests/files/test_node.py::test_node_set_bad_group\ntests/files/test_node.py::test_node_parent_node_recursive[atts2-relative/]\ntests/files/test_node.py::test_node_verify[atts0]\ntests/files/test_node.py::test_node_parent_node[atts5-relative/..]\ntests/files/test_node.py::test_node_parent_node[atts6-relative/..]\ntests/files/test_node.py::test_node_initialize[atts4-expected4]\ntests/files/test_node.py::test_node_get_atts[atts0-{'path' : None, 'perms' : None, 'owner' : None, 'group' : None}]\n\n89 tests collected in 0.18s\n",
+ "first_run_tail": "          ^^              ^^\nE         + 'owner' : 'runner', 'group' : 'runner'})\nE         ?           ^^^^  ++            ^^^^  ++\n\ntests/files/test_node.py:74: AssertionError\n------------------- generated xml file: /tmp/tmpnnrmati2.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/files/test_node.py::test_node_repr[atts2-{'path' : '/etc/path/file', 'perms' : 0o655, 'owner' : None, 'group' : None}] - assert \"Node({'path'... : 'runner'})\" == \"Node({'path'...oup' : None})\"\n  Skipping 50 identical leading characters in diff, use -v to show\n  - 'owner' : None, 'group' : None})\n  ?           ^^              ^^\n  + 'owner' : 'runner', 'group' : 'runner'})\n  ?           ^^^^  ++            ^^^^  ++\n1 failed, 88 passed in 0.18s\n",
+ "collected": 5,
+ "runs": 60,
+ "passed": 7,
+ "failed": 53,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "assert \"Node({'path'... : 'runner'})\" == \"Node({'path'...oup' : None})\"\n  Skipping 50 identical leading characters in diff, use -v to show\n  - 'owner' : None, 'group' : None})\n  ?           ^^        ",
+  "assert \"Node({'path'... : 'runner'})\" == \"Node({'path'...oup' : None})\"\n  Skipping 37 identical leading characters in diff, use -v to show\n  - 'owner' : None, 'group' : None})\n  ?           ^^        "
+ ],
+ "seconds": 23.1,
+ "reproduced": true
+}

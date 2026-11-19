@@ -1,0 +1,25 @@
+{
+ "project": "Neuraxle",
+ "url": "https://github.com/Neuraxio/Neuraxle",
+ "sha": "20c6e5713198345b43bf6899355f1b5cf65eb02c",
+ "category": "random",
+ "gruber_fail_rate": 0.035,
+ "test_file": "testing/metaopt/test_automl_sequential_wrapper.py",
+ "test_func": "test_automl_sequential_wrapper",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_automl_sequential_wrapper",
+ "collect_tail": ", in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 975, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 655, in _load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 618, in _load_backward_compatible\n  File \"/tmp/gw/Neuraxle/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 296, in load_module\n    six.exec_(co, mod.__dict__)\n  File \"/tmp/gw/Neuraxle/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n",
+ "first_run_tail": "mp/gw/Neuraxle/venv/lib/python3.8/site-packages/_pytest/config/__init__.py\", line 485, in consider_preparse\n    self.consider_pluginarg(parg)\n  File \"/tmp/gw/Neuraxle/venv/lib/python3.8/site-packages/_pytest/config/__init__.py\", line 499, in consider_pluginarg\n    self.import_plugin(arg)\n  File \"/tmp/gw/Neuraxle/venv/lib/python3.8/site-packages/_pytest/config/__init__.py\", line 541, in import_plugin\n    six.reraise(new_exc_type, new_exc, sys.exc_info()[2])\n  File \"/tmp/gw/Neuraxle/venv/lib/python3.8/site-packages/six.py\", line 723, in reraise\n    raise value.with_traceback(tb)\n  File \"/tmp/gw/Neuraxle/venv/lib/python3.8/site-packages/_pytest/config/__init__.py\", line 532, in import_plugin\n    __import__(importspec)\nImportError: Error importing plugin \"randomly\": No module named 'randomly'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "Neuraxle/venv/lib/python3.8/site-packages/_pytest/config/__init__.py\", line 532, in import_plugin\n    __import__(importspec)\nImportError: Error importing plugin \"randomly\": No module named 'randomly'\n"
+ ],
+ "seconds": 5.1,
+ "reproduced": false
+}

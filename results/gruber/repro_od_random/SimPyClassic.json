@@ -1,0 +1,27 @@
+{
+ "project": "SimPyClassic",
+ "url": "https://github.com/SimPyClassic/SimPyClassic",
+ "sha": "b59fb83742e484f2c590ed005ac911868727d59d",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.9428571428571428,
+ "test_file": "SimPy/test/test_simpy.py",
+ "test_func": "test_con_prod_1",
+ "install_ok": true,
+ "install_log_tail": "\n\n[dev-requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_con_prod_1",
+ "collect_tail": "est_simpy.py::test_no_event_M[global-rt]\nSimPy/test/test_simpy.py::test_resource_init[global-trace]\nSimPy/test/test_simpy.py::test_con_prod_1[global-trace]\nSimPy/test/test_simpy.py::test_no_timeout[global-step]\nSimPy/test/test_simpy.py::test_no_event_[step]\nSimPy/test/test_simpy.py::test_wait_event_2[global-trace]\nSimPy/test/test_simpy.py::test_no_timeout_M[global-step]\nSimPy/test/test_simpy.py::test_resource_request_nested_preempt[global-rt]\nSimPy/test/test_simpy.py::test_sim_events_3[global-default]\nSimPy/test/test_simpy.py::test_basic_event_put[global-default]\n\n504 tests collected in 0.17s\n",
+ "first_run_tail": "nstance of Store, id 129177355041328:\\n\t.sim=<SimPy.SimulationStep.SimulationStep object at 0x757c725c3940>\\n\t.capaci...initialBuffered=[]\\n\t.unitName=units\\n\t.putQMon=None\\n\t.getQMon=None\\n\t.bufferMon=None\\n\t.putQ=[]\\n\t.getQ=[]\\n\t.theBuffer=[]\\n>.nrBuffered\nFAILED SimPy/test/test_simpy.py::test_con_prod_1[global-step] - AssertionError: items produced/consumed/buffered do not tally: 48 12 0\nassert (48 - 12) == 0\n +  where 48 = ProducerWidget.produced\n +  and   12 = ConsumerWidget.consumed\n +  and   0 = < Instance of Store, id 129177354975552:\\n\t.sim=<SimPy.SimulationStep.SimulationStep object at 0x757c725b30a0>\\n\t.capaci...initialBuffered=[]\\n\t.unitName=units\\n\t.putQMon=None\\n\t.getQMon=None\\n\t.bufferMon=None\\n\t.putQ=[]\\n\t.getQ=[]\\n\t.theBuffer=[]\\n>.nrBuffered\n7 failed, 497 passed in 0.63s\n",
+ "collected": 8,
+ "runs": 60,
+ "passed": 0,
+ "failed": 60,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: items produced/consumed/buffered do not tally: 16 12 0\nassert (16 - 12) == 0\n +  where 16 = ProducerWidget.produced\n +  and   12 = ConsumerWidget.consumed\n +  and   0 = < Instance of S",
+  "AssertionError: items produced/consumed/buffered do not tally: 20 16 0\nassert (20 - 16) == 0\n +  where 20 = ProducerWidget.produced\n +  and   16 = ConsumerWidget.consumed\n +  and   0 = < Instance of S",
+  "AssertionError: items produced/consumed/buffered do not tally: 24 20 0\nassert (24 - 20) == 0\n +  where 24 = ProducerWidget.produced\n +  and   20 = ConsumerWidget.consumed\n +  and   0 = < Instance of S"
+ ],
+ "seconds": 53.9,
+ "reproduced": false
+}

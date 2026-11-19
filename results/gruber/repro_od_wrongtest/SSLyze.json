@@ -1,0 +1,25 @@
+{
+ "project": "SSLyze",
+ "url": "https://github.com/nabla-c0d3/sslyze",
+ "sha": "bf1b01048560308654b31bf55ad2d2363285f95f",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.03888888888888889,
+ "test_file": "tests/plugins_tests/certificate_info/test_certificate_info_plugin.py",
+ "test_func": "test_not_trusted_by_mozilla_but_trusted_by_microsoft",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_not_trusted_by_mozilla_but_trusted_by_microsoft",
+ "collect_tail": "ugin.py::TestCertificateInfoPlugin::test_certificate_with_no_cn\ntests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_certificate_with_scts\ntests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_valid_chain_with_ocsp_stapling\ntests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_certificate_with_no_subject\ntests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_chain_with_anchor\n\n15 tests collected in 0.36s\n",
+ "first_run_tail": " CertificateDeploymentAnalysisResult(received_certificate_chain=[<Certificate(subject=<Name(1.3.6.1.4.1.311.60.2.1.3=US...D45901794866923206', serial_number='0C4DBAB5992769321D1FA546A7081998', extensions=None), ocsp_response_is_trusted=True).received_chain_contains_anchor_certificate\nFAILED tests/plugins_tests/certificate_info/test_certificate_info_plugin.py::TestCertificateInfoPlugin::test_chain_with_anchor - AssertionError: assert False\n +  where False = CertificateDeploymentAnalysisResult(received_certificate_chain=[<Certificate(subject=<Name(C=US,ST=Florida,L=Temple Te...2937AA031DBEEDCD17', serial_number='0F1D12F444AC45AFA7936349AA7E6D54', extensions=None), ocsp_response_is_trusted=True).received_chain_contains_anchor_certificate\n3 failed, 11 passed, 1 skipped, 182 warnings in 34.16s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 0,
+ "failed": 60,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "sslyze.errors.ServerHostnameCouldNotBeResolved: Could not resolve webmail.russia.nasa.gov"
+ ],
+ "seconds": 2091.9,
+ "reproduced": false
+}

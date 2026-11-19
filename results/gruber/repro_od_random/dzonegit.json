@@ -1,0 +1,27 @@
+{
+ "project": "dzonegit",
+ "url": "https://github.com/oskar456/dzonegit",
+ "sha": "8f952086aa41aee4ebb7432926ed8c6a9211ac9f",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.45,
+ "test_file": "test_dzonegit.py",
+ "test_func": "test_post_receive",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_post_receive",
+ "collect_tail": "d\ntest_dzonegit.py::test_post_receive\ntest_dzonegit.py::test_missing_trailing_dot\ntest_dzonegit.py::test_pre_receive\ntest_dzonegit.py::test_get_config\ntest_dzonegit.py::test_compile_zone\ntest_dzonegit.py::test_check_updated_zones\ntest_dzonegit.py::test_get_increased_serial\ntest_dzonegit.py::test_get_zone_origin\ntest_dzonegit.py::test_check_whitespace_errors\ntest_dzonegit.py::test_get_file_contents\ntest_dzonegit.py::test_is_serial_increased\ntest_dzonegit.py::test_compile_unsmudged_zone\ntest_dzonegit.py::test_get_zone_wildcards\ntest_dzonegit.py::test_template_config\n\n21 tests collected in 0.03s\n",
+ "first_run_tail": "ry\\nenv: use -[v]S to pass options in shebang lines\\n\").success\nFAILED test_dzonegit.py::test_get_head - AssertionError: assert '9e282cae807c...d9a3f2a5263fa' == '4b825dc642cb...69288fbee4904'\n  - 4b825dc642cb6eb9a060e54bf8d69288fbee4904\n  + 9e282cae807c1edf974f630aa7cd9a3f2a5263fa\nFAILED test_dzonegit.py::test_check_updated_zones - dzonegit.HookException: dummy.zone: New zone version does not compile\n\nenv: 'named-compilezone': No such file or directory\nenv: use -[v]S to pass options in shebang lines\nFAILED test_dzonegit.py::test_compile_unsmudged_zone - assert False\n +  where False = CompileResults(success=False, serial=None, zonehash=None, stderr=\"env: 'named-compilezone': No such file or directory\\nenv: use -[v]S to pass options in shebang lines\\n\").success\n6 failed, 15 passed in 0.24s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 33,
+ "failed": 27,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert False\n +  where False = <bound method LocalPath.check of local('/tmp/pytest-of-runner/pytest-0/co/dummy.zone')>()\n +    where <bound method LocalPath.check of local('/tmp/pytest",
+  "subprocess.CalledProcessError: Command '['git', 'checkout', '-f', 'master']' returned non-zero exit status 1.",
+  "AssertionError: assert False\n +  where False = <bound method LocalPath.check of local('/tmp/pytest-of-runner/pytest-7/co/dummy.zone')>()\n +    where <bound method LocalPath.check of local('/tmp/pytest"
+ ],
+ "seconds": 30.4,
+ "reproduced": true
+}

@@ -1,0 +1,25 @@
+{
+ "project": "bruker2nifti",
+ "url": "https://github.com/SebastianoF/bruker2nifti",
+ "sha": "4fbac970e9125f3e53dd5e31d63b971ad739a6d2",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.525,
+ "test_file": "test/test_convert_banana.py",
+ "test_func": "test_warning_banana_bad_n",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[requirements-dev.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_warning_banana_bad_n",
+ "collect_tail": "_warning_banana_bad_n\n\n=============================== warnings summary ===============================\nbruker2nifti/converter.py:90\n  /tmp/gw/bruker2nifti/repo/bruker2nifti/converter.py:90: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n    if self.study_name is None or self.study_name is \"\":\n\nbruker2nifti/_cores.py:556\n  /tmp/gw/bruker2nifti/repo/bruker2nifti/_cores.py:556: SyntaxWarning: \"is not\" with a literal. Did you mean \"!=\"?\n    if bruker_struct[\"acquisition_method\"] is not \"\":\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n4 tests collected in 0.15s\n",
+ "first_run_tail": "a/nifti_banana\n=============================== warnings summary ===============================\ntest/test_convert_banana.py::test_warning_banana_bad_n\n  /tmp/gw/bruker2nifti/repo/bruker2nifti/_cores.py:140: UserWarning: \n  No '2dseq' data found here: \n  /tmp/gw/bruker2nifti/repo/test_data/bru_banana_bad_1/18/pdata/1. \n  Are you sure the input folder contains a proper Bruker scan?\n  \n    warnings.warn(warn_msg)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/tmpydrtfm5j.xml -------------------\n=========================== short test summary info ============================\nFAILED test/test_convert_banana.py::test_warning_banana_bad_n - Failed: DID NOT RAISE <class 'FileExistsError'>\n1 failed, 3 passed, 1 warning in 0.27s\n",
+ "collected": 1,
+ "runs": 60,
+ "passed": 59,
+ "failed": 1,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "Failed: DID NOT RAISE <class 'FileExistsError'>"
+ ],
+ "seconds": 36.1,
+ "reproduced": true
+}

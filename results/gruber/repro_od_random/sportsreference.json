@@ -1,0 +1,25 @@
+{
+ "project": "sportsreference",
+ "url": "https://github.com/roclark/sportsreference",
+ "sha": "0041953074d6c20f607049917f3b526c9af686a4",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.5,
+ "test_file": "tests/integration/roster/test_nfl_roster.py",
+ "test_func": "test_roster_class_pulls_all_player_stats",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_roster_class_pulls_all_player_stats",
+ "collect_tail": "14, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 975, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 671, in _load_unlocked\n  File \"/tmp/gw/sportsreference/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 152, in exec_module\n    exec(co, module.__dict__)\n  File \"/tmp/gw/sportsreference/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n",
+ "first_run_tail": "on-3.8-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py\", line 127, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 975, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 671, in _load_unlocked\n  File \"/tmp/gw/sportsreference/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 152, in exec_module\n    exec(co, module.__dict__)\n  File \"/tmp/gw/sportsreference/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "portsreference/venv/lib/python3.8/site-packages/pytest_timeout.py\", line 22, in <module>\n    SESSION_TIMEOUT_KEY = pytest.StashKey[float]()\nAttributeError: module 'pytest' has no attribute 'StashKey'\n"
+ ],
+ "seconds": 5.9,
+ "reproduced": false
+}

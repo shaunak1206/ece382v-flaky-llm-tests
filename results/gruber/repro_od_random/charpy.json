@@ -1,0 +1,25 @@
+{
+ "project": "charpy",
+ "url": "https://github.com/sylhare/charpy",
+ "sha": "82d82f8f3546f2104840a5026ad6c8d5157a91bd",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.54375,
+ "test_file": "tests/test_utils.py",
+ "test_func": "test_902_get_readme_rst",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_902_get_readme_rst",
+ "collect_tail": ":338: in _hookexec\n    return self._inner_hookexec(hook, methods, kwargs)\n../venv/lib/python3.8/site-packages/_pytest/vendored_packages/pluggy.py:333: in <lambda>\n    _MultiCall(methods, kwargs, hook.spec_opts).execute()\n../venv/lib/python3.8/site-packages/_pytest/vendored_packages/pluggy.py:595: in execute\n    return _wrapped_call(hook_impl.function(*args), self.execute)\n../venv/lib/python3.8/site-packages/_pytest/vendored_packages/pluggy.py:249: in _wrapped_call\n    wrap_controller.send(call_outcome)\nE   RuntimeError: generator raised StopIteration\n1 pytest-warnings, 1 error in 0.14 seconds\n",
+ "first_run_tail": "n pytest_cmdline_parse\n    self.parse(args)\n  File \"/tmp/gw/charpy/venv/lib/python3.8/site-packages/_pytest/config.py\", line 966, in parse\n    self._preparse(args, addopts=addopts)\n  File \"/tmp/gw/charpy/venv/lib/python3.8/site-packages/_pytest/config.py\", line 925, in _preparse\n    self.pluginmanager.consider_preparse(args)\n  File \"/tmp/gw/charpy/venv/lib/python3.8/site-packages/_pytest/config.py\", line 344, in consider_preparse\n    self.consider_pluginarg(opt2)\n  File \"/tmp/gw/charpy/venv/lib/python3.8/site-packages/_pytest/config.py\", line 353, in consider_pluginarg\n    self.import_plugin(arg)\n  File \"/tmp/gw/charpy/venv/lib/python3.8/site-packages/_pytest/config.py\", line 392, in import_plugin\n    raise new_exc\nImportError: Error importing plugin \"randomly\": No module named 'randomly'\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "rg)\n  File \"/tmp/gw/charpy/venv/lib/python3.8/site-packages/_pytest/config.py\", line 392, in import_plugin\n    raise new_exc\nImportError: Error importing plugin \"randomly\": No module named 'randomly'\n"
+ ],
+ "seconds": 7.1,
+ "reproduced": false
+}
