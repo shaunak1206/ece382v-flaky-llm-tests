@@ -1,0 +1,33 @@
+name: library-fixtures
+
+# M1 and M2 on the library study suites (scripts/library_fixtures.sh), one job per library.
+on:
+  workflow_dispatch:
+    inputs:
+      runs:
+        description: "shuffled runs per suite and fixture"
+        default: "100"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        proj: [cachetools, schedule, tinydb, humanize, toolz, tabulate, tenacity, filelock, boltons, more_itertools, arrow, pybreaker]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -q -r colab/requirements-mixed.txt
+      - run: PYTHON=python bash scripts/fetch_subject.sh "${{ matrix.proj }}"
+      - run: bash scripts/library_fixtures.sh "${{ matrix.proj }}" "${{ inputs.runs }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: libfix-${{ matrix.proj }}
+          path: results/libfix/*.json
+          if-no-files-found: warn
