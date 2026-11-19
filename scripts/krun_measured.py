@@ -11,9 +11,10 @@ suite we report whether it survives a 1, 3, 5, and 10 run filter, twice:
   mixed:       the first k runs as they happened (file order and shuffled alternating).
 The M1 and M2 copies rerun the same tests and are left out. Writes results/krun_measured.json.
 
-  python scripts/krun_measured.py
+  python scripts/krun_measured.py                                   (results/matched_seq -> results/krun_measured.json)
+  python scripts/krun_measured.py results/matched_heldout results/krun_heldout.json
 """
-import glob, json, os
+import glob, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KS = (1, 3, 5, 10)
@@ -25,7 +26,8 @@ def survives(seq, k):
 
 def main():
     rows = []
-    for f in sorted(glob.glob(f"{ROOT}/results/matched_seq/*.json")):
+    src = sys.argv[1] if len(sys.argv) > 1 else f"{ROOT}/results/matched_seq"
+    for f in sorted(glob.glob(f"{src}/*.json")):
         j = json.load(open(f))
         for sid, s in j["suites"].items():
             if s["prompt"].endswith(("seed", "iso")):
@@ -46,7 +48,7 @@ def main():
     for grp in sorted({(r["model"], r["prompt"]) for r in rows}):
         rs = [r for r in rows if (r["model"], r["prompt"]) == grp]
         out["summary"]["_".join(grp)] = {"flaky": len(rs), **{f"file_order_{k}": sum(r["file_order"][k] for r in rs) for k in KS}}
-    json.dump(out, open(f"{ROOT}/results/krun_measured.json", "w"), indent=1)
+    json.dump(out, open(sys.argv[2] if len(sys.argv) > 2 else f"{ROOT}/results/krun_measured.json", "w"), indent=1)
     print(json.dumps(out["summary"], indent=1))
 
 
