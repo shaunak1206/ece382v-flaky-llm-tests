@@ -1,0 +1,43 @@
+name: devsuite-polluters
+
+# Pairwise polluter search for the developer file runs (scripts/devsuite_polluters.py).
+#   gh workflow run devsuite_polluters.yml
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "comma separated project names"
+        default: "QTAF,HikLoad,PyJsonFriendly"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          python3 -c "import json; print('matrix=' + json.dumps({'project': [x for x in '${{ inputs.only }}'.split(',') if x]}))" >> "$GITHUB_OUTPUT"
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: run
+        run: |
+          mkdir -p out
+          python3 scripts/devsuite_polluters.py "${{ matrix.project }}" --work /tmp/dvp --out "out/${{ matrix.project }}.json" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dvp-${{ strategy.job-index }}
+          path: out/*.json
+          if-no-files-found: warn
