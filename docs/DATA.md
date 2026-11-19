@@ -297,3 +297,12 @@ is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate wi
 - `results/fixture_effects.json`: `scripts/fixture_effects.py`, per model, arm, and fixture, the stable kept tests
   a fixture breaks (fail all runs) or makes flaky.
 - `results/krun_measured.json`: modes `file_order` (even runs), `shuffled` (odd runs), and `mixed` (all in order).
+- `results/krun_heldout.json`: `scripts/krun_measured.py results/matched_heldout results/krun_heldout.json`, the
+  measured k run filters on the held out sample's run order sequences.
+- `results/fixture_runtime/by_job.txt`, `results/fixture_runtime.json`: per suite finish times from the CI logs of the
+  six held out runs, and `scripts/fixture_runtime.py`, the run time of each suite plain, with M1, and with M2.
+- `results/od_devsuite/<project>.json`: `scripts/od_devsuite.py`, the order dependent arm inside the developer test
+  file (baseline: the developer file alone; then with each plain generated suite), 60 shuffled runs per
+  configuration, per test outcomes, and whether the generated module ran first.
+- `results/matched_stress/<project>.json`: `matched_run.py --stress`, the held out plain suites of the six projects
+  outside randomness, 150 runs each under stress-ng (config i mod 10 of the library study's 10).
