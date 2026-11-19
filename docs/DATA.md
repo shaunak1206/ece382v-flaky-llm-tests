@@ -317,3 +317,8 @@ is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate wi
   PyJsonFriendly (and ReactOBus, if finished) alone with the developer file's seeds and shuffling.
 - `results/envs/<project>.txt`: `scripts/freeze_env.py` (workflow `freeze.yml`), `uv pip freeze` of each known flaky
   code study project's environment, built exactly as `matched_run.py` builds it, recorded November 19, 2026.
+- `results/flaky_tests.csv`: `scripts/flaky_tests_csv.py`, one row per flaky generated test of the known flaky code
+  study (406 tests, 304 kept): arm, project, model, prompt, suite, test file path, test id, kept, runs, failures,
+  failure rate, failures in file order and shuffled runs, polluter search verdict and polluters, and whether a 10 run
+  rerun confirmed the polluter. The library study's flaky tests are listed in `results/why_analysis.md` and
+  `results/root_causes/labels.json`.
