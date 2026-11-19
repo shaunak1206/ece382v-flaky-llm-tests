@@ -1,0 +1,17 @@
+{
+ "project": "uhashring",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_package_does_not_define_monkey_attribute_by_default",
+   "polluter": "test_star_import_fails_due_to_missing_monkey_name",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 6.9
+}

@@ -1,0 +1,26 @@
+{
+ "project": "async_blp",
+ "url": "https://github.com/rockscie/async_blp",
+ "sha": "acb8777ccf2499681bde87d76ca780b61219699c",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.3333333333333333,
+ "test_file": "tests/test_async_blp.py",
+ "test_func": "test__security_lookup",
+ "pinned_to": "2019-08-26T13:22:14+03:00",
+ "install_ok": true,
+ "install_log_tail": "e 'build_editable'\n\n[-e .] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: '_BuildMetaLegacyBackend' object has no attribute 'build_editable'\n\n[.] rc=1 y/core/src/npysort -I/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmpCg5mas/include -I/home/runner/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/include/python3.8 -Ibuild/src.linux-x86_64-3.8/numpy/core/src/common -Ibuild/src.linux-x86_64-3.8/numpy/core/src/npymath -Ibuild/src.linux-x86_64-3.8/numpy/core/src/common -Ibuild/src.linux-x86_64-3.8/numpy/core/src/npymath -c numpy/random/entropy.c -o build/temp.linux-x86_64-3.8/numpy/random/entropy.o -MMD -MF build/temp.linux-x86_64-3.8/numpy/random/entropy.o.d -U__GNUC_GNU_INLINE__ -std=c99 -msse2\" failed with exit status 1\n\nhint: `numpy` (v1.17.0) was included because `async-blp` (v0.0.1) depends on `pandas` (v0.25.1) which depends on `numpy`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n\n[auto pandas] rc=1 MD -MF build/temp.linux-x86_64-3.8/numpy/random/entropy.o.d -U__GNUC_GNU_INLINE__ -std=c99 -msse2\" failed with exit status 1\n\nhint: `numpy` (v1.17.0) was included because `pandas` (v0.25.1) depends on `numpy`\n\nhint: Build failures usually indicate a problem with the package or the build environment\n",
+ "test": "test__security_lookup",
+ "collect_tail": "mp/gw/async_blp/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 213, in load_module\n    py.builtin.exec_(co, mod.__dict__)\n  File \"/tmp/gw/async_blp/repo/tests/conftest.py\", line 11, in <module>\n    from async_blp.requests import ReferenceDataRequest\n  File \"/tmp/gw/async_blp/repo/async_blp/__init__.py\", line 1, in <module>\n    from .async_blp import AsyncBloomberg\n  File \"/tmp/gw/async_blp/repo/async_blp/async_blp.py\", line 13, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\nERROR: could not load /tmp/gw/async_blp/repo/tests/conftest.py\n\n",
+ "first_run_tail": ", line 371, in _importconftest\n    mod = conftestpath.pyimport()\n  File \"/tmp/gw/async_blp/venv/lib/python3.8/site-packages/py/_path/local.py\", line 701, in pyimport\n    __import__(modname)\n  File \"/tmp/gw/async_blp/venv/lib/python3.8/site-packages/_pytest/assertion/rewrite.py\", line 213, in load_module\n    py.builtin.exec_(co, mod.__dict__)\n  File \"/tmp/gw/async_blp/repo/tests/conftest.py\", line 11, in <module>\n    from async_blp.requests import ReferenceDataRequest\n  File \"/tmp/gw/async_blp/repo/async_blp/__init__.py\", line 1, in <module>\n    from .async_blp import AsyncBloomberg\n  File \"/tmp/gw/async_blp/repo/async_blp/async_blp.py\", line 13, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\nERROR: could not load /tmp/gw/async_blp/repo/tests/conftest.py\n\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "p/gw/async_blp/repo/async_blp/async_blp.py\", line 13, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\nERROR: could not load /tmp/gw/async_blp/repo/tests/conftest.py\n\n"
+ ],
+ "seconds": 140.4,
+ "reproduced": false
+}

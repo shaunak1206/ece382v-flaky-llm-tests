@@ -1,0 +1,27 @@
+{
+ "project": "PyJsonFriendly",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_4",
+   "test": "test_as_json_friendly_obj_method",
+   "polluter": "test_jsonencoder_default_calls_as_json_friendly_obj",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt54mini_plain_1",
+   "test": "test_encoding_sets_default_backup_attribute",
+   "polluter": "test_default_backup_updates_to_current_default_on_each_encoding",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 10.1
+}

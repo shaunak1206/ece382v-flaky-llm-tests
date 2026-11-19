@@ -1,0 +1,37 @@
+{
+ "project": "pelicun",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_tmvn_MLE_fit_multivariate_normal",
+   "polluter": "test_tmvn_MLE_censored_data_behavior",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_tmvn_MLE_fit_multivariate_truncated",
+   "polluter": "test_mvn_orthotope_density_basic",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_tmvn_MLE_fit_multivariate",
+   "polluter": "test_tmvn_MLE_handles_nan_in_rho",
+   "alone_pass": 3,
+   "after_polluter_fail": 2,
+   "confirmed": false,
+   "cleaners": []
+  }
+ ],
+ "seconds": 30.5
+}

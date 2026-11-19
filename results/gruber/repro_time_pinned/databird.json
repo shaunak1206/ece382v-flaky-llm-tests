@@ -1,0 +1,26 @@
+{
+ "project": "databird",
+ "url": "https://github.com/jonas-hagen/databird",
+ "sha": "cfb358e74da62bb9d7ea0e6c7ac984671472120b",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.5555555555555556,
+ "test_file": "tests/test_queue.py",
+ "test_func": "test_reservation",
+ "pinned_to": "2019-08-07T17:41:18+02:00",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements-dev.txt] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: '_BuildMetaLegacyBackend' object has no attribute 'build_editable'\n\n[requirements-test.txt] rc=1 error: `/home/runner/work/_temp/setup-uv-cache/git-v2/checkouts/1e29f14137ee1e7f/45bb427` does not appear to be a Python project, as neither `pyproject.toml` nor `setup.py` are present in the directory\n\n[-e .[test,tests,testing,dev]] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: '_BuildMetaLegacyBackend' object has no attribute 'build_editable'\n\n[-e .] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: '_BuildMetaLegacyBackend' object has no attribute 'build_editable'\n\n[.] rc=0 ",
+ "test": "test_reservation",
+ "collect_tail": "tests/test_queue.py::test_reservation\ntests/test_queue.py::test_status\n\nno tests ran in 0.09 seconds\n",
+ "first_run_tail": "E                                                                        [100%]\n==================================== ERRORS ====================================\n______________________ ERROR at setup of test_reservation ______________________\n\n    @pytest.fixture\n    def queue():\n>       from fakeredis import FakeStrictRedis\nE       ModuleNotFoundError: No module named 'fakeredis'\n\ntests/test_queue.py:7: ModuleNotFoundError\n------------------- generated xml file: /tmp/tmpbixickcm.xml -------------------\n1 deselected, 1 error in 0.04 seconds\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "test setup failure"
+ ],
+ "seconds": 6.2,
+ "reproduced": false
+}

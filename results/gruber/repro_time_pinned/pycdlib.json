@@ -1,0 +1,26 @@
+{
+ "project": "pycdlib",
+ "url": "https://github.com/clalancette/pycdlib",
+ "sha": "36ba6eace1993e611f292b42833985cfc1c3b668",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.8888888888888888,
+ "test_file": "tests/integration/test_parse.py",
+ "test_func": "test_parse_pvd_zero_datetime",
+ "pinned_to": "2020-08-05T20:48:57-04:00",
+ "install_ok": true,
+ "install_log_tail": "\n\n[-e .[test,tests,testing,dev]] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: '_BuildMetaLegacyBackend' object has no attribute 'build_editable'\n\n[-e .] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: '_BuildMetaLegacyBackend' object has no attribute 'build_editable'\n\n[.] rc=0 ",
+ "test": "test_parse_pvd_zero_datetime",
+ "collect_tail": "parse.py::test_parse_unicode_name_isolevel4\ntests/integration/test_parse.py::test_parse_unicode_name_joliet\ntests/integration/test_parse.py::test_parse_unicode_name_udf\ntests/integration/test_parse.py::test_parse_unicode_name_two_byte\ntests/integration/test_parse.py::test_parse_unicode_name_two_byte_isolevel4\ntests/integration/test_parse.py::test_parse_unicode_name_two_byte_joliet\ntests/integration/test_parse.py::test_parse_unicode_name_two_byte_udf\ntests/integration/test_parse.py::test_parse_eltorito_get_bootcat\ntests/integration/test_parse.py::test_parse_eltorito_uefi\n\nno tests ran in 0.46s\n",
+ "first_run_tail": "p/gw/pycdlib/venv/lib/python3.8/site-packages/_pytest/junitxml.py:446\n  /tmp/gw/pycdlib/venv/lib/python3.8/site-packages/_pytest/junitxml.py:446: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0. See:\n    https://docs.pytest.org/en/stable/deprecations.html#junit-family-default-value-change-to-xunit2\n  for more information.\n    _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n------------------- generated xml file: /tmp/tmpiqry_ob6.xml -------------------\n=========================== short test summary info ============================\nFAILED tests/integration/test_parse.py::test_parse_pvd_zero_datetime - FileNo...\n1 failed, 207 deselected, 1 warning in 0.12s\n",
+ "collected": 1,
+ "runs": 150,
+ "passed": 0,
+ "failed": 150,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "FileNotFoundError: [Errno 2] No such file or directory: 'genisoimage'"
+ ],
+ "seconds": 38.2,
+ "reproduced": false
+}

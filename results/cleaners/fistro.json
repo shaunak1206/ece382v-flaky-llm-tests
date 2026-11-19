@@ -1,0 +1,87 @@
+{
+ "project": "fistro",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_5",
+   "test": "test_datetime_generator_default_bounds_returns_datetime_in_year_range",
+   "polluter": "test_int_list_generator_zero_length_returns_empty_list",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_5",
+   "test": "test_date_generator_default_returns_plain_date_in_year_range",
+   "polluter": "test_bool_generator_returns_choice_result",
+   "alone_pass": 3,
+   "after_polluter_fail": 2,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "sonnet_heldout_8",
+   "test": "test_datetime_and_date_default_types",
+   "polluter": "test_date_generator_with_fixed_values",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "sonnet_heldout_2",
+   "test": "test_datetime_generator_default_returns_datetime",
+   "polluter": "test_str_generator_respects_population",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_generate_creates_instance_with_field_values",
+   "polluter": "test_all_fields_of_generated_class_are_dataclass_fields",
+   "alone_pass": 3,
+   "after_polluter_fail": 1,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_generate_with_as_dict_and_as_json_both_true_prefers_as_dict",
+   "polluter": "test_generate_from_json_field_default_factory_consistency",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_datetime_generator_returns_datetime_in_range",
+   "polluter": "test_generate_from_json_creates_dataclass",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_date_generator_returns_date_in_range",
+   "polluter": "test_inner_inspection_with_list_of_empty_list",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  }
+ ],
+ "seconds": 22.6
+}

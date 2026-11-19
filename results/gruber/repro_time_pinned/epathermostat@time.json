@@ -1,0 +1,26 @@
+{
+ "project": "epathermostat@time",
+ "url": "https://github.com/EPAENERGYSTAR/epathermostat",
+ "sha": "ff32be0c1e751806f644ce8ff31fcbac05ccfde8",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.03870967741935484,
+ "test_file": "tests/test_core.py",
+ "test_func": "test_thermostat_types_2_get_resistance_heat_utilization_runtime_rhu",
+ "pinned_to": "2020-05-28T13:20:29-04:00",
+ "install_ok": true,
+ "install_log_tail": "\n\n[dev-requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: '_BuildMetaLegacyBackend' object has no attribute 'build_editable'\n\n[-e .] rc=1 error: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.build_editable` failed (exit status: 1)\n\n         [stderr]\n         Traceback (most recent call last):\n           File \"<string>\", line 11, in <module>\n         AttributeError: '_BuildMetaLegacyBackend' object has no attribute 'build_editable'\n\n[.] rc=1 error: No solution found when resolving dependencies\n  cause: Because pandas==0.24.2 has invalid metadata and thermostat==1.7.2 depends on pandas==0.24.2, we can conclude that thermostat==1.7.2 cannot be used.\n         And because only thermostat==1.7.2 is available and you require thermostat, we can conclude that your requirements are unsatisfiable.\n\nhint: Metadata for `pandas` (v0.24.2) could not be parsed:\n  after parsing `2011`, found `k`, which is not part of a valid version\n  pytz (>=2011k)\n        ^^^^^^^\n\n[auto pandas] rc=0 \n[auto scipy] rc=0 \n[auto eeweather] rc=0 ",
+ "test": "test_thermostat_types_2_get_resistance_heat_utilization_runtime_rhu",
+ "collect_tail": "9, 56-87, 104-112, 140-188, 194-245, 277-354, 358-360, 375-383\nthermostat/multiple.py               26     26     0%   1-66\nthermostat/parallel.py               55     55     0%   1-112\nthermostat/regression.py             26     22    15%   29-59\nthermostat/stations.py               50     37    26%   38-41, 64-77, 111-152, 171-172\nthermostat/stats.py                 230    230     0%   1-1087\nthermostat/util/testing.py            6      3    50%   9-11\n---------------------------------------------------------------\nTOTAL                              1136   1013    11%\n\nno tests ran in 0.74s\n",
+ "first_run_tail": "el.py               55     55     0%   1-112\nthermostat/regression.py             26     22    15%   29-59\nthermostat/stations.py               50     37    26%   38-41, 64-77, 111-152, 171-172\nthermostat/stats.py                 230    230     0%   1-1087\nthermostat/util/testing.py            6      0   100%\n---------------------------------------------------------------\nTOTAL                              1136   1007    11%\n\n=========================== short test summary info ============================\nERROR tests/test_core.py::test_thermostat_types_2_get_resistance_heat_utilization_runtime_rhu[../data/metadata_type_2_single.csv-../data/metadata_type_1_single.csv]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n31 deselected, 1 warning, 1 error in 0.71s\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "test setup failure"
+ ],
+ "seconds": 18.5,
+ "reproduced": false
+}

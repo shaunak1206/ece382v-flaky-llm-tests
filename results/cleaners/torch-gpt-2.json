@@ -1,0 +1,142 @@
+{
+ "project": "torch-gpt-2",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_bytepairencoding_is_reexported_from_keras_gpt_2",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_bytepairencoding",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_generate",
+    "test_reloading_package_picks_up_monkeypatched_gelu",
+    "test_reloading_package_picks_up_monkeypatched_gpt_2",
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_get_bpe_from_files_is_reexported_from_keras_gpt_2",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_generate",
+    "test_reloading_package_picks_up_monkeypatched_gelu",
+    "test_reloading_package_picks_up_monkeypatched_gpt_2",
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_gpt_2_is_reexported_from_net_module",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_gpt_2",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_generate",
+    "test_reloading_package_picks_up_monkeypatched_gelu",
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding",
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_gelu_is_reexported_from_net_module",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_gelu",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_generate",
+    "test_reloading_package_picks_up_monkeypatched_gpt_2",
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding",
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_generate_is_reexported_from_gen_module",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_generate",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_gelu",
+    "test_reloading_package_picks_up_monkeypatched_gpt_2",
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding",
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_bytepairencoding_name_and_module_are_preserved",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_bytepairencoding",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_generate",
+    "test_reloading_package_picks_up_monkeypatched_gelu",
+    "test_reloading_package_picks_up_monkeypatched_gpt_2",
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_gpt_2_name_and_module_are_preserved",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_gpt_2",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_generate",
+    "test_reloading_package_picks_up_monkeypatched_gelu",
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding",
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_gelu_name_and_module_are_preserved",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_gelu",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_generate",
+    "test_reloading_package_picks_up_monkeypatched_gpt_2",
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding",
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_generate_name_and_module_are_preserved",
+   "polluter": "test_reloading_package_picks_up_monkeypatched_generate",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_picks_up_monkeypatched_gelu",
+    "test_reloading_package_picks_up_monkeypatched_gpt_2",
+    "test_reloading_package_picks_up_monkeypatched_bytepairencoding",
+    "test_reloading_package_picks_up_monkeypatched_get_bpe_from_files"
+   ]
+  }
+ ],
+ "seconds": 1072.1
+}

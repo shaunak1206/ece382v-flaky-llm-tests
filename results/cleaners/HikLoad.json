@@ -1,0 +1,47 @@
+{
+ "project": "HikLoad",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_od",
+   "suite": "sonnet_plain_1",
+   "test": "test_config_is_same_object_on_import",
+   "polluter": "test_reload_restores_defaults_after_mutation",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od",
+   "suite": "sonnet_plain_1",
+   "test": "test_config_mutation_is_visible_through_module",
+   "polluter": "test_reload_restores_defaults_after_mutation",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od",
+   "suite": "sonnet_plain_2",
+   "test": "test_config_same_object_after_reimport",
+   "polluter": "test_config_reload_restores_defaults",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od",
+   "suite": "sonnet_plain_4",
+   "test": "test_module_exposes_same_object",
+   "polluter": "test_reload_restores_defaults_after_mutation",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 22.8
+}

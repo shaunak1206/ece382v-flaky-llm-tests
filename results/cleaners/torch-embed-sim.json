@@ -1,0 +1,165 @@
+{
+ "project": "torch-embed-sim",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_package_exports_embedding_sim_from_real_submodule",
+   "polluter": "test_reload_excludes_private_names_from_fake_submodule",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_preserves_embedding_sim_identity"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_embedding_sim_is_accessible_via_from_import",
+   "polluter": "test_reload_excludes_private_names_from_fake_submodule",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_preserves_embedding_sim_identity"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_package_embedding_sim_matches_submodule_object_identity",
+   "polluter": "test_reload_excludes_private_names_from_fake_submodule",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_preserves_embedding_sim_identity"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_reloading_package_preserves_embedding_sim_identity",
+   "polluter": "test_reload_excludes_private_names_from_fake_submodule",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_embedding_sim_is_same_as_submodule_symbol",
+   "polluter": "test_submodule_reimport_preserves_package_reference_identity",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_package_reimport_preserves_embedding_sim_identity"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_package_reimport_preserves_embedding_sim_identity",
+   "polluter": "test_submodule_reimport_preserves_package_reference_identity",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_package_does_not_shadow_embedding_sim_with_different_object",
+   "polluter": "test_submodule_reimport_preserves_package_reference_identity",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_package_reimport_preserves_embedding_sim_identity"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_embedding_sim_is_same_object_as_submodule_attribute",
+   "polluter": "test_reload_submodule_keeps_embedding_sim_accessible",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reload_package_keeps_embedding_sim_accessible"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_submodule_contains_embedding_sim_name_in_dict",
+   "polluter": "test_reload_submodule_keeps_embedding_sim_accessible",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reload_package_keeps_embedding_sim_accessible"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_embedding_sim_identity_is_stable_with_multiple_import_styles",
+   "polluter": "test_reload_submodule_keeps_embedding_sim_accessible",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reload_package_keeps_embedding_sim_accessible"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_8",
+   "test": "test_embedding_sim_is_same_object_as_submodule_definition",
+   "polluter": "test_reloading_submodule_keeps_embedding_sim_accessible",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_keeps_embedding_sim_accessible",
+    "test_from_import_after_reload_still_works",
+    "test_star_import_after_reload_still_works"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_8",
+   "test": "test_reimporting_package_preserves_embedding_sim_identity",
+   "polluter": "test_reloading_submodule_keeps_embedding_sim_accessible",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_keeps_embedding_sim_accessible",
+    "test_from_import_after_reload_still_works",
+    "test_star_import_after_reload_still_works"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_8",
+   "test": "test_embedding_sim_is_accessible_through_sys_modules",
+   "polluter": "test_reloading_submodule_keeps_embedding_sim_accessible",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reloading_package_keeps_embedding_sim_accessible",
+    "test_from_import_after_reload_still_works",
+    "test_star_import_after_reload_still_works"
+   ]
+  }
+ ],
+ "seconds": 476.6
+}

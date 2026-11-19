@@ -1,0 +1,27 @@
+{
+ "project": "pylabeledrf",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_computeLRF_identical_trees_zero_distance",
+   "polluter": "test_computeLRF_raise_unequal_number_of_islands",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_2",
+   "test": "test_computeLRF_no_goodedges_single_island",
+   "polluter": "test_computeLRF_raise_unequal_number_of_islands",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 12.5
+}

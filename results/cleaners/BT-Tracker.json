@@ -1,0 +1,242 @@
+{
+ "project": "BT-Tracker",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_1",
+   "test": "test_event_finished_setter_false_does_not_clear_finish",
+   "polluter": "test_decorator_multiple_calls_resets_finished",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_1",
+   "test": "test_event_finished_property_returns_correct_value",
+   "polluter": "test_decorator_multiple_calls_resets_finished",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_1",
+   "test": "test_status_initial_finished_is_false",
+   "polluter": "test_setting_status_finished_false_does_not_change_finished",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_event_check_decorator_sets_finished_flag",
+    "test_event_check_decorator_resets_finished_flag_after_sleep",
+    "test_event_check_decorator_works_with_methods",
+    "test_decorator_multiple_calls_resets_finished"
+   ]
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_1",
+   "test": "test_setting_status_finished_false_does_not_change_finished",
+   "polluter": "test_decorator_multiple_calls_resets_finished",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_1",
+   "test": "test_event_finished_setter_only_accepts_true_to_set",
+   "polluter": "test_decorator_multiple_calls_resets_finished",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_1",
+   "test": "test_event_finished_can_be_manually_cleared_directly",
+   "polluter": "test_decorator_multiple_calls_resets_finished",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_2",
+   "test": "test_event_finished_setter_ignores_false",
+   "polluter": "test_check_decorator_can_be_used_on_classmethod",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_2",
+   "test": "test_event_finished_setter_allows_true_then_ignores_false",
+   "polluter": "test_check_decorator_can_be_used_on_classmethod",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_2",
+   "test": "test_finished_property_is_read_write",
+   "polluter": "test_check_decorator_can_be_used_on_classmethod",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_2",
+   "test": "test_setting_event_finished_to_true_only_when_true_sets_private",
+   "polluter": "test_check_decorator_can_be_used_on_classmethod",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_2",
+   "test": "test_finished_property_returns_private_finish",
+   "polluter": "test_check_decorator_can_be_used_on_classmethod",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_2",
+   "test": "test_finished_setter_only_allows_true_values",
+   "polluter": "test_check_decorator_can_be_used_on_classmethod",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_2",
+   "test": "test_finished_setter_accepts_only_boolean_true",
+   "polluter": "test_check_decorator_can_be_used_on_classmethod",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_3",
+   "test": "test_event_finished_setter_only_allows_true",
+   "polluter": "test_check_decorator_calls_function_with_args_and_kwargs",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_3",
+   "test": "test_event_finished_property_read_and_write",
+   "polluter": "test_check_decorator_calls_function_with_args_and_kwargs",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_3",
+   "test": "test_finished_property_setter_does_not_accept_non_boolean",
+   "polluter": "test_check_decorator_calls_function_with_args_and_kwargs",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_3",
+   "test": "test_setting_finished_false_does_not_reset_true_state",
+   "polluter": "test_check_decorator_calls_function_with_args_and_kwargs",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_3",
+   "test": "test_finished_setter_type_enforcement",
+   "polluter": "test_check_decorator_calls_function_with_args_and_kwargs",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_4",
+   "test": "test_event_finished_setter_only_allows_true",
+   "polluter": "test_check_decorator_can_decorate_function_with_side_effects",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_4",
+   "test": "test_event_finished_getter_reflects_internal_state",
+   "polluter": "test_check_decorator_can_decorate_function_with_side_effects",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_4",
+   "test": "test_event_finished_setter_does_not_set_when_false",
+   "polluter": "test_check_decorator_can_decorate_function_with_side_effects",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_4",
+   "test": "test_finished_property_is_read_only_except_with_true_setter",
+   "polluter": "test_check_decorator_can_decorate_function_with_side_effects",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_4",
+   "test": "test_finished_property_with_nonbool_input_has_no_effect",
+   "polluter": "test_check_decorator_can_decorate_function_with_side_effects",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 246.6
+}

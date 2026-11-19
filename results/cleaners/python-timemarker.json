@@ -1,0 +1,61 @@
+{
+ "project": "python-timemarker",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "sonnet_heldout_6",
+   "test": "test_timemarker_defined_in_timer_module",
+   "polluter": "test_reload_keeps_class_available",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_import_from_package_and_module_match",
+   "polluter": "test_package_reexport_matches_timer_module_after_reload",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_reload_package_preserves_time_marker_identity",
+   "polluter": "test_package_reexport_matches_timer_module_after_reload",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_version_check_allows_supported_version",
+   "polluter": "test_package_reexport_matches_timer_module_after_reload",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_module_exposes_version_info_name",
+   "polluter": "test_import_with_python_3_6_1_version_passes",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_import_with_python_3_5_version_fails",
+    "test_reimport_after_evicting_modules_keeps_same_object_identity",
+    "test_reload_timemarker_keeps_same_time_marker_object"
+   ]
+  }
+ ],
+ "seconds": 24.2
+}

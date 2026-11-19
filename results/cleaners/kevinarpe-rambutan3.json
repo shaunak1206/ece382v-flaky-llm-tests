@@ -1,0 +1,35 @@
+{
+ "project": "kevinarpe-rambutan3",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_7",
+   "test": "test_not_none_usable_in_set_by_identity",
+   "polluter": "test_int_does_not_record_on_success",
+   "alone_pass": 3,
+   "after_polluter_fail": 0,
+   "confirmed": false,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt41mini_heldout_5",
+   "test": "test_RNotNoneTypeMatcher_hash_consistent",
+   "polluter": "test_INT_matches_with_custom_class_subclassing_int",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_RNotNoneTypeMatcher_matches_add_failed_match_called",
+    "test_RNotNoneTypeMatcher_eq",
+    "test_RNotNoneTypeMatcher_hash_returns_int",
+    "test_RCheckArgsError_can_be_raised_and_caught",
+    "test_RNotNoneTypeMatcher_matches_no_error_object",
+    "test_RNotNoneTypeMatcher_eq_with_other_class_instance",
+    "test_INT_repr_contains_int"
+   ]
+  }
+ ],
+ "seconds": 15.0
+}

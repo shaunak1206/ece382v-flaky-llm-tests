@@ -1,0 +1,26 @@
+{
+ "project": "cvbase@time",
+ "url": "https://github.com/hellock/cvbase",
+ "sha": "e48d2f76aaeea6472b2175c37780f7b90ae7f1b6",
+ "category": "unlabeled",
+ "gruber_fail_rate": 0.61875,
+ "test_file": "tests/test_timer.py",
+ "test_func": "test_timer_run",
+ "pinned_to": "2018-10-13T00:58:24+08:00",
+ "install_ok": true,
+ "install_log_tail": "the cutoff for this package.\n\n[-e .] rc=1 error: Failed to resolve requirements from `setup.py` build\n  cause: No solution found when resolving: `setuptools>=40.8.0`\n  cause: Because only setuptools<=40.4.3 is available and you require setuptools>=40.8.0, we can conclude that your requirements are unsatisfiable.\n\nhint: `setuptools` was filtered by `exclude-newer` to only include packages uploaded before 2018-10-12T16:58:24Z. The latest version satisfying the requirement is v84.2.1, published at 2026-10-20T19:01:35.678Z. Consider using `exclude-newer-package` to override the cutoff for this package.\n\n[.] rc=1 error: Failed to resolve requirements from `setup.py` build\n  cause: No solution found when resolving: `setuptools>=40.8.0`\n  cause: Because only setuptools<=40.4.3 is available and you require setuptools>=40.8.0, we can conclude that your requirements are unsatisfiable.\n\nhint: `setuptools` was filtered by `exclude-newer` to only include packages uploaded before 2018-10-12T16:58:24Z. The latest version satisfying the requirement is v84.2.1, published at 2026-10-20T19:01:35.678Z. Consider using `exclude-newer-package` to override the cutoff for this package.\n\n[auto pyyaml] rc=1 fiable.\n\nhint: `setuptools` was filtered by `exclude-newer` to only include packages uploaded before 2018-10-12T16:58:24Z. The latest version satisfying the requirement is v84.2.1, published at 2026-10-20T19:01:35.678Z. Consider using `exclude-newer-package` to override the cutoff for this package.\n",
+ "test": "test_timer_run",
+ "collect_tail": "S ====================================\n_____________________ ERROR collecting tests/test_timer.py _____________________\nImportError while importing test module '/tmp/gw/cvbase@time/repo/tests/test_timer.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\ntests/test_timer.py:3: in <module>\n    import cvbase as cvb\ncvbase/__init__.py:3: in <module>\n    from .io import *\ncvbase/io.py:8: in <module>\n    import yaml\nE   ModuleNotFoundError: No module named 'yaml'\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.04 seconds\n",
+ "first_run_tail": "\n==================================== ERRORS ====================================\n_____________________ ERROR collecting tests/test_timer.py _____________________\nImportError while importing test module '/tmp/gw/cvbase@time/repo/tests/test_timer.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\ntests/test_timer.py:3: in <module>\n    import cvbase as cvb\ncvbase/__init__.py:3: in <module>\n    from .io import *\ncvbase/io.py:8: in <module>\n    import yaml\nE   ModuleNotFoundError: No module named 'yaml'\n------------------- generated xml file: /tmp/tmpdkli8nky.xml -------------------\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.04 seconds\n",
+ "collected": 1,
+ "runs": 1,
+ "passed": 0,
+ "failed": 0,
+ "errors": 1,
+ "skipped": 0,
+ "messages": [
+  "collection failure"
+ ],
+ "seconds": 3.3,
+ "reproduced": false
+}

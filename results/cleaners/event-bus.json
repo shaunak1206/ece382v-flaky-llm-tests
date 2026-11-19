@@ -1,0 +1,83 @@
+{
+ "project": "event-bus",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_eventbus_is_reexported_from_package",
+   "polluter": "test_package_import_uses_bus_eventbus_from_sys_modules",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_package_reimport_after_clear_still_exports_eventbus"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_package_eventbus_name_is_class_like",
+   "polluter": "test_package_import_uses_bus_eventbus_from_sys_modules",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_package_reimport_after_clear_still_exports_eventbus"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_import_eventbus_directly_from_package_namespace",
+   "polluter": "test_package_import_uses_bus_eventbus_from_sys_modules",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_package_reimport_after_clear_still_exports_eventbus"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_package_eventbus_is_class_or_type_like",
+   "polluter": "test_reload_package_keeps_all_constant",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_eventbus_export_matches_bus_module_symbol",
+   "polluter": "test_reload_package_keeps_all_constant",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_eventbus_is_same_as_bus_module_class",
+   "polluter": "test_reimporting_bus_module_preserves_eventbus_identity",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_5",
+   "test": "test_reimporting_package_preserves_eventbus_identity",
+   "polluter": "test_reimporting_bus_module_preserves_eventbus_identity",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 30.6
+}

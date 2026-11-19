@@ -1,0 +1,359 @@
+{
+ "project": "jmcm",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "sonnet_heldout_6",
+   "test": "test_helper_names_deleted_from_namespace",
+   "polluter": "test_missing_dependency_raises_import_error",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": [
+    "test_reload_keeps_jointmodel"
+   ]
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_package_name_is_jmcm",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_joint_model_is_importable_from_package",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_joint_model_is_a_class",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_joint_model_is_reexported_from_submodule",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_joint_model_module_belongs_to_package",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_joint_model_is_new_style_class",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_joint_model_has_object_in_mro",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_joint_model_listed_in_package_namespace",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_import_helper_globals_are_removed",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_import_succeeds_when_dependencies_present",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_missing_dependency_raises_import_error[pandas]",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_missing_dependency_raises_import_error[scipy]",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout",
+   "suite": "haiku_heldout_1",
+   "test": "test_missing_dependency_error_has_header",
+   "polluter": "test_missing_dependency_raises_import_error[math]",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_import_exposes_module_name",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_import_exports_jointmodel",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_jointmodel_matches_submodule_class",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_jointmodel_is_class_like",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_module_allows_reimport",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_private_helper_names_not_kept",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[math]",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[numpy]",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[pandas]",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[scipy]",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_raises_importerror[warnings]",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_missing_dependency_does_not_leak_partial_module",
+   "polluter": "None",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_import_jmcm_succeeds",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_module_name_variable_is_set",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_jointmodel_is_exported_from_package",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_jointmodel_is_a_class",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_from_import_matches_package_attribute",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_jointmodel_origin_is_jmcm_joint_model_module",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_imported_jointmodel_has_a_name_attribute",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_package_does_not_leave_dependency_list_globals_around",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_reimport_after_removal_gives_access_to_jointmodel_again",
+   "polluter": "test_import_raises_if_a_hard_dependency_is_missing",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 374.4
+}

@@ -1,0 +1,47 @@
+{
+ "project": "QTAF",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_1",
+   "test": "test_load_datadrive_tests_with_name_subset",
+   "polluter": "test_load_datadrive_tests_raises_runtimeerror_when_not_datadrive_and_settings_false",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_1",
+   "test": "test_modify_settings_restores_value",
+   "polluter": "test_load_datadrive_tests_raises_runtimeerror_when_not_datadrive_and_settings_false",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt41mini_plain_2",
+   "test": "test_is_datadrive_and_get_datadrive",
+   "polluter": "test_load_datadrive_tests_without_datadrive_and_settings",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_od_gpt",
+   "suite": "gpt54mini_plain_1",
+   "test": "test_testcase_properties_and_environ",
+   "polluter": "test_assert_continue_setting_controls_assert_raises",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 32.2
+}

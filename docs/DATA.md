@@ -308,3 +308,8 @@ is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate wi
   outside randomness, 150 runs each under stress-ng (config i mod 10 of the library study's 10).
 - `results/root_causes/blind/sheet.csv` (filled) and `kappa.json`: Shaunak's blind relabel of all 78 records,
   entered one record at a time on a page that showed the project, test name, test code, and source links only.
+- `results/cleaners/<project>.json`: `scripts/cleaner_search.py`, per order dependent victim: the polluter
+  confirmation (10 paired runs) and the cleaners found (tests that make the victim pass when run in between).
+- `results/gruber/repro_time_pinned/`: the time batch rerun with packages pinned to each commit's date (`--pin`).
+- `results/leftover_rates.json`: `scripts/leftover_rates.py`, the failure rate of the kept flaky tests left plain,
+  with M1, and with M2.

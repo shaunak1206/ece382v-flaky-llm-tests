@@ -1,0 +1,37 @@
+{
+ "project": "pypfm",
+ "install_ok": true,
+ "victims": [
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_importing_package_does_not_create_unexpected_modules",
+   "polluter": "test_import_star_brings_pfml_loader_into_namespace",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_package_and_submodule_share_same_class_object",
+   "polluter": "test_reimporting_submodule_keeps_pfml_loader_stable",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  },
+  {
+   "source": "od_diagnose_heldout_gpt",
+   "suite": "gpt54mini_heldout_6",
+   "test": "test_reimporting_package_keeps_public_api_stable",
+   "polluter": "test_reimporting_submodule_keeps_pfml_loader_stable",
+   "alone_pass": 3,
+   "after_polluter_fail": 10,
+   "confirmed": true,
+   "cleaners": []
+  }
+ ],
+ "seconds": 43.8
+}
