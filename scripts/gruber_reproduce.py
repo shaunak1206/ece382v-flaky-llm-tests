@@ -124,6 +124,8 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--max-minutes", type=int, default=180, help="stop rerunning after this much wall time")
     ap.add_argument("--shuffle-file", action="store_true", help="order dependent batch: shuffle the whole test file each run")
+    ap.add_argument("--pin", action="store_true", help="install every package as of the commit's date (UV_EXCLUDE_NEWER), "
+                    "for tests that fail only because today's dependency versions break old code")
     a = ap.parse_args()
     r = row_for(a.project); t0 = time.time()
     d = f"{a.work}/{a.project}"; repo = f"{d}/repo"; venv = f"{d}/venv"
@@ -137,6 +139,9 @@ def main():
         res.update(install_ok=False, install_log_tail="clone failed: " + out[-300:], reproduced=False)
         json.dump(res, open(a.out, "w"), indent=1); return
     sh(["git", "-C", repo, "checkout", "-q", "FETCH_HEAD"])
+    if a.pin:
+        _, date = sh(["git", "-C", repo, "log", "-1", "--format=%cI"])
+        os.environ["UV_EXCLUDE_NEWER"] = date.strip(); res["pinned_to"] = date.strip()
     log = []
     ok, py = install(repo, venv, log)
     if a.shuffle_file:
