@@ -6,7 +6,7 @@ The subsections follow the research questions in order. Flaky tests cluster in s
 \label{sec:heldout}
 \textbf{The held out sample.} Progress Report 2 fixed this step before any new data: 8 new plain suites per model for each of the 41 projects, all models through the pasted source pipeline (Section~\ref{sec:setup}), each suite run 200 times plain, with M1, and with M2, and analyzed alone with the pre registered sign test. Table~\ref{tab:heldout} has the plain runs. Some GPT suites could not be measured because a test never ends. In the held out sample, one GPT~5.4 mini spreading\_dye\_sampler suite has a test that appends to the list it iterates over and exhausts the runner's memory. In the order dependent arm, one GPT~4.1 mini ReactOBus suite starts threads that never stop, so pytest never exits, and two GPT~5.4 mini ReactOBus suites hang in some runs, so we left out all four GPT~5.4 mini ReactOBus suites. A test that hangs is a different failure from a flaky one, and we report it separately. From now on a suite whose filter run does not exit within 15 minutes is recorded as non terminating and not rerun (\texttt{matched\_run.py}).
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Held out sample, plain prompt, 41 projects, 8 suites per model, 200 runs per suite. Suites counts suites whose file imported (rates leave out the rest). Kept counts tests that pass the first run. Suites with flaky counts suites with at least one kept flaky test, with a 95\% Wilson interval, Proj.\ the projects they are in, and Flaky the kept flaky tests. Removed flaky tests (failed the first run): Sonnet 9, Haiku 4, GPT~5.4 mini 5, GPT~4.1 mini 43.}
 \label{tab:heldout}
 \small
@@ -32,7 +32,7 @@ GPT 4.1 mini & 310 & 4,022 & 40 & 12.9 & 9.6--17.1 & 10 & 70 \\
 
 \textbf{The pre registered test.} Progress Report 2 committed to one confirmatory analysis: for each of the six model pairs, the exact sign test over the projects where only one of the two models has a kept flaky test, significant at $p < 0.05/6 = 0.0083$. The lead it was meant to test is Sonnet against GPT~4.1 mini (0 : 6 projects in Progress Report 2). It runs unchanged from commit \texttt{7c05b6b} (Section~\ref{sec:setup}). With 41 projects, a split of 0 : 8 or more lopsided is significant. None of the six pairs is significant (Table~\ref{tab:prereg}). Counted on suites, the GPT~4.1 mini differences are large (Fisher $p < 0.001$ against both Claude models), but those tests ignore that suites of one project are related, and at the project level the split is 2 : 6 for Sonnet against GPT~4.1 mini ($p = 0.29$). With flaky tests in only 6 to 10 of the 41 projects per model, the project level test is underpowered and cannot confirm the suite level difference, so the model comparison stays a lead. The models also differ in which projects are flaky and why (Section~\ref{sec:rootcause3}).
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{The pre registered sign test (\texttt{matched\_stats.py} at \texttt{7c05b6b}) on the held out plain suites. Only first and only second count projects in which only one of the two models has a kept flaky test. Bonferroni threshold $p < 0.0083$.}
 \label{tab:prereg}
 \small
@@ -53,7 +53,7 @@ GPT~5.4 mini, GPT~4.1 mini & 6 & 6 & 1.00 \\
 
 \textbf{Order dependent and time batches.} Table~\ref{tab:batches} gives the two batches promised in Progress Report 2.
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Reproducing the two new batches of Gruber et al.\ flaky tests. Time tests ran up to 150 times alone, order dependent tests up to 60 times as part of their whole test file in a new random order.}
 \label{tab:batches}
 \small
@@ -75,7 +75,7 @@ Tried & 16 & 45 \\
 \item \textbf{Order dependent arm.} For the 17 projects that reproduced we generated 4 suites per model and ran them like the main study (Table~\ref{tab:odarm}). Run alone, 11 of the 17 developer tests always passed and 5 always failed, which is what victims and brittles do, though we have not confirmed a polluter or state setter for each. One test, ChainConsumer, flipped alone (13 and 22 of 200 in two control runs).
 \end{itemize}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Order dependent arm, plain prompt, 4 suites per model and project, 200 runs per suite. Suites counts suites that imported. GPT~4.1 mini covers all 17 projects, without one ReactOBus suite that never terminates. GPT~5.4 mini covers 16: two of its ReactOBus suites hang in later runs, so we left its ReactOBus suites out.}
 \label{tab:odarm}
 \small
@@ -94,11 +94,11 @@ GPT 4.1 mini & 63 & 1,089 & 10 & 20 \\
 
 On code whose developer tests are known to depend on order, the Claude suites rarely do. The 3 kept flaky Sonnet tests are all in HikLoad, in three different suites. Each checks that \texttt{hikload.config.CONFIG} is the object the test module imported, and another test in the same suite calls \texttt{importlib.reload} on that module, which makes a new dict. This compares generated suites run on their own with developer tests that were chosen because they flip, and a developer victim needs other developer tests to fail, so it does not show that generated tests are safer in a shared suite. The next paragraph runs them inside the developer test file. The GPT models split. GPT~5.4 mini has no kept flaky test here. GPT~4.1 mini has 20 in 10 suites, 18 of them only in shuffled runs, and 14 in BT-Tracker. There the project's decorator \texttt{Event.check} assigns \texttt{cls.finished}, which replaces the \texttt{finished} property of the class with a plain boolean for the rest of the process, so every later test of an \texttt{Event} object can fail. In 9 of the 14 the polluter search found a test that calls the decorator before them, and 5 fail alone. The others are in PyJsonFriendly (2), QTAF (2, both with a polluter), RandomFileTree, and RaspberryPiMovementDetector. So on order dependent code the generated suites of three models are almost never order dependent, and GPT~4.1 mini's are in 1 of 6 suites.
 
-\textbf{The order dependent arm inside the developer suite.} The developer tests of this arm flip because of other tests, so the question Progress Report 2 posed is whether generated tests become polluters of developer tests, or victims of them, when they share a run. For each of the 17 projects we ran the developer test file that holds the order dependent test together with each plain generated suite, 60 times in a new pytest-randomly order (seed and hash seed $9000+i$), and the developer file alone as a baseline (\texttt{od\_devsuite.py}). 263 of the 272 combinations completed 60 runs: in RaspberryPiMovementDetector the job hit its time limit after 9 suites, one ReactOBus suite never terminates, and in 4 the generated file does not import, so the developer file runs alone (15,799 combined runs, plus 1,020 baseline runs). pytest-randomly shuffles the order of the two files, so the generated file ran first in 7,797 runs.
+\textbf{The order dependent arm inside the developer suite.} Progress Report 2 asked whether generated tests pollute developer tests, or are polluted by them, when they share a run. For each of the 17 projects we ran the developer test file that holds the order dependent test together with each plain generated suite, 60 times in a new pytest-randomly order (seed and hash seed $9000+i$), and the developer file alone as a baseline (\texttt{od\_devsuite.py}; 263 of 272 combinations complete, 15,799 combined runs, the generated file first in 7,797). The other 9 are a job that hit its time limit, one suite that never terminates, and 4 files that fail to collect beside the developer file.
 \begin{itemize}
-\item \textbf{Generated tests can pollute developer tests.} In QTAF, the developer test \texttt{test\_assert\_datadrive} never fails alone but fails in exactly the 33 of 60 runs in which GPT~4.1 mini suite 1 or 2 runs first. No other developer test failed only next to a generated suite, apart from two ChainConsumer tests that failed once or twice with a suite in either order, which we read as that project's own flakiness. Three GPT~4.1 mini files (Penman 4, QTAF 3 and 4) failed to collect next to the developer file and are left out.
-\item \textbf{Generated tests flip next to the developer tests.} 52 generated tests that never flipped in their 200 runs alone flip in the combined runs, in HikLoad, ReactOBus, and PyJsonFriendly, and from every model: 17 Sonnet, 15 Haiku, 11 GPT~5.4 mini, and 9 GPT~4.1 mini tests. 49 of them passed all 200 runs alone, and 3 GPT~5.4 mini PyJsonFriendly tests failed all 200 alone and pass only next to the developer tests, as brittles do. The Claude suites, which were almost never order dependent alone, are victims here. A control ran each generated suite of HikLoad and PyJsonFriendly alone with the same seeds and shuffling (\texttt{od\_devsuite.py --alone}): of the 48 tests that flip in the combined runs, 38 do not flip alone, so the developer tests cause those flips. The other 10 are order dependent within their own suite (4 Sonnet HikLoad tests and 6 PyJsonFriendly tests, 5 GPT~4.1 mini and 1 GPT~5.4 mini). They were already flaky in their 200 runs alone, while the 38 are exactly the HikLoad and PyJsonFriendly members of the 52. The ReactOBus control did not finish in time.
-\item \textbf{The developer order dependent test is unchanged.} Its failure rate with a generated suite equals its rate alone in 14 of 17 projects and differs by at most 2 points in the other 3. The runs share seeds, so the developer file's own order repeats across configurations, and the test's own polluters dominate.
+\item \textbf{Generated tests can pollute developer tests.} The QTAF developer test \texttt{test\_assert\_datadrive} never fails alone but fails in exactly the 33 of 60 runs in which GPT~4.1 mini suite 1 or 2 runs first. No other developer test failed only next to a generated suite, except two ChainConsumer tests that failed once or twice in either order, that project's own flakiness.
+\item \textbf{Developer tests make generated tests flip.} 52 generated tests that never flipped in their 200 runs alone flip in the combined runs (17 Sonnet, 15 Haiku, 11 GPT~5.4 mini, 9 GPT~4.1 mini, in HikLoad, ReactOBus, and PyJsonFriendly); 3 of them are brittles that pass only next to the developer tests. A control ran the HikLoad and PyJsonFriendly suites alone with the same seeds (\texttt{--alone}): 38 of the 48 tests that flip there combined do not flip alone, so the developer tests cause them, and the other 10 were already order dependent within their own suite. The ReactOBus control did not finish.
+\item \textbf{The developer order dependent test is unchanged} (same failure rate in 14 of 17 projects, within 2 points in the rest), because its own polluters dominate.
 \end{itemize}
 So running generated suites alone understates their order dependence in a real project, in both directions.
 
@@ -108,31 +108,65 @@ So running generated suites alone understates their order dependence in a real p
 \label{sec:rootcause3}
 The labels of Progress Report 2 stand: 78 records in \texttt{labels.json}, 74 from the known flaky code study and 4 from the library study (one of them a developer test, and one record covers three parametrized cases), and 12 more library study tests explained in prose in \texttt{why\_analysis.md}. Labels for the new flaky tests are in progress, so this section gives the mechanisms we found from the reruns and the polluter search, not final categories.
 
-\textbf{Mechanisms of the 52 kept flaky held out Claude tests.} The 16 that also fail in file order are randomness inside the code under test: 11 fistro tests call an unseeded date generator that can pick a day the month does not have, 4 cuckoopy tests depend on a filter that places items by the salted string \texttt{hash()} and evicts with an unseeded \texttt{random.choice}, and 1 spreading\_dye\_sampler test depends on an unseeded draw. The 36 shuffle only tests split four ways.
+\textbf{Mechanisms of the 52 kept flaky held out Claude tests.} The 16 that also fail in file order are randomness in the code under test: 11 fistro tests call an unseeded date generator that can pick a day the month lacks, 4 cuckoopy tests use a filter that places items by the salted string \texttt{hash()} and evicts with an unseeded \texttt{random.choice}, and 1 spreading\_dye\_sampler test depends on an unseeded draw. The 36 shuffle only tests split four ways.
 \begin{itemize}
-\item \emph{Module state, 19 tests in 3 suites.} 17 tests are from one Haiku jmcm suite whose tests delete the package from \texttt{sys.modules} and import it again, the habit that made GPT~5.4 mini flaky in Progress Report 2. For 13 of the 17 the polluter search found a single earlier test that makes it fail. One Sonnet jmcm and one python-timemarker test fail after a test that reloads a module.
-\item \emph{A folder name collision, 11 tests in 1 suite} (20 flaky in that suite, 9 of them removed by the filter run). In one Sonnet kindle-maker suite, setup fails with \texttt{FileExistsError} on \texttt{/tmp/kmtest\_<n>\_1}. Each \texttt{Ebook} makes a folder named by \texttt{time.time()} and deletes it in \texttt{\_\_del\_\_}. To make the names unique, the generated fixture replaces \texttt{time.time()} with \texttt{"kmtest\_" + id(object())} plus a counter. \texttt{id()} of a throwaway object is a memory address that CPython reuses, so two tests can get the same name while the first test's \texttt{Ebook} is still alive. A control run confirms this. We reran the same suite with one change, \texttt{uuid4()} instead of \texttt{id(object())} in the folder name, 200 times next to the original: the original had 20 flaky tests and the control none (\texttt{results/kindle\_check/}). So these tests are flaky because of the test's own fixture, not the library.
-\item \emph{Randomness reseeded by pytest-randomly, 4 tests} (pelicun 2, scikit-procrustes, setigen), the pelicun mechanism of Progress Report 2: the shuffled runs reseed NumPy before each test, so seeds set elsewhere stop applying.
-\item \emph{Unstable object hash, 2 tests} in kevinarpe-rambutan3, the code's own hash bug from Progress Report 2.
+\item \emph{Module state, 19 tests in 3 suites,} 17 of them in one Haiku jmcm suite that deletes the package from \texttt{sys.modules} and imports it again, GPT~5.4 mini's habit in Progress Report 2.
+\item \emph{A folder name collision, 11 tests in 1 Sonnet kindle-maker suite.} Setup fails with \texttt{FileExistsError} on \texttt{/tmp/kmtest\_<n>\_1}. Each \texttt{Ebook} makes a folder and deletes it in \texttt{\_\_del\_\_}, and the generated fixture names the folder \texttt{"kmtest\_" + id(object())}. CPython reuses that memory address, so two tests can get the same name while the first folder still exists. A control with \texttt{uuid4()} instead, run 200 times beside the original, had no flaky test against 20 (\texttt{results/kindle\_check/}), so the test's own fixture causes it.
+\item \emph{Randomness reseeded by pytest-randomly, 4 tests} (pelicun 2, scikit-procrustes, setigen): the shuffled runs reseed NumPy before each test, so seeds set elsewhere stop applying.
+\item \emph{Unstable object hash, 2 tests} in kevinarpe-rambutan3, the code's own hash bug.
 \end{itemize}
-So one mechanism is new (files left behind), and the rest recur from Progress Report 2, now in Claude suites as well.
+Only the folder collision is new; the rest recur from Progress Report 2, now in Claude suites as well.
 
-\textbf{Polluter search.} \texttt{od\_diagnose.py} ran on 62 of the 65 flaky held out Claude tests (kept or removed). The 3 it missed are removed tests. Its runs are in Table~\ref{tab:runmodes}. 10 tests failed alone (6 fistro, 2 spreading\_dye\_sampler, 2 cuckoopy), as their randomness predicts. The 2 cuckoopy tests also failed with the fixed hash seed, which fits their random evictions. For 20 tests a single earlier test made them fail: 13 of the 17 Haiku jmcm tests, the Sonnet jmcm and python-timemarker tests, 4 fistro tests, and 1 kevinarpe test. The last 5 flip through randomness or memory layout, so a pair that failed in at least one of up to 3 tries may be chance. A 10 run rerun of each pair (below, with the cleaner search) confirmed none of these 5, so they are randomness or chance. 32 tests never failed alone or after any single test: the 20 flaky kindle-maker tests (kept and removed), whose collision needs a particular sequence of allocations and earlier tests, 4 jmcm tests, and 8 others. In the order dependent arm the search found a polluter for all 4 flaky HikLoad tests (3 kept, 1 removed): in each suite, a test that reloads \texttt{hikload.config}.
+\textbf{Polluter search.} \texttt{od\_diagnose.py} reran each flaky held out test alone and then after each other test of its suite (Table~\ref{tab:runmodes}), and a 10 run rerun of every pair it found confirmed the polluter or not (Table~\ref{tab:polluters}). For Claude the 10 tests that fail alone are the fistro, spreading\_dye\_sampler, and cuckoopy randomness cases. The 15 confirmed polluters are 13 Haiku jmcm tests and the Sonnet jmcm and python-timemarker tests, while the 5 unconfirmed (4 fistro, 1 kevinarpe) flip through randomness. 20 of the 32 that never failed are the kindle-maker tests, whose folder collision needs a sequence of allocations, not one earlier test. In the order dependent arm all 4 flaky HikLoad tests have a polluter, in each suite a test that reloads \texttt{hikload.config}.
 
-\textbf{Mechanisms of the 140 kept flaky held out GPT tests.} We ran the same polluter search on them, and the two GPT models fail in different ways (results in \texttt{od\_diagnose\_heldout\_gpt}).
+\begin{table}[htbp]
+\caption{Polluter search on the flaky held out tests (Claude: kept and removed, 62 of 65; GPT: the kept ones).}
+\label{tab:polluters}
+\small
+\begin{tabular}{lrrr}
+\toprule
+ & Claude & GPT 5.4 mini & GPT 4.1 mini \\
+\midrule
+Searched & 62 & 70 & 70 \\
+Fails alone & 10 & 1 & 44 \\
+Polluter found & 20 & 53 & 10 \\
+\quad confirmed in 10 runs & 15 & 53 & 3 \\
+Never failed in the search & 32 & 16 & 16 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Mechanisms of the 140 kept flaky held out GPT tests.} The two GPT models fail in different ways (Table~\ref{tab:polluters}).
 \begin{itemize}
-\item \emph{GPT~5.4 mini: a polluter that changes the package itself, 53 of 70 tests in 14 suites.} The polluter deletes the package from \texttt{sys.modules}, puts a fake submodule there, reloads the package, or leaves an attribute on it, and a later test then sees the changed package (jmcm 21, torch-embed-sim 11, torch-gpt-2 9, event-bus 7, pypfm 2, python-timemarker 2, uhashring 1). This is the habit of Progress Report 2, now on 7 projects, and none of these 53 tests fails in file order. Of the other 17, 7 are docci tests (third item), 9 never failed in the search, and 1 cuckoopy test depends on the salted \texttt{hash()}.
-\item \emph{GPT~4.1 mini: randomness in the code under test, 43 of 70 tests.} Leaving out its 11 docci tests (third item), 43 fail when run alone, 8 of them only with a varied hash seed. 21 are spreading\_dye\_sampler tests that assert on one draw of an unseeded sampler, and the others are in data-partitioner, fistro, pelicun, pylabeledrf, cuckoopy, torch-layer-normalization, and python-timemarker. 9 more failed after an earlier test in the search. The 10 run rerun confirmed 3 of them (2 pylabeledrf and 1 kevinarpe-rambutan3 test), and the other 6 are the random draw or chance. 7 never failed in the search.
-\item \emph{The clock, 18 docci tests from both GPT models} (11 GPT~4.1 mini and 7 GPT~5.4 mini; 16 never failed in the polluter search, 1 failed alone, and 1 after an earlier test, all by chance at this rate). Each saves the same workbook twice and compares the bytes. The ZIP header stores the modification time to 2 seconds and \texttt{docProps/core.xml} to 1 second, so the bytes differ when the two saves straddle a boundary, in 1 to 4 of 200 runs. This is new: it is a time dependency outside randomness, in tests that read no clock themselves, so the feature scan of Section~\ref{sec:rq3} cannot see it.
+\item \emph{GPT~5.4 mini changes the package itself.} 53 of its 70 tests have a confirmed polluter that deletes the package from \texttt{sys.modules}, puts a fake submodule there, reloads it, or leaves an attribute on it, in 7 projects (jmcm, torch-embed-sim, torch-gpt-2, event-bus, pypfm, python-timemarker, uhashring). None of the 53 fails in file order. This is the habit of Progress Report 2, now on more projects.
+\item \emph{GPT~4.1 mini leaves randomness unseeded.} Most of its tests fail alone, because the code under test draws random numbers the test does not control, 21 of them in one spreading\_dye\_sampler pattern that asserts on a single draw. Only 3 of its 10 polluters are confirmed (pylabeledrf and kevinarpe-rambutan3).
+\item \emph{Both write clock dependent tests in docci} (18 tests). Each saves the same workbook twice and compares the bytes. The ZIP header stores the modification time to 2 seconds and \texttt{docProps/core.xml} to 1 second, so the bytes differ when the two saves straddle a boundary, in 1 to 4 of 200 runs, which is why most never failed in the search. This time dependency sits in a library call, outside randomness, so the feature scan of Section~\ref{sec:rq3} cannot see it.
 \end{itemize}
 
-\textbf{Agreement.} \texttt{results/root\_causes/blind/sheet.csv} lists the 78 records of \texttt{labels.json} in a shuffled order without the model or the first label. The 12 tests explained only in prose are not in the sheet. Shaunak relabeled all 78 records from this sheet, late (it was due November 16), through a page that showed one record at a time with its project source and hid the model and the first label. Against Manas's labels, Cohen's kappa is 0.81 for the category (86\% agreement) and 0.94 for order dependence (97\%, \texttt{kappa.json}). 9 of the 11 disagreements are cuckoopy tests, which Manas labeled unseeded randomness and Shaunak salted \texttt{hash()}. The other 2 are the pylabeledrf tests that flip only after a test the filter removes, which Manas labeled order dependent and Shaunak other. The relabel is not fully blind, because Shaunak wrote about some of these tests in Progress Report 2. As a second check we gave the same sheet to an independent LLM labeler, a Claude agent that could read only the sheet, the category list, and the project source, and was told not to open any results, labels, or generated suites (\texttt{llm\_labels.csv}). It saw one stray field: the category of the original developer test in one project's target file. Against Manas's labels, Cohen's kappa is 0.82 for the category (87\% agreement) and 1.0 for order dependence (\texttt{kappa\_llm\_labels.json}). Its 10 disagreements with Manas are cuckoopy tests too, 9 of them the same ones. The filter uses both a salted hash and an unseeded random eviction, so both labels are defensible, and the final labels will name both. The LLM agrees with Shaunak at kappa 0.95. The LLM marked 30 of its 78 labels as unsure, 27 of them order dependent tests, 25 of which involve import or reload helpers it read only in part. The human kappa is the one we report, and the LLM one is a cross check.
+\textbf{Agreement.} Shaunak relabeled the 78 records of \texttt{labels.json}, late (due November 16), from a blind sheet that showed one record at a time with its project source and hid the model and Manas's label (\texttt{blind/sheet.csv}). The relabel is not fully blind, because Shaunak wrote about some of these tests in Progress Report 2. As a cross check, an LLM labeler given only the same sheet, the categories, and the project source labeled them too (\texttt{llm\_labels.csv}).
+
+\begin{table}[htbp]
+\caption{Cohen's kappa on the 78 root cause records (raw agreement in parentheses)}
+\label{tab:kappa}
+\small
+\begin{tabular}{lrr}
+\toprule
+Pair & Category & Order dependent \\
+\midrule
+Manas, Shaunak (blind) & 0.81 (86\%) & 0.94 (97\%) \\
+Manas, LLM & 0.82 (87\%) & 1.00 (100\%) \\
+Shaunak, LLM & 0.95 (96\%) & 0.94 (97\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+9 of the 11 human disagreements are cuckoopy tests, which Manas labeled unseeded randomness and Shaunak salted \texttt{hash()}. The filter uses both, so both are defensible, and the final labels will name both. The other 2 are pylabeledrf tests that flip only after a test the filter removes (order dependent for Manas, other for Shaunak). The LLM disagrees with Manas on cuckoopy too. The human kappa is the one we report.
 
 \subsection{RQ3, features of flaky tests}
 \label{sec:rq3}
 \textbf{Library study.} Table~\ref{tab:features} extends the Progress Report 2 feature table to randomness, time, and concurrency, and gives for each feature how many of the functions that use it flipped (\texttt{scripts/feature\_flakiness.py}). Here human and LLM tests ran on the same libraries.
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Library study test functions with each feature: how many use it (share of all functions in \%) and how many of those flipped. Human: 3,077 functions, 4 flaky. LLM: 7,474 functions in all seven generated conditions, 8 flaky. Functions, not parametrized cases, are counted. Shared state means the function writes a global, module, or class attribute or the environment, reads a module level library object or a class attribute, uses a library singleton, or takes a class or module scoped fixture.}
 \label{tab:features}
 \small
@@ -162,7 +196,7 @@ Human tests use the risky features and stay stable: none of the 34 functions wit
 
 \textbf{Known flaky code study.} To get more flaky tests we ran a similar scan on every generated suite of the known flaky code study that ran 200 times (\texttt{scripts/feature\_flakiness\_matched.py}): 36,778 kept test functions in 2,235 suites, of which 277 functions and 131 suites have a kept flaky test. It works per suite as well as per function, because for order dependence the feature sits in another test of the suite (Table~\ref{tab:featmatched}).
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Known flaky code study suites (plain, guard, held out, and order dependent arm; not the fixture copies) that contain a test function with each feature, and the share of them with a kept flaky test, with a 95\% Wilson interval and the number of projects. Without is the share among the other suites. All suites: 131 of 2,235 (5.9\%). The clock, sleep, and concurrency rows have one flaky project each.}
 \label{tab:featmatched}
 \small
@@ -200,7 +234,7 @@ Every interval is wide, and the flaky suites cluster in a few projects, so these
 \label{sec:rq4}
 \textbf{Fixtures on new suites.} M1 and M2 were frozen at commit \texttt{7c05b6b} and ran unchanged on every held out and order dependent arm suite. They were designed on some of these projects (Section~\ref{sec:mitig}), so we also report the 21 \emph{untuned} projects, outside the first 17 and outside jmcm, torch-gpt-2, and pypfm, which none of the mitigations saw (Table~\ref{tab:fixtures}).
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Suites with a kept flaky test (and kept flaky tests) under each fixture, 200 runs each}
 \label{tab:fixtures}
 \small
@@ -230,11 +264,11 @@ GPT~4.1 mini, order dependent arm & 10 (20) & 8 (18) & 6 (16) \\
 \item \textbf{M2 adds the module state cases.} It removes the 17 jmcm tests, on the project it was designed for, and the 3 HikLoad reload tests, a project it never saw.
 \item \textbf{On the GPT suites each fixture fixes one model.} M1 takes GPT~4.1 mini, whose flaky tests are mostly randomness, from 40 suites to 15, and does nothing for GPT~5.4 mini (22 to 20). M2 takes GPT~5.4 mini from 22 suites to 8 and from 70 kept flaky tests to 9. Its package reset polluters are undone on torch-embed-sim and event-bus, which M2 was not built on, as well as on jmcm, torch-gpt-2, and pypfm, which it was. On the 21 untuned projects GPT~5.4 mini still goes from 17 suites to 7, and GPT~4.1 mini from 20 to 12 with M1.
 \item \textbf{Neither reaches state outside the interpreter or the clock.} 11 of Sonnet's 12 kept flaky tests under M2 are the kindle-maker suite, whose state is in \texttt{/tmp}, and 18 of the 25 GPT tests left under M2 are the docci clock tests. In the order dependent arm M2 leaves all 14 GPT~4.1 mini BT-Tracker tests, because the state they share is a class attribute, which M2 does not restore.
-\item \textbf{Breakage.} In Progress Report 2, M2 made 3 stable tests fail in every run (2 in keplertools, 1 in limix-lmm). On the 13,610 stable kept held out Claude tests (kept, and never failed in 200 plain runs) and the 3,039 of the order dependent arm, none failed all 200 M2 runs. On the 7,971 stable kept held out GPT tests the same holds for M2, but M1 broke 2 limix-lmm tests, one per GPT model. Under M1's fixed seed every run draws the same random data, and that draw gives the model NaN or complex values. The GPT half of the order dependent arm, 1,953 stable kept tests, lost none to either fixture (\texttt{fixture\_effects.py}). A fixture can also make a stable test flaky. That happened to 2 GPT~4.1 mini kindle-maker tests (one under M1 only, one under both), whose folders collide in \texttt{/tmp}, and to some docci clock tests, which flip in 1 to 4 of 200 runs and so can look stable in one set of runs and flaky in the next. The one GPT~5.4 mini order dependent arm test that is kept and flaky only under M1 is not new. The same RandomFileTree test flips in all three versions. Plain and with M2 it happened to fail the filter run, so it was removed there.
+\item \textbf{Breakage.} In Progress Report 2, M2 made 3 stable tests fail in every run. Of the 21,581 stable kept held out tests (kept, and never failed in 200 plain runs), M2 broke none and M1 broke 2 limix-lmm GPT tests, whose fixed seed draws data that gives the model NaN values; the 4,992 of the order dependent arm lost none (\texttt{fixture\_effects.py}). A fixture also made 2 GPT~4.1 mini kindle-maker tests flaky, through the same \texttt{/tmp} collision.
 \end{itemize}
 \textbf{What the fixtures leave.} Progress Report 2 also promised the failure rate of the flaky tests a mitigation leaves, since a test that rarely fails does less harm (\texttt{leftover\_rates.py}). For the GPT models the fixtures leave fewer and rarer flips: the median kept flaky test fails in 7\% (GPT~4.1 mini) and 10\% (GPT~5.4 mini) of runs plain, and in 1 to 1.5\% under M2. Sonnet's leftovers do not get rarer, because 11 of its 12 are the kindle-maker collisions, which fail in about 22\% of runs either way.
 
-\textbf{Comparison with an iFixFlakies style fix.} iFixFlakies~\cite{shi2019} repairs an order dependent victim by adding the statements of a \emph{cleaner}, a test from the same suite that resets what the polluter changed. For each of the 122 victims the polluter search found, \texttt{cleaner\_search.py} first reran polluter then victim 10 times. 109 polluters are confirmed (the victim fails 8 or more of 10 times after it and passes alone 3 of 3), and the 13 that are not are in fistro and pelicun, whose flips are randomness, one docci clock test, and one kevinarpe-rambutan3 test. It then ran every other test of the suite between the two. Only 27 of the 109 victims have a cleaner, 20 of them in torch-gpt-2 and torch-embed-sim, where another test reloads the package back. M2 alone removes the flip for 81 of the 109 without any cleaner (80 become stable and 1 pypfm test fails every run), including 26 of the 27 that have a cleaner. The 27 that neither fixes are mostly BT-Tracker's class attribute and the QTAF and PyJsonFriendly victims. So for generated suites a cleaner is usually missing, because the model rarely writes a test that undoes another test's change, and a fixture that restores state is the more general fix.
+\textbf{Comparison with an iFixFlakies style fix.} iFixFlakies~\cite{shi2019} repairs an order dependent victim by adding the statements of a \emph{cleaner}, a test from the same suite that resets what the polluter changed. For each of the 122 victims the polluter search found (69 GPT and 20 Claude held out tests, and 29 GPT and 4 Claude tests of the order dependent arm, kept or removed), \texttt{cleaner\_search.py} first reran polluter then victim 10 times. 109 polluters are confirmed (the victim fails 8 or more of 10 times after it and passes alone 3 of 3), and the 13 that are not are in fistro and pelicun, whose flips are randomness, one docci clock test, and one kevinarpe-rambutan3 test. It then ran every other test of the suite between the two. Only 27 of the 109 victims have a cleaner, 20 of them in torch-gpt-2 and torch-embed-sim, where another test reloads the package back. M2 alone removes the flip for 81 of the 109 without any cleaner (80 become stable and 1 pypfm test fails every run), including 26 of the 27 that have a cleaner. The 27 that neither fixes are mostly BT-Tracker's class attribute and the QTAF and PyJsonFriendly victims. So for generated suites a cleaner is usually missing, because the model rarely writes a test that undoes another test's change, and a fixture that restores state is the more general fix.
 
 \textbf{Cost.} Over about 555 matched suites, the 200 runs take as long with M1 as without (ratio 1.00), and 19\% longer with M2 (median 14\% per suite), which imports the project once and restores state after every test (\texttt{fixture\_runtime.py}, from the CI logs). Neither adds a model call.
 
@@ -242,7 +276,7 @@ Fixtures do not change the tests, but M1 fixes the random inputs a test sees and
 
 \textbf{Guard v3 on new models.} We generated 2 guard v3 suites per model for all 41 projects and compare them with held out samples 1 and 2 from the same pipeline (Table~\ref{tab:guard3}). Coverage and mutation score come from one clean run of each suite, which can keep a few tests fewer than the first of the 200 runs.
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Guard v3 against the plain prompt, same pipeline, samples 1 and 2 of each, 41 projects. With flaky counts suites with a kept flaky test (kept flaky tests). Cov.\ is the mean line coverage of the target files and Mut.\ the pooled mutation score, both in \%.}
 \label{tab:guard3}
 \small
@@ -263,13 +297,13 @@ GPT 4.1 mini guard v3 & 66 & 923 & 3 (4) & 60.9 & 32.2 \\
 \end{tabularx}
 \end{table}
 
-For the Claude models guard v3 removed every kept flaky test and cost 6.5\% (Sonnet) and 12\% (Haiku) of the kept tests, with coverage about 1 point lower and the mutation score unchanged. The evidence is thin: Haiku's 21 come from 5 suites, 17 of them one jmcm suite, the drop from 5 suites to 0 is not significant (Fisher's exact test on suites $p = 0.059$, which also ignores that suites of one project are related), and Sonnet had only 2 to remove. Split by batch, plain suites have a kept flaky test in 0, 2, 0, and 7 suites (Sonnet, Haiku, GPT~5.4 mini, GPT~4.1 mini) on the 17 projects the prompt was tuned on and 2, 3, 4, and 5 on the other 24; under guard v3 these are 0, 0, 0, 1 and 0, 0, 6, 2. The tuned projects have too few flaky Claude suites (0 and 2) to compare the two halves, and GPT~5.4 mini's flaky suites under guard v3 are all on untuned projects.
+For the Claude models guard v3 removed every kept flaky test and cost 6.5\% (Sonnet) and 12\% (Haiku) of the kept tests, with coverage about 1 point lower and the mutation score unchanged. The evidence is thin: Haiku's 21 come from 5 suites, 17 of them one jmcm suite, the drop from 5 suites to 0 is not significant (Fisher's exact test on suites $p = 0.059$, which also ignores that suites of one project are related), and Sonnet had only 2 to remove. On the 17 projects the prompt was tuned on, the Claude models have only 2 flaky plain suites, too few to compare tuned and untuned projects; all of GPT~5.4 mini's flaky suites under guard v3 are on untuned projects.
 
 Guard v3 is less clear for the GPT models. For GPT~4.1 mini, the model it was tuned on (on 17 of these 41 projects), it cut the suites with a kept flaky test from 12 to 3, but 13 more suites did not import (66 of 82 against 79), and the pooled mutation score fell from 41.9 to 32.2\%. Over the 56 pairs in which both suites keep a test the score is about the same (43.2 and 42.6\%), so on the 41 projects the cost is suites that fail, not weaker tests. On the 17 tuned projects (Table~\ref{tab:quality}) guard v3 also weakened the suites that keep tests, from 55.2 to 50.4\%. For GPT~5.4 mini it removed nothing: 4 suites with 6 kept flaky tests plain, and 6 with 25 under guard v3, 17 of them in one jmcm suite that deletes the package from \texttt{sys.modules}, although the prompt asks the model to undo any change to module level state. Its quality is unchanged. So the prompt did not reliably stop the mechanism of a model it was not tuned on, while M2 removed most of it (Table~\ref{tab:fixtures}).
 
 \textbf{Quality cost of the GPT~4.1 mini guard prompts.} Table~\ref{tab:quality} answers the feedback on quality after mitigation for the prompts of Progress Report 2, from the same mutants per project for every suite.
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{GPT~4.1 mini guard prompts on the first 17 projects (34 suites each), from one clean run per suite. No kept counts suites where no test passed, including suites that did not import. Flaky kept is from Progress Report 2. The last two columns compare plain and guard over the suite pairs where both suites keep a test.}
 \label{tab:quality}
 \small
@@ -293,7 +327,7 @@ For GPT~4.1 mini the guard prompts trade flaky tests for test quality. For guard
 
 \textbf{Measured rerun filters.} The runner now records every outcome in run order. We reran the Progress Report 2 suites (not the held out sample) of the 14 projects where one of them had a flaky test, 126 suites: the two plain suites per model from Progress Report 2 and its GPT~4.1 mini guard v1 to v3 suites. Each ran 200 more times, and we measured the filters directly (\texttt{scripts/krun\_measured.py}). 74 tests in 29 of the suites flipped. These 74 are known flaky code study tests only, unlike the 74 kept flaky tests of Progress Report 2, which included 15 from the library study, and only 9 are from Claude suites. The held out sample already records every run in order, so we measured the filters on its 253 flaky tests as well. Table~\ref{tab:krun} shows how many each filter would still keep.
 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Of the tests that flipped in 200 runs, how many pass all of a filter's first $k$ runs. A file order filter of $k$ runs uses the first $k$ even runs (run 0, 2, \ldots), a shuffled filter the first $k$ odd runs (each a new order), and an alternating filter the first $k$ runs. Run 0 is the filter run, so the file order and alternating counts for $k=1$ are the kept tests, and the shuffled count for $k=1$ differs because it starts at run 1.}
 \label{tab:krun}
 \small
