@@ -1,0 +1,1218 @@
+{
+ "project": "ReactOBus",
+ "install_ok": true,
+ "dev_file": "tests/test_db.py",
+ "od_test": "test_run",
+ "runs": 60,
+ "configs": {
+  "baseline": {
+   "runs_done": 60,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 33
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_clears_messages_after_success",
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_saves_messages"
+   ],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_saves_messages": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_returns_after_success": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_run_invalid_message_logs_error": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_message_model_fields": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_db_run_break_loop": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_db_setup_creates_tables": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_logs_error_on_commit_failure": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_clears_messages_after_success": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_run_saves_on_1000_messages": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_db_init_sets_attributes": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_retries_on_exception": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_run_appends_valid_message": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_message_repr_and_str": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_db_process_inherits_multiprocessing_process": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_run_saves_after_1_second": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_save_to_db_fails_then_success": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_run_receives_message_and_appends": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_db_inherits_from_multiprocessing_process": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setup_initializes_sqlalchemy_and_zmq": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_message_model_columns": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_db_init_sets_attributes": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_save_to_db_clears_messages": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_message_repr_and_fields": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_save_to_db_clears_messages_after_success": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_run_handles_invalid_message_logs": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_run_skips_empty_messages": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_save_to_db_retries_on_error": {
+     "fail": 60
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_run_save_to_db_called_by_len": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_save_to_db_no_messages": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_run_invalid_message_sqlalchemyerror": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_run_handles_invalid_message": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_run_checks_empty_messages_list_identity": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_save_to_db_exception_on_bulk_save": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_init_options_and_outbound": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_message_str_repr_present": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_run_receives_and_parses_message": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_save_to_db_retries_and_logs_error": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_message_fields": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_setup_creates_engine_and_sessions": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_inherits_from_multiprocessing_process": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_save_to_db_commits_and_clears_messages": {
+     "fail": 60
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 0,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {}
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_uses_short_poll_when_messages_pending": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_saves_when_messages_reach_threshold": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_saves_when_time_threshold_exceeded": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_db_init_sets_expected_attributes": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_setup_configures_zmq_and_sqlalchemy": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_logs_sqlalchemy_error_when_building_message": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_save_to_db_success_clears_messages": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_save_to_db_retries_until_success": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_logs_invalid_message_and_skips_it": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_save_to_db_logs_error_after_three_failures": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_uses_long_poll_when_no_pending_messages": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_appends_message_from_valid_payload": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_message_table_name_and_columns": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_run_logs_invalid_message_and_continues": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_setup_initializes_engine_sessions_and_poller": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_run_uses_timeout_when_messages_are_buffered": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_save_to_db_retries_until_success": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_setup_creates_sqlite_tables_in_real_database": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_run_waits_forever_when_no_messages": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_run_does_not_save_when_messages_list_is_empty_identity_check": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_run_builds_message_and_saves_after_one_second": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_save_to_db_commits_and_clears_messages": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_run_skips_messages_when_datetime_is_invalid": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_save_to_db_logs_error_after_exhausting_retries": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_db_init_sets_expected_defaults": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_message_model_has_expected_table_name_and_columns": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_message_instance_stores_values": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_run_appends_valid_message_and_saves_when_time_expires": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_run_uses_timeout_1000_when_messages_pending": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_message_model_has_expected_columns": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_setup_creates_engine_metadata_and_session_factory": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_run_does_not_save_when_no_messages_pending_and_no_input": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_save_to_db_keeps_messages_on_failure": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_save_to_db_retries_until_success": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_message_model_table_name": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_db_initial_state": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_run_uses_timeout_minus_one_when_no_pending_messages": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_save_to_db_success_clears_messages": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_save_to_db_uses_new_session_each_call": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_run_ignores_invalid_message_format": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_message_instance_can_store_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_run_does_not_append_on_sqlalchemy_error": {
+     "fail": 60
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_run_accepts_valid_message_and_saves": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_run_logs_build_error_and_skips_append": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_run_does_not_save_without_messages": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_save_to_db_retries_and_succeeds_on_second_commit": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_save_to_db_uses_session_factory_each_call": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_run_logs_invalid_message_and_skips_append": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_db_initializes_with_expected_defaults": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_message_table_and_columns": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_setup_creates_engine_session_and_subscribes": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_save_to_db_success_clears_messages": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_run_saves_when_messages_already_buffered_and_time_expires": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_message_model_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_save_to_db_logs_error_after_three_failed_commits": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [
+    "zz_haiku_plain_1.test_gen::test_message_roundtrip_through_database",
+    "zz_haiku_plain_1.test_gen::test_save_to_db_bulk_saves_many_messages",
+    "zz_haiku_plain_1.test_gen::test_save_to_db_clears_pending_messages_on_success",
+    "zz_haiku_plain_1.test_gen::test_save_to_db_persists_messages",
+    "zz_haiku_plain_1.test_gen::test_save_to_db_with_no_messages_writes_nothing"
+   ],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_haiku_plain_1.test_gen::test_message_id_is_primary_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setup_sets_process_title": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_db_init_defaults": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_message_init_sets_attributes": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_db_init_stores_options_and_outbound": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setup_creates_engine_and_sessionmaker": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_save_to_db_retries_then_succeeds": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setup_registers_poller": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setup_subscribes_and_connects_to_outbound": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_save_to_db_with_no_messages_writes_nothing": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_haiku_plain_1.test_gen::test_db_init_messages_not_shared_between_instances": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_save_to_db_gives_up_after_three_attempts": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_message_roundtrip_through_database": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_haiku_plain_1.test_gen::test_message_indexed_columns": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_save_to_db_logs_errors_when_commit_fails": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_save_to_db_clears_pending_messages_on_success": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_haiku_plain_1.test_gen::test_save_to_db_bulk_saves_many_messages": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_haiku_plain_1.test_gen::test_db_is_multiprocessing_process": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_save_to_db_persists_messages": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_haiku_plain_1.test_gen::test_message_has_expected_columns": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_message_id_is_none_before_persist": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setup_creates_messages_table": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_message_tablename": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_message_datetime_is_timezone_aware_column": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_haiku_plain_2.test_gen::test_message_indexed_columns": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_run_stores_valid_message": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_run_polls_with_timeout_only_when_messages_pending": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setup_creates_engine_and_tables": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_db_instances_do_not_share_message_lists": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_message_datetime_column_is_timezone_aware_type": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_db_init_stores_options_and_outbound": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_message_roundtrip_through_database": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_run_saves_after_one_second_elapsed": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_message_has_expected_columns": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_message_constructor_sets_attributes": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setup_sets_process_title": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_message_primary_key_is_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_run_saves_when_batch_reaches_1000_messages": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_save_to_db_persists_and_clears_messages": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_save_to_db_with_no_messages_does_not_fail": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_db_is_a_multiprocessing_process": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_run_skips_invalid_message": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_save_to_db_retries_then_succeeds": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_save_to_db_gives_up_after_three_attempts": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setup_subscribes_to_outbound": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_message_unset_attributes_are_none": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_message_tablename": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [
+    "zz_haiku_plain_3.test_gen::test_save_to_db_writes_rows_and_clears_buffer",
+    "zz_haiku_plain_3.test_gen::test_setup_creates_tables_and_session_factory"
+   ],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_haiku_plain_3.test_gen::test_save_to_db_with_empty_buffer_is_harmless": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_message_indexed_columns": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_db_is_a_process": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setup_creates_tables_and_session_factory": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_haiku_plain_3.test_gen::test_setup_subscribes_to_outbound": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setup_sets_process_title": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_run_stores_valid_message_and_polls_with_timeouts": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_message_init_sets_attributes_and_leaves_id_unset": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_save_to_db_retries_then_succeeds": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_db_init_stores_options_and_defaults": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_run_saves_after_one_second": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_message_datetime_column_is_timezone_aware": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_save_to_db_writes_rows_and_clears_buffer": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_haiku_plain_3.test_gen::test_run_saves_when_buffer_reaches_1000": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_db_message_buffers_are_not_shared": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_message_has_expected_columns": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_run_logs_and_skips_invalid_datetime": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_message_tablename_and_primary_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_save_to_db_gives_up_after_three_attempts": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_run_logs_row_build_failure_and_continues": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_message_roundtrip_through_sqlite": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [
+    "zz_haiku_plain_4.test_gen::test_setup_creates_schema_and_sessionmaker"
+   ],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_haiku_plain_4.test_gen::test_run_skips_message_with_invalid_datetime": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_save_to_db_with_no_messages_is_harmless": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_run_stores_valid_message": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_db_is_a_process": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setup_subscribes_to_all_topics": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_message_transient_attributes_default_to_none": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_run_saves_when_more_than_one_second_has_passed": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_db_init_defaults": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_save_to_db_retries_then_succeeds": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setup_connects_subscriber_to_outbound": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_save_to_db_gives_up_after_three_attempts": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_run_ignores_poll_without_pollin": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_message_id_is_primary_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_message_columns_present": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setup_sets_process_title": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_save_to_db_persists_and_clears_messages": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setup_creates_schema_and_sessionmaker": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_haiku_plain_4.test_gen::test_message_indexed_columns": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_run_saves_after_1000_messages": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_run_skips_message_with_wrong_frame_count": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_message_tablename_and_base": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_run_polls_with_infinite_timeout_when_empty_and_1s_when_pending": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_message_roundtrip_through_database": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_sonnet_plain_1.test_gen::test_message_table_name": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_save_to_db_empty_list_is_ok": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_run_parses_valid_message": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_run_saves_when_more_than_one_second_elapsed": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_db_init_attributes": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_db_is_a_process": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_run_poll_timeout_depends_on_pending_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_setup_configures_zmq_and_sqlalchemy": {
+     "fail": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_message_constructor_sets_attributes": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_save_to_db_succeeds_after_transient_failure": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_message_columns": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_run_saves_when_1000_messages_reached": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_message_persist_and_query_roundtrip": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_save_to_db_success_clears_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_run_invalid_date_is_dropped": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_message_primary_key_and_indexes": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_save_to_db_retries_three_times_and_keeps_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_run_wrong_number_of_fields_is_dropped": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [
+    "zz_sonnet_plain_2.test_gen::test_run_receives_valid_message"
+   ],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_sonnet_plain_2.test_gen::test_save_to_db_success": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_message_table_definition": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_run_invalid_date_is_dropped": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_run_saves_when_1000_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_db_init": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_message_attributes": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_run_receives_valid_message": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_sonnet_plain_2.test_gen::test_message_roundtrip": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_db_is_process": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_run_wrong_field_count_is_dropped": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_message_indexed_columns": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_save_to_db_empty_list": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_save_to_db_retries_then_succeeds": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_run_poll_timeouts": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_save_to_db_gives_up_after_three_failures": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setup_creates_engine_and_tables": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_run_saves_after_one_second": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [
+    "zz_sonnet_plain_3.test_gen::test_setup_creates_tables_and_sessions"
+   ],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_sonnet_plain_3.test_gen::test_message_constructor_sets_attributes": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_run_poll_timeout_depends_on_pending_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setup_creates_tables_and_sessions": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_sonnet_plain_3.test_gen::test_save_to_db_succeeds_after_transient_failure": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_db_init_defaults": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_run_wrong_field_count_is_dropped": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_message_tablename_and_columns": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_run_invalid_date_is_dropped": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_run_saves_when_more_than_one_second_elapsed": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_save_to_db_retries_three_times_and_keeps_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_message_roundtrip_in_sqlite": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_message_primary_key_is_id": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_message_indexed_columns": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_save_to_db_success_clears_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_run_parses_valid_message": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_save_to_db_empty_list": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 27,
+    "fail": 33,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 17,
+     "gen_first": 16
+    }
+   },
+   "gen_flaky": [
+    "zz_sonnet_plain_4.test_gen::test_db_setup_creates_engine_and_tables",
+    "zz_sonnet_plain_4.test_gen::test_run_valid_message_saved_when_time_elapsed"
+   ],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 60
+    },
+    "tests.test_db::test_run": {
+     "fail": 33,
+     "pass": 27
+    },
+    "zz_sonnet_plain_4.test_gen::test_run_invalid_date_is_dropped": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_run_valid_message_saved_when_time_elapsed": {
+     "fail": 32,
+     "pass": 28
+    },
+    "zz_sonnet_plain_4.test_gen::test_save_to_db_success_clears_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_db_init": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_message_tablename": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_message_persisted_and_queried": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_run_wrong_field_count_is_dropped": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_message_indexed_columns": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_message_constructor_sets_attributes": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_run_poll_timeout_depends_on_pending_messages": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_message_columns": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_save_to_db_retries_then_succeeds": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_run_does_not_save_before_one_second": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_save_to_db_gives_up_after_three_failures": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_db_setup_creates_engine_and_tables": {
+     "fail": 32,
+     "pass": 28
+    }
+   }
+  }
+ },
+ "nonterminating": [
+  "gpt41mini_plain_4"
+ ],
+ "seconds": 12196.1
+}

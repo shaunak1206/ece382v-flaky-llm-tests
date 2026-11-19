@@ -1,0 +1,1445 @@
+{
+ "project": "HikLoad",
+ "install_ok": true,
+ "dev_file": "tests/test_config.py",
+ "od_test": "test_envvar",
+ "runs": 60,
+ "configs": {
+  "baseline": {
+   "runs_done": 60,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 32
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_server_address_format"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_server_value_not_empty": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_config_has_server_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_config_has_password_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_user_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_download_path_is_relative_or_absolute": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_download_path_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_config_has_download_path_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_server_address_format": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_user_value_not_empty": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_password_can_be_empty_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_cameras_values_are_nonempty_strings": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_debug_value_true": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_each_camera_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_password_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_download_path_ends_with_slash": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_server_value_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_config_has_user_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_debug_is_boolean": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_cameras_list_not_empty": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_config_has_cameras_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_no_extra_keys_in_config": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_config_has_debug_key": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_2.test_gen::test_server_ip_format",
+    "zz_gpt41mini_plain_2.test_gen::test_server_value_is_correct"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_user_is_admin": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_debug_is_boolean": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_password_is_empty_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_server_value_is_correct": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_config_contains_expected_keys": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_user_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_cameras_contains_expected_ids": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_password_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_password_can_be_empty_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_download_path_relative": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_server_value_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_all_cameras_are_strings": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_debug_is_true": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_download_path_ends_with_slash": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_user_non_empty_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_cameras_all_non_empty_strings": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_download_path_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_no_extra_keys_in_config": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_cameras_list_length": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_server_ip_format": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_3.test_gen::test_server_ip_address_format",
+    "zz_gpt41mini_plain_3.test_gen::test_server_value_is_as_expected"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_3.test_gen::test_debug_exists_and_is_bool": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_modify_debug_and_cleanup": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_password_value_is_empty_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_download_path_exists_and_is_str": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_modify_config_and_cleanup": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_user_exists_and_is_str": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_cameras_list_not_empty": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_cameras_has_expected_values": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_server_exists_and_is_str": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_modify_cameras_and_cleanup": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_server_value_is_as_expected": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_cameras_exists_and_is_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_password_exists_and_is_str": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_user_value_is_as_expected": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_server_ip_address_format": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_debug_value_is_true": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_download_path_ends_with_slash": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_download_path_value_is_as_expected": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_cameras_elements_are_strings": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_no_extra_keys_in_config": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_4.test_gen::test_config_server_value",
+    "zz_gpt41mini_plain_4.test_gen::test_server_is_ip_address_format"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_4.test_gen::test_config_server_value": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_cameras_contents": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_password_key_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_user_key_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_password_value_empty": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_user_value": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_download_path_value": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_server_is_ip_address_format": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_password_is_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_debug_value_true": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_download_path_key_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_cameras_key_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_cameras_all_strings": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_debug_value_is_bool": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_server_key_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_no_extra_keys_in_config": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_config_debug_key_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_cameras_not_empty": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt54mini_plain_1.test_gen::test_server_value_is_expected"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_download_path_is_expected": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_user_value_is_expected": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_config_is_a_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_user_value_is_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_debug_flag_is_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_password_is_empty_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_debug_flag_is_boolean": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_config_can_be_copied_without_modifying_original": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_cameras_value_is_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_server_value_is_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_each_camera_id_is_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_server_value_is_expected": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_cameras_value_is_expected": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_reimporting_config_keeps_same_expected_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_config_has_expected_top_level_keys": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt54mini_plain_2.test_gen::test_server_default_value",
+    "zz_gpt54mini_plain_2.test_gen::test_server_looks_like_ipv4_address"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_cameras_are_strings": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_user_default_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_server_looks_like_ipv4_address": {
+     "pass": 42,
+     "fail": 18
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_cameras_default_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_module_reimport_preserves_config_contents": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_cameras_list_order_is_preserved": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_debug_default_value_is_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_config_is_a_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_download_path_default_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_cameras_is_a_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_config_contains_no_extra_keys": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_password_default_value_is_empty_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_server_default_value": {
+     "pass": 48,
+     "fail": 12
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_config_has_expected_keys": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_download_path_looks_like_relative_directory": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt54mini_plain_3.test_gen::test_config_copy_can_be_modified_without_affecting_original",
+    "zz_gpt54mini_plain_3.test_gen::test_server_value"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_3.test_gen::test_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_config_is_a_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_each_camera_id_is_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_cameras_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_cameras_contains_two_items": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_server_is_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_download_path_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_debug_is_bool": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_config_values_match_expected_types": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_user_is_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_config_has_expected_keys": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_server_value": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_user_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_password_value_is_empty_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_debug_value_is_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_config_copy_can_be_modified_without_affecting_original": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt54mini_plain_4.test_gen::test_server_value"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_4.test_gen::test_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_cameras_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_user_is_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_debug_value_and_type": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_user_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_server_is_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_camera_entries_are_strings": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_server_value": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_password_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_download_path_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_config_has_expected_keys": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_config_is_a_dictionary": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_haiku_plain_1.test_gen::test_server_is_private_network_address",
+    "zz_haiku_plain_1.test_gen::test_server_is_valid_ipv4_address"
+   ],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_server_is_private_network_address": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_haiku_plain_1.test_gen::test_each_expected_key_is_present[server]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_camera_ids_are_strings": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_server_is_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_camera_ids_match_expected_values": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_download_path_ends_with_separator": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_config_has_expected_keys": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_cameras_list_is_nonempty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_each_expected_key_is_present[password]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_each_expected_key_is_present[downloadPath]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_debug_is_bool": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_config_is_json_serializable": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_each_expected_key_is_present[user]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_download_path_is_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_each_expected_key_is_present[debug]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_user_is_nonempty_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_no_value_is_none": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_each_expected_key_is_present[cameras]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_server_is_valid_ipv4_address": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_haiku_plain_1.test_gen::test_camera_ids_are_unique": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_password_is_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_camera_ids_are_numeric": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_haiku_plain_2.test_gen::test_config_values_have_expected_defaults",
+    "zz_haiku_plain_2.test_gen::test_server_is_valid_ipv4_address"
+   ],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_each_expected_key_is_present[debug]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_debug_is_boolean": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_password_is_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_config_has_exactly_expected_keys": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_each_expected_key_is_present[server]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_config_values_have_expected_defaults": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_haiku_plain_2.test_gen::test_cameras_entries_are_numeric_strings": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_cameras_have_no_duplicates": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_server_is_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_download_path_is_string_ending_with_separator": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_user_is_non_empty_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_server_is_not_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_reimporting_config_returns_same_object": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_cameras_is_not_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_config_is_json_serializable": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_each_expected_key_is_present[user]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_server_is_valid_ipv4_address": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_haiku_plain_2.test_gen::test_each_expected_key_is_present[cameras]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_each_expected_key_is_present[password]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_each_expected_key_is_present[downloadPath]": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_haiku_plain_3.test_gen::test_server_is_valid_ipv4_address"
+   ],
+   "tests": {
+    "zz_haiku_plain_3.test_gen::test_required_key_present[cameras]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_camera_entries_are_strings": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_server_is_valid_ipv4_address": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_haiku_plain_3.test_gen::test_camera_entries_are_numeric_identifiers": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_camera_entries_are_unique": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_required_key_present[user]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_config_has_exactly_required_keys": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_debug_is_bool": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_password_is_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_required_key_present[server]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_required_key_present[debug]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_cameras_is_not_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_server_is_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_download_path_is_relative_string_ending_with_separator": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_required_key_present[downloadPath]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_user_is_nonempty_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_required_key_present[password]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_server_is_not_empty": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_haiku_plain_4.test_gen::test_server_is_valid_ipv4_address",
+    "zz_haiku_plain_4.test_gen::test_server_value"
+   ],
+   "tests": {
+    "zz_haiku_plain_4.test_gen::test_config_has_exactly_expected_keys": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_cameras_is_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_each_expected_key_present[server]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_cameras_elements_are_strings": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_server_is_valid_ipv4_address": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_haiku_plain_4.test_gen::test_server_is_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_download_path_is_string_ending_with_separator": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_config_can_be_deep_copied_without_loss": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_debug_value_is_true": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_user_is_nonempty_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_cameras_not_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_each_expected_key_present[cameras]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_config_has_no_extra_keys": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_debug_is_bool": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_cameras_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_server_value": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_haiku_plain_4.test_gen::test_each_expected_key_present[downloadPath]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_each_expected_key_present[password]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_each_expected_key_present[debug]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_cameras_elements_are_numeric_ids": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_cameras_are_unique": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_each_expected_key_present[user]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_password_is_string": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_sonnet_plain_1.test_gen::test_config_is_same_object_on_import",
+    "zz_sonnet_plain_1.test_gen::test_config_mutation_is_visible_through_module",
+    "zz_sonnet_plain_1.test_gen::test_deepcopy_is_independent_of_original",
+    "zz_sonnet_plain_1.test_gen::test_reload_restores_defaults_after_mutation",
+    "zz_sonnet_plain_1.test_gen::test_server_is_valid_ipv4_address",
+    "zz_sonnet_plain_1.test_gen::test_server_value"
+   ],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_config_mutation_is_visible_through_module": {
+     "pass": 32,
+     "fail": 28
+    },
+    "zz_sonnet_plain_1.test_gen::test_config_is_not_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_download_path_value_and_type": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_password_is_string_and_default_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_cameras_are_numeric_and_unique": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_cameras_values": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_config_is_same_object_on_import": {
+     "pass": 29,
+     "fail": 31
+    },
+    "zz_sonnet_plain_1.test_gen::test_user_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_server_is_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_server_is_valid_ipv4_address": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_1.test_gen::test_config_has_exactly_expected_keys": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_deepcopy_is_independent_of_original": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_1.test_gen::test_cameras_is_list_of_strings": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_config_is_a_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_reload_restores_defaults_after_mutation": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_1.test_gen::test_server_value": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_1.test_gen::test_debug_is_bool": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_download_path_ends_with_slash": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_sonnet_plain_2.test_gen::test_config_reload_restores_defaults",
+    "zz_sonnet_plain_2.test_gen::test_config_same_object_after_reimport",
+    "zz_sonnet_plain_2.test_gen::test_server_looks_like_ipv4",
+    "zz_sonnet_plain_2.test_gen::test_server_value"
+   ],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_server_is_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_config_same_object_after_reimport": {
+     "pass": 27,
+     "fail": 33
+    },
+    "zz_sonnet_plain_2.test_gen::test_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_user_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_config_not_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_password_is_string_and_default_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_download_path_ends_with_slash": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_config_reload_restores_defaults": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_2.test_gen::test_config_is_mutable_dict_copy_independent": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_server_value": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_2.test_gen::test_cameras_is_list_of_strings": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_cameras_are_numeric_and_unique": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_config_has_expected_keys": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_download_path_value_and_type": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_config_values_have_expected_types": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_server_looks_like_ipv4": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_2.test_gen::test_debug_is_bool_true": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_cameras_default_values": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_sonnet_plain_3.test_gen::test_config_deepcopy_is_independent",
+    "zz_sonnet_plain_3.test_gen::test_server_default_value",
+    "zz_sonnet_plain_3.test_gen::test_server_is_valid_ipv4_address"
+   ],
+   "tests": {
+    "zz_sonnet_plain_3.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_cameras_is_list_of_strings": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_config_has_expected_keys": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_server_default_value": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_3.test_gen::test_password_is_string_and_empty_by_default": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_cameras_default_values": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_config_not_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_config_deepcopy_is_independent": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_3.test_gen::test_cameras_are_numeric_and_unique": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_download_path_is_string_with_trailing_slash": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_config_mutation_is_reflected_and_can_be_restored": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_debug_is_bool": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_server_is_valid_ipv4_address": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_3.test_gen::test_user_default": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_server_is_non_empty_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_config_is_same_object_on_reimport": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 28,
+   "od_test": {
+    "pass": 28,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_config::test_envvar": {
+     "dev_first": 20,
+     "gen_first": 12
+    }
+   },
+   "gen_flaky": [
+    "zz_sonnet_plain_4.test_gen::test_module_exposes_same_object",
+    "zz_sonnet_plain_4.test_gen::test_reload_restores_defaults_after_mutation",
+    "zz_sonnet_plain_4.test_gen::test_server_default_value",
+    "zz_sonnet_plain_4.test_gen::test_server_is_valid_ipv4_address"
+   ],
+   "tests": {
+    "zz_sonnet_plain_4.test_gen::test_server_default_value": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_4.test_gen::test_debug_is_bool_and_true": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_cameras_is_list_of_strings": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_cameras_default_values": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_download_path_is_string_with_default": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_user_is_string_and_default": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_config_is_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_server_is_valid_ipv4_address": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_4.test_gen::test_cameras_are_numeric_and_unique": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_download_path_ends_with_slash": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_module_exposes_same_object": {
+     "pass": 31,
+     "fail": 29
+    },
+    "zz_sonnet_plain_4.test_gen::test_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_reload_restores_defaults_after_mutation": {
+     "pass": 28,
+     "fail": 32
+    },
+    "zz_sonnet_plain_4.test_gen::test_server_is_non_empty_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_password_is_string_default_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_deepcopy_is_independent": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_config_not_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_config_has_expected_keys": {
+     "pass": 60
+    },
+    "tests.test_config::test_defaultvar": {
+     "pass": 60
+    },
+    "tests.test_config::test_envvar": {
+     "pass": 28,
+     "fail": 32
+    }
+   }
+  }
+ },
+ "seconds": 196.7
+}

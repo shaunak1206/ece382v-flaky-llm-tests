@@ -1,0 +1,1398 @@
+{
+ "project": "BT-Tracker",
+ "install_ok": true,
+ "dev_file": "Tracker/tests/test_event.py",
+ "od_test": "test_object",
+ "runs": 60,
+ "configs": {
+  "baseline": {
+   "runs_done": 60,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 34
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_event_check_decorator_resets_finished_flag_after_sleep",
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_can_be_manually_cleared_directly",
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_property_returns_correct_value",
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_setter_false_does_not_clear_finish",
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_setter_only_accepts_true_to_set",
+    "zz_gpt41mini_plain_1.test_gen::test_setting_status_finished_false_does_not_change_finished",
+    "zz_gpt41mini_plain_1.test_gen::test_status_initial_finished_is_false"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_property_returns_correct_value": {
+     "pass": 10,
+     "fail": 50
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_check_decorator_preserves_function_identity": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_check_decorator_works_with_methods": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_check_decorator_resets_finished_flag_after_sleep": {
+     "pass": 42,
+     "fail": 18
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_check_decorator_sets_finished_flag": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setting_status_finished_true_updates_finished": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_initial_finished_false": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_setter_only_accepts_true_to_set": {
+     "fail": 45,
+     "pass": 15
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_can_be_manually_cleared_directly": {
+     "fail": 51,
+     "pass": 9
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_finished_property_and_setter_type": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_setter_true_sets_finish": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_event_finished_setter_false_does_not_clear_finish": {
+     "fail": 50,
+     "pass": 10
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_status_initial_finished_is_false": {
+     "fail": 25,
+     "pass": 35
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_decorator_can_handle_function_raising_exception": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_multiple_event_instances_independent_finish_flags": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setting_status_finished_false_does_not_change_finished": {
+     "fail": 49,
+     "pass": 11
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_decorator_multiple_calls_resets_finished": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_2.test_gen::test_check_decorator_sets_class_finished_during_call",
+    "zz_gpt41mini_plain_2.test_gen::test_check_decorator_sets_class_finished_true_then_false",
+    "zz_gpt41mini_plain_2.test_gen::test_class_attribute_finished_exists_and_default_false",
+    "zz_gpt41mini_plain_2.test_gen::test_decorator_does_not_affect_function_exception",
+    "zz_gpt41mini_plain_2.test_gen::test_event_finished_setter_allows_true_then_ignores_false",
+    "zz_gpt41mini_plain_2.test_gen::test_event_finished_setter_ignores_false",
+    "zz_gpt41mini_plain_2.test_gen::test_finished_property_is_read_write",
+    "zz_gpt41mini_plain_2.test_gen::test_finished_property_returns_private_finish",
+    "zz_gpt41mini_plain_2.test_gen::test_finished_setter_accepts_only_boolean_true",
+    "zz_gpt41mini_plain_2.test_gen::test_finished_setter_only_allows_true_values",
+    "zz_gpt41mini_plain_2.test_gen::test_setting_event_finished_to_true_only_when_true_sets_private"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_status_singleton_event_instance": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_check_decorator_can_be_used_on_classmethod": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_check_decorator_returns_function_result": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_check_decorator_sets_class_finished_true_then_false": {
+     "pass": 48,
+     "fail": 12
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_finished_property_is_read_write": {
+     "fail": 56,
+     "pass": 4
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setting_event_finished_to_true_only_when_true_sets_private": {
+     "fail": 48,
+     "pass": 12
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_event_initial_finished_false": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_check_decorator_sets_class_finished_during_call": {
+     "pass": 51,
+     "fail": 9
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_event_finished_setter_allows_true": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_check_decorator_can_wrap_methods_with_args_and_kwargs": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_event_finished_setter_ignores_false": {
+     "fail": 45,
+     "pass": 15
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_finished_property_returns_private_finish": {
+     "fail": 52,
+     "pass": 8
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_decorator_does_not_affect_function_exception": {
+     "pass": 49,
+     "fail": 11
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_finished_setter_only_allows_true_values": {
+     "fail": 44,
+     "pass": 16
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_event_finished_setter_allows_true_then_ignores_false": {
+     "fail": 50,
+     "pass": 10
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_check_decorator_can_be_used_on_staticmethod": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_decorator_preserves_function_name_and_doc": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_finished_setter_accepts_only_boolean_true": {
+     "fail": 50,
+     "pass": 10
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_class_attribute_finished_exists_and_default_false": {
+     "pass": 54,
+     "fail": 6
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_multiple_event_instances_independent_finished": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_3.test_gen::test_event_finished_property_read_and_write",
+    "zz_gpt41mini_plain_3.test_gen::test_event_finished_setter_only_allows_true",
+    "zz_gpt41mini_plain_3.test_gen::test_finished_property_setter_does_not_accept_non_boolean",
+    "zz_gpt41mini_plain_3.test_gen::test_finished_setter_type_enforcement",
+    "zz_gpt41mini_plain_3.test_gen::test_setting_finished_false_does_not_reset_true_state"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_3.test_gen::test_setting_finished_true_multiple_times_idempotent": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_finished_property_is_boolean": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_finished_setter_type_enforcement": {
+     "pass": 11,
+     "fail": 49
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_event_check_wrapper_uses_cls_finished_attribute": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_check_wrapper_returns_original_function_result": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_check_decorator_class_attribute_does_not_affect_instance_finished": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_finished_property_is_instance_property_not_class_attribute": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_check_wrapper_preserves_function_signature": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_check_decorator_calls_function_with_args_and_kwargs": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_check_decorator_sets_finished_true_and_false": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setting_finished_false_does_not_reset_true_state": {
+     "fail": 55,
+     "pass": 5
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_decorator_works_with_multiple_calls": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_finished_getter_and_setter_do_not_affect_other_attributes": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_event_initial_finished_false": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_finished_property_setter_does_not_accept_non_boolean": {
+     "fail": 50,
+     "pass": 10
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_check_decorator_sleep_duration": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_event_class_check_returns_decorator_that_wraps_function": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_status_is_instance_of_event": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_event_finished_property_read_and_write": {
+     "fail": 53,
+     "pass": 7
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_event_finished_setter_only_allows_true": {
+     "fail": 54,
+     "pass": 6
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_check_decorator_preserves_function_metadata": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_changes_class_finished_attribute_only",
+    "zz_gpt41mini_plain_4.test_gen::test_done_state_different_per_instance_and_class_attribute_unaffected",
+    "zz_gpt41mini_plain_4.test_gen::test_event_finished_getter_reflects_internal_state",
+    "zz_gpt41mini_plain_4.test_gen::test_event_finished_setter_does_not_set_when_false",
+    "zz_gpt41mini_plain_4.test_gen::test_event_finished_setter_only_allows_true",
+    "zz_gpt41mini_plain_4.test_gen::test_finished_property_is_read_only_except_with_true_setter",
+    "zz_gpt41mini_plain_4.test_gen::test_finished_property_with_nonbool_input_has_no_effect"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_changes_class_finished_attribute_only": {
+     "fail": 10,
+     "pass": 50
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_event_finished_setter_does_not_set_when_false": {
+     "pass": 9,
+     "fail": 51
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_returns_original_func_result": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_event_finished_getter_reflects_internal_state": {
+     "fail": 52,
+     "pass": 8
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_finished_property_is_read_only_except_with_true_setter": {
+     "fail": 54,
+     "pass": 6
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_change_does_not_affect_instance_finished_property": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_can_decorate_function_with_side_effects": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_finished_property_returns_exact_bool_value": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_can_wrap_function_with_args_and_kwargs": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_status_is_instance_of_event": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_event_finished_setter_only_allows_true": {
+     "fail": 55,
+     "pass": 5
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_event_finished_private_attribute_encapsulation": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_returns_value_and_resets_class_finished": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_event_initial_finished_is_false": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_done_state_different_per_instance_and_class_attribute_unaffected": {
+     "pass": 53,
+     "fail": 7
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_finished_property_with_nonbool_input_has_no_effect": {
+     "fail": 51,
+     "pass": 9
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_check_decorator_sets_finished_true_then_false_after_delay": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_finished_setter_does_not_reset_true_to_false": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_finished_setter_ignores_false_when_already_false": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_check_decorator_leaves_instance_finished_accessible": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_check_decorator_can_wrap_bound_method": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_check_decorator_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_default_status_is_not_finished": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_check_decorator_calls_sleep_with_point_one": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_status_singleton_is_instance_of_event": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_new_event_defaults_to_not_finished": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_status_and_new_event_are_different_instances": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_event_finished_is_a_property_on_class_before_wrapping": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_check_decorator_overwrites_class_finished_attribute": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_finished_setter_accepts_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_check_decorator_returns_original_result": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_check_decorator_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_multiple_instances_do_not_share_finish_state": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_finished_setter_ignores_false_when_currently_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_check_decorator_calls_sleep_with_point_one": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_status_starts_not_finished": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_check_decorator_leaves_class_finished_false_after_call": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_finished_setter_ignores_false_when_currently_false": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_check_decorator_on_classmethod_like_function": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_check_decorator_returns_function_result": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_check_decorator_can_be_used_on_bound_method": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_new_event_starts_not_finished": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_finished_setter_accepts_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_check_decorator_wraps_exception_and_propagates": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_3.test_gen::test_status_is_singleton_event_instance": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_finished_setter_sets_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_decorator_executes_function_and_returns_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_decorator_works_with_keyword_arguments": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_status_initial_finished_is_false": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_decorator_returns_original_result": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_decorator_sets_class_attribute_finished": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_decorator_can_be_called_multiple_times": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_finished_setter_ignores_false_assignment": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_finished_setter_ignores_non_true_truthy_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_decorator_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_finished_setter_does_not_reset_after_being_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_decorator_calls_sleep_with_point_one": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_decorator_toggles_finished_state": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_4.test_gen::test_check_decorator_returns_original_result": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_new_event_instances_start_not_finished": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_status_is_singleton_event_instance": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_check_decorator_sets_class_finished_attribute_temporarily": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_status_starts_not_finished": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_finished_property_reflects_internal_state": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_finished_setter_sets_true": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_finished_setter_does_not_clear_true_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_check_decorator_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_check_decorator_can_be_used_multiple_times": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_finished_setter_ignores_false_when_currently_false": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_check_decorator_passes_args_and_kwargs": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_check_decorator_does_not_change_return_value_when_sleep_patched": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_setting_finished_true_twice_stays_true": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_resets_finished_to_false_after_call": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_reimporting_status_returns_same_singleton": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_does_not_sleep_when_function_raises": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_sleeps_once_for_0_1_seconds_after_call": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_returns_none_when_wrapped_function_returns_none": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_wrapper_is_callable": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setting_truthy_non_bool_does_not_mark_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setting_finished_true_updates_private_flag": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_reports_finished_true_during_sleep": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_new_event_is_not_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_preserves_function_docstring": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setting_string_does_not_mark_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_calls_wrapped_function_exactly_once_per_call": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_returns_wrapped_function_result": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_new_event_stores_false_in_private_flag": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_preserves_function_name": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_module_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setting_finished_false_on_new_event_keeps_it_unfinished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_propagates_exceptions_from_wrapped_function": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setting_finished_true_marks_event_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_instances_have_independent_finished_state": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setting_finished_false_is_ignored_after_true": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_decorator_can_wrap_multiple_functions": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setting_none_does_not_mark_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_check_passes_positional_and_keyword_arguments": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_check_returns_wrapped_function_result": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_finished_cannot_be_reset_to_false_once_true": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_check_sleeps_for_point_one_seconds": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_new_event_initializes_backing_flag_to_false": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_non_bool_true_values_are_ignored[value5]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_non_bool_true_values_are_ignored[]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_non_bool_true_values_are_ignored[yes]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_instances_have_independent_state": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_truthy_value_does_not_override_already_true_state": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_module_level_status_starts_not_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_non_bool_true_values_are_ignored[1]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setting_finished_true_twice_stays_true": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_finished_is_a_property_on_the_class": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_check_propagates_exceptions_from_wrapped_function": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setting_finished_true_marks_event_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setting_finished_false_on_fresh_event_keeps_false": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_check_wraps_function_called_multiple_times": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_check_preserves_wrapped_function_metadata": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_non_bool_true_values_are_ignored[0]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_check_clears_flag_after_call": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_new_event_is_not_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_check_sets_flag_true_during_sleep": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_module_level_status_is_an_event_instance": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_non_bool_true_values_are_ignored[None]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_check_passes_args_and_kwargs_through": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_3.test_gen::test_setting_string_is_ignored": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_module_level_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setting_none_is_ignored": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_check_does_not_replace_finished_property": {
+     "skip": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_check_propagates_exceptions": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setting_true_marks_event_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setting_false_after_true_is_ignored": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setting_false_on_new_event_keeps_it_unfinished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_check_returns_wrapped_function_result": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setter_still_ignores_false_after_check_call": {
+     "skip": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_check_passes_positional_and_keyword_arguments": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_new_event_is_not_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_check_runs_function_before_sleeping": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setting_truthy_non_bool_is_ignored": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_check_leaves_new_event_unfinished_afterwards": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_check_preserves_function_name_and_doc": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_check_sleeps_once_for_point_one_seconds": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_instances_have_independent_state": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_4.test_gen::test_status_is_module_singleton": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setting_non_bool_values_is_ignored[value4]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_forwards_args_and_kwargs": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_returns_wrapped_result": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_calls_sleep_with_point_one": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_propagates_exceptions_and_skips_sleep": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setting_finished_true_marks_event_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_runs_function_before_sleep": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setting_non_bool_values_is_ignored[None]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setting_non_bool_values_is_ignored[1]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_returns_new_callable_not_original": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setting_non_bool_values_is_ignored[0]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setting_non_bool_values_is_ignored[yes]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_marks_event_finished_during_sleep": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_wrapper_can_be_called_repeatedly": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_new_event_is_not_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setting_finished_false_after_true_is_ignored": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_instances_have_independent_status": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_check_keeps_finished_property_intact": {
+     "skip": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_status_starts_not_finished": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_private_flag_defaults_to_false": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_set_false_after_true_does_not_reset": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_check_sets_class_finished_true_during_sleep": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_set_finished_true": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_check_sleeps_once_for_tenth_of_second": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_new_event_not_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_set_true_repeatedly_is_idempotent": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_truthy_non_true_values_ignored": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_check_passes_args_and_kwargs": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_new_event_internal_flag_false": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_set_false_on_fresh_event_stays_false": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_check_preserves_metadata": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_finished_is_property_on_class": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_instances_are_independent": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_status_setter_works": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_check_returns_function_result": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_check_propagates_exception_without_sleeping": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_check_does_not_touch_status_instance_flag": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_check_sets_class_finished_true_during_sleep": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setting_false_on_fresh_event_stays_false": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_internal_flag_initially_false": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_module_level_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_new_event_not_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_can_wrap_multiple_functions": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_instances_are_independent": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_truthy_non_true_values_are_ignored": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_sleeps_a_tenth_of_a_second": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_leaves_class_finished_false_afterwards": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_passes_args_and_kwargs": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_status_finished_can_be_set": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_calls_function_exactly_once": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_propagates_exception_without_sleeping": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_returns_wrapped_result": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setting_true_marks_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setting_false_does_not_reset_once_true": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_3.test_gen::test_check_sets_class_finished_false_afterwards": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_check_called_multiple_times": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_check_returns_wrapped_result": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_check_sets_class_finished_true_during_sleep": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_check_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setting_true_marks_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_check_propagates_exception_without_sleeping": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_module_status_initially_not_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_module_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_check_sleeps_for_a_tenth_of_a_second": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setting_false_on_fresh_event_stays_false": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_status_is_same_object_on_reimport": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_internal_flag_initial_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_new_event_not_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setting_false_does_not_reset_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setting_truthy_non_true_value_is_ignored": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_check_passes_args_and_kwargs": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_instances_are_independent": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 29,
+   "od_test": {
+    "pass": 26,
+    "fail": 34,
+    "error": 0
+   },
+   "dev_failing": {
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "dev_first": 19,
+     "gen_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_4.test_gen::test_setting_false_on_fresh_event_stays_false": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_non_true_values_are_ignored[yes]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_resets_finished_to_false_afterwards": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_non_true_values_are_ignored[value3]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_new_event_not_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_non_true_values_are_ignored[0]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_setting_true_marks_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_module_status_is_event_instance": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_non_true_values_are_ignored[1]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_on_subclass_sets_attribute_on_subclass_only": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_does_not_signal_before_function_runs": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_sleeps_for_a_tenth_of_a_second": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_sets_finished_true_during_sleep": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_can_be_called_multiple_times": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_non_true_values_are_ignored[None]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_instances_are_independent": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_returns_function_result": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_exception_propagates_without_signal": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_status_starts_unfinished_and_can_be_set": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_setting_false_does_not_reset_finished": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_preserves_function_metadata": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_passes_args_and_kwargs": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_state_change": {
+     "pass": 60
+    },
+    "Tracker.tests.test_event.TestEvent::test_object": {
+     "pass": 26,
+     "fail": 34
+    }
+   }
+  }
+ },
+ "seconds": 425.5
+}

@@ -1,0 +1,162 @@
+{
+ "by_project": {
+  "docci": {
+   "suites": 32,
+   "stress_suites_with_flaky": 13,
+   "plain_suites_with_flaky": 14,
+   "stress_flaky": 20,
+   "plain_flaky": 18
+  },
+  "event-bus": {
+   "suites": 32,
+   "stress_suites_with_flaky": 3,
+   "plain_suites_with_flaky": 3,
+   "stress_flaky": 10,
+   "plain_flaky": 10
+  },
+  "kevinarpe-rambutan3": {
+   "suites": 31,
+   "stress_suites_with_flaky": 3,
+   "plain_suites_with_flaky": 6,
+   "stress_flaky": 3,
+   "plain_flaky": 6
+  },
+  "kindle-maker": {
+   "suites": 32,
+   "stress_suites_with_flaky": 1,
+   "plain_suites_with_flaky": 1,
+   "stress_flaky": 11,
+   "plain_flaky": 11
+  },
+  "piripherals": {
+   "suites": 31,
+   "stress_suites_with_flaky": 0,
+   "plain_suites_with_flaky": 0,
+   "stress_flaky": 0,
+   "plain_flaky": 0
+  },
+  "python-timemarker": {
+   "suites": 32,
+   "stress_suites_with_flaky": 4,
+   "plain_suites_with_flaky": 4,
+   "stress_flaky": 6,
+   "plain_flaky": 6
+  }
+ },
+ "by_model": {
+  "haiku": {
+   "suites": 48,
+   "stress_suites_with_flaky": 1,
+   "plain_suites_with_flaky": 2,
+   "stress_flaky": 1,
+   "plain_flaky": 2,
+   "kept_stress": 1017
+  },
+  "sonnet": {
+   "suites": 48,
+   "stress_suites_with_flaky": 2,
+   "plain_suites_with_flaky": 2,
+   "stress_flaky": 12,
+   "plain_flaky": 12,
+   "kept_stress": 937
+  },
+  "gpt41mini": {
+   "suites": 46,
+   "stress_suites_with_flaky": 9,
+   "plain_suites_with_flaky": 12,
+   "stress_flaky": 13,
+   "plain_flaky": 15,
+   "kept_stress": 498
+  },
+  "gpt54mini": {
+   "suites": 48,
+   "stress_suites_with_flaky": 12,
+   "plain_suites_with_flaky": 12,
+   "stress_flaky": 24,
+   "plain_flaky": 22,
+   "kept_stress": 634
+  }
+ },
+ "new_flaky": [
+  {
+   "project": "docci",
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_xlsx_to_bytes_multiple_times_produces_same_bytes",
+   "plain_kind": "stable",
+   "stress_fail": 2,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 3091 diff: b'\\x9a' != b'\\x9b'\n  Full diff:\n    (\n     b'PK\\x03\\x04\\x14\\x00\\x0"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_heldout_1",
+   "test": "test_xlsx_to_file_returns_fileattachment_with_correct_name_and_content",
+   "plain_kind": "stable",
+   "stress_fail": 1,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 209 diff: b':' != b'\\x9b'\n  Full diff:\n    (\n     b'PK\\x03\\x04\\x14\\x00\\x00\\x0"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_heldout_3",
+   "test": "test_xlsx_to_bytes_and_to_file_consistent",
+   "plain_kind": "stable",
+   "stress_fail": 2,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'C' != b'D'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\x00\\x0"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt41mini_heldout_6",
+   "test": "test_xlsx_to_bytes_repeated_calls_produce_equal_bytes",
+   "plain_kind": "stable",
+   "stress_fail": 1,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 209 diff: b'\\xad' != b'\\x0c'\n  Full diff:\n    (\n     b'PK\\x03\\x04\\x14\\x00\\x00"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_heldout_1",
+   "test": "test_xlsx_to_file_content_matches_xlsx_to_bytes",
+   "plain_kind": "stable",
+   "stress_fail": 1,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'b' != b'c'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\x00\\x0"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_heldout_3",
+   "test": "test_xlsx_to_file_content_matches_xlsx_to_bytes",
+   "plain_kind": "stable",
+   "stress_fail": 1,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'z' != b'y'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\x00\\x0"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_heldout_4",
+   "test": "test_xlsx_to_file_sets_content_to_xlsx_bytes",
+   "plain_kind": "stable",
+   "stress_fail": 1,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'I' != b'J'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\x00\\x0"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_xlsx_to_file_returns_independent_bytes_for_separate_calls",
+   "plain_kind": "stable",
+   "stress_fail": 2,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'\\xbc' != b'\\xbd'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_xlsx_to_file_uses_xlsx_to_bytes_content",
+   "plain_kind": "stable",
+   "stress_fail": 2,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'\\xb3' != b'\\xb2'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_heldout_8",
+   "test": "test_xlsx_to_file_content_matches_xlsx_to_bytes",
+   "plain_kind": "stable",
+   "stress_fail": 1,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'q' != b'p'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\x00\\x0"
+  }
+ ]
+}

@@ -1,0 +1,1871 @@
+{
+ "project": "NestedDictionary",
+ "install_ok": true,
+ "dev_file": "easy_dict/tests/test_01_default.py",
+ "od_test": "test_del",
+ "runs": 60,
+ "configs": {
+  "baseline": {
+   "runs_done": 60,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "dev_first": 37
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_setdefault_simple_key_new": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_call_returns_underlying_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_init_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_anchor_trunk_exists_but_not_dict_value_error": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_delitem_removes_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_repr_contains_class_and_data": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setdefault_no_branches_keyerror": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_asciify_empty_dict_returns_empty_list": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_getitem_nested_key_slash_access": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_asciify_multiple_branches": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_anchor_trunk_not_exist_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setitem_nested_key_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setitem_list_key_ambiguous_raises": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_getitem_existing_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setitem_nested_key_slash": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setdefault_nested_key_tuple": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setdefault_simple_key_existing": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setitem_nonexistent_key_adds_at_root": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_init_empty": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_asciify_simple_dict": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setdefault_nested_key_list": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_anchor_adds_branch_to_trunk": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_setitem_existing_root_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_contains": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_getitem_nested_key_list_access": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_private_isstring_containing_char": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_len_and_iter": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_getitem_nonexistent_key_raises": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_delitem_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_getitem_nested_slash_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iter_and_len": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_asciify_empty_dict_returns_empty_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_init_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_contains_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_getitem_existing_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setitem_new_key_at_root": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_repr_contains_class_and_data": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_init_empty": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_call_returns_internal_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_getitem_nested_key_returns_tuple": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setitem_nested_list_key_existing_path": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_asciify_basic_tree": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setdefault_simple_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setdefault_nested_key_with_tuple": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_anchor_raises_keyerror_when_trunk_not_found": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_anchor_creates_branch_value": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_getitem_nonexisting_key_raises": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setitem_existing_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setdefault_raises_keyerror_empty_branch": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setitem_nested_slash_key_existing_path": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_anchor_value_not_dict_and_logical_false_replaces_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_getitem_nested_list_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setdefault_nested_key_list": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setitem_nested_list_key_ambiguous_raises": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_3.test_gen::test_setitem_ambiguous_keys_raises_keyerror": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setdefault_empty_branches_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_getitem_nested_key_as_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setitem_simple_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setdefault_simple_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_isstring_containing_char_static_method": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_repr_contains_class_name_and_data": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_call_returns_underlying_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setdefault_nested_key_list_new_branch": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_anchor_normal_anchors_value": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setdefault_nested_key_list_existing_branch": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setitem_nested_key_as_slash_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_init_empty": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_contains_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_init_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_anchor_non_dict_value_raises_valueerror": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setitem_nested_key_as_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_getitem_deep_raises_keyerror": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_delitem_removes_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_anchor_nonexistent_root_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_getitem_returns_tuple_if_multiple_nested_keys": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_len_and_iter": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_getitem_simple_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_getitem_nested_key_as_slash_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_setitem_deep_new_key_creates_at_root": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_4.test_gen::test_setdefault_raises_keyerror_with_empty_branches_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_setdefault_nested_key_list": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_delitem_removes_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_private___isstring_containing_char": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_setitem_simple_key": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_setitem_nested_key_slash_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_setitem_add_new_key_to_root_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_anchor_raises_keyerror_when_trunk_not_found": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_init_without_initial_value": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_repr_contains_class_name_and_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_getitem_nested_key_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_getitem_key_at_root": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_anchor_replaces_logical_false_with_dict": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_setdefault_simple_key": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_anchor_adds_branch_to_existing_trunk": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_getitem_nested_key_slash_string": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_setitem_nested_key_list": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_init_with_initial_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_call_returns_internal_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_asciify_basic_tree": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_len_and_iter": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_contains_operator": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_setitem_nested_key_raises_keyerror_on_ambiguous_branches": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_getitem_key_not_found_raises_keyerror": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_contains_and_iteration_over_keys": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_delitem_removes_root_key": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_repr_includes_module_name_and_contents": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_anchor_replaces_falsey_trunk_value_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_init_and_basic_mapping_behavior": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_setitem_updates_nested_value_via_list_path": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_asciify_renders_expected_tree_structure": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_setdefault_simple_key_sets_default_when_missing": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_setdefault_nested_list_path_sets_leaf_value": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_getitem_nested_via_slash_path": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_anchor_adds_nested_branch_under_existing_trunk": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_getitem_returns_tuple_for_multiple_matches": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_setitem_updates_nested_value_via_slash_path": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_call_returns_underlying_dict_and_is_live": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_getitem_nested_via_list_path": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_setitem_creates_root_key_when_no_existing_branch_found": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_anchor_on_missing_trunk_raises_key_error": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_anchor_raises_keyerror_when_trunk_is_missing": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_asciify_empty_dict_returns_empty_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_getitem_slash_path_traversal": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_anchor_creates_nested_branch_under_existing_trunk": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_setitem_nested_path_updates_deep_value_with_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_delitem_removes_root_key": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_setitem_direct_key_updates_root_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_getitem_nested_search_returns_tuple_when_multiple_matches": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_anchor_raises_valueerror_on_truthy_non_dict_trunk": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_setdefault_list_path_raises_on_empty_branches": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_getitem_direct_key_returns_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_getitem_list_path_traversal": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_anchor_replaces_falsy_non_dict_trunk_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_getitem_nested_search_returns_scalar_when_single_match": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_setitem_nested_path_updates_deep_value_with_slash_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_asciify_returns_expected_tree_lines": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_setdefault_list_path_creates_nested_branch": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_getitem_missing_key_raises_keyerror": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_init_and_basic_mapping_protocol": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_setdefault_simple_key_uses_default_when_missing": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_3.test_gen::test_contains_checks_only_top_level_keys": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_repr_includes_module_name_and_data": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_setitem_updates_top_level_key": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_setitem_updates_existing_nested_key_via_list_path": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_getitem_nested_key_lookup_with_slash_path": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_init_and_basic_mapping_protocol": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_asciify_renders_nested_structure": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_setitem_updates_existing_nested_key_via_slash_path": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_getitem_nested_key_lookup_with_list_path": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_anchor_adds_branch_under_existing_trunk": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_getitem_raises_keyerror_for_missing_key": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_anchor_raises_keyerror_when_trunk_is_missing": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_setdefault_nested_path_creates_leaf_value": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_delitem_removes_top_level_key": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_getitem_nested_key_lookup_by_leaf_name": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_asciify_empty_dict_returns_empty_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_setdefault_top_level_key_uses_default": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_4.test_gen::test_setitem_existing_root_key_updates_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_setdefault_simple_key_sets_default_when_missing": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_repr_contains_module_name_and_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_delitem_removes_key": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_setitem_nested_by_path_creates_update_in_deeper_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_anchor_replaces_none_trunk_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_getitem_with_slash_path_list_lookup": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_asciify_simple_tree_output": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_setitem_list_path_updates_nested_branch": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_getitem_returns_nested_value_by_key": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_anchor_raises_keyerror_when_trunk_missing": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_anchor_adds_branch_to_existing_trunk": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_setdefault_path_can_create_nested_default": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_setitem_missing_top_level_key_adds_key_at_root": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_asciify_empty_dict_returns_empty_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_init_and_basic_mapping_protocol": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_getitem_missing_key_raises_keyerror": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_anchor_raises_valueerror_when_trunk_is_truthy_non_dict": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_setitem_with_slash_path_updates_nested_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_duplicate_keys_in_branches_return_tuple_of_values": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_empty_dict_has_no_items": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_anchor_creates_branch_under_existing_empty_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setdefault_keeps_existing_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setitem_updates_existing_nested_key_in_place": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_key_inside_nested_dict_is_found_without_path": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_root_key_lookup_returns_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_anchor_replaces_falsy_none_trunk_with_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setitem_overwrites_existing_root_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_key_deeply_nested_is_found_without_path": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_len_iter_and_contains_reflect_root_keys": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_slash_separated_path_lookup": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_missing_key_in_empty_dict_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_initial_value_is_copied_not_shared": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_anchor_raises_valueerror_for_truthy_non_dict_trunk": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setdefault_adds_missing_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setitem_adds_new_root_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_repr_shows_module_name_and_contents": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_asciify_renders_sibling_branches": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_setitem_adds_new_key_at_root_when_not_found_nested": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_delitem_removes_root_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_anchor_raises_keyerror_for_missing_trunk": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_list_path_lookup": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_asciify_renders_nested_chain": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_getitem_slash_separated_path": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_delitem_removes_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_init_with_values_exposes_items_and_length": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_anchor_raises_keyerror_when_trunk_missing": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setitem_unknown_key_goes_to_top_level_when_not_nested": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_getitem_list_path": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_anchor_raises_valueerror_for_truthy_non_dict_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_repr_shows_module_name_and_contents": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_getitem_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_getitem_finds_key_in_nested_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setitem_slash_path_with_missing_tip_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_anchor_replaces_falsy_value_with_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_contains_and_iter_only_consider_top_level_keys": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_init_copies_top_level_of_input_mapping": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_getitem_returns_tuple_when_key_matches_in_several_branches": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_anchor_finds_trunk_in_nested_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setitem_slash_path_updates_nested_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setitem_updates_existing_nested_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setitem_adds_new_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setitem_overwrites_existing_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_getitem_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_asciify_siblings_render_vertical_guides": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_asciify_nested_chain_renders_tree": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_setdefault_only_sets_missing_top_level_keys": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_anchor_adds_branch_to_existing_dict_value": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_3.test_gen::test_getitem_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_getitem_finds_nested_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_anchor_truthy_non_dict_trunk_raises_valueerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_asciify_empty_dict_returns_empty_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setitem_slash_path_missing_tip_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_getitem_missing_flat_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_pop_returns_value_and_removes_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_anchor_creates_branch_from_none_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_anchor_creates_branch_from_empty_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setitem_updates_existing_nested_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_asciify_chain_of_two_levels": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_anchor_missing_trunk_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setdefault_sets_only_missing_flat_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_getitem_list_path": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_delitem_removes_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setitem_existing_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_repr_uses_module_name_and_internal_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setitem_slash_path_updates_nested_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_getitem_slash_path": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_setitem_new_key_goes_to_root_when_absent_everywhere": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_anchor_on_nested_trunk": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_init_copies_top_level_of_initial_mapping": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_mapping_iter_len_and_contains": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_4.test_gen::test_setitem_existing_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_init_copies_top_level_mapping": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_init_without_value_is_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_getitem_missing_nested_key_raises_keyerror": {
+     "fail": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_anchor_replaces_falsy_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_delitem_removes_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_getitem_finds_key_in_nested_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setdefault_adds_only_missing_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_asciify_empty_dict_returns_empty_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_getitem_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setitem_existing_nested_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_getitem_list_path": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_len_iter_contains": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setitem_slash_path_missing_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_anchor_creates_branch_under_empty_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setitem_slash_path_updates_nested_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_anchor_non_falsy_value_raises_valueerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_get_returns_default_for_missing_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_asciify_simple_tree": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_setitem_new_top_level_key": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_getitem_slash_path": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_anchor_missing_trunk_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_getitem_multiple_matches_returns_tuple": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_getitem_top_level_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_setitem_existing_root_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_getitem_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_anchor_adds_branch_to_existing_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_getitem_with_slash_path": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_setdefault_simple_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_setitem_with_slash_path_updates_nested_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_anchor_errors": {
+     "fail": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_asciify_deeper_trees": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_anchor_replaces_falsy_value_with_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_init_with_initial_value_and_basic_mapping_protocol": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_anchor_on_nested_trunk": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_setitem_new_key_added_at_root": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_setitem_updates_existing_nested_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_setitem_with_path_to_missing_tip_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_asciify_single_level_children": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_init_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_repr": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_getitem_deep_key_found_without_path": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_asciify_empty_and_flat": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_getitem_root_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_initial_value_is_copied_not_aliased": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_getitem_with_list_path": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_getitem_missing_key_with_nested_dicts_raises_keyerror": {
+     "fail": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_delitem": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_getitem_multiple_matches_returns_tuple": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_lookup_deeply_nested_key_without_path": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setitem_existing_and_new_top_level_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setitem_updates_existing_nested_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_anchor_replaces_falsy_trunk_value_with_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_anchor_adds_branch_to_top_level_trunk": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_call_returns_underlying_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_get_with_default_on_missing_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setitem_new_key_is_added_at_root_when_not_found_deeper": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_asciify_empty_and_flat": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_asciify_deeper_nesting": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_mutable_mapping_behaviour": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_delitem_removes_top_level_key_and_missing_raises": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_repr_contains_module_name_and_content": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_missing_key_in_flat_dict_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_lookup_path_with_missing_trunk_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_construction_with_initial_value_and_basic_access": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_asciify_one_level_nesting": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_lookup_with_list_path": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_initial_value_top_level_is_copied": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_lookup_ambiguous_key_returns_tuple_of_values": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setdefault_with_simple_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_empty_construction": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_anchor_errors": {
+     "fail": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setitem_with_slash_path_updates_nested_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_lookup_with_slash_path": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_setitem_with_path_and_missing_tip_raises_keyerror": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_3.test_gen::test_contains_only_checks_top_level": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_asciify_siblings_under_parent": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_delitem_and_update_and_pop": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_basic_mapping_behaviour": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_lookup_with_list_path_multiple_levels": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_repr_contains_module_name_and_content": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setitem_new_top_level_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_empty_construction": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_lookup_with_slash_path": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_get_returns_default_for_missing_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_anchor_into_existing_dict_and_nested_trunk": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setitem_with_path_updates_nested_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_asciify_empty_and_single": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_duplicate_deep_keys_return_tuple": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setdefault_plain_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setitem_with_path_to_missing_tip_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setitem_updates_nested_key_found_deeper": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_anchor_replaces_falsy_value_with_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setitem_existing_top_level_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setitem_unknown_key_added_at_root_not_nested": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_anchor_default_value_is_none": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_asciify_deep_nesting": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_anchor_errors": {
+     "fail": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_setitem_path_disambiguates_duplicate_keys": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_single_element_list_lookup": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_initial_value_top_level_is_copied": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_deep_lookup_by_leaf_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 27,
+   "od_test": {
+    "pass": 23,
+    "fail": 37,
+    "error": 0
+   },
+   "dev_failing": {
+    "easy_dict.tests.test_01_default::test_del": {
+     "gen_first": 15,
+     "dev_first": 22
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_4.test_gen::test_setdefault_plain_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_setitem_path_updates_nested_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_asciify_empty_and_flat": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_getitem_ambiguous_key_returns_tuple": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_setitem_existing_top_level_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_anchor_adds_branch_to_nested_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_setitem_updates_nested_existing_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_anchor_errors": {
+     "fail": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_setitem_path_with_missing_tip_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_delitem_and_missing_delitem": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_setitem_new_key_added_at_root": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_getitem_missing_key_in_nested_raises_keyerror": {
+     "fail": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_getitem_finds_deeply_nested_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_setitem_new_key_on_empty_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_getitem_missing_key_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_init_with_initial_value_is_copied_at_top_level": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_asciify_deeper_tree": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_getitem_top_level_key": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_init_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_iter_len_contains_only_top_level": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_call_and_repr": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_mutable_mapping_helpers": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_asciify_simple_tree": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_anchor_replaces_falsy_value_and_nested_trunk": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_getitem_slash_path_and_list_path": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_length": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_key": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_set_deep_keys_with_non_bracket": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_quick_assign": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_del": {
+     "pass": 23,
+     "fail": 37
+    },
+    "easy_dict.tests.test_01_default::test_update": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_iter_item": {
+     "pass": 60
+    },
+    "easy_dict.tests.test_01_default::test_setdefault": {
+     "pass": 60
+    }
+   }
+  }
+ },
+ "seconds": 213.9
+}

@@ -1,49 +1,76 @@
 {
  "groups": {
-  "gpt41mini_guard": {
-   "suites": 34,
-   "projects": 17,
-   "tests": 771,
-   "kept": 548,
-   "no_kept": 1,
-   "coverage_mean": 81.5,
-   "mutation_pooled": 49.8
-  },
-  "gpt41mini_guard2": {
-   "suites": 34,
-   "projects": 17,
-   "tests": 681,
-   "kept": 500,
-   "no_kept": 9,
-   "coverage_mean": 57.7,
-   "mutation_pooled": 36.2
-  },
   "gpt41mini_guard3": {
-   "suites": 34,
-   "projects": 17,
-   "tests": 635,
-   "kept": 428,
-   "no_kept": 7,
-   "coverage_mean": 66.9,
+   "suites": 82,
+   "projects": 41,
+   "tests": 1414,
+   "kept": 882,
+   "no_kept": 23,
+   "coverage_mean": 60.9,
+   "mutation_pooled": 32.2
+  },
+  "gpt41mini_heldout": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1632,
+   "kept": 1005,
+   "no_kept": 10,
+   "coverage_mean": 74.0,
+   "mutation_pooled": 41.9
+  },
+  "gpt41mini_heldoutiso": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1632,
+   "kept": 1010,
+   "no_kept": 10,
+   "coverage_mean": 75.1,
    "mutation_pooled": 40.5
   },
-  "gpt41mini_plain": {
+  "gpt41mini_heldoutseed": {
    "suites": 82,
    "projects": 41,
-   "tests": 1596,
-   "kept": 1038,
-   "no_kept": 9,
-   "coverage_mean": 73.3,
-   "mutation_pooled": 40.3
+   "tests": 1632,
+   "kept": 1010,
+   "no_kept": 10,
+   "coverage_mean": 74.0,
+   "mutation_pooled": 40.5
   },
-  "gpt54mini_plain": {
+  "gpt54mini_guard3": {
    "suites": 82,
    "projects": 41,
-   "tests": 1251,
-   "kept": 988,
+   "tests": 1250,
+   "kept": 993,
+   "no_kept": 4,
+   "coverage_mean": 75.0,
+   "mutation_pooled": 41.3
+  },
+  "gpt54mini_heldout": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1273,
+   "kept": 1011,
    "no_kept": 6,
-   "coverage_mean": 73.3,
-   "mutation_pooled": 40.8
+   "coverage_mean": 73.4,
+   "mutation_pooled": 42.3
+  },
+  "gpt54mini_heldoutiso": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1273,
+   "kept": 1011,
+   "no_kept": 6,
+   "coverage_mean": 73.6,
+   "mutation_pooled": 42.3
+  },
+  "gpt54mini_heldoutseed": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1273,
+   "kept": 1011,
+   "no_kept": 6,
+   "coverage_mean": 73.4,
+   "mutation_pooled": 42.3
   },
   "haiku_guard3": {
    "suites": 82,
@@ -63,14 +90,23 @@
    "coverage_mean": 74.9,
    "mutation_pooled": 52.8
   },
-  "haiku_plain": {
-   "suites": 150,
-   "projects": 58,
-   "tests": 3536,
-   "kept": 3486,
-   "no_kept": 3,
-   "coverage_mean": 80.0,
-   "mutation_pooled": 63.7
+  "haiku_heldoutiso": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1965,
+   "kept": 1747,
+   "no_kept": 5,
+   "coverage_mean": 76.1,
+   "mutation_pooled": 52.8
+  },
+  "haiku_heldoutseed": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1965,
+   "kept": 1747,
+   "no_kept": 5,
+   "coverage_mean": 74.9,
+   "mutation_pooled": 52.8
   },
   "sonnet_guard3": {
    "suites": 82,
@@ -90,95 +126,284 @@
    "coverage_mean": 79.0,
    "mutation_pooled": 60.1
   },
-  "sonnet_plain": {
-   "suites": 150,
-   "projects": 58,
-   "tests": 3277,
-   "kept": 3235,
-   "no_kept": 3,
-   "coverage_mean": 80.4,
-   "mutation_pooled": 64.8
+  "sonnet_heldoutiso": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1733,
+   "kept": 1658,
+   "no_kept": 2,
+   "coverage_mean": 79.0,
+   "mutation_pooled": 60.1
+  },
+  "sonnet_heldoutseed": {
+   "suites": 82,
+   "projects": 41,
+   "tests": 1733,
+   "kept": 1658,
+   "no_kept": 2,
+   "coverage_mean": 79.0,
+   "mutation_pooled": 60.1
   }
  },
  "paired": {
-  "gpt41mini: guard vs plain": {
-   "guard": {
-    "suites": 34,
-    "projects": 17,
-    "tests": 771,
-    "kept": 548,
-    "no_kept": 1,
-    "coverage_mean": 81.5,
-    "mutation_pooled": 49.8
-   },
-   "plain": {
-    "suites": 34,
-    "projects": 17,
-    "tests": 746,
-    "kept": 559,
-    "no_kept": 1,
-    "coverage_mean": 80.9,
-    "mutation_pooled": 55.7
-   }
-  },
-  "gpt41mini: guard2 vs plain": {
-   "guard2": {
-    "suites": 34,
-    "projects": 17,
-    "tests": 681,
-    "kept": 500,
-    "no_kept": 9,
-    "coverage_mean": 57.7,
-    "mutation_pooled": 36.2
-   },
-   "plain": {
-    "suites": 34,
-    "projects": 17,
-    "tests": 746,
-    "kept": 559,
-    "no_kept": 1,
-    "coverage_mean": 80.9,
-    "mutation_pooled": 55.7
-   }
-  },
-  "gpt41mini: guard3 vs plain": {
+  "gpt41mini: guard3 vs heldout, both keep tests": {
    "guard3": {
-    "suites": 34,
-    "projects": 17,
-    "tests": 635,
-    "kept": 428,
-    "no_kept": 7,
-    "coverage_mean": 66.9,
+    "suites": 56,
+    "projects": 32,
+    "tests": 1250,
+    "kept": 864,
+    "no_kept": 0,
+    "coverage_mean": 76.7,
+    "mutation_pooled": 42.6
+   },
+   "heldout": {
+    "suites": 56,
+    "projects": 32,
+    "tests": 1188,
+    "kept": 806,
+    "no_kept": 0,
+    "coverage_mean": 75.5,
+    "mutation_pooled": 43.2
+   }
+  },
+  "gpt41mini: guard3 vs heldout": {
+   "guard3": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1414,
+    "kept": 882,
+    "no_kept": 23,
+    "coverage_mean": 60.9,
+    "mutation_pooled": 32.2
+   },
+   "heldout": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1632,
+    "kept": 1005,
+    "no_kept": 10,
+    "coverage_mean": 74.0,
+    "mutation_pooled": 41.9
+   }
+  },
+  "gpt41mini: heldoutiso vs heldout, both keep tests": {
+   "heldoutiso": {
+    "suites": 72,
+    "projects": 39,
+    "tests": 1520,
+    "kept": 1010,
+    "no_kept": 0,
+    "coverage_mean": 77.6,
+    "mutation_pooled": 44.3
+   },
+   "heldout": {
+    "suites": 72,
+    "projects": 39,
+    "tests": 1520,
+    "kept": 1005,
+    "no_kept": 0,
+    "coverage_mean": 77.6,
+    "mutation_pooled": 45.8
+   }
+  },
+  "gpt41mini: heldoutiso vs heldout": {
+   "heldoutiso": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1632,
+    "kept": 1010,
+    "no_kept": 10,
+    "coverage_mean": 75.1,
     "mutation_pooled": 40.5
    },
-   "plain": {
-    "suites": 34,
-    "projects": 17,
-    "tests": 746,
-    "kept": 559,
-    "no_kept": 1,
-    "coverage_mean": 80.9,
-    "mutation_pooled": 55.7
+   "heldout": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1632,
+    "kept": 1005,
+    "no_kept": 10,
+    "coverage_mean": 74.0,
+    "mutation_pooled": 41.9
    }
   },
-  "haiku: guard3 vs plain": {
+  "gpt41mini: heldoutseed vs heldout, both keep tests": {
+   "heldoutseed": {
+    "suites": 72,
+    "projects": 39,
+    "tests": 1520,
+    "kept": 1010,
+    "no_kept": 0,
+    "coverage_mean": 77.6,
+    "mutation_pooled": 44.3
+   },
+   "heldout": {
+    "suites": 72,
+    "projects": 39,
+    "tests": 1520,
+    "kept": 1005,
+    "no_kept": 0,
+    "coverage_mean": 77.6,
+    "mutation_pooled": 45.8
+   }
+  },
+  "gpt41mini: heldoutseed vs heldout": {
+   "heldoutseed": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1632,
+    "kept": 1010,
+    "no_kept": 10,
+    "coverage_mean": 74.0,
+    "mutation_pooled": 40.5
+   },
+   "heldout": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1632,
+    "kept": 1005,
+    "no_kept": 10,
+    "coverage_mean": 74.0,
+    "mutation_pooled": 41.9
+   }
+  },
+  "gpt54mini: guard3 vs heldout, both keep tests": {
+   "guard3": {
+    "suites": 76,
+    "projects": 39,
+    "tests": 1176,
+    "kept": 959,
+    "no_kept": 0,
+    "coverage_mean": 78.9,
+    "mutation_pooled": 45.3
+   },
+   "heldout": {
+    "suites": 76,
+    "projects": 39,
+    "tests": 1218,
+    "kept": 1011,
+    "no_kept": 0,
+    "coverage_mean": 78.5,
+    "mutation_pooled": 47.3
+   }
+  },
+  "gpt54mini: guard3 vs heldout": {
    "guard3": {
     "suites": 82,
     "projects": 41,
-    "tests": 1799,
-    "kept": 1551,
-    "no_kept": 6,
-    "coverage_mean": 73.7,
-    "mutation_pooled": 53.2
+    "tests": 1250,
+    "kept": 993,
+    "no_kept": 4,
+    "coverage_mean": 75.0,
+    "mutation_pooled": 41.3
    },
-   "plain": {
+   "heldout": {
     "suites": 82,
     "projects": 41,
-    "tests": 1873,
-    "kept": 1847,
-    "no_kept": 3,
-    "coverage_mean": 79.1,
-    "mutation_pooled": 60.9
+    "tests": 1273,
+    "kept": 1011,
+    "no_kept": 6,
+    "coverage_mean": 73.4,
+    "mutation_pooled": 42.3
+   }
+  },
+  "gpt54mini: heldoutiso vs heldout, both keep tests": {
+   "heldoutiso": {
+    "suites": 76,
+    "projects": 39,
+    "tests": 1218,
+    "kept": 1011,
+    "no_kept": 0,
+    "coverage_mean": 78.5,
+    "mutation_pooled": 47.3
+   },
+   "heldout": {
+    "suites": 76,
+    "projects": 39,
+    "tests": 1218,
+    "kept": 1011,
+    "no_kept": 0,
+    "coverage_mean": 78.5,
+    "mutation_pooled": 47.3
+   }
+  },
+  "gpt54mini: heldoutiso vs heldout": {
+   "heldoutiso": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1273,
+    "kept": 1011,
+    "no_kept": 6,
+    "coverage_mean": 73.6,
+    "mutation_pooled": 42.3
+   },
+   "heldout": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1273,
+    "kept": 1011,
+    "no_kept": 6,
+    "coverage_mean": 73.4,
+    "mutation_pooled": 42.3
+   }
+  },
+  "gpt54mini: heldoutseed vs heldout, both keep tests": {
+   "heldoutseed": {
+    "suites": 76,
+    "projects": 39,
+    "tests": 1218,
+    "kept": 1011,
+    "no_kept": 0,
+    "coverage_mean": 78.5,
+    "mutation_pooled": 47.3
+   },
+   "heldout": {
+    "suites": 76,
+    "projects": 39,
+    "tests": 1218,
+    "kept": 1011,
+    "no_kept": 0,
+    "coverage_mean": 78.5,
+    "mutation_pooled": 47.3
+   }
+  },
+  "gpt54mini: heldoutseed vs heldout": {
+   "heldoutseed": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1273,
+    "kept": 1011,
+    "no_kept": 6,
+    "coverage_mean": 73.4,
+    "mutation_pooled": 42.3
+   },
+   "heldout": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1273,
+    "kept": 1011,
+    "no_kept": 6,
+    "coverage_mean": 73.4,
+    "mutation_pooled": 42.3
+   }
+  },
+  "haiku: guard3 vs heldout, both keep tests": {
+   "guard3": {
+    "suites": 74,
+    "projects": 40,
+    "tests": 1727,
+    "kept": 1531,
+    "no_kept": 0,
+    "coverage_mean": 77.8,
+    "mutation_pooled": 57.9
+   },
+   "heldout": {
+    "suites": 74,
+    "projects": 40,
+    "tests": 1832,
+    "kept": 1688,
+    "no_kept": 0,
+    "coverage_mean": 78.8,
+    "mutation_pooled": 56.9
    }
   },
   "haiku: guard3 vs heldout": {
@@ -201,7 +426,36 @@
     "mutation_pooled": 52.8
    }
   },
-  "haiku: heldout vs plain": {
+  "haiku: heldoutiso vs heldout, both keep tests": {
+   "heldoutiso": {
+    "suites": 77,
+    "projects": 40,
+    "tests": 1910,
+    "kept": 1747,
+    "no_kept": 0,
+    "coverage_mean": 79.5,
+    "mutation_pooled": 57.0
+   },
+   "heldout": {
+    "suites": 77,
+    "projects": 40,
+    "tests": 1910,
+    "kept": 1747,
+    "no_kept": 0,
+    "coverage_mean": 79.5,
+    "mutation_pooled": 57.0
+   }
+  },
+  "haiku: heldoutiso vs heldout": {
+   "heldoutiso": {
+    "suites": 82,
+    "projects": 41,
+    "tests": 1965,
+    "kept": 1747,
+    "no_kept": 5,
+    "coverage_mean": 76.1,
+    "mutation_pooled": 52.8
+   },
    "heldout": {
     "suites": 82,
     "projects": 41,
@@ -210,26 +464,37 @@
     "no_kept": 5,
     "coverage_mean": 74.9,
     "mutation_pooled": 52.8
-   },
-   "plain": {
-    "suites": 82,
-    "projects": 41,
-    "tests": 1873,
-    "kept": 1847,
-    "no_kept": 3,
-    "coverage_mean": 79.1,
-    "mutation_pooled": 60.9
    }
   },
-  "haiku: plain vs heldout": {
-   "plain": {
+  "haiku: heldoutseed vs heldout, both keep tests": {
+   "heldoutseed": {
+    "suites": 77,
+    "projects": 40,
+    "tests": 1910,
+    "kept": 1747,
+    "no_kept": 0,
+    "coverage_mean": 79.5,
+    "mutation_pooled": 57.0
+   },
+   "heldout": {
+    "suites": 77,
+    "projects": 40,
+    "tests": 1910,
+    "kept": 1747,
+    "no_kept": 0,
+    "coverage_mean": 79.5,
+    "mutation_pooled": 57.0
+   }
+  },
+  "haiku: heldoutseed vs heldout": {
+   "heldoutseed": {
     "suites": 82,
     "projects": 41,
-    "tests": 1873,
-    "kept": 1847,
-    "no_kept": 3,
-    "coverage_mean": 79.1,
-    "mutation_pooled": 60.9
+    "tests": 1965,
+    "kept": 1747,
+    "no_kept": 5,
+    "coverage_mean": 74.9,
+    "mutation_pooled": 52.8
    },
    "heldout": {
     "suites": 82,
@@ -241,24 +506,24 @@
     "mutation_pooled": 52.8
    }
   },
-  "sonnet: guard3 vs plain": {
+  "sonnet: guard3 vs heldout, both keep tests": {
    "guard3": {
-    "suites": 82,
-    "projects": 41,
+    "suites": 80,
+    "projects": 40,
     "tests": 1641,
     "kept": 1556,
-    "no_kept": 2,
-    "coverage_mean": 78.4,
-    "mutation_pooled": 61.1
+    "no_kept": 0,
+    "coverage_mean": 80.3,
+    "mutation_pooled": 63.7
    },
-   "plain": {
-    "suites": 82,
-    "projects": 41,
-    "tests": 1842,
-    "kept": 1832,
-    "no_kept": 3,
-    "coverage_mean": 79.3,
-    "mutation_pooled": 61.8
+   "heldout": {
+    "suites": 80,
+    "projects": 40,
+    "tests": 1733,
+    "kept": 1658,
+    "no_kept": 0,
+    "coverage_mean": 80.9,
+    "mutation_pooled": 62.6
    }
   },
   "sonnet: guard3 vs heldout": {
@@ -281,8 +546,28 @@
     "mutation_pooled": 60.1
    }
   },
-  "sonnet: heldout vs plain": {
+  "sonnet: heldoutiso vs heldout, both keep tests": {
+   "heldoutiso": {
+    "suites": 80,
+    "projects": 40,
+    "tests": 1733,
+    "kept": 1658,
+    "no_kept": 0,
+    "coverage_mean": 80.9,
+    "mutation_pooled": 62.6
+   },
    "heldout": {
+    "suites": 80,
+    "projects": 40,
+    "tests": 1733,
+    "kept": 1658,
+    "no_kept": 0,
+    "coverage_mean": 80.9,
+    "mutation_pooled": 62.6
+   }
+  },
+  "sonnet: heldoutiso vs heldout": {
+   "heldoutiso": {
     "suites": 82,
     "projects": 41,
     "tests": 1733,
@@ -291,25 +576,45 @@
     "coverage_mean": 79.0,
     "mutation_pooled": 60.1
    },
-   "plain": {
+   "heldout": {
     "suites": 82,
     "projects": 41,
-    "tests": 1842,
-    "kept": 1832,
-    "no_kept": 3,
-    "coverage_mean": 79.3,
-    "mutation_pooled": 61.8
+    "tests": 1733,
+    "kept": 1658,
+    "no_kept": 2,
+    "coverage_mean": 79.0,
+    "mutation_pooled": 60.1
    }
   },
-  "sonnet: plain vs heldout": {
-   "plain": {
+  "sonnet: heldoutseed vs heldout, both keep tests": {
+   "heldoutseed": {
+    "suites": 80,
+    "projects": 40,
+    "tests": 1733,
+    "kept": 1658,
+    "no_kept": 0,
+    "coverage_mean": 80.9,
+    "mutation_pooled": 62.6
+   },
+   "heldout": {
+    "suites": 80,
+    "projects": 40,
+    "tests": 1733,
+    "kept": 1658,
+    "no_kept": 0,
+    "coverage_mean": 80.9,
+    "mutation_pooled": 62.6
+   }
+  },
+  "sonnet: heldoutseed vs heldout": {
+   "heldoutseed": {
     "suites": 82,
     "projects": 41,
-    "tests": 1842,
-    "kept": 1832,
-    "no_kept": 3,
-    "coverage_mean": 79.3,
-    "mutation_pooled": 61.8
+    "tests": 1733,
+    "kept": 1658,
+    "no_kept": 2,
+    "coverage_mean": 79.0,
+    "mutation_pooled": 60.1
    },
    "heldout": {
     "suites": 82,

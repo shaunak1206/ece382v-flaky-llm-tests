@@ -1,0 +1,3818 @@
+{
+ "project": "ColonyScanalyser",
+ "install_ok": true,
+ "dev_file": "tests/unit/test_base.py",
+ "od_test": "test_init",
+ "runs": 60,
+ "configs": {
+  "baseline": {
+   "runs_done": 60,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 748,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "dev_first": 32
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "dev_first": 32
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_unique_id_count_increment_affects_new_instances": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identified__id_is_valid": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_add_and_append_and_exists_and_id_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_init_and_items_property": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_append_only_if_not_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identified__id_exists_true_false": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_get_item": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_remove": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_count_property": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identified_valid_id": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_timestampelapsed_properties_elapsed_times": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_timestampelapsed_defaults_to_now": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identified_invalid_id_raises[0]": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identified_invalid_id_raises[a]": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identified_invalid_id_raises[-1]": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identified_invalid_id_raises[3.5]": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_remove_removes_correct_item": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identified_invalid_id_raises[None]": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_unique_id_auto_increment": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_items_returns_sorted_copy": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_timestamped_default_and_custom_timestamp": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_identifiedcollection_items_setter_accepts_collections": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_named_property_and_setter": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_timestamp_initial_setter_and_getter": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_id_is_valid_static_method": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identifiedcollection_init_with_none_and_empty_items": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_named_name_property_and_setter": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identifiedcollection_append_and_exists_id_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_timestamp_elapsed_defaults_to_now_and_initial": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identifiedcollection_init_invalid_items": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_timestamped_default_and_custom_timestamp": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identifiedcollection_init_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_unique_auto_increment_ids": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identified_valid_id": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identified_invalid_id_negative": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identified_invalid_id_type": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_id_exists_static_method": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identifiedcollection_add_method_creates_and_appends": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identifiedcollection_remove_existing_and_nonexistent": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identifiedcollection_get_item_returns_correct_or_none": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_identifiedcollection_init_with_list_and_count": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_timestamp_elapsed_properties_accuracy": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 748,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "dev_first": 14,
+     "gen_first": 18
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "dev_first": 14,
+     "gen_first": 18
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_3.test_gen::test_identifiedcollection_items_setter_none_and_invalid": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identified_valid_id": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_timestamped_setter": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identified_invalid_id_non_int": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identifiedcollection_remove_existing_and_missing": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_timestampelapsed_timestamp_initial_property_setter_getter": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identifiedcollection_items_setter_with_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_id_exists_static_method_true_false": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identifiedcollection_add_and_exists_and_id_exists": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identifiedcollection_init_and_count": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_unique_auto_incrementing_id": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_timestampelapsed_default_and_initial": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_timestamped_default_and_explicit_timestamp": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_timestampelapsed_elapsed_properties": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identified_invalid_id_negative": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identifiedcollection_get_item": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identified_invalid_id_zero": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_named_name_property": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_identifiedcollection_append_duplicate_raises": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 748,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "dev_first": 14,
+     "gen_first": 18
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "dev_first": 14,
+     "gen_first": 18
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_4.test_gen::test_identifiedcollection_items_setter_accepts_collections_and_dicts": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_identified_collection_count_property_matches_items_length": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_timestamped_defaults_and_setter_getter": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_timestampelapsed_initial_and_current_timestamp_defaults_and_setters": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_timestampelapsed_basic_elapsed_properties": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_identified_id_property_and_validation": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_unique_id_count_persists_across_instances": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_identifiedcollection_remove_item": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_identified_id_setter_rejects_invalid_types": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_id_exists_static_method": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_identifiedcollection_add_and_append_and_exists_id_exists_get_item": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_remove_item_removes_only_item": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_named_name_property": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_append_existing_item_not_in_collection_adds": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_identifiedcollection_items_returns_sorted_copy": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_identifiedcollection_add_duplicates_raises": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_unique_auto_increment_and_id_read_only": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 748,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "dev_first": 14,
+     "gen_first": 18
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "dev_first": 14,
+     "gen_first": 18
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_identified_rejects_invalid_ids[1]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_initializes_from_dict_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_id_is_valid_and_id_exists_helpers": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_rejects_invalid_ids[1.5]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_timestamp_elapsed_uses_same_timestamp_as_initial_by_default": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_named_converts_name_to_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_unique_auto_increments_and_id_is_read_only": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_remove_deletes_item": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_timestamp_defaults_to_now_and_accepts_explicit_value": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_initializes_from_list_and_sorts_items": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_rejects_invalid_ids[None]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_add_creates_identified_and_appends": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_rejects_invalid_ids[bad_id6]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_rejects_invalid_ids[-100]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_rejects_invalid_ids[0]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_get_item_returns_none_when_missing": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_rejects_invalid_ids[bad_id7]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_timestamp_elapsed_computes_difference_and_conversions": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_rejects_invalid_ids[-1]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_append_and_exists_and_duplicate_rejected": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_accepts_positive_integer_id": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_rejects_string_items": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_remove_missing_raises_key_error": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_identified_collection_items_returns_copy_not_live_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_timestamped_uses_provided_timestamp": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_timestamped_defaults_to_now_when_no_timestamp_given": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_collection_initializes_from_dict_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_named_converts_any_value_to_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_collection_append_and_exists_and_get_item_work": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_unique_auto_increments_id_and_is_read_only": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_id_exists_detects_matching_id_in_collection": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_collection_remove_missing_item_raises_key_error": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_collection_initializes_from_list_and_returns_sorted_copy": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_rejects_zero_negative_and_non_integer_ids": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_timestamp_elapsed_uses_same_timestamp_as_initial_when_not_provided": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_collection_add_creates_item_and_appends_it": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_collection_remove_deletes_existing_item": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_unique_id_increment_advances_class_counter": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_collection_append_duplicate_id_raises_value_error": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_collection_initializes_from_none_and_reports_count": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_identified_accepts_positive_integer_id": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_timestamp_elapsed_properties_compute_expected_values": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 748,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "dev_first": 14,
+     "gen_first": 18
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "dev_first": 14,
+     "gen_first": 18
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_rejects_string_items": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_initializes_from_dict_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_append_and_exists_and_get_item_work": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_items_property_returns_copy_not_live_view": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_timestamp_elapsed_properties_compute_differences_correctly": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_append_duplicate_id_raises_value_error": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_id_exists_finds_matching_id_in_collection": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_add_creates_identified_item_and_appends_it": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_timestamped_defaults_to_now_and_accepts_explicit_timestamp": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_timestamp_elapsed_defaults_initial_timestamp_to_timestamp": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_named_converts_name_to_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_remove_deletes_matching_item": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_unique_auto_increments_id_and_is_read_only": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_initializes_from_list_and_sorts_items": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_collection_remove_missing_id_raises_key_error": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_accepts_positive_integer_id": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_identified_rejects_non_positive_or_non_integer_ids": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 748,
+    "fail": 32,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "dev_first": 14,
+     "gen_first": 18
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "dev_first": 14,
+     "gen_first": 18
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_4.test_gen::test_timestamp_elapsed_computes_differences_from_explicit_initial": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_get_item_returns_item_or_none": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_unique_auto_increments_id_and_is_read_only": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_remove_deletes_matching_item": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_named_converts_non_string_name_to_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_accepts_positive_integer_id": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_rejects_invalid_ids[0]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_id_exists_finds_matching_id_in_collection": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_timestamped_defaults_to_now_and_accepts_custom_timestamp": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_rejects_invalid_ids[1.5]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_rejects_invalid_ids[1]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_remove_raises_keyerror_when_missing": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_rejects_invalid_ids[-1]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_initializes_from_unsorted_items_and_sorts_on_access": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_append_rejects_duplicate_id": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_exists_and_id_exists_work_for_present_and_missing_items": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_items_setter_accepts_dict_values": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_rejects_invalid_ids[None]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_timestamp_elapsed_uses_timestamp_as_initial_when_initial_not_provided": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_rejects_invalid_ids[bad_id6]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_items_property_returns_copy_not_backing_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identified_rejects_invalid_ids[bad_id5]": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_identifiedcollection_add_appends_new_item_and_returns_it": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "pass": 28,
+     "fail": 32
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_identified_static_id_exists": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_items_are_sorted_by_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_init_from_dict_uses_values": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_defaults_to_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_timestamped_default_is_current_time": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_unique_id_is_read_only": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_timestamped_uses_given_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_timestamped_setter_updates_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_identified_static_id_is_valid": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_init_copies_source_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_add_rejects_invalid_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_identified_stores_valid_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_add_creates_and_stores_item": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_rejects_string_items": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_named_converts_non_string_to_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_timestamp_elapsed_defaults_initial_to_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_id_exists_and_get_item": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_identified_id_setter_updates_value_and_validates": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_remove_existing_and_missing": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_named_stores_name": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_timestamp_elapsed_updates_when_timestamp_changes": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_timestamp_elapsed_computes_units": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_unique_assigns_increasing_ids_and_is_identified": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_collection_append_duplicate_raises_and_keeps_count": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_identified_rejects_non_positive_and_non_int_ids": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_get_item_returns_match_or_none": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_append_duplicate_id_raises": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_identified_rejects_non_positive_ids": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_elapsed_initial_defaults_to_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_collection_default_is_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_add_creates_and_appends_identified": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_collection_accepts_tuple": {
+     "skip": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_collection_items_sorted_by_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_collection_accepts_dict_and_uses_values": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_remove_deletes_item": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_timestamped_defaults_to_now": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_collection_copies_supplied_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_elapsed_defaults_both_timestamps_to_now": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_unique_id_is_read_only": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_timestamped_stores_given_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_elapsed_seconds_minutes_and_hours": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_identified_rejects_non_integer_ids": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_unique_is_identified_with_sequential_ids": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_elapsed_minutes_truncates_partial_minutes": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_named_stores_and_coerces_name_to_str": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_identified_stores_valid_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_id_setter_keeps_previous_value_when_invalid": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_elapsed_is_difference_from_initial": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_elapsed_updates_when_timestamp_changes": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_exists_and_id_exists_match_by_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_collection_rejects_string_and_non_collection": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_remove_missing_id_raises_key_error": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_3.test_gen::test_identified_rejects_non_integer_ids[1]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_rejects_str_and_non_collections[5]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_append_duplicate_id_raises": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_unique_is_identified_with_positive_auto_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_rejects_non_integer_ids[None]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_init_from_list_sorted_by_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_remove_existing_item_decreases_count": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_timestamp_elapsed_units": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_default_is_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_rejects_zero_and_negative_ids[-100]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_id_setter_accepts_valid_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_timestamp_elapsed_minutes_truncates_toward_zero": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_init_from_dict_uses_values": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_named_setter_converts_value_to_str": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_static_id_is_valid": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_timestamped_stores_explicit_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_timestamp_elapsed_updates_when_timestamp_changes": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_remove_missing_item_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_timestamp_elapsed_defaults_initial_to_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_rejects_str_and_non_collections[3.14]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_id_setter_rejects_invalid_value_and_keeps_old_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_init_from_tuple": {
+     "skip": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_unique_ids_are_sequential": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_rejects_zero_and_negative_ids[0]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_timestamped_defaults_to_current_time": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_static_id_exists": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_rejects_non_integer_ids[bad_id3]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_add_creates_and_appends_identified_item": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_timestamped_setter_updates_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_exists_and_id_exists": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_named_stores_name": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_init_copies_source_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_rejects_str_and_non_collections[abc]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_rejects_zero_and_negative_ids[-1]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_unique_id_setter_is_read_only": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_rejects_non_integer_ids[1.0]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_get_item_found_and_missing": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_collection_items_returns_copy": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_identified_stores_valid_id": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_4.test_gen::test_unique_id_is_read_only": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_collection_rejects_string_items": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_rejects_non_positive_id[0]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_rejects_non_integer_id[None]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_rejects_non_integer_id[2.5]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_id_is_valid_static_method": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_remove_existing_item": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_timestamped_defaults_to_current_time": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_timestamped_setter_replaces_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_timestamp_elapsed_hours_exact_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_named_setter_converts_value_to_str": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_stores_valid_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_id_setter_updates_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_collection_accepts_dict_and_uses_values": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_named_stores_name": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_append_duplicate_id_raises": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_timestamp_elapsed_updates_when_timestamp_changes": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_add_creates_and_stores_new_item": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_collection_default_is_empty": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_exists_and_id_exists": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_collection_items_are_sorted_by_id": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_rejects_non_integer_id[3]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_timestamped_stores_explicit_timestamp": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_unique_is_identified_and_ids_increment": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_timestamp_elapsed_is_timestamped_and_can_be_negative": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_collection_copies_input_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_invalid_id_setter_keeps_original_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_timestamp_elapsed_computes_difference_and_units": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_remove_missing_item_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_get_item_returns_match_or_none": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_collection_none_items_yields_empty_collection": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_rejects_non_positive_id[-1]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_identified_rejects_non_positive_id[-100]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_id_exists_static_method": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_timestamp_elapsed_defaults_to_zero": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_unique_id_increment_updates_class_counter": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_collection_items_sorted_by_id": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_identified_rejects_invalid_id[-1]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_elapsed_defaults_to_zero": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_identified_rejects_invalid_id[1.5]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_accepts_dict_values": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_identified_id_setter_validates": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_unique_ids_auto_increment": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_identified_stores_valid_id": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_identified_rejects_invalid_id[3]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_append_and_exists": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_remove_missing_raises_keyerror": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_default_is_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_timestamped_defaults_to_now": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_identified_id_exists_static": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_add_creates_and_stores_item": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_identified_rejects_invalid_id[None]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_rejects_invalid_items_type": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_named_stores_and_converts_to_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_get_item_missing_returns_none": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_add_duplicate_raises": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_unique_id_is_read_only": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_remove": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_elapsed_conversions": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_collection_copies_input_and_output": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_timestamped_explicit_and_setter": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_identified_rejects_invalid_id[0]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_elapsed_minutes_truncates_and_updates_with_setters": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_elapsed_initial_defaults_to_timestamp": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_unique_works_in_collection": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_rejects_invalid_id_on_init[-100]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_static_helpers": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_id_setter_validates_and_keeps_old_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_timestamped_default_and_explicit_timestamp": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_elapsed_defaults_to_zero": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_rejects_non_collections[5]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_named_stores_name_and_coerces_to_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_elapsed_updates_when_timestamps_change": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_add_duplicate_id_raises": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_rejects_invalid_id_on_init[bad_id6]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_rejects_non_collections[3.2]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_accepts_dict_values": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_stores_valid_id": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_unique_id_is_read_only": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_items_returns_copy": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_rejects_invalid_id_on_init[0]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_remove_existing_and_missing": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_get_item_missing_returns_none": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_rejects_invalid_id_on_init[1.5]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_add_creates_and_stores_item": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_unique_ids_auto_increment": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_rejects_invalid_id_on_init[1]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_rejects_non_collections[abc]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_elapsed_calculations": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_rejects_invalid_id_on_init[None]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_defaults_to_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_init_copies_and_sorts_items": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_collection_append_and_exists": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_identified_rejects_invalid_id_on_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_3.test_gen::test_identified_id_exists_static": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_append_and_exists": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_identified_id_setter_validates_and_keeps_old_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_elapsed_updates_when_timestamps_change": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_elapsed_default_timestamp_is_now": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_identified_stores_valid_id": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_rejects_non_collections[3.2]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_accepts_dict_values": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_remove_existing_and_missing": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_timestamped_defaults_to_now": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_add_invalid_id_raises": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_rejects_non_collections[5]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_unique_id_is_read_only": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_items_sorted_by_id_and_copy_returned": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_elapsed_calculations": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_identified_rejects_invalid_id_on_init[3]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_identified_rejects_invalid_id_on_init[1.5]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_default_is_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_rejects_non_collections[abc]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_add_creates_and_returns_item": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_unique_works_in_collection": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_get_item_missing_returns_none": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_named_stores_and_converts_to_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_init_copies_input_list": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_elapsed_negative_when_timestamp_before_initial": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_collection_add_duplicate_raises": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_unique_ids_auto_increment": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_timestamped_explicit_and_setter": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_elapsed_defaults_initial_to_timestamp": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_identified_rejects_invalid_id_on_init[0]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_identified_rejects_invalid_id_on_init[-1]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_identified_rejects_invalid_id_on_init[None]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 32,
+   "od_test": {
+    "pass": 734,
+    "fail": 46,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.unit.test_base.TestUnique::test_init": {
+     "gen_first": 32,
+     "dev_first": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "gen_first": 32,
+     "dev_first": 14
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_4.test_gen::test_collection_rejects_non_collection_items[abc]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_defaults_to_empty": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_named_stores_string_and_coerces_non_strings": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_identified_stores_valid_id": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_append_duplicate_raises": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_identified_rejects_invalid_id_on_init[0]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_unique_ids_auto_increment_and_are_distinct": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_remove_existing_and_missing": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_elapsed_minutes_truncates_and_updates_with_timestamp": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_identified_invalid_set_keeps_old_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_elapsed_values_are_computed_correctly": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_identified_id_is_valid_and_exists_static_methods": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_exists_and_id_exists": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_rejects_non_collection_items[5]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_timestamped_default_is_now_and_explicit_is_kept": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_add_creates_and_returns_item": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_identified_rejects_invalid_id_on_init[-1]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_identified_rejects_invalid_id_on_init[1]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_elapsed_defaults_to_zero_when_no_initial": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_get_item_found_and_missing": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_identified_rejects_invalid_id_on_init[1.5]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_rejects_non_collection_items[3.2]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_unique_id_is_read_only_and_works_in_collection": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_identified_rejects_invalid_id_on_init[None]": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_items_sorted_and_copied_from_input": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_collection_accepts_dict_values": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_id_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_get_colony": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_exists": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_append_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_add_item": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestMethods::test_remove_item_invalid": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[1.1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[name with spaces]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestNamed::test_init[0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_timestamp_elapsed": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStampElapsed::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestTimeStamped::test_init_auto": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_init": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_unique": {
+     "fail": 46,
+     "pass": 14
+    },
+    "tests.unit.test_base.TestUnique::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_increment": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestUnique::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[10]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_sorted": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_count": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_none": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable_invalid[11]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestProperties::test_items_iterable[items0]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init_list": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentifiedCollection.TestInitialize::test_init": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0.5]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[-1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[one]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id[1]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[10000000]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_init[2]": {
+     "pass": 60
+    },
+    "tests.unit.test_base.TestIdentified::test_id_invalid[0]": {
+     "pass": 60
+    }
+   }
+  }
+ },
+ "seconds": 299.7
+}
