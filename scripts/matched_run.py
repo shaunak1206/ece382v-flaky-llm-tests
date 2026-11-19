@@ -18,11 +18,12 @@ Output JSON fields
            always_fail (ids), runs}}
   kind is flaky (passed and failed), always-fail, stable, or always-skip.
 """
-import argparse, collections, glob, json, os, random, shutil, sys, tempfile, time
+import argparse, collections, glob, json, os, random, shutil, signal, subprocess, sys, tempfile, time
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gruber_reproduce as gr
+import rerun  # NOISE_CONFIGS and stressng_cmd, shared with the library study
 
 ROOT = gr.ROOT
 
@@ -59,6 +60,8 @@ def main():
     ap.add_argument("--work", default="/tmp/matched_work"); ap.add_argument("--runs", type=int, default=150)
     ap.add_argument("--timeout", type=int, default=60); ap.add_argument("--out", required=True)
     ap.add_argument("--suites", default="*", help="comma separated globs over suite ids, e.g. '*_guard_*'")
+    ap.add_argument("--stress", action="store_true", help="run every suite run under stress-ng, config i mod 10 of "
+                    "rerun.py's NOISE_CONFIGS (the library study's 10 configurations), started before and stopped after the run")
     ap.add_argument("--start", type=int, default=0, help="first run index; a suite too slow for one CI job runs as "
                     "several jobs over disjoint run ranges with the same seeds, joined by scripts/join_runs.py")
     a = ap.parse_args()
@@ -74,7 +77,7 @@ def main():
     gr.sh(["uv", "pip", "install", "-q", "-p", py, "pytest-randomly<3.16", "freezegun", "pytest-mock"])
     gr.fix_missing_modules(py, repo, r["Test_filename"], log)
     os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
-    res = {"project": a.project, "sha": r["Project_Hash"], "category": r["flakiness category"], "install_ok": ok, "suites": {}}
+    res = {"stress": a.stress, "project": a.project, "sha": r["Project_Hash"], "category": r["flakiness category"], "install_ok": ok, "suites": {}}
     # control: the known flaky human test, same number of runs, file order
     hc = collections.Counter(); hm = []
     for i in range(a.runs):
@@ -103,7 +106,16 @@ def main():
         fails_by_order = collections.defaultdict(collections.Counter); nonterminating = False
         for i in range(a.start, a.runs):
             seed = 7000 + i
-            out_res, tail = run_suite(py, repo, f"zz_{sid}", a.timeout, seed, randomize=(i % 2 == 1))
+            noise = None
+            if a.stress:
+                noise = subprocess.Popen(rerun.stressng_cmd(rerun.NOISE_CONFIGS[i % len(rerun.NOISE_CONFIGS)]),
+                                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+                time.sleep(1)
+            try:
+                out_res, tail = run_suite(py, repo, f"zz_{sid}", a.timeout, seed, randomize=(i % 2 == 1))
+            finally:
+                if noise:
+                    os.killpg(noise.pid, signal.SIGKILL); noise.wait()
             if i == a.start:
                 first_fail = sorted(t for t, s in out_res.items() if s in ("fail", "error"))
                 if tail.startswith("TIMEOUT"):

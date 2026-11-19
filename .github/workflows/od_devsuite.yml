@@ -1,0 +1,55 @@
+name: od-devsuite
+
+# Order dependent arm inside the developer suite: the developer test file plus one generated suite, shuffled.
+#   gh workflow run od_devsuite.yml -f runs=60
+on:
+  workflow_dispatch:
+    inputs:
+      runs:
+        description: "shuffled runs per configuration"
+        default: "60"
+      only:
+        description: "optional comma separated project names"
+        default: ""
+      suites:
+        description: "comma separated globs over suite ids"
+        default: "*_plain_*"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          only = [x for x in "${{ inputs.only }}".split(",") if x]
+          names = open("results/gruber/matched_projects_od.txt").read().split()
+          print("matrix=" + json.dumps({"project": [n for n in names if not only or n in only]}))
+          PY
+
+  run:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: run
+        run: |
+          mkdir -p out
+          python3 scripts/od_devsuite.py "${{ matrix.project }}" --work /tmp/dv --runs "${{ inputs.runs }}" \
+            --suites "${{ inputs.suites }}" --out "out/${{ matrix.project }}.json" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dv-${{ strategy.job-index }}
+          path: out/*.json
+          if-no-files-found: warn

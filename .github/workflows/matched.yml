@@ -15,6 +15,9 @@ on:
       suites:
         description: "glob over suite ids to run (e.g. *_guard_*)"
         default: "*"
+      stress:
+        description: "1 to run every suite run under stress-ng (the library study's 10 configurations)"
+        default: "0"
       start:
         description: "first run index (to split a slow suite's runs across jobs, joined by scripts/join_runs.py)"
         default: "0"
@@ -50,11 +53,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
+      - name: stress-ng
+        if: ${{ inputs.stress == '1' }}
+        run: sudo apt-get install -y -qq stress-ng > /dev/null
       - name: reproduce
         run: |
           mkdir -p out
           python3 scripts/matched_run.py "${{ matrix.project }}" --work /tmp/mw --runs "${{ inputs.runs }}" \
-            --suites "${{ inputs.suites }}" --start "${{ inputs.start || 0 }}" --out "out/${{ matrix.project }}.json" || true
+            --suites "${{ inputs.suites }}" --start "${{ inputs.start || 0 }}" ${{ inputs.stress == '1' && '--stress' || '' }} --out "out/${{ matrix.project }}.json" || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
