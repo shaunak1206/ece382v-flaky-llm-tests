@@ -112,21 +112,10 @@ The final report is due December 12. In priority order:
 \section{Division of work}
 \textbf{Since Progress Report 2.} Shaunak built the pasted source pipeline and the job runner, generated and ran the held out, guard v3, and order dependent arm suites, wrote the quality, feature, rerun filter, and polluter search analyses and this report, and relabeled all 78 root cause records blind. The order dependent arm, including its developer suite runs, was assigned to Manas in Progress Report 2 and was run by Shaunak. Manas did the literature review for the final report and helped label the root causes of the flaky tests. \textbf{Until the final report.} The owners are in Section~\ref{sec:next3}. Manas delivers the category labels of every new flaky test (November 25), the diagnosis of the developer suite results with Shaunak (November 29), and the related work and root cause sections (December 6). Shaunak delivers the held out analysis (November 22), a blind relabel of a sample of the new tests (November 28), the remaining mitigation work (December 2), and the setup, results, and threats sections.
 
-\section{Scripts written since Progress Report 2}
-\begin{itemize}\raggedright
-\item \texttt{gen\_openai.py}, which now also sends the held out prompt to the Claude models through \texttt{claude -p}, and \texttt{gen\_jobs.py}, a job runner with a spending cap.
-\item \texttt{matched\_run.py} now records every outcome in run order and the first failure message, saves after every suite, and can run a range of runs, \texttt{join\_runs.py} joins such ranges, and \texttt{merge\_results.py} merges CI runs.
-\item \texttt{select\_time.py}, \texttt{select\_od.py}, and \texttt{gruber\_reproduce.py --shuffle-file} for the two batches.
-\item \texttt{heldout\_stats.py} (the frozen test), \texttt{heldout\_summary.py}, and \texttt{report3\_numbers.py}, which prints every count in this report's tables.
-\item \texttt{e2\_quality.py} (coverage and mutation, also with fixtures) and \texttt{quality\_summary.py}.
-\item \texttt{cleaner\_search.py}, \texttt{leftover\_rates.py}, and \texttt{gruber\_reproduce.py --pin}.
-\item \texttt{od\_devsuite.py}, \texttt{stress\_summary.py} (with \texttt{matched\_run.py --stress}), \texttt{fixture\_effects.py}, and \texttt{fixture\_runtime.py}.
-\item \texttt{krun\_measured.py}, \texttt{feature\_flakiness.py}, and \texttt{feature\_flakiness\_matched.py}.
-\item Filters for \texttt{od\_diagnose.py}, and \texttt{kappa.py} with the blind sheet, which reads who made the second labels from the label file.
-\end{itemize}
-
-\section{Code, data, and documentation}
+\section{Scripts, code, and data}
 \label{sec:code}
+{\raggedright New since Progress Report 2: \texttt{gen\_openai.py}, which now also sends the held out prompt to the Claude models through \texttt{claude -p}, and \texttt{gen\_jobs.py}, a job runner with a spending cap. \texttt{matched\_run.py} now records every outcome in run order and the first failure message, saves after every suite, and can run a range of runs, \texttt{join\_runs.py} joins such ranges, and \texttt{merge\_results.py} merges CI runs. \texttt{select\_time.py}, \texttt{select\_od.py}, and \texttt{gruber\_reproduce.py --shuffle-file} for the two batches. \texttt{heldout\_stats.py} (the frozen test), \texttt{heldout\_summary.py}, and \texttt{report3\_numbers.py}, which prints every count in this report's tables. \texttt{e2\_quality.py} (coverage and mutation, also with fixtures) and \texttt{quality\_summary.py}. \texttt{cleaner\_search.py}, \texttt{leftover\_rates.py}, and \texttt{gruber\_reproduce.py --pin}. \texttt{od\_devsuite.py}, \texttt{stress\_summary.py} (with \texttt{matched\_run.py --stress}), \texttt{fixture\_effects.py}, and \texttt{fixture\_runtime.py}. \texttt{krun\_measured.py}, \texttt{feature\_flakiness.py}, and \texttt{feature\_flakiness\_matched.py}. Filters for \texttt{od\_diagnose.py}, and \texttt{kappa.py} with the blind sheet, which reads who made the second labels from the label file.\par}
+
 {\raggedright Everything is in the public repository \url{https://github.com/shaunak1206/ece382v-flaky-llm-tests}, with this report's results at commit \texttt{f0e1519}. \texttt{docs/DATA.md} describes every result file. The held out analysis is \texttt{python scripts/heldout\_stats.py} (the frozen sign test) and \texttt{python scripts/heldout\_summary.py}, every table count \texttt{python scripts/report3\_numbers.py}, the fixture effects \texttt{python scripts/fixture\_effects.py}, the quality tables \texttt{python scripts/quality\_summary.py}, the rerun filters \texttt{python scripts/krun\_measured.py}, and the feature tables \texttt{python scripts/feature\_flakiness.py} and \texttt{feature\_flakiness\_matched.py}, all offline from the committed results.\par}
 
 \bibliographystyle{ACM-Reference-Format}
