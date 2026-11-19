@@ -315,3 +315,5 @@ is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate wi
   with M1, and with M2.
 - `results/od_devsuite_alone/<project>.json`: `od_devsuite.py --alone`, the control: each generated suite of HikLoad,
   PyJsonFriendly (and ReactOBus, if finished) alone with the developer file's seeds and shuffling.
+- `results/envs/<project>.txt`: `scripts/freeze_env.py` (workflow `freeze.yml`), `uv pip freeze` of each known flaky
+  code study project's environment, built exactly as `matched_run.py` builds it, recorded November 19, 2026.
