@@ -313,3 +313,5 @@ is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate wi
 - `results/gruber/repro_time_pinned/`: the time batch rerun with packages pinned to each commit's date (`--pin`).
 - `results/leftover_rates.json`: `scripts/leftover_rates.py`, the failure rate of the kept flaky tests left plain,
   with M1, and with M2.
+- `results/od_devsuite_alone/<project>.json`: `od_devsuite.py --alone`, the control: each generated suite of HikLoad,
+  PyJsonFriendly (and ReactOBus, if finished) alone with the developer file's seeds and shuffling.

@@ -1,0 +1,1082 @@
+{
+ "project": "PyJsonFriendly",
+ "install_ok": true,
+ "dev_file": "tests/test_pyJsonFriendly.py",
+ "od_test": "test_01",
+ "runs": 60,
+ "configs": {
+  "gpt41mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_set"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_subclass_must_implement_as_json_friendly_obj": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_uses_custom_method_for_jsonfriendly_instance": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_with_builtin_types_returns_backup": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_is_original_default": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_set": {
+     "pass": 53,
+     "fail": 7
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_subclass_with_implementation_can_instantiate": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonfriendly_abstractmethod_presence": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_falls_back_for_non_jsonfriendly": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_multiple_jsonfriendly_instances_serialization": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonencoder_default_backup_raises_typeerror_for_unknown": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_dumps_encodes_nested_jsonfriendly_objects": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonfriendly_repr_and_str_are_default": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_serialization_of_jsonfriendly_obj_in_dict": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_dumps_encodes_jsonfriendly_object_like_expected": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_as_json_friendly_obj_called_in_default": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_is_callable",
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_should_restore_original_behavior_after_assignment"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_with_builtin_type_set": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_subclass_with_non_dict_return_type": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_should_restore_original_behavior_after_assignment": {
+     "pass": 54,
+     "fail": 6
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_is_abstract_meta": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_subclass_with_str_return_type": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_behavior_for_object_with_as_json_friendly_obj_attribute_but_not_callable": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_with_non_jsonfriendly_object_raises_typeerror": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_cannot_instantiate_directly": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonfriendly_as_json_friendly_obj_is_abstract": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_calls_default_backup_if_no_as_json_friendly_obj": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_calls_as_json_friendly_obj": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_subclass_must_implement_as_json_friendly_obj": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_preserves_existing_functionality_for_dict": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_is_callable": {
+     "pass": 49,
+     "fail": 11
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_serializing_nested_jsonfriendly_objects": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_subclass_implements_abstract_method_correctly": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_serializing_object_returns_serializable_obj": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_jsonencoder_default_backup_behavior_with_standard_obj": {
+     "pass": 55,
+     "fail": 5
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_3.test_gen::test_subclass_must_implement_abstract_method": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_handles_multiple_jsonfriendly_types_in_collection": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_uses_defaultbackup_for_non_jsonfriendly_objects": {
+     "pass": 54,
+     "skip": 6
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_json_encoder_default_is_monkeypatched": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_handles_objects_with__as_json_friendly_obj_not_callable": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_with_object_missing_as_json_friendly_obj": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_subclass_with_none_return": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_json_encoder_default_backup_preserved_after_multiple_serializations": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_new_subclass_inherits_jsonencoder_patch": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_json_encoder_serializes_jsonfriendly_object_correctly": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_serializer_works_for_nested_jsonfriendly_objects": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_json_encoder_raises_type_error_for_unknown_object": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_instantiate_and_call_as_json_friendly_obj": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_repr_and_str_on_jsonfriendly_subclass_do_not_affect_serialization": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_encoder_does_not_modify_non_jsonfriendly_objects": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_subclass_with_custom_json_friendly_obj_returns_non_dict": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [
+    "zz_gpt41mini_plain_4.test_gen::test_as_json_friendly_obj_method"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_4.test_gen::test_jsonfriendly_abstract_method_signature": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_calls_as_json_friendly_obj": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_dummyjsonfriendly_multiple_times_in_jsonencoder": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_abstractmethod_presence": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_falls_back_to_default_backup": {
+     "fail": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_does_not_set_default_backup_again": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_as_json_friendly_obj_method": {
+     "fail": 30,
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonfriendly_inheritance_chain": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_subclass_can_instantiate": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_backup_set_after_first_call": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_jsonencoder_default_with_builtin_type": {
+     "pass": 60
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_dummyjsonfriendly_str_repr": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [
+    "zz_gpt54mini_plain_1.test_gen::test_encoding_sets_default_backup_attribute"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_concrete_subclass_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_jsonencoder_default_is_patched_to_lambda": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_dumps_uses_custom_json_friendly_object": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_friendly_method_may_return_string": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_friendly_method_may_return_integer": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_default_backup_updates_to_current_default_on_each_encoding": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_dumps_works_with_nested_json_friendly_object_in_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_multiple_encodings_remain_consistent": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_subclass_without_implementation_is_still_abstract": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_encoding_sets_default_backup_attribute": {
+     "fail": 49,
+     "pass": 11
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_dumps_works_with_nested_json_friendly_object_in_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_jsonfriendly_is_abstract_and_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_json_friendly_method_may_return_list": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_non_jsonfriendly_object_raises_typeerror": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_encodes_nested_objects": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_method_can_return_builtin_scalar": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonencoder_default_sets_backup_when_called": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonencoder_default_is_patched": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_with_inherited_method_works": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_default_backup_attribute_is_created": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_custom_encoder_still_handles_jsonfriendly_objects": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_encodes_to_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_subclass_encodes_to_list": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_is_abstract": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_jsonfriendly_object_with_missing_method_falls_back_and_raises": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_plain_object_raises_type_error": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonfriendly_is_abstract_and_cannot_instantiate": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_calls_instance_method_each_time": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_is_patched_by_jsonfriendly": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_subclass_without_override_is_still_abstract": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_subclass_with_override_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_uses_as_json_friendly_obj_result": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_backup_is_reusable_original_function": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_sets_default_backup_on_first_use": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_uses_inherited_as_json_friendly_obj": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_works_with_custom_jsonencoder_subclass": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_json_dumps_encodes_nested_friendly_objects": {
+     "pass": 60
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_serializes_custom_jsonfriendly_object": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_is_patched_to_callable": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_raises_recursionerror_for_unsupported_object": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_calls_instance_method_with_self": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_subclass_without_implementation_is_still_abstract": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_subclass_can_implement_method_and_return_dict": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_can_encode_multiple_distinct_instances": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_not_present_before_use": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_works_with_inherited_method": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_updates_to_current_default_on_each_call": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_abstract_class_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_preserves_nested_jsonfriendly_objects": {
+     "fail": 60
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_is_set_after_encoding": {
+     "fail": 60
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_returned_friendly_object_is_recursively_encoded": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_returned_value_of_various_types_is_serialized[value4]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_unsupported_plain_object_still_raises_type_error": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_inherited_implementation_is_used_by_grandchild": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_custom_encoder_subclass_supports_friendly_objects": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_subclass_without_implementation_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_tuple_return_is_encoded_as_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_returned_value_of_various_types_is_serialized[None]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_returned_value_of_various_types_is_serialized[True]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_returned_value_of_various_types_is_serialized[3.5]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_instance_attribute_does_not_shadow_class_method": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_returned_value_of_various_types_is_serialized[42]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_subclass_with_implementation_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_subclass_override_takes_precedence": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_list_of_friendly_objects_preserves_order": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_plain_json_types_are_unaffected": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_dumps_output_matches_returned_dict_serialization": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_dumps_uses_as_json_friendly_obj": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_friendly_objects_nested_in_list_and_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_method_receives_instance_state": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_returned_value_of_various_types_is_serialized[text]": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_jsonfriendly_cannot_be_instantiated_directly": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_abstract_method_is_declared": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_exception_from_method_propagates": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_duck_typed_class_with_method_is_serialized": {
+     "pass": 60
+    },
+    "zz_haiku_plain_1.test_gen::test_returned_value_of_various_types_is_serialized[value5]": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_unsupported_type_still_raises_type_error": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_unsupported_set_raises_type_error": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_inherited_implementation_is_used": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_exception_from_method_propagates": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_indent_option_still_works_with_jsonfriendly": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_returned_list_is_serialized_as_array": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_dumps_produces_expected_text": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_jsonfriendly_inside_dict_value_is_encoded": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_primitives_are_unaffected_by_patch": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_subclass_with_implementation_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_returned_none_is_serialized_as_null": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_nested_jsonfriendly_inside_returned_dict_is_encoded": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_subclass_override_takes_precedence": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_direct_method_call_returns_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_jsonfriendly_inside_list_is_encoded": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_returned_string_is_serialized_as_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_dumps_uses_returned_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_list_of_many_jsonfriendly_objects": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_jsonfriendly_itself_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_method_receives_instance_state": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_returned_bool_is_serialized_as_boolean": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_returned_number_is_serialized_as_number": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_unsupported_value_nested_in_returned_output_raises_type_error": {
+     "pass": 60
+    },
+    "zz_haiku_plain_2.test_gen::test_subclass_without_implementation_cannot_be_instantiated": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_3.test_gen::test_encoder_encode_method_handles_jsonfriendly": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_dumps_serializes_dict_representation": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_jsonfriendly_inside_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_inherited_method_is_used": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_dumps_serializes_string_representation": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_overridden_method_in_subclass_is_used": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_duck_typed_class_with_method_serializes": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_indent_argument_is_respected": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_unsupported_type_raises_type_error": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_method_returning_none_becomes_null": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_subclass_missing_abstract_method_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_jsonfriendly_nested_inside_jsonfriendly": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_abstract_method_is_declared": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_instance_attribute_is_not_used_for_serialization": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_subclass_implementing_method_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_module_patches_json_encoder_default": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_json_dump_to_file_like_object": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_method_returning_tuple_becomes_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_exception_in_method_propagates": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_jsonfriendly_cannot_be_instantiated_directly": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_repeated_dumps_are_consistent": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_plain_types_still_serialize_normally": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_default_backup_attribute_is_recorded_after_dumps": {
+     "pass": 60
+    },
+    "zz_haiku_plain_3.test_gen::test_jsonfriendly_inside_list": {
+     "pass": 60
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_4.test_gen::test_subclass_with_method_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_method_returning_plain_string_encodes_as_json_string": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_plain_json_types_still_serialize": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_dumps_object_inside_dict": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_method_returning_tuple_encodes_as_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_multiple_classes_coexist": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_dumps_object_inside_list": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_method_returning_string_value": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_subclass_override_takes_precedence": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_method_returning_none_encodes_as_null": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_base_class_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_dumps_uses_custom_method": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_method_called_once_per_encoded_object": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_default_encoder_instance_uses_custom_method": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_abstract_method_is_declared_abstract": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_method_receives_instance_state": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_exception_in_method_propagates": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_nested_jsonfriendly_objects_are_encoded_recursively": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_inherited_method_is_used_when_not_overridden": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_subclass_without_method_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_haiku_plain_4.test_gen::test_indent_option_still_uses_custom_method": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_default_backup_is_set_after_serialization": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_dumps_string_returning_object": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_explicit_default_argument_takes_precedence": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_encoder_subclass_overriding_default_is_respected": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_regular_types_unaffected": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_duck_typed_object_is_serialized": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_dumps_exact_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_unserializable_object_still_raises_type_error": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_dumps_friendly_objects_inside_containers": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_cannot_instantiate_abstract_base": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_dumps_simple_object": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_dumps_list_returning_object": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_json_encoder_encode_and_dump_use_hook": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_dumps_nested_friendly_objects": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_unserializable_builtin_still_raises_type_error": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_subclass_without_implementation_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_subclass_override_with_super_call": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_1.test_gen::test_subclass_with_implementation_is_instantiable": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_child_class_can_override_hook": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_dumps_object_returning_scalar": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_abstract_method_is_registered": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_custom_encoder_subclass_inherits_patched_default": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_duck_typed_object_is_serialized": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_friendly_object_nested_in_friendly_object": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_inherited_hook_is_used_by_child_class": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_subclass_without_implementation_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_default_backup_attribute_set_after_use": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_dumps_with_indent_and_sort_keys": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_dumps_object_returning_list": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_cannot_instantiate_abstract_base": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_encoder_default_called_directly": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_subclass_with_implementation_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_unsupported_set_raises_type_error": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_dumps_simple_object_to_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_unsupported_object_still_raises_type_error": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_2.test_gen::test_objects_nested_in_containers": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_3.test_gen::test_explicit_encoder_class_uses_patched_default": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_dumps_friendly_object_to_dict": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_unsupported_object_inside_container_raises_type_error": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_subclass_without_implementation_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_unsupported_object_still_raises_type_error": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_nested_friendly_objects_are_encoded_recursively": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_dumps_friendly_object_to_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_friendly_objects_as_dict_values": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_subclass_with_implementation_is_instantiable": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_dumps_friendly_object_to_list": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_subclass_override_changes_representation": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_encoder_instance_encode_and_default": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_builtin_types_unaffected": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_cannot_instantiate_abstract_base": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_friendly_objects_inside_list": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_3.test_gen::test_default_backup_attribute_set_after_encoding_friendly_object": {
+     "pass": 60
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 60,
+   "gen_first_runs": 60,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_4.test_gen::test_dumps_object_as_dict_value": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_conversion_returning_list": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_explicit_jsonencoder_instance": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_conversion_returning_unserializable_raises_type_error": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_concrete_subclass_can_be_instantiated": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_dumps_exact_string": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_metaclass_is_abcmeta": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_builtin_types_still_serialize": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_json_dump_to_file_like": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_duck_typed_object_is_serialized": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_non_friendly_object_raises_type_error": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_subclass_override_is_used": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_dumps_list_of_objects": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_dumps_nested_objects": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_inherited_subclass_uses_parent_conversion": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_conversion_returning_another_friendly_object": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_default_backup_is_set_after_encoding": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_dumps_simple_object": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_subclass_without_implementation_cannot_be_instantiated": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_custom_encoder_default_override_takes_precedence": {
+     "pass": 60
+    },
+    "zz_sonnet_plain_4.test_gen::test_cannot_instantiate_abstract_base": {
+     "pass": 60
+    }
+   }
+  }
+ },
+ "alone": true,
+ "seconds": 318.4
+}
