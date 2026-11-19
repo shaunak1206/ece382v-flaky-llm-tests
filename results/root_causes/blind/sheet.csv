@@ -6,7 +6,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert file1 is not file2
     assert file1.content == file2.content
     assert file1.name == ""file1.xlsx""
-    assert file2.name == ""file2.xlsx""",,,
+    assert file2.name == ""file2.xlsx""",time,no,AI-assisted blind review; medium confidence. Workbook.save serializes XLSX ZIP metadata on each call; current timestamps can break raw-byte equality across clock boundaries. No inter-test dependency evident.
 2,cuckoopy,test_size_updating_after_insert_and_delete,"def test_size_updating_after_insert_and_delete():
     cf = cuckoofilter.CuckooFilter(capacity=50)
     keys = [""k1"", ""k2"", ""k3""]
@@ -18,7 +18,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert cf.size == len(keys) - 1
     # Delete again returns False, size unchanged
     assert cf.delete(keys[1]) is False
-    assert cf.size == len(keys) - 1",,,
+    assert cf.size == len(keys) - 1",randomness (salted hash),no,"AI-assisted blind source review. High confidence: cuckoopy/hashutils.py hash_code uses Python builtin hash on strings, which is process-salted. Candidate buckets vary, while truncated FNV fingerprints can collide; deletion/absence or fill assumptions can therefore vary. random.seed or patching random.choice does not fix hash salting. No prior test required."
 3,cuckoopy,test_len_tracks_mixed_inserts_and_deletes,"def test_len_tracks_mixed_inserts_and_deletes():
     f = CuckooFilter(100, fingerprint_size=4)
     f.insert(""x"")
@@ -32,12 +32,12 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert len(f) == 2
     assert f.delete(""y"")
     assert len(f) == 1
-    assert f.contains(""z"")",,,
+    assert f.contains(""z"")",randomness (salted hash),no,"AI-assisted blind source review. High confidence: cuckoopy/hashutils.py hash_code uses Python builtin hash on strings, which is process-salted. Candidate buckets vary, while truncated FNV fingerprints can collide; deletion/absence or fill assumptions can therefore vary. random.seed or patching random.choice does not fix hash salting. No prior test required."
 4,docci,test_xlsx_to_bytes_same_workbook_consistency,"def test_xlsx_to_bytes_same_workbook_consistency():
     wb = create_sample_workbook()
     b1 = xlsx_to_bytes(wb)
     b2 = xlsx_to_bytes(wb)
-    assert b1 == b2",,,
+    assert b1 == b2",time,no,AI-assisted blind source review. Medium confidence: xlsx_to_bytes calls Workbook.save for each result; XLSX ZIP timestamps can change between serializations despite identical workbook contents. No earlier test needed.
 5,torch-layer-normalization,test_forward_matches_pytorch_native_layernorm,"def test_forward_matches_pytorch_native_layernorm():
     import torch.nn as nn
     normalized_shape = (4,)
@@ -46,7 +46,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     x = torch.randn(5, 4)
     out_custom = ln_custom(x)
     out_native = ln_native(x)
-    assert torch.allclose(out_custom, out_native, atol=1e-5)",,,
+    assert torch.allclose(out_custom, out_native, atol=1e-5)",randomness (unseeded generator),no,"AI-assisted blind source review. High confidence: test uses unseeded torch.randn. Custom LayerNormalization defaults epsilon=1e-10, whereas native LayerNorm defaults epsilon=1e-5; sampled variances determine whether atol=1e-5 comparison passes. Intrinsic random input, not test order."
 6,kevinarpe-rambutan3,test_not_none_matches_collects_failure_for_none,"def test_not_none_matches_collects_failure_for_none():
     m = RNotNoneTypeMatcher()
     err = RTypeMatcherError()
@@ -54,7 +54,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     failed = list(err.failed_match_tuple_set_view)
     assert len(failed) == 1
     assert failed[0].matcher is m
-    assert failed[0].value is None",,,
+    assert failed[0].value is None",unstable object hash in the code,no,"AI-assisted blind source review. Medium confidence: RNotNoneTypeMatcher.__hash__ returns super(object, self).__hash__(), hashing a temporary super object rather than self. RTypeMatcherError keys an OrderedDict by the matcher, so repeated lookups/inserts can see inconsistent hashes. Error-message tests also appear to assume different whitespace. No polluter established."
 7,kevinarpe-rambutan3,test_not_none_matcher_error_recorded_only_on_failure,"def test_not_none_matcher_error_recorded_only_on_failure():
     matcher = RNotNoneTypeMatcher()
 
@@ -66,7 +66,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     failed = list(bad_error.failed_match_tuple_set_view)
     assert len(failed) == 1
     assert failed[0].matcher is matcher
-    assert failed[0].value is None",,,
+    assert failed[0].value is None",unstable object hash in the code,no,"AI-assisted blind source review. Medium confidence: RNotNoneTypeMatcher.__hash__ returns super(object, self).__hash__(), hashing a temporary super object rather than self. RTypeMatcherError keys an OrderedDict by the matcher, so repeated lookups/inserts can see inconsistent hashes. Error-message tests also appear to assume different whitespace. No polluter established."
 8,pylabeledrf,test_mutateLabeledTree_returns_different_tree,"def test_mutateLabeledTree_returns_different_tree():
     newick = ""((A,B),(C,D));""
     node_labels = ['speciation', 'duplication', 'speciation']
@@ -79,7 +79,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     # At least one internal node label might differ (not guaranteed due to randomness)
     labels_orig = [n.label for n in tree.internal_nodes()]
     labels_mut = [n.label for n in mutated.internal_nodes()]
-    assert len(labels_orig) == len(labels_mut)",,,
+    assert len(labels_orig) == len(labels_mut)",randomness (unseeded generator),no,"AI-assisted blind source review. High confidence: mutateLabeledTree uses random.random, randint and shuffle to choose collapse/expand/flip edits. Test wrongly assumes internal-node count is preserved after three random topology edits. No preceding test needed."
 9,spreading_dye_sampler,test_make_blot_permitted_none_defaults_to_all_true,"def test_make_blot_permitted_none_defaults_to_all_true():
     grid_dims = [4,4]
     cell_dims = [1,1]
@@ -89,20 +89,20 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     # All cells should appear inside grid
     for (x,y) in blot._cells:
         assert 0 <= x < grid_dims[0]
-        assert 0 <= y < grid_dims[1]",,,
+        assert 0 <= y < grid_dims[1]",randomness (unseeded generator),no,"AI-assisted blind source review. High confidence: make_blot uses unseeded numpy.random random/choice, adds out-of-grid neighbors, and returns None if a chosen neighbor is not permitted with default squeeze=False. The assertion that a blot always exists fails for some random walks; adjacency itself is preserved. No earlier test required."
 10,torch-gpt-2,test_bytepairencoding_reexport_is_same_object,"def test_bytepairencoding_reexport_is_same_object():
-    assert torch_gpt_2.BytePairEncoding is BytePairEncoding",,,
+    assert torch_gpt_2.BytePairEncoding is BytePairEncoding",test order dependency,yes,PROVISIONAL: exclude from agreement until human review. AI-assisted blind source review. Low confidence: package reexports BytePairEncoding from keras_gpt_2. Identity should be stable in a clean import; mixed cached modules or prior import mocking/reloading can replace one reference. Earlier-test import pollution is a hypothesis; helper/setup and runtime order were not available.
 11,limix-lmm,test_limix_lmm_init_imports_dummy_test_callable,"def test_limix_lmm_init_imports_dummy_test_callable():
     limix_lmm = _reload_limix_lmm()
     assert callable(limix_lmm.test)
-    assert limix_lmm.test() == ""ok""",,,
+    assert limix_lmm.test() == ""ok""",test order dependency,yes,AI-assisted blind source review. Medium confidence: limix_lmm.__init__ imports test from ._testit; the test expects a dummy callable returning ok via an unseen reload helper. Its success depends on module-cache/mock setup rather than the real exported function. Likely prior import/cache state; no execution trace available.
 12,kevinarpe-rambutan3,test_not_none_check_arg_raises_for_none,"def test_not_none_check_arg_raises_for_none():
     with pytest.raises(RCheckArgsError) as exc_info:
         RNotNoneTypeMatcher().check_arg(None, ""thing"")
     msg = str(exc_info.value)
     assert ""Argument name : thing"" in msg
     assert ""Expected type : not None"" in msg
-    assert ""Actual   type : NoneType"" in msg",,,
+    assert ""Actual   type : NoneType"" in msg",unstable object hash in the code,no,"AI-assisted blind source review. Medium confidence: RNotNoneTypeMatcher.__hash__ returns super(object, self).__hash__(), hashing a temporary super object rather than self. RTypeMatcherError keys an OrderedDict by the matcher, so repeated lookups/inserts can see inconsistent hashes. Error-message tests also appear to assume different whitespace. No polluter established."
 13,pelicun,test_tmvn_rvs_scalar_cov_repeated,"def test_tmvn_rvs_scalar_cov_repeated():
     mu = 1
     COV = 2.0
@@ -111,17 +111,17 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     # sample shape is correct
     assert samples.shape[0] == 10
     # values roughly around mu
-    assert np.abs(np.mean(samples) - mu) < 1.0",,,
+    assert np.abs(np.mean(samples) - mu) < 1.0",randomness (unseeded generator),no,AI-assisted blind source review. High confidence: tmvn_rvs delegates to scipy.stats.multivariate_normal.rvs without random_state. Ten draws with variance 2 can have a sample mean more than 1 from the population mean; fixed statistical bound is probabilistic. No prior test required.
 14,jmcm,test_import_raises_clear_error_for_missing_scipy,"def test_import_raises_clear_error_for_missing_scipy(monkeypatch):
     msg = _fresh_import_jmcm(monkeypatch, fail_on=""scipy"")
     assert ""Unable to import required dependencies"" in msg
-    assert ""scipy: mocked missing dependency: scipy"" in msg",,,
+    assert ""scipy: mocked missing dependency: scipy"" in msg",test order dependency,yes,AI-assisted blind source review. Medium confidence: jmcm.__init__ imports each dependency and raises on ImportError. A fresh-import test that patches scipy depends on sys.modules/import-hook cleanup; cached dependency/package objects can bypass the intended failure. Unseen helper means exact polluter is unverified.
 15,jmcm,test_package_import_exposes_jointmodel,"def test_package_import_exposes_jointmodel():
     jmcm = importlib.import_module(""jmcm"")
-    assert hasattr(jmcm, ""JointModel"")",,,
+    assert hasattr(jmcm, ""JointModel"")",test order dependency,yes,"AI-assisted blind source review. Medium confidence: jmcm.__init__ sets name and imports JointModel deterministically in a clean process. Neighboring fresh-import/missing-dependency tests manipulate import state; leftover sys.modules entries or mocks can alter later importlib.import_module results. Likely import-state pollution, not an intrinsic random/time source; exact fixture cleanup unseen."
 16,jmcm,test_jmcm_package_name_attribute_is_set,"def test_jmcm_package_name_attribute_is_set():
     jmcm = importlib.import_module(""jmcm"")
-    assert jmcm.name == ""jmcm""",,,
+    assert jmcm.name == ""jmcm""",test order dependency,yes,"AI-assisted blind source review. Medium confidence: jmcm.__init__ sets name and imports JointModel deterministically in a clean process. Neighboring fresh-import/missing-dependency tests manipulate import state; leftover sys.modules entries or mocks can alter later importlib.import_module results. Likely import-state pollution, not an intrinsic random/time source; exact fixture cleanup unseen."
 17,cuckoopy,test_contains_and_delete_using_custom_items,"def test_contains_and_delete_using_custom_items():
     cf = CuckooFilter(capacity=10, bucket_size=4, fingerprint_size=1)
     objs = [{""id"": i} for i in range(5)]
@@ -135,7 +135,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     obj_del = objs[2]
     assert cf.delete(str(obj_del))
     assert str(obj_del) not in cf
-    assert len(cf) == 4",,,
+    assert len(cf) == 4",randomness (salted hash),no,"AI-assisted blind source review. High confidence: cuckoopy/hashutils.py hash_code uses Python builtin hash on strings, which is process-salted. Candidate buckets vary, while truncated FNV fingerprints can collide; deletion/absence or fill assumptions can therefore vary. random.seed or patching random.choice does not fix hash salting. No prior test required."
 18,cuckoopy,test_insert_raises_when_full,"def test_insert_raises_when_full(monkeypatch):
     # To reliably test full condition: 
     # We'll create a small filter likely to fill quickly, 
@@ -153,7 +153,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         assert res is True
     # Next insert likely to fail (with above params)
     with pytest.raises(exceptions.CuckooFilterFullException):
-        cf.insert('extra-item')",,,
+        cf.insert('extra-item')",randomness (salted hash),no,"AI-assisted blind source review. High confidence: cuckoopy/hashutils.py hash_code uses Python builtin hash on strings, which is process-salted. Candidate buckets vary, while truncated FNV fingerprints can collide; deletion/absence or fill assumptions can therefore vary. random.seed or patching random.choice does not fix hash salting. No prior test required."
 19,pelicun,test_tmvn_MLE_multivariate_no_censoring,"def test_tmvn_MLE_multivariate_no_censoring():
     mu = np.array([1, -1])
     cov = np.array([[1.0, 0.3], [0.3, 2.0]])
@@ -165,13 +165,13 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert abs(est_mu[1] - mu[1]) < 0.3
     # Covariance diagonal approx original variances
     assert abs(est_cov[0,0] - cov[0,0]) < 0.2
-    assert abs(est_cov[1,1] - cov[1,1]) < 0.3",,,
+    assert abs(est_cov[1,1] - cov[1,1]) < 0.3",randomness (unseeded generator),no,"AI-assisted blind source review. High confidence: np.random.multivariate_normal draws only 150 samples without a seed, then asserts tight mean and variance estimation tolerances. Sampling variation alone can exceed those bounds. No earlier test needed."
 20,pypfm,test_reimporting_package_preserves_pfml_loader_identity,"def test_reimporting_package_preserves_pfml_loader_identity():
     first = pypfm.PFMLoader
     module = importlib.reload(pypfm)
-    assert module.PFMLoader is first",,,
+    assert module.PFMLoader is first",test order dependency,yes,AI-assisted blind source review. Low confidence: pypfm.__init__ reimports PFMLoader from .pypfm; reload preserves identity only if submodule and cached references remain consistent. Prior reload/mock/cache changes can split class identities. No clean-run failure mechanism visible; polluter not confirmed.
 21,torch-gpt-2,test_gpt2_looks_like_a_class,"def test_gpt2_looks_like_a_class():
-    assert inspect.isclass(torch_gpt_2.GPT_2)",,,
+    assert inspect.isclass(torch_gpt_2.GPT_2)",test order dependency,yes,"AI-assisted blind source review. Low confidence: torch_gpt_2.__init__ reexports GPT_2 through .net; inspect.isclass should be deterministic for the real class. A cached/mock package or prior import replacement is the plausible changing factor, but no polluter is shown."
 22,cuckoopy,test_multiple_inserts_and_deletes_consistency,"def test_multiple_inserts_and_deletes_consistency(monkeypatch):
     random.seed(987)
     cf = cuckoofilter.CuckooFilter(capacity=15, bucket_size=4, fingerprint_size=1, max_displacements=50)
@@ -191,7 +191,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         assert item not in cf
     # Confirm others still contained
     for item in items[5:]:
-        assert item in cf",,,
+        assert item in cf",randomness (salted hash),no,"AI-assisted blind source review. High confidence: cuckoopy/hashutils.py hash_code uses Python builtin hash on strings, which is process-salted. Candidate buckets vary, while truncated FNV fingerprints can collide; deletion/absence or fill assumptions can therefore vary. random.seed or patching random.choice does not fix hash salting. No prior test required."
 23,cuckoopy,test_delete_only_affects_existing_items,"def test_delete_only_affects_existing_items():
     cf = cuckoofilter.CuckooFilter(capacity=50)
     item1 = ""test1""
@@ -201,7 +201,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     # item1 still present
     assert cf.contains(item1)
     # item2 never present
-    assert not cf.contains(item2)",,,
+    assert not cf.contains(item2)",randomness (salted hash),no,"AI-assisted blind source review. High confidence: cuckoopy/hashutils.py hash_code uses Python builtin hash on strings, which is process-salted. Candidate buckets vary, while truncated FNV fingerprints can collide; deletion/absence or fill assumptions can therefore vary. random.seed or patching random.choice does not fix hash salting. No prior test required."
 24,kevinarpe-rambutan3,test_not_none_check_arg_none_message,"def test_not_none_check_arg_none_message():
     with pytest.raises(RCheckArgsError) as excinfo:
         RNotNoneTypeMatcher().check_arg(None, ""value"")
@@ -209,7 +209,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert ""Argument name : value"" in msg
     assert ""Expected type : not None"" in msg
     assert ""Actual   type : NoneType"" in msg
-    assert ""Actual  value : None"" in msg",,,
+    assert ""Actual  value : None"" in msg",unstable object hash in the code,no,"AI-assisted blind source review. Medium confidence: RNotNoneTypeMatcher.__hash__ returns super(object, self).__hash__(), hashing a temporary super object rather than self. RTypeMatcherError keys an OrderedDict by the matcher, so repeated lookups/inserts can see inconsistent hashes. Error-message tests also appear to assume different whitespace. No polluter established."
 25,spreading_dye_sampler,test_make_blot_cells_adjacent,"def test_make_blot_cells_adjacent():
     # Since blot grows from neighbors only, all cells must be adjacent to at least one other cell
     blot = make_blot([10,10], [1,1], 10)
@@ -222,10 +222,10 @@ item,project,test,test_code,your_category,your_order_dependent,notes
             # Check cell has at least one neighbor in previous cells (share edge)
             x,y = cell
             neighbors = [(x-1,y), (x+1,y), (x,y-1), (x,y+1)]
-            assert any(neigh in cells[:i] for neigh in neighbors)",,,
+            assert any(neigh in cells[:i] for neigh in neighbors)",randomness (unseeded generator),no,"AI-assisted blind source review. High confidence: make_blot uses unseeded numpy.random random/choice, adds out-of-grid neighbors, and returns None if a chosen neighbor is not permitted with default squeeze=False. The assertion that a blot always exists fails for some random walks; adjacency itself is preserved. No earlier test required."
 26,jmcm,test_jointmodel_is_a_class,"def test_jointmodel_is_a_class():
     jmcm = importlib.import_module(""jmcm"")
-    assert isinstance(jmcm.JointModel, type)",,,
+    assert isinstance(jmcm.JointModel, type)",test order dependency,yes,"PROVISIONAL: exclude from agreement until human review. AI-assisted blind source review. Medium confidence: jmcm.__init__ sets name and imports JointModel deterministically in a clean process. Neighboring fresh-import/missing-dependency tests manipulate import state; leftover sys.modules entries or mocks can alter later importlib.import_module results. Likely import-state pollution, not an intrinsic random/time source; exact fixture cleanup unseen."
 27,spreading_dye_sampler,test_internal_neighbour_sharing_edges_accumulate,"def test_internal_neighbour_sharing_edges_accumulate():
     blot = dye_blot.make_blot([5, 5], [1, 1], 3)
     # neighbours is internal, but indirectly test logic by checking neighbors are adjacent
@@ -233,7 +233,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     for c in cells:
         # No cell is out of bounds
         assert 0 <= c[0] < 5
-        assert 0 <= c[1] < 5",,,
+        assert 0 <= c[1] < 5",randomness (unseeded generator),no,AI-assisted blind review. High confidence: make_blot uses unseeded numpy.random.random/choice. With squeeze=False it can return None after drawing an out-of-bounds neighbour; the test unconditionally dereferences blot._cells.
 28,data-partitioner,test_training_test_partition_ratios,"def test_training_test_partition_ratios(training_percent):
     # Since partitioner is pseudorandom, ratios should be close to expected - allow 5% tolerance
     suplier = DataSuplier(dataset, training_percent=training_percent)
@@ -251,7 +251,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         assert te_len == 0
     else:
         ratio = tr_len / total
-        assert abs(ratio - training_percent) <= 0.05",,,
+        assert abs(ratio - training_percent) <= 0.05",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: despite the pseudorandom name/comment, partitioner.pseudorandom_function directly calls random.random(), not hash(). A sampled training ratio can exceed the fixed 5% tolerance."
 29,torch-gpt-2,test_gelu_reexport_is_same_object_as_net_module,"def test_gelu_reexport_is_same_object_as_net_module():
     net = importlib.import_module(""torch_gpt_2.net"")
     assert torch_gpt_2.gelu is net.gelu",,,
@@ -317,7 +317,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert cf.delete(10) is True
     assert cf.contains(20) is True
     # Deleting 10 again returns False
-    assert cf.delete(10) is False",,,
+    assert cf.delete(10) is False",randomness (salted hash),no,"AI-assisted blind review. Medium confidence: fixed byte fingerprints still pass through hashutils.hash_code, which calls builtin hash(bytes) for alternate buckets. random.seed does not fix that salt. Duplicate fingerprints also make the assumption that a second delete must fail unsafe; no earlier-test dependency is needed."
 31,torch-gpt-2,test_generate_is_callable,"def test_generate_is_callable():
     assert callable(torch_gpt_2.generate)",,,
 32,spreading_dye_sampler,test_make_blot_with_squeeze_true_skips_forbidden_cells,"def test_make_blot_with_squeeze_true_skips_forbidden_cells():
@@ -329,7 +329,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     blot = make_blot(grid_dims, cell_dims, req_num_cells=10, permitted=permitted, squeeze=True)
     assert blot is not None
     # No forbidden cell in blot
-    assert all(permitted[x,y] for (x,y) in blot._cells)",,,
+    assert all(permitted[x,y] for (x,y) in blot._cells)",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: make_blot chooses an unseeded random starting cell. squeeze=True does not rescue a forbidden starting cell, which returns None and breaks assert blot is not None."
 33,cuckoopy,test_delete_keeps_other_items_findable,"def test_delete_keeps_other_items_findable():
     f = CuckooFilter(100, fingerprint_size=4)
     for item in [""a"", ""b"", ""c""]:
@@ -338,7 +338,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert f.contains(""a"")
     assert f.contains(""c"")
     assert not f.contains(""b"")
-    assert len(f) == 2",,,
+    assert len(f) == 2",randomness (salted hash),no,AI-assisted blind review. Medium confidence: hashutils.hash_code uses Python builtin hash on strings and fingerprints. Bucket locations vary with process hash salt; deletion checks assume no relevant fingerprint/bucket collision. No random eviction is normally required for only three items.
 34,tenacity,test_stop_after_delay_threshold[5.0-True],,,,
 35,scikit-procrustes,test_gbb_solver_invH_branch,"def test_gbb_solver_invH_branch(monkeypatch):
     # Test gbb_solver branch where p < smalldim/2, forcing invH = False code path
@@ -368,7 +368,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     exitcode, f, Xout, normG, nbiter, msg = gbb_solver(problem, m, n, X, problem.A, problem.B,
                                                        options, False, sys.stdout)
     assert exitcode in (0,1)
-    assert isinstance(Xout, np.ndarray)",,,
+    assert isinstance(Xout, np.ndarray)",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: ProcrustesProblem._setproblem constructs Sigma, U and V using unseeded np.random.rand/randn. A solver limited to two iterations need not return the same exit status for every generated problem."
 36,data-partitioner,test_pseudorandom_partition_consistency_for_fixed_seed,"def test_pseudorandom_partition_consistency_for_fixed_seed():
     # We know pseudorandom_function is based on hash - it's deterministic,
     # but test deterministic behavior by running two DataSuplier instances
@@ -379,7 +379,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         ds2._DataSuplier__next()
     # training indexes should match and test indexes should match
     assert sorted(ds1.training_indexes) == sorted(ds2.training_indexes)
-    assert sorted(ds1.test_indexes) == sorted(ds2.test_indexes)",,,
+    assert sorted(ds1.test_indexes) == sorted(ds2.test_indexes)",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: the comment claiming hash-based determinism is wrong. pseudorandom_function calls random.random(); interleaving two suppliers consumes different draws, with no seed/reset, so the index lists need not match."
 37,data-partitioner,test_internal_state_advance_after_yielding,"def test_internal_state_advance_after_yielding():
     dataset = list(range(4))
     ds = DataSuplier(dataset, training_percent=0.5)
@@ -392,7 +392,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert ds.index > 0
     # Subsequent calls increase index
     second_item = next(gen)
-    assert ds.index > 1",,,
+    assert ds.index > 1",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: with four items, unseeded Bernoulli partitioning does not guarantee even two training items. next(gen) can exhaust the generator, so the test fails intrinsically without an earlier test."
 38,spreading_dye_sampler,test_make_blot_cells_are_connected,"def test_make_blot_cells_are_connected():
     # connectivity by shared cell edges: adjacents have x or y differ by 1 only
     blot = dye_blot.make_blot([7, 7], [2, 2], 10)
@@ -403,7 +403,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     for i in range(1, len(cells)):
         cx, cy = cells[i]
         neighbors = [(cx - 1, cy), (cx + 1, cy), (cx, cy - 1), (cx, cy + 1)]
-        assert any(n in cells[:i] for n in neighbors)",,,
+        assert any(n in cells[:i] for n in neighbors)",randomness (unseeded generator),no,AI-assisted blind review. High confidence: unseeded starting cells/neighbour choices can hit a boundary and return None because squeeze defaults False. The initial non-None assertion is not guaranteed.
 39,torch-gpt-2,test_gpt2_reexport_is_same_object_as_net_module,"def test_gpt2_reexport_is_same_object_as_net_module():
     net = importlib.import_module(""torch_gpt_2.net"")
     assert torch_gpt_2.GPT_2 is net.GPT_2",,,
@@ -430,7 +430,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert len(cf) == 5
     # Confirm those items exist logically (contains True)
     for item in items + [new_item]:
-        assert item in cf",,,
+        assert item in cf",randomness (salted hash),no,"AI-assisted blind review. High confidence: random.choice is patched deterministically, but hashutils.hash_code still uses salted builtin string hash. Five keys in five one-slot buckets may require different displacement paths under each hash salt and can fail within max_displacements."
 42,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[scipy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
@@ -444,7 +444,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     # The labels must be from {'speciation','duplication'}
     assert new_labels.issubset({'speciation', 'duplication'})
     # Since p_flip=1, at least some nodes flipped label, likely different sets
-    assert original_labels != new_labels or len(t1.internal_nodes()) == 0",,,
+    assert original_labels != new_labels or len(t1.internal_nodes()) == 0",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: mutateLabeledTree repeatedly chooses nodes using random.randint even with p_flip=1. Ten flips can revisit a node and cancel changes, so comparing sets of labels does not guarantee a different set."
 44,cuckoopy,test_many_inserts_remain_findable,"def test_many_inserts_remain_findable():
     cuckoo = CuckooFilter(capacity=16, bucket_size=4, fingerprint_size=4)
     names = [""entry-%d"" % n for n in range(40)]
@@ -452,7 +452,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         assert cuckoo.insert(name) is True
     assert len(cuckoo) == 40
     for name in names:
-        assert cuckoo.contains(name) is True",,,
+        assert cuckoo.contains(name) is True",randomness (unseeded generator),no,"AI-assisted blind review. Medium confidence: insert can invoke random.choice and Bucket.swap during collisions. Forty insertions can trigger variable eviction paths, with salted hash bucket placement also contributing; no seed or controlled placement is supplied."
 45,torch-gpt-2,test_bytepairencoding_looks_like_a_class,"def test_bytepairencoding_looks_like_a_class():
     assert inspect.isclass(torch_gpt_2.BytePairEncoding)",,,
 46,kevinarpe-rambutan3,test_not_none_rejects_none_and_records_failure,"def test_not_none_rejects_none_and_records_failure():
@@ -463,7 +463,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     tuples = list(err.failed_match_tuple_set_view)
     assert len(tuples) == 1
     assert tuples[0].matcher is m
-    assert tuples[0].value is None",,,
+    assert tuples[0].value is None",unstable object hash in the code,no,"AI-assisted blind review. Medium confidence: RNotNoneTypeMatcher.__hash__ hashes a newly created super(object,self) object, rather than a stable matcher identity. RTypeMatcherError uses matcher objects as dictionary keys, allowing changing object hashes to break lookup/formatting. This is intrinsic object hashing; no earlier-test dependency is established."
 47,spreading_dye_sampler,test_make_blot_starts_within_grid_bounds,"def test_make_blot_starts_within_grid_bounds():
     grid_dims = [8, 8]
     cell_dims = [2, 2]
@@ -471,7 +471,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert blot is not None
     for (x,y) in blot._cells:
         assert 0 <= x < grid_dims[0]
-        assert 0 <= y < grid_dims[1]",,,
+        assert 0 <= y < grid_dims[1]",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: unseeded make_blot draws starting cells/neighbours; with default squeeze=False an out-of-grid neighbour aborts construction, so assert blot is not None can fail."
 48,schedule,test_until_with_time_object,,,,
 49,spreading_dye_sampler,test_make_blot_allows_squeeze_to_skip_nonpermitted_cells,"def test_make_blot_allows_squeeze_to_skip_nonpermitted_cells():
     permitted = np.ones((5, 5), dtype=bool)
@@ -480,7 +480,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert blot is not None
     assert blot.num_cells() == 3
     # The blocked cell should not be in blot
-    assert (1, 0) not in blot._cells",,,
+    assert (1, 0) not in blot._cells",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: squeeze=True skips forbidden neighbours, but a random start at forbidden (1,0) still immediately returns None. Unseeded random start explains the non-None assertion flipping."
 50,kevinarpe-rambutan3,test_not_none_check_arg,"def test_not_none_check_arg():
     matcher = RNotNoneTypeMatcher()
     assert matcher.check_arg('v', 'arg') == 'v'
@@ -489,7 +489,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     msg = exc_info.value.args[0]
     assert 'some_arg' in msg
     assert 'not None' in msg
-    assert 'NoneType' in msg",,,
+    assert 'NoneType' in msg",unstable object hash in the code,no,"AI-assisted blind review. Medium confidence: RNotNoneTypeMatcher.__hash__ hashes a newly created super(object,self) object, rather than a stable matcher identity. RTypeMatcherError uses matcher objects as dictionary keys, allowing changing object hashes to break lookup/formatting. This is intrinsic object hashing; no earlier-test dependency is established."
 51,spreading_dye_sampler,test_make_blot_returns_exact_requested_cells_if_possible,"def test_make_blot_returns_exact_requested_cells_if_possible():
     grid_dims = [10,10]
     cell_dims = [1,1]
@@ -503,7 +503,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         blot = make_blot(grid_dims, cell_dims, req_num_cells=7)
         if blot is not None:
             assert blot.num_cells() <= 7
-            assert blot.num_cells() >= 1",,,
+            assert blot.num_cells() >= 1",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: default squeeze=False can return None after a randomly selected out-of-bounds neighbour. The first unconditional isinstance assertion does not allow that result, regardless of the later guarded loop."
 52,torch-layer-normalization,test_layernorm_with_tuple_normalized_shape,"def test_layernorm_with_tuple_normalized_shape():
     ln = LayerNormalization((3, 2))
     x = torch.randn(4, 3, 2)
@@ -512,11 +512,11 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     mean = y.mean(dim=(-2, -1))
     std = y.std(dim=(-2, -1), unbiased=False)
     assert torch.allclose(mean, torch.zeros_like(mean), atol=1e-5)
-    assert torch.allclose(std, torch.ones_like(std), atol=1e-5)",,,
+    assert torch.allclose(std, torch.ones_like(std), atol=1e-5)",randomness (unseeded generator),no,"AI-assisted blind review. Medium confidence: unseeded torch.randn supplies the data. The implementation normalizes only the last axis even for a tuple shape and adds epsilon, so tight unit-standard-deviation tolerance can depend on very small sampled row variances."
 53,spreading_dye_sampler,test_make_blot_with_non_standard_cell_dims,"def test_make_blot_with_non_standard_cell_dims():
     blot = dye_blot.make_blot([10, 10], [3, 2], 5)
     assert blot is not None
-    assert blot.num_cells() == 5",,,
+    assert blot.num_cells() == 5",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: make_blot draws an unseeded random starting cell and random neighbors. With squeeze=False (default), an out-of-bounds neighbor causes None; these assertions assume successful construction."
 54,jmcm,test_import_raises_clear_error_for_missing_pandas,"def test_import_raises_clear_error_for_missing_pandas(monkeypatch):
     msg = _fresh_import_jmcm(monkeypatch, fail_on=""pandas"")
     assert ""Unable to import required dependencies"" in msg
@@ -541,11 +541,11 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         cards_before, key=lambda c: (c.suit.value, c.value.value)
     )
     # Check that the reference list was not altered (copy was used)
-    assert cards_before[0] == deck1.bottom",,,
+    assert cards_before[0] == deck1.bottom",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: Deck.shuffle calls random.shuffle without a seed. The final assertion requires cards_before[0] to remain the shuffled deck bottom, which only happens by chance; permutation assertion does not fix this."
 58,spreading_dye_sampler,test_make_blot_cells_are_unique,"def test_make_blot_cells_are_unique():
     blot = dye_blot.make_blot([10, 10], [1, 1], 8)
     assert blot is not None
-    assert len(blot._cells) == len(set(blot._cells))",,,
+    assert len(blot._cells) == len(set(blot._cells))",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: make_blot draws an unseeded random starting cell and random neighbors. With squeeze=False (default), an out-of-bounds neighbor causes None; these assertions assume successful construction."
 59,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[pandas],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
@@ -557,7 +557,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     blot = dye_blot.make_blot([2, 2], [1, 1], 3, permitted=permitted, squeeze=False)
     # It's possible that the blot fails because of hitting disallowed cell
     # so blot should be None
-    assert blot is None or blot.num_cells() < 3",,,
+    assert blot is None or blot.num_cells() < 3",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: random start/neighbors need not hit the single forbidden cell. A valid 3-cell blot is possible, contradicting the asserted None-or-short result. No preceding test is required."
 61,kevinarpe-rambutan3,test_RNotNoneTypeMatcher_eq_and_hash,"def test_RNotNoneTypeMatcher_eq_and_hash():
     matcher1 = RNotNoneTypeMatcher()
     matcher2 = RNotNoneTypeMatcher()
@@ -570,7 +570,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     h1 = hash(matcher1)
     h2 = hash(matcher2)
     assert isinstance(h1, int)
-    assert h1 == h2",,,
+    assert h1 == h2",unstable object hash in the code,no,"AI-assisted blind review. Medium confidence: test requires separately created equal matchers to have equal hashes. RNotNoneTypeMatcher.__hash__ delegates via super(object,self).__hash__, while equality accepts every instance. This hash path is suspect; exact reported intermittency is not reproduced."
 62,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[patsy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
@@ -596,7 +596,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     bytes1 = xlsx_to_bytes(sample_workbook)
     bytes2 = xlsx_to_bytes(sample_workbook)
     # Both calls produce the same bytes content for the same workbook state
-    assert bytes1 == bytes2",,,
+    assert bytes1 == bytes2",time,no,"AI-assisted blind review. Medium-high confidence: xlsx_to_bytes calls Workbook.save anew. XLSX ZIP entry timestamps can differ across saves/clock boundaries, breaking byte equality despite equal workbook contents."
 68,jmcm,test_import_raises_clear_error_for_missing_math,"def test_import_raises_clear_error_for_missing_math(monkeypatch):
     msg = _fresh_import_jmcm(monkeypatch, fail_on=""math"")
     assert ""Unable to import required dependencies"" in msg
@@ -609,7 +609,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         assert 0 <= x < 10
         assert 0 <= y < 10
     # Number of cells
-    assert blot.num_cells() == 5",,,
+    assert blot.num_cells() == 5",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: make_blot draws an unseeded random starting cell and random neighbors. With squeeze=False (default), an out-of-bounds neighbor causes None; these assertions assume successful construction."
 70,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[numpy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
@@ -631,13 +631,13 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
     assert hasattr(jmcm, ""JointModel"")",,,
-74,pybreaker,test_successful_after_timeout,,,,
+74,pybreaker,test_successful_after_timeout,,time,no,"AI-assisted blind review. Medium confidence: exact public test at this commit was located in tests/pybreaker_test.py. It uses reset_timeout=1 and sleep(2), then expects an open breaker to close. Timing/clock and backend timestamp rounding are the relevant mechanism; no earlier test is required by the shown test."
 75,docci,test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes,"def test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes():
     wb = make_workbook([[""a""], [1]])
     attachment = xlsx_mod.xlsx_to_file(wb, ""data.xlsx"")
     raw = xlsx_mod.xlsx_to_bytes(wb)
 
-    assert attachment.content == raw",,,
+    assert attachment.content == raw",time,no,"AI-assisted blind review. Medium-high confidence: xlsx_to_file calls xlsx_to_bytes internally, then the test serializes again. ZIP timestamp metadata can change between saves, so byte equality is clock sensitive."
 76,spreading_dye_sampler,test_make_blot_cell_neighbors_addition,"def test_make_blot_cell_neighbors_addition():
     # We'll monkeypatch np.random.choice to always pick the first neighbor to make predictable test
     import spreading_dye_sampler.dye_blot as dye_blot_module
@@ -661,7 +661,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
 
     # Restore original function
     if original_choice:
-        dye_blot_module.np.random.choice = original_choice",,,
+        dye_blot_module.np.random.choice = original_choice",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: replacing np.random.choice leaves the random starting cell uncontrolled. Always taking neighbor index 0 can hit a boundary and return None. Manual restoration also leaks if assertion fails, but this test can fail in isolation."
 77,cuckoopy,test_delete_does_not_affect_other_fingerprints,"def test_delete_does_not_affect_other_fingerprints():
     cf = cuckoofilter.CuckooFilter(capacity=10, bucket_size=4, fingerprint_size=1)
     items = [""a"", ""b"", ""c""]
@@ -676,11 +676,11 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert ""a"" in cf
     assert ""c"" in cf
     # Deleted item no longer contained
-    assert ""b"" not in cf",,,
+    assert ""b"" not in cf",randomness (salted hash),no,"AI-assisted blind review. High confidence: hashutils.hash_code uses abs(hash(data)), so string bucket positions vary with Python hash salt. One-byte FNV fingerprints for a/b/c share the high-byte prefix; collisions can leave a matching fingerprint in a candidate bucket after deleting b, making b-not-in-filter vary across process salts. No preceding test required."
 78,spreading_dye_sampler,test_make_blot_without_permitted_returns_blot,"def test_make_blot_without_permitted_returns_blot():
     grid_dims = [10,10]
     cell_dims = [1,1]
     blot = make_blot(grid_dims, cell_dims, req_num_cells=5)
     assert isinstance(blot, DyeBlot)
     assert blot.num_cells() >= 1
-    assert blot.num_cells() <= 5",,,
+    assert blot.num_cells() <= 5",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: make_blot draws an unseeded random starting cell and random neighbors. With squeeze=False (default), an out-of-bounds neighbor causes None; these assertions assume successful construction."
