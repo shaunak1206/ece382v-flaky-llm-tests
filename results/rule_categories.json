@@ -1,0 +1,39 @@
+{
+ "validation": {
+  "records": 72,
+  "kappa": 0.758,
+  "agreement": 0.833,
+  "disagreements": {
+   "randomness unseeded -> randomness salted hash": 9,
+   "randomness unseeded -> test order dependency": 2,
+   "randomness salted hash -> randomness unseeded": 1
+  }
+ },
+ "held_out_kept": {
+  "gpt41mini": {
+   "randomness unseeded": 44,
+   "randomness salted hash": 8,
+   "test order dependency": 4,
+   "time": 11,
+   "unstable object hash": 3
+  },
+  "gpt54mini": {
+   "randomness salted hash": 1,
+   "time": 7,
+   "test order dependency": 61,
+   "unstable object hash": 1
+  },
+  "haiku": {
+   "randomness unseeded": 6,
+   "randomness salted hash": 6,
+   "test order dependency": 20,
+   "unstable object hash": 2
+  },
+  "sonnet": {
+   "randomness unseeded": 3,
+   "randomness salted hash": 1,
+   "test order dependency": 3,
+   "other": 11
+  }
+ }
+}

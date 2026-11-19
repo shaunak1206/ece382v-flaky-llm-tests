@@ -96,7 +96,7 @@ Tried & 16 & 45 & 45 \\
 
 \begin{itemize}
 \item \textbf{Time batch.} Only 16 tests passed the selection rule, not the 40 we planned, and none reproduced. 12 always failed, mostly at collection on old dependencies, and 4 never failed in 150 runs. We then retried all 16 with every package pinned to the date of the tested commit (\texttt{gruber\_reproduce.py --pin}, uv's \texttt{UV\_EXCLUDE\_NEWER}). 5 now run, but 11 still error on their first run (at collection, at setup, or on a pytest option the old configuration lacks), 1 always fails, 3 never fail, and the one that flips (gwosc, 3 of 150) fails on an HTTP 502 from a web service, which our rule excludes. The known flaky code study therefore still has only six projects outside randomness.
-\item \textbf{The random draw.} 10 of the 43 finished random projects reproduce (23\%), against 17 of 45 (38\%) drawn by name, so drawing by name did not pick unusually unreproducible projects, if anything the opposite. Writing this report we found that 8 projects of the by name batch had been run with a test from an older candidate list that shares their name; rerunning them with their order dependent test reproduced none (7 finished), so the 17 are unchanged.
+\item \textbf{The random draw.} 10 of the 43 finished random projects reproduce (23\%), against 17 of 44 finished (39\%) drawn by name, so drawing by name did not pick unusually unreproducible projects, if anything the opposite. Writing this report we found that 8 projects of the by name batch had been run with a test from an older candidate list that shares their name; rerunning them with their order dependent test reproduced none (7 finished), so the 17 are unchanged.
 \item \textbf{Order dependent arm.} For the 17 projects that reproduced we generated 4 suites per model and ran them like the main study (Table~\ref{tab:odarm}). Run alone, 16 of the 17 developer tests never flip, as victims and brittles should, and ChainConsumer's flips alone.
 \end{itemize}
 
@@ -148,10 +148,9 @@ The labels of Progress Report 2 stand: 78 records in \texttt{labels.json}, 74 fr
 \begin{itemize}
 \item \emph{Module state, 19 tests in 3 suites,} 17 of them in one Haiku jmcm suite that deletes the package from \texttt{sys.modules} and imports it again, GPT~5.4 mini's habit in Progress Report 2.
 \item \emph{A folder name collision, 11 tests in 1 Sonnet kindle-maker suite.} Setup fails with \texttt{FileExistsError} on \texttt{/tmp/kmtest\_<n>\_1}. Each \texttt{Ebook} makes a folder and deletes it in \texttt{\_\_del\_\_}, and the generated fixture names the folder \texttt{"kmtest\_" + id(object())}. CPython reuses that memory address, so two tests can get the same name while the first folder still exists. A control with \texttt{uuid4()} instead, run 200 times beside the original, had no flaky test against 20 (\texttt{results/kindle\_check/}), so the test's own fixture causes it.
-\item \emph{Randomness reseeded by pytest-randomly, 4 tests} (pelicun 2, scikit-procrustes, setigen): the shuffled runs reseed NumPy before each test, so seeds set elsewhere stop applying.
-\item \emph{Unstable object hash, 2 tests} in kevinarpe-rambutan3, the code's own hash bug.
+\item \emph{Randomness reseeded by pytest-randomly (4 tests) and rambutan3's unstable object hash (2 tests)}, both seen in Progress Report 2.
 \end{itemize}
-Only the folder collision is new; the rest recur from Progress Report 2, now in Claude suites as well.
+Only the folder collision is new.
 
 \textbf{Polluter search.} \texttt{od\_diagnose.py} reran each flaky held out test alone and then after each other test of its suite (Table~\ref{tab:runmodes}), and a 10 run rerun of every pair it found confirmed the polluter or not (Table~\ref{tab:polluters}). For Claude the 10 tests that fail alone are the fistro, spreading\_dye\_sampler, and cuckoopy randomness cases. The 15 confirmed polluters are 13 Haiku jmcm tests and the Sonnet jmcm and python-timemarker tests, while the 5 unconfirmed (4 fistro, 1 kevinarpe) flip through randomness. 20 of the 32 that never failed are the kindle-maker tests, whose folder collision needs a sequence of allocations, not one earlier test. In the order dependent arm all 4 flaky HikLoad tests have a polluter, in each suite a test that reloads \texttt{hikload.config}.
 
@@ -178,6 +177,29 @@ Never failed in the search & 32 & 16 & 16 \\
 \item \emph{GPT~4.1 mini leaves randomness unseeded.} Most of its tests fail alone, because the code under test draws random numbers the test does not control, 21 of them in one spreading\_dye\_sampler pattern that asserts on a single draw. Only 3 of its 10 polluters are confirmed (pylabeledrf and kevinarpe-rambutan3).
 \item \emph{Both write clock dependent tests in docci} (18 tests). Each saves the same workbook twice and compares the bytes. The ZIP header stores the modification time to 2 seconds and \texttt{docProps/core.xml} to 1 second, so the bytes differ when the two saves straddle a boundary, in 1 to 4 of 200 runs, which is why most never failed in the search. This time dependency sits in a library call, outside randomness, so the feature scan of Section~\ref{sec:rq3} cannot see it.
 \end{itemize}
+
+\textbf{Categories of the new flaky tests.} The category labels of the 192 kept flaky held out tests are not done, so Table~\ref{tab:rulecats} assigns them by a fixed rule from the diagnosis (\texttt{rule\_categories.py}): a confirmed polluter is test order dependency, a test that fails alone is randomness (salted hash if only with a varied hash seed), one that never failed in the search is order dependent if it never failed in file order, and three projects whose mechanism we read in the code are set by hand (rambutan3's object hash, docci's clock, kindle-maker's folders). On the 72 labeled Progress Report 2 records that have a diagnosis, the rule agrees with Manas at kappa 0.76 (83\%), as well as the two humans agree, and 9 of its 12 disagreements are again cuckoopy. These are interim categories; the human labels replace them in the final paper.
+
+\begin{table}[htbp]
+\caption{Root cause categories of the kept flaky held out tests, assigned by rule from the diagnosis (interim, validated against human labels at kappa 0.76)}
+\label{tab:rulecats}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrr}
+\toprule
+ & Sonnet & Haiku & GPT 5.4 & GPT 4.1 \\
+\midrule
+Randomness, unseeded & 3 & 6 & 0 & 44 \\
+Randomness, salted hash & 1 & 6 & 1 & 8 \\
+Unstable object hash & 0 & 2 & 1 & 3 \\
+Test order dependency & 3 & 20 & 61 & 4 \\
+Time (clock) & 0 & 0 & 7 & 11 \\
+Other (folder collision) & 11 & 0 & 0 & 0 \\
+\midrule
+Total & 18 & 34 & 70 & 70 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \textbf{Agreement.} Shaunak relabeled the 78 records of \texttt{labels.json}, late (due November 16), from a blind sheet that showed one record at a time with its project source and hid the model and Manas's label (\texttt{blind/sheet.csv}). The relabel is not fully blind, because Shaunak wrote about some of these tests in Progress Report 2. As a cross check, an LLM labeler given only the same sheet, the categories, and the project source labeled them too (\texttt{llm\_labels.csv}).
 
@@ -406,6 +428,6 @@ File order reruns help a little: 10 of them remove a third of the kept flaky tes
 \item \textbf{Missed order dependence.} The main protocol alternates file order and shuffled runs, and the developer file control shows that some order dependent tests flip only under other shuffle seeds, so the flaky counts of the alone runs are lower bounds.
 \item \textbf{Two measurements per suite.} Flakiness comes from 200 runs and quality from one clean run, which can keep slightly different tests.
 \item \textbf{Flaky tests in the mutation score.} A flaky test that fails by chance on a mutant kills it, so models with more flaky tests could gain. The effect is small: at most 1.7\% of any model's kept tests are flaky, and most flip in few of 200 runs. A stricter score would count only kills by tests that never failed in the 200 runs (next step 5).
-\item \textbf{Batch selection.} The order dependent arm's 17 projects come from the first 45 eligible projects by name, all capitalized. A seeded random draw of 45 more reproduced at a similar rate (10 of 43 so far), and its projects join the arm for the final paper.
+\item \textbf{Batch selection.} The order dependent arm's 17 projects come from the first 45 eligible projects by name, all capitalized. A seeded random draw of 45 more reproduced at a lower rate (10 of 43 so far), and its projects join the arm for the final paper.
 \item \textbf{Statistics.} Fisher tests on suites treat suites of one project as independent, so we use them only to describe, and the project level sign test is the one confirmatory test.
 \end{itemize}
