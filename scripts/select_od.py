@@ -13,7 +13,7 @@ They are reproduced with scripts/gruber_reproduce.py --shuffle-file (the whole t
 
   python scripts/select_od.py
 """
-import csv, glob, json, os, re, sys
+import argparse, csv, glob, json, os, random, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from select_ext import NET, PNAME
@@ -24,6 +24,11 @@ LIMIT = 45
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--random", type=int, default=None, metavar="SEED",
+                    help="instead of the first 45 by name, draw 45 at random with this seed from the eligible projects not "
+                         "tried before, and write candidates_od_random.csv")
+    a = ap.parse_args()
     used = set(open(f"{G}/matched_projects.txt").read().split())
     broken = {json.load(open(f)).get("project") for f in glob.glob(f"{G}/repro*/*.json") if not json.load(open(f)).get("install_ok", True)}
     by = {}
@@ -40,12 +45,19 @@ def main():
         if p not in by or key > by[p][0]:
             by[p] = (key, r, rate)
     hdr = open(f"{G}/candidates.csv").readline().strip().split(",")
-    w = csv.writer(open(f"{G}/candidates_od.csv", "w", newline="")); w.writerow(hdr)
-    picked = sorted(by.items())[:LIMIT]
+    if a.random is not None:
+        tried = {r["Project_Name"] for r in csv.DictReader(open(f"{G}/candidates_od.csv"))}
+        pool = sorted(p for p in by if p not in tried)
+        picked = sorted((p, by[p]) for p in random.Random(a.random).sample(pool, min(LIMIT, len(pool))))
+        out = f"{G}/candidates_od_random.csv"
+        print(f"{len(pool)} eligible projects not tried before")
+    else:
+        picked = sorted(by.items())[:LIMIT]; out = f"{G}/candidates_od.csv"
+    w = csv.writer(open(out, "w", newline="")); w.writerow(hdr)
     for p, (_, r, rate) in picked:
         w.writerow([p, r["Project_URL"], r["Project_Hash"], r["Test_filename"], r["Test_classname"], r["Test_funcname"],
                     r["Test_parametrization"], "order dependent", rate, ""])
-    print(f"{len(by)} eligible projects, wrote {len(picked)} to candidates_od.csv")
+    print(f"{len(by)} eligible projects, wrote {len(picked)} to {os.path.basename(out)}")
 
 
 if __name__ == "__main__":
