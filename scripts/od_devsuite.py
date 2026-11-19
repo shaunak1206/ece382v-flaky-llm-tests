@@ -50,6 +50,8 @@ def main():
     ap.add_argument("--work", default="/tmp/devsuite"); ap.add_argument("--out", required=True)
     ap.add_argument("--runs", type=int, default=60); ap.add_argument("--timeout", type=int, default=60)
     ap.add_argument("--suites", default="*_plain_*"); ap.add_argument("--max-minutes", type=int, default=320)
+    ap.add_argument("--whole", action="store_true", help="run the developer test directory that holds the order "
+                    "dependent test (the whole developer suite there) instead of only its file")
     ap.add_argument("--alone", action="store_true", help="control: run each generated suite without the developer file, "
                     "same repo, seeds, and shuffling, so flips that need the developer tests can be told apart")
     a = ap.parse_args()
@@ -65,11 +67,13 @@ def main():
     gr.sh(["uv", "pip", "install", "-q", "-p", py, "pytest-randomly<3.16", "freezegun", "pytest-mock"])
     gr.fix_missing_modules(py, repo, r["Test_filename"], log)
     devfile, odtest = r["Test_filename"], r["Test_funcname"]
+    if a.whole:
+        devfile = os.path.dirname(devfile) or devfile
     res = {"project": a.project, "install_ok": ok, "dev_file": devfile, "od_test": odtest, "runs": a.runs, "configs": {}}
     os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     sdirs = sorted({x for pat in a.suites.split(",") for x in glob.glob(f"{ROOT}/matched/{a.project}/{pat}/")})
     configs = ([] if a.alone else [None]) + [os.path.basename(x.rstrip("/")) for x in sdirs]
-    res["alone"] = a.alone
+    res["alone"] = a.alone; res["whole"] = a.whole
     for sid in configs:
         targets = [] if a.alone else [devfile]
         if sid:
