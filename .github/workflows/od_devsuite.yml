@@ -14,6 +14,9 @@ on:
       suites:
         description: "comma separated globs over suite ids"
         default: "*_plain_*"
+      alone:
+        description: "1 for the control: generated suites without the developer file"
+        default: "0"
 
 jobs:
   plan:
@@ -46,7 +49,7 @@ jobs:
         run: |
           mkdir -p out
           python3 scripts/od_devsuite.py "${{ matrix.project }}" --work /tmp/dv --runs "${{ inputs.runs }}" \
-            --suites "${{ inputs.suites }}" --out "out/${{ matrix.project }}.json" || true
+            --suites "${{ inputs.suites }}" ${{ inputs.alone == '1' && '--alone' || '' }} --out "out/${{ matrix.project }}.json" || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -50,6 +50,8 @@ def main():
     ap.add_argument("--work", default="/tmp/devsuite"); ap.add_argument("--out", required=True)
     ap.add_argument("--runs", type=int, default=60); ap.add_argument("--timeout", type=int, default=60)
     ap.add_argument("--suites", default="*_plain_*"); ap.add_argument("--max-minutes", type=int, default=320)
+    ap.add_argument("--alone", action="store_true", help="control: run each generated suite without the developer file, "
+                    "same repo, seeds, and shuffling, so flips that need the developer tests can be told apart")
     a = ap.parse_args()
     r = gr.row_for(a.project); t0 = time.time()
     d = f"{a.work}/{a.project}"; repo = f"{d}/repo"; venv = f"{d}/venv"
@@ -66,9 +68,10 @@ def main():
     res = {"project": a.project, "install_ok": ok, "dev_file": devfile, "od_test": odtest, "runs": a.runs, "configs": {}}
     os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     sdirs = sorted({x for pat in a.suites.split(",") for x in glob.glob(f"{ROOT}/matched/{a.project}/{pat}/")})
-    configs = [None] + [os.path.basename(x.rstrip("/")) for x in sdirs]
+    configs = ([] if a.alone else [None]) + [os.path.basename(x.rstrip("/")) for x in sdirs]
+    res["alone"] = a.alone
     for sid in configs:
-        targets = [devfile]
+        targets = [] if a.alone else [devfile]
         if sid:
             dst = f"{repo}/zz_{sid}"; shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst)
             for f in glob.glob(f"{ROOT}/matched/{a.project}/{sid}/*.py"):
@@ -97,7 +100,7 @@ def main():
             "gen_flaky": sorted(t for t, c in tests.items() if t.startswith("zz_") and c.get("pass") and (c.get("fail", 0) + c.get("error", 0))),
             "tests": tests}
         json.dump(res, open(a.out, "w"), indent=1)
-        b = res["configs"].get("baseline", {}).get("dev_failing", {})
+        b = res["configs"].get("baseline", {}).get("dev_failing", {}) if not a.alone else {}
         new = [t for t in fails_when if t not in b]
         print(f"[{a.project}/{sid or 'baseline'}] runs={len(gen_first)} od={od} new_dev_failing={new[:3]} "
               f"gen_flaky={len(res['configs'][sid or 'baseline']['gen_flaky'])}", flush=True)
