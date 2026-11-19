@@ -30,6 +30,27 @@ GPT 4.1 mini & 310 & 4,022 & 40 & 12.9 & 9.6--17.1 & 10 & 70 \\
 \item \textbf{Most kept flaky tests fail only in shuffled runs.} That holds for 36 of the 52 kept flaky Claude tests, from 10 suites, 28 of them from two (jmcm and kindle-maker), so ``most tests'' here means two suites. For GPT~5.4 mini it holds for 64 of 70 tests, in 8 projects. For GPT~4.1 mini it does not: 52 of its 70 also fail in file order. A shuffled run changes the order and also lets pytest-randomly reseed the generators, so not all 36 are order dependent (Section~\ref{sec:rootcause3}).
 \end{itemize}
 
+\textbf{How often the flaky tests fail.} Flakiness is not only yes or no: Table~\ref{tab:failfreq} gives how many of the 200 runs each kept flaky held out test fails (\texttt{results/flaky\_tests.csv}). The median test fails in 19 of 200 runs, but 25 fail in fewer than 1\% of runs, which a few reruns would almost never catch. Sonnet's flaky tests fail often (median 42 of 200), mostly the kindle-maker collisions, and GPT~4.1 mini's range most widely, from rare unseeded draws to 11 tests that fail in half the runs or more.
+
+\begin{table}[htbp]
+\caption{Kept flaky held out tests by how often they fail in their 200 runs, and the median and quartiles of failed runs}
+\label{tab:failfreq}
+\small
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+ & $<$1\% & 1--5\% & 5--20\% & 20--50\% & $\ge$50\% & Median (IQR) \\
+\midrule
+Sonnet & 0 & 4 & 3 & 11 & 0 & 42 (18--47) \\
+Haiku & 6 & 11 & 15 & 1 & 1 & 11 (2--20) \\
+GPT 5.4 mini & 5 & 3 & 45 & 17 & 0 & 19 (16--39) \\
+GPT 4.1 mini & 14 & 18 & 11 & 16 & 11 & 14 (2--68) \\
+\midrule
+All & 25 & 36 & 74 & 45 & 12 & 19 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \textbf{The pre registered test.} Progress Report 2 committed to one confirmatory analysis: for each of the six model pairs, the exact sign test over the projects where only one of the two models has a kept flaky test, significant at $p < 0.05/6 = 0.0083$. The lead it was meant to test is Sonnet against GPT~4.1 mini (0 : 6 projects in Progress Report 2). It runs unchanged from commit \texttt{7c05b6b} (Section~\ref{sec:setup}). With 41 projects, a split of 0 : 8 or more lopsided is significant. None of the six pairs is significant (Table~\ref{tab:prereg}). Counted on suites, the GPT~4.1 mini differences are large (Fisher $p < 0.001$ against both Claude models), but those tests ignore that suites of one project are related, and at the project level the split is 2 : 6 for Sonnet against GPT~4.1 mini ($p = 0.29$). With flaky tests in only 6 to 10 of the 41 projects per model, the project level test is underpowered and cannot confirm the suite level difference, so the model comparison stays a lead. The models also differ in which projects are flaky and why (Section~\ref{sec:rootcause3}).
 
 \begin{table}[htbp]
