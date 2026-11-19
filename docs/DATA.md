@@ -264,3 +264,36 @@ An independent Claude agent labeled the 78 blind records, reading only `sheet.cs
 project source (`matched_src/`, `subjects/`). The `labeler` column says so, and `scripts/kappa.py --second
 results/root_causes/blind/llm_labels.csv` copies it into `second_labeler`. This is not the human relabel; that is
 `sheet.csv` -> `kappa.json`.
+
+### GPT guard v3 and per model fixture runs: `results/matched_guard3gpt/`, `results/matched_heldout/` (`<model>_heldout{,seed,iso}_<k>`)
+
+`matched_guard3gpt/<project>.json` holds GPT 5.4 mini and GPT 4.1 mini guard v3 samples 1 and 2 (200 runs, same format
+as `matched_run.py` output). The held out folder holds all four models, plain and with M1 (`seed`) and M2 (`iso`).
+Suites that do not fit one CI job were run over disjoint run ranges (`matched_run.py --start`) and joined by
+`scripts/join_runs.py`; their chunks are in `results/chunks/<project>/`, and joined suites carry `joined_chunks`.
+A suite whose filter run does not exit within 15 minutes is marked `nonterminating: true` and not rerun.
+Not measured: GPT 5.4 mini `spreading_dye_sampler` heldout/seed/iso sample 7 (a test appends to the list it
+iterates, the runner runs out of memory). Run ids for every CI run are in `logs/runs_gpt_pr3.txt`.
+
+### Polluter searches: `results/od_diagnose_heldout_gpt/`, `results/od_diagnose_od/`, `results/od_diagnose_od_gpt/`
+
+`od_diagnose.py` output (see the held out entry above) for the GPT held out flaky tests, the Claude order dependent
+arm (HikLoad), and the GPT order dependent arm. They cover kept and removed flaky tests; the report counts kept ones.
+
+### Quality of guard v3 and fixture copies: `results/quality_guard3gpt/`, `results/quality_fixtures/`, `results/quality_fixtures_od/`
+
+`e2_quality.py` output. `quality_guard3gpt` has GPT held out samples 1 and 2 and guard v3 samples 1 and 2;
+`quality_fixtures` the M1/M2 copies of held out samples 1 and 2 for all models (`--fixtures`, the copy's conftest
+is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate with `scripts/quality_summary.py <dirs>`.
+
+### Other Progress Report 3 files
+
+- `results/kindle_check/`: kindle-maker A/B, the original Sonnet suite and a copy with `uuid4()` folder names
+  (`matched/kindle-maker/sonnet_kmuuid_5/README.txt`), 200 runs each.
+- `results/feature_flakiness_matched.json`: `scripts/feature_flakiness_matched.py`, features per kept test function
+  and per suite in the known flaky code study.
+- `results/report3_numbers.json`: `scripts/report3_numbers.py`, every count in the report's held out, order
+  dependent arm, and guard v3 tables.
+- `results/fixture_effects.json`: `scripts/fixture_effects.py`, per model, arm, and fixture, the stable kept tests
+  a fixture breaks (fail all runs) or makes flaky.
+- `results/krun_measured.json`: modes `file_order` (even runs), `shuffled` (odd runs), and `mixed` (all in order).
