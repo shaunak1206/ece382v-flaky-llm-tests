@@ -62,7 +62,7 @@ Every run is a fresh pytest process on a 2 vCPU GitHub Actions runner (\texttt{u
 Table~\ref{tab:runmodes} lists every kind of run in this report.
 
 \begin{table}[htbp]
-\caption{Every run mode. Order: file order with \texttt{-p no:randomly}, or shuffled by pytest-randomly. Every run is a fresh pytest process with a 60 second test timeout (30 seconds for mutant runs).}
+\caption{Every run mode. Order: file order with \texttt{-p no:randomly}, or shuffled by pytest-randomly. Every run is a fresh pytest process with a 60 second test timeout (30 seconds for mutant runs, 120 seconds in the polluter and cleaner search and the developer flaky test control).}
 \label{tab:runmodes}
 \small
 \setlength{\tabcolsep}{2pt}
