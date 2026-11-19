@@ -91,7 +91,7 @@ Control without the developer file & 60 & shuffled, seed and hash seed $9000+i$ 
 \end{table}
 
 \subsection{Root causes}
-Each flaky test gets a category from Luo et al.~\cite{luo2014} and Gruber et al.~\cite{gruber2021}, based on the test, the code it calls, and a reproduction of the failure. For every flaky test in the known flaky code study we also run \texttt{od\_diagnose.py}. It reruns the test alone 30 times, 20 with a new hash seed and 10 with \texttt{PYTHONHASHSEED=0}. If the test never fails alone, it runs every other test of its suite before it, 3 times each, as iDFlakies~\cite{lam2019} and iFixFlakies~\cite{shi2019} do, to find a polluter. Manas labels the tests, and Shaunak labels them again from a sheet that hides the model and the first label, and we report Cohen's kappa.
+Each flaky test gets a category from Luo et al.~\cite{luo2014} and Gruber et al.~\cite{gruber2021}, based on the test, the code it calls, and a reproduction of the failure. For every flaky test in the known flaky code study we also run \texttt{od\_diagnose.py}. It reruns the test alone 30 times, 20 with a new hash seed and 10 with \texttt{PYTHONHASHSEED=0}. If the test never fails alone, it runs every other test of its suite before it, 3 times each, as iDFlakies~\cite{lam2019} and iFixFlakies~\cite{shi2019} do, to find a polluter. One author labels the tests, and the other labels them again from a sheet that hides the model and the first label, and we report Cohen's kappa.
 
 \subsection{Mitigation and test quality}
 \label{sec:mitig}
