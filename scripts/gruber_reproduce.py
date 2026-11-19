@@ -27,7 +27,11 @@ REQ_FILES = ["requirements.txt", "requirements-dev.txt", "requirements_dev.txt",
 
 def row_for(name):
     # candidates.csv: the 58 hand labeled tests; candidates_ext.csv: one unlabeled flaky test per remaining project
-    for f in ("candidates.csv", "candidates_ext.csv", "candidates_time.csv", "candidates_od.csv", "candidates_od_random.csv"):
+    # GRUBER_LIST (set by the workflow to its candidate file) is searched first, so a project that is in several
+    # batches gets the test of the batch being run
+    files = ("candidates.csv", "candidates_ext.csv", "candidates_time.csv", "candidates_od.csv", "candidates_od_random.csv")
+    first = os.environ.get("GRUBER_LIST")
+    for f in ([first] if first in files else []) + [x for x in files if x != first]:
         for r in csv.DictReader(open(f"{ROOT}/results/gruber/{f}")):
             if r["Project_Name"] == name:
                 return r
