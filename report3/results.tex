@@ -260,15 +260,35 @@ GPT~4.1 mini, order dependent arm & 10 (20) & 8 (18) & 6 (16) \\
 \end{table}
 
 \begin{itemize}
-\item \textbf{M1 carries over to new randomness tests.} On the 21 untuned projects, Haiku goes from 9 suites with a kept flaky test to 1 under M1 alone, mostly the fistro and seeding cases. What M1 leaves is the salted \texttt{hash()} and the unstable object hash.
+\item \textbf{M1 carries over to new randomness tests.} On the 21 untuned projects, Haiku goes from 9 suites with a kept flaky test to 1 under M1 alone, mostly the fistro and seeding cases. What M1 leaves is the salted \texttt{hash()} and the unstable object hash. Some of these flips expose bugs in the code under test (fistro's generator can pick a day the month lacks, and rambutan3's hash is unstable), and seeding hides such a bug rather than fixing it, so M1 makes the test deterministic, not the code correct.
 \item \textbf{M2 adds the module state cases.} It removes the 17 jmcm tests, on the project it was designed for, and the 3 HikLoad reload tests, a project it never saw.
 \item \textbf{On the GPT suites each fixture fixes one model.} M1 takes GPT~4.1 mini, whose flaky tests are mostly randomness, from 40 suites to 15, and does nothing for GPT~5.4 mini (22 to 20). M2 takes GPT~5.4 mini from 22 suites to 8 and from 70 kept flaky tests to 9. Its package reset polluters are undone on torch-embed-sim and event-bus, which M2 was not built on, as well as on jmcm, torch-gpt-2, and pypfm, which it was. On the 21 untuned projects GPT~5.4 mini still goes from 17 suites to 7, and GPT~4.1 mini from 20 to 12 with M1.
 \item \textbf{Neither reaches state outside the interpreter or the clock.} 11 of Sonnet's 12 kept flaky tests under M2 are the kindle-maker suite, whose state is in \texttt{/tmp}, and 18 of the 25 GPT tests left under M2 are the docci clock tests. In the order dependent arm M2 leaves all 14 GPT~4.1 mini BT-Tracker tests, because the state they share is a class attribute, which M2 does not restore.
-\item \textbf{Breakage.} In Progress Report 2, M2 made 3 stable tests fail in every run. Of the 21,581 stable kept held out tests (kept, and never failed in 200 plain runs), M2 broke none and M1 broke 2 limix-lmm GPT tests, whose fixed seed draws data that gives the model NaN values; the 4,992 of the order dependent arm lost none (\texttt{fixture\_effects.py}). A fixture also made 2 GPT~4.1 mini kindle-maker tests flaky, through the same \texttt{/tmp} collision.
+\item \textbf{Breakage.} In Progress Report 2, M2 made 3 stable tests fail in every run. Of the 21,581 stable kept held out tests (kept, and never failed in 200 plain runs), M2 broke none and M1 broke 2 limix-lmm GPT tests, whose fixed seed draws data that gives the model NaN values; the 4,992 of the order dependent arm lost none (\texttt{fixture\_effects.py}). A fixture also made 2 GPT~4.1 mini kindle-maker tests flaky, through the same \texttt{/tmp} collision, and 3 to 4 docci clock tests per GPT model flipped under a fixture but not plain, which at 1 to 4 flips in 200 runs is chance.
 \end{itemize}
 \textbf{What the fixtures leave.} Progress Report 2 also promised the failure rate of the flaky tests a mitigation leaves, since a test that rarely fails does less harm (\texttt{leftover\_rates.py}). For the GPT models the fixtures leave fewer and rarer flips: the median kept flaky test fails in 7\% (GPT~4.1 mini) and 10\% (GPT~5.4 mini) of runs plain, and in 1 to 1.5\% under M2. Sonnet's leftovers do not get rarer, because 11 of its 12 are the kindle-maker collisions, which fail in about 22\% of runs either way.
 
-\textbf{Comparison with an iFixFlakies style fix.} iFixFlakies~\cite{shi2019} repairs an order dependent victim by adding the statements of a \emph{cleaner}, a test from the same suite that resets what the polluter changed. For each of the 122 victims the polluter search found (69 GPT and 20 Claude held out tests, and 29 GPT and 4 Claude tests of the order dependent arm, kept or removed), \texttt{cleaner\_search.py} first reran polluter then victim 10 times. 109 polluters are confirmed (the victim fails 8 or more of 10 times after it and passes alone 3 of 3), and the 13 that are not are in fistro and pelicun, whose flips are randomness, one docci clock test, and one kevinarpe-rambutan3 test. It then ran every other test of the suite between the two. Only 27 of the 109 victims have a cleaner, 20 of them in torch-gpt-2 and torch-embed-sim, where another test reloads the package back. M2 alone removes the flip for 81 of the 109 without any cleaner (80 become stable and 1 pypfm test fails every run), including 26 of the 27 that have a cleaner. The 27 that neither fixes are mostly BT-Tracker's class attribute and the QTAF and PyJsonFriendly victims. So for generated suites a cleaner is usually missing, because the model rarely writes a test that undoes another test's change, and a fixture that restores state is the more general fix.
+\textbf{Comparison with an iFixFlakies style fix.} iFixFlakies~\cite{shi2019} repairs an order dependent victim with the statements of a \emph{cleaner}, a test from the same suite that resets what the polluter changed. For each victim the polluter search found, held out and order dependent arm, kept or removed, \texttt{cleaner\_search.py} first confirmed the polluter in 10 paired runs, then ran every other test of the suite between polluter and victim (Table~\ref{tab:cleaners}).
+
+\begin{table}[htbp]
+\caption{Order dependent victims (held out and order dependent arm, kept or removed). Cleaner, M2, and Neither count confirmed victims: one with a cleaner in its suite, one whose flip M2 removes, and one with neither.}
+\label{tab:cleaners}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrr}
+\toprule
+ & Victims & Confirmed & Cleaner & M2 & Neither \\
+\midrule
+Claude & 24 & 19 & 1 & 19 & 0 \\
+GPT 5.4 mini & 60 & 60 & 24 & 57 & 3 \\
+GPT 4.1 mini & 38 & 30 & 2 & 5 & 24 \\
+\midrule
+All & 122 & 109 & 27 & 81 & 27 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A cleaner exists for few victims, mostly GPT~5.4 mini's in torch-gpt-2 and torch-embed-sim, where another test reloads the package back, while M2 removes the flip for most victims without one. What neither fixes is GPT~4.1 mini's BT-Tracker class attribute. For generated suites a cleaner is usually missing, because the model rarely writes a test that undoes another test's change, so a fixture that restores state is the more general fix.
 
 \textbf{Cost.} Over about 555 matched suites, the 200 runs take as long with M1 as without (ratio 1.00), and 19\% longer with M2 (median 14\% per suite), which imports the project once and restores state after every test (\texttt{fixture\_runtime.py}, from the CI logs). Neither adds a model call.
 
@@ -355,7 +375,7 @@ File order reruns do help: going from 1 to 10 runs removes 19 of the 57 tests a 
 \item \textbf{Scope.} 35 of 41 main projects are about randomness, the time batch reproduced nothing, and the order dependent arm has 17 projects whose developer tests were selected for flipping. We claim nothing about time or concurrency flakiness in LLM tests beyond the library study. The 12 libraries were chosen in the pilot before the selection rule was written, and the rule describes them rather than picked them.
 \item \textbf{Pipeline.} The held out sample puts all four models through one prompt and the same pasted source, but the Claude models still go through the Claude Code CLI with its own defaults and the OpenAI models through the API with theirs, and only GPT~5.4 mini reasons (at low effort), so model differences include these settings. The earlier suites mix two pipelines, so we never pool them with the held out sample.
 \item \textbf{Clustering.} 28 of the 52 kept flaky held out Claude tests come from two suites. We count suites and projects for every comparison, and test level rates would overstate precision.
-\item \textbf{Our own mitigations.} M1 and the guard prompts were tuned on the first 17 projects and M2 on reload cases among the 41, so on the held out suites they are tested on new suites of known projects. New projects are the order dependent arm for the fixtures and the other 24 projects for the guard prompts.
+\item \textbf{Our own mitigations.} M1 and the guard prompts were tuned on the first 17 projects and M2 on reload cases among the 41, so on the held out suites they are tested on new suites of known projects. Projects none of them saw are the 21 untuned projects of the held out sample and the order dependent arm for the fixtures, and the other 24 projects for the guard prompts.
 \item \textbf{Diagnosis and labels.} Single polluter pairs that failed once in 3 runs can be chance for randomness tests, the kindle-maker mechanism rests on one control suite, and the relabel is not fully blind.
 \item \textbf{Missed order dependence.} The main protocol alternates file order and shuffled runs, and the developer file control shows that some order dependent tests flip only under other shuffle seeds, so the flaky counts of the alone runs are lower bounds.
 \item \textbf{Two measurements per suite.} Flakiness comes from 200 runs and quality from one clean run, which can keep slightly different tests.
