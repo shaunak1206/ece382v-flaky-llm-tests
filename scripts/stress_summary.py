@@ -39,10 +39,18 @@ def main():
                                          "plain_kind": pl[sid]["tests"].get(t, {}).get("kind"),
                                          "stress_fail": s["tests"][t]["fail"] + s["tests"][t]["error"],
                                          "message": (s["tests"][t].get("first_message") or "")[:160]})
+            # same run count as the stress rerun: the first 150 plain runs (run order sequences)
+            def wf150(S):
+                first = set(S["first_run_failed"])
+                return any(("P" in v["sequence"][:150]) and (set(v["sequence"][:150]) & {"F", "E"})
+                           for t, v in S["tests"].items() if t not in first)
+            row["plain_first150_suites_with_flaky"] += wf150(pl[sid])
         out["by_project"][p] = dict(row)
     out["by_model"] = {k: dict(v) for k, v in out["by_model"].items()}
+    out["totals"] = {k: sum(r.get(k, 0) for r in out["by_project"].values()) for k in
+                     ("suites", "stress_suites_with_flaky", "plain_suites_with_flaky", "plain_first150_suites_with_flaky")}
     json.dump(out, open(f"{ROOT}/results/stress_summary.json", "w"), indent=1)
-    print(json.dumps({k: out[k] for k in ("by_project", "by_model")}, indent=1))
+    print(json.dumps({k: out[k] for k in ("totals", "by_model")}, indent=1))
     for x in out["new_flaky"]: print(x)
 
 

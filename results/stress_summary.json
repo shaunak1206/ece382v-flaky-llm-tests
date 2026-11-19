@@ -5,42 +5,48 @@
    "stress_suites_with_flaky": 13,
    "plain_suites_with_flaky": 14,
    "stress_flaky": 20,
-   "plain_flaky": 18
+   "plain_flaky": 18,
+   "plain_first150_suites_with_flaky": 11
   },
   "event-bus": {
    "suites": 32,
    "stress_suites_with_flaky": 3,
    "plain_suites_with_flaky": 3,
    "stress_flaky": 10,
-   "plain_flaky": 10
+   "plain_flaky": 10,
+   "plain_first150_suites_with_flaky": 3
   },
   "kevinarpe-rambutan3": {
    "suites": 31,
    "stress_suites_with_flaky": 3,
    "plain_suites_with_flaky": 6,
    "stress_flaky": 3,
-   "plain_flaky": 6
+   "plain_flaky": 6,
+   "plain_first150_suites_with_flaky": 3
   },
   "kindle-maker": {
    "suites": 32,
    "stress_suites_with_flaky": 1,
    "plain_suites_with_flaky": 1,
    "stress_flaky": 11,
-   "plain_flaky": 11
+   "plain_flaky": 11,
+   "plain_first150_suites_with_flaky": 1
   },
   "piripherals": {
    "suites": 31,
    "stress_suites_with_flaky": 0,
    "plain_suites_with_flaky": 0,
    "stress_flaky": 0,
-   "plain_flaky": 0
+   "plain_flaky": 0,
+   "plain_first150_suites_with_flaky": 0
   },
   "python-timemarker": {
    "suites": 32,
    "stress_suites_with_flaky": 4,
    "plain_suites_with_flaky": 4,
    "stress_flaky": 6,
-   "plain_flaky": 6
+   "plain_flaky": 6,
+   "plain_first150_suites_with_flaky": 4
   }
  },
  "by_model": {
@@ -137,18 +143,18 @@
   {
    "project": "docci",
    "suite": "gpt54mini_heldout_7",
-   "test": "test_xlsx_to_file_returns_independent_bytes_for_separate_calls",
-   "plain_kind": "stable",
-   "stress_fail": 2,
-   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'\\xbc' != b'\\xbd'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\"
-  },
-  {
-   "project": "docci",
-   "suite": "gpt54mini_heldout_7",
    "test": "test_xlsx_to_file_uses_xlsx_to_bytes_content",
    "plain_kind": "stable",
    "stress_fail": 2,
    "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'\\xb3' != b'\\xb2'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\"
+  },
+  {
+   "project": "docci",
+   "suite": "gpt54mini_heldout_7",
+   "test": "test_xlsx_to_file_returns_independent_bytes_for_separate_calls",
+   "plain_kind": "stable",
+   "stress_fail": 2,
+   "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'\\xbc' != b'\\xbd'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\"
   },
   {
    "project": "docci",
@@ -158,5 +164,11 @@
    "stress_fail": 1,
    "message": "assert b'PK\\x03\\x04\\...0\\x00\\x00\\x00' == b'PK\\x03\\x04\\...0\\x00\\x00\\x00'\n  At index 10 diff: b'q' != b'p'\n  Full diff:\n    (\n  -  b'PK\\x03\\x04\\x14\\x00\\x00\\x00\\x0"
   }
- ]
+ ],
+ "totals": {
+  "suites": 190,
+  "stress_suites_with_flaky": 24,
+  "plain_suites_with_flaky": 28,
+  "plain_first150_suites_with_flaky": 22
+ }
 }
