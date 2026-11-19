@@ -27,7 +27,7 @@ REQ_FILES = ["requirements.txt", "requirements-dev.txt", "requirements_dev.txt",
 
 def row_for(name):
     # candidates.csv: the 58 hand labeled tests; candidates_ext.csv: one unlabeled flaky test per remaining project
-    for f in ("candidates.csv", "candidates_ext.csv", "candidates_time.csv", "candidates_od.csv"):
+    for f in ("candidates.csv", "candidates_ext.csv", "candidates_time.csv", "candidates_od.csv", "candidates_od_random.csv"):
         for r in csv.DictReader(open(f"{ROOT}/results/gruber/{f}")):
             if r["Project_Name"] == name:
                 return r
