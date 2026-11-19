@@ -306,5 +306,5 @@ is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate wi
   configuration, per test outcomes, and whether the generated module ran first.
 - `results/matched_stress/<project>.json`: `matched_run.py --stress`, the held out plain suites of the six projects
   outside randomness, 150 runs each under stress-ng (config i mod 10 of the library study's 10).
-- `results/root_causes/blind/sheet.csv` (filled) and `kappa.json`: Shaunak's blind relabel of 56 of the 78 records,
+- `results/root_causes/blind/sheet.csv` (filled) and `kappa.json`: Shaunak's blind relabel of all 78 records,
   entered one record at a time on a page that showed the project, test name, test code, and source links only.

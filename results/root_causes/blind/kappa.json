@@ -1,15 +1,15 @@
 {
  "second_labeler": "human relabel (sheet.csv)",
  "second_file": "results/root_causes/blind/sheet.csv",
- "labeled": 56,
+ "labeled": 78,
  "of": 78,
  "category": {
-  "kappa": 0.757,
-  "agreement": 0.839
+  "kappa": 0.805,
+  "agreement": 0.859
  },
  "order_dependent": {
-  "kappa": 1.0,
-  "agreement": 1.0
+  "kappa": 0.942,
+  "agreement": 0.974
  },
  "disagreements": [
   {
@@ -59,6 +59,18 @@
    "test": "test_insert_eviction_path",
    "first": "randomness unseeded",
    "second": "randomness salted hash"
+  },
+  {
+   "project": "pylabeledrf",
+   "test": "test_computeLRF_identical_simple_tree",
+   "first": "test order dependency",
+   "second": "other"
+  },
+  {
+   "project": "pylabeledrf",
+   "test": "test_computeLRF_simple_flip_label",
+   "first": "test order dependency",
+   "second": "other"
   },
   {
    "project": "cuckoopy",

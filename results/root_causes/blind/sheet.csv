@@ -254,7 +254,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         assert abs(ratio - training_percent) <= 0.05",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: despite the pseudorandom name/comment, partitioner.pseudorandom_function directly calls random.random(), not hash(). A sampled training ratio can exceed the fixed 5% tolerance."
 29,torch-gpt-2,test_gelu_reexport_is_same_object_as_net_module,"def test_gelu_reexport_is_same_object_as_net_module():
     net = importlib.import_module(""torch_gpt_2.net"")
-    assert torch_gpt_2.gelu is net.gelu",,,
+    assert torch_gpt_2.gelu is net.gelu",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. Exact-commit torch_gpt_2/__init__.py reexports gelu from .net; identity is deterministic with consistent clean module caches. A stale package reference versus a reloaded/mocked dependency would explain changing identity. Public tests contain no matching generated helper, so cache/mock pollution is inferred, not demonstrated. No runtime order experiment or definite polluter was available."
 30,cuckoopy,test_contains_and_delete_with_duplicate_fingerprints,"def test_contains_and_delete_with_duplicate_fingerprints(monkeypatch):
     # We test duplicate fingerprints handling by inserting different items that
     # may produce same fingerprint, then deleting one item does not delete other
@@ -319,7 +319,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     # Deleting 10 again returns False
     assert cf.delete(10) is False",randomness (salted hash),no,"AI-assisted blind review. Medium confidence: fixed byte fingerprints still pass through hashutils.hash_code, which calls builtin hash(bytes) for alternate buckets. random.seed does not fix that salt. Duplicate fingerprints also make the assumption that a second delete must fail unsafe; no earlier-test dependency is needed."
 31,torch-gpt-2,test_generate_is_callable,"def test_generate_is_callable():
-    assert callable(torch_gpt_2.generate)",,,
+    assert callable(torch_gpt_2.generate)",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. Exact-commit package initialization exports generate (function defined in gen.py). isclass/callable is deterministic for the real export; replacement package objects or generated import mocks are the plausible variable. Public tests provide no matching fixture or polluter. This classification is an inference, not proof. No runtime order experiment or definite polluter was available."
 32,spreading_dye_sampler,test_make_blot_with_squeeze_true_skips_forbidden_cells,"def test_make_blot_with_squeeze_true_skips_forbidden_cells():
     grid_dims = [5, 5]
     cell_dims = [1, 1]
@@ -339,7 +339,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     assert f.contains(""c"")
     assert not f.contains(""b"")
     assert len(f) == 2",randomness (salted hash),no,AI-assisted blind review. Medium confidence: hashutils.hash_code uses Python builtin hash on strings and fingerprints. Bucket locations vary with process hash salt; deletion checks assume no relevant fingerprint/bucket collision. No random eviction is normally required for only three items.
-34,tenacity,test_stop_after_delay_threshold[5.0-True],,,,
+34,tenacity,test_stop_after_delay_threshold[5.0-True],,floating point on a clock value,no,"AI-assisted blind review; medium confidence, mechanism inferred because the generated test body is absent. At the tested commit stop_after_delay compares seconds_since_start >= max_delay, and RetryCallState computes outcome_timestamp - start_time from clock floats. The project’s own tests explicitly use Fraction in _set_delay_since_start to make this subtraction exact and avoid timestamp-arithmetic complexity. That supports a precision-sensitive 5.0 boundary hypothesis; no prior-test polluter is evidenced."
 35,scikit-procrustes,test_gbb_solver_invH_branch,"def test_gbb_solver_invH_branch(monkeypatch):
     # Test gbb_solver branch where p < smalldim/2, forcing invH = False code path
     from skprocrustes.skprocrustes import gbb_solver
@@ -406,11 +406,11 @@ item,project,test,test_code,your_category,your_order_dependent,notes
         assert any(n in cells[:i] for n in neighbors)",randomness (unseeded generator),no,AI-assisted blind review. High confidence: unseeded starting cells/neighbour choices can hit a boundary and return None because squeeze defaults False. The initial non-None assertion is not guaranteed.
 39,torch-gpt-2,test_gpt2_reexport_is_same_object_as_net_module,"def test_gpt2_reexport_is_same_object_as_net_module():
     net = importlib.import_module(""torch_gpt_2.net"")
-    assert torch_gpt_2.GPT_2 is net.GPT_2",,,
+    assert torch_gpt_2.GPT_2 is net.GPT_2",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. Exact-commit torch_gpt_2/__init__.py reexports GPT_2 from .net; identity is deterministic with consistent clean module caches. A stale package reference versus a reloaded/mocked dependency would explain changing identity. Public tests contain no matching generated helper, so cache/mock pollution is inferred, not demonstrated. No runtime order experiment or definite polluter was available."
 40,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[math],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
-    assert hasattr(jmcm, ""JointModel"")",,,
+    assert hasattr(jmcm, ""JointModel"")",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. jmcm/__init__.py sets name and imports JointModel after dependency checks. Test calls unseen _fresh_import_jmcm(monkeypatch); the math parameter does not appear in the displayed body. Public tests do not include this helper. Import-cache or mock cleanup from generated dependency tests is the likely variable; exact setup is unavailable. No runtime order experiment or definite polluter was available."
 41,cuckoopy,test_insert_eviction_path,"def test_insert_eviction_path(monkeypatch):
     # To test the eviction path deterministically, fix random.choice and fingerprints
     # Set max_displacements low to test the eviction loop runs but succeeds
@@ -434,7 +434,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
 42,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[scipy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
-    assert hasattr(jmcm, ""JointModel"")",,,
+    assert hasattr(jmcm, ""JointModel"")",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. jmcm/__init__.py sets name and imports JointModel after dependency checks. Test calls unseen _fresh_import_jmcm(monkeypatch); the scipy parameter does not appear in the displayed body. Public tests do not include this helper. Import-cache or mock cleanup from generated dependency tests is the likely variable; exact setup is unavailable. No runtime order experiment or definite polluter was available."
 43,pylabeledrf,test_mutateLabeledTree_flips_nodes_correctly,"def test_mutateLabeledTree_flips_nodes_correctly():
     t1 = _simple_tree1()
     t2 = mutateLabeledTree(t1, n=10, p_flip=1.0)  # force only flips
@@ -454,7 +454,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     for name in names:
         assert cuckoo.contains(name) is True",randomness (unseeded generator),no,"AI-assisted blind review. Medium confidence: insert can invoke random.choice and Bucket.swap during collisions. Forty insertions can trigger variable eviction paths, with salted hash bucket placement also contributing; no seed or controlled placement is supplied."
 45,torch-gpt-2,test_bytepairencoding_looks_like_a_class,"def test_bytepairencoding_looks_like_a_class():
-    assert inspect.isclass(torch_gpt_2.BytePairEncoding)",,,
+    assert inspect.isclass(torch_gpt_2.BytePairEncoding)",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. Exact-commit package initialization exports BytePairEncoding (imported from keras_gpt_2). isclass/callable is deterministic for the real export; replacement package objects or generated import mocks are the plausible variable. Public tests provide no matching fixture or polluter. This classification is an inference, not proof. No runtime order experiment or definite polluter was available."
 46,kevinarpe-rambutan3,test_not_none_rejects_none_and_records_failure,"def test_not_none_rejects_none_and_records_failure():
     m = RNotNoneTypeMatcher()
     assert not m.matches(None)
@@ -472,7 +472,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     for (x,y) in blot._cells:
         assert 0 <= x < grid_dims[0]
         assert 0 <= y < grid_dims[1]",randomness (unseeded generator),no,"AI-assisted blind review. High confidence: unseeded make_blot draws starting cells/neighbours; with default squeeze=False an out-of-grid neighbour aborts construction, so assert blot is not None can fail."
-48,schedule,test_until_with_time_object,,,,
+48,schedule,test_until_with_time_object,,time,no,"AI-assisted blind review; medium confidence, generated body absent. In the exact schedule commit, until(datetime.time) combines that time with datetime.now()’s date and raises ScheduleValueError if the resulting deadline is already past. Thus an unfrozen time-only deadline can pass or fail according to time of day or a boundary crossing. This is intrinsic clock dependence, not evidence of earlier-test dependence. The generated test name does not occur in the public commit."
 49,spreading_dye_sampler,test_make_blot_allows_squeeze_to_skip_nonpermitted_cells,"def test_make_blot_allows_squeeze_to_skip_nonpermitted_cells():
     permitted = np.ones((5, 5), dtype=bool)
     permitted[1, 0] = False  # block a cell that would neighbor start
@@ -520,14 +520,14 @@ item,project,test,test_code,your_category,your_order_dependent,notes
 54,jmcm,test_import_raises_clear_error_for_missing_pandas,"def test_import_raises_clear_error_for_missing_pandas(monkeypatch):
     msg = _fresh_import_jmcm(monkeypatch, fail_on=""pandas"")
     assert ""Unable to import required dependencies"" in msg
-    assert ""pandas: mocked missing dependency: pandas"" in msg",,,
+    assert ""pandas: mocked missing dependency: pandas"" in msg",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. jmcm/__init__.py explicitly imports pandas and aggregates ImportError text deterministically. Test calls unseen _fresh_import_jmcm(monkeypatch, fail_on=pandas); public repository tests do not define that helper. Inconsistent dependency/import-cache mocking is a plausible explanation for the reported flips, but no earlier polluting test is shown. No runtime order experiment or definite polluter was available."
 55,jmcm,test_jointmodel_module_path_is_expected,"def test_jointmodel_module_path_is_expected():
     jmcm = importlib.import_module(""jmcm"")
-    assert jmcm.JointModel.__module__ == ""jmcm.joint_model""",,,
+    assert jmcm.JointModel.__module__ == ""jmcm.joint_model""",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. Exact-commit jmcm/__init__.py sets name and imports JointModel from .joint_model; JointModel.__module__ == jmcm.joint_model is deterministic after a clean successful import. Related blind records simulate missing dependencies via an unseen helper. Residual cached/mock modules are the plausible changing factor, but public tests do not expose the generated setup or cleanup. No runtime order experiment or definite polluter was available."
 56,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[warnings],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
-    assert hasattr(jmcm, ""JointModel"")",,,
+    assert hasattr(jmcm, ""JointModel"")",test order dependency,yes,"AI-assisted blind review; LOW confidence, provisional forced choice. jmcm/__init__.py sets name and imports JointModel after dependency checks. Test calls unseen _fresh_import_jmcm(monkeypatch); the warnings parameter does not appear in the displayed body. Public tests do not include this helper. Import-cache or mock cleanup from generated dependency tests is the likely variable; exact setup is unavailable. No runtime order experiment or definite polluter was available."
 57,gamble.git,test_deck_shuffle_increases_shuffles_counter_and_changes_order,"def test_deck_shuffle_increases_shuffles_counter_and_changes_order():
     deck1 = Deck(shuffle=False)
     cards_before = deck1.cards.copy()
@@ -549,7 +549,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
 59,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[pandas],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
-    assert hasattr(jmcm, ""JointModel"")",,,
+    assert hasattr(jmcm, ""JointModel"")",test order dependency,yes,"AI-assisted blind review. Medium-low confidence, hypothesis rather than verified polluter. Visible test calls _fresh_import_jmcm(monkeypatch) and checks JointModel; parameter pandas is unused in the shown body. Exact-commit jmcm/__init__.py deterministically imports a fixed dependency tuple then reexports .joint_model.JointModel. Other visible cases inject missing dependencies and fresh imports. An incompletely restored sys.modules entry/import hook can make this depend on earlier tests. The generated helper is absent from both the display and public tests, so its cleanup and actual failing assertion cannot be verified. No time/RNG mechanism is exercised by this body."
 60,spreading_dye_sampler,test_make_blot_returns_none_if_nonpermitted_cell_found_and_squeeze_false,"def test_make_blot_returns_none_if_nonpermitted_cell_found_and_squeeze_false():
     permitted = np.ones((5, 5), dtype=bool)
     # create a ""hole"" that must be used if squeeze is false
@@ -574,15 +574,15 @@ item,project,test,test_code,your_category,your_order_dependent,notes
 62,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[patsy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
-    assert hasattr(jmcm, ""JointModel"")",,,
+    assert hasattr(jmcm, ""JointModel"")",test order dependency,yes,"AI-assisted blind review. Medium-low confidence, hypothesis rather than verified polluter. Visible test calls _fresh_import_jmcm(monkeypatch) and checks JointModel; parameter patsy is unused in the shown body. Exact-commit jmcm/__init__.py deterministically imports a fixed dependency tuple then reexports .joint_model.JointModel. Other visible cases inject missing dependencies and fresh imports. An incompletely restored sys.modules entry/import hook can make this depend on earlier tests. The generated helper is absent from both the display and public tests, so its cleanup and actual failing assertion cannot be verified. No time/RNG mechanism is exercised by this body."
 63,jmcm,test_jointmodel_class_name_is_correct,"def test_jointmodel_class_name_is_correct():
     jmcm = importlib.import_module(""jmcm"")
-    assert jmcm.JointModel.__name__ == ""JointModel""",,,
-64,tenacity,test_run_stop_sets_delay_since_first_attempt_and_result,,,,
+    assert jmcm.JointModel.__name__ == ""JointModel""",test order dependency,yes,"AI-assisted blind review. Medium-low confidence, inferred import-cache/mock contamination. Exact source defines class JointModel in jmcm/joint_model.py and reexports it normally; a clean import should always have __name__ == JointModel. A leftover fake module/class from fresh-import or missing-dependency cases, or their import hook, could vary this result by prior test order. No concrete polluter or helper implementation was available; public repository tests do not include this generated test."
+64,tenacity,test_run_stop_sets_delay_since_first_attempt_and_result,,floating point on a clock value,no,"AI-assisted blind review; medium confidence, generated body absent. BaseRetrying._run_stop copies retry_state.seconds_since_start into statistics[delay_since_first_attempt] and stores the stop result. seconds_since_start subtracts float monotonic timestamps. The upstream test helper deliberately uses Fraction to ensure exact elapsed-time equality, making precision in an exact delay assertion a plausible cause here. This is a source-supported hypothesis rather than a reproduced failure; no prior-test polluter is shown."
 65,jmcm,test_jointmodel_reexport_matches_submodule_class,"def test_jointmodel_reexport_matches_submodule_class():
     jmcm = importlib.import_module(""jmcm"")
     submodule = importlib.import_module(""jmcm.joint_model"")
-    assert jmcm.JointModel is submodule.JointModel",,,
+    assert jmcm.JointModel is submodule.JointModel",test order dependency,yes,"AI-assisted blind review. Medium confidence in the mechanism, not reproduced. __init__.py binds JointModel with from .joint_model import JointModel. Removing/reimporting only jmcm.joint_model creates a new class object while a cached parent package retains the old binding, breaking this identity assertion. The neighboring fresh-import/fault-injection tests provide a plausible source of module-cache contamination. Their hidden helper cleanup is unverified; absent that, the identity assertion is deterministic."
 66,pylabeledrf,test_computeLRF_identical_simple_tree,"def test_computeLRF_identical_simple_tree():
     # Two identical trees: LRF distance should be 0
     newick = ""((A,B),(C,D));""
@@ -591,7 +591,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     t1 = build_tree(newick, node_labels)
     t2 = build_tree(newick, node_labels)
     dist = computeLRF(t1, t2)
-    assert dist == 0",,,
+    assert dist == 0",other,no,"AI-assisted blind review. LOW confidence/undetermined: forced category, not a confirmed root cause. Exact computeLRF clones its arguments, derives integer-bitmask bipartitions and loops over their set; set use alone does not prove nondeterministic results. Visible build_tree is unavailable in public source/tests. Reconstructed preorder/postorder helpers under DendroPy4.6.1 consistently gave distance0 for identical trees with rooted/unrooted and shared/separate namespaces. They are NOT the original helper/environment. Taxon namespace/label assignment or leaked fixture state remain hypotheses, but no prior-test dependency is demonstrated. Do not interpret no as proof of independence."
 67,docci,test_xlsx_to_bytes_saves_content_consistently,"def test_xlsx_to_bytes_saves_content_consistently(sample_workbook):
     bytes1 = xlsx_to_bytes(sample_workbook)
     bytes2 = xlsx_to_bytes(sample_workbook)
@@ -600,7 +600,7 @@ item,project,test,test_code,your_category,your_order_dependent,notes
 68,jmcm,test_import_raises_clear_error_for_missing_math,"def test_import_raises_clear_error_for_missing_math(monkeypatch):
     msg = _fresh_import_jmcm(monkeypatch, fail_on=""math"")
     assert ""Unable to import required dependencies"" in msg
-    assert ""math: mocked missing dependency: math"" in msg",,,
+    assert ""math: mocked missing dependency: math"" in msg",test order dependency,yes,"AI-assisted blind review. Medium-low confidence. Exact __init__.py catches ImportError from direct __import__(math) and constructs the requested deterministic error. For it to vary, _fresh_import_jmcm must fail to consistently re-execute package initialization or restore import/sys.modules state across preceding tests. This helper is not visible and is not in the public repository tests, so order dependence is an inference; no time, RNG or network is involved in the shown body."
 69,spreading_dye_sampler,test_make_blot_basic_properties,"def test_make_blot_basic_properties():
     blot = dye_blot.make_blot([10, 10], [1, 1], 5)
     assert blot is not None
@@ -613,10 +613,10 @@ item,project,test,test_code,your_category,your_order_dependent,notes
 70,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[numpy],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
-    assert hasattr(jmcm, ""JointModel"")",,,
+    assert hasattr(jmcm, ""JointModel"")",test order dependency,yes,"AI-assisted blind review. Medium-low confidence, hypothesis rather than verified polluter. Visible test calls _fresh_import_jmcm(monkeypatch) and checks JointModel; parameter numpy is unused in the shown body. Exact-commit jmcm/__init__.py deterministically imports a fixed dependency tuple then reexports .joint_model.JointModel. Other visible cases inject missing dependencies and fresh imports. An incompletely restored sys.modules entry/import hook can make this depend on earlier tests. The generated helper is absent from both the display and public tests, so its cleanup and actual failing assertion cannot be verified. No time/RNG mechanism is exercised by this body."
 71,torch-gpt-2,test_generate_reexport_is_same_object_as_gen_module,"def test_generate_reexport_is_same_object_as_gen_module():
     gen = importlib.import_module(""torch_gpt_2.gen"")
-    assert torch_gpt_2.generate is gen.generate",,,
+    assert torch_gpt_2.generate is gen.generate",test order dependency,yes,"AI-assisted blind review. Medium confidence in cache-identity mechanism, not a reproduced failure. Exact torch_gpt_2/__init__.py binds generate via from .gen import generate. Deleting/reimporting .gen without refreshing the package binding can yield different function objects; cached module objects/import mocks from earlier tests are the plausible varying state. Public tests/test_gen.py exercises generation but does not contain this generated identity test or its fixtures. No random generation is invoked by this assertion itself."
 72,pylabeledrf,test_computeLRF_simple_flip_label,"def test_computeLRF_simple_flip_label():
     # Trees differ only by one flip (speciation <-> duplication) at one internal node
     newick = ""((A,B),(C,D));""
@@ -626,11 +626,11 @@ item,project,test,test_code,your_category,your_order_dependent,notes
     t2 = build_tree(newick, node_labels2)
     dist = computeLRF(t1, t2)
     # Should detect substitutions, distance > 0
-    assert dist > 0",,,
+    assert dist > 0",other,no,"AI-assisted blind review. LOW confidence/undetermined: forced category. Visible build_tree is missing; it assigns labels by an approximate node order. Exact DendroPy4.6.1 encode_bipartitions collapses an unrooted basal bifurcation; reconstructed postorder helpers can consequently discard the changed node and yield distance0, whereas preorder/rooted versions yield1. This demonstrates setup/rooting sensitivity, NOT intermittent failure of the original test. Exact source contains sets but uses bitmask bipartition keys, so unordered-collection flakiness is unproven. No earlier-test dependency is established; no is provisional. Official docs require consistent TaxonNamespace semantics: https://jeetsukumaran.github.io/DendroPy/primer/taxa.html"
 73,jmcm,test_hard_dependencies_are_importable_via_jmcm_module[collections],"def test_hard_dependencies_are_importable_via_jmcm_module(monkeypatch, dep):
     # Importing jmcm should succeed when all dependencies are available.
     jmcm = _fresh_import_jmcm(monkeypatch)
-    assert hasattr(jmcm, ""JointModel"")",,,
+    assert hasattr(jmcm, ""JointModel"")",test order dependency,yes,"AI-assisted blind review. Medium-low confidence, hypothesis rather than verified polluter. Visible test calls _fresh_import_jmcm(monkeypatch) and checks JointModel; parameter collections is unused in the shown body. Exact-commit jmcm/__init__.py deterministically imports a fixed dependency tuple then reexports .joint_model.JointModel. Other visible cases inject missing dependencies and fresh imports. An incompletely restored sys.modules entry/import hook can make this depend on earlier tests. The generated helper is absent from both the display and public tests, so its cleanup and actual failing assertion cannot be verified. No time/RNG mechanism is exercised by this body."
 74,pybreaker,test_successful_after_timeout,,time,no,"AI-assisted blind review. Medium confidence: exact public test at this commit was located in tests/pybreaker_test.py. It uses reset_timeout=1 and sleep(2), then expects an open breaker to close. Timing/clock and backend timestamp rounding are the relevant mechanism; no earlier test is required by the shown test."
 75,docci,test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes,"def test_xlsx_to_file_contains_same_bytes_as_xlsx_to_bytes():
     wb = make_workbook([[""a""], [1]])
