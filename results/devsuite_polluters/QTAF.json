@@ -1,0 +1,70 @@
+{
+ "project": "QTAF",
+ "victims": [
+  {
+   "suite": "gpt41mini_plain_1",
+   "kind": "developer victim",
+   "victim": "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive",
+   "alone_pass": 3,
+   "control": "no control",
+   "polluters": [
+    "test_load_datadrive_tests_uses_loader_when_not_datadrive",
+    "test_load_datadrive_tests_raises_runtimeerror_when_not_datadrive_and_settings_false"
+   ]
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "kind": "generated victim",
+   "victim": "zz_gpt41mini_plain_1.test_gen::test_load_datadrive_tests_with_name_subset",
+   "alone_pass": 3,
+   "control": "no control",
+   "polluters": []
+  },
+  {
+   "suite": "gpt41mini_plain_1",
+   "kind": "generated victim",
+   "victim": "zz_gpt41mini_plain_1.test_gen::test_modify_settings_restores_value",
+   "alone_pass": 3,
+   "control": "no control",
+   "polluters": [
+    "test_disable_rewrite_assert",
+    "test_assert_datadrive",
+    "test_assert_failure",
+    "test_disable_assert_failed_continue",
+    "test_assert_inner_invoke"
+   ]
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "kind": "developer victim",
+   "victim": "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive",
+   "alone_pass": 3,
+   "control": "no control",
+   "polluters": [
+    "test_load_datadrive_tests_without_datadrive_and_settings"
+   ]
+  },
+  {
+   "suite": "gpt41mini_plain_2",
+   "kind": "generated victim",
+   "victim": "zz_gpt41mini_plain_2.test_gen::test_is_datadrive_and_get_datadrive",
+   "alone_pass": 3,
+   "control": "no control",
+   "polluters": []
+  },
+  {
+   "suite": "gpt54mini_plain_1",
+   "kind": "generated victim",
+   "victim": "zz_gpt54mini_plain_1.test_gen::test_testcase_properties_and_environ",
+   "alone_pass": 3,
+   "control": "no control",
+   "polluters": [
+    "test_disable_rewrite_assert",
+    "test_assert_datadrive",
+    "test_assert_failure",
+    "test_disable_assert_failed_continue",
+    "test_assert_inner_invoke"
+   ]
+  }
+ ]
+}

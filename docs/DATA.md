@@ -322,3 +322,7 @@ is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate wi
   failure rate, failures in file order and shuffled runs, polluter search verdict and polluters, and whether a 10 run
   rerun confirmed the polluter. The library study's flaky tests are listed in `results/why_analysis.md` and
   `results/root_causes/labels.json`.
+- `results/devsuite_polluters/<project>.json`: `scripts/devsuite_polluters.py`, the pairwise polluter search for the
+  developer file runs (QTAF, HikLoad, PyJsonFriendly): each victim, whether it passes alone, and its polluters.
+- `results/root_causes/new_sample_labels.csv`, `new_sample_kappa.json`: Manas's labels of a random sample of 40 kept
+  flaky held out tests (AI assisted, as his notes record) and their agreement with `rule_categories.py`.

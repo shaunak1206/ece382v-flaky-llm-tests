@@ -1,0 +1,57 @@
+{
+ "project": "PyJsonFriendly",
+ "victims": [
+  {
+   "suite": "gpt54mini_plain_2",
+   "kind": "generated victim",
+   "victim": "zz_gpt54mini_plain_2.test_gen::test_default_backup_attribute_is_created",
+   "alone_pass": 0,
+   "control": "same-seed control",
+   "polluters": []
+  },
+  {
+   "suite": "gpt54mini_plain_2",
+   "kind": "generated victim",
+   "victim": "zz_gpt54mini_plain_2.test_gen::test_jsonencoder_default_sets_backup_when_called",
+   "alone_pass": 0,
+   "control": "same-seed control",
+   "polluters": []
+  },
+  {
+   "suite": "gpt54mini_plain_3",
+   "kind": "generated victim",
+   "victim": "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_backup_refers_to_original_method",
+   "alone_pass": 0,
+   "control": "same-seed control",
+   "polluters": []
+  },
+  {
+   "suite": "gpt54mini_plain_3",
+   "kind": "generated victim",
+   "victim": "zz_gpt54mini_plain_3.test_gen::test_jsonencoder_default_sets_default_backup_on_first_use",
+   "alone_pass": 3,
+   "control": "same-seed control",
+   "polluters": [
+    "test_03",
+    "test_04",
+    "test_02",
+    "test_01",
+    "test_05"
+   ]
+  },
+  {
+   "suite": "gpt54mini_plain_4",
+   "kind": "generated victim",
+   "victim": "zz_gpt54mini_plain_4.test_gen::test_jsonencoder_default_backup_not_present_before_use",
+   "alone_pass": 3,
+   "control": "same-seed control",
+   "polluters": [
+    "test_03",
+    "test_04",
+    "test_02",
+    "test_01",
+    "test_05"
+   ]
+  }
+ ]
+}

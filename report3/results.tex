@@ -132,12 +132,15 @@ Developer tests that fail only after a generated file & 1 (QTAF) \\
 Generated tests stable alone that flip combined & 52 \\
 \quad confirmed by the same-seed control & 38 \\
 \quad control not finished (ReactOBus) & 14 \\
+Pairwise search (QTAF, HikLoad, PyJsonFriendly) & \\
+\quad generated victims with a developer polluter & 37 of 42 \\
+\quad brittles that pass only after developer tests & 3 \\
 Developer order dependent test with a changed rate & 3 of 17 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Generated tests can pollute developer tests: the QTAF developer test \texttt{test\_assert\_datadrive} never fails alone but fails exactly when GPT~4.1 mini suite 1 or 2 runs first. Developer tests also make generated tests flip, in all four models, and the same-seed control confirms it wherever it finished (Table~\ref{tab:devsuite}). The developer test's own rate barely changes. So running generated suites alone understates their order dependence in a real project, in both directions, though so far only with the developer file that holds the order dependent test, in 17 projects; the whole developer suite is a next step. Two ChainConsumer developer tests that failed once or twice in either order are that project's own flakiness.
+Generated tests can pollute developer tests: the QTAF developer test \texttt{test\_assert\_datadrive} never fails alone but fails exactly when GPT~4.1 mini suite 1 or 2 runs first, and a pairwise search (\texttt{devsuite\_polluters.py}) confirms the polluters, generated tests that call the project's data drive loader. In the other direction one HikLoad developer test, \texttt{test\_defaultvar}, pollutes all 33 HikLoad victims. Developer tests also make generated tests flip, in all four models, and the same-seed control confirms it wherever it finished (Table~\ref{tab:devsuite}). The developer test's own rate barely changes. So running generated suites alone understates their order dependence in a real project, in both directions, though so far only with the developer file that holds the order dependent test, in 17 projects; the whole developer suite is a next step. Two ChainConsumer developer tests that failed once or twice in either order are that project's own flakiness.
 
 \textbf{Stress-ng on the projects outside randomness.} Progress Report 2 planned to rerun these six projects under load. Their 190 plain held out suites ran 150 more times under the library study's 10 stress-ng configurations, and load found no new mechanism: about as many suites have a kept flaky test as in the first 150 plain runs, and the only new flips are docci clock tests, which fail slightly more often under load, as slower saves would predict (\texttt{stress\_summary.json}).
 
