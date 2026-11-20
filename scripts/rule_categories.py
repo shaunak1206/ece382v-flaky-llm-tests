@@ -2,7 +2,8 @@
 """Root cause categories assigned by a fixed rule from the diagnosis, for flaky tests without human labels yet.
 
 Rule, in order: (1) project overrides for mechanisms found by hand in the code (kevinarpe-rambutan3: unstable object
-hash; docci: time; kindle-maker: other, folder collision); (2) the polluter search verdict: a polluter found ->
+hash; docci: time; kindle-maker: other, folder collision; pelicun, scikit-procrustes, setigen: randomness reseeded by
+pytest-randomly); (2) the polluter search verdict: a polluter found ->
 test order dependency (randomness if a 10 run rerun did not confirm it), fails alone only with a varied hash seed -> randomness (salted hash), fails alone ->
 randomness (unseeded generator); (3) never failed in the search -> test order dependency if it never failed in file
 order in its 200 runs, else randomness (unseeded generator).
@@ -17,7 +18,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kappa import norm, kappa
 
-OVERRIDE = {"kevinarpe-rambutan3": "unstable object hash", "docci": "time", "kindle-maker": "other"}
+OVERRIDE = {"kevinarpe-rambutan3": "unstable object hash", "docci": "time", "kindle-maker": "other",
+            # shuffled runs reseed NumPy before each test, so seeds the suite sets elsewhere stop applying (read in code)
+            "pelicun": "randomness unseeded", "scikit-procrustes": "randomness unseeded", "setigen": "randomness unseeded"}
 
 
 def rule(project, verdict, fails_file_order, confirmed=""):

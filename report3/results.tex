@@ -95,7 +95,7 @@ Tried & 16 & 45 & 45 \\
 \end{table}
 
 \begin{itemize}
-\item \textbf{Time batch.} Only 16 tests passed the selection rule, not the 40 we planned, and none reproduced. 12 always failed, mostly at collection on old dependencies, and 4 never failed in 150 runs. We then retried all 16 with every package pinned to the date of the tested commit (\texttt{gruber\_reproduce.py --pin}, uv's \texttt{UV\_EXCLUDE\_NEWER}). 5 now run, but 11 still error on their first run (at collection, at setup, or on a pytest option the old configuration lacks), 1 always fails, 3 never fail, and the one that flips (gwosc, 3 of 150) fails on an HTTP 502 from a web service, which our rule excludes. The known flaky code study therefore still has only six projects outside randomness.
+\item \textbf{Time batch.} Only 16 tests passed the selection rule, not the 40 we planned, and none reproduced. 12 always failed, mostly at collection on old dependencies, and 4 never failed in 150 runs. We then retried all 16 with every package pinned to the date of the tested commit (\texttt{gruber\_reproduce.py --pin}, uv's \texttt{UV\_EXCLUDE\_NEWER}). Pinning lets 5 more tests run, and the one that flips does so on an HTTP 502 from a web service, which our rule excludes. The known flaky code study therefore still has only six projects outside randomness.
 \item \textbf{The random draw.} 10 of the 43 finished random projects reproduce (23\%), against 17 of 44 finished (39\%) drawn by name, so drawing by name did not pick unusually unreproducible projects, if anything the opposite. Writing this report we found that 8 projects of the by name batch had been run with a test from an older candidate list that shares their name; rerunning them with their order dependent test reproduced none (7 finished), so the 17 are unchanged.
 \item \textbf{Order dependent arm.} For the 17 projects that reproduced we generated 4 suites per model and ran them like the main study (Table~\ref{tab:odarm}). Run alone, 16 of the 17 developer tests never flip, as victims and brittles should, and ChainConsumer's flips alone.
 \end{itemize}
@@ -133,14 +133,14 @@ Generated tests stable alone that flip combined & 52 \\
 \quad confirmed by the same-seed control & 38 \\
 \quad control not finished (ReactOBus) & 14 \\
 Pairwise search (QTAF, HikLoad, PyJsonFriendly) & \\
-\quad generated victims with a developer polluter & 37 of 42 \\
+\quad generated victims with a developer polluter & 37 of 42 searched \\
 \quad brittles that pass only after developer tests & 3 \\
 Developer order dependent test with a changed rate & 3 of 17 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Generated tests can pollute developer tests: the QTAF developer test \texttt{test\_assert\_datadrive} never fails alone but fails exactly when GPT~4.1 mini suite 1 or 2 runs first, and a pairwise search (\texttt{devsuite\_polluters.py}) confirms the polluters, generated tests that call the project's data drive loader. In the other direction one HikLoad developer test, \texttt{test\_defaultvar}, pollutes all 33 HikLoad victims. Developer tests also make generated tests flip, in all four models, and the same-seed control confirms it wherever it finished (Table~\ref{tab:devsuite}). The developer test's own rate barely changes. So running generated suites alone understates their order dependence in a real project, in both directions, though so far only with the developer file that holds the order dependent test, in 17 projects; the whole developer suite is a next step. Two ChainConsumer developer tests that failed once or twice in either order are that project's own flakiness.
+Generated tests can pollute developer tests: the QTAF developer test \texttt{test\_assert\_datadrive} never fails alone but fails exactly when GPT~4.1 mini suite 1 or 2 runs first, and a pairwise search (\texttt{devsuite\_polluters.py}) confirms the polluters, generated tests that call the project's data drive loader. In the other direction one HikLoad developer test, \texttt{test\_defaultvar}, pollutes all 33 HikLoad victims. Developer tests also make generated tests flip, in all four models, and the same-seed control confirms it wherever it finished (Table~\ref{tab:devsuite}). The developer order dependent test's own rate changes in only 3 of 17 projects, by at most 2 points. So running generated suites alone understates their order dependence in a real project, in both directions, though so far only with the developer file that holds the order dependent test, in 17 projects; the whole developer suite is a next step. Two ChainConsumer developer tests that failed once or twice in either order are that project's own flakiness.
 
 \textbf{Stress-ng on the projects outside randomness.} Progress Report 2 planned to rerun these six projects under load. Their 190 plain held out suites ran 150 more times under the library study's 10 stress-ng configurations, and load found no new mechanism: about as many suites have a kept flaky test as in the first 150 plain runs, and the only new flips are docci clock tests, which fail slightly more often under load, as slower saves would predict (\texttt{stress\_summary.json}).
 
@@ -182,10 +182,17 @@ Never failed in the search & 32 & 16 & 16 \\
 \item \emph{Both write clock dependent tests in docci} (18 tests). Each saves the same workbook twice and compares the bytes. The ZIP header stores the modification time to 2 seconds and \texttt{docProps/core.xml} to 1 second, so the bytes differ when the two saves straddle a boundary, in 1 to 4 of 200 runs, which is why most never failed in the search. This time dependency sits in a library call, outside randomness, so the feature scan of Section~\ref{sec:rq3} cannot see it.
 \end{itemize}
 
-\textbf{Categories of the new flaky tests.} The category labels of the 192 kept flaky held out tests are not done, so Table~\ref{tab:rulecats} assigns them by a fixed rule from the diagnosis (\texttt{rule\_categories.py}): a confirmed polluter is test order dependency, a test that fails alone is randomness (salted hash if only with a varied hash seed), one that never failed in the search is order dependent if it never failed in file order, and three projects whose mechanism we read in the code are set by hand (rambutan3's object hash, docci's clock, kindle-maker's folders). On the 72 labeled Progress Report 2 records that have a diagnosis, the rule agrees with Manas at kappa 0.76 (83\%), as well as the two humans agree, and 9 of its 12 disagreements are again cuckoopy. As a check, Manas labeled a random sample of 40 of these tests on a page that hid the model and the mechanism, with AI assistance that his notes record for every label (\texttt{root\_causes/new\_sample\_labels.csv}). His labels agree with the rule at kappa 0.65 for the category (75\%) and 0.90 for order dependence (95\%). Half of the 10 category disagreements are again unseeded randomness against salted hash, and 3 are kindle-maker tests he labeled a clock value and the rule a folder collision. The categories stay interim until all 192 have labels. Split by where the nondeterminism lives, 99 of the 192 are introduced by the test itself (order dependency between generated tests and the folder collision of a generated fixture), 18 by a test that compares two timestamped saves, and 75 by randomness or hashing inside the code under test, which a generated test exposes rather than creates.
+\textbf{Categories of the new flaky tests.} The 192 kept flaky held out tests do not all have human labels yet, so Table~\ref{tab:rulecats} assigns categories by a fixed rule from the diagnosis (\texttt{rule\_categories.py}), applied in this order:
+\begin{enumerate}
+\item mechanisms read in the code: rambutan3's object hash, docci's clock, kindle-maker's folders, and pytest-randomly reseeding in pelicun, scikit-procrustes, and setigen;
+\item a polluter confirmed in 10 runs: test order dependency (an unconfirmed one: randomness);
+\item fails alone: randomness, salted hash if only with a varied hash seed;
+\item never failed in the search: order dependency if it never failed in file order, else randomness.
+\end{enumerate}
+On the 72 labeled Progress Report 2 records with a diagnosis, the rule agrees with Manas at kappa 0.80 (86\%).
 
 \begin{table}[htbp]
-\caption{Root cause categories of the kept flaky held out tests, assigned by rule from the diagnosis (interim, validated against human labels at kappa 0.76)}
+\caption{Root cause categories of the kept flaky held out tests, by rule from the diagnosis (interim)}
 \label{tab:rulecats}
 \small
 \setlength{\tabcolsep}{3pt}
@@ -193,10 +200,10 @@ Never failed in the search & 32 & 16 & 16 \\
 \toprule
  & Sonnet & Haiku & GPT 5.4 & GPT 4.1 \\
 \midrule
-Randomness, unseeded & 3 & 6 & 0 & 44 \\
-Randomness, salted hash & 1 & 6 & 1 & 8 \\
+Randomness, unseeded & 4 & 9 & 0 & 45 \\
+Randomness, salted hash & 1 & 6 & 1 & 7 \\
 Unstable object hash & 0 & 2 & 1 & 3 \\
-Test order dependency & 3 & 20 & 61 & 4 \\
+Test order dependency & 2 & 17 & 61 & 4 \\
 Time (clock) & 0 & 0 & 7 & 11 \\
 Other (folder collision) & 11 & 0 & 0 & 0 \\
 \midrule
@@ -204,6 +211,10 @@ Total & 18 & 34 & 70 & 70 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Manas also labeled a random sample of 40 of these tests on a page that hid the model and the mechanism. His notes record AI assistance for every label, so we treat them as a check, not as the human labels (\texttt{root\_causes/new\_sample\_labels.csv}). They agree with the rule at kappa 0.65 for the category and 0.90 for order dependence, and half the category disagreements are again unseeded randomness against salted hash.
+
+By where the nondeterminism lives, 95 of the 192 are introduced by the generated tests themselves (order dependency between them and a fixture's folder collision), 18 by tests that compare two timestamped saves, and 79 by randomness or hashing inside the code under test, which the tests expose rather than create; some of these (fistro's invalid dates, rambutan3's hash) are bugs in the code.
 
 \textbf{Agreement.} Shaunak relabeled the 78 records of \texttt{labels.json}, late (due November 16), from a blind sheet that showed one record at a time with its project source and hid the model and Manas's label (\texttt{blind/sheet.csv}). The relabel is not fully blind, because Shaunak wrote about some of these tests in Progress Report 2. As a cross check, an LLM labeler given only the same sheet, the categories, and the project source labeled them too (\texttt{llm\_labels.csv}).
 
