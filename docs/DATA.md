@@ -326,3 +326,10 @@ is used); `quality_fixtures_od` the order dependent arm with M1/M2. Aggregate wi
   developer file runs (QTAF, HikLoad, PyJsonFriendly): each victim, whether it passes alone, and its polluters.
 - `results/root_causes/new_sample_labels.csv`, `new_sample_kappa.json`: Manas's labels of a random sample of 40 kept
   flaky held out tests (AI assisted, as his notes record) and their agreement with `rule_categories.py`.
+- `results/libfix/<cond>__<lib>__{plain,seed,iso}.json`: `scripts/library_fixtures.sh` (workflow `library_fixtures.yml`),
+  every generated library study suite run 100 times shuffled plain, with M1, and with M2; summary in
+  `results/library_fixtures_summary.json` (`scripts/library_fixtures_summary.py`).
+- `results/od_devsuite_whole/<project>.json`: `od_devsuite.py --whole`, each generated suite of the order dependent arm
+  inside the whole developer test directory, 30 shuffled runs per combination.
+- `results/gruber/repro_od_random/`: reproduction of the seeded random draw of 45 order dependent candidates;
+  `results/gruber/repro_od_wrongtest/`: the 8 by name results that had used a test from an older list (superseded).

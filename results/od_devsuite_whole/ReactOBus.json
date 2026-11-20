@@ -1,0 +1,855 @@
+{
+ "project": "ReactOBus",
+ "install_ok": true,
+ "dev_file": "tests",
+ "od_test": "test_run",
+ "runs": 30,
+ "configs": {
+  "baseline": {
+   "runs_done": 30,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 45,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 15
+    },
+    "tests.test_reactobus::test_reactor": {
+     "dev_first": 30
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "dev_first": 30
+    },
+    "tests.test_reactobus::test_help": {
+     "dev_first": 30
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "dev_first": 30
+    },
+    "tests.test_reactobus::test_encryption": {
+     "dev_first": 30
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 30
+    },
+    "tests.test_db::test_run": {
+     "fail": 15,
+     "pass": 15
+    },
+    "tests.test_inputs::test_zmq_class": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_select": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_pull_filtering": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_pull": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_sub": {
+     "pass": 30
+    },
+    "tests.test_utils::test_lookup": {
+     "pass": 30
+    },
+    "tests.test_utils::test_pipe": {
+     "pass": 30
+    },
+    "tests.test_core::test_core": {
+     "pass": 30
+    },
+    "tests.test_worker::test_worker": {
+     "pass": 30
+    },
+    "tests.test_worker::test_worker_and_matchers": {
+     "pass": 30
+    },
+    "tests.test_filters::test_filters": {
+     "pass": 30
+    },
+    "tests.test_reactor::test_reactor": {
+     "pass": 30
+    },
+    "tests.test_reactobus::test_reactor": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_help": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_encryption": {
+     "fail": 30
+    },
+    "tests.test_matcher::test_simple_matching": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_oserror": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_subprocesserror": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_build_args": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_data_matching": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_build_args_errors": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_simple_matching_2": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_timeout": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_push": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_select": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_class": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_pub": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 1,
+   "od_test": {
+    "pass": 45,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 15
+    },
+    "tests.test_reactobus::test_reactor": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_help": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_encryption": {
+     "dev_first": 29,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_clears_messages_after_success",
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_saves_messages"
+   ],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 30
+    },
+    "tests.test_db::test_run": {
+     "fail": 15,
+     "pass": 15
+    },
+    "tests.test_inputs::test_zmq_class": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_select": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_pull_filtering": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_pull": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_sub": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_saves_messages": {
+     "fail": 18,
+     "pass": 12
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_returns_after_success": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_run_invalid_message_logs_error": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_message_model_fields": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_db_run_break_loop": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_db_setup_creates_tables": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_logs_error_on_commit_failure": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_clears_messages_after_success": {
+     "fail": 18,
+     "pass": 12
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_run_saves_on_1000_messages": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_db_init_sets_attributes": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_save_to_db_retries_on_exception": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_run_appends_valid_message": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_message_repr_and_str": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_db_process_inherits_multiprocessing_process": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_run_saves_after_1_second": {
+     "pass": 30
+    },
+    "tests.test_utils::test_lookup": {
+     "pass": 30
+    },
+    "tests.test_utils::test_pipe": {
+     "pass": 30
+    },
+    "tests.test_core::test_core": {
+     "pass": 30
+    },
+    "tests.test_worker::test_worker": {
+     "pass": 30
+    },
+    "tests.test_worker::test_worker_and_matchers": {
+     "pass": 30
+    },
+    "tests.test_filters::test_filters": {
+     "pass": 30
+    },
+    "tests.test_reactor::test_reactor": {
+     "pass": 30
+    },
+    "tests.test_reactobus::test_reactor": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_help": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_encryption": {
+     "fail": 30
+    },
+    "tests.test_matcher::test_simple_matching": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_oserror": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_subprocesserror": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_build_args": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_data_matching": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_build_args_errors": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_simple_matching_2": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_timeout": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_push": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_select": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_class": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_pub": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 1,
+   "od_test": {
+    "pass": 45,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 15
+    },
+    "tests.test_reactobus::test_reactor": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_help": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_encryption": {
+     "dev_first": 29,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 30
+    },
+    "tests.test_db::test_run": {
+     "fail": 15,
+     "pass": 15
+    },
+    "tests.test_inputs::test_zmq_class": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_select": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_pull_filtering": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_pull": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_sub": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_save_to_db_fails_then_success": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_run_receives_message_and_appends": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_db_inherits_from_multiprocessing_process": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_setup_initializes_sqlalchemy_and_zmq": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_message_model_columns": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_db_init_sets_attributes": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_save_to_db_clears_messages": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_message_repr_and_fields": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_save_to_db_clears_messages_after_success": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_run_handles_invalid_message_logs": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_run_skips_empty_messages": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_save_to_db_retries_on_error": {
+     "fail": 30
+    },
+    "tests.test_utils::test_lookup": {
+     "pass": 30
+    },
+    "tests.test_utils::test_pipe": {
+     "pass": 30
+    },
+    "tests.test_core::test_core": {
+     "pass": 30
+    },
+    "tests.test_worker::test_worker": {
+     "pass": 30
+    },
+    "tests.test_worker::test_worker_and_matchers": {
+     "pass": 30
+    },
+    "tests.test_filters::test_filters": {
+     "pass": 30
+    },
+    "tests.test_reactor::test_reactor": {
+     "pass": 30
+    },
+    "tests.test_reactobus::test_reactor": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_help": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_encryption": {
+     "fail": 30
+    },
+    "tests.test_matcher::test_simple_matching": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_oserror": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_subprocesserror": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_build_args": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_data_matching": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_build_args_errors": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_simple_matching_2": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_timeout": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_push": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_select": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_class": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_pub": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 1,
+   "od_test": {
+    "pass": 45,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 15
+    },
+    "tests.test_reactobus::test_reactor": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_help": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "dev_first": 29,
+     "gen_first": 1
+    },
+    "tests.test_reactobus::test_encryption": {
+     "dev_first": 29,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 30
+    },
+    "tests.test_db::test_run": {
+     "fail": 15,
+     "pass": 15
+    },
+    "tests.test_inputs::test_zmq_class": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_select": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_pull_filtering": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_pull": {
+     "pass": 30
+    },
+    "tests.test_inputs::test_zmq_sub": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_run_save_to_db_called_by_len": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_save_to_db_no_messages": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_run_invalid_message_sqlalchemyerror": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_run_handles_invalid_message": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_run_checks_empty_messages_list_identity": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_save_to_db_exception_on_bulk_save": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_init_options_and_outbound": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_message_str_repr_present": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_run_receives_and_parses_message": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_save_to_db_retries_and_logs_error": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_message_fields": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_setup_creates_engine_and_sessions": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_db_inherits_from_multiprocessing_process": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_save_to_db_commits_and_clears_messages": {
+     "fail": 30
+    },
+    "tests.test_utils::test_lookup": {
+     "pass": 30
+    },
+    "tests.test_utils::test_pipe": {
+     "pass": 30
+    },
+    "tests.test_core::test_core": {
+     "pass": 30
+    },
+    "tests.test_worker::test_worker": {
+     "pass": 30
+    },
+    "tests.test_worker::test_worker_and_matchers": {
+     "pass": 30
+    },
+    "tests.test_filters::test_filters": {
+     "pass": 30
+    },
+    "tests.test_reactor::test_reactor": {
+     "pass": 30
+    },
+    "tests.test_reactobus::test_reactor": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_help": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "fail": 30
+    },
+    "tests.test_reactobus::test_encryption": {
+     "fail": 30
+    },
+    "tests.test_matcher::test_simple_matching": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_oserror": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_subprocesserror": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_build_args": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_data_matching": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_build_args_errors": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_simple_matching_2": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run_raise_timeout": {
+     "pass": 30
+    },
+    "tests.test_matcher::test_run": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_push": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_select": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_class": {
+     "pass": 30
+    },
+    "tests.test_outputs::test_zmq_pub": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 0,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {}
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 26,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 38,
+    "fail": 14,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_db::test_run": {
+     "dev_first": 14
+    },
+    "tests.test_reactobus::test_reactor": {
+     "dev_first": 26
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "dev_first": 26
+    },
+    "tests.test_reactobus::test_help": {
+     "dev_first": 26
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "dev_first": 26
+    },
+    "tests.test_reactobus::test_encryption": {
+     "dev_first": 26
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_db::test_errors": {
+     "pass": 26
+    },
+    "tests.test_db::test_run": {
+     "fail": 14,
+     "pass": 12
+    },
+    "tests.test_inputs::test_zmq_class": {
+     "pass": 26
+    },
+    "tests.test_inputs::test_select": {
+     "pass": 26
+    },
+    "tests.test_inputs::test_zmq_pull_filtering": {
+     "pass": 26
+    },
+    "tests.test_inputs::test_zmq_pull": {
+     "pass": 26
+    },
+    "tests.test_inputs::test_zmq_sub": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_uses_short_poll_when_messages_pending": {
+     "fail": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_saves_when_messages_reach_threshold": {
+     "fail": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_saves_when_time_threshold_exceeded": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_db_init_sets_expected_attributes": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_setup_configures_zmq_and_sqlalchemy": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_logs_sqlalchemy_error_when_building_message": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_save_to_db_success_clears_messages": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_save_to_db_retries_until_success": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_logs_invalid_message_and_skips_it": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_save_to_db_logs_error_after_three_failures": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_uses_long_poll_when_no_pending_messages": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_run_appends_message_from_valid_payload": {
+     "pass": 26
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_message_table_name_and_columns": {
+     "pass": 26
+    },
+    "tests.test_utils::test_lookup": {
+     "pass": 26
+    },
+    "tests.test_utils::test_pipe": {
+     "pass": 26
+    },
+    "tests.test_core::test_core": {
+     "pass": 26
+    },
+    "tests.test_worker::test_worker": {
+     "pass": 26
+    },
+    "tests.test_worker::test_worker_and_matchers": {
+     "pass": 26
+    },
+    "tests.test_filters::test_filters": {
+     "pass": 26
+    },
+    "tests.test_reactor::test_reactor": {
+     "pass": 26
+    },
+    "tests.test_reactobus::test_reactor": {
+     "fail": 26
+    },
+    "tests.test_reactobus::test_reactor_multiple_patterns": {
+     "fail": 26
+    },
+    "tests.test_reactobus::test_help": {
+     "fail": 26
+    },
+    "tests.test_reactobus::test_simple_forward": {
+     "fail": 26
+    },
+    "tests.test_reactobus::test_encryption": {
+     "fail": 26
+    },
+    "tests.test_matcher::test_simple_matching": {
+     "pass": 26
+    },
+    "tests.test_matcher::test_run_raise_oserror": {
+     "pass": 26
+    },
+    "tests.test_matcher::test_run_raise_subprocesserror": {
+     "pass": 26
+    },
+    "tests.test_matcher::test_build_args": {
+     "pass": 26
+    },
+    "tests.test_matcher::test_data_matching": {
+     "pass": 26
+    },
+    "tests.test_matcher::test_build_args_errors": {
+     "pass": 26
+    },
+    "tests.test_matcher::test_simple_matching_2": {
+     "pass": 26
+    },
+    "tests.test_matcher::test_run_raise_timeout": {
+     "pass": 26
+    },
+    "tests.test_matcher::test_run": {
+     "pass": 26
+    },
+    "tests.test_outputs::test_zmq_push": {
+     "pass": 26
+    },
+    "tests.test_outputs::test_select": {
+     "pass": 26
+    },
+    "tests.test_outputs::test_zmq_class": {
+     "pass": 26
+    },
+    "tests.test_outputs::test_zmq_pub": {
+     "pass": 26
+    }
+   }
+  }
+ },
+ "alone": false,
+ "whole": true,
+ "nonterminating": [
+  "gpt41mini_plain_4"
+ ],
+ "stopped_early": true,
+ "seconds": 19267.9
+}

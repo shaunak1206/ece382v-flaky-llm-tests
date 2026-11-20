@@ -1,0 +1,1654 @@
+{
+ "project": "RaspberryPiMovementDetector",
+ "install_ok": true,
+ "dev_file": "tests",
+ "od_test": "test_ping",
+ "runs": 30,
+ "configs": {
+  "baseline": {
+   "runs_done": 30,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_default_constructor_functions_exist": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_ping_emits_ObjectOut_when_distance_greater_than_offset": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_get_distance_basic_flow": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_watch_multiple_object_in_and_out": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_future_is_none_before_observe": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_ping_emits_ObjectIn_when_distance_less_than_offset": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_ping_no_emit_when_distance_below_offset_and_wasIn_true": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_observe_submits_poll": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_trigger_pin_returns_correct_pin": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_ping_no_emit_when_distance_above_offset_and_wasIn_false": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_constructor_default_values": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_get_distance_prints": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_stop_calls_shutdown": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_custom_func_in_and_func_out": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_poll_runs_ping_until_observer_off": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_stop_shutdown_running_shutdown_observer": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_stop_waits_and_shutdown": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_echo_pin_returns_correct_pin": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_wasIn_flag_behavior": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_get_distance_loops_input_until_non_monotonic": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 60,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_init_defaults": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_ping_emits_object_out_event": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_stop_fallback_shutdown_if_shutdown_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_trigger_pin_and_echo_pin": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_ping_emits_object_in_event": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_init_custom_args": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_stop_shuts_down_future_and_observer": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_poll_runs_and_calls_ping": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_observe_submits_poll": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_ping_no_event_when_in_zone_and_wasIn_true": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_poll_returns_immediately_when_observer_off": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_observe_and_stop_integration": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_multiple_ping_events_change_wasIn_flag_correctly": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_get_distance_returns_correct_value_and_calls_gpio_methods": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_ping_no_event_when_out_zone_and_wasIn_false": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_dummy_func_in_and_out_prints": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_stop_handles_running_future": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_get_distance_prints_expected_output": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_3.test_gen::test_ping_emits_ObjectIn_and_ObjectOut": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_wasIn_flag_changes_on_ping_events": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_stop_calls_shutdown_and_sleep": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_dummy_func_in_and_out_print": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_offset_default": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_stop_wait_and_shutdown_order": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_poll_runs_ping_once_and_stops": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_wasIn_initial_false": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_stop_shutdown_runs_observer_shutdown_on_running": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_poll_stops_when_observer_off": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_get_distance_sequence": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_trigger_echo_pin_custom": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_observe_submits_poll": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_observe_returns_none": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_get_distance_times": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_stop_shutdown_no_exception": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_trigger_pin_default": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_echo_pin_default": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_ping_does_not_emit_if_in_same_state": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_4.test_gen::test_stop_shutdown_with_exception": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_observe_starts_future": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_get_distance_handles_no_echo_pulse": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_get_distance_cleanup_called": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_get_distance_prints": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_init_custom_args": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_get_distance_complete": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_ping_object_in_emit": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_ping_event_fires_only_once_per_change": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_poll_runs_and_stops": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_observe_submits_poll": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_stop_shutdown_when_running": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_ping_with_no_gpio": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_stop_calls_shutdown": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_stop_waits_sleep_and_shutdown": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_trigger_pin_and_echo_pin_properties": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_init_defaults": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 60,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_init_defaults_registers_handlers": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_ping_emits_object_in_when_distance_below_offset_and_not_was_in": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_observe_submits_poll_to_observer": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_trigger_and_echo_pin_accessors": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_ping_uses_strict_less_than_offset_for_in_zone": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_get_distance_calls_cleanup_even_with_simple_sequence": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_stop_sets_observer_off_and_shuts_down_future": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_ping_does_not_emit_object_out_when_not_was_in": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_init_custom_kwargs_are_used": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_stop_handles_shutdown_exception_when_future_not_running": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_poll_calls_ping_until_observer_off_then_returns": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_get_distance_performs_gpio_sequence_and_returns_expected_distance": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_stop_handles_shutdown_exception_when_future_running": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_ping_emits_object_out_when_distance_above_offset_and_was_in": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_ping_does_not_emit_object_in_again_when_already_in": {
+     "error": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_ping_does_not_emit_object_in_when_already_in": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_ping_emits_object_out_once_when_distance_above_offset_after_in": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_observe_submits_poll_to_executor": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_poll_calls_ping_until_observer_flag_is_cleared": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_stop_uses_observer_shutdown_when_future_shutdown_raises": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_stop_disables_observer_and_shuts_future_down": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_ping_does_not_emit_object_out_when_not_previous_in": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_get_distance_uses_gpio_setup_output_and_input_sequence": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_init_uses_default_pins_and_offset": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_init_accepts_custom_pins_and_offset": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_get_distance_returns_expected_distance_and_cleans_up": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_ping_emits_object_in_once_when_distance_below_offset": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_init_registers_default_handlers_when_none_given": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_init_registers_custom_handlers": {
+     "error": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 60,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_3.test_gen::test_ping_does_not_emit_object_in_again_while_still_in": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_stop_calls_future_shutdown_when_available": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_ping_emits_object_out_when_distance_at_or_above_offset_and_was_in": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_get_distance_measures_distance_and_cleans_up": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_poll_returns_immediately_when_observer_is_off": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_ping_does_not_emit_object_out_when_already_out": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_observe_submits_poll_to_executor": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_init_uses_defaults_and_registers_handlers": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_get_distance_uses_rounding_to_two_decimals": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_poll_calls_ping_until_observer_is_disabled": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_ping_emits_object_in_when_distance_below_offset_and_not_previously_in": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_init_accepts_custom_pins_and_offset": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_stop_falls_back_to_observer_shutdown_when_future_shutdown_raises_and_future_running": {
+     "fail": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_4.test_gen::test_ping_emits_object_out_when_distance_reaches_or_exceeds_offset": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_custom_handlers_receive_emitted_distances": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_multiple_ping_transitions_in_and_out": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_observe_submits_poll_to_executor": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_ping_does_not_emit_object_in_twice_while_still_in": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_get_distance_measures_and_cleans_up": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_stop_sets_observer_off_and_shutdowns_future": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_init_defaults_sets_default_pins_and_offset": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_get_distance_uses_correct_pins_in_output_sequence": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_stop_handles_shutdown_exception_and_calls_observer_shutdown_if_running": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_get_distance_returns_float_with_two_decimals": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_ping_emits_object_in_when_distance_below_offset": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_poll_returns_immediately_when_observer_flag_false": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_ping_does_not_emit_object_out_if_not_previous_in": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_init_custom_values_are_used": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_poll_calls_ping_once_and_returns_when_observer_disabled": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_observe_submits_poll_to_executor": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_ping_distance_equal_to_offset_is_out_of_zone": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_custom_offset_is_stored": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_default_pins_and_offset": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_get_distance_cleans_up_gpio": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_ping_emits_object_in_when_entering_zone": {
+     "fail": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_get_distance_rounds_to_two_decimals": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_get_distance_configures_pins_and_triggers_sensor": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_default_handlers_print_when_events_fire": {
+     "fail": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_custom_pins_are_used": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_stop_shuts_down_executor_when_future_shutdown_fails_and_running": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_ping_does_not_repeat_object_in_while_still_inside": {
+     "fail": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_initial_state": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_stop_disables_observer_and_shuts_down_future": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_poll_loops_until_observer_turned_off": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_custom_func_in_and_func_out_are_registered": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_get_distance_computes_centimeters_from_echo_pulse": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_poll_returns_immediately_when_observer_off": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_ping_emits_object_out_when_leaving_zone": {
+     "fail": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_stop_does_not_shut_down_executor_when_future_not_running": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_ping_returns_none": {
+     "fail": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_ping_no_events_when_outside_and_never_entered": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 60,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_ping_emits_object_in_when_entering_zone": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_get_distance_rounds_to_two_decimals": {
+     "error": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_get_distance_computes_distance_from_echo_duration": {
+     "error": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_observe_pings_until_stopped": {
+     "error": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_custom_trigger_and_echo_pins": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_get_distance_sends_trigger_pulse_and_settles": {
+     "error": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_default_trigger_and_echo_pins": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_default_handlers_print_when_not_provided": {
+     "fail": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_get_distance_cleans_up_gpio": {
+     "error": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_stop_disables_observer_and_sleeps_three_seconds": {
+     "error": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_ping_does_not_repeat_object_in_while_inside": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_default_offset_is_200_cm": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_poll_returns_immediately_when_stopped": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_ping_does_not_emit_object_out_without_prior_entry": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_ping_emits_object_out_when_leaving_zone": {
+     "fail": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_object_out_handler_receives_distance": {
+     "fail": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_object_in_handler_receives_distance": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_ping_reentry_emits_second_object_in": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_get_distance_configures_pins": {
+     "error": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_3.test_gen::test_ping_emits_object_out_after_object_was_in": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_ping_allows_reentry_after_object_leaves": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_stop_raises_when_observe_was_never_called": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_observe_submits_poll_to_executor": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_poll_returns_immediately_when_observer_off": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_get_distance_waits_for_settle_and_trigger_pulse": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_init_uses_custom_values": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_init_uses_default_values": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_ping_emits_object_in_when_distance_below_offset": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_trigger_pin_returns_trig_pin": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_echo_pin_returns_echo_pin": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_ping_does_not_emit_object_in_twice": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_stop_does_not_shut_down_executor_when_future_not_running": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_get_distance_rounds_to_two_decimal_places": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_ping_treats_distance_equal_to_offset_as_outside": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_get_distance_configures_pins_and_triggers_sensor": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_ping_emits_nothing_when_object_never_entered": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_poll_pings_until_observer_stopped": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_stop_disables_observer_and_shuts_down_future": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_stop_shuts_down_executor_when_future_shutdown_fails_and_running": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_get_distance_computes_centimetres_and_cleans_up": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 60,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_4.test_gen::test_ping_does_not_repeat_object_in_while_still_inside": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_get_distance_cleans_up_gpio_after_measurement": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_defaults_are_applied_when_no_kwargs_given": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_custom_kwargs_override_defaults": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_observe_submits_poll_to_executor_and_stores_future": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_stop_disables_observer_and_shuts_down_future": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_get_distance_rounds_to_two_decimals": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_ping_distance_equal_to_offset_counts_as_outside": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_poll_pings_repeatedly_until_disabled": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_poll_returns_immediately_when_observer_disabled": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_stop_waits_three_seconds_before_shutdown": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_default_handlers_print_when_events_emitted": {
+     "fail": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_ping_emits_nothing_when_outside_and_never_entered": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_ping_emits_object_in_on_first_detection": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_get_distance_computes_centimetres_from_echo_pulse": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_ping_full_in_out_in_cycle_emits_expected_events": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_get_distance_configures_pins_and_triggers_sensor": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_ping_emits_object_out_when_leaving_zone": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 60,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_stop_does_not_shutdown_executor_when_future_not_running": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_stop_falls_back_to_executor_shutdown_when_running": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_default_pins_and_offset": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_get_distance_configures_pins_and_cleans_up": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_stop_turns_observer_off_and_shuts_down_future": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_custom_pins_and_offset_and_gpio": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_ping_distance_equal_to_offset_is_out": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_ping_distance_just_below_offset_is_in": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_ping_in_twice_emits_once": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_ping_in_out_in_cycle": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_ping_object_in_emits_event": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_poll_pings_until_observer_off": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_ping_in_then_out_emits_out": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_observe_submits_poll_to_executor": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_get_distance_rounds_to_two_decimals": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_get_distance_computes_distance_from_pulse": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_ping_returns_none": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_ping_out_without_prior_in_does_not_emit": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_poll_returns_immediately_when_observer_off": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 60,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {},
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_get_distance_computes_distance_and_uses_gpio": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_ping_in_only_emitted_once_while_object_stays": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_poll_returns_immediately_when_observer_off": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_ping_can_reenter_after_leaving": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_ping_far_object_without_previous_in_does_not_emit": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_observe_submits_poll_to_executor": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_stop_shuts_down_executor_when_future_still_running": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_ping_object_in_emits_with_distance": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_poll_pings_until_observer_turned_off": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_observe_runs_ping_loop_in_background_and_stops": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_ping_distance_equal_to_offset_counts_as_out": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_ping_out_only_emitted_once": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_stop_does_not_shutdown_executor_when_future_finished": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_constructor_custom_values": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_default_constructor_values": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_get_distance_result_is_rounded_to_two_decimals": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_stop_turns_off_observer_and_sleeps": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_ping_in_then_out_emits_both": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_3.test_gen::test_custom_pins_and_offset": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_ping_object_goes_out_emits_out": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_poll_pings_until_observer_turned_off": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_stop_sets_flag_and_calls_future_shutdown": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_get_distance_configures_pins_and_pulses_trigger": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_stop_does_not_shutdown_observer_if_future_not_running": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_get_distance_is_rounded_to_two_decimals": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_ping_far_object_when_not_in_emits_nothing": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_ping_object_comes_in_emits_in": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_ping_in_only_emits_once": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_stop_shuts_down_observer_if_future_running": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_default_pins_and_offset": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_ping_distance_equal_to_offset_triggers_out_when_was_in": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_get_distance_computes_distance_and_cleans_up": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_poll_returns_immediately_when_observer_off": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_ping_distance_equal_to_offset_counts_as_out": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_ping_uses_get_distance_from_gpio_reading": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_ping_in_out_in_cycle": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_observe_submits_poll_to_executor": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 16,
+   "od_test": {
+    "pass": 59,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_4.test_gen::test_ping_distance_equal_to_offset_counts_as_out": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_poll_returns_immediately_when_observer_off": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_stop_with_real_future_not_running_does_not_shutdown": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_poll_pings_until_observer_turned_off": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_default_pins_and_offset": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_stop_sets_flag_and_sleeps": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_ping_out_only_emitted_once": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_get_distance_rounds_to_two_decimals": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_observe_submits_poll_to_executor": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_ping_emits_object_in_when_below_offset": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_initial_state": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_get_distance_configures_pins_and_cleans_up": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_get_distance_computes_distance": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_stop_shuts_down_observer_when_future_running": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_ping_no_emit_when_far_and_was_out": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_ping_emits_object_out_after_in": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_ping_does_not_emit_in_twice": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_custom_kwargs_are_stored": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_ping_returns_none": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 29,
+     "fail": 1
+    },
+    "tests.test_watch.TestWatch::test_distance[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_distance[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_ping[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_trig[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_echo[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[23-24-10-func_moved_in-func_moved_in]": {
+     "pass": 30
+    },
+    "tests.test_watch.TestWatch::test_observe[3-4-1-func_moved_in-func_moved_out]": {
+     "pass": 30
+    }
+   }
+  }
+ },
+ "alone": false,
+ "whole": true,
+ "seconds": 17535.5
+}

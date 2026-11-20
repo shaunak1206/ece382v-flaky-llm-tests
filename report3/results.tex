@@ -86,17 +86,16 @@ Outcome & Time & By name & Random \\
 \midrule
 Tried & 16 & 45 & 45 \\
 \quad Repository gone or install failed & 0 & 5 & 0 \\
-\quad Always failed or error & 12 & 16 & 16 \\
-\quad Never failed & 4 & 6 & 17 \\
+\quad Always failed or error & 12 & 16 & 18 \\
+\quad Never failed & 4 & 7 & 17 \\
 \quad Reproduced & 0 & 17 & 10 \\
-\quad Still running & 0 & 1 & 2 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{itemize}
 \item \textbf{Time batch.} Only 16 tests passed the selection rule, not the 40 we planned, and none reproduced. 12 always failed, mostly at collection on old dependencies, and 4 never failed in 150 runs. We then retried all 16 with every package pinned to the date of the tested commit (\texttt{gruber\_reproduce.py --pin}, uv's \texttt{UV\_EXCLUDE\_NEWER}). Pinning lets 5 more tests run, and the one that flips does so on an HTTP 502 from a web service, which our rule excludes. The known flaky code study therefore still has only six projects outside randomness.
-\item \textbf{The random draw.} 10 of the 43 finished random projects reproduce (23\%), against 17 of 44 finished (39\%) drawn by name, so drawing by name did not pick unusually unreproducible projects, if anything the opposite. Writing this report we found that 8 projects of the by name batch had been run with a test from an older candidate list that shares their name; rerunning them with their order dependent test reproduced none (7 finished), so the 17 are unchanged.
+\item \textbf{The random draw.} 10 of the 45 random projects reproduce (22\%), against 17 of 45 (38\%) drawn by name, so drawing by name did not pick unusually unreproducible projects, if anything the opposite. Writing this report we found that 8 projects of the by name batch had been run with a test from an older candidate list that shares their name; rerunning them with their order dependent test reproduced none, so the 17 are unchanged.
 \item \textbf{Order dependent arm.} For the 17 projects that reproduced we generated 4 suites per model and ran them like the main study (Table~\ref{tab:odarm}). Run alone, 16 of the 17 developer tests never flip, as victims and brittles should, and ChainConsumer's flips alone.
 \end{itemize}
 
@@ -130,8 +129,7 @@ On code whose developer tests are known to depend on order, the Claude suites ra
 Combinations run (of 272) & 263 \\
 Developer tests that fail only after a generated file & 1 (QTAF) \\
 Generated tests stable alone that flip combined & 52 \\
-\quad confirmed by the same-seed control (HikLoad, PyJsonFriendly) & 38 \\
-\quad control not finished (ReactOBus) & 14 \\
+\quad confirmed by the same-seed control & 52 \\
 Pairwise search (QTAF, HikLoad, PyJsonFriendly) & \\
 \quad generated victims with a developer polluter & 37 of 42 searched \\
 \quad brittles that pass only after developer tests & 3 \\
@@ -140,7 +138,7 @@ Developer order dependent test with a changed rate & 3 of 17 \\
 \end{tabular}
 \end{table}
 
-Generated tests can pollute developer tests: the QTAF developer test \texttt{test\_assert\_datadrive} never fails alone but fails exactly when GPT~4.1 mini suite 1 or 2 runs first, and a pairwise search (\texttt{devsuite\_polluters.py}) confirms the polluters, generated tests that call the project's data drive loader. In the other direction one HikLoad developer test, \texttt{test\_defaultvar}, pollutes all 33 HikLoad victims. Developer tests also make generated tests flip, in all four models, and the same-seed control confirms it wherever it finished (Table~\ref{tab:devsuite}). The developer order dependent test's own rate changes in only 3 of 17 projects, by at most 2 points. So running generated suites alone understates their order dependence in a real project, in both directions, though so far only with the developer file that holds the order dependent test, in 17 projects; the whole developer suite is a next step. Two ChainConsumer developer tests that failed once or twice in either order are that project's own flakiness.
+Generated tests can pollute developer tests: the QTAF developer test \texttt{test\_assert\_datadrive} never fails alone but fails exactly when GPT~4.1 mini suite 1 or 2 runs first, and a pairwise search (\texttt{devsuite\_polluters.py}) confirms the polluters, generated tests that call the project's data drive loader. In the other direction one HikLoad developer test, \texttt{test\_defaultvar}, pollutes all 33 HikLoad victims. Developer tests also make generated tests flip, in all four models, and the same-seed control without the developer file confirms all 52 (Table~\ref{tab:devsuite}). The developer order dependent test's own rate changes in only 3 of 17 projects, by at most 2 points. We then ran every generated suite inside the whole developer test directory of each project, 1,294 developer tests in all, 30 shuffled runs per combination (\texttt{od\_devsuite.py --whole}). The same two GPT~4.1 mini suites now make 14 QTAF developer tests in 5 files fail, and no developer test of another project. So running generated suites alone understates their order dependence in a real project, in both directions. Two ChainConsumer developer tests that failed once or twice in either order are that project's own flakiness.
 
 \textbf{Stress-ng on the projects outside randomness.} Progress Report 2 planned to rerun these six projects under load. Their 190 plain held out suites ran 150 more times under the library study's 10 stress-ng configurations, and load found no new mechanism: about as many suites have a kept flaky test as in the first 150 plain runs, and the only new flips are docci clock tests, which fail slightly more often under load, as slower saves would predict (\texttt{stress\_summary.json}).
 
@@ -353,6 +351,8 @@ All & 122 & 109 & 27 & 81 & 27 \\
 
 A cleaner exists for few victims, mostly GPT~5.4 mini's in torch-gpt-2 and torch-embed-sim, where another test reloads the package back, while M2 removes the flip for most victims without one. What neither fixes is GPT~4.1 mini's BT-Tracker class attribute. For generated suites a cleaner is usually missing, because the model rarely writes a test that undoes another test's change, so a fixture that restores state is the more general fix.
 
+\textbf{The library study.} M1 and M2 ran on all 84 generated library study suites, 100 shuffled runs each, plain and with each fixture (\texttt{library\_fixtures.sh}). Neither broke any of the 8,640 tests. Of the 16 flaky tests, 4 rare timing flips (schedule and tenacity) did not recur under either fixture, which at these rates may be chance, and the 10 GPT~4.1 mini humanize locale tests and 2 schedule clock tests stayed flaky, because translation state and the clock are outside what the fixtures restore.
+
 \textbf{Cost.} Over about 555 matched suites, the 200 runs take as long with M1 as without (ratio 1.00), and 19\% longer with M2 (median 14\% per suite), which imports the project once and restores state after every test (\texttt{fixture\_runtime.py}, from the CI logs). Neither adds a model call.
 
 Fixtures do not change the tests, but M1 fixes the random inputs a test sees and M2 resets state between tests, so either could weaken what a suite checks. We therefore also measure coverage and mutation score with each fixture, on held out samples 1 and 2 of all four models and on the whole order dependent arm, from one clean run of each suite with the fixture's \texttt{conftest.py}. Neither fixture changes quality much. Over all 82 suites per model, the pooled mutation score with M1 or M2 is the same as without for Sonnet, Haiku, and GPT~5.4 mini, and 1.4 points lower for GPT~4.1 mini (41.9 to 40.5\%, the same with both fixtures, so the cost is M1's seeding, which M2 includes). Mean coverage moves by at most 1.2 points. In the order dependent arm both scores move by at most 0.7 points.
@@ -443,6 +443,6 @@ File order reruns help a little: 10 of them remove a third of the kept flaky tes
 \item \textbf{Shuffling also reseeds.} pytest-randomly reseeds \texttt{random} and NumPy before each test in the shuffled runs, so shuffled runs change order and randomness together. The polluter search and the per run sequences separate them, and the final paper will add shuffled runs with \texttt{--randomly-dont-reset-seed}.
 \item \textbf{Missed order dependence.} The main protocol alternates file order and shuffled runs, and the developer file control shows that some order dependent tests flip only under other shuffle seeds, so the flaky counts of the alone runs are lower bounds.
 \item \textbf{Flaky tests in the mutation score.} A flaky test that fails by chance on a mutant kills it, but at most 1.7\% of any model's kept tests are flaky; next step 5 counts only kills by tests that never failed.
-\item \textbf{Batch selection.} The order dependent arm's 17 projects come from the first 45 eligible projects by name, all capitalized. A seeded random draw of 45 more reproduced at a lower rate (10 of 43 so far), and its projects join the arm for the final paper.
+\item \textbf{Batch selection.} The order dependent arm's 17 projects come from the first 45 eligible projects by name, all capitalized. A seeded random draw of 45 more reproduced at a lower rate (10 of 45), and its projects join the arm for the final paper.
 \item \textbf{Statistics.} Fisher tests on suites treat suites of one project as independent, so we use them only to describe, and the project level sign test is the one confirmatory test.
 \end{itemize}

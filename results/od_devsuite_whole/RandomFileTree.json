@@ -1,0 +1,2257 @@
+{
+ "project": "RandomFileTree",
+ "install_ok": true,
+ "dev_file": "randomfiletree/test",
+ "od_test": "test_create_random_dirs",
+ "runs": 30,
+ "configs": {
+  "baseline": {
+   "runs_done": 30,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "dev_first": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_1.test_gen::test_iterative_tree_creates_correct_files_and_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_iterative_tree_repeat_creates_more_items": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_sample_random_elements_raises_onfail_raise": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_iterative_tree_sets_alldirs_and_allfiles_unique": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_iterative_tree_handles_zero_folders_and_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_sample_random_elements_selects_distinct": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_payload_generator_iterable_provided": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_iterative_tree_with_payload_creates_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_sample_random_elements_ignores_onfail_ignore": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_choose_random_elements_selects_elements": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_choose_random_elements_unknown_onfail_raises": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_iterative_gaussian_tree_creates_dirs_and_files": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_choose_random_elements_raises_onfail_raise": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_iterative_tree_filename_callable_used": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_sample_random_elements_unknown_onfail_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_iterative_tree_respects_maxdepth": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_choose_random_elements_ignores_onfail_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt41mini_plain_2.test_gen::test_sample_random_elements_unknown_onfail_raises": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_sample_random_elements_raises_when_not_enough": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_choose_random_elements_unknown_onfail_raises": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_sample_random_elements_zero_selection": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_choose_random_elements_ignore_onfail_no_dirs_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_choose_random_elements_zero_selection": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iterative_tree_filename_callable_used": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iterative_tree_respects_maxdepth": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iterative_tree_repeat_creates_multiple_levels": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iterative_gaussian_tree_minimums_respected": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_sample_random_elements_selects_distinct": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_choose_random_elements_raises_on_empty_dirs_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iterative_tree_creates_files_and_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_choose_random_elements_multiple_selection": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iterative_tree_payload_overrides_filename": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iterative_tree_payload_creates_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_sample_random_elements_ignores_when_not_enough": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_iterative_gaussian_tree_creates_files_and_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_choose_random_elements_selects_existing": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_3.test_gen::test_payload_generator_yields_files"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_3.test_gen::test_iterative_tree_repeat_creates_more": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_iterative_tree_creates_folders_and_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_iterative_tree_maxdepth_limits_creation": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_payload_generator_yields_files": {
+     "fail": 25,
+     "pass": 5
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_sample_random_elements_raises_not_enough_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_iterative_gaussian_tree_creates": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_choose_random_elements_raises_no_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_choose_random_elements_ignore_onfail": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_iterative_gaussian_tree_min_values": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_iterative_tree_payload_function": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_sample_random_elements_selects_unique": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_sample_random_elements_ignore_onfail": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_choose_random_elements_selects": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_random_string_length_and_chars": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_iterative_tree_with_filename_func": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_choose_random_elements_unknown_onfail_raises": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_choose_random_elements_raises_no_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_sample_random_elements_raises_not_enough_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_sample_random_elements_unknown_onfail_raises": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_iterative_tree_respects_maxdepth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_4.test_gen::test_iterative_gaussian_tree_with_payload"
+   ],
+   "tests": {
+    "zz_gpt41mini_plain_4.test_gen::test_sample_random_elements_raises_when_not_enough_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_iterative_gaussian_tree_with_payload": {
+     "fail": 7,
+     "pass": 23
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_iterative_tree_payload_generator_is_iterable": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_iterative_gaussian_tree_creates_files_and_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_sample_random_elements_raises_when_not_enough_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_iterative_tree_maxdepth_limits_creation": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_choose_and_sample_random_elements_with_empty_basedir": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_sample_random_elements_returns_exact_number_when_enough": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_iterative_tree_with_payload": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_choose_random_elements_no_dirs_ignore": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_random_string_length_and_charset": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_choose_random_elements_raises_when_no_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_choose_random_elements_raises_when_no_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_sample_random_elements_ignore_returns_less_dirs_and_files": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_choose_random_elements_unknown_onfail_value": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_iterative_tree_creates_files_and_dirs": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_choose_random_elements_returns_requested_number": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_iterative_tree_filename_callable_used": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_sample_random_elements_unknown_onfail_value": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt54mini_plain_1.test_gen::test_iterative_tree_supports_payload_and_ignores_filename_when_payload_is_given"
+   ],
+   "tests": {
+    "zz_gpt54mini_plain_1.test_gen::test_sample_random_elements_raises_for_unknown_onfail_when_not_enough_dirs": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_sample_random_elements_raises_when_not_enough_directories": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_choose_random_elements_ignore_returns_empty_lists_when_tree_is_empty": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_choose_random_elements_raises_for_missing_directories": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_iterative_gaussian_tree_applies_minimums_and_delegates_to_iterative_tree": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_choose_random_elements_selects_requested_number_with_replacement": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_iterative_tree_repeat_walks_multiple_times_and_collects_new_paths": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_choose_random_elements_raises_for_missing_files": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_iterative_tree_respects_maxdepth_and_does_not_descend_beyond_limit": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_iterative_tree_returns_unique_paths_when_duplicates_are_generated": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_iterative_tree_creates_expected_numbers_of_dirs_and_files": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_sample_random_elements_returns_unique_dirs_and_files": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_sample_random_elements_ignore_returns_all_available_when_not_enough_files": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_choose_random_elements_raises_for_unknown_onfail_when_files_missing": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_iterative_tree_supports_payload_and_ignores_filename_when_payload_is_given": {
+     "fail": 15,
+     "pass": 15
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_2.test_gen::test_iterative_gaussian_tree_applies_minimums": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_iterative_tree_uses_payload_instead_of_filename": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_sample_random_elements_raises_on_unknown_onfail": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_iterative_tree_respects_maxdepth": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_iterative_tree_deduplicates_returned_paths": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_sample_random_elements_raises_when_not_enough_dirs": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_sample_random_elements_ignore_returns_all_available_when_not_enough_files": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_choose_random_elements_raises_when_no_dirs_and_requested": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_iterative_tree_creates_basedir": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_iterative_gaussian_tree_uses_gaussian_values_when_above_minimum": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_choose_random_elements_raises_when_no_files_and_requested": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_iterative_gaussian_tree_delegates_to_iterative_tree": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_sample_random_elements_returns_unique_samples": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_iterative_tree_creates_expected_number_of_dirs_and_files": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_choose_random_elements_ignore_returns_empty_lists_when_tree_empty": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_choose_random_elements_picks_from_all_walked_items": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_choose_random_elements_raises_on_unknown_onfail_for_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_3.test_gen::test_iterative_tree_deduplicates_returned_paths": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_iterative_gaussian_tree_applies_minimum_clamp": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_choose_random_elements_unknown_onfail_for_missing_files_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_choose_random_elements_raises_when_no_dirs_and_onfail_raise": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_iterative_tree_creates_expected_number_of_dirs_and_files": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_iterative_gaussian_tree_uses_gauss_and_minimums": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_choose_random_elements_raises_when_no_files_and_onfail_raise": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_iterative_tree_creates_basedir_if_missing": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_choose_random_elements_ignore_missing_dirs_returns_empty_list": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_iterative_tree_respects_maxdepth": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_choose_random_elements_returns_duplicates_when_requested": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_sample_random_elements_ignore_when_not_enough_files_returns_all_available": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_iterative_tree_payload_overrides_filename": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_sample_random_elements_returns_unique_items": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_sample_random_elements_raises_when_not_enough_dirs": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_sample_random_elements_unknown_onfail_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_gpt54mini_plain_4.test_gen::test_choose_random_elements_raises_when_no_dirs_and_onfail_raise": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_iterative_gaussian_tree_applies_minimums": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_iterative_tree_respects_maxdepth": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_choose_random_elements_picks_requested_counts": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_iterative_tree_deduplicates_return_values": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_choose_random_elements_ignores_missing_dirs_and_files": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_iterative_tree_with_payload_uses_generator_and_ignores_filename": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_sample_random_elements_returns_unique_elements": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_iterative_gaussian_tree_uses_gaussian_parameters": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_choose_random_elements_raises_when_no_files_and_onfail_raise": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_sample_random_elements_raises_when_not_enough_files_and_onfail_raise": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_choose_random_elements_unknown_onfail_raises_for_missing_files": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_sample_random_elements_raises_when_not_enough_dirs_and_onfail_raise": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_sample_random_elements_ignore_returns_all_available_when_not_enough": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_iterative_tree_creates_files_and_directories": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_1.test_gen::test_payload_generator_is_used_and_overrides_filename": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_choose_zero_requests_on_empty_tree_returns_empty_lists": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_repeat_populates_folders_created_in_earlier_pass": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_choose_ignore_returns_empty_list_for_missing_kind": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_gaussian_zero_sigma_creates_exact_counts": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_choose_raises_when_no_files_and_onfail_raise": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_gaussian_min_files_clamps_low_draws": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_choose_raises_when_no_dirs_and_onfail_raise": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_depth_passed_to_callables_matches_existing_tree": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_sample_raises_when_too_few_files": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_sample_raises_when_too_few_dirs": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_sample_ignore_returns_all_available_elements": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_choose_returns_requested_counts_with_replacement": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_sample_returns_distinct_elements": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_choose_can_repeat_single_file": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_maxdepth_prevents_descending_into_deeper_folders": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_single_pass_creates_folders_only_in_basedir": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_gaussian_passes_mean_and_sigma_to_random_gauss": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_choose_unknown_onfail_raises_when_files_missing": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_choose_draws_from_all_nested_levels": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_files_are_created_empty_with_expected_count": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_iterative_tree_creates_missing_basedir": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_2.test_gen::test_choose_unknown_onfail_without_files_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_creates_missing_basedir_and_accepts_str": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_maxdepth_limits_descent": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_creates_folders_at_root": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_choose_allows_repeated_picks": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_gaussian_min_values_clamp_negative_draws": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_sample_raises_when_too_few_dirs": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_choose_returns_requested_counts_from_tree": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_payload_overrides_filename": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_sample_is_reproducible_with_same_seed": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_created_dirs_exist_inside_basedir": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_sample_unknown_onfail_raises_for_dirs_and_files": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_duplicate_names_collapse": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_sample_raises_when_too_few_files": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_choose_ignore_without_files_returns_empty_files": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_repeat_creates_nested_folders": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_creates_empty_files_with_given_names": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_gaussian_passes_mean_and_sigma_to_random_gauss": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_sample_returns_distinct_elements_from_tree": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_gaussian_truncates_draws_to_int": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_iterative_tree_payload_writes_files": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_choose_raises_without_dirs_by_default": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_sample_ignore_returns_all_available": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_choose_zero_counts_on_empty_tree_returns_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_3.test_gen::test_sample_returns_distinct_existing_entries": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iterative_tree_payload_creates_files_and_overrides_filename": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_gaussian_truncates_float_samples_toward_zero": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_choose_returns_only_existing_entries": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iterative_tree_deduplicates_repeated_filenames": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_sample_full_selection_returns_everything": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_choose_zero_counts_on_empty_tree_does_not_raise": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_choose_ignore_returns_empty_dirs_when_none_exist": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_choose_allows_repetition_when_more_requested_than_available": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_sample_raises_on_empty_tree_when_files_requested": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iterative_tree_creates_missing_basedir_from_str": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_sample_ignore_returns_all_available": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_choose_unknown_onfail_raises_when_no_files": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_sample_raises_when_not_enough_files": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iterative_tree_maxdepth_one_prevents_descent": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_sample_raises_when_not_enough_dirs": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_gaussian_real_random_creates_existing_paths": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_choose_raises_when_dirs_requested_but_none_exist": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_gaussian_passes_mean_and_sigma_to_random_gauss": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iterative_tree_payload_called_once_per_visited_directory": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_choose_raises_when_files_requested_but_none_exist": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_gaussian_clamps_negative_samples_to_minimums": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iterative_tree_creates_requested_folders": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iterative_tree_creates_empty_files_by_default": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_haiku_plain_4.test_gen::test_maxdepth_limits_nesting": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_returned_paths_exist_on_disk": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_choose_returns_requested_counts_and_members": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_gaussian_passes_mean_and_sigma": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_choose_no_files_ignore_and_unknown_onfail": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_choose_allows_repetition": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_choose_no_dirs_ignore_returns_empty_dirs": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_sample_ignore_returns_all_available": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_sample_returns_distinct_members": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_custom_filename_and_duplicate_collapse": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_unlimited_depth_grows_with_repeat": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_sample_unknown_onfail_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_repeat_descends_into_existing_folders": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_nfolders_and_nfiles_receive_depth": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_repeat_one_creates_only_top_level_entries": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_maxdepth_one_never_descends": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_choose_no_files_raises_by_default": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_sample_full_selection_returns_everything": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_choose_no_dirs_raises_by_default": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_sample_raises_when_insufficient": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_gaussian_clamps_to_minimums": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_gaussian_zero_sigma_is_exact": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_gaussian_truncates_to_int": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_creates_missing_basedir": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_payload_generator_creates_files_and_overrides_filename": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_1.test_gen::test_gaussian_tree_minimums_are_enforced": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_sample_random_elements_raises_when_not_enough": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_maxdepth_one_stays_in_basedir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_custom_filename": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_sample_random_elements_unknown_onfail_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_choose_random_elements_ignore_returns_empty": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_repeat_descends_into_new_folders": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_choose_random_elements_zero_requested_on_empty_dir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_sample_random_elements_ignore_returns_fewer": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_choose_random_elements_raises_when_empty": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_choose_random_elements_returns_existing_members": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_payload_overrides_filename": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_funcs_receive_integer_depth": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_results_are_unique": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_creates_requested_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_choose_random_elements_unknown_onfail_for_files": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_sample_random_elements_subset": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_choose_random_elements_allows_duplicates": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_zero_counts_creates_nothing": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_gaussian_tree_negative_mean_gives_nothing_by_default": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_gaussian_tree_maxdepth_and_filename": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_sample_random_elements_zero_on_empty_dir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_creates_nested_basedir_and_accepts_str": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_payload_creates_files_with_content": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_iterative_tree_duplicate_filenames_are_deduplicated": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_gaussian_tree_zero_sigma_gives_exact_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_sample_random_elements_distinct": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_2.test_gen::test_iterative_tree_creates_requested_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_gaussian_tree_negative_mean_gives_nothing": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_iterative_tree_funcs_called_with_depth_zero_for_root": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_sample_random_elements_ignore_returns_fewer": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_iterative_tree_payload_creates_files_with_content": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_sample_random_elements_zero_on_empty_dir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_iterative_tree_creates_missing_basedir_from_str": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_gaussian_tree_min_values_enforced": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_sample_random_elements_distinct_and_valid": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_gaussian_tree_zero_sigma_gives_exact_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_choose_random_elements_empty_raises_or_ignores": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_choose_random_elements_unknown_onfail_for_files_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_gaussian_tree_maxdepth_and_payload_passthrough": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_iterative_tree_zero_counts_returns_empty": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_sample_random_elements_too_many_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_sample_random_elements_all_available": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_iterative_tree_custom_filename": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_iterative_tree_maxdepth_one_stays_in_basedir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_choose_random_elements_allows_duplicates": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_iterative_tree_repeat_descends_into_new_folders": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_choose_random_elements_returns_requested_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_sample_random_elements_unknown_onfail_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_choose_random_elements_zero_on_empty_dir": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_3.test_gen::test_sample_raises_when_not_enough": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_gaussian_tree_negative_mean_clamped_to_zero": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_gaussian_tree_min_files_and_folders_enforced": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_sample_onfail_ignore_returns_all_available": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_single_repeat_only_populates_base": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_choose_allows_duplicates": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_choose_raises_when_nothing_to_pick": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_gaussian_tree_maxdepth_and_filename": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_zero_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_accepts_string_basedir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_repeat_descends_into_new_folders": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_creates_basedir_and_returns_paths": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_custom_filename": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_sample_zero_requested_on_empty_dir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_choose_onfail_ignore_returns_empty": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_gaussian_tree_exact_counts_with_zero_sigma": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_sample_all_elements_when_exact_count": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_nfuncs_receive_depth": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_maxdepth_one_limits_to_basedir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_payload_creates_files_with_content": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_choose_zero_requested_on_empty_dir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_choose_returns_requested_number_from_existing": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_sample_returns_distinct_existing_elements": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_sample_unknown_onfail_raises_value_error": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_iterative_tree_payload_overrides_filename": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 9,
+   "od_test": {
+    "pass": 29,
+    "fail": 1,
+    "error": 0
+   },
+   "dev_failing": {
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "gen_first": 9,
+     "dev_first": 21
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "dev_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "zz_sonnet_plain_4.test_gen::test_sample_random_elements_ignore_returns_fewer": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_choose_random_elements_unknown_onfail_raises_for_files": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_sample_random_elements_can_select_everything": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_gaussian_tree_negative_mean_gives_nothing_by_default": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_choose_random_elements_ignore_returns_empty": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_depth_function_receives_ints": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_sample_random_elements_raises_when_not_enough": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_sample_random_elements_unknown_onfail_and_zero_on_empty": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_creates_missing_basedir_with_str": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_gaussian_tree_min_values_enforced": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_creates_requested_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_repeat_descends_into_new_folders": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_choose_random_elements_returns_existing_items": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_custom_filename_used": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_maxdepth_one_only_populates_base": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_gaussian_tree_zero_sigma_gives_exact_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_gaussian_tree_maxdepth_and_payload_passed_through": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_choose_random_elements_zero_requested_on_empty_dir": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_sample_random_elements_distinct_and_valid": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_default_filename_creates_empty_files": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_payload_creates_files_with_content": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_gaussian_tree_reproducible_with_seed": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_choose_random_elements_raises_when_nothing_to_pick": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iterative_tree_zero_counts": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli": {
+     "fail": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_cli_module": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_cli.TestCli::test_parser": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_fname": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_payload": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_limit_depth": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_files": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_dirs": {
+     "pass": 29,
+     "fail": 1
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_both": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestTreeCreation::test_create_random_tree_empty": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_ignore": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_choose_raise": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestChooseSample::test_sample_raises": {
+     "pass": 30
+    },
+    "randomfiletree.test.test_core.TestHelperFunctions::test_get_random_string": {
+     "pass": 30
+    }
+   }
+  }
+ },
+ "alone": false,
+ "whole": true,
+ "seconds": 277.4
+}

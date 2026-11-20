@@ -1,0 +1,4832 @@
+{
+ "project": "QTAF",
+ "install_ok": true,
+ "dev_file": "tests/test_testbase",
+ "od_test": "test_assert_failure",
+ "runs": 30,
+ "configs": {
+  "baseline": {
+   "runs_done": 30,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 15
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "dev_first": 12,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "dev_first": 12,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "dev_first": 12,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "dev_first": 12,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "dev_first": 14,
+     "gen_first": 2
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_1.test_gen::test_load_datadrive_tests_with_name_subset"
+   ],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 16,
+     "fail": 14
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 16,
+     "fail": 14
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 14,
+     "fail": 16
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_modify_settings_restores_value": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_load_datadrive_tests_uses_loader_when_not_datadrive": {
+     "error": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_modify_settings_adds_new_key_and_removes": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_test_doc_reads_class_docstring": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_is_datadrive_and_get_datadrive": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_datadrive_decorator_raises_for_non_testcase": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_test_name_and_class_name": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_wait_for_equal_and_wait_for_match": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_load_datadrive_tests_raises_runtimeerror_when_not_datadrive_and_settings_false": {
+     "error": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_get_translated_in_datadrive_success": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_get_extra_fail_record_defaults": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_initialization_and_properties": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_load_datadrive_tests_with_name_subset": {
+     "fail": 19,
+     "pass": 11
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_fail_and_log_info": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_modify_attributes_lock_released": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_debug_run_and_debug_run_one": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_assert_equal_and_assert_match": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_get_translated_in_datadrive_raises_valueerror": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_start_step": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_datadrive_decorator_sets_attribute": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_testcase_assert_": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_load_datadrive_tests_creates_testcases": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_modify_attributes_basic": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_datadrive_getitem_returns_data": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_modify_settings_changes_and_restores": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_datadrive_iter_and_len_list_and_dict": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "fail": 14,
+     "pass": 16
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "fail": 14,
+     "pass": 16
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "dev_first": 15,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "dev_first": 12,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "dev_first": 12,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "dev_first": 12,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "dev_first": 12,
+     "gen_first": 2
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "dev_first": 14,
+     "gen_first": 2
+    }
+   },
+   "gen_flaky": [
+    "zz_gpt41mini_plain_2.test_gen::test_is_datadrive_and_get_datadrive"
+   ],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 16,
+     "fail": 14
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 16,
+     "fail": 14
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 14,
+     "fail": 16
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_modify_environ_context_manager": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_modify_attributes_context_manager_threadsafe": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_get_translated_in_datadrive_exact_match_and_valueerror": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_datadrive_decorator_accepts_only_subclass_of_testcase": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_datadrive_iter_and_len_with_list_and_dict": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_testcase_test_name_and_test_class_name": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_modify_settings_context_manager": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_testcase_fail_log_info": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_testcase_wait_for_equal_and_wait_for_match": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_load_datadrive_tests_with_name_and_warning": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_testcase_init_and_properties_basic": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_load_datadrive_tests_without_datadrive_and_settings": {
+     "error": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_testcase__log_assert_failed_raises_if_setting_false": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_testcase_assert_equal_and_assert_match": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_testcase_get_extra_fail_record_returns_empty_dicts": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_is_datadrive_and_get_datadrive": {
+     "fail": 16,
+     "pass": 14
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "fail": 17,
+     "pass": 13
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "fail": 14,
+     "pass": 16
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "fail": 14,
+     "pass": 16
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {
+    "::zz_gpt41mini_plain_3.test_gen": {
+     "dev_first": 30
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "::zz_gpt41mini_plain_3.test_gen": {
+     "error": 30
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 0,
+    "fail": 0,
+    "error": 0
+   },
+   "dev_failing": {
+    "::zz_gpt41mini_plain_4.test_gen": {
+     "dev_first": 30
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "::zz_gpt41mini_plain_4.test_gen": {
+     "error": 30
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_testcase_clean_test_destroys_resources": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_testcase_properties_and_environ": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_load_datadrive_tests_name_lookup_by_exact_key": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_assert_equal_and_match_record_failure": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_testcase_test_resmgr_session_created_lazily": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_assert_continue_setting_controls_assert_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_load_datadrive_tests_warns_on_bad_key": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_load_datadrive_tests_requires_datadrive_setting_for_plain_class": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_datadrive_decorator_rejects_non_testcase": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_testcase_test_doc_override_from_attrs": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_datadrive_iter_from_list_and_len": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_load_datadrive_tests_name_lookup_by_translated_key": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_testcase_type_merges_tags_and_module_tags": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_datadrive_iter_from_generator_consumes_to_list": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_datadrive_decorator_marks_testcase_class": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_load_datadrive_tests_from_list_uses_index_names": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_load_datadrive_tests_from_dict_preserves_keys_and_attrs": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_testcase_logging_methods_convert_non_text": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_datadrive_iterates_dict_keys": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_modify_environ_sets_and_restores_environment": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_testcase_properties_and_extra_info": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_datadrive_marks_testcase_class": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_load_datadrive_tests_creates_test_instances_and_applies_attrs": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_load_datadrive_tests_can_select_single_key": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_datadrive_consumes_generator_and_caches_values": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_datadrive_rejects_non_testcase_class": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_datadrive_iterates_list_indexes": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_modify_settings_sets_and_restores_existing_and_new_keys": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_testcase_start_log_fail_and_fail_convert_to_text": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_get_translated_in_datadrive_matches_translated_key": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_load_datadrive_tests_warns_for_bad_key": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_get_translated_in_datadrive_raises_for_missing_key": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_modify_attributes_sets_and_restores_attributes": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_testcase_init_overrides_allowed_attrs": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_modify_settings_restores_state_when_exception_raised": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_testcase_assert_equal_and_match_log_failures": {
+     "fail": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_datadrive_iterates_dict_keys_and_getitem": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_load_datadrive_tests_by_name_translation": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_wait_for_equal_and_match_with_fake_retry": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_assert_raises_when_continue_disabled": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_load_datadrive_tests_from_decorated_class_with_attrs": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_testcase_runner_single_methods_mapping_warns_on_old_names": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_datadrive_decorator_marks_testcase_class": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_datadrive_decorator_rejects_non_testcase": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_testcase_start_log_fail_and_assertions_record_to_result": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_load_datadrive_tests_requires_flag_when_not_decorated": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_testcase_test_doc_falls_back_to_class_doc_and_strips": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_modify_settings_adds_and_removes_new_setting": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_modify_settings_restores_existing_setting": {
+     "error": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_modify_settings_restores_sealed_flag": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_testcase_properties_and_attr_overrides": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_datadrive_iterates_lists_as_indexes_and_len": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_modify_settings_sets_sealed_false_inside_context": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_load_datadrive_tests_name_lookup_by_translated_key": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_datadrive_iterates_tuple_as_indices": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_testcase_name_includes_casedataname": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_testcase_start_step_info_and_fail_forward_to_result": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_testcase_test_extra_info_reads_defined_attributes": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_testcase_assert_match_success_and_failure": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_testcase_test_doc_uses_custom_doc_override": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_datadrive_generator_is_materialized_once": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_modify_settings_temporarily_sets_and_restores_existing_and_new_keys": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_load_datadrive_tests_requires_datadrive_when_setting_disabled": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_load_datadrive_tests_with_named_key_and_attrs": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_testcase_class_name_and_name_properties": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_datadrive_iterates_dict_as_keys": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_testcase_assert_equal_logs_failure_and_returns_false": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_datadrive_decorator_sets_marker_and_helpers": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_datadrive_decorator_rejects_non_testcase": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_datadrive_iterates_list_as_indices": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_load_datadrive_tests_warns_for_bad_key": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_datadrive_decorator_marks_testcase_subclass": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_modify_settings_restores_state_on_exception": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_datadrive_dict_iterates_keys": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_modify_settings_overrides_and_restores_nested_values": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_testcase_init_stores_casedata_and_name": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_run_test_base_raises_not_implemented_and_alias_matches": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_assert_raises_when_assert_continue_disabled": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_load_applies_dunder_attrs_from_data": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_datadrive_generator_is_materialized_on_iteration": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_assert_equal_returns_bool_and_records_mismatch": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_metaclass_merges_tags_from_base_class": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_testcase_init_applies_only_whitelisted_attrs": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_load_with_string_name_matches_translated_item": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_metaclass_forbids_overriding_init": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_load_non_datadrive_class_requires_data_drive_setting": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_load_list_driven_creates_one_instance_per_item": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_load_with_integer_name_selects_single_item": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_load_unknown_name_raises_value_error": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_testcase_test_name_includes_casedataname": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_modify_settings_adds_and_removes_new_key": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_modify_settings_unseals_inside_and_restores_seal_after": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_datadrive_list_and_tuple_iterate_indices": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_load_dict_driven_uses_keys_as_names": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_datadrive_decorator_rejects_non_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_testcase_doc_is_stripped": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_modify_settings_restores_nested_existing_value": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_load_datadrive_tests_plain_class_requires_setting": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_assert_failure_raises_when_not_continuing": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_datadrive_sequence_len_getitem_and_iter": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_fail_log_info_and_start_step_forward_to_result": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_load_datadrive_tests_filters_by_name": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_datadrive_decorator_marks_testcase_class": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_testcase_test_name_includes_casedataname": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_run_test_not_implemented_on_base_class": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_tags_are_normalized_and_inherited": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_testcase_default_state": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_datadrive_generator_is_materialized": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_load_datadrive_tests_unknown_name_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_metaclass_forbids_init_override": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_assert_equal_failure_records_log_and_returns_false": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_load_datadrive_tests_list_uses_indices_as_names": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_datadrive_dict_iter_yields_keys": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_testcase_attrs_whitelist_is_applied": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_load_datadrive_tests_dict_with_attrs_override": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_modify_settings_adds_and_removes_new_key_on_exception": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_datadrive_decorator_rejects_non_testcase": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_repeat_runner_requires_repeat_attribute": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_testcase_runner_executes_lifecycle_hooks": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_modify_settings_sets_new_key_and_removes_it_on_exit": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_load_dict_uses_keys_as_names_and_values_as_casedata": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_run_test_default_raises_not_implemented": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_assert_equal_mismatch_records_assert_failure": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_attrs_overwrite_only_whitelisted_keys": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_test_name_includes_casedataname": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_load_undecorated_class_without_datadrive_setting_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iter_tuple_yields_indices": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_default_attributes_and_test_name_without_casedataname": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_metaclass_merges_base_tags_into_subclass_tags": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_test_doc_is_stripped_from_class_docstring": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iter_dict_yields_keys_and_getitem_by_key": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_generator_data_is_materialized_and_iterable_twice": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_load_with_name_selects_single_entry": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_modify_settings_restores_state_when_block_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_assert_equal_match_returns_true_without_logging": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_modify_settings_nested_restores_previous_value": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_fail_log_info_and_start_step_delegate_to_result": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_load_with_unknown_name_raises_value_error": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_call_rejects_non_testcase_class": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_iter_list_yields_indices_and_getitem_len_work": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_load_extracts_attrs_from_testdata": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_extra_info_collects_declared_fields": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_load_list_creates_instances_named_by_index": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_assert_failure_raises_when_assert_continue_disabled": {
+     "fail": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_wait_for_equal_returns_true_when_value_already_matches": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_metaclass_rejects_init_override": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_call_registers_datadrive_on_testcase_subclass": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_is_datadrive_false_for_undecorated_class": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_load_list_driven_tests_creates_instances_with_index_names": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_modify_settings_stores_kwargs_and_starts_with_empty_old_conf": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_assert_true_only_logs_on_falsy_value": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_decorator_marks_testcase_subclass_and_returns_same_class": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_test_doc_strips_surrounding_whitespace": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_attrs_overwrite_whitelisted_attributes_only": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_load_datadrive_tests_by_index_name_for_list_data": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_fail_and_log_info_forward_to_result_and_stringify": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_load_dict_driven_tests_uses_keys_as_names": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_run_test_not_implemented_by_default": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_modify_settings_adds_new_key_inside_and_removes_after": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_test_extra_info_collects_defined_fields": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_load_datadrive_tests_applies_attrs_from_testdata": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_modify_settings_restores_value_when_body_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_datadrive_list_iter_yields_indices": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_modify_settings_nested_contexts_restore_in_order": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_assert_raises_when_assert_continue_disabled": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_load_datadrive_tests_unknown_name_raises_value_error": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_datadrive_generator_is_materialized_on_iter": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_load_undecorated_class_without_data_drive_setting_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_modify_settings_restores_sealed_flag": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_forbids_overriding_init": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_datadrive_tuple_iter_yields_indices": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_defaults": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_modify_settings_temporarily_changes_existing_key_and_restores": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_is_datadrive_false_for_plain_class": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_decorator_rejects_non_testcase_class": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_test_name_includes_datadrive_name": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_datadrive_len": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_datadrive_dict_iter_yields_keys": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_load_datadrive_tests_by_name_selects_single_entry": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_assert_equal_true_and_false_paths": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_datadrive_getitem_list_and_dict": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_tags_string_is_normalized_and_inherited": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_testcase_attrs_doc_overrides_test_doc": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_environ_is_singleton_dict_shared_by_testcases": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_load_datadrive_tests_from_list": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_testcase_attrs_whitelist_and_doc_override": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_modify_settings_new_key_added_then_removed": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_datadrive_decorator_marks_class_and_returns_it": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_testcase_test_doc_is_stripped": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_datadrive_tuple_iterates_indices": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_load_datadrive_tests_non_datadrive_without_setting_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_testcase_without_tags_has_empty_set": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_is_datadrive_false_for_plain_testcase": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_testcase_environ_is_singleton": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_datadrive_dict_iterates_keys": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_modify_settings_existing_key_restored": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_load_datadrive_tests_unknown_name_raises_value_error": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_load_datadrive_tests_attrs_override": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_testcase_run_test_not_implemented_and_aliases": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_testcase_names_and_data": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_datadrive_generator_is_materialized": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_datadrive_list_iterates_indices": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_testcase_tags_inherit_and_instance_override": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_datadrive_rejects_non_testcase_class": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_load_datadrive_tests_from_dict_with_name": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_testcase_forbids_overloading_init": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_load_datadrive_tests_list_by_index_name": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_modify_settings_restores_on_exception": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_datadrive_iter_list_yields_indexes": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_load_datadrive_tests_by_name_for_list_index_string": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_modify_settings_adds_and_removes_new_key": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_modify_settings_restores_on_exception": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_testcase_log_info_fail_and_step": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_load_datadrive_tests_from_dict": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_testcase_environ_is_singleton_and_extra_info": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_load_datadrive_tests_non_datadrive_without_setting": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_testcase_tags_metaclass_and_attrs": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_load_datadrive_tests_from_list": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_testcase_doc_is_stripped_and_overridable": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_load_datadrive_tests_applies_attrs": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_modify_settings_overrides_and_restores_existing_key": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_datadrive_decorator_marks_class": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_datadrive_iter_tuple_yields_indexes": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_testcase_names_and_casedata": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_testcase_forbids_init_override": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_testcase_run_test_not_implemented": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_datadrive_generator_is_materialized": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_testcase_assert_equal_and_match_with_result": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_datadrive_iter_dict_yields_keys": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_datadrive_rejects_non_testcase": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_load_datadrive_tests_name_not_found": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_load_datadrive_tests_by_name_dict": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_doc_is_stripped": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_load_with_string_index_name_for_list": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_forbids_overloading_init": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_load_non_datadrive_without_setting_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_datadrive_dict_iterates_keys": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_without_tags_has_empty_set": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_datadrive_rejects_non_testcase": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_modify_settings_new_key_removed_afterwards": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_logging_helpers_use_result": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_datadrive_tuple_iterates_indices": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_load_with_unknown_name_raises_value_error": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_modify_settings_restores_on_exception": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_modify_settings_existing_key_restored": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_extra_info": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_base_run_test_not_implemented": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_assert_equal_and_match": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_datadrive_decorator_marks_class": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_load_applies_attrs_override": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_load_with_specific_name": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_datadrive_list_iterates_indices": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_names_and_data": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_is_datadrive_on_instance": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_attrs_whitelist_overrides": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_load_dict_datadrive_uses_keys_as_names": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_testcase_tags_inherit_from_base": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_load_list_datadrive_creates_tests": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_datadrive_generator_is_materialized": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 2,
+   "od_test": {
+    "pass": 15,
+    "fail": 15,
+    "error": 0
+   },
+   "dev_failing": {
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "dev_first": 14,
+     "gen_first": 1
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "tests.test_testbase.test_serialization.SerializationTest::test_normal_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_serialize_testsuite": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_serialization.SerializationTest::test_datadrive_serialization": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_rewrite_assert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_failure": {
+     "pass": 15,
+     "fail": 15
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_disable_assert_failed_continue": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_assert.AssertionTest::test_assert_inner_invoke": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_test_doc_is_stripped": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_run_test_not_implemented_and_aliases": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iter_tuple_yields_indices": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_non_decorated_class_is_not_datadrive": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iter_dict_yields_keys": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_load_datadrive_unknown_name_raises_value_error": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_datadrive_decorator_marks_class": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_load_list_datadrive_tests": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_assert_equal_and_match_results": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_modify_settings_new_key_removed_after_exit": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_modify_settings_restores_on_exception": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_attrs_in_drive_data_override_attributes": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_load_list_datadrive_by_string_index": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_modify_settings_existing_key_restored": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_test_extra_info": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_iter_list_yields_indices_and_getitem": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_testcase_names_and_casedata": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_generator_data_converted_to_list": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_testcase_forbids_overriding_init": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_environ_is_singleton_dict": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_tags_merge_with_base_class": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_datadrive_rejects_non_testcase": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_load_dict_datadrive_tests_with_name": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_load_non_datadrive_without_setting_raises_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_timeout": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_retry.TestRetry::test_retry_with_count": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_plan.PlanTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_contain": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_iteration": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_declare": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_get": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_deriving": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_conf.SettingsMixinTest::test_set": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_testcase": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_filter": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_runtime_error": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.TestLoaderTest::test_load_failed_not_found": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_list_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_global_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_dict_data_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_loader.LoadDataDriveReversibleTest::test_bad_name_reversible": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_failed_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_runner_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_report_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_success_returncode": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RuntestTest::test_args_parsing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.DiscoverTest::test_discover_show": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_management.RunScriptTest::test_invalid_script": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_nofile_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_get_local_file": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_duplicated_raise": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_walk_dir": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_unregisted_restype": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_resource.TestResManager::test_testcase_resources": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.GlobalDataDriveTest::test_global_overwrite_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_list_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_load_dict_data": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_datadrive.ClassDataDriveTest::test_set_attrs_doc": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.JsonReportTest::test_json_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.RuntestReportTest::test_runtest_return_code": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.XmlReportTest::test_xml_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.StreamReportTest::test_stream_report": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_content": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_report.HtmlReportTest::test_html_report_datadrive": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert_from_module": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_property": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_str": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_extra_info": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_forbidden_overload_init": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_run_style_priority_old": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_wait_for": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_tags_inhert": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_testcase.TestCaseTest::test_debug_run_one": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_plan": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_testcasesettings": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_retry": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_multiprocessing": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_run_threading": {
+     "pass": 30
+    },
+    "tests.test_testbase.test_runner.RunnerTest::test_seq_and_repeat_test": {
+     "pass": 30
+    }
+   }
+  }
+ },
+ "alone": false,
+ "whole": true,
+ "seconds": 7146.4
+}

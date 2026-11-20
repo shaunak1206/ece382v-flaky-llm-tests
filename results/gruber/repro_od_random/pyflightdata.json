@@ -1,0 +1,27 @@
+{
+ "project": "pyflightdata",
+ "url": "https://github.com/supercoderz/pyflightdata",
+ "sha": "ae59893f58f8bd1630c1c8f1ab9d388bbd72ee71",
+ "category": "order dependent",
+ "gruber_fail_rate": 0.1125,
+ "test_file": "pyflightdata/test_pyflightdata.py",
+ "test_func": "test_aircraft_info",
+ "install_ok": true,
+ "install_log_tail": "\n\n[requirements.txt] rc=0 \n[-e .[test,tests,testing,dev]] rc=0 ",
+ "test": "test_aircraft_info",
+ "collect_tail": "herFeatures::test_get_airport_departures\ntest_pyflightdata.py::TestOtherFeatures::test_get_airport_reviews\ntest_pyflightdata.py::TestOtherFeatures::test_get_countries\ntest_pyflightdata.py::TestOtherFeatures::test_get_airports\ntest_pyflightdata.py::TestOtherFeatures::test_decode_metar\ntest_pyflightdata.py::TestOtherFeatures::test_get_airport_weather\ntest_pyflightdata.py::TestGetByFlightNumber::test_check_there_is_history_data\ntest_pyflightdata.py::TestGetByFlightNumber::test_simple_get\n\n--- Generated html report: file:///tmp/gw/pyflightdata/repo/test_report.html ---\n22 tests collected in 0.76s\n",
+ "first_run_tail": " 'NoneType' object is not iterable\nFAILED pyflightdata/test_pyflightdata.py::TestOtherFeatures::test_get_airport_metars - TypeError: list indices must be integers or slices, not str\nFAILED pyflightdata/test_pyflightdata.py::TestGetByTailNumber::test_aircraft_info - AssertionError: assert 0 > 0\n +  where 0 = <method-wrapper '__len__' of list object at 0x76129e85f880>()\n +    where <method-wrapper '__len__' of list object at 0x76129e85f880> = [].__len__\nFAILED pyflightdata/test_pyflightdata.py::TestGetByTailNumber::test_check_there_is_history_data - AssertionError: assert 0 > 0\n +  where 0 = <method-wrapper '__len__' of list object at 0x76129e872300>()\n +    where <method-wrapper '__len__' of list object at 0x76129e872300> = [].__len__\n10 failed, 12 passed, 62 warnings in 1241.31s (0:20:41)\n",
+ "collected": 5,
+ "runs": 9,
+ "passed": 0,
+ "failed": 9,
+ "errors": 0,
+ "skipped": 0,
+ "messages": [
+  "AssertionError: assert 0 > 0\n +  where 0 = <method-wrapper '__len__' of list object at 0x76129e85f880>()\n +    where <method-wrapper '__len__' of list object at 0x76129e85f880> = [].__len__",
+  "AssertionError: assert 0 > 0\n +  where 0 = <method-wrapper '__len__' of list object at 0x7f3b8512cd40>()\n +    where <method-wrapper '__len__' of list object at 0x7f3b8512cd40> = [].__len__",
+  "AssertionError: assert 0 > 0\n +  where 0 = <method-wrapper '__len__' of list object at 0x79df9c58fe00>()\n +    where <method-wrapper '__len__' of list object at 0x79df9c58fe00> = [].__len__"
+ ],
+ "seconds": 11180.3,
+ "reproduced": false
+}

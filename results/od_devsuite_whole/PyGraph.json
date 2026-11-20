@@ -1,0 +1,5559 @@
+{
+ "project": "PyGraph",
+ "install_ok": true,
+ "dev_file": "__tests__",
+ "od_test": "test_vertex_exists",
+ "runs": 30,
+ "configs": {
+  "baseline": {
+   "runs_done": 30,
+   "gen_first_runs": 0,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 27
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 27
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 29
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 17
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 29
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 22
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 27
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 29
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 28
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "dev_first": 24
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "gpt41mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_vertex_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_delete_nonexistent_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_add_edge_duplicate_name_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_delete_existing_edge": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_add_edge_with_nonexistent_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_is_vertices_adjacents_true_false": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_incidence_list_produces_entries": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_check_regular_graph_true_false": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_simplegraph_add_edge_prevents_loops": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_has_cycle_detected_and_no_cycle": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_add_and_get_vertex": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_add_edge_and_show_edge": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_simplegraph_add_edge_raises_if_vertex_not_exists": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_delete_nonexistent_edge_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_vertex_neighbors_nonexistent_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_graph_str_contains_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_simplegraph_add_edge_prevents_duplicate_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_has_loop_returns_false_for_simple_graph": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_delete_existing_vertex_removes_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_list_graph_vertices_and_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_1.test_gen::test_adjacency_matrix_contents": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "gpt41mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_delete_edge_not_found_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_delete_vertex_not_exists_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_add_edge_success": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_has_loop_false": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_vertex_degree": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_has_cycle_true": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_has_cycle_false": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_adjacency_matrix": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_str_representation_contains_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_delete_vertex_removes_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_add_edge_loop_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_vertex_neighbors_nonexistent_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_add_vertex_success": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_add_edge_vertex_not_exists_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_add_edge_duplicate_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_add_vertex_duplicate_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_vertex_degree_nonexistent_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_edge_name_exists_raises_in_base_graph": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_2.test_gen::test_delete_edge_success": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "gpt41mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_adjacency_matrix_structure_and_contents": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_add_vertex_simplegraph_and_graph": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_num_vertex_and_num_edges_reporting": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_has_loop_detection_in_graph": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_str_representation_of_graph_contains_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_vertex_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_has_cycle_detection": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_delete_vertex_removes_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_show_edge_and_edge_not_found": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_add_edge_simplegraph_no_loops_no_parallel_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_list_graph_vertices_and_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_add_edge_graph_allows_parallel_edges_by_name_conflict": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_incidence_list_values_counts": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_is_vertices_adjacents_true_and_false": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_delete_edge_and_edge_not_found": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_3.test_gen::test_check_regular_graph_true_and_false": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "gpt41mini_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_add_edge_simplegraph_and_edge_exists": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_str_representation": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_incidence_list": {
+     "fail": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_has_cycle_and_has_loop": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_add_duplicate_edge_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_check_regular_graph": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_delete_vertex_removes_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_get_all_and_list_graph_vertices_edges": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_vertex_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_add_edge_vertex_not_exists_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_delete_edge": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_add_edge_loop_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_simplegraph_add_edge_returns_same_as_show_edge": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_adjacency_matrix": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_add_vertex": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_delete_nonexistent_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_edge_name_exists": {
+     "pass": 30
+    },
+    "zz_gpt41mini_plain_4.test_gen::test_delete_nonexistent_edge_raises": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "gpt54mini_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_list_graph_vertices_and_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_vertex_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_delete_edge_removes_and_returns_edge": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_simplegraph_add_edge_rejects_loop": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_add_edge_duplicate_name_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_simplegraph_add_edge_rejects_parallel_edge": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_adjacency_matrix_is_symmetric_and_counts_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_add_edge_with_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_add_vertex_returns_vertex_and_registers_it": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_check_regular_graph_true_for_triangle": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_is_vertices_adjacents_true_and_false": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_simplegraph_add_edge_rejects_missing_vertex": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_incidence_list_length_and_values_for_simple_edge": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_add_edge_and_show_edge_returns_same_edge": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_delete_nonexistent_edge_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_has_cycle_and_has_loop_detects_cycle_and_loop": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_1.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "gpt54mini_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_add_vertex_duplicate_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_add_edge_duplicate_name_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_has_loop_detects_self_loop": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_simplegraph_add_edge_rejects_loops_and_duplicates": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_add_vertex_returns_vertex_and_stores_it": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_adjacency_matrix_and_list_methods": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_delete_vertex_missing_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_has_cycle_triangle_graph_true_and_tree_false": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_add_edge_requires_existing_vertices": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_delete_edge_removes_edge_and_returns_it": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_vertex_neighbors_missing_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_incidence_list_has_expected_size_and_zero_entries": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_delete_edge_missing_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_check_regular_graph_true_and_false": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_vertex_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_2.test_gen::test_add_edge_and_show_edge_work": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "gpt54mini_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_list_graph_vertices_and_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_check_regular_graph_true_and_false": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_simple_graph_add_edge_and_show_edge": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_simple_graph_requires_existing_vertices": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_add_vertex_and_duplicate_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_simple_graph_rejects_loops": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_add_edge_with_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_has_cycle_and_has_loop": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_delete_edge_removes_edge_and_returns_removed_edge": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_add_edge_and_show_edge_returns_same_edge": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_simple_graph_rejects_parallel_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_edge_name_must_be_unique": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_adjacency_matrix_is_symmetric_and_counts_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_vertex_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_delete_nonexistent_edge_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_3.test_gen::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "gpt54mini_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_incidence_list_contains_expected_bindings": {
+     "fail": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_check_regular_graph_true_and_false_cases": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_add_edge_duplicate_name_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_add_edge_with_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_delete_nonexistent_edge_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_delete_edge_removes_edge_and_returns_it": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_vertex_neighbors_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_add_vertex_duplicate_raises": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_simplegraph_requires_vertices_before_edge": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_vertex_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_add_vertex_returns_vertex_and_increments_count": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_is_vertices_adjacents_and_list_methods": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_add_edge_and_show_edge_returns_same_edge": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_has_cycle_triangle_and_has_loop_false": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_adjacency_matrix_reflects_undirected_edges": {
+     "pass": 30
+    },
+    "zz_gpt54mini_plain_4.test_gen::test_simplegraph_rejects_loop_and_parallel_edge": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "haiku_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_vertex_neighbors_of_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_new_graph_is_empty": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_show_edge_returns_existing_edge_and_raises_when_absent": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_add_edge_with_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_add_edge_creates_edge_between_existing_vertices": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_add_parallel_edge_is_rejected_by_simple_graph": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_base_graph_rejects_duplicate_edge_name": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_add_loop_is_rejected_by_simple_graph": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_add_vertex_returns_vertex_and_registers_it": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_vertex_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_str_has_one_line_per_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_has_cycle_detects_triangle": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_list_graph_vertices_and_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_has_loop_is_false_for_simple_graph": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_delete_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_simple_graph_is_a_graph_subclass": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_adjacency_matrix_is_symmetric_with_zero_diagonal": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_check_regular_graph_on_triangle_and_path": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_has_cycle_is_false_for_path": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_delete_missing_edge_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_1.test_gen::test_delete_edge_removes_and_returns_edge": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "haiku_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_delete_vertex_missing_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_show_edge_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_has_cycle_true_for_triangle": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_incidence_list_has_one_entry_per_vertex_edge_pair": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_base_graph_allows_loop_and_has_loop_detects_it": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_vertex_neighbors_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_add_vertex_duplicate_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_add_vertex_registers_and_returns_vertex": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_show_edge_missing_edge_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_simple_graph_add_edge_returns_named_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_simple_graph_rejects_missing_vertex": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_base_graph_add_edge_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_list_graph_vertices_and_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_str_is_empty_for_empty_graph_and_one_line_per_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_show_edge_returns_existing_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_edge_exists_and_edge_name_exists": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_base_graph_has_no_loop_when_absent": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_adjacency_matrix_is_symmetric": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_delete_edge_removes_and_returns_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_delete_edge_missing_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_has_cycle_false_for_path": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_vertex_neighbors_and_degree_in_triangle": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_simple_graph_rejects_parallel_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_simple_graph_rejects_loop": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_base_graph_add_edge_duplicate_name_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_2.test_gen::test_new_graph_is_empty": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "haiku_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_list_graph_vertices_contains_all_identifiers": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_has_loop_is_false_for_loopless_graph": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_has_cycle_detects_triangle_and_ignores_path": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_str_of_empty_graph_is_empty_string": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_add_edge_returns_edge_and_stores_name": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_add_edge_with_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_simple_graph_add_duplicate_edge_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_adjacency_matrix_is_symmetric_with_edge_counts": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_vertex_exists_false_for_unknown_vertex": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_simple_graph_is_a_graph_subclass": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_delete_vertex_removes_incident_edges_only": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_simple_graph_add_edge_returns_created_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_delete_missing_edge_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_add_vertex_returns_vertex_and_registers_it": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_vertex_neighbors_and_degree_on_triangle": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_add_edge_with_duplicate_name_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_simple_graph_add_edge_with_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_is_vertices_adjacents_true_and_false": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_simple_graph_add_edge_rejects_loop": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_vertex_neighbors_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_has_loop_detects_self_edge_in_base_graph": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_edge_name_exists": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_show_edge_raises_when_no_edge_between_vertices": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_delete_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_show_edge_returns_existing_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_3.test_gen::test_delete_edge_removes_and_returns_edge": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "haiku_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_simple_graph_rejects_parallel_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_show_edge_missing_raises_edge_not_found": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_delete_missing_edge_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_check_regular_graph_triangle_is_regular": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_show_edge_with_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_has_cycle_false_for_path": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_check_regular_graph_path_is_not_regular": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_add_vertex_increases_vertex_count": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_has_cycle_true_for_triangle": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_list_graph_edges_and_vertices": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_str_empty_graph_is_empty_string": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_add_edge_with_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_edge_name_exists": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_simple_graph_rejects_loop": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_vertex_neighbors_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_add_vertex_returns_vertex_with_value": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_base_graph_add_edge_rejects_duplicate_name": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_add_edge_adds_edge_and_returns_it": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_delete_edge_returns_and_removes_edge": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_vertex_neighbors_and_degree_on_path": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_adjacency_matrix_for_path": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_base_graph_allows_loop_and_has_loop_detects_it": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_delete_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_haiku_plain_4.test_gen::test_incidence_list_has_one_entry_per_vertex_edge_pair": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "sonnet_plain_1": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_graph_add_edge_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_check_regular_graph": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_simple_graph_rejects_duplicate_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_graph_add_edge_duplicate_name_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_graph_add_edge_and_show_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_simple_graph_rejects_loop": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_adjacency_matrix": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_graph_has_loop_when_loop_edge_added": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_has_cycle_triangle_vs_path": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_delete_vertex_returns_vertex_and_removes_it": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_add_vertex_and_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_delete_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_simple_graph_add_edge_success": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_show_edge_errors": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_neighbors_degree_and_adjacency": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_delete_vertex_keeps_unrelated_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_delete_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_simple_graph_rejects_missing_vertex": {
+     "fail": 30
+    },
+    "zz_sonnet_plain_1.test_gen::test_incidence_list_size_and_str": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "sonnet_plain_2": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_has_cycle_triangle_and_path": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_show_edge_errors": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_graph_add_edge_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_simple_graph_add_edge_returns_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_graph_add_edge_and_show_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_delete_missing_edge_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_neighbors_degree_and_adjacency": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_check_regular_graph": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_adjacency_matrix": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_is_terminal": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_add_vertex_and_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_graph_add_edge_duplicate_name_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_delete_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_incidence_list_size_and_str": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_simple_graph_rejects_loop_and_duplicate": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_2.test_gen::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "sonnet_plain_3": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_simple_graph_rejects_parallel_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_str_representation": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_list_edges_and_incidence_list_size": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_check_regular_graph": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_simple_graph_add_edge_returns_edge_and_registers": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_delete_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_base_graph_duplicate_edge_name_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_delete_missing_edge_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_has_loop_false_for_simple_graph": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_add_vertex_returns_vertex_and_counts": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_delete_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_show_edge_errors": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_simple_graph_add_edge_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_get_all_vertex_and_list_vertices": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_adjacency_matrix": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_has_cycle_triangle_vs_path": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_simple_graph_rejects_loop": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_base_graph_add_edge_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_add_duplicate_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_neighbors_degree_and_adjacency": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_3.test_gen::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  },
+  "sonnet_plain_4": {
+   "runs_done": 30,
+   "gen_first_runs": 8,
+   "od_test": {
+    "pass": 43,
+    "fail": 17,
+    "error": 0
+   },
+   "dev_failing": {
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "dev_first": 19,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "dev_first": 21,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "dev_first": 12,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "dev_first": 21,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "dev_first": 17,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "dev_first": 19,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "dev_first": 22,
+     "gen_first": 5
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "dev_first": 22,
+     "gen_first": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "dev_first": 22,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "dev_first": 21,
+     "gen_first": 7
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "dev_first": 14,
+     "gen_first": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "gen_first": 8,
+     "dev_first": 16
+    }
+   },
+   "gen_flaky": [],
+   "tests": {
+    "__tests__.test_graph.TestGraph::test_delete_vertex_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_vertices": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_get_all_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_length": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_show_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_should_return_dict": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_vertexes": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_loop": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_list_graph_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle_simples": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_is_vertices_adjacents_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_edge": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_edges": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_degree": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_delete_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_num_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_check_regular_graph": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_vertex_duplicate": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_degree_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list_should_return_a_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_incidence_list": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_add_edge_name_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_has_cycle": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_edge_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_vertex_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_delete_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_is_terminal": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_show_edge_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_exception_vertex_neighbors_vertex_not_exists": {
+     "pass": 30
+    },
+    "__tests__.test_graph.TestGraph::test_adjacency_matrix_get_correct_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_delete_missing_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_has_loop": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_has_cycle_triangle_and_path": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_add_vertex_and_exists": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_simple_graph_is_graph_and_starts_empty": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_show_edge_errors": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_delete_vertex_keeps_unrelated_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_incidence_list_size": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_delete_vertex_removes_incident_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_delete_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_add_duplicated_vertex_raises": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_simple_graph_rejects_loop": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_list_vertices_and_edges": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_graph_add_edge_errors": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_adjacency_matrix": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_is_vertices_adjacents": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_check_regular_graph": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_graph_add_edge_and_show_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_simple_graph_rejects_missing_vertex_and_duplicate_edge": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_neighbors_and_degree": {
+     "pass": 30
+    },
+    "zz_sonnet_plain_4.test_gen::test_str_representation": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_edge_exists": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_vertex": {
+     "pass": 10,
+     "fail": 20
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_delete_vertex": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_get_all_vertex": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_exists": {
+     "fail": 17,
+     "pass": 13
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertices_adjacency": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_add_vertex": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_regular_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_show_edge": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_edges": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_degree": {
+     "fail": 22,
+     "pass": 8
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_loop": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_duplicated_edge": {
+     "fail": 24,
+     "pass": 6
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_vertex_neighbors": {
+     "pass": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_regular_graph": {
+     "fail": 27,
+     "pass": 3
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_list_graph_vertices": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_true_cycle_graph": {
+     "fail": 30
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_num_edges": {
+     "fail": 29,
+     "pass": 1
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_is_terminal": {
+     "pass": 6,
+     "fail": 24
+    },
+    "__tests__.test_simple_graph.TestSimpleGraph::test_false_cycle_graph": {
+     "fail": 28,
+     "pass": 2
+    }
+   }
+  }
+ },
+ "alone": false,
+ "whole": true,
+ "seconds": 123.6
+}

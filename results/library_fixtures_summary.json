@@ -1,0 +1,132 @@
+{
+ "by_fixture": {
+  "seed": {
+   "suites": 84,
+   "tests": 8640,
+   "flaky_plain": 16,
+   "flaky_fixture": 12,
+   "flaky_removed": 4
+  },
+  "iso": {
+   "suites": 84,
+   "tests": 8640,
+   "flaky_plain": 16,
+   "flaky_fixture": 12,
+   "flaky_removed": 4
+  }
+ },
+ "tests": [
+  [
+   "plain",
+   "gen_oneshot_haiku",
+   "schedule",
+   "test_osh_job_configuration.TestUntilConfiguration::test_until_with_string_time_format",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_oneshot_haiku",
+   "schedule",
+   "test_osh_job_configuration.TestUntilConfiguration::test_until_with_time_object",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_oneshot_haiku",
+   "tenacity",
+   "test_osh_wait_strategies.TestWaitRandomExponential::test_wait_random_exponential_in_timing_test",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_gettext_functions_basic",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_thousands_and_decimal_separators[it_IT-.-,]",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_thousands_and_decimal_separators[en_US-,-.]",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_thousands_and_decimal_separators[pt_BR-.-,]",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_thousands_and_decimal_separators[fr_FR- -.]",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_thousands_and_decimal_separators[hu_HU- -,]",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_intcomma_custom_separators",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_thousands_and_decimal_separators[lv- -,]",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_thousands_and_decimal_separators[None-,-.]",
+   "flaky"
+  ],
+  [
+   "plain",
+   "gen_plain_gpt41mini",
+   "humanize",
+   "test_pgpt41mini_humanize::test_thousands_and_decimal_separators[de_DE-.-,]",
+   "flaky"
+  ],
+  [
+   "plain",
+   "llm_tests",
+   "schedule",
+   "test_llm_scheduler::test_repeat_decorator_schedules_and_passes_args",
+   "flaky"
+  ],
+  [
+   "plain",
+   "llm_tests",
+   "schedule",
+   "test_llm_scheduler::test_module_next_run_and_idle_seconds",
+   "flaky"
+  ],
+  [
+   "plain",
+   "llm_tests",
+   "tenacity",
+   "test_llm_stop_wait::test_stop_after_delay_threshold[5.0-True]",
+   "flaky"
+  ]
+ ]
+}

@@ -1,0 +1,1155 @@
+{
+ "name": "llm_tests-schedule-seed",
+ "mode": "both",
+ "runs": 100,
+ "num_tests": 113,
+ "runs_with_failure": 100,
+ "avg_run_seconds": 0.3,
+ "num_flaky": 2,
+ "num_always_fail": 102,
+ "flaky_tests": [
+  "zz_llm_tests_seed.test_llm_scheduler::test_module_next_run_and_idle_seconds",
+  "zz_llm_tests_seed.test_llm_scheduler::test_repeat_decorator_schedules_and_passes_args"
+ ],
+ "tests": {
+  "zz_llm_tests_seed.test_llm_scheduler::test_clear_by_tag_removes_only_matching": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 63\n  def test_clear_by_tag_removes_only_matching(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_new_scheduler_has_no_jobs": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 30\n  def test_new_scheduler_has_no_jobs(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_numb"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_get_jobs_returns_copy_and_filters_by_tag": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 46\n  def test_get_jobs_returns_copy_and_filters_by_tag(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_r"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_idle_seconds_none_when_empty_positive_and_negative": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 97\n  def test_idle_seconds_none_when_empty_positive_and_negative(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_module_every_and_get_jobs_use_default_scheduler": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_run_all_with_delay_waits_between_jobs": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 142\n  def test_run_all_with_delay_waits_between_jobs(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_rep"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_module_run_pending_executes_due_job": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_do_appends_multiple_jobs_to_jobs_list": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 34\n  def test_do_appends_multiple_jobs_to_jobs_list(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repe"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_repeat_decorator_schedules_and_passes_args": {
+   "counts": {
+    "fail": 70,
+    "pass": 30
+   },
+   "kind": "flaky",
+   "messages": [
+    "AssertionError: assert 3 == 1\n +  where 3 = len([Every 1 second do noop() (last run: [never], next run: 2026-11-19 23:50:44), Every 1 second do job() (last run: 2026-...-11-19 23:50:44), Every 1 second do decorated('hello', who='world') (last run: [never], next run: 2026-11-19 23:50:44)])",
+    "AssertionError: assert 4 == 1\n +  where 4 = len([Every 1 second do job() (last run: 2026-11-19 23:50:43, next run: 2026-11-19 23:50:44), Every 5 seconds do noop() (la...-11-20 00:50:43), Every 1 second do decorated('hello', who='world') (last run: [never], next run: 2026-11-19 23:50:44)])",
+    "AssertionError: assert 5 == 1\n +  where 5 = len([Every 1 hour do job() (last run: 2026-11-19 23:50:44, next run: 2026-11-20 00:50:44), Every 1 second do noop() (last ...-11-19 23:50:49), Every 1 second do decorated('hello', who='world') (last run: [never], next run: 2026-11-19 23:50:45)])"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    3,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    28,
+    30,
+    31,
+    33,
+    37,
+    38,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    48,
+    50,
+    51,
+    52,
+    53,
+    55,
+    56,
+    58,
+    61,
+    63,
+    64,
+    66,
+    68,
+    69,
+    72,
+    73,
+    74,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    87,
+    89,
+    90,
+    91,
+    92,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_module_next_run_and_idle_seconds": {
+   "counts": {
+    "fail": 60,
+    "pass": 40
+   },
+   "kind": "flaky",
+   "messages": [
+    "assert datetime.datetime(2026, 11, 19, 23, 50, 44, 569151) == datetime.datetime(2026, 11, 19, 23, 50, 48, 583305)\n +  where datetime.datetime(2026, 11, 19, 23, 50, 44, 569151) = <function next_run at 0x7152bdb73ba0>()\n +    where <function next_run at 0x7152bdb73ba0> = schedule.next_run\n +  and   da",
+    "assert datetime.datetime(2026, 11, 19, 23, 50, 44, 904037) == datetime.datetime(2026, 11, 19, 23, 50, 48, 905269)\n +  where datetime.datetime(2026, 11, 19, 23, 50, 44, 904037) = <function next_run at 0x7c3d772bbc40>()\n +    where <function next_run at 0x7c3d772bbc40> = schedule.next_run\n +  and   da",
+    "assert datetime.datetime(2026, 11, 19, 23, 50, 45, 242532) == datetime.datetime(2026, 11, 19, 23, 50, 49, 245018)\n +  where datetime.datetime(2026, 11, 19, 23, 50, 45, 242532) = <function next_run at 0x72880c0c7c40>()\n +    where <function next_run at 0x72880c0c7c40> = schedule.next_run\n +  and   da"
+   ],
+   "fail_runs": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    8,
+    9,
+    11,
+    12,
+    14,
+    15,
+    17,
+    19,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    39,
+    45,
+    47,
+    49,
+    51,
+    52,
+    57,
+    58,
+    59,
+    61,
+    64,
+    65,
+    67,
+    73,
+    75,
+    78,
+    79,
+    80,
+    81,
+    82,
+    84,
+    85,
+    86,
+    87,
+    88,
+    92,
+    93,
+    96,
+    97,
+    98,
+    99
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_next_run_returns_the_earliest_job": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 81\n  def test_next_run_returns_the_earliest_job(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_s"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_module_clear_and_cancel_job": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_run_pending_removes_job_that_returns_cancel": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 119\n  def test_run_pending_removes_job_that_returns_cancel(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pyte"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_scheduler_instances_are_independent": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_get_next_run_with_tag_filter": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 89\n  def test_get_next_run_with_tag_filter(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_n"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_run_all_runs_every_job_once_regardless_of_due_time": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 133\n  def test_run_all_runs_every_job_once_regardless_of_due_time(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures:"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_run_pending_runs_only_due_jobs": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 109\n  def test_run_pending_runs_only_due_jobs(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_ste"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_module_run_all_executes_job_and_jobs_alias_stays_in_sync": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_cancel_job_removes_it_and_is_idempotent": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 70\n  def test_cancel_job_removes_it_and_is_idempotent(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_re"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_scheduler::test_clear_removes_all_jobs": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_scheduler.py, line 56\n  def test_clear_removes_all_jobs(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_number,"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_next_run_scales_with_interval_and_unit[2-minutes-110-130]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 38\n  @pytest.mark.parametrize(\n      \"interval,unit,lo,hi\",\n      [\n          (1, \"seconds\", 0.5, 1.5),\n          (5, \"seconds\", 4.0, 6.0),\n  "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_should_run_raises_assertion_if_next_run_unset": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 76\n  def test_should_run_raises_assertion_if_next_run_unset(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __py"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_job_runs_repeatedly_over_real_time": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 231\n  def test_job_runs_repeatedly_over_real_time(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repea"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_next_run_scales_with_interval_and_unit[1-seconds-0.5-1.5]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 38\n  @pytest.mark.parametrize(\n      \"interval,unit,lo,hi\",\n      [\n          (1, \"seconds\", 0.5, 1.5),\n          (5, \"seconds\", 4.0, 6.0),\n  "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_job_not_returning_cancel_job_stays_scheduled": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 118\n  def test_job_not_returning_cancel_job_stays_scheduled(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __py"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_run_pending_runs_due_jobs_in_next_run_order": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 192\n  def test_run_pending_runs_due_jobs_in_next_run_order(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pyt"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_to_latest_smaller_than_interval_raises_on_schedule": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 176\n  def test_to_latest_smaller_than_interval_raises_on_schedule(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_next_run_scales_with_interval_and_unit[5-seconds-4.0-6.0]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 38\n  @pytest.mark.parametrize(\n      \"interval,unit,lo,hi\",\n      [\n          (1, \"seconds\", 0.5, 1.5),\n          (5, \"seconds\", 4.0, 6.0),\n  "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_should_run_reflects_next_run_relative_to_now": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 69\n  def test_should_run_reflects_next_run_relative_to_now(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pyt"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_run_executes_job_func_updates_last_run_and_reschedules": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 89\n  def test_run_executes_job_func_updates_last_run_and_reschedules(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtu"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_job_does_not_run_before_its_interval_elapses": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 223\n  def test_job_does_not_run_before_its_interval_elapses(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __py"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_job_returning_cancel_job_is_removed_by_scheduler": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 108\n  def test_job_returning_cancel_job_is_removed_by_scheduler(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_until_cancels_job_run_after_deadline_passed": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 129\n  def test_until_cancels_job_run_after_deadline_passed(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pyt"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_until_cancels_when_next_scheduled_run_exceeds_deadline": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 152\n  def test_until_cancels_when_next_scheduled_run_exceeds_deadline(scheduler):\nE       fixture 'scheduler' not found\n>       available fixt"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_weekday_next_run_lands_on_requested_weekday_within_a_week": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 58\n  def test_weekday_next_run_lands_on_requested_weekday_within_a_week(scheduler):\nE       fixture 'scheduler' not found\n>       available fi"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_jobs_sort_by_next_run": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 186\n  def test_jobs_sort_by_next_run(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_number"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_job_actually_runs_after_waiting_for_real_time_to_pass": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 214\n  def test_job_actually_runs_after_waiting_for_real_time_to_pass(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtu"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_to_next_run_within_randomized_bounds": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 169\n  def test_to_next_run_within_randomized_bounds(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_rep"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_next_run_for_days_with_at_time": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 53\n  def test_next_run_for_days_with_at_time(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_ste"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_run_timing::test_until_does_not_affect_job_before_deadline": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_run_timing.py, line 142\n  def test_until_does_not_affect_job_before_deadline(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytes"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_daily_invalid_format_raises[10-30]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 89\n  @pytest.mark.parametrize(\"bad_time\", [\"25:00\", \"10-30\", \"abc\", \"10:30:99\"])\n  def test_at_daily_invalid_format_raises(scheduler, bad_time):\n"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_tag_unhashable_raises_typeerror": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 151\n  def test_tag_unhashable_raises_typeerror(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_do_with_args_and_kwargs": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 174\n  def test_do_with_args_and_kwargs(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_number,"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_tag_returns_job_and_accepts_mixed_hashables": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 157\n  def test_tag_returns_job_and_accepts_mixed_hashables(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_until_with_time_object": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 209\n  def test_until_with_time_object(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_number, "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[thursday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 64\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def t"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_until_with_valid_date_strings[%Y-%m-%d]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 220\n  @pytest.mark.parametrize(\n      \"fmt\",\n      [\"%Y-%m-%d %H:%M:%S\", \"%Y-%m-%d %H:%M\", \"%Y-%m-%d\"],\n  )\n  def test_until_with_valid_date_stri"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_tag_multiple_and_duplicates_discarded": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 145\n  def test_tag_multiple_and_duplicates_discarded(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repea"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[days-days]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 30\n  @pytest.mark.parametrize(\n      \"attr,expected_unit\",\n      [\n          (\"seconds\", \"seconds\"),\n          (\"minutes\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[minutes-minutes]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 30\n  @pytest.mark.parametrize(\n      \"attr,expected_unit\",\n      [\n          (\"seconds\", \"seconds\"),\n          (\"minutes\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[monday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 64\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def t"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_until_with_valid_date_strings[%Y-%m-%d %H:%M:%S]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 220\n  @pytest.mark.parametrize(\n      \"fmt\",\n      [\"%Y-%m-%d %H:%M:%S\", \"%Y-%m-%d %H:%M\", \"%Y-%m-%d\"],\n  )\n  def test_until_with_valid_date_stri"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_daily_formats[10:30:15-expected1]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 78\n  @pytest.mark.parametrize(\n      \"time_str,expected\",\n      [\n          (\"10:30\", datetime.time(10, 30, 0)),\n          (\"10:30:15\", datetime."
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[weeks-weeks]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 30\n  @pytest.mark.parametrize(\n      \"attr,expected_unit\",\n      [\n          (\"seconds\", \"seconds\"),\n          (\"minutes\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[friday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 64\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def t"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_singular_unit_property_works_for_interval_one[day-days]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 47\n  @pytest.mark.parametrize(\n      \"singular,plural_unit\",\n      [\n          (\"second\", \"seconds\"),\n          (\"minute\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_singular_unit_property_works_for_interval_one[hour-hours]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 47\n  @pytest.mark.parametrize(\n      \"singular,plural_unit\",\n      [\n          (\"second\", \"seconds\"),\n          (\"minute\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[tuesday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 64\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def t"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_job_repr_unconfigured_job_shows_never": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 248\n  def test_job_repr_unconfigured_job_shows_never(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repea"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_until_with_timedelta": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 201\n  def test_until_with_timedelta(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_number, _a"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_singular_unit_property_works_for_interval_one[week-weeks]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 47\n  @pytest.mark.parametrize(\n      \"singular,plural_unit\",\n      [\n          (\"second\", \"seconds\"),\n          (\"minute\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_singular_unit_property_works_for_interval_one[minute-minutes]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 47\n  @pytest.mark.parametrize(\n      \"singular,plural_unit\",\n      [\n          (\"second\", \"seconds\"),\n          (\"minute\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_every_default_interval_is_one": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 22\n  def test_every_default_interval_is_one(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_nu"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_job_repr_contains_function_name_and_next_run": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 240\n  def test_job_repr_contains_function_name_and_next_run(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytes"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[hours-hours]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 30\n  @pytest.mark.parametrize(\n      \"attr,expected_unit\",\n      [\n          (\"seconds\", \"seconds\"),\n          (\"minutes\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_on_weekday_job_uses_daily_format": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 127\n  def test_at_on_weekday_job_uses_daily_format(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_daily_invalid_format_raises[25:00]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 89\n  @pytest.mark.parametrize(\"bad_time\", [\"25:00\", \"10-30\", \"abc\", \"10:30:99\"])\n  def test_at_daily_invalid_format_raises(scheduler, bad_time):\n"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_daily_invalid_format_raises[abc]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 89\n  @pytest.mark.parametrize(\"bad_time\", [\"25:00\", \"10-30\", \"abc\", \"10:30:99\"])\n  def test_at_daily_invalid_format_raises(scheduler, bad_time):\n"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[sunday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 64\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def t"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_do_sets_job_func_and_registers_with_scheduler": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 167\n  def test_do_sets_job_func_and_registers_with_scheduler(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pyte"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_until_with_valid_date_strings[%Y-%m-%d %H:%M]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 220\n  @pytest.mark.parametrize(\n      \"fmt\",\n      [\"%Y-%m-%d %H:%M:%S\", \"%Y-%m-%d %H:%M\", \"%Y-%m-%d\"],\n  )\n  def test_until_with_valid_date_stri"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_daily_invalid_format_raises[10:30:99]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 89\n  @pytest.mark.parametrize(\"bad_time\", [\"25:00\", \"10-30\", \"abc\", \"10:30:99\"])\n  def test_at_daily_invalid_format_raises(scheduler, bad_time):\n"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_to_sets_latest_and_returns_job_for_chaining": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 135\n  def test_to_sets_latest_and_returns_job_for_chaining(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_do_without_scheduler_raises_schedule_error": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_hourly_formats[30:15-expected0]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 95\n  @pytest.mark.parametrize(\n      \"time_str,expected\",\n      [\n          (\"30:15\", datetime.time(0, 30, 15)),\n          # The short \":MM\" form"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_plural_unit_properties_set_unit_and_return_job[seconds-seconds]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 30\n  @pytest.mark.parametrize(\n      \"attr,expected_unit\",\n      [\n          (\"seconds\", \"seconds\"),\n          (\"minutes\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_minutes_colon_ss": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 113\n  def test_at_minutes_colon_ss(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_number, _as"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_minutes_invalid_format_raises": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 117\n  def test_at_minutes_invalid_format_raises(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_ste"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_daily_formats[10:30-expected0]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 78\n  @pytest.mark.parametrize(\n      \"time_str,expected\",\n      [\n          (\"10:30\", datetime.time(10, 30, 0)),\n          (\"10:30:15\", datetime."
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_job_str_contains_unit_and_interval": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 234\n  def test_job_str_contains_unit_and_interval(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_s"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_hourly_formats[:45-expected1]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 95\n  @pytest.mark.parametrize(\n      \"time_str,expected\",\n      [\n          (\"30:15\", datetime.time(0, 30, 15)),\n          # The short \":MM\" form"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_until_with_datetime": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 196\n  def test_until_with_datetime(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_number, _as"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_every_with_custom_interval": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 26\n  def test_every_with_custom_interval(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_numbe"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_non_string_raises_typeerror": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 122\n  def test_at_non_string_raises_typeerror(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step_"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[saturday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 64\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def t"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_at_hourly_invalid_format_raises": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 108\n  def test_at_hourly_invalid_format_raises(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_step"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_singular_unit_property_works_for_interval_one[second-seconds]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 47\n  @pytest.mark.parametrize(\n      \"singular,plural_unit\",\n      [\n          (\"second\", \"seconds\"),\n          (\"minute\", \"minutes\"),\n          "
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_job_api::test_weekday_property_sets_start_day_and_unit[wednesday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_job_api.py, line 64\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def t"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_value_error_from_until_bad_string_or_past_time": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 80\n  def test_value_error_from_until_bad_string_or_past_time(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytes"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_value_error_from_do_with_no_unit_set": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 75\n  def test_value_error_from_do_with_no_unit_set(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_s"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[friday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 47\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def te"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[second]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 41\n  @pytest.mark.parametrize(\"singular\", [\"second\", \"minute\", \"hour\", \"day\", \"week\"])\n  def test_interval_error_from_singular_unit_with_bad_inter"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[monday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 47\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def te"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[day]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 41\n  @pytest.mark.parametrize(\"singular\", [\"second\", \"minute\", \"hour\", \"day\", \"week\"])\n  def test_interval_error_from_singular_unit_with_bad_inter"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_value_error_from_bad_at_time_format": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 65\n  def test_value_error_from_bad_at_time_format(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repeat_st"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[week]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 41\n  @pytest.mark.parametrize(\"singular\", [\"second\", \"minute\", \"hour\", \"day\", \"week\"])\n  def test_interval_error_from_singular_unit_with_bad_inter"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[hour]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 41\n  @pytest.mark.parametrize(\"singular\", [\"second\", \"minute\", \"hour\", \"day\", \"week\"])\n  def test_interval_error_from_singular_unit_with_bad_inter"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[saturday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 47\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def te"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_type_error_from_until_with_unsupported_type": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 131\n  def test_type_error_from_until_with_unsupported_type(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_type_error_from_at_non_string_argument": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 119\n  def test_type_error_from_at_non_string_argument(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repea"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_schedule_error_from_do_with_no_scheduler": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[wednesday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 47\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def te"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_singular_unit_with_bad_interval[minute]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 41\n  @pytest.mark.parametrize(\"singular\", [\"second\", \"minute\", \"hour\", \"day\", \"week\"])\n  def test_interval_error_from_singular_unit_with_bad_inter"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_type_error_from_tag_with_unhashable_argument": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 125\n  def test_type_error_from_tag_with_unhashable_argument(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_value_error_from_at_on_unsupported_unit": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 70\n  def test_value_error_from_at_on_unsupported_unit(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_repea"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[thursday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 47\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def te"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[sunday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 47\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def te"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_exception_hierarchy": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_schedule_error_when_latest_less_than_interval": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 109\n  def test_schedule_error_when_latest_less_than_interval(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytes"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_from_weekday_with_bad_interval[tuesday]": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 47\n  @pytest.mark.parametrize(\n      \"weekday\",\n      [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"],\n  )\n  def te"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_value_error_from_invalid_start_day": {
+   "counts": {
+    "pass": 100
+   },
+   "kind": "stable",
+   "messages": []
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_message_mentions_plural_form": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 56\n  def test_interval_error_message_mentions_plural_form(scheduler):\nE       fixture 'scheduler' not found\n>       available fixtures: __pytest_r"
+   ]
+  },
+  "zz_llm_tests_seed.test_llm_errors::test_interval_error_can_be_caught_as_schedule_error_or_value_error": {
+   "counts": {
+    "error": 100
+   },
+   "kind": "always-fail",
+   "messages": [
+    "failed on setup with \"file /home/runner/work/ece382v-flaky-llm-tests/ece382v-flaky-llm-tests/subjects/schedule/zz_llm_tests_seed/test_llm_errors.py, line 30\n  def test_interval_error_can_be_caught_as_schedule_error_or_value_error(scheduler):\nE       fixture 'scheduler' not found\n>       available fi"
+   ]
+  }
+ }
+}
