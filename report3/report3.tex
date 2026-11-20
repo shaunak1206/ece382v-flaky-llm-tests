@@ -28,7 +28,7 @@ Since Progress Report 2 we ran its main experiments for this milestone and the q
 Four preliminary results stand out.
 \begin{itemize}
 \item \textbf{All four models write flaky tests; differences between models are not confirmed.} A kept flaky test sits in 2.4\% of Sonnet, 4.7\% of Haiku, 6.8\% of GPT~5.4 mini, and 12.9\% of GPT~4.1 mini suites. The pre registered project level test finds no significant pair (Table~\ref{tab:prereg}). Each model's flaky suites sit in only 6 to 10 of the 41 projects, so the test is underpowered and the gap between models is a lead.
-\item \textbf{Generated and developer tests pollute each other.} Two GPT~4.1 mini suites make a QTAF developer test fail whenever they run first, and in the other direction developer tests make 52 generated tests flip that are stable alone, 33 of them through a single HikLoad developer test.
+\item \textbf{Generated and developer tests pollute each other.} Two GPT~4.1 mini suites make a QTAF developer test fail whenever they run first, and in the other direction developer tests make generated tests flip that are stable alone, 38 confirmed by a same-seed control (14 more pending), 33 of them through a single HikLoad developer test.
 \item \textbf{Two fixtures added after generation carry over to new suites.} Seeding each test (M1) cuts GPT~4.1 mini's flaky suites from 40 to 15, and also isolating module state (M2) cuts GPT~5.4 mini's from 22 to 8. M2 broke no stable test. Neither reaches state in \texttt{/tmp}, a class attribute, or the clock.
 \item \textbf{Prompt rules help Claude, not every model.} Guard v3, flakiness rules added to the prompt, removed every kept flaky Claude test (7 suites to 0, too few to be significant) at a cost of 6.5 to 12\% of kept tests and about 1 point of coverage, removed none of GPT~5.4 mini's, and for GPT~4.1 mini traded flaky tests for suites that fail (Table~\ref{tab:guard3}).
 \end{itemize}
@@ -90,9 +90,9 @@ The final report targets were at least 40 suites with a kept flaky test from at 
 \label{sec:challenges3}
 \begin{itemize}
 \item \textbf{Reproduction yield.} 0 of 16 time tests reproduced, even with pinned dependencies, while 17 of 44 finished order dependent tests drawn by name and 10 of 43 drawn at random did.
-\item \textbf{Credentials.} The Claude CLI login and the OpenAI key both expired, delaying the GPT half of the held out sample by about two days. Generation now runs through a job runner with a spending cap (\texttt{gen\_jobs.py}).
+\item \textbf{Credentials.} The Claude command line login and the OpenAI key both expired, delaying the GPT half of the held out sample by about two days. Generation now runs through a job runner with a spending cap (\texttt{gen\_jobs.py}).
 \item \textbf{Slow and non terminating suites.} Some GPT suites loop until the test timeout in every run (10 hours for one uhashring suite), so we split their runs across jobs with the same seeds (\texttt{join\_runs.py}, checked against a single job). Two never terminate, and one of them hung our runner until it killed the whole process group. This cost about a day.
-\item \textbf{The M2 failures of Progress Report 2.} Two keplertools tests get NaN from \texttt{np.sqrt(1.0 - p/a)} under M2 on the Linux runners but not on our laptop, and we have not found why; the limix-lmm one did not recur in 20 runs.
+\item \textbf{The M2 failures of Progress Report 2.} Two keplertools tests get NaN (not a number) from \texttt{np.sqrt(1.0 - p/a)} under M2 on the Linux runners but not on our laptop, and we have not found why; the limix-lmm one did not recur in 20 runs.
 \end{itemize}
 
 \section{Next steps toward the final report}

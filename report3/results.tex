@@ -39,7 +39,7 @@ GPT 4.1 mini & 310 & 4,022 & 40 & 12.9 & 9.6--17.1 & 10 & 70 \\
 \setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{lrrrrrr}
 \toprule
- & $<$1\% & 1--5\% & 5--20\% & 20--50\% & $\ge$50\% & Median (IQR) \\
+ & $<$1\% & 1--5\% & 5--20\% & 20--50\% & $\ge$50\% & Median (interquartile range) \\
 \midrule
 Sonnet & 0 & 4 & 3 & 11 & 0 & 42 (18--47) \\
 Haiku & 6 & 11 & 15 & 1 & 1 & 11 (2--20) \\
@@ -130,7 +130,7 @@ On code whose developer tests are known to depend on order, the Claude suites ra
 Combinations run (of 272) & 263 \\
 Developer tests that fail only after a generated file & 1 (QTAF) \\
 Generated tests stable alone that flip combined & 52 \\
-\quad confirmed by the same-seed control & 38 \\
+\quad confirmed by the same-seed control (HikLoad, PyJsonFriendly) & 38 \\
 \quad control not finished (ReactOBus) & 14 \\
 Pairwise search (QTAF, HikLoad, PyJsonFriendly) & \\
 \quad generated victims with a developer polluter & 37 of 42 searched \\
@@ -226,7 +226,7 @@ By where the nondeterminism lives, 95 of the 192 are introduced by the generated
 \toprule
 Pair & Category & Order dependent \\
 \midrule
-Manas, Shaunak (blind) & 0.81 (86\%) & 0.94 (97\%) \\
+Manas, Shaunak (blind sheet, not fully blind) & 0.81 (86\%) & 0.94 (97\%) \\
 Manas, LLM & 0.82 (87\%) & 1.00 (100\%) \\
 Shaunak, LLM & 0.95 (96\%) & 0.94 (97\%) \\
 \bottomrule
